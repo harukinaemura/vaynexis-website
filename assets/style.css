@@ -75,6 +75,10 @@ p + p { margin-top: 1em; }
 .sec--alt .btn--ghost { background: linear-gradient(var(--white), var(--white)) padding-box, linear-gradient(135deg, var(--copper), var(--copper-lo)) border-box; }
 .btn--ghost:hover { color: var(--copper-hi); }
 .btn--sm { padding: 8px 14px; font-size: 12px; }
+.btn--line { background: #06c755; color: #ffffff; font-weight: 700; }
+.btn--line:hover { background: #05b04c; }
+.ccard--line .ccard__v a { color: #05803a; }
+.ccard__qr { display: block; margin-top: 12px; border: 1px solid var(--line); background: #ffffff; padding: 6px; }
 
 /* -------------------- ナビ -------------------- */
 .nav { position: sticky; top: 0; z-index: 20; background: rgba(244, 246, 250, .8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
