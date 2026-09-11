@@ -78,21 +78,21 @@
       <table>
         <thead><tr><th>項目</th><th>実測値</th><th>数え方</th><th>時点</th></tr></thead>
         <tbody>
-          <tr><td>作成した教材（PDF）</td><td class="mono">20冊 / 2,373頁</td><td>司法試験・予備試験向けに自社で作成したPDFの冊数と総頁数</td><td class="mono">2026-09</td></tr>
-          <tr><td>判例の原文照合</td><td class="mono">4,055件</td><td>裁判所の判例原文と教材の記述を突き合わせた件数</td><td class="mono">2026-09</td></tr>
-          <tr><td>検証用スクリプト</td><td class="mono">195本</td><td>条番号・引用・整合を機械で検査するために書いたPythonの本数</td><td class="mono">2026-09</td></tr>
-          <tr><td>検証記録</td><td class="mono">35本</td><td>検査の結果を残した文書の本数</td><td class="mono">2026-09</td></tr>
-          <tr><td>監査レポート</td><td class="mono">19本</td><td>別の検査担当が独立に検出した指摘の報告書の本数</td><td class="mono">2026-09</td></tr>
-          <tr><td>改善指示書</td><td class="mono">19本</td><td>指摘を反映するための指示書の本数</td><td class="mono">2026-09</td></tr>
-          <tr><td>記事の自動生成・公開</td><td class="mono">393本 / 連続55日</td><td>noteに公開した記事数と、連続で公開した日数</td><td class="mono">2026-09-11</td></tr>
-          <tr><td>動画の自動制作</td><td class="mono">27本</td><td>台本から音声・字幕・投稿まで自動化した本数。尺は実測</td><td class="mono">2026-09</td></tr>
+          <tr><td>作成した教材（PDF）</td><td class="mono">20冊 / 2,045頁</td><td>司法試験・予備試験向けに自社で作成した本体PDFの冊数と総頁数</td><td class="mono">2026-09-11</td></tr>
+          <tr><td>判例の原文照合</td><td class="mono">4,055件</td><td>裁判所の判例原文と教材の記述を突き合わせた件数</td><td class="mono">2026-09-10</td></tr>
+          <tr><td>検証用スクリプト</td><td class="mono">195本</td><td>条番号・引用・整合を機械で検査するために書いたPythonの本数</td><td class="mono">2026-09-10</td></tr>
+          <tr><td>検証記録</td><td class="mono">35本</td><td>検査の結果を残した文書の本数（ファイル名が「検証記録_」で始まるもの）</td><td class="mono">2026-09-11</td></tr>
+          <tr><td>監査レポート</td><td class="mono">19本</td><td>別の検査担当が独立に検出した指摘の報告書の本数（監査・検証・反映検査のレポート）</td><td class="mono">2026-09-11</td></tr>
+          <tr><td>改善指示書</td><td class="mono">19本</td><td>指摘を反映するための指示書の本数（ファイル名が「【指示書】」で始まるもの）</td><td class="mono">2026-09-11</td></tr>
+          <tr><td>記事の自動生成・公開</td><td class="mono">396本 / 連続55日</td><td>noteに公開した記事数（noteの公開APIの値）と、連続で公開した日数</td><td class="mono">2026-09-11</td></tr>
+          <tr><td>動画の自動制作</td><td class="mono">27本</td><td>台本から音声・字幕・投稿まで自動化した本数。尺は実測</td><td class="mono">2026-09-10</td></tr>
           <tr><td>Webサイトの全面改訂</td><td class="mono">2社 / 10ページ</td><td>1日で改訂し本番反映した2社のページ数</td><td class="mono">2026-09-09</td></tr>
-          <tr><td>ナレッジベース</td><td class="mono">2,153ファイル</td><td>業務の記録として保持しているファイル数</td><td class="mono">2026-09</td></tr>
+          <tr><td>ナレッジベース</td><td class="mono">2,179件</td><td>業務の記録として保持しているMarkdownのノートの数</td><td class="mono">2026-09-11</td></tr>
           <tr><td>教材の制作期間</td><td class="mono">約3週間</td><td>推定です。着手日の記録が正確でないため</td><td class="mono">推定</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="fine">公開日に全項目を数え直し、月1回更新します。推定を含む行には「推定」と書きます。</p>
+    <p class="fine">月1回、数え方に書いた規則で機械的に数え直して更新します。推定を含む行には「推定」と書きます。</p>
   </div>
 </section>
 
@@ -107,7 +107,7 @@
       <table>
         <thead><tr><th>事例</th><th>実測（AIで行った結果）</th><th>人手で行った場合の見込み（推定）</th><th>検査で分かったこと</th></tr></thead>
         <tbody>
-          <tr><td>司法試験・予備試験の教材を作る</td><td>20冊 / 2,373頁。制作期間は約3週間（推定）。判例の原文照合 4,055件、検証用スクリプト 195本</td><td class="mono">3,800〜6,300時間</td><td>監査レポート19本と改善指示書19本のぶんの誤りが見つかり、直した。監査を通した後にも、自分で足した注意書きが既存の文と矛盾する型が繰り返し出た</td></tr>
+          <tr><td>司法試験・予備試験の教材を作る</td><td>20冊 / 2,045頁。制作期間は約3週間（推定）。判例の原文照合 4,055件、検証用スクリプト 195本</td><td class="mono">3,300〜5,500時間</td><td>監査レポート19本と改善指示書19本のぶんの誤りが見つかり、直した。監査を通した後にも、自分で足した注意書きが既存の文と矛盾する型が繰り返し出た</td></tr>
           <tr><td>判例の記述を原文と突き合わせる</td><td>4,055件をスクリプトで照合。1回の実行で全件</td><td class="mono">1,000〜2,000時間</td><td>同じ日付の別の判決を取り違えていた例、要旨の結論が逆になっていた例を検出</td></tr>
           <tr><td>記事を毎日書いて公開する</td><td>393本、連続55日。下書きから公開までを自動化</td><td class="mono">約800時間</td><td>書式が崩れたまま53日間公開されていた。AIは毎回「完了」と報告していた</td></tr>
           <tr><td>2社のWebサイトを全面改訂する</td><td>10ページを1日で作り、本番に反映</td><td class="mono">2〜4週間（制作会社に依頼した場合の一般的な目安）</td><td>設立日がサイトと記帳で食い違っている点を発見。登記簿の値に統一</td></tr>

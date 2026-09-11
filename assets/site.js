@@ -81,6 +81,11 @@
     var to; window.addEventListener('resize', function () { clearTimeout(to); to = setTimeout(start, 150); });
   }
 
+  /* ---- print link ---- */
+  document.querySelectorAll('[data-print]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); window.print(); });
+  });
+
   /* ---- audit log: real rows rendered in HTML; rotate slowly so all rows come into view ---- */
   var log = document.getElementById('log');
   if (log && log.children.length > 7 && !reduce) {
