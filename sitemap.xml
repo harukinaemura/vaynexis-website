@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://vaynexis.jp/</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://vaynexis.jp/business.html</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://vaynexis.jp/company.html</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://vaynexis.jp/contact.html</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://vaynexis.jp/privacy.html</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://vaynexis.jp/tokushoho.html</loc><lastmod>2026-09-09</lastmod></url>
+  <url><loc>https://vaynexis.jp/</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai.html</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/price.html</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/record.html</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/business.html</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/company.html</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/contact.html</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/privacy.html</loc><lastmod>2026-09-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/tokushoho.html</loc><lastmod>2026-09-11</lastmod></url>
 </urlset>
