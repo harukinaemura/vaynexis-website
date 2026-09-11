@@ -153,6 +153,7 @@
           <p>オンライン90分のヒアリングで、いまの業務を全部並べます。そのうえで3つに振り分け、レポートにまとめて、申込みから2週間以内に納品します。</p>
           <p>レポートには<b>すぐ試せる1業務ぶんの完成手順</b>を必ず入れます。お手元のAIに投げる文面と、結果の確かめ方を、そのまま使える形で書きます。持ち帰った日から試せます。</p>
           <p class="fine">全額返金保証。レポートを読んで「使えない」と思われたら、納品後14日以内のお申し出で理由を問わず全額をお返しします。同一のお客様につき1回限りです。</p>
+          <p class="fine"><a href="sample-report.html">レポートの見本</a>を公開しています。架空の会社を題材にした6節そのままの見本です。</p>
         </div>
         <div class="tbl">
           <table>
@@ -193,7 +194,7 @@
           <p><b>手順書</b>は、お手元のAIに実装させるための文書です。投げる文面、順序、確認する点を、そのまま使える形で書きます。Claude を前提に書き、ChatGPT や Gemini をお使いの場合は読み替えの注記を付けます。スプレッドシートやGASのような小さな自動化は、手順書ではなく「作る仕事」として当社が作ります。</p>
         </div>
         <div>
-          <p><b>検査</b>は、AIが返した結果について、何をどう確かめれば「本当に終わった」と言えるかの手順です。合否を記録し、人が最終確認する位置を決めます。検査を通った件数だけを、成果として数えます。</p>
+          <p><b>検査</b>は、AIが返した結果について、何をどう確かめれば「本当に終わった」と言えるかの手順です。合否を記録し、人が最終確認する位置を決めます。検査を通った件数だけを、成果として数えます。<a href="sample-audit.html">検査記録と処理ログと月次レポートの見本</a>を公開しています。</p>
         </div>
       </div>
     </div>
@@ -231,7 +232,7 @@
         <p>作る係と確かめる係を分けます。生成は生成用の手順で行い、検査は別の検査手順と機械の照合で行い、何をどう確かめて何を直したかを検査記録に残します。最終の受入れは貴社です。</p>
         <div class="flow" role="img" aria-label="作る係と確かめる係を分ける流れ。素材を集め、AIで生成し、下書きを別の係が検査手順と機械の照合で確かめ、直して記録し、検査記録つきで納品し、貴社が受け入れる"><svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6b7789"/></marker></defs><rect x="44" y="18" width="440" height="72" fill="rgba(176,141,87,.06)" stroke="none"/><rect x="44" y="100" width="440" height="72" fill="rgba(43,143,214,.06)" stroke="none"/><text x="50" y="14" font-size="10" letter-spacing="2" fill="#8f6f3f">作る係</text><text x="50" y="96" font-size="10" letter-spacing="2" fill="#1f78b8">確かめる係</text><text x="50" y="186" font-size="10" letter-spacing="2" fill="#6b7789">納品と受入れ</text><polygon points="60,32 172,32 180,40 180,76 68,76 60,68" fill="#ffffff" stroke="#b08d57" stroke-width="1.2"/><text x="120.0" y="58.0" text-anchor="middle" font-size="12" fill="#1b2a41">素材を集める</text><line x1="180" y1="54" x2="208" y2="54" stroke="#6b7789" stroke-width="1.2" marker-end="url(#ah)"/><polygon points="210,32 322,32 330,40 330,76 218,76 210,68" fill="#ffffff" stroke="#b08d57" stroke-width="1.2"/><text x="270.0" y="58.0" text-anchor="middle" font-size="12" fill="#1b2a41">AIで生成する</text><line x1="330" y1="54" x2="358" y2="54" stroke="#6b7789" stroke-width="1.2" marker-end="url(#ah)"/><polygon points="360,32 462,32 470,40 470,76 368,76 360,68" fill="#ffffff" stroke="#b08d57" stroke-width="1.2"/><text x="415.0" y="58.0" text-anchor="middle" font-size="12" fill="#1b2a41">下書き</text><line x1="415" y1="76" x2="415" y2="112" stroke="#6b7789" stroke-width="1.2" marker-end="url(#ah)"/><polygon points="360,114 462,114 470,122 470,158 368,158 360,150" fill="#ffffff" stroke="#2b8fd6" stroke-width="1.2"/><text x="415.0" y="140.0" text-anchor="middle" font-size="12" fill="#1b2a41">検査の手順</text><line x1="360" y1="136" x2="332" y2="136" stroke="#6b7789" stroke-width="1.2" marker-end="url(#ah)"/><polygon points="210,114 322,114 330,122 330,158 218,158 210,150" fill="#ffffff" stroke="#2b8fd6" stroke-width="1.2"/><text x="270.0" y="140.0" text-anchor="middle" font-size="12" fill="#1b2a41">機械の照合</text><line x1="210" y1="136" x2="182" y2="136" stroke="#6b7789" stroke-width="1.2" marker-end="url(#ah)"/><polygon points="60,114 172,114 180,122 180,158 68,158 60,150" fill="#ffffff" stroke="#2b8fd6" stroke-width="1.2"/><text x="120.0" y="140.0" text-anchor="middle" font-size="12" fill="#1b2a41">直して記録する</text><line x1="120" y1="158" x2="120" y2="202" stroke="#6b7789" stroke-width="1.2" marker-end="url(#ah)"/><polygon points="60,204 222,204 230,212 230,244 68,244 60,236" fill="#ffffff" stroke="#1b2a41" stroke-width="1.2"/><text x="145.0" y="228.0" text-anchor="middle" font-size="12" fill="#1b2a41">検査記録つきで納品</text><line x1="230" y1="224" x2="258" y2="224" stroke="#6b7789" stroke-width="1.2" marker-end="url(#ah)"/><polygon points="260,204 402,204 410,212 410,244 268,244 260,236" fill="#ffffff" stroke="#1b2a41" stroke-width="1.2"/><text x="335.0" y="228.0" text-anchor="middle" font-size="12" fill="#1b2a41">貴社が受け入れる</text></svg></div>
         <h3 class="h3">どう数えるか</h3>
-        <p>成果物1本ごとに、人手で作った場合の時間を、当社が内訳つきで見積もって提案し、着手前に合意して固定します。貴社に過去の実績や外注の見積もりがあれば、それで補正します。料金は換算時間 × 時給 × 50%。数えるのは受け入れられた本数だけで、月次レポートには「換算」と明記します。単発の注文は1件あたり最低5万円で、顧問の中では月額の最低額だけが効きます。</p>
+        <p>成果物1本ごとに、人手で作った場合の時間を、当社が内訳つきで見積もって提案し、着手前に合意して固定します。貴社に過去の実績や外注の見積もりがあれば、それで補正します。料金は換算時間 × 時給 × 50%。数えるのは受け入れられた本数だけで、月次レポートには「換算」と明記します。単発の注文は1件あたり最低5万円で、顧問の中では月額の最低額だけが効きます。基準は<a href="rates.html">換算時間の基準表</a>にあります。</p>
         <h3 class="h3">作らないもの</h3>
         <p>契約書、就業規則などの労務書類、登記や許認可の書類は作りません。それぞれ弁護士、社会保険労務士、司法書士、行政書士の業務です。必要な場合はご紹介します。</p>
       </div>
@@ -308,6 +309,7 @@
       <div><dt>再委託</dt><dd>しません。</dd></div>
       <div><dt>業務範囲外</dt><dd>大きなシステムの開発、貴社の名で外部へ送る行為、ツールの購入や契約の手続き、士業の業務（契約書・就業規則・登記・許認可の書類）。</dd></div>
     </dl>
+    <p class="fine"><a href="terms.html">契約の主な条項</a>に要旨をまとめています。全文は無料相談のあとにお渡しします。</p>
   </div>
 </section>
 
@@ -384,6 +386,8 @@
         <a href="privacy.html">プライバシーポリシー</a>
         <a href="tokushoho.html">特定商取引法に基づく表記</a>
         <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="terms.html">契約の主な条項</a>
+        <a href="rates.html">換算時間の基準表</a>
         <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
       </nav>
     </div>
