@@ -1,6 +1,7 @@
-/* vaynexis.jp v3 — ナビの開閉／トップの背景／検査コンソール（架空の例） */
+/* vaynexis.jp v3 — ナビの開閉／トップの背景／検査記録の表示／節の出現／数字の数え上げ */
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.documentElement.classList.add('js');
 
   /* ---- nav toggle ---- */
   var nav = document.getElementById('nav');
@@ -80,28 +81,57 @@
     var to; window.addEventListener('resize', function () { clearTimeout(to); to = setTimeout(start, 150); });
   }
 
-  /* ---- audit console: fictional demo rows ---- */
+  /* ---- audit log: real rows rendered in HTML; rotate slowly so all rows come into view ---- */
   var log = document.getElementById('log');
-  if (log) {
-    var okEl = document.getElementById('cnt-ok'), ngEl = document.getElementById('cnt-ng');
-    var jobs = ['請求書の作成', '経費の仕分け', '在庫の突合', '見積書の下書き', '問い合わせの一次返信', '議事録の下書き', '納品書の照合', '入金の消込'];
-    var ok = 0, ng = 0, seq = 418, hh = 9, mm = 12;
-    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
-    var row = function (force) {
-      var fail = force === 'ng' || (force !== 'ok' && Math.random() < 0.14);
-      var job = jobs[Math.floor(Math.random() * jobs.length)];
-      var n = 2 + Math.floor(Math.random() * 3);
-      var m = fail ? n - 1 : n;
-      mm += 1 + Math.floor(Math.random() * 7); if (mm >= 60) { mm -= 60; hh += 1; }
-      seq += 1; if (fail) ng += 1; else ok += 1;
-      var li = document.createElement('li');
-      li.innerHTML = '<span class="t">' + pad(hh) + ':' + pad(mm) + '</span><span class="id">#' + seq + '</span><span>' + job + '</span>'
-        + '<span class="' + (fail ? 'ng' : 'ok') + '">' + (fail ? '差し戻し' : '合格') + '</span><span class="m t">' + m + '/' + n + '</span>';
-      log.appendChild(li);
-      while (log.children.length > 7) log.removeChild(log.firstChild);
-      okEl.textContent = ok; ngEl.textContent = ng;
-    };
-    row('ok'); row('ok'); row('ng'); row('ok'); row('ok'); row('ok'); row('ok');
-    if (!reduce) setInterval(row, 1900);
+  if (log && log.children.length > 7 && !reduce) {
+    setInterval(function () {
+      var first = log.firstElementChild;
+      if (!first) return;
+      first.classList.remove('rowin');
+      log.appendChild(first);
+      void first.offsetWidth;
+      first.classList.add('rowin');
+    }, 3200);
+  }
+
+  /* ---- reveal sections once they enter the viewport ---- */
+  var targets = document.querySelectorAll('.sec, .band');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    targets.forEach(function (el) { io.observe(el); });
+    /* 保険: 2秒たっても1つも現れていなければ、観測が働いていない環境とみなして全部出す */
+    setTimeout(function () {
+      if (!document.querySelector('.sec.is-in, .band.is-in')) {
+        targets.forEach(function (el) { el.classList.add('is-in'); });
+      }
+    }, 2000);
+  } else {
+    targets.forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  /* ---- count-up on the record strip ---- */
+  var vals = document.querySelectorAll('.record .v');
+  if (vals.length && !reduce) {
+    vals.forEach(function (el) {
+      var node = el.firstChild;
+      if (!node || node.nodeType !== 3) return;
+      var raw = node.nodeValue.trim();
+      var target = parseInt(raw.replace(/,/g, ''), 10);
+      if (isNaN(target)) return;
+      var t0 = null, dur = 900;
+      var fmt = function (n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ','); };
+      var step = function (ts) {
+        if (t0 === null) t0 = ts;
+        var p = Math.min(1, (ts - t0) / dur);
+        var e = 1 - Math.pow(1 - p, 3);
+        node.nodeValue = fmt(Math.round(target * e));
+        if (p < 1) requestAnimationFrame(step); else node.nodeValue = raw;
+      };
+      requestAnimationFrame(step);
+    });
   }
 })();

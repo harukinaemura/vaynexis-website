@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="8" fill="#1B2A41"/>
-  <text x="32" y="44" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="500" fill="#FFFFFF" text-anchor="middle">V</text>
-  <rect x="18" y="50" width="28" height="2.5" fill="#B08D57"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Vaynexis</title>
+  <polygon points="0.5,0.5 52.5,0.5 63.5,11.5 63.5,63.5 11.5,63.5 0.5,52.5" fill="#ffffff" stroke="#1b2a41" stroke-width="1" stroke-linejoin="miter" vector-effect="non-scaling-stroke"/>
+  <polygon points="6,9 18,9 32,35.6 46,9 58,9 38,47 26,47" fill="#1b2a41"/>
+  <line x1="22" y1="55" x2="42" y2="55" stroke="#b08d57" stroke-width="2.5"/>
 </svg>
