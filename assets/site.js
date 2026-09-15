@@ -140,3 +140,25 @@
     });
   }
 })();
+
+/* 繰り返し動画：見える所へ来たら読み込んで再生し、外れたら止める。
+   動きを減らす設定の人には poster のまま見せる。 */
+(function () {
+  var vids = document.querySelectorAll('video[data-autoplay]');
+  if (!vids.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting) {
+        if (v.preload !== 'auto') { v.preload = 'auto'; v.load(); }
+        var p = v.play();
+        if (p && p.catch) p.catch(function () {});
+      } else if (!v.paused) {
+        v.pause();
+      }
+    });
+  }, { rootMargin: '150px 0px' });
+  vids.forEach(function (v) { io.observe(v); });
+})();

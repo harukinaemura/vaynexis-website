@@ -30,6 +30,11 @@
   --gutter: clamp(18px, 4vw, 44px);
   --section: clamp(64px, 8vw, 112px);
   color-scheme: light;
+
+  /* 分野の色（「できること64項目」と同じ組。減らす＝寒色／作る＝暖色） */
+  --c-invoice: #1f78b8; --c-box: #3f8f6a; --c-clock: #6f5ca6; --c-clip: #3a6099;
+  --c-chat: #2a8f8f;    --c-doc: #55707f;  --c-sort: #5a6ea8;
+  --c-book: #a9793f;    --c-screen: #b8555f; --c-media: #c9762e; --c-gear: #8a6a45; --c-find: #9a7b2e;
 }
 
 /* -------------------- 基本 -------------------- */
@@ -102,7 +107,10 @@ p + p { margin-top: 1em; }
 /* -------------------- ヒーロー -------------------- */
 .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); background: linear-gradient(180deg, #ffffff 0%, var(--void) 100%); }
 .hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(46% 62% at 22% 52%, rgba(255,255,255,.78), transparent 72%), linear-gradient(180deg, rgba(244,246,250,0) 65%, var(--void) 100%); pointer-events: none; }
+.hero::after { content: ""; position: absolute; inset: 0; background:
+               linear-gradient(100deg, rgba(255,255,255,.94) 0%, rgba(255,255,255,.86) 30%, rgba(255,255,255,.40) 52%, rgba(255,255,255,0) 70%),
+               radial-gradient(46% 62% at 20% 48%, rgba(255,255,255,.72), transparent 74%),
+               linear-gradient(180deg, rgba(244,246,250,0) 62%, var(--void) 100%); pointer-events: none; }
 .hero__in { position: relative; z-index: 2; display: grid; grid-template-columns: 1.12fr .88fr; gap: 48px; align-items: center; padding-top: clamp(56px, 8vw, 104px); padding-bottom: clamp(40px, 5vw, 64px); }
 .hero h1 { font-size: clamp(29px, 4.6vw, 52px); line-height: 1.2; letter-spacing: .005em; color: var(--text); margin-top: 18px; }
 .hero h1 em { font-style: normal; color: var(--copper-hi); }
@@ -335,7 +343,8 @@ pre.prompt { white-space: pre-wrap; word-break: break-word; font-family: var(--f
 .samples a { margin: 0 2px; }
 
 /* -------------------- v3.1 見栄えの一組 -------------------- */
-.hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .48; pointer-events: none; }
+.hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+             object-position: 76% 74%; opacity: .78; pointer-events: none; }
 .card .icon { width: 28px; height: 28px; color: var(--copper-hi); display: block; margin-bottom: 10px; }
 .flow { margin-top: 18px; border: 1px solid var(--line); background: var(--white); padding: 14px; }
 .flow svg { width: 100%; height: auto; display: block; font-family: var(--font-jp); }
@@ -405,13 +414,14 @@ pre.prompt { white-space: pre-wrap; word-break: break-word; font-family: var(--f
 /* ===== 3枚組の図（2026-09-15） ===== */
 .pics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 32px 0 6px; }
 .pics figure { margin: 0; }
-.pics img { display: block; width: 100%; height: auto; clip-path: var(--chamfer-sm);
+.pics img, .pics video { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2;
+            object-fit: cover; clip-path: var(--chamfer-sm);
             border: 1px solid var(--line); background: var(--void); }
 .pics figcaption { margin-top: 10px; font-size: 13.5px; line-height: 1.8; color: var(--text-2); }
 .pics figcaption b { display: inline-block; margin-right: 8px; color: #fff; background: var(--c);
                      padding: 2px 12px; font-size: 12.5px; letter-spacing: .06em;
                      clip-path: var(--chamfer-sm); vertical-align: 1px; }
-.sec--alt .pics img { background: var(--white); }
+.sec--alt .pics img, .sec--alt .pics video { background: var(--white); }
 @media (max-width: 860px) { .pics { grid-template-columns: 1fr; gap: 26px; } }
 .pic1 { margin: 26px auto 30px; max-width: 700px; }
 .pic1 img { display: block; width: 100%; height: auto; clip-path: var(--chamfer-sm);
@@ -429,3 +439,75 @@ pre.prompt { white-space: pre-wrap; word-break: break-word; font-family: var(--f
 @media print {
   .cat__head { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* ==========================================================================
+   色の層（2026-09-15）。地と文字は変えず、区切りと数字と印にだけ色を足す。
+   ========================================================================== */
+
+/* 実績の帯：6つの数字を分野の色で分ける */
+.record__in > div { position: relative; }
+.record__in > div::before { content: ""; position: absolute; top: 0; left: 0; right: 0;
+                            height: 3px; background: var(--c, var(--copper)); }
+.record__in > div .v { color: var(--c, var(--text)); }
+.record__in > div:nth-child(1) { --c: var(--c-book); }
+.record__in > div:nth-child(2) { --c: var(--c-invoice); }
+.record__in > div:nth-child(3) { --c: var(--c-gear); }
+.record__in > div:nth-child(4) { --c: var(--c-chat); }
+.record__in > div:nth-child(5) { --c: var(--c-screen); }
+.record__in > div:nth-child(6) { --c: var(--c-sort); }
+
+/* 作る仕事のチップ：分野の色で塗り分ける */
+.chips span { position: relative; border: 1px solid var(--line); border-left: 3px solid var(--c, var(--copper));
+              background: color-mix(in srgb, var(--c, var(--copper)) 8%, #fff);
+              color: var(--text); clip-path: none; }
+
+/* 振り分けの3枚：上端を色で分ける */
+.cards .card { border-top: 3px solid var(--c, var(--copper)); }
+.cards .card:nth-child(1) { --c: var(--ice); }
+.cards .card:nth-child(2) { --c: var(--copper); }
+.cards .card:nth-child(3) { --c: var(--warn); }
+.cards .card:nth-child(1) .hud { color: var(--ice-text); }
+.cards .card:nth-child(2) .hud { color: var(--copper-hi); }
+.cards .card:nth-child(3) .hud { color: var(--warn); }
+
+/* 料金の4枚：上端の帯と見出しの色 */
+.modules .mod { border-top: 3px solid var(--c, var(--copper)); }
+.modules .mod:nth-child(1) { --c: var(--copper); }
+.modules .mod:nth-child(2) { --c: var(--ice); }
+.modules .mod:nth-child(3) { --c: var(--c-book); }
+.modules .mod:nth-child(4) { --c: var(--warn); }
+.modules .mod .hud { color: var(--c); }
+.modules .mod li::before { background: var(--c); box-shadow: none; }
+
+/* 進め方：番号を色の札に、上端の罫も色で */
+.steps li { border-top: 3px solid var(--c, var(--copper)); }
+.steps li:nth-child(1) { --c: var(--c-invoice); }
+.steps li:nth-child(2) { --c: var(--c-chat); }
+.steps li:nth-child(3) { --c: var(--c-box); }
+.steps li:nth-child(4) { --c: var(--c-book); }
+.steps li:nth-child(5) { --c: var(--c-media); }
+.steps__no { color: var(--c, var(--copper-hi)); }
+
+/* よくある質問：問いの頭に色の印 */
+.faq > div { border-top: 2px solid var(--c, var(--line)); }
+.faq > div:nth-child(6n+1) { --c: var(--c-invoice); }
+.faq > div:nth-child(6n+2) { --c: var(--c-book); }
+.faq > div:nth-child(6n+3) { --c: var(--c-chat); }
+.faq > div:nth-child(6n+4) { --c: var(--c-screen); }
+.faq > div:nth-child(6n+5) { --c: var(--c-sort); }
+.faq > div:nth-child(6n+6) { --c: var(--c-box); }
+.faq > div > b { color: var(--text); }
+
+/* 見出しの Hud を節ごとに色で変える（節の区別がつく） */
+.sec .sec__head .hud { color: var(--copper-hi); }
+
+/* ページ冒頭の帯（横長の図） */
+.pichead { border-bottom: 1px solid var(--line); background: var(--void); }
+.pichead img { display: block; width: 100%; height: auto; max-height: 240px; object-fit: cover;
+               object-position: center 42%; }
+@media (max-width: 700px) { .pichead img { max-height: 170px; } }
+@media print { .pichead { display: none !important; } }
+
+/* 背景の繰り返し動画（ヒーロー）。静止画と同じ扱いにする */
+video.hero__img { object-fit: cover; }
+@media print { video.hero__img { display: none !important; } }
