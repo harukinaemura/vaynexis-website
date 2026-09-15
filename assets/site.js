@@ -148,16 +148,25 @@
   if (!vids.length) return;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce || !('IntersectionObserver' in window)) return;
+  var tryPlay = function (v) {
+    /* load() は再生要求を中断させるので呼ばない。preload を上げるだけで足りる。 */
+    if (v.preload !== 'auto') v.preload = 'auto';
+    v.muted = true;                 /* 属性だけでは許可されない環境があるので明示する */
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {
+      /* まだ読めていないだけのことがあるので、読めた時点で一度だけやり直す */
+      v.addEventListener('canplay', function once() {
+        v.removeEventListener('canplay', once);
+        var q = v.play();
+        if (q && q.catch) q.catch(function () {});   /* それでも駄目なら poster のまま */
+      });
+    });
+  };
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       var v = e.target;
-      if (e.isIntersecting) {
-        if (v.preload !== 'auto') { v.preload = 'auto'; v.load(); }
-        var p = v.play();
-        if (p && p.catch) p.catch(function () {});
-      } else if (!v.paused) {
-        v.pause();
-      }
+      if (e.isIntersecting) tryPlay(v);
+      else if (!v.paused) v.pause();
     });
   }, { rootMargin: '150px 0px' });
   vids.forEach(function (v) { io.observe(v); });
