@@ -532,3 +532,18 @@ td.ok { color: var(--ice-text); font-weight: 600; white-space: nowrap; }
                background: #1b2a41; border: 1px solid var(--line); clip-path: var(--chamfer-sm); }
 .movie figcaption { margin-top: 10px; font-size: 12.5px; color: var(--muted); }
 @media print { .movie { display: none !important; } }
+
+/* 紹介動画（本文の中に置く2段組み） */
+.intro2 { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+          gap: 30px; align-items: center; margin: 30px 0 14px; }
+.intro2 .movie { margin: 0; }
+.intro2 .movie video { max-width: 100%; }
+.intro2 .hud { margin-bottom: 6px; }
+.intro2 .h3 { margin-bottom: 4px; }
+@media (max-width: 860px) { .intro2 { grid-template-columns: 1fr; gap: 18px; } }
+
+/* 無料相談の連絡先（読める形で出す） */
+.table--con dd .big { font-size: 20px; font-weight: 600; letter-spacing: .02em; }
+.table--con dd .fine { display: block; margin-top: 5px; }
+.band__meta .sep { margin: 0 10px; color: var(--muted); }
+.band__meta a { color: inherit; }
