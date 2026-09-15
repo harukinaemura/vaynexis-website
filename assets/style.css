@@ -525,3 +525,10 @@ video.hero__img { object-fit: cover; }
 .ul li, .ol li { margin-bottom: 6px; }
 .ul b, .ol b { color: var(--text); font-weight: 500; }
 td.ok { color: var(--ice-text); font-weight: 600; white-space: nowrap; }
+
+/* 押して再生する動画（紹介） */
+.movie { margin: 26px 0 8px; }
+.movie video { display: block; width: 100%; max-width: 900px; height: auto; aspect-ratio: 16 / 9;
+               background: #1b2a41; border: 1px solid var(--line); clip-path: var(--chamfer-sm); }
+.movie figcaption { margin-top: 10px; font-size: 12.5px; color: var(--muted); }
+@media print { .movie { display: none !important; } }
