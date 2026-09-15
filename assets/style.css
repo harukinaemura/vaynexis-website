@@ -511,3 +511,17 @@ pre.prompt { white-space: pre-wrap; word-break: break-word; font-family: var(--f
 /* 背景の繰り返し動画（ヒーロー）。静止画と同じ扱いにする */
 video.hero__img { object-fit: cover; }
 @media print { video.hero__img { display: none !important; } }
+
+/* 作る仕事の見本：現物を並べる棚 */
+.gal { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin: 26px 0 10px; }
+.gal--2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.gal--4 { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.gal figure { margin: 0; }
+.gal img, .gal video { display: block; width: 100%; height: auto; border: 1px solid var(--line);
+                       background: var(--void); clip-path: var(--chamfer-sm); }
+.sec--alt .gal img, .sec--alt .gal video { background: var(--white); }
+.gal figcaption { margin-top: 8px; font-size: 12.5px; line-height: 1.6; color: var(--muted); }
+.ul, .ol { margin: 10px 0 0; padding-left: 1.2em; font-size: 14px; line-height: 1.95; color: var(--text-2); }
+.ul li, .ol li { margin-bottom: 6px; }
+.ul b, .ol b { color: var(--text); font-weight: 500; }
+td.ok { color: var(--ice-text); font-weight: 600; white-space: nowrap; }
