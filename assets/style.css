@@ -397,6 +397,30 @@ pre.prompt { white-space: pre-wrap; word-break: break-word; font-family: var(--f
          border-left: 4px solid var(--ice); clip-path: var(--chamfer-sm); }
 .allin p { margin: 0; font-size: .96rem; }
 .allin .big { font-size: 1.12rem; font-weight: 700; display: block; margin-bottom: 4px; }
+.catcap { display: flex; align-items: center; gap: 9px; margin: 22px 0 10px;
+          font-weight: 600; font-size: .95rem; color: var(--text); }
+.catcap i { width: 13px; height: 13px; display: block; background: var(--c); clip-path: var(--chamfer-sm); }
+.lead--sub { margin-top: 12px; max-width: 70ch; }
+
+/* ===== 3枚組の図（2026-09-15） ===== */
+.pics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 32px 0 6px; }
+.pics figure { margin: 0; }
+.pics img { display: block; width: 100%; height: auto; clip-path: var(--chamfer-sm);
+            border: 1px solid var(--line); background: var(--void); }
+.pics figcaption { margin-top: 10px; font-size: 13.5px; line-height: 1.8; color: var(--text-2); }
+.pics figcaption b { display: inline-block; margin-right: 8px; color: #fff; background: var(--c);
+                     padding: 2px 12px; font-size: 12.5px; letter-spacing: .06em;
+                     clip-path: var(--chamfer-sm); vertical-align: 1px; }
+.sec--alt .pics img { background: var(--white); }
+@media (max-width: 860px) { .pics { grid-template-columns: 1fr; gap: 26px; } }
+.pic1 { margin: 26px auto 30px; max-width: 700px; }
+.pic1 img { display: block; width: 100%; height: auto; clip-path: var(--chamfer-sm);
+            border: 1px solid var(--line); background: var(--void); }
+.sec--alt .pic1 img { background: var(--white); }
+.pic1 figcaption { margin-top: 10px; font-size: 13.5px; line-height: 1.8; color: var(--text-2); }
+.pic1 figcaption b { display: inline-block; margin-right: 8px; color: #fff; background: var(--c);
+                     padding: 2px 12px; font-size: 12.5px; letter-spacing: .06em;
+                     clip-path: var(--chamfer-sm); vertical-align: 1px; }
 @media (max-width: 720px) {
   .cats { grid-template-columns: 1fr; }
   .cat__row { grid-template-columns: 1fr; gap: 2px; padding: 9px 12px; }
