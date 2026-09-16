@@ -662,3 +662,42 @@ td.ok { color: var(--ice-text); font-weight: 600; white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) {
   .js .sec .fig--seq .pipe > * { opacity: 1; transform: none; animation: none; }
 }
+
+/* 「間違いに気づくまでの時間」の軸 */
+.axis { margin: 0; }
+.axis__bar { position: relative; height: 10px; border-radius: 5px;
+             background: linear-gradient(90deg, var(--ice) 0%, var(--copper) 55%, var(--warn) 100%); }
+.axis__ends { display: flex; justify-content: space-between; font-size: .76rem;
+              color: var(--muted); margin: 7px 0 16px; }
+.axis__zones { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.axis__z { border-top: 3px solid var(--c, var(--copper)); padding-top: 10px; }
+.axis__z > b { display: block; font-size: .92rem; color: var(--text); margin-bottom: 4px; }
+.axis__z p { margin: 0; font-size: .82rem; color: var(--text-2); line-height: 1.7; }
+@media (max-width: 680px) { .axis__zones { grid-template-columns: 1fr; gap: 12px; } }
+
+/* 2つの数え方が1つの式に合流する図 */
+.conv { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.conv__c { background: var(--white); border: 1px solid var(--line); clip-path: var(--chamfer-sm);
+           padding: 13px 15px; border-top: 3px solid var(--c, var(--copper)); }
+.conv__c > b { display: block; font-size: .95rem; color: var(--text); }
+.conv__c > em { font-style: normal; display: block; font-family: var(--font-mono);
+                font-size: .78rem; color: var(--copper-hi); margin: 3px 0 7px; }
+.conv__c p { margin: 0; font-size: .82rem; color: var(--text-2); line-height: 1.7; }
+.conv__join { grid-column: 1 / -1; text-align: center; color: var(--copper); font-size: 1.2rem;
+              line-height: 1; margin: -2px 0 -4px; }
+.conv__sum { grid-column: 1 / -1; text-align: center; background: var(--white);
+             border: 1px solid var(--line-strong); clip-path: var(--chamfer-sm); padding: 15px 14px; }
+.conv__sum b { display: block; font-family: var(--font-mono); font-size: clamp(15px, 2.4vw, 22px);
+               color: var(--text); letter-spacing: .01em; }
+.conv__sum span { display: block; font-size: .8rem; color: var(--muted); margin-top: 6px; }
+@media (max-width: 680px) { .conv { grid-template-columns: 1fr; } }
+
+/* やること・条件つき・やらないこと */
+.scope { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+.scope > div { border-top: 3px solid var(--c, var(--copper)); padding-top: 10px; }
+.scope > div > b { display: block; font-size: .92rem; margin-bottom: 6px; color: var(--text); }
+.scope ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.scope li { font-size: .82rem; color: var(--text-2); line-height: 1.6; padding-left: 15px;
+            position: relative; }
+.scope li::before { content: ""; position: absolute; left: 0; top: .52em; width: 6px; height: 6px;
+                    border-radius: 50%; background: var(--c, var(--copper)); }
