@@ -637,3 +637,28 @@ td.ok { color: var(--ice-text); font-weight: 600; white-space: nowrap; }
 .tl > div > em { font-style: normal; font-family: var(--font-mono); font-size: .74rem; color: var(--copper-hi);
          letter-spacing: .04em; display: block; margin-bottom: 2px; }
 .tl p { margin: 4px 0 0; font-size: .82rem; color: var(--text-2); line-height: 1.7; }
+
+/* 2本の流れをくらべる図（検査がないとき／あるとき） */
+.fig .cmp__t { margin: 20px 0 8px; }
+.fig .cmp__t:first-child { margin-top: 0; }
+.pipe--bad > .last { border-color: var(--warn); }
+.pipe--bad > .last > b { color: var(--warn); }
+.pipe--ok > .last { border-color: var(--ice); }
+.pipe--ok > .last > b { color: var(--ice-text); }
+.pipe--bad > div, .pipe--ok > div { background: var(--white); }
+.pipe--bad > .arw, .pipe--ok > .arw { color: var(--muted); }
+
+/* 節が画面に入ったら、順番に現れる（読む順そのもの） */
+.js .sec .fig--seq .pipe > * { opacity: .001; transform: translateY(10px); }
+.js .sec.is-in .fig--seq .pipe > * { animation: rise .6s cubic-bezier(.22,.61,.36,1) both; }
+.js .sec.is-in .fig--seq .pipe > *:nth-child(1) { animation-delay: .04s; }
+.js .sec.is-in .fig--seq .pipe > *:nth-child(2) { animation-delay: .12s; }
+.js .sec.is-in .fig--seq .pipe > *:nth-child(3) { animation-delay: .20s; }
+.js .sec.is-in .fig--seq .pipe > *:nth-child(4) { animation-delay: .28s; }
+.js .sec.is-in .fig--seq .pipe > *:nth-child(5) { animation-delay: .36s; }
+.js .sec.is-in .fig--seq .pipe > *:nth-child(6) { animation-delay: .44s; }
+.js .sec.is-in .fig--seq .pipe > *:nth-child(7) { animation-delay: .52s; }
+.js .sec.is-in .fig--seq .pipe--ok > * { animation-delay: .6s; }
+@media (prefers-reduced-motion: reduce) {
+  .js .sec .fig--seq .pipe > * { opacity: 1; transform: none; animation: none; }
+}
