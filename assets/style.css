@@ -605,3 +605,35 @@ td.ok { color: var(--ice-text); font-weight: 600; white-space: nowrap; }
   .rep { grid-template-columns: 1fr; gap: 13px; }
   .rep__note { grid-template-rows: auto auto; }
 }
+
+/* 帯を分ける図（22件を3つに振り分ける／31件のうち28件が合格、など） */
+.split__bar { display: flex; flex-wrap: wrap; gap: 4px; margin: 0 0 15px; }
+.split__bar i { width: 20px; height: 20px; border-radius: 2px; background: var(--c, var(--line)); }
+.split__k { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+.split__k > div { border-top: 3px solid var(--c, var(--copper)); padding-top: 9px; }
+.split__k > div > b { display: block; font-size: .9rem; color: var(--text); }
+.split__k span { display: block; font-size: .78rem; color: var(--muted); margin-top: 3px; line-height: 1.6; }
+
+/* 矢印でつなぐ流れ */
+.pipe { display: flex; flex-wrap: wrap; align-items: stretch; gap: 10px; }
+.pipe > div { flex: 1 1 158px; background: var(--white); border: 1px solid var(--line);
+              clip-path: var(--chamfer-sm); padding: 12px 14px; }
+.pipe > div > b { display: block; font-size: .88rem; margin-bottom: 5px; color: var(--text); }
+.pipe > div > span { display: block; font-size: .78rem; color: var(--text-2); line-height: 1.65; }
+.pipe > .arw { flex: 0 0 auto; align-self: center; color: var(--copper); font-size: 1.15rem; }
+.pipe > .last { border-color: var(--line-strong); }
+@media (max-width: 680px) {
+  .pipe { flex-direction: column; }
+  .pipe > .arw { transform: rotate(90deg); align-self: center; }
+}
+
+/* 時間の軸 */
+.tl { border-left: 2px solid var(--copper-lo); padding-left: 20px; display: grid; gap: 17px; margin: 0; }
+.tl > div { position: relative; }
+.tl > div::before { content: ""; position: absolute; left: -27px; top: 4px; width: 11px; height: 11px;
+                    border-radius: 50%; background: var(--white); border: 2px solid var(--copper); }
+.tl > div.is-end::before { background: var(--copper); }
+.tl > div > b { display: block; font-size: .92rem; color: var(--text); }
+.tl > div > em { font-style: normal; font-family: var(--font-mono); font-size: .74rem; color: var(--copper-hi);
+         letter-spacing: .04em; display: block; margin-bottom: 2px; }
+.tl p { margin: 4px 0 0; font-size: .82rem; color: var(--text-2); line-height: 1.7; }
