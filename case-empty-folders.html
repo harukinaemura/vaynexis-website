@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>事例：2か月のあいだ、AIは「できました」と言い続けた｜合同会社Vaynexis</title>
-  <meta name="description" content="領収書の整理をAIに任せ、2か月間「できました」と報告され続けた。なぜ気づけなかったか、どんな検査なら防げたか。合同会社Vaynexisの自社の事例。">
+  <title>事例：2か月のあいだ、報告は「失敗」と書き、要約は「正常」と書いていた｜合同会社Vaynexis</title>
+  <meta name="description" content="領収書の整理をAIに任せた。報告は冒頭に失敗を書いていたのに、毎日の要約は「正常」とまとめていた。なぜ2か月気づけなかったか、どんな検査なら防げたか。合同会社Vaynexisの自社の事例。">
   <meta name="theme-color" content="#f4f6fa">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="事例：2か月のあいだ、AIは「できました」と言い続けた｜合同会社Vaynexis">
-  <meta property="og:description" content="領収書の整理をAIに任せ、2か月間「できました」と報告され続けた。なぜ気づけなかったか、どんな検査なら防げたか。合同会社Vaynexisの自社の事例。">
+  <meta property="og:title" content="事例：2か月のあいだ、報告は「失敗」と書き、要約は「正常」と書いていた｜合同会社Vaynexis">
+  <meta property="og:description" content="領収書の整理をAIに任せた。報告は冒頭に失敗を書いていたのに、毎日の要約は「正常」とまとめていた。なぜ2か月気づけなかったか、どんな検査なら防げたか。合同会社Vaynexisの自社の事例。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vaynexis.jp/case-empty-folders.html">
   <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
@@ -44,8 +44,8 @@
 <section class="page-head">
   <div class="wrap">
     <p class="hud">Case</p>
-    <h1 class="h1">2か月のあいだ、AIは「できました」と言い続けていた</h1>
-    <p class="lead">経費の領収書の整理をAIに任せました。毎月きちんと起動し、報告も上がってきました。2か月後に分かったのは、保存された書類が1枚もないことでした。</p>
+    <h1 class="h1">2か月のあいだ、報告は「失敗」と書き、要約は「正常」と書いていた</h1>
+    <p class="lead">経費の領収書の整理をAIに任せました。毎月きちんと起動し、報告も上がってきました。報告の冒頭には、保存が0件だと書いてありました。それでも2か月、保存された書類は1枚もないままでした。</p>
   </div>
 </section>
 
@@ -57,14 +57,14 @@
     </div>
     <div class="two">
       <div>
-        <p>経費の領収書は、メールで届きます。差出人も形式もばらばらで、月に数件から数十件。手で仕分けるのが面倒で、AIに任せました。</p>
+        <p>経費の領収書は、メールで届きます。差出人も形式もばらばらです。手で仕分けるのが面倒で、AIに任せました。</p>
         <p>仕様はこうです。毎月1日の朝に起動し、前月分のメールから領収書や請求書のPDFを見つける。2つの会社のどちらの経費かを判定し、その会社のドライブの月別フォルダに保存する。</p>
-        <p>7月1日、レポートが上がってきました。「月別サブフォルダを3箇所に新規作成しました」。Appleからの請求が2件、クラウドサービスの領収書が1件。判定した会社名と信頼度まで付いていました。<b>当社はこれを読んで、動いていると思いました。</b></p>
+        <p>1回目は7月1日（6月分）。レポートのいちばん上の集計に「Drive保存: 0 件」「エラー/ブロッカー: 1 件」とありました。2回目は8月1日（7月分）。最初の見出し「結論」の1行目に、太字で「添付 PDF の Drive 保存は実行できませんでした。」とありました。<b>それでも、2か月そのままでした。</b></p>
       </div>
       <div>
-        <p>同じレポートのずっと下に、こう書いてありました。<b>「いずれも現時点で空です」</b>。</p>
+        <p>月別のフォルダは3か所に作られていて、<b>「いずれも現時点で空です」</b>とも書いてありました。</p>
         <p>原因も書いてありました。添付ファイルの名前や形式は取れるが、中身を取り出す機能が、接続していたツールにはなかった。保存する中身がない。</p>
-        <p>調べると、前の月も同じでした。2か月のあいだ、毎月きちんと起動し、判定し、フォルダを作り、レポートを上げて、<b>中身は一度もゼロ件のまま</b>でした。最初から一度も成立していないタスクでした。</p>
+        <p>2か月のあいだ、毎月きちんと起動し、判定し、レポートを上げて、<b>保存は一度もゼロ件のまま</b>でした。最初から一度も成立していないタスクでした。</p>
       </div>
     </div>
 
@@ -73,8 +73,9 @@
         <div>
           <p class="cmp__t">AIの報告</p>
           <div class="pane">
-            <div class="pane__h"><span>report</span><span>7/1 05:00</span></div>
+            <div class="pane__h"><span>report</span><span>8/1 10:07</span></div>
             <ul class="pane__b">
+              <li><span class="tick" aria-hidden="true" style="color:#c8463f">✕</span>添付PDFの保存は実行できませんでした（冒頭の結論）</li>
               <li><span class="tick" aria-hidden="true">✓</span>フォルダを3つ作成</li>
               <li><span class="tick" aria-hidden="true">✓</span>領収書を3件 検出</li>
               <li><span class="tick" aria-hidden="true">✓</span>会社の判定を完了</li>
@@ -87,14 +88,13 @@
           <div class="pane">
             <div class="pane__h"><span>drive</span><span>経費</span></div>
             <ul class="pane__b">
-              <li><span class="dir" aria-hidden="true"></span><span class="nm">2026-06</span><span class="zero">0件</span></li>
-              <li><span class="dir" aria-hidden="true"></span><span class="nm">2026-07</span><span class="zero">0件</span></li>
-              <li><span class="dir" aria-hidden="true"></span><span class="nm">2026-08</span><span class="zero">0件</span></li>
+              <li><span class="dir" aria-hidden="true"></span><span class="nm">2026-06</span><span class="zero">自動保存0件</span></li>
+              <li><span class="dir" aria-hidden="true"></span><span class="nm">2026-07</span><span class="zero">自動保存0件</span></li>
             </ul>
           </div>
         </div>
       </div>
-      <figcaption><b>報告はすべて事実でした。</b>フォルダは本当に3つ作られ、メールからも3件見つかっていました。ただ、保存された中身は一度もありませんでした。この状態が2か月続きました。</figcaption>
+      <figcaption><b>報告はすべて事実で、失敗も冒頭に書いてありました。</b>フォルダは本当に3つ作られ、メールからも3件見つかっていました。ただ、保存された中身は一度もありませんでした。この状態が2か月続きました。</figcaption>
     </figure>
   </div>
 </section>
@@ -107,41 +107,40 @@
     </div>
     <div class="two">
       <div>
-        <p>報告のどこにも嘘はありませんでした。フォルダの作成も、検出結果3件も事実です。「いずれも空です」も事実で、ちゃんと書いてありました。<b>読み飛ばしたのは、人の側です。</b></p>
-        <p>理由は、報告の上から8割が「できたこと」で埋まり、できていないことは下に1行だけあったからです。人は上から読み、途中で「動いている」と判断して読むのをやめます。</p>
-        <p>AIは嘘をつきませんでした。ただ、<b>報告の構造が、成功を大きく、失敗を小さく見せていた</b>。注意力ではなく、報告の設計の問題でした。</p>
+        <p>報告のどこにも嘘はありませんでした。フォルダの作成も、検出結果3件も事実です。<b>しかも失敗は、2回とも報告の冒頭に書いてありました。</b>原因の特定も、直し方の提案も済んでいました。</p>
+        <p>それでも気づけなかった理由は、記録から2つ分かっています。通知の仕組みが止まっていて、報告は開きに行かない限り目に入らなかったこと。毎日の要約が、同じ実行を「朝の 4 便すべて正常」とまとめていたことです。</p>
+        <p>要約は「実行されたか」「レポートができたか」を確かめていて、中身は読んでいませんでした。<b>失敗を正しく書いた報告が、1段上でまとめられるときに「正常」になっていた</b>。注意力ではなく、要約の設計の問題でした。</p>
       </div>
       <div>
         <p>領収書の保存は、間違いが数か月先の決算まで目に入らない仕事です。止まるAIは自分で知らせてくれます。動いているように見えるAIは、気づくまでの時間がそのまま損害になります。</p>
-        <p>当社は、任せてはいけない種類の仕事を任せて、検査もつけていませんでした。2か月で済んだのは、運が良かっただけです。顧客への請求書や契約更新日の管理なら、取り返しがつきません。</p>
+        <p>当社は、任せてはいけない種類の仕事を任せて、その結果を、中身を読まない要約に確かめさせていました。顧客への請求書や契約更新日の管理なら、取り返しがつきません。</p>
       </div>
     </div>
 
     <figure class="fig fig--wide">
       <div class="rep">
         <div class="rep__doc">
-          <div class="pane__h"><span>monthly report</span><span>7/1 05:00</span></div>
-          <div class="rep__lines">
-            <div class="rep__l"><span class="tick" aria-hidden="true">✓</span><span class="bar" style="width:88%"></span></div>
-            <div class="rep__l"><span class="tick" aria-hidden="true">✓</span><span class="bar" style="width:72%"></span></div>
-            <div class="rep__l"><span class="tick" aria-hidden="true">✓</span><span class="bar" style="width:82%"></span></div>
-            <div class="rep__l"><span class="tick" aria-hidden="true">✓</span><span class="bar" style="width:61%"></span></div>
-            <div class="rep__l"><span class="tick" aria-hidden="true">✓</span><span class="bar" style="width:84%"></span></div>
-            <div class="rep__l"><span class="tick" aria-hidden="true">✓</span><span class="bar" style="width:68%"></span></div>
-            <div class="rep__l"><span class="tick" aria-hidden="true">✓</span><span class="bar" style="width:78%"></span></div>
-          </div>
-          <div class="rep__cut"><span>ここで読むのをやめた</span></div>
+          <div class="pane__h"><span>report</span><span>8/1 10:07</span></div>
           <div class="rep__tail">
-            <div class="rep__l"><span class="tick" aria-hidden="true"></span><span class="bar" style="width:44%"></span></div>
-            <p class="rep__miss">いずれも現時点で空です</p>
+            <p class="rep__miss">添付 PDF の Drive 保存は実行できませんでした。</p>
+          </div>
+          <div class="rep__lines">
+            <div class="rep__l"><span class="tick" aria-hidden="true">✓</span><span class="bar" style="width:72%"></span></div>
+            <div class="rep__l"><span class="tick" aria-hidden="true">✓</span><span class="bar" style="width:84%"></span></div>
+            <div class="rep__l"><span class="tick" aria-hidden="true">✓</span><span class="bar" style="width:61%"></span></div>
+          </div>
+          <div class="rep__cut"><span>毎日の要約</span></div>
+          <div class="rep__lines">
+            <div class="rep__l"><span class="tick" aria-hidden="true">✓</span><span class="bar" style="width:78%"></span></div>
+            <p class="rep__miss" style="color:inherit">朝の 4 便すべて正常</p>
           </div>
         </div>
         <div class="rep__note">
-          <div class="rep__brace"><b>できたこと</b><span>報告の上から8割</span></div>
-          <div class="rep__brace rep__brace--warn"><b>できなかったこと</b><span>いちばん下に1行だけ</span></div>
+          <div class="rep__brace rep__brace--warn"><b>報告の冒頭</b><span>結論：保存は実行できず</span></div>
+          <div class="rep__brace"><b>毎日の要約</b><span>朝の 4 便すべて正常</span></div>
         </div>
       </div>
-      <figcaption><b>AIは嘘をつきませんでした。</b>「いずれも現時点で空です」は、ちゃんと書いてありました。ただ、できたことが上から8割を占め、できなかったことは最後の1行でした。<b>注意力ではなく、報告の設計の問題です。</b></figcaption>
+      <figcaption><b>AIは嘘をつきませんでした。</b>失敗は報告の冒頭に書いてありました。ただ、その報告をまとめる毎日の要約が、中身を読まずに「すべて正常」と書いていました。<b>注意力ではなく、要約の設計の問題です。</b></figcaption>
     </figure>
   </div>
 </section>
@@ -152,12 +151,12 @@
       <div><p class="hud">The Inspection</p><h2 class="h2" id="h-check">どんな検査なら防げたか</h2></div>
       <span class="sec__idx">03 / 04</span>
     </div>
-    <p class="sec__sum">半年やって決めたのは、「何をさせるか」より先に、<b>AIが終わったと言ったとき、何をもって終わったとみなすか</b>を決めることでした。決めておけば、この空回りは初回で止まります。</p>
+    <p class="sec__sum">大事なのは、「何をさせるか」より先に、<b>何をもって終わったとみなすか</b>を決めておくことです。要約がレポートの結論を読む形にしておけば、この空回りは初回で止まります。</p>
     <dl class="table">
-      <div><dt>完了報告の定義</dt><dd>「作成した」という動詞ではなく、成果物の個数で報告させます。できなかったことは冒頭に書かせます。止まってよいと言われていないAIは、止まりません。</dd></div>
+      <div><dt>要約の「正常」の定義</dt><dd>要約には、「実行された」「報告ができた」を成功と数えさせません。各報告の結論と成果物の個数を転記させ、0件や「できなかった」があれば成功の印を付けず、その文をそのまま引かせます。</dd></div>
       <div><dt>成果物を数える</dt><dd>AIの報告ではなく、保存先を自分で開いて数えます。指示した数とも突き合わせます。着手すらされなかった分は、数えても見えないからです。</dd></div>
       <div><dt>中身を1件開く</dt><dd>数が合っていても、中身が壊れていることがあります。1件だけ、いつも見る画面ではなく、読者が見る画面で最後まで開きます。</dd></div>
-      <div><dt>月に一度の点検</dt><dd>前月分の件数を見て、過去のレポートを「0件」「できなかった」で検索します。2か月見落とした「空です」の1行は、検索していれば初月に出ていました。</dd></div>
+      <div><dt>月に一度の点検</dt><dd>前月分の件数を見て、過去のレポート本体を「0 件」「できなかった」「ブロッカー」で検索します。1回目のレポートの「Drive保存: 0 件」は、検索していれば初月に出ていました。通知が最後に届いた日も確かめます。</dd></div>
     </dl>
   </div>
 </section>
@@ -170,13 +169,13 @@
     </div>
     <div class="two">
       <div>
-        <p>同じ型の失敗が、もう一つありました。毎朝AIに記事の下書きと画像を作らせ、人が確認して公開する。53日連続で回り、止まった日は一度もありません。</p>
-        <p>53日目に気づきました。見出しが、見出しになっていない。下書きの「##」という記法に貼り付け先が対応しておらず、記号がそのまま文字として出ていました。</p>
-        <p>ここでもAIは仕事をしています。記事の中身に問題はありませんでした。壊れたのは、出力と成果物のあいだ、誰も見ていない継ぎ目でした。53日間、誰も気づきませんでした。</p>
+        <p>同じ型の失敗が、もう一つありました。毎朝AIに記事の下書きと画像を作らせ、人が貼り付けて公開する。9月9日の時点で53日連続で回り、止まった日は一度もありません。</p>
+        <p>53日目、別の記事の形を合わせるために公開ページを調べていたAIが気づきました。見出しが、見出しになっていない。下書きの「##」という記法に貼り付け先が対応しておらず、記号がそのまま文字として出ていました。</p>
+        <p>ここでもAIは仕事をしています。記事の中身に問題はありませんでした。壊れたのは、出力と成果物のあいだ、誰も見ていない継ぎ目でした。公開ページを開き直すと、少なくとも7月15日から9月9日まで、同じ崩れ方でした。</p>
       </div>
       <div>
-        <p>共通するのは、AIが誤った答えを出したわけではないことです。壊れていたのは、作業と成果物のあいだ、報告と現実のあいだでした。AIを賢くしても直りません。<b>確かめる手順を、仕事の一部として持つ</b>しかありませんでした。効率が上がったのも、検査の形が決まった後です。</p>
-        <p>完了報告の条件の文面と、そのまま貼れる指示文は、<a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note の記事</a> に続きがあります。</p>
+        <p>共通するのは、AIが誤った答えを出したわけではないことです。壊れていたのは、作業と成果物のあいだ、報告と現実のあいだでした。AIを賢くしても直りません。<b>確かめる手順を、仕事の一部として持つ</b>しかありませんでした。検査は、「できたか」を見る形にしておかないと効きません。</p>
+        <p>要約の「正常」の定義と、そのまま貼れる指示文は、<a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note の記事</a> に続きがあります。</p>
       </div>
     </div>
   </div>
