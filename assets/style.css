@@ -503,9 +503,9 @@ pre.prompt { white-space: pre-wrap; word-break: break-word; font-family: var(--f
 
 /* ページ冒頭の帯（横長の図） */
 .pichead { border-bottom: 1px solid var(--line); background: var(--void); }
-.pichead img { display: block; width: 100%; height: auto; max-height: 240px; object-fit: cover;
+.pichead img, .pichead video { display: block; width: 100%; height: auto; max-height: 240px; object-fit: cover;
                object-position: center 42%; }
-@media (max-width: 700px) { .pichead img { max-height: 170px; } }
+@media (max-width: 700px) { .pichead img, .pichead video { max-height: 170px; } }
 @media print { .pichead { display: none !important; } }
 
 /* 背景の繰り返し動画（ヒーロー）。静止画と同じ扱いにする */
@@ -701,3 +701,16 @@ td.ok { color: var(--ice-text); font-weight: 600; white-space: nowrap; }
             position: relative; }
 .scope li::before { content: ""; position: absolute; left: 0; top: .52em; width: 6px; height: 6px;
                     border-radius: 50%; background: var(--c, var(--copper)); }
+
+/* 入口の料金と、相談から継続判断までの短い案内 */
+.entry-route { padding: 34px 0; background: var(--white); border-block: 1px solid var(--line); }
+.entry-route__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; margin-top: 20px; }
+.entry-route__grid > div { min-width: 0; border-top: 2px solid var(--copper); padding-top: 15px; }
+.entry-route h3 { margin: 8px 0; font-size: 1.04rem; }
+.entry-route p { font-size: .88rem; line-height: 1.8; }
+.entry-route .fine { margin-bottom: 0; }
+@media (max-width: 760px) { .entry-route__grid { grid-template-columns: 1fr; gap: 18px; } }
+
+.ccard__v.latin { font-size: clamp(15px, 4.4vw, 22px); }
+
+html { scroll-padding-top: 78px; }
