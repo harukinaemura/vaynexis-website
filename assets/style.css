@@ -723,6 +723,7 @@ html { scroll-padding-top: 78px; }
 .mod li::before { position: absolute; left: 0; top: 0; }
 /* 2) 表（build の label_tables が class と data-label を付ける）：狭い幅では1行を1枚の札に。3列は560px以下・4列以上は900px以下 */
 .tbl td.nw { white-space: nowrap; }
+@media (min-width: 901px) { .tbl table.plans td:nth-child(-n+2) { white-space: nowrap; } }  /* 顧問のプランの表：プラン名と範囲を折らない */
 @media (max-width: 900px) {
   .tbl table.stack4, .tbl table.stack4 tbody, .tbl table.stack4 tr, .tbl table.stack4 td { display: block; width: auto; }
   .tbl table.stack4 thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
