@@ -1,1 +1,6 @@
 /worker/
+/.git/
+/.wrangler/
+/node_modules/
+/README.md
+/wrangler.jsonc
