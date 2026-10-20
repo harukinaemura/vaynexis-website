@@ -544,6 +544,8 @@ td.ok { color: var(--ice-text); font-weight: 600; white-space: nowrap; }
 
 /* 無料相談の連絡先（読める形で出す） */
 .table--con dd .big { font-size: 20px; font-weight: 600; letter-spacing: .02em; }
+.table--con div { grid-template-columns: 96px minmax(0, 1fr); }
+.table--con dd .big { overflow-wrap: anywhere; }
 .table--con dd .fine { display: block; margin-top: 5px; }
 .band__meta .sep { margin: 0 10px; color: var(--muted); }
 .band__meta a { color: inherit; }
