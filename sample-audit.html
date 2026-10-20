@@ -87,14 +87,14 @@
 
     <h3 class="h3 sub">何を確かめたか</h3>
     <div class="tbl">
-      <table>
+      <table class="stack stack4">
         <thead><tr><th>No.</th><th>検査項目</th><th>確かめ方</th><th>結果</th></tr></thead>
         <tbody>
-          <tr><td class="mono">1</td><td>合計金額の検算</td><td>明細の小計と消費税を足し直し、請求書の合計と比べる</td><td>31件 <span class="ok">合格</span></td></tr>
-          <tr><td class="mono">2</td><td>宛名と工事名の突合</td><td>工事台帳の発注者名・部署名・工事名と1字ずつ比べる</td><td>29件 <span class="ok">合格</span>・2件 <span class="ng">差し戻し</span></td></tr>
-          <tr><td class="mono">3</td><td>消費税の丸め</td><td>税抜合計の10%の端数が、貴社の規則（切捨て）どおりか</td><td>30件 <span class="ok">合格</span>・1件 <span class="ng">差し戻し</span></td></tr>
-          <tr><td class="mono">4</td><td>件数の突合</td><td>工事台帳で10月に完了した案件数と、下書きの数が一致するか。多くても少なくても止める</td><td><span class="ok">合格</span>（31件＝31件）</td></tr>
-          <tr><td class="mono">5</td><td>前月比±30%の異常</td><td>10月の請求合計が、9月の±30%に収まるか。外れたら人が見る</td><td><span class="ok">合格</span>（+4.5%）</td></tr>
+          <tr><td class="nw mono" data-label="No.">1</td><td data-label="検査項目">合計金額の検算</td><td data-label="確かめ方">明細の小計と消費税を足し直し、請求書の合計と比べる</td><td data-label="結果">31件 <span class="ok">合格</span></td></tr>
+          <tr><td class="nw mono" data-label="No.">2</td><td data-label="検査項目">宛名と工事名の突合</td><td data-label="確かめ方">工事台帳の発注者名・部署名・工事名と1字ずつ比べる</td><td data-label="結果">29件 <span class="ok">合格</span>・2件 <span class="ng">差し戻し</span></td></tr>
+          <tr><td class="nw mono" data-label="No.">3</td><td data-label="検査項目">消費税の丸め</td><td data-label="確かめ方">税抜合計の10%の端数が、貴社の規則（切捨て）どおりか</td><td data-label="結果">30件 <span class="ok">合格</span>・1件 <span class="ng">差し戻し</span></td></tr>
+          <tr><td class="nw mono" data-label="No.">4</td><td data-label="検査項目">件数の突合</td><td data-label="確かめ方">工事台帳で10月に完了した案件数と、下書きの数が一致するか。多くても少なくても止める</td><td data-label="結果"><span class="ok">合格</span>（31件＝31件）</td></tr>
+          <tr><td class="nw mono" data-label="No.">5</td><td data-label="検査項目">前月比±30%の異常</td><td data-label="確かめ方">10月の請求合計が、9月の±30%に収まるか。外れたら人が見る</td><td data-label="結果"><span class="ok">合格</span>（+4.5%）</td></tr>
         </tbody>
       </table>
     </div>
@@ -102,12 +102,12 @@
 
     <h3 class="h3 sub">見つけた誤りと直し方</h3>
     <div class="tbl">
-      <table>
+      <table class="stack stack4">
         <thead><tr><th>案件番号</th><th>検査項目</th><th>見つけた誤り</th><th>直し方</th><th>直した後</th></tr></thead>
         <tbody>
-          <tr><td class="mono">2610-017</td><td>No.2 宛名</td><td>宛名に部署名（施設管理課）がなかった</td><td>工事台帳の発注者欄から部署名を補った</td><td><span class="ng">差し戻し</span>。再検査のうえ送付</td></tr>
-          <tr><td class="mono">2610-021</td><td>No.3 消費税の丸め</td><td>税抜187,325円の消費税を18,733円（切上げ）としていた。規則は切捨てで18,732円</td><td>切捨てで計算し直し、合計を206,057円に直した</td><td><span class="ng">差し戻し</span>。再検査のうえ送付</td></tr>
-          <tr><td class="mono">2610-029</td><td>No.2 工事名</td><td>工事名が同じ取引先の前回案件（9月完了）のままだった</td><td>工事台帳の工事名に置き換えた</td><td><span class="ng">差し戻し</span>。再検査のうえ送付</td></tr>
+          <tr><td class="mono" data-label="案件番号">2610-017</td><td data-label="検査項目">No.2 宛名</td><td data-label="見つけた誤り">宛名に部署名（施設管理課）がなかった</td><td data-label="直し方">工事台帳の発注者欄から部署名を補った</td><td data-label="直した後"><span class="ng">差し戻し</span>。再検査のうえ送付</td></tr>
+          <tr><td class="mono" data-label="案件番号">2610-021</td><td data-label="検査項目">No.3 消費税の丸め</td><td data-label="見つけた誤り">税抜187,325円の消費税を18,733円（切上げ）としていた。規則は切捨てで18,732円</td><td data-label="直し方">切捨てで計算し直し、合計を206,057円に直した</td><td data-label="直した後"><span class="ng">差し戻し</span>。再検査のうえ送付</td></tr>
+          <tr><td class="mono" data-label="案件番号">2610-029</td><td data-label="検査項目">No.2 工事名</td><td data-label="見つけた誤り">工事名が同じ取引先の前回案件（9月完了）のままだった</td><td data-label="直し方">工事台帳の工事名に置き換えた</td><td data-label="直した後"><span class="ng">差し戻し</span>。再検査のうえ送付</td></tr>
         </tbody>
       </table>
     </div>
@@ -118,12 +118,12 @@
     <h3 class="h3 sub">作る仕事の検査記録（業務マニュアル「請求書作成の手順」20頁）</h3>
     <p>同じ月に納めた成果物です。作る係と確かめる係を分け、確かめる係が実際の画面で手順を追いました。換算時間は着手前に合意した40時間です。</p>
     <div class="tbl">
-      <table>
+      <table class="stack">
         <thead><tr><th>検査項目</th><th>見つけたこと</th><th>直し方</th></tr></thead>
         <tbody>
-          <tr><td>手順の抜け</td><td>2箇所。入金の消込の手順が飛んでいた。送付先の変更手順がなかった</td><td>事務担当に聞き取り、2節を追加した</td></tr>
-          <tr><td>用語のぶれ</td><td>3箇所。「請求先」と「宛名」が混在していた</td><td>「宛名」に統一し、用語の表を1頁目に置いた</td></tr>
-          <tr><td>画面の記録との食い違い</td><td>1箇所。手順書の画面名が、現在の画面と違っていた</td><td>現在の画面を撮り直して差し替えた</td></tr>
+          <tr><td data-label="検査項目">手順の抜け</td><td data-label="見つけたこと">2箇所。入金の消込の手順が飛んでいた。送付先の変更手順がなかった</td><td data-label="直し方">事務担当に聞き取り、2節を追加した</td></tr>
+          <tr><td data-label="検査項目">用語のぶれ</td><td data-label="見つけたこと">3箇所。「請求先」と「宛名」が混在していた</td><td data-label="直し方">「宛名」に統一し、用語の表を1頁目に置いた</td></tr>
+          <tr><td data-label="検査項目">画面の記録との食い違い</td><td data-label="見つけたこと">1箇所。手順書の画面名が、現在の画面と違っていた</td><td data-label="直し方">現在の画面を撮り直して差し替えた</td></tr>
         </tbody>
       </table>
     </div>
@@ -139,32 +139,32 @@
     </div>
     <p class="sec__sum">処理ログは対象1件につき1行です。業務IDごとに検査と最終確認の結果を書き足し、修正・再実行も同じ対象の履歴に残します。<b>請求対象の件数は、対象・品質・削減成立の合意条件を満たす検査合格の業務IDを重複なく数えます。AIの要約からは数えません。</b></p>
     <div class="tbl">
-      <table>
+      <table class="stack">
         <thead><tr><th>列</th><th>内容</th><th>誰が書くか</th></tr></thead>
         <tbody>
-          <tr><td>日付</td><td>AIが下書きを作った日</td><td>AI（自動）</td></tr>
-          <tr><td>案件番号</td><td>工事台帳の番号（年月と連番）。台帳と突き合わせられる番号を使う</td><td>AI（台帳から転記）</td></tr>
-          <tr><td>宛名</td><td>請求先の会社名と部署名</td><td>AI（台帳から転記）</td></tr>
-          <tr><td>金額</td><td>税込の合計（円）</td><td>AI</td></tr>
-          <tr><td>AIの処理結果</td><td>下書きを作れたか。作れなかった場合はその理由も残す</td><td>AI</td></tr>
-          <tr><td>検査の合否</td><td>5項目すべてを通れば合格。1つでも外れれば差し戻し</td><td>検査（機械＋当社）</td></tr>
-          <tr><td>差し戻しの理由</td><td>どの項目で何が違ったか。合格の行は空欄</td><td>当社</td></tr>
-          <tr><td>確認者</td><td>送付前に開いた人</td><td>貴社の事務担当</td></tr>
-          <tr><td>確認日時</td><td>開いて確かめた日時</td><td>貴社の事務担当</td></tr>
+          <tr><td class="nw" data-label="列">日付</td><td data-label="内容">AIが下書きを作った日</td><td data-label="誰が書くか">AI（自動）</td></tr>
+          <tr><td class="nw" data-label="列">案件番号</td><td data-label="内容">工事台帳の番号（年月と連番）。台帳と突き合わせられる番号を使う</td><td data-label="誰が書くか">AI（台帳から転記）</td></tr>
+          <tr><td class="nw" data-label="列">宛名</td><td data-label="内容">請求先の会社名と部署名</td><td data-label="誰が書くか">AI（台帳から転記）</td></tr>
+          <tr><td class="nw" data-label="列">金額</td><td data-label="内容">税込の合計（円）</td><td class="nw" data-label="誰が書くか">AI</td></tr>
+          <tr><td data-label="列">AIの処理結果</td><td data-label="内容">下書きを作れたか。作れなかった場合はその理由も残す</td><td class="nw" data-label="誰が書くか">AI</td></tr>
+          <tr><td data-label="列">検査の合否</td><td data-label="内容">5項目すべてを通れば合格。1つでも外れれば差し戻し</td><td data-label="誰が書くか">検査（機械＋当社）</td></tr>
+          <tr><td data-label="列">差し戻しの理由</td><td data-label="内容">どの項目で何が違ったか。合格の行は空欄</td><td class="nw" data-label="誰が書くか">当社</td></tr>
+          <tr><td class="nw" data-label="列">確認者</td><td data-label="内容">送付前に開いた人</td><td data-label="誰が書くか">貴社の事務担当</td></tr>
+          <tr><td class="nw" data-label="列">確認日時</td><td data-label="内容">開いて確かめた日時</td><td data-label="誰が書くか">貴社の事務担当</td></tr>
         </tbody>
       </table>
     </div>
 
     <h3 class="h3 sub">記入例（2026年10月分から5行）</h3>
     <div class="tbl">
-      <table>
+      <table class="stack stack4">
         <thead><tr><th>日付</th><th>案件番号</th><th>宛名</th><th>金額</th><th>AIの処理結果</th><th>検査の合否</th><th>差し戻しの理由</th><th>確認者</th><th>確認日時</th></tr></thead>
         <tbody>
-          <tr><td class="mono">10-02</td><td class="mono">2610-002</td><td>取引先B ビル管理会社 施設管理課</td><td class="mono">253,000</td><td>作成</td><td><span class="ok">合格</span></td><td></td><td>事務担当</td><td class="mono">10-02 16:40</td></tr>
-          <tr><td class="mono">10-02</td><td class="mono">2610-003</td><td>取引先C 医療法人 総務課</td><td class="mono">1,078,000</td><td>作成</td><td><span class="ok">合格</span></td><td></td><td>事務担当</td><td class="mono">10-02 16:45</td></tr>
-          <tr><td class="mono">10-06</td><td class="mono">2610-005</td><td>取引先D マンション管理組合</td><td class="mono">96,800</td><td>作成</td><td><span class="ok">合格</span></td><td></td><td>事務担当</td><td class="mono">10-06 10:15</td></tr>
-          <tr><td class="mono">10-17</td><td class="mono">2610-017</td><td>取引先B ビル管理会社</td><td class="mono">418,000</td><td>作成</td><td><span class="ng">差し戻し</span></td><td>No.2 宛名に部署名（施設管理課）がない</td><td>事務担当（直して送付）</td><td class="mono">10-17 17:05</td></tr>
-          <tr><td class="mono">10-24</td><td class="mono">2610-024</td><td>取引先E 製造業 彦根工場 総務課</td><td class="mono">572,000</td><td>作成</td><td><span class="ok">合格</span></td><td></td><td>事務担当</td><td class="mono">10-24 15:30</td></tr>
+          <tr><td class="mono" data-label="日付">10-02</td><td class="mono" data-label="案件番号">2610-002</td><td data-label="宛名">取引先B ビル管理会社 施設管理課</td><td class="mono" data-label="金額">253,000</td><td class="nw" data-label="AIの処理結果">作成</td><td class="nw" data-label="検査の合否"><span class="ok">合格</span></td><td class="nw" data-label="差し戻しの理由"></td><td class="nw" data-label="確認者">事務担当</td><td class="mono" data-label="確認日時">10-02 16:40</td></tr>
+          <tr><td class="mono" data-label="日付">10-02</td><td class="mono" data-label="案件番号">2610-003</td><td data-label="宛名">取引先C 医療法人 総務課</td><td class="mono" data-label="金額">1,078,000</td><td class="nw" data-label="AIの処理結果">作成</td><td class="nw" data-label="検査の合否"><span class="ok">合格</span></td><td class="nw" data-label="差し戻しの理由"></td><td class="nw" data-label="確認者">事務担当</td><td class="mono" data-label="確認日時">10-02 16:45</td></tr>
+          <tr><td class="mono" data-label="日付">10-06</td><td class="mono" data-label="案件番号">2610-005</td><td data-label="宛名">取引先D マンション管理組合</td><td class="mono" data-label="金額">96,800</td><td class="nw" data-label="AIの処理結果">作成</td><td class="nw" data-label="検査の合否"><span class="ok">合格</span></td><td class="nw" data-label="差し戻しの理由"></td><td class="nw" data-label="確認者">事務担当</td><td class="mono" data-label="確認日時">10-06 10:15</td></tr>
+          <tr><td class="mono" data-label="日付">10-17</td><td class="mono" data-label="案件番号">2610-017</td><td data-label="宛名">取引先B ビル管理会社</td><td class="mono" data-label="金額">418,000</td><td class="nw" data-label="AIの処理結果">作成</td><td class="nw" data-label="検査の合否"><span class="ng">差し戻し</span></td><td data-label="差し戻しの理由">No.2 宛名に部署名（施設管理課）がない</td><td data-label="確認者">事務担当（直して送付）</td><td class="mono" data-label="確認日時">10-17 17:05</td></tr>
+          <tr><td class="mono" data-label="日付">10-24</td><td class="mono" data-label="案件番号">2610-024</td><td data-label="宛名">取引先E 製造業 彦根工場 総務課</td><td class="mono" data-label="金額">572,000</td><td class="nw" data-label="AIの処理結果">作成</td><td class="nw" data-label="検査の合否"><span class="ok">合格</span></td><td class="nw" data-label="差し戻しの理由"></td><td class="nw" data-label="確認者">事務担当</td><td class="mono" data-label="確認日時">10-24 15:30</td></tr>
         </tbody>
       </table>
     </div>
@@ -190,17 +190,17 @@
     <p class="fine">この見本の算定も、合意した対象・品質・削減成立の条件を確認した処理だけを数える想定です。AIを使っただけの処理や、削減がなくなった処理、疑義のある部分を自動的に請求へ入れません。時間基準は毎回測り直さず、<a href="price.html#contract-check">契約直前の別紙・1枚の確認書</a>で特定した基準と、実際の処理・品質・例外の記録を分けて扱います。</p>
     <h3 class="h3 sub">載せる数</h3>
     <div class="tbl">
-      <table>
+      <table class="stack stack4">
         <thead><tr><th>項目</th><th>値</th><th>実測か換算か</th><th>出どころ</th></tr></thead>
         <tbody>
-          <tr><td>今月AIが処理した件数</td><td class="mono">31件</td><td>実測</td><td>処理ログの行数</td></tr>
-          <tr><td>作った検査の数</td><td class="mono">5項目</td><td>実測</td><td>検査記録</td></tr>
-          <tr><td>検査が見つけた不整合の件数</td><td class="mono">3件</td><td>実測</td><td>差し戻し3件（宛名1・消費税の丸め1・工事名1）</td></tr>
-          <tr><td>検査を通った件数</td><td class="mono">28件</td><td>実測</td><td>処理ログの合格の行数</td></tr>
-          <tr><td>人が最終確認した件数</td><td class="mono">28件</td><td>実測</td><td>処理ログの確認者・確認日時の欄</td></tr>
-          <tr><td>節約時間</td><td class="mono">280分（4.7時間）</td><td>換算</td><td>合意した10分 × 合格28件。時間は分を60で割り、小数第2位を四捨五入</td></tr>
-          <tr><td>受け入れられた成果物</td><td class="mono">1本</td><td>実測</td><td>業務マニュアル「請求書作成の手順」20頁。10月28日受け入れ</td></tr>
-          <tr><td>成果物の換算時間</td><td class="mono">40時間</td><td>換算</td><td>着手前に合意した値</td></tr>
+          <tr><td data-label="項目">今月AIが処理した件数</td><td class="nw mono" data-label="値">31件</td><td class="nw" data-label="実測か換算か">実測</td><td data-label="出どころ">処理ログの行数</td></tr>
+          <tr><td data-label="項目">作った検査の数</td><td class="nw mono" data-label="値">5項目</td><td class="nw" data-label="実測か換算か">実測</td><td class="nw" data-label="出どころ">検査記録</td></tr>
+          <tr><td data-label="項目">検査が見つけた不整合の件数</td><td class="nw mono" data-label="値">3件</td><td class="nw" data-label="実測か換算か">実測</td><td data-label="出どころ">差し戻し3件（宛名1・消費税の丸め1・工事名1）</td></tr>
+          <tr><td data-label="項目">検査を通った件数</td><td class="nw mono" data-label="値">28件</td><td class="nw" data-label="実測か換算か">実測</td><td data-label="出どころ">処理ログの合格の行数</td></tr>
+          <tr><td data-label="項目">人が最終確認した件数</td><td class="nw mono" data-label="値">28件</td><td class="nw" data-label="実測か換算か">実測</td><td data-label="出どころ">処理ログの確認者・確認日時の欄</td></tr>
+          <tr><td class="nw" data-label="項目">節約時間</td><td class="mono" data-label="値">280分（4.7時間）</td><td class="nw" data-label="実測か換算か">換算</td><td data-label="出どころ">合意した10分 × 合格28件。時間は分を60で割り、小数第2位を四捨五入</td></tr>
+          <tr><td data-label="項目">受け入れられた成果物</td><td class="nw mono" data-label="値">1本</td><td class="nw" data-label="実測か換算か">実測</td><td data-label="出どころ">業務マニュアル「請求書作成の手順」20頁。10月28日受け入れ</td></tr>
+          <tr><td data-label="項目">成果物の換算時間</td><td class="nw mono" data-label="値">40時間</td><td class="nw" data-label="実測か換算か">換算</td><td data-label="出どころ">着手前に合意した値</td></tr>
         </tbody>
       </table>
     </div>
