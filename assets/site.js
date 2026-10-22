@@ -1,3 +1,13 @@
+/* Web fonts are optional decoration: render system fonts while the font CSS loads.
+   Use an external listener so the existing CSP never needs inline event handlers. */
+(function () {
+  var fontStyle = document.querySelector('link[data-font-stylesheet]');
+  if (!fontStyle) return;
+  var activate = function () { fontStyle.media = 'all'; };
+  fontStyle.addEventListener('load', activate, { once: true });
+  if (fontStyle.sheet) activate();
+})();
+
 /* vaynexis.jp v3 — ナビの開閉／トップの背景／検査記録の表示／節の出現／数字の数え上げ */
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
