@@ -157,7 +157,12 @@
   var vids = document.querySelectorAll('video[data-autoplay]');
   if (!vids.length) return;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce || !('IntersectionObserver' in window)) return;
+  var mobile = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+  var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  var limited = connection && (connection.saveData || /(^|-)2g$/.test(connection.effectiveType || ''));
+  // Decorative loops keep their existing poster on narrow screens and constrained connections.
+  // User-initiated videos with controls are not part of this data-autoplay selection.
+  if (reduce || mobile || limited || !('IntersectionObserver' in window)) return;
   var tryPlay = function (v) {
     /* load() は再生要求を中断させるので呼ばない。preload を上げるだけで足りる。 */
     if (v.preload !== 'auto') v.preload = 'auto';
