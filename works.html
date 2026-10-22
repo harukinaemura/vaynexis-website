@@ -60,33 +60,32 @@
       <div><p class="hud">Work 01</p><h2 class="h2" id="h-this">いま見ているこのサイト</h2></div>
       <span class="sec__idx">01 / 05</span>
     </div>
-    <p class="sec__sum">いちばん確かめやすい見本は、いま開いているこのページです。<b>全17ページを当社がAIで作りました。</b>文章、配色、図、動画、それにページを組み立てるプログラムまで含みます。</p>
+    <p class="sec__sum">いちばん確かめやすい見本は、いま開いているこのページです。<b>全20ページを当社がAIで作りました。</b>文章、配色、図、動画、それにページを組み立てるプログラムまで含みます。</p>
     <div class="two">
       <div>
         <h3 class="h3">作ったもの</h3>
         <ul class="ul">
-          <li>公開しているページ 17枚（トップ、サービス、料金、実績、事業内容、会社概要、お問い合わせ、見本4種ほか）</li>
+          <li>公開しているページ 20枚（トップ、サービス、料金、実績、事業内容、会社概要、お問い合わせ、見本4種ほか）</li>
           <li>図と、紹介動画・背景の繰り返し動画</li>
-          <li>17ページ全部を組み立てるPythonのプログラム 1本。文章を直したらプログラムを走らせ直します</li>
+          <li>20ページ全部を組み立てるPythonのプログラム 1本。文章を直したらプログラムを走らせ直します</li>
           <li>ページの配色・組み方（CSS）</li>
         </ul>
         <p class="fine">換算時間の目安は<b>90時間</b>（<a href="/rates">換算時間の基準表</a>のホームページ制作）。<b>換算は「人手で作った場合の見込み」で、実測ではありません。</b></p>
       </div>
       <div>
-        <h3 class="h3">確かめたこと</h3>
+        <h3 class="h3">何を、どう確かめるか</h3>
         <div class="tbl">
           <table>
-            <thead><tr><th>検査</th><th>結果</th></tr></thead>
+            <thead><tr><th>項目</th><th>確かめ方</th></tr></thead>
             <tbody>
-              <tr><td>全ページのリンク切れ</td><td class="ok">0件</td></tr>
-              <tr><td>横のはみ出し（画面幅 375px・390px・1280px）</td><td class="ok">0件</td></tr>
-              <tr><td>画像と動画ポスターの読み込み</td><td class="ok">全17ページで検査</td></tr>
-              <tr><td>ブラウザのコンソールのエラー</td><td class="ok">0件</td></tr>
-              <tr><td>公開HTMLの本番と手元の一致</td><td class="ok">一致</td></tr>
+              <tr><td>内部リンク・画像・動画の参照先</td><td>全ページのソースを機械で照合し、存在しない参照先を探す</td></tr>
+              <tr><td>検索向けの情報</td><td>正規URL、サイトマップ、構造化データを照合する</td></tr>
+              <tr><td>公開した内容</td><td>公開URLの応答とHTMLを、作成したファイルと比較する</td></tr>
+              <tr><td>表示・操作・動画再生</td><td>実際のブラウザーで別に確認する。ソースの検査だけでは完了としない</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="fine">この検査は公開のたびに機械で回しています。<b>過去の公開では、動画が本番で再生されない不具合をこの検査で見つけて直しました。</b></p>
+        <p class="fine">ソースの照合と実画面の確認を分け、確認できていない項目は検査済みとしません。過去には、動画が本番で再生されない不具合を実画面の確認で見つけて直しました。</p>
       </div>
     </div>
   </div>
@@ -143,7 +142,7 @@
       <span class="sec__idx">03 / 05</span>
     </div>
     <p class="sec__sum">このサイトの図と動画は、写真を買ったのではなく、当社がAIで作りました。絵柄をそろえてあるので、増やしても組として崩れません。</p>
-    <div class="gal"><figure><img src="assets/cat-reduce.webp" alt="書類の山が引き出しに収まる図" loading="lazy" decoding="async"><figcaption>書類の山が引き出しに収まる図</figcaption></figure><figure><img src="assets/cat-make.webp" alt="マニュアル・画面・資料が机に並ぶ図" loading="lazy" decoding="async"><figcaption>マニュアル・画面・資料が机に並ぶ図</figcaption></figure><figure><img src="assets/cat-check.webp" alt="一覧表の点検の印を虫めがねで見る図" loading="lazy" decoding="async"><figcaption>一覧表の点検の印を虫めがねで見る図</figcaption></figure><figure><img src="assets/cat-price.webp" alt="時計と硬貨をのせたはかりの図" loading="lazy" decoding="async"><figcaption>時計と硬貨をのせたはかりの図</figcaption></figure><figure><img src="assets/cat-talk.webp" alt="丸テーブルと2脚の椅子の図" loading="lazy" decoding="async"><figcaption>丸テーブルと2脚の椅子の図</figcaption></figure><figure><img src="assets/cat-record.webp" alt="マニュアルとバインダーの山の図" loading="lazy" decoding="async"><figcaption>マニュアルとバインダーの山の図</figcaption></figure><figure><img src="assets/cat-ec.webp" alt="箱とベルトコンベアと配送車の図" loading="lazy" decoding="async"><figcaption>箱とベルトコンベアと配送車の図</figcaption></figure></div>
+    <div class="gal"><figure><img src="assets/cat-reduce.webp" alt="書類の山が引き出しに収まる図" width="900" height="600" loading="lazy" decoding="async"><figcaption>書類の山が引き出しに収まる図</figcaption></figure><figure><img src="assets/cat-make.webp" alt="マニュアル・画面・資料が机に並ぶ図" width="900" height="600" loading="lazy" decoding="async"><figcaption>マニュアル・画面・資料が机に並ぶ図</figcaption></figure><figure><img src="assets/cat-check.webp" alt="一覧表の点検の印を虫めがねで見る図" width="900" height="600" loading="lazy" decoding="async"><figcaption>一覧表の点検の印を虫めがねで見る図</figcaption></figure><figure><img src="assets/cat-price.webp" alt="時計と硬貨をのせたはかりの図" width="900" height="600" loading="lazy" decoding="async"><figcaption>時計と硬貨をのせたはかりの図</figcaption></figure><figure><img src="assets/cat-talk.webp" alt="丸テーブルと2脚の椅子の図" width="900" height="600" loading="lazy" decoding="async"><figcaption>丸テーブルと2脚の椅子の図</figcaption></figure><figure><img src="assets/cat-record.webp" alt="マニュアルとバインダーの山の図" width="900" height="600" loading="lazy" decoding="async"><figcaption>マニュアルとバインダーの山の図</figcaption></figure><figure><img src="assets/cat-ec.webp" alt="箱とベルトコンベアと配送車の図" width="900" height="600" loading="lazy" decoding="async"><figcaption>箱とベルトコンベアと配送車の図</figcaption></figure></div>
     <div class="gal gal--2"><figure><video muted loop playsinline preload="none" data-autoplay poster="assets/hero-loop-poster-v2.webp" aria-label="このページの上で流れている繰り返し動画"><source src="assets/hero-loop.mp4" type="video/mp4"></video><figcaption>このページの上で流れている繰り返し動画</figcaption></figure><figure><video muted loop playsinline preload="none" data-autoplay poster="assets/reduce-loop-poster-v2.webp" aria-label="「減らす」の繰り返し動画"><source src="assets/reduce-loop.mp4" type="video/mp4"></video><figcaption>「減らす」の繰り返し動画</figcaption></figure></div>
     <div class="two">
       <div>
