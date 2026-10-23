@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <title>Vaynexis</title>
-  <polygon points="0.5,0.5 52.5,0.5 63.5,11.5 63.5,63.5 11.5,63.5 0.5,52.5" fill="#ffffff" stroke="#1b2a41" stroke-width="1" stroke-linejoin="miter" vector-effect="non-scaling-stroke"/>
-  <polygon points="6,9 18,9 32,35.6 46,9 58,9 38,47 26,47" fill="#1b2a41"/>
-  <line x1="22" y1="55" x2="42" y2="55" stroke="#b08d57" stroke-width="2.5"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title"><title id="title">Vaynexis</title><rect width="64" height="64" rx="14" fill="#1b2a41"/><g transform="translate(6 6) scale(.51)"><path d="M8 12H29L51 53L73 12H94L57 82H45Z" fill="#ffffff"/><path d="M80 12H94L68 61H54Z" fill="#b08d57"/></g></svg>

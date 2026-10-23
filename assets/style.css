@@ -89,13 +89,16 @@ p + p { margin-top: 1em; }
 /* -------------------- ナビ -------------------- */
 .nav { position: sticky; top: 0; z-index: 20; background: rgba(244, 246, 250, .8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
 .nav__in { display: flex; align-items: center; justify-content: space-between; height: 62px; position: relative; }
-.mark { font-family: var(--font-hud); font-size: 13px; letter-spacing: .34em; color: var(--text); display: inline-flex; align-items: baseline; gap: 12px; }
+.mark { color: var(--text); display: inline-flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+.mark__logo { display: block; width: 172px; height: auto; flex: 0 0 auto; }
+.mark:focus-visible { outline: 2px solid var(--copper-hi); outline-offset: 5px; border-radius: 2px; }
+@media (max-width: 420px) { .mark { gap: 7px; } .mark__logo { width: 158px; } }
 .mark small { font-family: var(--font-jp); font-size: 11px; letter-spacing: .12em; color: var(--copper-hi); }
 .nav__links { display: flex; gap: 22px; font-size: 13px; color: var(--text-2); align-items: center; }
 .nav__links a:hover, .nav__links a[aria-current="page"] { color: var(--text); }
 .nav__links a[aria-current="page"]:not(.btn) { border-bottom: 1px solid var(--copper); padding-bottom: 2px; }
 .nav__toggle { display: none; font-family: var(--font-jp); font-size: 12px; letter-spacing: .08em; background: none; border: 1px solid var(--line); color: var(--text); padding: 7px 12px; cursor: pointer; }
-@media (max-width: 960px) {
+@media (max-width: 1080px) {
   .nav__toggle { display: inline-flex; }
   .nav__links { display: none; position: absolute; top: 62px; left: calc(-1 * var(--gutter)); right: calc(-1 * var(--gutter)); flex-direction: column; align-items: stretch; gap: 0; background: var(--white); border-bottom: 1px solid var(--line); padding: 6px 0 14px; }
   .nav--open .nav__links { display: flex; }
