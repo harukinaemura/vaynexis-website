@@ -773,3 +773,9 @@ h1, h2, h3, .h1, .h2, .h3, .mod h3, .rail > div > b { text-wrap: balance; word-b
 #inventory-check select { width: 100%; min-height: 46px; padding: 10px; border: 1px solid var(--line-strong); border-radius: 4px; font: inherit; color: var(--text); background: #fff; }
 #inventory-check-result { margin-top: 24px; }
 #inventory-check-result:focus { outline: 2px solid var(--ice); outline-offset: 4px; }
+
+/* Decorative loops: native responsive posters remain visible without JavaScript. */
+.pics .loop-media { display: block; position: relative; aspect-ratio: 3 / 2; }
+.pics .loop-media img { width: 100%; height: 100%; object-fit: cover; }
+.pics .loop-media video { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; }
+.pics .loop-media video.is-playing { opacity: 1; }

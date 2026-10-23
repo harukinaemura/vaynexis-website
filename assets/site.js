@@ -160,6 +160,11 @@
 (function () {
   var vids = document.querySelectorAll('video[data-autoplay]');
   if (!vids.length) return;
+  vids.forEach(function (v) {
+    if (v.parentElement.classList.contains('loop-media')) {
+      v.addEventListener('playing', function () { v.classList.add('is-playing'); }, { once: true });
+    }
+  });
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var mobile = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
   var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
