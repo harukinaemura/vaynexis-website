@@ -767,3 +767,9 @@ h1, h2, h3, .h1, .h2, .h3, .mod h3, .rail > div > b { text-wrap: balance; word-b
 }
 /* 7) 小見出し用の「太字は1行に」の規則が、文の途中の太字まで改行させていた（AIコンサル・作る仕事の見本など）→ 文の中では普通の太字に */
 .rail p b, .faq p b, .steps p b, .trio p b { display: inline; font-size: inherit; margin: 0; }
+
+/* On-page preparation checks: labels remain visible on narrow screens. */
+#inventory-check label { display: block; margin-bottom: 12px; }
+#inventory-check select { width: 100%; min-height: 46px; padding: 10px; border: 1px solid var(--line-strong); border-radius: 4px; font: inherit; color: var(--text); background: #fff; }
+#inventory-check-result { margin-top: 24px; }
+#inventory-check-result:focus { outline: 2px solid var(--ice); outline-offset: 4px; }

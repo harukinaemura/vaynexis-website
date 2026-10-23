@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
   <link rel="stylesheet" href="assets/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"業務棚卸しのやり方とAI業務改善のチェックシート","description":"転記・集計と文書・資料作成を題材に、業務棚卸しの手順、記入項目、AIに任せる範囲、人の確認、効果測定を解説します。","datePublished":"2026-10-22","dateModified":"2026-10-22","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"mainEntityOfPage":"https://vaynexis.jp/office-inventory"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"業務棚卸しのやり方とAI業務改善のチェックシート","description":"転記・集計と文書・資料作成を題材に、業務棚卸しの手順、記入項目、AIに任せる範囲、人の確認、効果測定を解説します。","datePublished":"2026-10-22","dateModified":"2026-10-23","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"mainEntityOfPage":"https://vaynexis.jp/office-inventory"}</script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
@@ -50,9 +50,9 @@
     <p class="hud">Practical Guide · AI Workflow</p>
     <h1 class="h1">業務棚卸しのやり方と<br>AI業務改善のチェックシート</h1>
     <p class="lead">AIで事務時間を減らしたいときは、まず「どの作業に、どれだけ時間がかかり、誰が何を確かめるか」を整理します。経営者・事業責任者の方が、転記・集計と文書・資料作成のどちらからでも始められる手順です。</p>
-    <p class="fine">作成：<a href="/company">合同会社Vaynexis</a> ／ 公開日：<time datetime="2026-10-22">2026年10月22日</time></p>
+    <p class="fine">作成：<a href="/company">合同会社Vaynexis</a> ／ 公開日：<time datetime="2026-10-22">2026年10月22日</time> ／ 更新日：<time datetime="2026-10-23">2026年10月23日</time></p>
     <div class="actions"><a class="btn btn--fill" href="#sheet">チェックシートを見る</a><a class="btn btn--ghost" href="assets/office-inventory-template.txt" download>記入用ひな形を保存（無料・登録不要）</a><a class="btn btn--ghost" href="#" data-print>このガイドを印刷する</a></div>
-    <p class="fine"><a href="#steps">進め方</a> ／ <a href="#examples">2つの記入例</a> ／ <a href="#priority">最初の1業務の選び方</a> ／ <a href="#measure">効果の確かめ方</a> ／ <a href="#consult">滋賀県での相談</a></p>
+    <p class="fine"><a href="#steps">進め方</a> ／ <a href="#examples">2つの記入例</a> ／ <a href="#quick-check">選択式の4項目チェック</a> ／ <a href="#priority">最初の1業務の選び方</a> ／ <a href="#measure">効果の確かめ方</a> ／ <a href="#consult">滋賀県での相談</a></p>
   </div>
 </section>
 
@@ -123,6 +123,31 @@
     </div>
   </div>
 </section>
+
+
+<section class="sec sec--alt" id="quick-check" aria-labelledby="h-quick-check">
+  <div class="wrap">
+    <div class="sec__head"><div><p class="hud">Before Trying</p><h2 class="h2" id="h-quick-check">最初の1業務を選ぶ、4項目チェック</h2></div></div>
+    <p>転記・集計か、文書・資料作成のうち、試したい作業を1つ思い浮かべてください。4つの質問を選ぶと、先に整理する項目を確認できます。会社名・メールアドレスの入力や会員登録は不要です。</p>
+    <form id="inventory-check" aria-labelledby="h-quick-check">
+      <div class="cards2"><div class="card"><label for="check-input"><b>1．元になる資料と、作りたい完成物が分かっていますか？</b></label><select id="check-input" name="input"><option value="unknown">未確認</option><option value="yes">はい・確認済み</option><option value="no">いいえ・これから準備</option></select></div>
+<div class="card"><label for="check-criteria"><b>2．正しい結果かを確かめる基準がありますか？</b></label><select id="check-criteria" name="criteria"><option value="unknown">未確認</option><option value="yes">はい・確認済み</option><option value="no">いいえ・これから準備</option></select></div>
+<div class="card"><label for="check-review"><b>3．結果を確認・修正する担当者を決めていますか？</b></label><select id="check-review" name="review"><option value="unknown">未確認</option><option value="yes">はい・確認済み</option><option value="no">いいえ・これから準備</option></select></div>
+<div class="card"><label for="check-permission"><b>4．試すデータを、そのAIに入力してよいと確認しましたか？</b></label><select id="check-permission" name="permission"><option value="unknown">未確認</option><option value="yes">はい・確認済み</option><option value="no">いいえ・これから準備</option></select></div></div>
+      <div class="actions"><button class="btn btn--fill" type="button" id="inventory-check-run">次に確認することを見る</button><button class="btn btn--ghost" type="reset">選択を戻す</button></div>
+    </form>
+    <div id="inventory-check-result" class="card" role="status" aria-live="polite" tabindex="-1" hidden>
+      <h3 class="h3" id="inventory-check-title"></h3>
+      <p id="inventory-check-summary"></p>
+      <ul id="inventory-check-actions"></ul>
+      <p><a href="/ai-data-entry-demo">転記・集計の実演と指示のひな形</a> ／ <a href="/ai-document-demo">文書・資料作成の実演と指示のひな形</a></p>
+      <p><a href="#sheet">確認した内容を10項目のシートに記入する</a> ／ <a href="/contact#soudan">まだ業務を選べないときの無料相談</a></p>
+    </div>
+    <p class="fine">これは試す前の準備を整理するためのチェックです。効果や正確さの点数ではありません。確認できないものは「未確認」で残し、下の基準と合わせて担当者と判断します。</p>
+    <noscript><p>選択結果の表示にはJavaScriptを使用します。利用できない場合は、4つの質問と下の「最初の1業務の選び方」を使い、未確認の項目を記入してください。</p></noscript>
+  </div>
+</section>
+<script src="assets/inventory-check.js" defer></script>
 
 <section class="sec" id="priority" aria-labelledby="h-priority">
   <div class="wrap">
