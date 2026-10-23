@@ -84,7 +84,11 @@
         var py = h * p.y + Math.cos(t * p.v * 0.8 + p.ph) * 10;
         pane(px, py, p.s, p.r + Math.sin(t * p.v * 0.5 + p.ph) * 0.04);
       }
-      if (!reduce) { off += 0.012; t += 16; raf = requestAnimationFrame(draw); }
+      // Narrow screens keep the same background as a still frame, like decorative videos.
+      // Avoid repainting a tall, high-DPI canvas continuously while mobile content loads.
+      if (!reduce && !window.matchMedia('(max-width: 900px)').matches) {
+        off += 0.012; t += 16; raf = requestAnimationFrame(draw);
+      }
     };
     var start = function () { cancelAnimationFrame(raf); size(); seed(); draw(); };
     start();
