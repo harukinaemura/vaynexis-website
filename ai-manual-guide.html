@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIで業務マニュアル・手順書を作る方法｜記入例と確認点｜Vaynexis</title>
+  <meta name="description" content="元メモから手順・例外・完成条件を整理する架空の記入例。原資料との照合、未確認の残し方、担当交代時の確認を紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="AIで業務マニュアル・手順書を作る方法｜記入例と確認点｜Vaynexis">
+  <meta property="og:description" content="元メモから手順・例外・完成条件を整理する架空の記入例。原資料との照合、未確認の残し方、担当交代時の確認を紹介します。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vaynexis.jp/ai-manual-guide">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai-manual-guide">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">メニュー</button>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#soudan">30分の無料相談</a>
+    </div>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="manual-title">
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="manual-title">AIで業務マニュアル・手順書を作るには</h1>
+    <p>業務マニュアルをAIで作るときは、元のメモを読みやすくするだけでなく、作業の順番、迷ったときに止める条件、どこまでできれば工程を終えられるかをそろえます。下書きの各項目を元資料へ戻って確かめられる形にすると、確認や更新の対象を追えます。</p>
+    <p>ここでは、<strong>人が作業に使う業務手順書</strong>を扱います。社内依頼一覧の入力チェックを例に、元メモ、AIへの指示、手順書の設計見本、出典と未確認事項を一組で示します。</p>
+    <p class="notice">以下は説明用の架空の業務・設計見本です。実際のお客様の事例、AIを実行して得た出力、初見の担当者による実行確認、時間削減の実績ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#manual-scope">人が使うマニュアルと、AIへの実装手順書の違い</a></li>
+      <li><a href="#manual-preparation">元資料と完成条件をそろえる</a></li>
+      <li><a href="#manual-source">行番号つきの元メモ</a></li>
+      <li><a href="#manual-prompt">AIへ渡す指示の例</a></li>
+      <li><a href="#manual-example">番号つき手順・例外・終了条件の見本</a></li>
+      <li><a href="#manual-review">読み合わせと更新で確かめること</a></li>
+      <li><a href="#manual-request">制作を依頼するときにそろえるもの</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="manual-scope" aria-labelledby="manual-scope-title"><div class="wrap">
+    <h2 class="h2" id="manual-scope-title">1．誰が使う手順書かを、先に決める</h2>
+    <p>「業務手順書」という言葉でも、人が業務を進めるための文書と、AIへ渡す処理の指示では、読み手と確認するものが違います。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">手順書の種類</th><th scope="col">使う人・対象</th><th scope="col">そろえる内容</th></tr></thead>
+      <tbody>
+        <tr><td data-label="手順書の種類">人が使う業務マニュアル</td><td data-label="使う人・対象">受付担当や確認担当など、実際に作業する人</td><td data-label="そろえる内容">前提、操作の順番、判断条件、例外、確認先、工程の終了条件。この記事の対象です。</td></tr>
+        <tr><td data-label="手順書の種類">AIへの実装用の手順書・指示</td><td data-label="使う人・対象">AIへ処理を設定する人と、その結果を確認する人</td><td data-label="そろえる内容">入力、処理の規則、出力、検査する条件。顧客側のAIへの実装を基本とする支援は、既存の<a href="/ai#support-summary">AI導入支援の案内</a>で担当と範囲を確認できます。</td></tr>
+      </tbody>
+    </table></div>
+    <p>人向けのマニュアルが完成しても、そのままAIやシステムへの設定が済んだことにはなりません。制作を依頼するときも、文書を受け取る範囲と、設定・運用まで依頼する範囲を分けて確認します。</p>
+  </div></section>
+
+  <section class="sec" id="manual-preparation" aria-labelledby="manual-preparation-title"><div class="wrap">
+    <h2 class="h2" id="manual-preparation-title">2．元資料と、完成したときの条件をそろえる</h2>
+    <p>最初は一つの業務・工程に絞ります。「社内業務を全部まとめる」よりも、「依頼一覧の入力をチェックする」のように、始まりと終わりを具体的に書ける対象を選びます。</p>
+    <ul>
+      <li><strong>対象と読み手：</strong>どの工程を、どの役割の人が行うか。</li>
+      <li><strong>元資料：</strong>作業メモ、既存の手順、担当者への聞き取り、使用できる画面の記録など。</li>
+      <li><strong>完成物：</strong>作業の順番だけでなく、例外、止める条件、確認先まで含めるか。</li>
+      <li><strong>確認者：</strong>実際の業務や原資料と照合し、受け入れを判断する人。</li>
+      <li><strong>未確定のこと：</strong>保存先、期限、代替担当など、資料にない項目。</li>
+    </ul>
+    <p>実在する顧客データや機密情報を、そのままAIへ渡す必要はありません。使ってよい情報と利用するAIの取り扱いを確認し、今回のような架空資料や、使用が認められた範囲で下書きを作ります。最初の相談に顧客データを添付する必要もありません。</p>
+  </div></section>
+
+  <section class="sec" id="manual-source" aria-labelledby="manual-source-title"><div class="wrap">
+    <h2 class="h2" id="manual-source-title">3．行番号つきの元メモを用意する</h2>
+    <p>この見本の元資料は、次の8行だけです。行番号を残すことで、手順や判断条件がどの記述から来たのかを確認できます。画面や実ファイルは用意していないため、ボタン名や保存操作は書き足しません。</p>
+    <pre style="white-space:pre-wrap;overflow-wrap:anywhere;">L01 対象は社内依頼一覧の入力チェック。役割は受付担当と確認担当。
+L02 受付担当は一覧の作業用コピーを開く。原本は変更しない。
+L03 行IDと依頼番号を確認。同じ依頼番号の行はすべて重複候補として保留し、番号が同じだけで削除しない。
+L04 カテゴリの空欄と、YYYY-MM-DD形式で実在しない日付は保留。推測で補完しない。
+L05 保留の行ID、項目、理由を要確認一覧に記録し、確認担当へ渡す。
+L06 重複候補が同一依頼かどうかは、確認担当が原資料で判断する。
+L07 通常行と要確認行が元の全行を漏れなく重複なく覆い、理由を残したらチェック工程を終える。保留の解消や案件自体の完了を意味しない。
+L08 記録の保存先、期限、代替担当者は、このメモでは決まっていない。</pre>
+    <p>「保存先は共有フォルダー」「確認は翌日まで」などは、このメモからは決められません。実際に使う前に確認する項目として残します。</p>
+  </div></section>
+
+  <section class="sec" id="manual-prompt" aria-labelledby="manual-prompt-title"><div class="wrap">
+    <h2 class="h2" id="manual-prompt-title">4．AIへ渡す指示でも、出典と未確認を残す</h2>
+    <p>AIには、文章の体裁だけでなく、元資料を変えない条件と、書けない項目の扱いを渡します。次は上のメモと一緒に渡す指示の例です。特定のAIで実行・検証した指示ではありません。</p>
+    <pre style="white-space:pre-wrap;overflow-wrap:anywhere;">以下の行番号つき架空メモから、人が作業する業務手順書の下書きを作ってください。
+・対象工程・読み手・準備するもの・番号つき手順・例外時の停止・工程の終了条件・未確認を分ける。
+・各手順と判断条件に、根拠のL番号を付ける。
+・元の情報を変えず、日付・担当者名・保存先・期限を推測で足さない。
+・番号が同じだけで行を削除させない。保留の解消とチェック工程の終了を区別する。
+・資料にない内容は未確認にし、確認すべき質問を別に出す。
+・最後に、手順と元メモの対応、矛盾・不足、担当者が確かめる箇所を示す。</pre>
+    <p>出力を受け取ったら、指示に従ったという説明だけで判断せず、手順の本文と元メモを照合します。元資料にない操作や、未定だった期限が追加されていないかを確認します。</p>
+  </div></section>
+
+  <section class="sec" id="manual-example" aria-labelledby="manual-example-title"><div class="wrap">
+    <h2 class="h2" id="manual-example-title">5．番号つき手順と、例外・終了条件を一組にする</h2>
+    <p class="notice">次は編集した設計見本です。AIの生の出力や、業務で実行して確認した結果ではありません。</p>
+    <h3 class="h3">社内依頼一覧の入力チェック：設計見本0.1</h3>
+    <dl>
+      <dt>目的</dt><dd>依頼一覧の全行を残し、入力の確認が必要な行と理由を整理する。（L01・L07）</dd>
+      <dt>担当</dt><dd>受付担当がチェックし、確認担当が原資料を確かめる。氏名は未指定。（L01・L06）</dd>
+      <dt>準備</dt><dd>一覧の作業用コピーと、後で照合する原資料。原本は変更しない。（L02・L06）</dd>
+    </dl>
+    <ol>
+      <li><strong>作業用コピーを開く。</strong>原本は変更しない。（L02）</li>
+      <li><strong>行IDと依頼番号を確認する。</strong>同じ依頼番号の行はすべて重複候補として保留し、番号だけで削除しない。（L03）</li>
+      <li><strong>カテゴリと日付を確認する。</strong>カテゴリの空欄と、YYYY-MM-DD形式で実在しない日付は保留し、推測で補完しない。（L04）</li>
+      <li><strong>要確認一覧へ理由を記録する。</strong>保留した行ID、項目、理由を残す。一つの行に理由が複数あっても、元の行との対応が重複しないようにする。（L05・L07）</li>
+      <li><strong>要確認一覧を確認担当へ渡す。</strong>重複候補が同じ依頼かどうかは、確認担当が原資料で判断する。（L05・L06）</li>
+      <li><strong>全行との対応を確かめる。</strong>通常行と要確認行が元の全行を漏れなく重複なく覆い、保留理由が残っていることを確認して、チェック工程を終える。（L07）</li>
+    </ol>
+    <h3 class="h3">迷ったときに止める条件</h3>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">状況</th><th scope="col">この見本での扱い</th><th scope="col">根拠</th></tr></thead>
+      <tbody>
+        <tr><td data-label="状況">同じ依頼番号がある</td><td data-label="この見本での扱い">該当する行をすべて重複候補として保留。番号の一致だけで片方を削除しない。同一依頼かは確認担当が原資料で判断する。</td><td data-label="根拠">L03・L06</td></tr>
+        <tr><td data-label="状況">カテゴリが空欄、または指定形式の日付が実在しない</td><td data-label="この見本での扱い">要確認として行ID・項目・理由を残す。分類や日付を推測で埋めない。</td><td data-label="根拠">L04・L05</td></tr>
+        <tr><td data-label="状況">原資料で同一性を確認できない</td><td data-label="この見本での扱い">重複の判断を確定せず、保留として確認担当へ渡す。</td><td data-label="根拠">L03・L05・L06</td></tr>
+        <tr><td data-label="状況">保存先・期限・代替担当が必要になった</td><td data-label="この見本での扱い">このメモでは未定。実際の運用前に確認する質問へ残す。</td><td class="nw" data-label="根拠">L08</td></tr>
+      </tbody>
+    </table></div>
+    <h3 class="h3">チェック工程の終了と、案件の完了を分ける</h3>
+    <p>この工程の終了条件は、全行の対応と保留理由が確認できることです。保留がすべて解消したことや、依頼案件の仕事が完了したことを意味しません。（L07）</p>
+    <p>件数を確認する際も、同じ行を理由の数だけ数えず、各行IDが通常行か要確認行のどちらかに対応しているかを確かめます。ここでは実際の一覧を処理していないため、処理件数や成功率は示していません。</p>
+    <h3 class="h3">元メモとの対応と、残す質問</h3>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">完成例の項目</th><th scope="col">出典</th><th scope="col">資料から決められないこと</th></tr></thead>
+      <tbody>
+        <tr><td data-label="完成例の項目">目的・役割・準備</td><td data-label="出典">L01・L02・L06・L07</td><td data-label="資料から決められないこと">担当者の氏名、実ファイルの場所や画面操作</td></tr>
+        <tr><td data-label="完成例の項目">番号・空欄・日付の確認と保留理由</td><td data-label="出典">L03〜L05</td><td data-label="資料から決められないこと">実ファイルの列名、指定と異なる日付形式の扱いなど、記載のない規則</td></tr>
+        <tr><td data-label="完成例の項目">原資料による重複の判断</td><td class="nw" data-label="出典">L06</td><td data-label="資料から決められないこと">原資料を参照する具体的な操作や、確認担当が不在の場合の流れ</td></tr>
+        <tr><td data-label="完成例の項目">工程の終了と記録の運用</td><td data-label="出典">L07・L08</td><td data-label="資料から決められないこと">保存先、期限、代替担当。確認結果を誰がどこへ反映するか</td></tr>
+      </tbody>
+    </table></div>
+    <p>不明な項目を埋めた文書より、確認すべき質問が残った下書きとして扱います。実際の担当者と確認し、元メモや手順を更新してから業務へ取り入れます。</p>
+  </div></section>
+
+  <section class="sec" id="manual-review" aria-labelledby="manual-review-title"><div class="wrap">
+    <h2 class="h2" id="manual-review-title">6．別の担当者と読み合わせ、改訂の記録を残す</h2>
+    <p>原資料との対応を確認した後は、その仕事を初めて読む担当者が、どこで迷うかを確かめます。実際に行う場合は、原本を変えないテスト用の資料を使い、説明の不足と、業務上まだ決まっていないことを分けて記録します。</p>
+    <ul>
+      <li>手順の始まりと、使う資料が分かるか。</li>
+      <li>重複候補や空欄で、推測せず保留にできるか。</li>
+      <li>保留を誰へ渡すか、何を伝えるかが分かるか。</li>
+      <li>チェック工程の終了を、案件の完了と取り違えないか。</li>
+      <li>元資料や画面が変わったとき、どの記述を更新するか追えるか。</li>
+    </ul>
+    <p>この見本では、初見の担当者による読み合わせや実行確認は未実施です。次の欄は、実施した事実を記録するための項目です。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">記録する項目</th><th scope="col">この見本の状態</th></tr></thead>
+      <tbody>
+        <tr><td data-label="記録する項目">手順書の版・元資料の版</td><td data-label="この見本の状態">手順書は設計見本0.1。元資料はこの記事のL01〜L08。</td></tr>
+        <tr><td data-label="記録する項目">読み合わせ・実行確認の日時と役割</td><td data-label="この見本の状態">未実施。日時・担当者は未記入。</td></tr>
+        <tr><td data-label="記録する項目">迷った手順・確認した原資料・修正内容</td><td data-label="この見本の状態">実際の読み合わせ記録は未取得。</td></tr>
+        <tr><td data-label="記録する項目">受入れの判断・次回の更新担当</td><td data-label="この見本の状態">未確認。</td></tr>
+      </tbody>
+    </table></div>
+    <p>AIを実行した場合は、元資料、指示、加工前の出力、人が修正した版も分けて残します。読み合わせを行った日と結果がそろうまでは、「担当者が使えることを確認済み」とは扱いません。</p>
+  </div></section>
+
+  <section class="sec" id="manual-request" aria-labelledby="manual-request-title"><div class="wrap">
+    <h2 class="h2" id="manual-request-title">7．制作を依頼するときにそろえるもの</h2>
+    <p>Vaynexisでは、聞き取りやメモ、画面の記録などを素材にした業務マニュアルの制作を案内しています。相談するときは、次の5点を整理すると、対象と受入条件を確認できます。</p>
+    <ol>
+      <li>文書にしたい一つの業務・工程。</li>
+      <li>実際に読む人と、その人が知っている前提。</li>
+      <li>利用できる元資料と、記載してはいけない情報。</li>
+      <li>必要な完成物と、完成したと判断する条件。</li>
+      <li>内容を照合し、受け入れを確認する担当。</li>
+    </ol>
+    <p>制作範囲、受け取るもの、納期、ページ数、修正や保守の範囲は、依頼前に確認します。</p>
+    <h3 class="h3" id="manual-delivery-format">受け取る形式と、更新する担当を確認する</h3>
+    <p>閲覧用の形式に加え、あとで直すための編集可能な形式や元データが必要かを確認します。編集に使う環境、元データを受け取る範囲、利用・改変できる範囲、日常の更新担当は、依頼前にそろえる確認項目です。</p>
+    <h3 class="h3" id="manual-after-acceptance">受入れ後の修正と、内容の更新を分けて確認する</h3>
+    <p>受入れでは、合意した目次・範囲と、納品物・検査記録を照合します。作る仕事の成果物について、受入れ後に合意した目次と範囲との食い違いが見つかった場合は、受入れから60日以内は無償で直す条件を公開しています。詳しくは<a href="/terms">契約の主な条項の「作る仕事の納品」「受入れ後の修正」</a>をご確認ください。</p>
+    <p>業務や元資料の変更に伴う内容更新、追加制作、継続保守は、上の食い違いの修正と分けて、対象・担当・費用を確認する項目です。日常の更新を社内で行うか、外部へ依頼するかも確認します。</p>
+    <p>作る仕事の料金は、現行の<strong>換算時間 × 時給 × 50%</strong>の式で確認します。換算時間は人手で作った場合の時間で、1本ごとに着手前に決めるものです。実際に削減できた時間の測定値とは区別します。単発注文は1件あたり最低50,000円（税別・税込55,000円）で、複数の文書を1件にまとめられます。マニュアル1本の固定価格ではありません。</p>
+    <p>顧問の中で依頼する場合の最低額・上限との関係は、料金ページで確認してください。業務の棚卸し55,000円（税込）は、制作とは別の料金区分です。<a href="/ai#make">作る仕事の内容</a>と<a href="/price">料金・契約条件</a>をご確認ください。</p>
+    <p><a href="/contact#soudan">マニュアルにしたい業務を、30分の無料相談で伝える</a>。無料相談は1社1回です。初回の連絡に顧客データや機密情報を添付する必要はありません。</p>
+  </div></section>
+
+  <section class="sec" id="manual-faq" aria-labelledby="manual-faq-title"><div class="wrap">
+    <h2 class="h2" id="manual-faq-title">よくある質問</h2>
+    <h3 class="h3">資料が整っていなくても相談できますか？</h3>
+    <p>既存の制作案内では、担当者への聞き取り、メモ、画面の記録を素材にしています。まず対象の業務、読み手、必要な完成形を整理し、不足する資料や未確認事項を確かめます。</p>
+    <h3 class="h3">この手順書を、そのままAIへ実装できますか？</h3>
+    <p>この記事の見本は人が入力チェックを進めるための文書です。AIへ渡す入力・規則・出力・検査設計は別に整理し、設定する人と確認する人を決めます。依頼範囲は<a href="/ai#support-summary">AI導入支援の案内</a>でご確認ください。</p>
+    <h3 class="h3">AIが書いたら、確認せずに使えますか？</h3>
+    <p>原資料と実際の操作に照らして、担当者が内容を確認してから使います。出典のない操作や、保存先・期限などの未定事項を補っていないかも確認します。</p>
+    <h3 class="h3">会議メモから作る議事録と同じですか？</h3>
+    <p>業務マニュアルは繰り返す作業の進め方を示す文書です。会議記録では決定・提案・担当・未定事項を整理します。目的が異なるため、会議記録は既存の<a href="/ai-document-demo">架空の会議メモを使った文書作成の設計例</a>で紹介しています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#soudan">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#soudan">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -47,7 +47,19 @@
 </nav>
 <main id="main">
 <section class="page-head"><div class="wrap"><p class="hud">Data entry and checking</p><h1 class="h1">AIで転記・集計を進めるには。<br>重複と不明点を残して確かめる実演。</h1><p class="lead">明細を表にするだけでは、仕事の完了を判断できません。6行の架空データを使い、入力の整理、重複の確認、件数と金額の照合、採用する範囲の決定までを説明します。</p><p class="notice">このページは架空データによる手順と想定出力の設計例です。実際のお客様の事例、AIを実行したログ、時間削減の実測値ではありません。</p><p class="fine">2026年10月22日公開／作成：合同会社Vaynexis</p></div></section>
-<section class="sec"><div class="wrap"><h2 class="h2">最初に決める完成条件</h2><p>今回の完成形は「原本と照合できる一覧」と「確定・保留・重複を分けた集計」です。行の識別子、元の明細番号、原文、判断の根拠を残します。AIが金額や分類を推測して埋めた表は採用しません。</p><ol><li><a href="#input">元データと条件をそろえる</a></li><li><a href="#prompt">AIへの指示を固定する</a></li><li><a href="#output">想定出力と照合結果を確かめる</a></li><li><a href="#measure">確認・修正を含めて時間を測る</a></li></ol></div></section>
+<section class="sec"><div class="wrap"><h2 class="h2">最初に決める完成条件</h2><p>今回の完成形は「原本と照合できる一覧」と「確定・保留・重複を分けた集計」です。行の識別子、元の明細番号、原文、判断の根拠を残します。AIが金額や分類を推測して埋めた表は採用しません。</p><ol><li><a href="#input">元データと条件をそろえる</a></li><li><a href="#prompt">AIへの指示を固定する</a></li><li><a href="#output">想定出力と照合結果を確かめる</a></li><li><a href="#measure">確認・修正を含めて時間を測る</a></li></ol>
+<aside class="card" id="duplicate-hold-summary" aria-labelledby="duplicate-hold-summary-title">
+<h3 id="duplicate-hold-summary-title">AI集計の重複と保留は、どう分けて確認する？</h3>
+<p>元の行を残し、採用・保留・除外に分けて確認します。以下は、R04がR02と同じ原本の二重入力だと人が確認した後の、架空データによる想定結果です。</p>
+<ul>
+<li>件数：6行＝採用4行＋保留1行＋除外1行。</li>
+<li>金額：13,000円＝採用8,900円＋保留R05の900円＋除外R04の3,200円。</li>
+<li>重複を除いた9,800円には、保留の900円が含まれます。分類まで確認した8,900円と分けます。</li>
+</ul>
+<p>原本未確認ならR04を除外しません。費目が空欄のR05も推測で分類せず、保留に残します。<a href="https://vaynexis.jp/ai-data-entry-demo#input">6行の元データ</a>と<a href="https://vaynexis.jp/ai-data-entry-demo#output">想定出力・照合の根拠</a>で確認できます。</p>
+<p class="fine">架空データによる設計例です。AIの実行ログや、お客様への導入実績ではありません。</p>
+</aside>
+</div></section>
 <section class="sec sec--alt" id="input"><div class="wrap"><h2 class="h2">1．元データと条件をそろえる</h2><p>この架空例では、金額は元資料に記載された税込の円単位です。税額の推定や会計判断は行いません。空欄は空欄のまま扱います。実際に試す際は、氏名・連絡先・取引情報などを伏せ、利用するAIの契約・データの取り扱いと自社の許可範囲を確認してください。</p><div class="tbl"><table class="stack stack4 stack"><thead><tr><th scope="col">行ID</th><th scope="col">明細番号</th><th scope="col">日付</th><th scope="col">費目の原文</th><th scope="col">金額（円）</th></tr></thead><tbody><tr><td class="nw" data-label="行ID">R01</td><td class="nw" data-label="明細番号">B001</td><td data-label="日付">10月1日</td><td class="nw" data-label="費目の原文">消耗品</td><td data-label="金額（円）">1,800</td></tr><tr><td class="nw" data-label="行ID">R02</td><td class="nw" data-label="明細番号">B002</td><td data-label="日付">10月1日</td><td class="nw" data-label="費目の原文">交通費</td><td data-label="金額（円）">3,200</td></tr><tr><td class="nw" data-label="行ID">R03</td><td class="nw" data-label="明細番号">B003</td><td data-label="日付">10月2日</td><td class="nw" data-label="費目の原文">消耗品</td><td data-label="金額（円）">2,400</td></tr><tr><td class="nw" data-label="行ID">R04</td><td class="nw" data-label="明細番号">B002</td><td data-label="日付">10月1日</td><td class="nw" data-label="費目の原文">交通費</td><td data-label="金額（円）">3,200</td></tr><tr><td class="nw" data-label="行ID">R05</td><td class="nw" data-label="明細番号">B004</td><td data-label="日付">10月3日</td><td class="nw" data-label="費目の原文">空欄</td><td class="nw" data-label="金額（円）">900</td></tr><tr><td class="nw" data-label="行ID">R06</td><td class="nw" data-label="明細番号">B005</td><td data-label="日付">10月3日</td><td class="nw" data-label="費目の原文">会議費</td><td data-label="金額（円）">1,500</td></tr></tbody></table></div><p><b>照合の条件：</b>R04はR02と同じ明細番号です。初めは「重複候補」とし、人が原本を見て同じ明細の二重入力と確認できた場合だけ除外します。この例では、原本で同一と確認できたものとして次の結果を示します。別の取引なら番号の重複を修正して両方を残します。</p></div></section>
 <section class="sec" id="prompt"><div class="wrap"><h2 class="h2">2．AIへの指示を固定する</h2><p>入力・処理の規則・出力・止める条件を一緒に渡します。数字の最終照合には、元資料と表計算などによる別の計算を使います。</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere">次の架空の明細を整理してください。
 ・行ID、明細番号、日付、費目の原文、金額を変更しない。
