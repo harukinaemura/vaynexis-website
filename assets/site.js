@@ -161,7 +161,7 @@
   var vids = document.querySelectorAll('video[data-autoplay]');
   if (!vids.length) return;
   vids.forEach(function (v) {
-    if (v.parentElement.classList.contains('loop-media')) {
+    if (v.parentElement.classList.contains('loop-media') || v.classList.contains('hero__motion')) {
       v.addEventListener('playing', function () { v.classList.add('is-playing'); }, { once: true });
     }
   });

@@ -515,6 +515,9 @@ pre.prompt { white-space: pre-wrap; word-break: break-word; font-family: var(--f
 
 /* 背景の繰り返し動画（ヒーロー）。静止画と同じ扱いにする */
 video.hero__img { object-fit: cover; }
+.hero video.hero__motion { opacity: 0; }
+.hero video.hero__motion.is-playing { opacity: .78; }
+.hero:has(video.hero__motion.is-playing) > img.hero__img { visibility: hidden; }
 @media print { video.hero__img { display: none !important; } }
 
 /* 作る仕事の見本：現物を並べる棚 */
