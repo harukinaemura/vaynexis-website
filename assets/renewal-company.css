@@ -1,0 +1,42 @@
+/* Company/business only. Existing shared brown CSS remains byte-identical. */
+html.renewal-company .scope {gap:24px}
+html.renewal-company .scope>div {padding-top:16px}
+html.renewal-company .scope li {line-height:1.9}
+html.renewal-company .rows {border-top-color:#b39a7d}
+html.renewal-company .row {padding:28px 0}
+html.renewal-company .row__no {font-size:12px;letter-spacing:.08em;color:#76513b}
+html.renewal-company .allin {background:#f7f3ed;border-color:#dcd1c5;clip-path:none;padding:24px;border-radius:2px}
+html.renewal-company .allin .big {font-size:18px;line-height:1.8}
+html.renewal-company .catcap {font-family:var(--font-jp);font-size:14px;letter-spacing:.025em}
+html.renewal-company .catlead b {background:#f7f3ed;color:#49382e;border:1px solid #dcd1c5;border-radius:2px;line-height:1.8}
+html.renewal-company .catlead b svg {stroke:#76513b}
+html.renewal-company .catlead b>span {opacity:1!important}
+html.renewal-company #ec,html.renewal-company #lineage {padding:48px 0;background:#f7f3ed}
+html.renewal-company #ec .sec__head {margin-bottom:22px}
+html.renewal-company #ec .h2 {font-size:24px;margin-top:12px}
+html.renewal-company .company-supplement {border:1px solid #dcd1c5;background:#fff;border-radius:2px}
+html.renewal-company .company-supplement>summary {cursor:pointer;padding:20px 24px;min-height:64px;color:#49382e;font-size:15px;font-weight:600;line-height:1.7;overflow-wrap:anywhere}
+html.renewal-company .company-supplement>summary::marker {color:#76513b}
+html.renewal-company .company-supplement[open]>summary {border-bottom:1px solid #dcd1c5}
+html.renewal-company .company-supplement__content {padding:28px}
+html.renewal-company .company-supplement__content>.fig:first-child {margin-top:0}
+html.renewal-company .company-supplement__content .sec__sum {max-width:none;margin-top:0}
+html.renewal-company .table dd {overflow-wrap:anywhere;min-width:0}
+html.renewal-company .table dd :is(.mono,.latin) {letter-spacing:.015em}
+html.renewal-company .message {font-size:15px;line-height:2.05}
+html.renewal-company .message .sign {border-color:#dcd1c5}
+@media(max-width:760px) {
+ html.renewal-company #ec,html.renewal-company #lineage {padding:36px 0}
+ html.renewal-company .company-supplement>summary {padding:18px 20px}
+ html.renewal-company .company-supplement__content {padding:22px 18px}
+ html.renewal-company .allin {padding:20px}
+ html.renewal-company .allin .big {font-size:16px}
+ html.renewal-company .scope {grid-template-columns:minmax(0,1fr)}
+}
+@media print {
+ html.renewal-company .company-supplement {border-color:#999}
+ html.renewal-company .company-supplement>summary {display:none}
+ html.renewal-company .company-supplement::details-content {display:block;content-visibility:visible}
+ html.renewal-company .company-supplement:not([open])>.company-supplement__content {display:block}
+ html.renewal-company .company-supplement__content {padding:12px 0}
+}
