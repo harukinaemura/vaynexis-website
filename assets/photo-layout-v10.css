@@ -24,8 +24,7 @@
 .office-intro__note { margin-top: 20px; font-size: 11px; color: var(--muted); }
 .representative-message { display: grid; grid-template-columns: minmax(0,360px) minmax(0,1fr); gap: 48px; align-items: start; }
 .representative-message > * { min-width: 0; }
-/* Temporarily hide the representative photo without changing the layout. */
-.representative-message__photo { margin: 0; visibility: hidden; }
+.representative-message__photo { margin: 0; }
 .representative-message__photo img { display: block; width: 100%; height: auto; border-radius: 2px; }
 .representative-message .message { max-width: none; }
 .representative-message .message > p:first-child { margin-top: 0; color: var(--text); }
