@@ -84,6 +84,29 @@
   </div>
 </section>
 
+<section class="sec sec--alt" id="synthetic-validation" aria-labelledby="h-synthetic-validation">
+  <div class="wrap">
+    <div class="sec__head">
+      <div><p class="hud">Internal Test / 2026-10-25</p><h2 class="h2" id="h-synthetic-validation">架空データ15行の処理と再検査</h2></div>
+    </div>
+    <p>AIの作成支援を受けて新規に作った、ルールベースのPythonによる社内検証です。<b>架空の明細15行を実際に処理し、あらかじめ決めた規則と期待結果に合うかを確かめました。</b>LLMやOCRによる抽出ではなく、お客様のデータや導入成果でもありません。</p>
+    <div class="tbl">
+      <table class="stack">
+        <thead><tr><th>確認項目</th><th>結果</th><th>扱い・限界</th></tr></thead>
+        <tbody>
+          <tr><td data-label="確認項目">行の保持と承認</td><td data-label="結果">入力15行・出力15行。全15行が未承認</td><td data-label="扱い・限界">原文と行順を保持。帳簿への本番反映や自動承認はしていません</td></tr>
+          <tr><td data-label="確認項目">規則による検査</td><td data-label="結果">指摘なし3行・要確認12行</td><td data-label="扱い・限界">指摘なしの行も、人による確認・承認が必要です</td></tr>
+          <tr><td data-label="確認項目">重複の候補</td><td data-label="結果">2組4行。自動削除は0行</td><td data-label="扱い・限界">候補の両行を残し、重複かどうかの判断を人に戻します</td></tr>
+          <tr><td data-label="確認項目">固定条件での照合</td><td data-label="結果">元の15行と追加の境界12行を各5回処理し、期待結果との差分0</td><td data-label="扱い・限界">入力・規則・期待結果を固定した範囲の確認です。任意の入力の正しさを保証するものではありません</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><b>不具合も記録しています。</b>v1では、別のAI検査担当が<code>-0</code>と<code>-000</code>の保留漏れを発見しました（追加の境界検査は28件中26件が期待どおり）。v2では数値に変換する前の負符号を確認するよう修正し、別のAI担当が同じ28件を再検算して、28件とも期待どおりと確認しました。元の15行と追加の12行も再検算しています。</p>
+    <p class="fine">別担当の再検算は、同じAIチーム内での確認です。完全な盲検、外部第三者の認証、人による原本監査ではありません。追加12行もすべて未承認です。v1の記録と不具合は消さず、v2の修正・再検査と区別して保存しています。</p>
+    <p class="fine"><b>人の準備・確認・修正時間、人手による比較対照、総作業時間、削減時間・削減率・顧客成果は未測定です。</b>この欄には機械単体の処理時間を掲載していません。既存の「転記・集計の設計例」とは別に行った、検査条件を限定した社内検証の記録です。</p>
+  </div>
+</section>
+
 <section class="sec" id="why-not" aria-labelledby="h-whynot">
   <div class="wrap">
     <div class="sec__head">
