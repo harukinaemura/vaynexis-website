@@ -26,6 +26,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
   <link rel="stylesheet" href="assets/home-a.css">
+  <link rel="stylesheet" href="assets/home-navigation.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,12 +59,21 @@
 <div class="site-shell">
 <header class="site-header" id="nav">
     <a class="brand" href="/" aria-label="合同会社Vaynexis トップへ"><img src="assets/vaynexis-logo.svg" width="198" height="42" alt="VAYNEXIS"><span>合同会社Vaynexis</span></a>
-    <nav aria-label="ページ内" id="menu"><a href="#support">AI支援内容</a><a href="#process">始め方</a><a href="#company">私たちについて</a><a class="header-consult" href="/contact#soudan">無料相談</a></nav>
-    <span class="header-location">SHIGA / JAPAN</span>
+    <nav class="primary-navigation" aria-label="主なページ" id="menu"><a href="/ai">AIコンサルティング</a><a href="/price">料金</a><a href="/works">実物の見本</a><a href="/company">会社概要</a><a class="header-consult" href="/contact#soudan">無料相談</a></nav>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="このページ内"><a href="#support">AI支援内容</a><a href="#process">始め方</a><a href="#company">私たちについて</a><a href="#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
   </header>
-
-  
-
 <main id="main">
 <section class="hero" aria-labelledby="hero-title" id="top">
       <div class="hero-copy">
@@ -129,6 +139,17 @@
       <div class="company-copy" data-reveal><p class="label">04 / ABOUT VAYNEXIS</p><h2 id="company-title"><span id="h-company">任せるだけでなく、<br>確かめるところまで。</span></h2><p class="company-lead">滋賀県愛荘町から、全国の企業へ。<br>AIを仕事に活かす相談相手として。</p><p>自社の事務をAIに任せる中で、結果を確かめる大切さを学びました。その経験をもとに、お客様の業務に合う手順と検査を設計します。</p><p>ご相談から導入後の改善まで、代表が直接担当。AIが初めての方にも、一つひとつ分かりやすくお伝えします。</p><details class="company-business"><summary>会社概要・事業内容</summary><p>合同会社Vaynexis · 滋賀県愛荘町<br>事業内容：AI業務改善支援・制作、EC物販。</p><a href="/company">会社概要を見る →</a></details><div class="company-facts"><span>全国オンライン</span><span>滋賀県内訪問</span><span>代表が直接担当</span></div></div>
     </section>
 
+    <section class="section page-directory" id="page-directory" aria-labelledby="page-directory-title">
+      <div class="section-heading"><p class="label">PAGE GUIDE</p><div><h2 id="page-directory-title">サービス・料金・会社情報と活用ガイド</h2><p>目的に合わせて、各ページへお進みください。</p></div></div>
+      <nav class="directory-primary" aria-label="主なページ"><a href="/ai">AIコンサルティング</a><a href="/price">料金</a><a href="/works">実物の見本</a><a href="/company">会社概要</a><a href="/business">事業内容</a><a href="/contact">お問い合わせ</a></nav>
+      <nav class="directory-groups" aria-label="目的別のページ一覧"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+    </section>
+
     <details id="faq" class="home-faq"><summary id="h-faq">よくある質問</summary><div class="home-faq-item"><b>どんな業務が対象ですか。</b><p>定型の事務作業全般です。ただし向き不向きは難易度ではなく「間違いに気づくまでの時間」で決まります。</p></div><div class="home-faq-item"><b>導入実績はありますか。</b><p>外部の方からのお仕事は2026年10月にお受けし始めました（文書・画像・動画などの単発の制作）。お客様の事例は、掲載のご了承をいただいたものから載せます。このサイトでは、掲載可能な自社の制作物と検査記録をご覧いただけます。<a href="/works">実物の見本</a>と<a href="/record">数え方と記録の時点</a>を併せてご確認ください。</p></div><div class="home-faq-item"><b>AIツールの導入から頼めますか。</b><p>手順書をお渡ししてお手元のAIに実装していただくのが基本です。スプレッドシートやGASのような小さな自動化は、作る仕事として当社が作り、検査記録つきで納めます。大きなシステムの開発は受けません。</p></div><div class="home-faq-item"><b>契約書のチェックも頼めますか。</b><p>行いません。法律事務にあたるため、必要な場合は弁護士をご紹介します。</p></div><p><a href="/ai#faq">質問をすべて見る</a></p></details><section class="consultation" id="consultation" aria-labelledby="consultation-title"><span id="contact-band" class="legacy-anchor" aria-hidden="true"></span><p class="label">LET'S TALK</p><h2 id="consultation-title"><span id="h-band">まずは、ひとつ。<br>気になっている仕事を教えてください。</span></h2><p>30分の無料相談 · 1社1回</p><p class="consultation-detail">オンライン、または滋賀県内への訪問で承ります。日時はお申し込み後に調整します。事前に伺った1業務の短いデモと、棚卸しの前提確認を行います。法律相談は受けません。</p><a class="primary-cta" href="/contact#soudan">30分の無料相談を申し込む <span aria-hidden="true">↗</span></a><p class="consultation-links"><a href="/contact#demo">デモの準備について</a> · <a href="/price">料金・条件を確認する</a></p><p class="consultation-links"><a href="mailto:vaynexis177@gmail.com">メールで無料相談を申し込む</a> · <a href="tel:+819010790692">電話で問い合わせる</a></p></section>
   
 
@@ -138,5 +159,6 @@
 <noscript><p class="nojs">本文・相談案内・動画の再生操作は利用できます。業務例は横にスクロールできます。</p></noscript>
 <script src="assets/home-motion-policy.js" defer></script>
 <script src="assets/home-a.js" defer></script>
+<script src="assets/home-navigation.js" defer></script>
 </body>
 </html>

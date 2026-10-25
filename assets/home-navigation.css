@@ -1,0 +1,67 @@
+/* Homepage-only wayfinding. Does not change existing shared CSS or carousel. */
+html.home-a {--home-header-height:88px;scroll-padding-top:calc(var(--home-header-height) + 16px)}
+html.home-a section[id],html.home-a #existing-video,html.home-a .legacy-anchor,html.home-a #faq {scroll-margin-top:8px}
+html.home-a .site-header {position:sticky;top:0;z-index:80;height:var(--home-header-height);min-height:var(--home-header-height);padding:14px 4%;gap:18px;border-bottom:1px solid var(--line)}
+html.home-a .site-header .brand {flex-shrink:0;gap:12px}
+html.home-a .site-header .brand img {width:160px}
+html.home-a .site-header .brand span {font-size:9px;padding-left:12px}
+html.home-a .site-header .primary-navigation {margin-left:auto;gap:18px;font-size:11px;align-items:center}
+html.home-a .site-header .primary-navigation>a {display:block;white-space:nowrap}
+html.home-a .site-header .header-consult {padding:12px 14px;min-height:44px;display:flex;align-items:center}
+html.home-a .page-menu {flex-shrink:0}
+html.home-a .page-menu>summary {cursor:pointer;border:1px solid #76513b;background:#fff;color:#49382e;padding:10px 14px;min-height:44px;white-space:nowrap;font-size:12px;font-weight:700;line-height:22px;list-style:none}
+html.home-a .page-menu>summary::-webkit-details-marker {display:none}
+html.home-a .page-menu>summary::after {content:'＋';margin-left:8px;font-size:14px}
+html.home-a .page-menu[open]>summary {background:#f7f3ed}
+html.home-a .page-menu[open]>summary::after {content:'−'}
+html.home-a .page-menu-panel {position:absolute;right:0;top:100%;width:min(100%,1080px);max-height:calc(100vh - var(--home-header-height) - 16px);max-height:calc(100dvh - var(--home-header-height) - 16px);overflow-y:auto;overscroll-behavior:contain;background:#fff;border:1px solid var(--line);box-shadow:0 18px 30px #49382e24;padding:26px 30px;color:#352b24}
+html.home-a .page-menu-top {display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+html.home-a .page-menu-close {background:#f7f3ed;color:#49382e;padding:10px 16px;min-height:44px;font-size:12px;border:1px solid #76513b}
+html.home-a .site-header .page-menu nav {font-size:13px;font-weight:400}
+html.home-a .site-header .page-menu nav a {display:block;white-space:normal;overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:4px}
+html.home-a .site-header .page-menu .home-section-links {display:flex;flex-wrap:wrap;gap:8px 20px;padding:18px 0;border-bottom:1px solid var(--line);font-size:12px}
+html.home-a .site-header .page-menu .home-section-links a {padding:7px 0}
+html.home-a .directory-groups,html.home-a .site-header .page-menu .directory-groups {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 28px}
+html.home-a .page-menu .directory-groups {padding-top:24px}
+html.home-a .directory-group {min-width:0}
+html.home-a .directory-group h3 {font-size:15px;line-height:1.7;color:#49382e;margin:0 0 12px}
+html.home-a .directory-group ul {list-style:none;padding:0;margin:0;display:grid;gap:12px}
+html.home-a .directory-group a {font-size:13px;line-height:1.9;overflow-wrap:anywhere}
+html.home-a .directory-group a:hover {color:#76513b}
+html.home-a .page-directory {background:#f7f3ed}
+html.home-a .page-directory .section-heading h2 {font-size:clamp(24px,2.8cqw,38px);line-height:1.6}
+html.home-a .directory-primary {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:30px 0 44px}
+html.home-a .directory-primary a {display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 22px;min-height:72px;background:#fff;border:1px solid #dcd1c5;color:#49382e;font-size:15px;font-weight:600;text-decoration:none}
+html.home-a .directory-primary a::after {content:'→';color:#76513b}
+html.home-a .directory-primary a:hover {border-color:#76513b;background:#fffaf4}
+@media(max-width:1200px) {html.home-a .site-header .brand span {display:none}}
+@media(max-width:1050px) {
+ html.home-a .site-header .primary-navigation>a:not(.header-consult) {display:none}
+ html.home-a .directory-groups,html.home-a .site-header .page-menu .directory-groups {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px) {
+ html.home-a {--home-header-height:72px}
+ html.home-a .site-header {padding:12px 16px;gap:10px}
+ html.home-a .site-header .brand img {width:126px}
+ html.home-a .site-header .primary-navigation {gap:0}
+ html.home-a .site-header .primary-navigation .header-consult {padding:10px;font-size:10px;min-height:44px}
+ html.home-a .page-menu>summary {font-size:11px;padding:10px;min-height:44px}
+ html.home-a .page-menu>summary::after {margin-left:4px}
+ html.home-a .page-menu-panel {width:100%;padding:20px;max-height:calc(100dvh - 80px)}
+ html.home-a .directory-groups,html.home-a .site-header .page-menu .directory-groups {grid-template-columns:minmax(0,1fr);gap:28px}
+ html.home-a .directory-primary {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:34px}
+ html.home-a .directory-primary a {font-size:13px;padding:16px;min-height:70px}
+}
+@media(max-width:360px) {
+ html.home-a .site-header {gap:8px;padding-inline:12px}
+ html.home-a .site-header .brand img {width:112px}
+ html.home-a .page-menu>summary {padding-inline:8px}
+}
+@media print {
+ html.home-a .site-header {position:static;height:auto;min-height:0}
+ html.home-a .page-menu {display:none}
+ html.home-a .page-directory {background:#fff;break-before:page}
+ html.home-a .directory-primary {grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+html.home-a .menu-location {font-size:9px;letter-spacing:.1em;color:#675b52}
