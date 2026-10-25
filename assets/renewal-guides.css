@@ -1,0 +1,6 @@
+/* Guide/tool pages only: retain every original control, result and downloadable file. */
+html.renewal-guide {--warn:#bb403b}
+html.renewal-guide #inventory-check select,
+html.renewal-guide .measurement input:not([type=checkbox]),
+html.renewal-guide .measurement select {border-color:#76513b}
+html.renewal-guide .measurement__result {scroll-margin-top:96px}
