@@ -1,0 +1,5 @@
+/* Evidence/sample pages only. Fit media columns to narrow viewports without clipping. */
+html.renewal-evidence {--warn:#bb403b}
+html.renewal-evidence .gal--2 {grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+html.renewal-evidence .gal>* {min-width:0}
+html.renewal-evidence .gal figcaption {overflow-wrap:anywhere}
