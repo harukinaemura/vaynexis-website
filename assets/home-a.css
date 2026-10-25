@@ -94,7 +94,8 @@ html.home-a .steps li>span{font-size:9px;letter-spacing:.13em;color:#675b52}
 html.home-a .steps h3{font-size:17px;margin:15px 0 14px;font-weight:600}
 html.home-a .steps b{font-size:11px;font-weight:600}
 html.home-a .steps p{font-size:11px;line-height:2;color:var(--muted);margin-top:16px}
-html.home-a .company{background:var(--paper);display:grid;grid-template-columns:1fr 1.35fr;gap:86px;align-items:center}
+html.home-a .company{background:var(--paper);display:block}
+html.home-a .company-copy{max-width:760px;margin-inline:auto}
 html.home-a .portrait{position:relative}
 html.home-a .portrait img{aspect-ratio:4/5;width:100%;object-fit:cover}
 html.home-a .portrait figcaption{font-size:10px;margin-top:16px;color:#675b52;letter-spacing:.04em}
