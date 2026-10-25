@@ -1,0 +1,49 @@
+/* Inner-page wayfinding only. Native details keeps all existing destinations available without JS. */
+html.renewal-a {--inner-header-height:82px;--inner-bottom-space:16px;scroll-padding-top:calc(var(--inner-header-height) + 14px)}
+html.renewal-a .nav--directory {z-index:80}
+html.renewal-a .nav--directory .nav__in {height:var(--inner-header-height);gap:16px}
+html.renewal-a .nav--directory .mark {flex-shrink:0}
+html.renewal-a .nav--directory .nav__links {margin-left:auto;gap:12px;font-size:11px}
+html.renewal-a .nav--directory .nav__links>a {white-space:nowrap}
+html.renewal-a .nav--directory .nav__links .btn {font-size:11px;padding:10px 12px}
+html.renewal-a .nav--directory .page-menu {flex-shrink:0}
+html.renewal-a .nav--directory .page-menu>summary {cursor:pointer;list-style:none;border:1px solid #76513b;background:#fff;color:#49382e;padding:10px 14px;min-height:44px;white-space:nowrap;font-size:12px;font-weight:700;line-height:22px}
+html.renewal-a .nav--directory .page-menu>summary::-webkit-details-marker {display:none}
+html.renewal-a .nav--directory .page-menu>summary::after {content:'＋';margin-left:8px;font-size:14px}
+html.renewal-a .nav--directory .page-menu[open]>summary {background:#f7f3ed}
+html.renewal-a .nav--directory .page-menu[open]>summary::after {content:'−'}
+html.renewal-a .nav--directory .page-menu-panel {position:absolute;right:0;top:100%;width:min(100%,1080px);max-height:calc(100vh - var(--inner-header-height) - var(--inner-bottom-space));max-height:calc(100dvh - var(--inner-header-height) - var(--inner-bottom-space));overflow-y:auto;overscroll-behavior:contain;background:#fff;border:1px solid #dcd1c5;box-shadow:0 18px 30px #49382e24;padding:26px 30px;color:#352b24}
+html.renewal-a .nav--directory .page-menu-top {display:flex;justify-content:space-between;align-items:center;gap:18px;padding-bottom:16px;border-bottom:1px solid #dcd1c5}
+html.renewal-a .nav--directory .page-menu-close {background:#f7f3ed;color:#49382e;padding:10px 16px;min-height:44px;font-size:12px;border:1px solid #76513b;cursor:pointer}
+html.renewal-a .nav--directory .menu-location {font-size:9px;letter-spacing:.1em;color:#675b52}
+html.renewal-a .nav--directory .page-menu nav a {display:block;white-space:normal;overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:4px}
+html.renewal-a .nav--directory .home-section-links {display:flex;flex-wrap:wrap;gap:8px 20px;padding:18px 0;border-bottom:1px solid #dcd1c5;font-size:12px}
+html.renewal-a .nav--directory .home-section-links a {padding:7px 0}
+html.renewal-a .nav--directory .directory-groups {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 28px;padding-top:24px}
+html.renewal-a .nav--directory .directory-group {min-width:0}
+html.renewal-a .nav--directory .directory-group h3 {font-size:15px;line-height:1.7;color:#49382e;margin:0 0 12px}
+html.renewal-a .nav--directory .directory-group ul {list-style:none;padding:0;margin:0;display:grid;gap:12px}
+html.renewal-a .nav--directory .directory-group a {font-size:13px;line-height:1.9;overflow-wrap:anywhere}
+html.renewal-a .nav--directory .directory-group a:hover {color:#76513b}
+@media(max-width:1280px) {
+ html.renewal-a .nav--directory .nav__links {display:flex;position:static;flex-direction:row;align-items:center;gap:0;padding:0;border:0;background:transparent}
+ html.renewal-a .nav--directory .nav__links>a:not(.btn) {display:none}
+ html.renewal-a .nav--directory .nav__links .btn {margin:0;border:1px solid transparent}
+}
+@media(max-width:1000px) {html.renewal-a .nav--directory .directory-groups {grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px) {
+ html.renewal-a {--inner-header-height:74px;--inner-bottom-space:100px}
+ html.renewal-a .nav--directory .nav__in {gap:10px}
+ html.renewal-a .nav--directory .page-menu-panel {padding:20px}
+}
+@media(max-width:600px) {
+ html.renewal-a .nav--directory .nav__links {display:none}
+ html.renewal-a .nav--directory .page-menu {margin-left:auto}
+ html.renewal-a .nav--directory .mark__logo {width:126px}
+ html.renewal-a .nav--directory .mark small {display:none}
+ html.renewal-a .nav--directory .page-menu>summary {font-size:11px;padding:10px;min-height:44px}
+ html.renewal-a .nav--directory .page-menu>summary::after {margin-left:4px}
+ html.renewal-a .nav--directory .directory-groups {grid-template-columns:minmax(0,1fr);gap:28px}
+ html.renewal-a .nav--directory .menu-location {display:none}
+}
+@media print {html.renewal-a .nav--directory {display:none!important}}
