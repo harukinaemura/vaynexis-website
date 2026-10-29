@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIで転記・集計する手順｜重複・件数・金額の確認例｜Vaynexis</title>
-  <meta name="description" content="6行の架空明細で、AIへの指示、重複候補と保留の扱い、件数・金額の照合を解説。入力と指示のTXTひな形つき。転記・集計を試す経営者・事業責任者向け。">
+  <title>AIで転記作業・集計を進める手順｜重複・件数・金額の確認例｜Vaynexis</title>
+  <meta name="description" content="AIで転記作業・集計を進める手順を、6行の架空明細で解説。AIへの指示文、重複候補と保留の扱い、件数・金額の照合、Excel・CSVでの重複確認まで。入力と指示のTXTひな形つき。転記・集計を試す経営者・事業責任者向け。">
   <meta name="theme-color" content="#f4f6fa">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="AIで転記・集計する手順｜重複・件数・金額の確認例｜Vaynexis">
-  <meta property="og:description" content="6行の架空明細で、AIへの指示、重複候補と保留の扱い、件数・金額の照合を解説。入力と指示のTXTひな形つき。転記・集計を試す経営者・事業責任者向け。">
+  <meta property="og:title" content="AIで転記作業・集計を進める手順｜重複・件数・金額の確認例｜Vaynexis">
+  <meta property="og:description" content="AIで転記作業・集計を進める手順を、6行の架空明細で解説。AIへの指示文、重複候補と保留の扱い、件数・金額の照合、Excel・CSVでの重複確認まで。入力と指示のTXTひな形つき。転記・集計を試す経営者・事業責任者向け。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vaynexis.jp/ai-data-entry-demo">
   <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="assets/renewal-brown.css">
   <link rel="stylesheet" href="assets/renewal-guides.css">
   <link rel="stylesheet" href="assets/inner-navigation.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AIで転記・集計する手順｜重複・件数・金額の確認例","description":"6行の架空明細で、AIへの指示、重複候補と保留の扱い、件数・金額の照合を解説。入力と指示のTXTひな形つき。転記・集計を試す経営者・事業責任者向け。","datePublished":"2026-10-22","dateModified":"2026-10-24","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"mainEntityOfPage":"https://vaynexis.jp/ai-data-entry-demo"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AIで転記作業・集計を進める手順｜重複・件数・金額の確認例","description":"AIで転記作業・集計を進める手順を、6行の架空明細で解説。AIへの指示文、重複候補と保留の扱い、件数・金額の照合、Excel・CSVでの重複確認まで。入力と指示のTXTひな形つき。転記・集計を試す経営者・事業責任者向け。","datePublished":"2026-10-22","dateModified":"2026-10-29","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"mainEntityOfPage":"https://vaynexis.jp/ai-data-entry-demo"}</script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
@@ -61,7 +61,7 @@
   </div>
 </nav>
 <main id="main">
-<section class="page-head"><div class="wrap"><p class="hud">Data entry and checking</p><h1 class="h1">AIで転記・集計を進めるには。<br>重複と不明点を残して確かめる実演。</h1><p class="lead">明細を表にするだけでは、仕事の完了を判断できません。6行の架空データを使い、入力の整理、重複の確認、件数と金額の照合、採用する範囲の決定までを説明します。</p><p class="notice">このページは架空データによる手順と想定出力の設計例です。実際のお客様の事例、AIを実行したログ、時間削減の実測値ではありません。</p><p class="fine">2026年10月22日公開／作成：合同会社Vaynexis</p></div></section>
+<section class="page-head"><div class="wrap"><p class="hud">Data entry and checking</p><h1 class="h1">AIで転記作業・集計を進めるには。<br>重複と不明点を残して確かめる実演。</h1><p class="lead">明細を表にするだけでは、仕事の完了を判断できません。6行の架空データを使い、入力の整理、重複の確認、件数と金額の照合、採用する範囲の決定までを説明します。</p><p class="lead"><b>要点：</b>AIには行ID・明細番号・金額を変えずに整理させ、同じ明細番号は「重複候補」、空欄の費目は「要確認」として残させます。行の削除や推測による分類はさせず、採用・保留・除外の件数と行IDを出させたうえで、元資料の件数・金額と表計算で照合し、原本は人が確かめます。</p><p class="notice">このページは架空データによる手順と想定出力の設計例です。実際のお客様の事例、AIを実行したログ、時間削減の実測値ではありません。</p><p class="fine">2026年10月22日公開・2026年10月29日更新／作成：合同会社Vaynexis</p></div></section>
 <section class="sec"><div class="wrap"><h2 class="h2">最初に決める完成条件</h2><p>今回の完成形は「原本と照合できる一覧」と「確定・保留・重複を分けた集計」です。行の識別子、元の明細番号、原文、判断の根拠を残します。AIが金額や分類を推測して埋めた表は採用しません。</p><ol><li><a href="#input">元データと条件をそろえる</a></li><li><a href="#prompt">AIへの指示を固定する</a></li><li><a href="#output">想定出力と照合結果を確かめる</a></li><li><a href="#measure">確認・修正を含めて時間を測る</a></li></ol>
 <aside class="card" id="duplicate-hold-summary" aria-labelledby="duplicate-hold-summary-title">
 <h3 id="duplicate-hold-summary-title">AI集計の重複と保留は、どう分けて確認する？</h3>
