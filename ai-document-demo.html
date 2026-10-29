@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIで議事録・資料を作る手順｜決定・提案・出典の確認例｜Vaynexis</title>
-  <meta name="description" content="架空の会議メモから議事録と3枚の資料構成を作る手順。決定・提案・不明点を分け、元メモと照合して共有する方法を解説。入力と指示のTXTひな形つき。">
+  <title>AI議事録で提案と決定事項を分ける方法｜指示文と確認5項目｜Vaynexis</title>
+  <meta name="description" content="AIで議事録を作るときに、提案を決定事項に変えない方法。元メモを行番号つきで渡す指示文（プロンプト）、決定事項・提案・担当作業・未確認事項の分け方、共有前に原メモと照合する5項目を、架空の会議メモで解説。TXTひな形つき。">
   <meta name="theme-color" content="#f4f6fa">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="AIで議事録・資料を作る手順｜決定・提案・出典の確認例｜Vaynexis">
-  <meta property="og:description" content="架空の会議メモから議事録と3枚の資料構成を作る手順。決定・提案・不明点を分け、元メモと照合して共有する方法を解説。入力と指示のTXTひな形つき。">
+  <meta property="og:title" content="AI議事録で提案と決定事項を分ける方法｜指示文と確認5項目｜Vaynexis">
+  <meta property="og:description" content="AIで議事録を作るときに、提案を決定事項に変えない方法。元メモを行番号つきで渡す指示文（プロンプト）、決定事項・提案・担当作業・未確認事項の分け方、共有前に原メモと照合する5項目を、架空の会議メモで解説。TXTひな形つき。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vaynexis.jp/ai-document-demo">
   <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="assets/renewal-guides.css">
   <style>#check table>caption{text-align:left;}@media(max-width:900px){#check table>caption{display:block;width:100%;}}</style>
   <link rel="stylesheet" href="assets/inner-navigation.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AIで議事録・資料を作る手順｜決定・提案・出典の確認例","description":"架空の会議メモから議事録と3枚の資料構成を作る手順。決定・提案・不明点を分け、元メモと照合して共有する方法を解説。入力と指示のTXTひな形つき。","datePublished":"2026-10-22","dateModified":"2026-10-24","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"mainEntityOfPage":"https://vaynexis.jp/ai-document-demo"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AI議事録で提案と決定事項を分ける方法｜指示文と確認5項目","description":"AIで議事録を作るときに、提案を決定事項に変えない方法。元メモを行番号つきで渡す指示文（プロンプト）、決定事項・提案・担当作業・未確認事項の分け方、共有前に原メモと照合する5項目を、架空の会議メモで解説。TXTひな形つき。","datePublished":"2026-10-22","dateModified":"2026-10-29","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"mainEntityOfPage":"https://vaynexis.jp/ai-document-demo"}</script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
@@ -62,10 +62,10 @@
   </div>
 </nav>
 <main id="main">
-<section class="page-head"><div class="wrap"><p class="hud">Document drafting and checking</p><h1 class="h1">会議メモから文書・資料へ。<br>決定・提案・不明点を分けるAI活用の設計例。</h1><p class="lead">議事録や報告資料は、整った文章になっても、担当や期限が正しいとは限りません。短い架空のメモから下書きを作り、出典を照合し、人が確認して共有するまでの進め方を説明します。</p><p class="notice">このページは架空データによる手順と想定出力の設計例です。実際のお客様の事例、AIを実行したログ、時間削減の実測値ではありません。</p><p class="fine">実行済みの別検証として、<a href="https://vaynexis.jp/record#synthetic-validation">架空明細15行のPython社内検証</a>も公開しています。この会議メモの設計例とは別の記録で、LLM・OCRによる抽出や削減時間・顧客成果を検証したものではありません。</p><p class="fine">2026年10月22日公開／作成：合同会社Vaynexis</p></div></section>
+<section class="page-head"><div class="wrap"><p class="hud">Document drafting and checking</p><h1 class="h1">AI議事録で、提案と決定事項を分ける。<br>会議メモから議事録・資料を作る手順。</h1><p class="lead">議事録や報告資料は、整った文章になっても、担当や期限が正しいとは限りません。短い架空のメモから下書きを作り、出典を照合し、人が確認して共有するまでの進め方を説明します。</p><p class="lead"><b>要点：</b>元メモを行番号つきでAIに渡し、決定事項・提案・担当作業・未確認事項に分けて、各項目に根拠の行番号を付けさせます。指示文で「提案を決定事項に変えない」「担当・期限・数値を推測で足さない」と決め、共有前に原メモと5項目を照合します。</p><p class="notice">このページは架空データによる手順と想定出力の設計例です。実際のお客様の事例、AIを実行したログ、時間削減の実測値ではありません。</p><p class="fine">実行済みの別検証として、<a href="https://vaynexis.jp/record#synthetic-validation">架空明細15行のPython社内検証</a>も公開しています。この会議メモの設計例とは別の記録で、LLM・OCRによる抽出や削減時間・顧客成果を検証したものではありません。</p><p class="fine">2026年10月22日公開・2026年10月29日更新／作成：合同会社Vaynexis</p></div></section>
 <section class="sec"><div class="wrap"><h2 class="h2">最初に決める完成条件</h2><p>読み手は社内の責任者。完成形は、決定事項、提案、作業、未確認事項を分けた1ページの会議記録と、3枚の資料構成案です。どの記述も元メモの行番号でたどれるようにします。担当・期限・効果の数値を推測で足しません。</p><ol><li><a href="#input">元メモと読み手をそろえる</a></li><li><a href="#prompt">出典つきの下書きを指示する</a></li><li><a href="#output">文書と資料構成の想定出力を見る</a></li><li><a href="#check">人が確認し、共有できる範囲を決める</a></li></ol></div></section>
 <section class="sec sec--alt" id="input"><div class="wrap"><h2 class="h2">1．元メモを行番号つきで渡す</h2><div class="tbl"><table class="stack"><thead><tr><th scope="col">出典</th><th scope="col">架空の元メモ</th></tr></thead><tbody><tr><td data-label="出典">M1</td><td data-label="架空の元メモ">2026年10月22日。事務改善の試行について打合せ。まず1業務を対象にする。</td></tr><tr><td data-label="出典">M2</td><td data-label="架空の元メモ">決定：対象は日報から集計表への転記。</td></tr><tr><td data-label="出典">M3</td><td data-label="架空の元メモ">営業担当Aが、次回打合せまでに手順の初回案を作る。</td></tr><tr><td data-label="出典">M4</td><td data-label="架空の元メモ">次回の開催日は未定。</td></tr><tr><td data-label="出典">M5</td><td data-label="架空の元メモ">提案：週報の文章づくりにも広げたい。実施するかは未決定。</td></tr><tr><td data-label="出典">M6</td><td data-label="架空の元メモ">現在の作業時間と誤り件数は未測定。試行前後で確認する。</td></tr></tbody></table></div><p>今回は個人名・顧客情報のない架空メモです。実務の録音やメモを渡す際は、社内の許可と利用するAIのデータ取り扱いを確認し、必要な範囲に絞ってください。聞き取れない箇所は無理に文章化せず、元の記録で確認します。</p></div></section>
-<section class="sec" id="prompt"><div class="wrap"><h2 class="h2">2．出典つきの下書きを指示する</h2><pre style="white-space:pre-wrap;overflow-wrap:anywhere">次の架空メモだけを根拠に、社内共有用の下書きを作ってください。
+<section class="sec" id="prompt"><div class="wrap"><h2 class="h2">2．出典つきの下書きを指示する（指示文・プロンプト）</h2><pre style="white-space:pre-wrap;overflow-wrap:anywhere">次の架空メモだけを根拠に、社内共有用の下書きを作ってください。
 出力1：会議概要、決定事項、提案、担当作業、未確認事項。
 出力2：社内説明資料3枚の構成案（各見出しと要点）。
 各項目の末尾に根拠の行番号（M1など）を付けてください。
