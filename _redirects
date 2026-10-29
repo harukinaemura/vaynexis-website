@@ -22,3 +22,26 @@
 /terms.html /terms 301
 /tokushoho.html /tokushoho 301
 /works.html /works 301
+
+# Trailing-slash variants (2026-10-29): /xxx/ -> /xxx 301 (was 307).
+/ai-consulting-guide/ /ai-consulting-guide 301
+/ai-data-entry-demo/ /ai-data-entry-demo 301
+/ai-document-demo/ /ai-document-demo 301
+/ai-manual-guide/ /ai-manual-guide 301
+/ai/ /ai 301
+/business-improvement/ /business-improvement 301
+/business/ /business 301
+/case-empty-folders/ /case-empty-folders 301
+/company/ /company 301
+/contact/ /contact 301
+/letter/ /letter 301
+/office-inventory/ /office-inventory 301
+/price/ /price 301
+/privacy/ /privacy 301
+/rates/ /rates 301
+/record/ /record 301
+/sample-audit/ /sample-audit 301
+/sample-report/ /sample-report 301
+/terms/ /terms 301
+/tokushoho/ /tokushoho 301
+/works/ /works 301
