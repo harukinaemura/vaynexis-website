@@ -1,0 +1,24 @@
+# Permanent (301) redirects from old .html URLs to extensionless URLs (2026-10-29).
+# Purpose: consolidate Google signals on one URL per page. 404.html is excluded.
+/ai-consulting-guide.html /ai-consulting-guide 301
+/ai-data-entry-demo.html /ai-data-entry-demo 301
+/ai-document-demo.html /ai-document-demo 301
+/ai-manual-guide.html /ai-manual-guide 301
+/ai.html /ai 301
+/business-improvement.html /business-improvement 301
+/business.html /business 301
+/case-empty-folders.html /case-empty-folders 301
+/company.html /company 301
+/contact.html /contact 301
+/index.html / 301
+/letter.html /letter 301
+/office-inventory.html /office-inventory 301
+/price.html /price 301
+/privacy.html /privacy 301
+/rates.html /rates 301
+/record.html /record 301
+/sample-audit.html /sample-audit 301
+/sample-report.html /sample-report 301
+/terms.html /terms 301
+/tokushoho.html /tokushoho 301
+/works.html /works 301
