@@ -45,3 +45,15 @@
 /terms/ /terms 301
 /tokushoho/ /tokushoho 301
 /works/ /works 301
+
+# Column (2026-10-30): /column and /column/<name>, same rules as other pages.
+/column.html /column 301
+/column/ /column 301
+/column/data-entry-errors.html /column/data-entry-errors 301
+/column/data-entry-errors/ /column/data-entry-errors 301
+/column/task-listing.html /column/task-listing 301
+/column/task-listing/ /column/task-listing 301
+/column/ai-minutes-transcription.html /column/ai-minutes-transcription 301
+/column/ai-minutes-transcription/ /column/ai-minutes-transcription 301
+/column/generative-ai-policy.html /column/generative-ai-policy 301
+/column/generative-ai-policy/ /column/generative-ai-policy 301

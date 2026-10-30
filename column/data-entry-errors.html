@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>転記ミスの原因と防止策｜件数・合計・重複を照合する3つの確認｜Vaynexis</title>
+  <meta name="description" content="転記ミスが起きる5つの型と、防ぎ方の2つの方向（写す回数を減らす・写したあとに照合する）。Excel の COUNTA・SUM・COUNTIF で件数・合計・重複を確かめる手順と、印刷して使える確認表。AIに転記を任せる場合の確認にも使えます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="転記ミスの原因と防止策｜件数・合計・重複を照合する3つの確認｜Vaynexis">
+  <meta property="og:description" content="転記ミスが起きる5つの型と、防ぎ方の2つの方向（写す回数を減らす・写したあとに照合する）。Excel の COUNTA・SUM・COUNTIF で件数・合計・重複を確かめる手順と、印刷して使える確認表。AIに転記を任せる場合の確認にも使えます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/data-entry-errors">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/data-entry-errors">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"転記ミスの原因と防止策。件数・合計・重複の3つで照合する","description":"転記ミスが起きる5つの型と、防ぎ方の2つの方向（写す回数を減らす・写したあとに照合する）。Excel の COUNTA・SUM・COUNTIF で件数・合計・重複を確かめる手順と、印刷して使える確認表。AIに転記を任せる場合の確認にも使えます。","datePublished":"2026-10-30","dateModified":"2026-10-30","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/data-entry-errors"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"転記ミスの原因と防止策","item":"https://vaynexis.jp/column/data-entry-errors"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#soudan">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">転記ミスの原因と防止策</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">転記ミスの原因と防止策。件数・合計・重複の3つで照合する</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>転記ミスは、写す回数を減らすことと、写したあとに元の資料と照合することで減らします。照合の基本は、<strong>件数</strong>（行の数が合うか）、<strong>合計</strong>（金額の合計が合うか）、<strong>重複</strong>（同じものが2回入っていないか）の3つを、元の資料と写した先の両方で数えて比べることです。Excel では COUNTA・SUM・COUNTIF の3つの関数で確かめられます。</p></div>
+    <p class="col-meta">公開：2026年10月30日／情報の確認日：2026年10月30日（出典はこの記事の最後）</p>
+    <p>この記事は、請求書・注文書・申込書などの内容を、台帳や一覧表へ写す事務を想定しています。AIを使うかどうかに関係なく使える確かめ方です。</p>
+    <p class="notice">表の数式の範囲（A2:A200 など）は説明用の例です。実際の表の列と行に合わせて変えてください。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#types">転記ミスは、5つの型に分けると探しやすい</a></li>
+      <li><a href="#prevent">防ぎ方は「写す回数を減らす」と「照合する」の2つ</a></li>
+      <li><a href="#three-checks">照合の3つの確認：件数・合計・重複（Excel）</a></li>
+      <li><a href="#double-check">同じ見方で2回見るだけのダブルチェックは、見落としが重なりやすい</a></li>
+      <li><a href="#with-ai">AIに転記を任せる場合も、同じ照合が要る</a></li>
+      <li><a href="#check">転記したあとの確認表</a></li>
+      <li><a href="#consult">転記の確認を、毎月の仕組みにしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="types" aria-labelledby="types-title"><div class="wrap">
+    <h2 class="h2" id="types-title">1．転記ミスは、5つの型に分けると探しやすい</h2>
+    <p>「ミスがあった」で止めずに、どの型のミスかを分けると、見つけ方が決まります。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">型</th><th scope="col">起きること</th><th scope="col">見つけ方</th></tr></thead>
+      <tbody>
+        <tr><td data-label="型">桁・数字の写し間違い</td><td data-label="起きること">12,800 を 18,200 と書く、桁を1つ落とす</td><td data-label="見つけ方">金額の合計を元の資料と比べる</td></tr>
+        <tr><td data-label="型">行のずれ</td><td data-label="起きること">1行上の取引先の金額を写してしまう</td><td data-label="見つけ方">件数と、行ごとの取引先名を見比べる</td></tr>
+        <tr><td data-label="型">二重入力</td><td data-label="起きること">同じ明細を2回写す</td><td data-label="見つけ方">伝票番号などで重複を数える</td></tr>
+        <tr><td data-label="型">漏れ</td><td data-label="起きること">明細を1行飛ばす</td><td data-label="見つけ方">件数を元の資料と比べる</td></tr>
+        <tr><td data-label="型">表記のゆれ</td><td data-label="起きること">「株式会社」と「(株)」、全角と半角が混ざる</td><td data-label="見つけ方">取引先名で数えたとき、同じ会社が別々に数えられていないか見る</td></tr>
+      </tbody>
+    </table></div>
+    <p>どの型が多いかは、職場や資料によって違います。この記事では割合の数字は出しません。自社で見つかったミスを型ごとに記録しておくと、どこから手を打つかを決めやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="prevent" aria-labelledby="prevent-title"><div class="wrap">
+    <h2 class="h2" id="prevent-title">2．防ぎ方は「写す回数を減らす」と「照合する」の2つ</h2>
+    <p>一つ目は、写す回数そのものを減らすことです。元の資料がCSVやExcelで届くなら、手で打ち直さずに取り込みます。同じ内容を2つの表に打っているなら、片方からもう片方を参照します。取引先名を選んで入れる形にすると、表記のゆれも起きにくくなります。</p>
+    <p>二つ目は、写したあとに照合することです。ミスがまったく起きない入力の方法はないので、起きたミスを見つける手順を先に決めておきます。Microsoft のサポートページも、数式に値を直接打ち込む足し算は入力ミスが起きやすいとして、値をセルに置いて SUM 関数で合計する方法を勧めています。</p>
+  </div></section>
+
+  <section class="sec" id="three-checks" aria-labelledby="three-checks-title"><div class="wrap">
+    <h2 class="h2" id="three-checks-title">3．照合の3つの確認：件数・合計・重複（Excel）</h2>
+    <p>3つとも、<strong>元の資料と写した先の両方で数えて、同じになるか</strong>を見ます。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">確認</th><th scope="col">比べるもの</th><th scope="col">Excel の関数の例</th><th scope="col">合わないときに疑う型</th></tr></thead>
+      <tbody>
+        <tr><td data-label="確認">件数</td><td data-label="比べるもの">元の資料の明細の行数と、写した先の行数</td><td data-label="Excel の関数の例"><code>=COUNTA(B2:B200)</code></td><td data-label="合わないときに疑う型">漏れ・二重入力</td></tr>
+        <tr><td data-label="確認">合計</td><td data-label="比べるもの">元の資料の金額の合計と、写した先の金額の合計</td><td data-label="Excel の関数の例"><code>=SUM(E2:E200)</code></td><td data-label="合わないときに疑う型">桁・数字の写し間違い・漏れ・二重入力</td></tr>
+        <tr><td data-label="確認">重複</td><td data-label="比べるもの">同じ伝票番号が2回以上入っていないか</td><td data-label="Excel の関数の例"><code>=COUNTIF($B$2:$B$200,B2)</code></td><td data-label="合わないときに疑う型">二重入力</td></tr>
+      </tbody>
+    </table></div>
+    <h3 class="h3">件数：COUNTA は「空白でないセル」を数える</h3>
+    <p>COUNTA 関数は、範囲の中で空白でないセルの数を数えます。Microsoft のサポートページによると、空の文字列（""）を返す数式が入ったセルも数えます。数式が入った空欄のある列で数えると、件数が多く出ることがあります。件数は、伝票番号のように必ず値が入る列で数えます。</p>
+    <h3 class="h3">合計：同じ範囲を両方で足す</h3>
+    <p>元の資料にも合計欄があれば、その数字と写した先の SUM の結果を比べます。合計が合っていても、行のずれ（金額は合っているが取引先が違う）は見つかりません。件数・重複とあわせて使います。</p>
+    <h3 class="h3">重複：COUNTIF で同じ番号の数を数える</h3>
+    <p>COUNTIF 関数は、範囲の中で条件に合うセルの数を数えます。伝票番号の列の隣に上の式を入れて下までコピーすると、各行の番号がいくつあるかが出ます。2以上の行が重複の候補です。番号のない資料では、日付・取引先・金額を1つのセルにつないだ列を作り、その列で数えます。</p>
+    <p>重複の候補は、すぐに消さずに元の資料で確かめます。同じ日に同じ金額の取引が、本当に2件あることもあるためです。</p>
+  </div></section>
+
+  <section class="sec" id="double-check" aria-labelledby="double-check-title"><div class="wrap">
+    <h2 class="h2" id="double-check-title">4．同じ見方で2回見るだけのダブルチェックは、見落としが重なりやすい</h2>
+    <p>担当者が写したものを、もう一人が同じ資料を横に置いて、上から順に見比べる。この方法は、2人目も1人目と同じ順番・同じ見方で見るので、1人目が見落とした所を2人目も見落とすことがあります。</p>
+    <p>そこで、2回目は見方を変えます。1回目が行ごとの見比べなら、2回目は件数・合計・重複を数えて比べ、合わなかった所だけを行ごとに見直します。数えて比べる方法は、誰がやっても同じ結果になるので、確認した記録も残しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="with-ai" aria-labelledby="with-ai-title"><div class="wrap">
+    <h2 class="h2" id="with-ai-title">5．AIに転記を任せる場合も、同じ照合が要る</h2>
+    <p>AIに明細を読み取らせて一覧へ写す場合も、写した結果の件数・合計・重複を、元の資料と比べる手順は変わりません。AIが写した結果も、人が写した結果と同じく、元の資料と数えて比べるまでは正しいかどうか分かりません。</p>
+    <p>AIへの指示の書き方と、重複の候補や読み取れない行を「保留」として残す方法は、6行の架空明細を使った<a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順</a>で紹介しています。Excel・CSV で重複を確かめる手順は、同じページの<a href="/ai-data-entry-demo#excel-check">重複を確かめる手順</a>にあります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．転記したあとの確認表</h2>
+    <p>印刷するか、表の横に置いて使います。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">写す前に、元の資料の明細の件数を数えた</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">写した先の件数が、元の資料と同じ</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">金額の合計が、元の資料と同じ</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">伝票番号（なければ日付・取引先・金額）で重複の候補を出した</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">重複の候補を、元の資料で1件ずつ確かめた</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">取引先名の表記がそろっている（株式会社と(株)、全角と半角）</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">合わなかった所と、直した内容を記録した</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">確認した人と日付を書いた</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．転記の確認を、毎月の仕組みにしたいとき</h2>
+    <p>毎月同じ転記がある場合は、元の資料の形、照合する列、重複や読み取れない行の扱いを決めておくと、担当が替わっても同じ確認ができます。手順の実演は<a href="/ai-data-entry-demo">転記・集計の実演ページ</a>にあります。</p>
+    <p>自社の転記作業で、どこから照合を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年10月30日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/counta-function" rel="noopener" target="_blank">Microsoft サポート「COUNTA 関数」</a>：空白でないセルを数える。空の文字列（""）を返す数式のセルも数える</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/sum-function" rel="noopener" target="_blank">Microsoft サポート「SUM 関数」</a>：値を直接打ち込む足し算は入力ミスが起きやすく、セルに置いて SUM で合計する方法</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/use-the-countif-function-in-microsoft-excel" rel="noopener" target="_blank">Microsoft サポート「Microsoft Excel で COUNTIF 関数を使用する」</a>：条件に合うセルの数を数える</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/task-listing">業務の洗い出し方：部署名ではなく「作業」で書く</a></li>
+      <li><a href="/office-inventory">業務棚卸しチェックシートとAI業務改善のやり方</a></li>
+    </ul>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#soudan">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#soudan">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
