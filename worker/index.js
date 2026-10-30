@@ -6,9 +6,16 @@
 // wrangler.jsonc の run_worker_first で /assets/*.mp4 だけをここに通す。ほかのファイル（HTML・CSS・画像）は
 // これまでどおり Worker を通らずに静的配信され、_headers もそのまま効く。
 // ここで返す応答のヘッダは env.ASSETS.fetch の応答（_headers の内容を含む）を写したもの。
+// お問い合わせフォームの送信（POST /api/contact）も受ける。中身は contact.js。wrangler.jsonc の run_worker_first に /api/* を足してある。
+import { EmailMessage } from "cloudflare:email";
+import { handleContact } from "./contact.js";
 
 export default {
   async fetch(request, env) {
+    if (new URL(request.url).pathname === "/api/contact") {
+      return handleContact(request, env, EmailMessage);
+    }
+
     const method = request.method.toUpperCase();
     if (method !== "GET" && method !== "HEAD") {
       return env.ASSETS.fetch(request);

@@ -1,0 +1,23 @@
+/* お問い合わせフォーム（/contact#form）。style.css の .measurement の入力欄にそろえる */
+.cform { max-width: 720px; display: grid; gap: 22px; margin-top: 26px; }
+.cform label, .cform legend { display: block; font-size: 14px; color: var(--text); font-weight: 600; }
+.cform fieldset { border: 0; padding: 0; margin: 0; }
+.cform fieldset label { display: inline-flex; align-items: center; gap: 8px; font-weight: 400; margin: 10px 22px 0 0; }
+.cform input:not([type=checkbox]):not([type=radio]), .cform textarea { display: block; width: 100%; min-width: 0; min-height: 44px; padding: 9px 10px; margin-top: 6px; border: 1px solid var(--line-strong); border-radius: 4px; font: inherit; font-weight: 400; color: var(--text); background: #fff; }
+.cform textarea { min-height: 160px; resize: vertical; line-height: 1.8; }
+.cform input[type=radio], .cform input[type=checkbox] { width: 18px; height: 18px; margin: 0; accent-color: #76513b; }
+.cform .fine { display: block; font-weight: 400; margin-top: 6px; }
+.cform .req, .cform .opt { display: inline-block; font-size: 11px; font-weight: 600; line-height: 1; padding: 4px 6px; margin-left: 8px; border-radius: 2px; vertical-align: 2px; }
+.cform .req, .cform .opt { white-space: nowrap; }
+.cform .req { color: #fff; background: #76513b; }
+.cform .opt { color: #76513b; border: 1px solid #b39a7d; }
+.cform__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.cform__warn { font-size: 13px; line-height: 1.9; color: var(--text); padding: 14px 16px; border: 1px solid #b39a7d; border-radius: 2px; background: #fff; }
+.cform__purpose { font-size: 13px; line-height: 1.9; color: var(--text-2); padding: 14px 16px; border-left: 3px solid #b39a7d; background: #f7f3ed; }
+.cform__agree { display: flex !important; align-items: center; gap: 10px; font-weight: 600; }
+.cform button[type=submit] { justify-self: start; min-width: 200px; justify-content: center; }
+.cform button[disabled] { opacity: .6; cursor: wait; }
+@media (max-width: 640px) {
+  .cform fieldset label { display: flex; margin-right: 0; }
+  .cform button[type=submit] { justify-self: stretch; }
+}
