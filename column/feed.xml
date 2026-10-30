@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
+  <title>合同会社Vaynexis コラム：事務とAIの進め方</title>
+  <link href="https://vaynexis.jp/column/feed.xml" rel="self"/>
+  <link href="https://vaynexis.jp/column"/>
+  <id>https://vaynexis.jp/column</id>
+  <updated>2026-10-30T00:00:00+09:00</updated>
+  <author><name>合同会社Vaynexis</name></author>
+  <entry>
+    <title>生成AIの社内ルールの作り方。最初に決める6項目と、参考にできる公的な資料</title>
+    <link href="https://vaynexis.jp/column/generative-ai-policy"/>
+    <id>https://vaynexis.jp/column/generative-ai-policy</id>
+    <published>2026-10-30T00:00:00+09:00</published>
+    <updated>2026-10-30T00:00:00+09:00</updated>
+    <summary>生成AIの社内ルール（利用ガイドライン）を作るときに最初に決める6項目と書き方の作例。経済産業省・総務省「AI事業者ガイドライン（第1.2版）」、JDLA「生成AIの利用ガイドライン」のひな形、個人情報保護委員会の注意喚起、ChatGPT・Claude の学習設定の違い（公式ヘルプで確認）つき。</summary>
+  </entry>
+  <entry>
+    <title>AIで文字起こしから議事録を作るときの注意点。録音の前と、議事録にする前の確認</title>
+    <link href="https://vaynexis.jp/column/ai-minutes-transcription"/>
+    <id>https://vaynexis.jp/column/ai-minutes-transcription</id>
+    <published>2026-10-30T00:00:00+09:00</published>
+    <updated>2026-10-30T00:00:00+09:00</updated>
+    <summary>会議の録音や文字起こしをAIで議事録にする前に確かめること。録音を伝える、社外秘と個人情報の扱い、使うAIの学習設定（OpenAI・Anthropic の公式ヘルプで確認）と、文字起こしで見る話者・固有名詞・数字・聞き取れない箇所。確認表つき。</summary>
+  </entry>
+  <entry>
+    <title>業務の洗い出し方。部署名ではなく「作業」で書く</title>
+    <link href="https://vaynexis.jp/column/task-listing"/>
+    <id>https://vaynexis.jp/column/task-listing</id>
+    <published>2026-10-30T00:00:00+09:00</published>
+    <updated>2026-10-30T00:00:00+09:00</updated>
+    <summary>業務の洗い出しで、1件をどの大きさで書くかの目安と、総務・経理・営業事務の作業の書き方の例、漏れやすい作業、担当者に聞くときの質問の例。洗い出したあとは、業務棚卸しチェックシートで1業務ずつ見ます。</summary>
+  </entry>
+  <entry>
+    <title>転記ミスの原因と防止策。件数・合計・重複の3つで照合する</title>
+    <link href="https://vaynexis.jp/column/data-entry-errors"/>
+    <id>https://vaynexis.jp/column/data-entry-errors</id>
+    <published>2026-10-30T00:00:00+09:00</published>
+    <updated>2026-10-30T00:00:00+09:00</updated>
+    <summary>転記ミスが起きる5つの型と、防ぎ方の2つの方向（写す回数を減らす・写したあとに照合する）。Excel の COUNTA・SUM・COUNTIF で件数・合計・重複を確かめる手順と、印刷して使える確認表。AIに転記を任せる場合の確認にも使えます。</summary>
+  </entry>
+</feed>
