@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>見積書の下書きをAIで作る手順｜単価表との一致・数量の検算・有効期限の確かめ方｜Vaynexis</title>
+  <meta name="description" content="依頼のメモと自社の単価表から、見積書の下書きをAIで作る手順を解説します。単価表との一致、数量と金額の検算、有効期限、値引きや特別対応の扱いを、確かめる点と指示文の作例つきでまとめました。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="見積書の下書きをAIで作る手順｜単価表との一致・数量の検算・有効期限の確かめ方｜Vaynexis">
+  <meta property="og:description" content="依頼のメモと自社の単価表から、見積書の下書きをAIで作る手順を解説します。単価表との一致、数量と金額の検算、有効期限、値引きや特別対応の扱いを、確かめる点と指示文の作例つきでまとめました。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/estimate-drafting">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/estimate-drafting">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"見積書の下書きをAIで作る手順。単価は表から、金額は式で、決めるのは人","description":"依頼のメモと自社の単価表から、見積書の下書きをAIで作る手順を解説します。単価表との一致、数量と金額の検算、有効期限、値引きや特別対応の扱いを、確かめる点と指示文の作例つきでまとめました。","datePublished":"2026-11-01","dateModified":"2026-11-01","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/estimate-drafting"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"見積書の作成","item":"https://vaynexis.jp/ai/tasks/estimate-drafting"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">見積書の作成</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">見積書の下書きをAIで作る手順。単価は表から、金額は式で、決めるのは人</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>見積書の下書きは、単価をAIに考えさせず、自社の単価表の値だけを使わせ、金額は表計算ソフトの式で出して人が検算します。品目ごとに、単価の出所（単価表のどの行か）を欄で示させると、照合が早くなります。値引き・特別単価・納期の約束は人が決めます。</p></div>
+    <p class="col-meta">公開：2026年11月1日</p>
+    <p>見積書の間違いに気づくのは、着工や納品のあとになりがちな「気づくのが遅い仕事」です。単価と数量が決まっている書類なので、AIに任せるときは、元の単価表との一致と、数量・金額の検算を検査に付けます。</p>
+    <p class="notice">表・指示文・数字は、説明のための架空の例です。AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（見積書の作成）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（見積書の作成）</h2>
+    <p>AIに任せるのは、依頼のメモ（メールや打ち合わせの記録）から品目と数量を拾い、単価表の該当の行を当てはめて、見積書の下書きの表（品目・数量・単価・金額・有効期限）にするところまでです。割引や特別な条件を決めること、提出するかどうかは、人が行います。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>依頼の内容（メール・打ち合わせのメモ）</li>
+      <li>自社の単価表（品目・単価・単位・税込か税別か）</li>
+      <li>見積書の書式（過去の見積書、有効期限や支払い条件の決まり）</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>見積書の下書きの表（品目・数量・単価・金額・有効期限・宛名）</li>
+      <li>品目ごとの「単価の出所」（単価表のどの行か）</li>
+      <li>資料で決められず、人が決める点の一覧（値引き・納期・特別な条件）</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>単価表を先に決める：</b>見積に使ってよい単価表を1つに決めます。単価表にない品目は、AIに価格を考えさせず、「人が決める」に回します。</li>
+      <li><b>依頼の内容を品目と数量にする：</b>依頼のメモから、品目と数量だけを一覧にさせ、人が依頼の内容と見比べます。数量を書いていない品目は、推測せず「数量未定」と書かせます。</li>
+      <li><b>単価表から単価を当てはめさせる：</b>品目ごとに、単価表の該当の行から単価を写させ、出所の欄に行を書かせます。</li>
+      <li><b>金額は式で出す：</b>金額（数量×単価）と合計は、AIに数字を書かせず、表計算ソフトの式で入れさせ、人が式を確かめます。</li>
+      <li><b>有効期限と条件を入れて人が読む：</b>有効期限・支払い条件・宛名を、自社の決まりで入れ、人が読みます。値引きや特別な条件は、人が決めて書き足します。</li>
+      <li><b>確認してから出す：</b>単価の出所と金額の検算を終えたら、人が提出します。出した見積書と、使った単価表の版を記録します。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>単価表との一致、数量の検算、有効期限</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">単価表との一致</td><td data-label="見方">各行の単価を、単価表の該当の行と1つずつ照合する</td><td data-label="見落とすと">古い単価や、別の品目の単価で見積もり、利益が出ない価格を出す</td></tr><tr><td data-label="確かめること">数量</td><td data-label="見方">依頼のメモの数量と、見積書の数量を比べる</td><td data-label="見落とすと">数量の読み違いで、見積もりと実際の注文がずれる</td></tr><tr><td data-label="確かめること">金額の検算</td><td data-label="見方">数量×単価と合計を、別の式や電卓で出して突き合わせる</td><td data-label="見落とすと">合計だけが合っていて、行ごとの金額が違う</td></tr><tr><td data-label="確かめること">有効期限</td><td data-label="見方">自社の決まりの期間と合っているか。日付の書き間違いがないか</td><td data-label="見落とすと">期限切れの見積書を出す。期限が決まっておらず、価格改定後も有効と扱われる</td></tr><tr><td data-label="確かめること">宛名・件名</td><td data-label="見方">取引先の名前、担当者、件名に誤りがない</td><td data-label="見落とすと">別の取引先の名前が残る</td></tr><tr><td data-label="確かめること">値引き・特別対応</td><td data-label="見方">AIが書いていない。人が決めたものだけが入っている</td><td data-label="見落とすと">会社として決めていない値引きを、約束として出す</td></tr><tr><td data-label="確かめること">税込・税別の表示</td><td data-label="見方">単価表と同じ表示にそろえ、どちらかが分かる</td><td data-label="見落とすと">税込と税別が混ざり、金額を取り違える</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>値引き・特別単価・納期など、約束にあたるものの決定</li>
+      <li>単価表にない品目の価格の決め方</li>
+      <li>見積書を提出するかどうかの判断と、提出する本人の確認</li>
+      <li>契約や法的な条件に関わる文言（必要なら専門家に確かめる）</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>見積書の下書きを頼むときの指示文の作例です。品目・単価は架空で、AIが実際にそう答えることを示すものではありません。</p>
+    <pre class="prompt">次の依頼から、見積書の下書きを表で作ってください。
+・単価は、下の「単価表」に書かれている値だけを使ってください。単価表にない品目は、価格を考えず「人が決める」と書いてください。
+・列は「品目／数量／単価／金額／単価の出所（単価表の行）」です。金額は、数字を直接書かず、Excel の式（数量×単価）で入れてください。
+・数量が書かれていない品目は、推測せず「数量未定」と書いてください。
+・値引きや特別な条件は書かないでください。人が決めます。
+
+【依頼】
+「事務用のファイル50冊と、名刺ケース20個をお願いします。」
+【単価表】
+1行目 ファイル 120円（税別）
+2行目 名刺ケース 300円（税別）
+3行目 付箋 80円（税別）</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-billing">請求と入金：この分野の入口ページ</a></li>
+      <li><a href="/column/ai-invoice-draft">請求書の下書きをAIで作るときの確認</a></li>
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（実演）</a></li>
+      <li><a href="/price">料金のページ：当社の料金の決まり方</a></li>
+      <li><a href="/ai/tasks/invoice-preparation">請求書の作成と送付の準備</a></li>
+      <li><a href="/ai/tasks/receipt-sorting">経費・領収書の仕分け</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

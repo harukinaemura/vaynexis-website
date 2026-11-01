@@ -4,8 +4,48 @@
   <link href="https://vaynexis.jp/column/feed.xml" rel="self"/>
   <link href="https://vaynexis.jp/column"/>
   <id>https://vaynexis.jp/column</id>
-  <updated>2026-10-30T00:00:00+09:00</updated>
+  <updated>2026-11-01T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
+  <entry>
+    <title>ChatGPT・Claudeの変更記録。事務で使う前に、公式のページで確かめた更新を日付つきで残します</title>
+    <link href="https://vaynexis.jp/column/ai-service-changes"/>
+    <id>https://vaynexis.jp/column/ai-service-changes</id>
+    <published>2026-11-01T00:00:00+09:00</published>
+    <updated>2026-11-01T00:00:00+09:00</updated>
+    <summary>ChatGPTとClaudeの、事務で使うときに影響する変更を、公式のヘルプと料金ページで確かめて日付つきでまとめた記録です。2026年11月1日の確認で見つけた、PDFの図の扱い・GPTの作成・Claudeのプラン名と税込表示の変更と、変更を見つけたときの確かめ方つき。</summary>
+  </entry>
+  <entry>
+    <title>情報の確かめ方と更新の方針。このサイトのページを、書く前・公開する前・公開した後に確かめていること</title>
+    <link href="https://vaynexis.jp/column/editorial-policy"/>
+    <id>https://vaynexis.jp/column/editorial-policy</id>
+    <published>2026-11-01T00:00:00+09:00</published>
+    <updated>2026-11-01T00:00:00+09:00</updated>
+    <summary>合同会社Vaynexis のサイトで、数字・制度・料金・機能を公式の資料で確かめて確認日を載せること、公開の前に確かめる8つの項目、載せないもの、更新と訂正の方針をまとめました。記事を読むときの確認表つき。</summary>
+  </entry>
+  <entry>
+    <title>Claudeを会社で使い始める前に確認すること。TeamとEnterpriseの違い、データの扱い、管理者の決め方</title>
+    <link href="https://vaynexis.jp/column/claude-business-setup"/>
+    <id>https://vaynexis.jp/column/claude-business-setup</id>
+    <published>2026-11-01T00:00:00+09:00</published>
+    <updated>2026-11-01T00:00:00+09:00</updated>
+    <summary>Claudeを会社で使い始める前に、法人向けのTeamとEnterpriseの違い、入力した内容がモデルの学習に使われるか、管理者とメンバーの招待・削除のしかたを、Anthropicの公式ページで確かめてまとめました。社内で決めること5つと確認表つき。</summary>
+  </entry>
+  <entry>
+    <title>請求書の下書きをAIで作るときの確認。インボイスの記載事項と、消費税額の端数の照合</title>
+    <link href="https://vaynexis.jp/column/ai-invoice-draft"/>
+    <id>https://vaynexis.jp/column/ai-invoice-draft</id>
+    <published>2026-11-01T00:00:00+09:00</published>
+    <updated>2026-11-01T00:00:00+09:00</updated>
+    <summary>請求書の下書きをChatGPTやClaudeに頼むときの確認を、国税庁の資料で確かめてまとめました。インボイスの記載事項6項目、消費税額の端数処理（1枚の請求書につき税率ごとに1回）の例、AIへの頼み方の作例、Excelの式での検算、送る前の確認表つきです。</summary>
+  </entry>
+  <entry>
+    <title>滋賀県でAIの相談ができる窓口。公的な支援機関と民間の相談先の使い分け</title>
+    <link href="https://vaynexis.jp/column/shiga-ai-consultation"/>
+    <id>https://vaynexis.jp/column/shiga-ai-consultation</id>
+    <published>2026-11-01T00:00:00+09:00</published>
+    <updated>2026-11-01T00:00:00+09:00</updated>
+    <summary>滋賀県内でAIやデジタル化の相談ができる公的な窓口（滋賀県よろず支援拠点、滋賀県産業支援プラザの窓口相談、滋賀県DX官民協創サロン、商工会議所のエキスパートバンク）の費用と条件を公式ページで確かめてまとめ、民間の相談先との使い分けと、相談の前に用意するものを紹介します。</summary>
+  </entry>
   <entry>
     <title>生成AIの社内ルールの作り方。最初に決める6項目と、参考にできる公的な資料</title>
     <link href="https://vaynexis.jp/column/generative-ai-policy"/>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>経費・領収書の仕分けをAIでする手順｜読み取り・勘定科目の案・確かめる点｜Vaynexis</title>
+  <meta name="description" content="月末にたまった領収書を、AIで日付・支払先・金額・勘定科目の案つきの一覧にする手順と、枚数の突合・金額の照合・勘定科目の判定で確かめる点、人が判断する所を、指示文の作例つきで解説します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="経費・領収書の仕分けをAIでする手順｜読み取り・勘定科目の案・確かめる点｜Vaynexis">
+  <meta property="og:description" content="月末にたまった領収書を、AIで日付・支払先・金額・勘定科目の案つきの一覧にする手順と、枚数の突合・金額の照合・勘定科目の判定で確かめる点、人が判断する所を、指示文の作例つきで解説します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/receipt-sorting">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/receipt-sorting">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"経費・領収書の仕分けをAIでする手順。読み取りと勘定科目の案はAI、決めるのは人","description":"月末にたまった領収書を、AIで日付・支払先・金額・勘定科目の案つきの一覧にする手順と、枚数の突合・金額の照合・勘定科目の判定で確かめる点、人が判断する所を、指示文の作例つきで解説します。","datePublished":"2026-11-01","dateModified":"2026-11-01","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/receipt-sorting"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"経費・領収書の仕分け","item":"https://vaynexis.jp/ai/tasks/receipt-sorting"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">経費・領収書の仕分け</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">経費・領収書の仕分けをAIでする手順。読み取りと勘定科目の案はAI、決めるのは人</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>領収書の仕分けは、AIに「読み取り」と「勘定科目の案」までを任せ、枚数の突合と金額の照合は人が行います。渡す前に領収書へ番号をふり、枚数を数えておくと、抜けと二重を一覧の行数で見つけられます。勘定科目の最終の決定と、税務の判断は人（必要なら税理士）が行います。</p></div>
+    <p class="col-meta">公開：2026年11月1日</p>
+    <p>この仕事は、月末や期末にたまった領収書・レシートを、日付・支払先・金額・勘定科目の案つきの一覧にする作業です。間違いに気づくのが決算のとき（最長で1年後）になりやすい「気づくのが遅い仕事」なので、AIに任せるときは、検査を付けます。</p>
+    <p class="notice">表・指示文・数字は、説明のための架空の例です。AIが実際にそう答えることを示すものではありません。税務の判断や助言ではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（経費・領収書の仕分け）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（経費・領収書の仕分け）</h2>
+    <p>AIに任せるのは、領収書の写真やスキャンから日付・支払先・金額・税率を読み取り、自社の勘定科目表の中から科目の案を付けて、一覧表にするところまでです。科目を確定すること、迷う領収書の扱いを決めることは、人が行います。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>領収書・レシートの写真またはスキャン（1枚ずつ、先に番号をふる）</li>
+      <li>自社で使っている勘定科目の一覧（AIに科目を新しく作らせないため）</li>
+      <li>科目を決める社内のルール（あれば。例：1万円未満の消耗品は消耗品費）</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>番号・日付・支払先・金額・税率・勘定科目の案・要確認の理由を並べた表（表計算ソフトで開ける形）</li>
+      <li>読み取れなかった領収書と、科目に迷った領収書の一覧</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>枚数を数えて番号をふる：</b>渡す前に、領収書の枚数を数えて記録し、1枚ずつ番号（001、002…）を書き込みます。番号は一覧の行と領収書を結ぶ目印になり、あとで抜けと二重を見つける元になります。</li>
+      <li><b>科目表とルールを渡す：</b>自社の勘定科目の一覧を貼り付け、「この中から選び、ない場合は『要確認』と書く」と指示します。AIに科目名を作らせません。</li>
+      <li><b>1枚ずつ一覧にさせる：</b>番号順に、日付・支払先・金額・税率・科目の案を表にさせます。読み取れない文字や、迷う科目は、推測せず「要確認」と書かせます。</li>
+      <li><b>件数と合計を突き合わせる：</b>一覧の行数が渡した枚数と一致するか、金額の合計が手元で数えた領収書の合計と一致するかを確かめます。</li>
+      <li><b>要確認と抜き取りを人が見る：</b>「要確認」の行をすべて原本で確かめます。それ以外の行からも、数枚を抜き取って原本と照合します。</li>
+      <li><b>科目を確定して保存する：</b>科目を人が決めて会計ソフトへ入れます。領収書の原本や電子データは、自社と税務上の保存のルールに従って残します。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>枚数の突合、勘定科目の判定、日付と金額</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">枚数</td><td data-label="見方">渡した枚数と、一覧の行数を比べる</td><td data-label="見落とすと">抜けた領収書が経費から漏れる。同じ領収書を2回撮ると二重に計上される</td></tr><tr><td data-label="確かめること">金額</td><td data-label="見方">合計の一致に加えて、数枚を抜き取って原本と1枚ずつ照合する</td><td data-label="見落とすと">1と7、0と6などの読み間違いで、合計が合っていても個別の金額が違う</td></tr><tr><td data-label="確かめること">日付</td><td data-label="見方">年・月・日を原本と比べる（和暦と西暦の混在、月またぎ）</td><td data-label="見落とすと">決算期がずれて、別の期の経費になる</td></tr><tr><td data-label="確かめること">支払先</td><td data-label="見方">同じ店の表記ゆれ（株式会社の有無、支店名）をそろえる</td><td data-label="見落とすと">同じ支払先が別々に集計され、あとの突合ができない</td></tr><tr><td data-label="確かめること">税率</td><td data-label="見方">10%と8%の区分を、領収書の表示と比べる</td><td data-label="見落とすと">税額の計算を誤り、消費税の確認でやり直しになる</td></tr><tr><td data-label="確かめること">勘定科目</td><td data-label="見方">AIの案は案として扱い、迷う領収書が「要確認」に回っているかを見る</td><td data-label="見落とすと">AIが自信ありげに誤った科目を付け、決算まで気づかない</td></tr><tr><td data-label="確かめること">個人情報</td><td data-label="見方">領収書にお客様の氏名や住所が写っていないか。写る場合は、入力してよいかを決める</td><td data-label="見落とすと">取引先やお客様の情報を、外部のAIへ渡してしまう</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>勘定科目の最終の決定（会議費か交際費か、消耗品費か備品か、など）。迷う場合は税理士に相談する</li>
+      <li>私用と事業用が混ざる支払い（家事按分など）の扱い</li>
+      <li>領収書の原本や電子データを、どの期間、どう保存するか（税務上の要件は、国税庁の資料や税理士で確かめる）</li>
+      <li>AIが「要確認」にした領収書と、読み取れなかった領収書の最終確認</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>仕分けを頼むときの指示文の作例です。支払先・金額は架空で、AIが実際にそう答えることを示すものではありません。</p>
+    <pre class="prompt">次の領収書3枚を、番号順に表にしてください。
+・列は「番号／日付／支払先／金額（税込）／税率／勘定科目の案／要確認の理由」です。
+・勘定科目は、下の「勘定科目表」の中から選んでください。表にない科目を作らないでください。
+・読み取れない文字、金額が不鮮明なもの、科目に迷うものは、推測せず「要確認」と書き、理由を書いてください。
+・最後に、行数と金額の合計を書いてください。
+
+【勘定科目表】消耗品費、旅費交通費、通信費、会議費、交際費、雑費
+【領収書】
+001 2026年10月3日 〇〇文具店 事務用品 1,980円（10%）
+002 2026年10月7日 △△食堂 飲食 2,640円（税率の表示なし）
+003 2026年10月9日 ××タクシー 乗車料金 1,230円</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-billing">請求と入金：この分野の入口ページ</a></li>
+      <li><a href="/ai/templates/receipt-sorting-sheet">領収書の仕分け表のひな形（CSV）</a></li>
+      <li><a href="/column/ai-invoice-draft">請求書の下書きをAIで作るときの確認</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策（件数・合計・重複の確認）</a></li>
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（実演）</a></li>
+      <li><a href="/ai/tasks/invoice-preparation">請求書の作成と送付の準備</a></li>
+      <li><a href="/ai/tasks/estimate-drafting">見積書の作成</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

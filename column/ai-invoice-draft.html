@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>請求書の下書きをAIで作るときの確認｜インボイスの記載事項6項目と税額の端数｜Vaynexis</title>
+  <meta name="description" content="請求書の下書きをChatGPTやClaudeに頼むときの確認を、国税庁の資料で確かめてまとめました。インボイスの記載事項6項目、消費税額の端数処理（1枚の請求書につき税率ごとに1回）の例、AIへの頼み方の作例、Excelの式での検算、送る前の確認表つきです。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="請求書の下書きをAIで作るときの確認｜インボイスの記載事項6項目と税額の端数｜Vaynexis">
+  <meta property="og:description" content="請求書の下書きをChatGPTやClaudeに頼むときの確認を、国税庁の資料で確かめてまとめました。インボイスの記載事項6項目、消費税額の端数処理（1枚の請求書につき税率ごとに1回）の例、AIへの頼み方の作例、Excelの式での検算、送る前の確認表つきです。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/ai-invoice-draft">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/ai-invoice-draft">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"請求書の下書きをAIで作るときの確認。インボイスの記載事項と、消費税額の端数の照合","description":"請求書の下書きをChatGPTやClaudeに頼むときの確認を、国税庁の資料で確かめてまとめました。インボイスの記載事項6項目、消費税額の端数処理（1枚の請求書につき税率ごとに1回）の例、AIへの頼み方の作例、Excelの式での検算、送る前の確認表つきです。","datePublished":"2026-11-01","dateModified":"2026-11-01","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/ai-invoice-draft"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"請求書の下書きをAIで作るときの確認","item":"https://vaynexis.jp/column/ai-invoice-draft"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">請求書の下書きをAIで作るときの確認</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">請求書の下書きをAIで作るときの確認。インボイスの記載事項と、消費税額の端数の照合</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>請求書の下書きをAIに頼むときは、文面と表の形はAIに任せても、取引先名・品名・数量・単価・税率・登録番号は人が決めた値を渡し、金額は表計算ソフトの式で出して検算します。国税庁が示すインボイスの記載事項は、<strong>相手方の名称、自社の名称と登録番号、取引年月日、取引内容、税率ごとの対価の合計と適用税率、税率ごとの消費税額等</strong>の6つです。消費税額等の端数は、<strong>1枚の請求書につき税率ごとに1回</strong>だけ処理します。品目ごとに端数を処理して足す方法は認められていません。</p></div>
+    <p class="col-meta">公開：2026年11月1日／情報の確認日：2026年11月1日（出典はこの記事の最後）</p>
+    <p>この記事は、取引先に出す請求書の下書きを、ChatGPT や Claude などの生成AIに手伝ってもらう場面を想定しています。請求書に何を書き、金額をどう確かめるかを扱います。見積書は、国税庁のインボイスの記載事項のページに決まりが載っていないため、この記事では扱いません。見積書の金額も、同じ方法で検算できます。</p>
+    <p>国税庁の資料の内容は、2026年11月1日に確かめました。税務の判断や助言ではありません。迷うときは、国税庁の「税についての相談窓口」、税務署、顧問の税理士などにご相談ください。</p>
+    <p class="notice">表の金額・品名・取引先名は説明のための架空の例です。AIへの指示文も当社の作例で、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#split">AIに頼む部分と、人が決める部分を分ける</a></li>
+      <li><a href="#items">インボイスの記載事項は6つ（国税庁・2026年11月1日確認）</a></li>
+      <li><a href="#rounding">消費税額の端数は、1枚の請求書につき税率ごとに1回だけ処理する</a></li>
+      <li><a href="#ask">AIへの頼み方の作例：下書きと、金額の式まで頼む</a></li>
+      <li><a href="#verify">金額の検算：Excelの式で、AIの数字と突き合わせる</a></li>
+      <li><a href="#info">請求書の情報をAIに入れる前に決めておくこと</a></li>
+      <li><a href="#check">請求書を送る前の確認表</a></li>
+      <li><a href="#consult">請求書の確認を、毎月の仕組みにしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="split" aria-labelledby="split-title"><div class="wrap">
+    <h2 class="h2" id="split-title">1．AIに頼む部分と、人が決める部分を分ける</h2>
+    <p>請求書の下書きでは、文章の形はAIが得意でも、取引の中身と金額は、元の注文書や契約と照らして人が決めます。次のように分けると、確認する所が決まります。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">作業</th><th scope="col">誰が</th><th scope="col">理由</th></tr></thead>
+      <tbody>
+        <tr><td data-label="作業">件名・あいさつ・支払い期限の文面</td><td data-label="誰が">AIに頼める</td><td data-label="理由">文面は、読んで直せば済む</td></tr>
+        <tr><td data-label="作業">取引先名・品名・数量・単価・税率</td><td data-label="誰が">人が決めて渡す</td><td data-label="理由">注文書や契約と照らす値で、AIに推測で補わせない</td></tr>
+        <tr><td data-label="作業">自社の名称と登録番号</td><td data-label="誰が">人が入れる（ひな形に固定する）</td><td data-label="理由">登録番号は税務署から通知された番号。AIに作らせない</td></tr>
+        <tr><td data-label="作業">小計・消費税額・合計</td><td data-label="誰が">表計算ソフトの式で出し、人が検算する</td><td data-label="理由">端数の決まりがあるため（3で説明します）</td></tr>
+        <tr><td data-label="作業">送る前の最終確認</td><td data-label="誰が">人</td><td data-label="理由">請求書は自社の名で取引先に出す書類のため</td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section class="sec" id="items" aria-labelledby="items-title"><div class="wrap">
+    <h2 class="h2" id="items-title">2．インボイスの記載事項は6つ（国税庁・2026年11月1日確認）</h2>
+    <p>国税庁の「インボイス制度について」によると、インボイスは、次の事項が記載された書類やデータです。請求書に限らず、所定の事項が記載されていれば、領収書や納品書など、書類の名称を問わずインボイスになります。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">記載事項</th><th scope="col">下書きで確かめること（当社の作例）</th></tr></thead>
+      <tbody>
+        <tr><td data-label="記載事項">①インボイスの交付先である相手方の氏名または名称</td><td data-label="下書きで確かめること（当社の作例）">宛名が、契約書や注文書の正式な名称と同じ</td></tr>
+        <tr><td data-label="記載事項">②売手（自社）の氏名または名称および登録番号</td><td data-label="下書きで確かめること（当社の作例）">登録番号を、税務署から通知された番号と1桁ずつ照らす</td></tr>
+        <tr><td data-label="記載事項">③取引年月日</td><td data-label="下書きで確かめること（当社の作例）">納品日、または月末締めの期間。一定の期間の取引をまとめて書く方法も認められている（タックスアンサー No.6625）</td></tr>
+        <tr><td data-label="記載事項">④取引内容（軽減税率の対象品目である旨）</td><td data-label="下書きで確かめること（当社の作例）">品名が注文書と合う。軽減税率の対象品目は、「※」などの印をつける方法のほか、税率ごとに品目を区分する方法、税率ごとに請求書を分ける方法が示されている</td></tr>
+        <tr><td data-label="記載事項">⑤税率ごとに区分して合計した対価の額と適用税率</td><td data-label="下書きで確かめること（当社の作例）">10%と8%を分けて合計しているか。税込・税抜のどちらの額でもよい（No.6625）</td></tr>
+        <tr><td data-label="記載事項">⑥税率ごとの消費税額等</td><td data-label="下書きで確かめること（当社の作例）">端数の処理が決まりどおりか（3で説明します）</td></tr>
+      </tbody>
+    </table></div>
+    <p>不特定多数の者に販売する小売業、飲食店業、タクシー業などでは、宛先を省き、税率か税額のどちらか一方の記載でよい「簡易インボイス」を交付できます。</p>
+    <h3 class="h3">登録番号は公表サイトで確かめる</h3>
+    <p>登録番号は、「T」と13桁の数字です。法人は「T」と法人番号、個人事業者などは「T」と、マイナンバーとは別の13桁の数字になります。国税庁の適格請求書発行事業者公表サイトでは、「T」を除く13桁の数字を入力して検索でき、一度に10件まで調べられます。取引先から受け取った請求書の番号を確かめるときにも使えます。</p>
+    <h3 class="h3">税率は、取引日に合う国税庁の案内で確かめる</h3>
+    <p>税率は、AIの答えに任せず、取引の日に合う国税庁の案内で確かめます。国税庁の「消費税率引下げ特設サイト」（令和8年9月15日開設）には、令和9年4月1日から令和11年3月31日までの2年間、飲食料品の譲渡の消費税率を引き下げる内容が載っています。サイトには、法案が国会で成立した場合の内容と書かれています。</p>
+  </div></section>
+
+  <section class="sec" id="rounding" aria-labelledby="rounding-title"><div class="wrap">
+    <h2 class="h2" id="rounding-title">3．消費税額の端数は、1枚の請求書につき税率ごとに1回だけ処理する</h2>
+    <p>国税庁のタックスアンサー No.6371 とインボイスQ&amp;A 問57には、次のように書かれています。</p>
+    <ul>
+      <li>消費税額等に1円未満の端数が生じる場合は、一の適格請求書につき、税率ごとに1回の端数処理を行う</li>
+      <li>切上げ、切捨て、四捨五入などの方法は、任意の方法でよい</li>
+      <li>個々の商品ごとに消費税額等を計算して1円未満の端数処理を行い、その合計額を消費税額等として記載することは認められない</li>
+    </ul>
+    <p>品目ごとに端数を処理して足すと、1円ずれることがあります。次の架空の例は、10%の品目だけの請求書で、切り捨てに決めている場合です。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">品名</th><th scope="col">税抜金額</th><th scope="col">10%の税額（端数あり）</th><th scope="col">品目ごとに切り捨てた税額</th></tr></thead>
+      <tbody>
+        <tr><td data-label="品名">事務用品A</td><td data-label="税抜金額">1,255円</td><td data-label="10%の税額（端数あり）">125.5円</td><td data-label="品目ごとに切り捨てた税額">125円</td></tr>
+        <tr><td data-label="品名">事務用品B</td><td data-label="税抜金額">2,355円</td><td data-label="10%の税額（端数あり）">235.5円</td><td data-label="品目ごとに切り捨てた税額">235円</td></tr>
+        <tr><td data-label="品名">梱包資材C</td><td data-label="税抜金額">3,445円</td><td data-label="10%の税額（端数あり）">344.5円</td><td data-label="品目ごとに切り捨てた税額">344円</td></tr>
+        <tr><td data-label="品名"><strong>合計</strong></td><td data-label="税抜金額"><strong>7,055円</strong></td><td data-label="10%の税額（端数あり）"><strong>705.5円</strong></td><td data-label="品目ごとに切り捨てた税額"><strong>704円（認められない方法）</strong></td></tr>
+      </tbody>
+    </table></div>
+    <p>決まりどおりに、10%の税抜合計7,055円に10%を掛け、1回だけ切り捨てると705円です。税込の請求額は7,760円になり、品目ごとに処理した場合の7,759円とは1円違います。</p>
+    <p>AIが作った請求書の表で、税額の列が品目ごとに出ていて、その合計を請求の税額にしている場合は、この方法にあたります。品目ごとの処理でもたまたま同じ結果になる請求書では差が出ないため、気づかずに続けやすい点にも注意が要ります。</p>
+  </div></section>
+
+  <section class="sec" id="ask" aria-labelledby="ask-title"><div class="wrap">
+    <h2 class="h2" id="ask-title">4．AIへの頼み方の作例：下書きと、金額の式まで頼む</h2>
+    <p>AIに金額を直接出させると、どう計算したかが見えません。そこで、<strong>計算を表計算ソフトの式で入れさせ</strong>、人が式を確かめられる形にします。ChatGPT の公式ヘルプには、ChatGPT が分析にPythonを使う場合は、結果を信頼する前に、生成されたコード、出力、前提を確認するよう書かれています。Claude のヘルプには、数式を含む Excel ファイルを作れる一方、出力を確認して調整する必要がある場合があると書かれています。</p>
+    <pre class="prompt">次の材料で、請求書の下書きを Excel の表で作ってください。
+・取引先名、品名、数量、単価、税率は、下の材料のとおりに使い、推測で補わないでください。足りない項目は空欄にして「要確認」と書いてください。
+・金額は手で足さず、Excel の式で入れてください。
+・消費税額は、税率ごとに税抜の合計を出し、それに税率を掛けて、1円未満を切り捨ててください。品目ごとに税額を出して足さないでください。
+・自社の名称と登録番号は、「ここに自社の名称」「T＋13桁の登録番号」と書いた空欄にしてください。
+
+【材料】
+取引先：A社（仮）御中
+取引日：2026年10月31日
+事務用品A　1個　1,255円（税率10%）
+事務用品B　1個　2,355円（税率10%）
+梱包資材C　1個　3,445円（税率10%）</pre>
+    <p>元の資料が画像やスキャンのときは、数字を読み間違えることがあります。ChatGPT のヘルプには、画像ベースの表やスキャンしたファイルから正確な値を確実に取り出せない場合があり、正確な値が重要なときはスプレッドシートかテキストのファイルを渡すよう書かれています。注文書が紙や画像なら、品名と数字を表に打ち直してから渡す方が確かです。</p>
+  </div></section>
+
+  <section class="sec" id="verify" aria-labelledby="verify-title"><div class="wrap">
+    <h2 class="h2" id="verify-title">5．金額の検算：Excelの式で、AIの数字と突き合わせる</h2>
+    <p>AIが出した表を受け取ったら、表示された数字だけを見ずに、セルの中の式を確かめ、別の式で出した数字と突き合わせます。次の式は、C列が税率（0.1または0.08）、D列が税抜金額、B列が税込金額の場合の例です。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">確かめること</th><th scope="col">Excel の式の例</th><th scope="col">補足</th></tr></thead>
+      <tbody>
+        <tr><td data-label="確かめること">税率ごとの税抜合計</td><td data-label="Excel の式の例"><code>=SUMIF($C$2:$C$20,0.1,$D$2:$D$20)</code></td><td data-label="補足">SUMIF は、条件に合うセルだけを合計する。8%は 0.1 を 0.08 にする</td></tr>
+        <tr><td data-label="確かめること">消費税額（切り捨て）</td><td data-label="Excel の式の例"><code>=ROUNDDOWN(F2*0.1,0)</code></td><td data-label="補足">F2 は税抜合計のセル。四捨五入なら ROUND、切り上げなら ROUNDUP に替える</td></tr>
+        <tr><td data-label="確かめること">税込の金額から税額を出す</td><td data-label="Excel の式の例"><code>=ROUNDDOWN(B2*10/110,0)</code></td><td data-label="補足">8%は 8/108。B2 は税率ごとに合計した税込のセル</td></tr>
+      </tbody>
+    </table></div>
+    <p>AIの合計と自分の式の合計が合わないときは、どちらが正しいかを考える前に、元の注文書に戻って、品目、数量、単価、税率を1行ずつ照らします。件数・合計・重複を元の資料と数えて比べる方法は、<a href="/column/data-entry-errors">転記ミスの原因と防止策</a>にまとめています。</p>
+  </div></section>
+
+  <section class="sec" id="info" aria-labelledby="info-title"><div class="wrap">
+    <h2 class="h2" id="info-title">6．請求書の情報をAIに入れる前に決めておくこと</h2>
+    <p>請求書には、取引先の名称、品名、単価、金額が含まれます。AIのサービスに入れてよい情報かどうかは、使うサービスとプラン、設定によって変わります。入れる前に、社内のルールで「入れない情報」を決めておきます。決め方は<a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a>にまとめています。</p>
+    <p>取引先名を「A社」に置き換えて下書きを作らせる方法もあります。置き換えを元に戻すときに誤りが起きやすいため、戻したあとの請求書を、もう一度注文書と照らします。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．請求書を送る前の確認表</h2>
+    <p>AIが作った下書きを、送る前にこの表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">宛名が、契約書や注文書の正式な名称と同じ</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">自社の名称と登録番号を入れ、通知された番号と照らした</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">取引年月日（または期間）が合っている</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">品名・数量・単価を、注文書と1行ずつ照らした</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">軽減税率の対象品目に印をつけ、印の意味を書いた（または税率ごとに区分した）</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">税率ごとに合計した対価の額と、適用税率が書いてある</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">消費税額等を、税率ごとに1回だけ端数処理している</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">AIが出した合計と、自分の式で出した合計が一致した</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">税率が、取引日に合う国税庁の案内と同じ</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">AIに入れた情報が、社内のルールで入れてよいものだった</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．請求書の確認を、毎月の仕組みにしたいとき</h2>
+    <p>毎月同じ請求書を作る場合は、元の資料の形、金額を出す式、送る前の確認を決めておくと、担当が替わっても同じ確認ができます。件数・金額を照合する手順の実演は<a href="/ai-data-entry-demo">転記・集計の実演ページ</a>にあります。請求書の送付のように自社の名で外へ出す行為と、最終の判断は、貴社で行っていただきます。当社は税務の判断を行いません。</p>
+    <p>自社の請求書の作り方で、どこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月1日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/invoice_about.htm" rel="noopener" target="_blank">国税庁「インボイス制度について」</a>：インボイスの記載事項6項目・書類の名称を問わないこと・簡易インボイス</li>
+      <li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6625.htm" rel="noopener" target="_blank">国税庁 タックスアンサー No.6625「適格請求書等の記載事項」（令和8年4月1日現在法令等）</a>：記載事項・まとめて記載する方法・軽減税率の表示の方法</li>
+      <li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6371.htm" rel="noopener" target="_blank">国税庁 タックスアンサー No.6371「端数計算」（令和8年4月1日現在法令等）</a>：適格請求書に記載する消費税額等の端数処理</li>
+      <li><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/pdf/qa/57.pdf" rel="noopener" target="_blank">国税庁 インボイスQ&amp;A 問57（令和6年4月改訂）</a>：税率ごとに1回の端数処理・商品ごとの処理は認められない</li>
+      <li><a href="https://www.invoice-kohyo.nta.go.jp/about-toroku/index.html" rel="noopener" target="_blank">国税庁 適格請求書発行事業者公表サイト「登録番号とは」</a>：登録番号の構成</li>
+      <li><a href="https://www.invoice-kohyo.nta.go.jp/" rel="noopener" target="_blank">国税庁 適格請求書発行事業者公表サイト</a>：「T」を除く13桁の数字で検索・一度に10件まで</li>
+      <li><a href="https://www.nta.go.jp/taxes/shiraberu/zeimokubetsu/shohi/keigenzeiritsu/zeiritsuhikisage.htm" rel="noopener" target="_blank">国税庁「消費税率引下げ特設サイト」（令和8年9月15日開設）</a>：飲食料品の消費税率の引下げの案内</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/sumif-function" rel="noopener" target="_blank">Microsoft サポート「SUMIF 関数」</a>：条件に合う範囲の値を合計する</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/rounddown-function" rel="noopener" target="_blank">Microsoft サポート「ROUNDDOWN 関数」</a>：数値を切り捨てる</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/round-function" rel="noopener" target="_blank">Microsoft サポート「ROUND 関数」</a>：数値を四捨五入する</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/roundup-function" rel="noopener" target="_blank">Microsoft サポート「ROUNDUP 関数」</a>：数値を切り上げる</li>
+      <li><a href="https://help.openai.com/ja-jp/articles/8437071-data-analysis-with-chatgpt" rel="noopener" target="_blank">OpenAI ヘルプセンター「ChatGPT によるデータ分析」</a>：Pythonを使った結果の確認・画像やスキャンの表の注意</li>
+      <li><a href="https://support.claude.com/ja/articles/12111783" rel="noopener" target="_blank">Anthropic ヘルプセンター「Claudeでファイルを作成・編集する」</a>：Excelファイルの作成・出力を確認して調整すること</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
