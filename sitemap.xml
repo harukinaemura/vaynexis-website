@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://vaynexis.jp/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://vaynexis.jp/price</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/record</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/works</loc><lastmod>2026-11-01</lastmod></url>
@@ -18,9 +18,9 @@
   <url><loc>https://vaynexis.jp/sample-audit</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/terms</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/case-empty-folders</loc><lastmod>2026-11-01</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai-consulting-guide</loc><lastmod>2026-11-01</lastmod></url>
-  <url><loc>https://vaynexis.jp/business-improvement</loc><lastmod>2026-11-01</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai-manual-guide</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai-consulting-guide</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/business-improvement</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai-manual-guide</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://vaynexis.jp/column</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://vaynexis.jp/column/data-entry-errors</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://vaynexis.jp/column/task-listing</loc><lastmod>2026-10-30</lastmod></url>
@@ -46,4 +46,21 @@
   <url><loc>https://vaynexis.jp/ai/templates/inquiry-reply-check</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://vaynexis.jp/column/ai-email-reply</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://vaynexis.jp/column/name-variants-excel</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/fukui-dx-support</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/gifu-dx-support</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/mie-dx-support</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/nara-dx-support</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/wakayama-dx-support</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/yorozu-ai-adviser</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/kyoto-dx-support</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/hyogo-dx-support</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/osaka-dx-support</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/customer-list-excel</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/daily-report-ai</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/internal-faq</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/handover-document</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/meeting-materials-ai</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/ai-quote-check</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/hallucination-office</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/dx-vs-efficiency</loc><lastmod>2026-11-02</lastmod></url>
 </urlset>

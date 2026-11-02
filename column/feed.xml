@@ -7,6 +7,142 @@
   <updated>2026-11-02T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
   <entry>
+    <title>DXと業務効率化の違い｜中小企業が受注事務から考える最初の一歩</title>
+    <link href="https://vaynexis.jp/column/dx-vs-efficiency"/>
+    <id>https://vaynexis.jp/column/dx-vs-efficiency</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>DXと業務効率化は、何を変えるかで整理できます。公式資料の定義を基に、目的・対象・変わるものを表で比較。部品卸の受注事務を題材にした架空の作例で、転記を減らす改善と、顧客への提供方法まで変える構想の違いを示し、最初に確かめる項目を紹介します。</summary>
+  </entry>
+  <entry>
+    <title>ハルシネーションとは｜事務で起きる誤りと資料・数字の確かめ方</title>
+    <link href="https://vaynexis.jp/column/hallucination-office"/>
+    <id>https://vaynexis.jp/column/hallucination-office</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>ハルシネーションとは、生成AIがもっともらしい誤った内容を出力することです。見積書の金額、申込期限、社内の規則など、事務で注意したい形を架空例で示します。資料に範囲を絞る指示文、数字の検算、出典の確認、人に判断を戻す目安をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>AIの要約・引用を原文に当てる｜言い回しが強くなるずれの見つけ方</title>
+    <link href="https://vaynexis.jp/column/ai-quote-check"/>
+    <id>https://vaynexis.jp/column/ai-quote-check</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>AIが要約・引用した文章を社内の報告に使う前に、原文のどこを見ればよいのでしょうか。引用箇所の検索、前後の確認、数字や主語の照合を順に説明します。「可能性」が「断定」に変わる例と、確認表、原文の位置を示させる指示文も紹介します。</summary>
+  </entry>
+  <entry>
+    <title>会議資料をAIで作る｜元メモを3枚に絞る手順と確認ポイント</title>
+    <link href="https://vaynexis.jp/column/meeting-materials-ai"/>
+    <id>https://vaynexis.jp/column/meeting-materials-ai</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>会議前の資料をAIで作る担当者向けに、元メモを結論・根拠・次の手順へ絞る方法を紹介します。卸売業の追加発注を題材にした架空のメモと指示文、数字や未確認事項の照合表を掲載。情報を入力する前の確認から、配布前の点検までを整理します。</summary>
+  </entry>
+  <entry>
+    <title>引き継ぎ書の作り方｜抜けやすい項目とAI下書きの確認方法</title>
+    <link href="https://vaynexis.jp/column/handover-document"/>
+    <id>https://vaynexis.jp/column/handover-document</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>退職・異動・産休で担当を渡すとき、引き継ぎ書に何を残すかを解説します。請求書の発行・送付担当を例に、項目表、未完了案件の書き方、聞き取りの質問、AIへの指示文を掲載。後任者が資料を開いて試す確認手順と、個人情報・パスワードの扱いも示します。</summary>
+  </entry>
+  <entry>
+    <title>社内FAQの作り方｜問い合わせを集め、答えを決めて更新する手順</title>
+    <link href="https://vaynexis.jp/column/internal-faq"/>
+    <id>https://vaynexis.jp/column/internal-faq</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>社内FAQを作りたい総務・事務担当者向けに、メールや口頭の質問を集め、似た質問を整理し、答えを承認する人を決める流れを紹介します。質問・答え・根拠資料・更新日・担当の記入例と、古い回答を残さない運用、AIに下書きを頼む際の注意をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>日報をAIでまとめる手順｜事実・感想・次の行動を分ける書き方</title>
+    <link href="https://vaynexis.jp/column/daily-report-ai"/>
+    <id>https://vaynexis.jp/column/daily-report-ai</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>日報をAIでまとめる前に、実施した作業、書き手の感想、次にやることを分けます。受注台帳の入力や納期確認を題材に、日報の書き直し例、材料の渡し方、指示文、元の記録と照合する確認表を紹介します。個人名や取引先情報を渡す前の注意点も整理します。</summary>
+  </entry>
+  <entry>
+    <title>顧客名簿をExcelで整理｜行の単位・重複基準・更新日の決め方</title>
+    <link href="https://vaynexis.jp/column/customer-list-excel"/>
+    <id>https://vaynexis.jp/column/customer-list-excel</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>顧客名簿をExcelで作り直す事務担当者向けに、会社・拠点の行の分け方、顧客IDと法人番号の使い分け、重複の判断、更新日と最終確認日の持ち方を解説します。架空の列例と確認表で入力ルールを具体化し、個人情報を含む名簿の扱いも公式資料で確認します。</summary>
+  </entry>
+  <entry>
+    <title>大阪府のDX・AI導入補助金と相談先｜公式情報の確かめ方</title>
+    <link href="https://vaynexis.jp/column/osaka-dx-support"/>
+    <id>https://vaynexis.jp/column/osaka-dx-support</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>大阪府でDX・AI導入の補助金や公的な相談先を探す中小企業向けに、府・大阪市・大阪産業局・よろず支援拠点の公式ページをたどる方法を紹介します。掲載元と実施機関の違い、事前登録と交付申請の区別、募集終了の読み方を、確認できた資料に沿って整理します。</summary>
+  </entry>
+  <entry>
+    <title>兵庫県の中小企業向けDX・AI補助金と相談先｜地域別の探し方</title>
+    <link href="https://vaynexis.jp/column/hyogo-dx-support"/>
+    <id>https://vaynexis.jp/column/hyogo-dx-support</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>兵庫県でDX・AI導入の補助金や公的な相談先を探す中小企業向けに、神戸・阪神南・播磨・但馬・丹波・淡路の窓口を案内します。近くの相談所とオンライン相談の使い方、県と神戸市・姫路市の制度の違い、受付状況、申し込む前に確認する条件を整理します。</summary>
+  </entry>
+  <entry>
+    <title>京都府の中小企業のDX・AI支援｜府・市・京都産業21の調べ方</title>
+    <link href="https://vaynexis.jp/column/kyoto-dx-support"/>
+    <id>https://vaynexis.jp/column/kyoto-dx-support</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>京都府でDX・AI導入の補助金や公的な相談先を探す中小企業向けに、府・京都市・京都産業21を調べる順番を案内します。よろず支援拠点への相談、府事業のグループ認定、市独自の支援の違いを、実際に読んだ公式資料に沿って整理します。</summary>
+  </entry>
+  <entry>
+    <title>よろず支援拠点・生産性向上支援センターの「AIアドバイザー」とは。無料で相談できる範囲と、分からないこと</title>
+    <link href="https://vaynexis.jp/column/yorozu-ai-adviser"/>
+    <id>https://vaynexis.jp/column/yorozu-ai-adviser</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>よろず支援拠点・生産性向上支援センターの「AIアドバイザー」について、よろず支援拠点全国本部の公式ページで確かめてまとめました。支援の内容（AIを使える業務の整理・社内文書とデータの準備・サービスの検討）、無料の範囲、予約の流れ、令和8年度の登録者一覧表の見方、公式の説明には書かれていないこと、相談前の整理つきです。</summary>
+  </entry>
+  <entry>
+    <title>和歌山県の中小企業のDX・AI導入の相談先と補助金。「人材の採用」の補助金と「ツールの導入」の補助金を分けて調べる</title>
+    <link href="https://vaynexis.jp/column/wakayama-dx-support"/>
+    <id>https://vaynexis.jp/column/wakayama-dx-support</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>和歌山県の中小企業がDX・AI導入を進めるときの相談先と補助金を、和歌山県、わかやま産業振興財団、和歌山県よろず支援拠点、和歌山市の公式ページで確かめてまとめました。県のデジタル専門家派遣（無料）、成長企業支援補助金（人材採用の手数料が対象）、和歌山市のツール導入補助金のAIの扱い、申請前に止めること、確認表つきです。</summary>
+  </entry>
+  <entry>
+    <title>奈良県の中小企業向けDX・省力化の補助金と相談先。名前が似た窓口と、一覧と個別ページの受付状況の違いに注意して調べる</title>
+    <link href="https://vaynexis.jp/column/nara-dx-support"/>
+    <id>https://vaynexis.jp/column/nara-dx-support</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>奈良県の中小企業がDX・AI導入や省力化に使える補助金と相談先を、県と奈良県地域産業振興センター、奈良県よろず支援拠点の公式ページで確かめてまとめました。名前が似た窓口の違い、デジならキャンペーン・賃上げ環境整備支援補助金・デジタル化等支援事業の受付状況、県の受付が終わっているときの探し方、応募前の確認表つきです。</summary>
+  </entry>
+  <entry>
+    <title>三重県の中小企業のDXと補助金。終了した募集と、これから使える講座・相談窓口を分けて確かめる</title>
+    <link href="https://vaynexis.jp/column/mie-dx-support"/>
+    <id>https://vaynexis.jp/column/mie-dx-support</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>三重県の中小企業がDX・AI導入に使える県の制度と相談窓口を、三重県と三重県産業支援センター、三重県よろず支援拠点の公式ページで確かめてまとめました。生産性向上・業態転換支援補助金（第3期は受付終了）、三重県版経営向上計画との関係、みえDX・AIチャレンジプログラムの講座日程、相談前の確認表つきです。</summary>
+  </entry>
+  <entry>
+    <title>岐阜県の中小企業のDX支援。県のよろず支援拠点・生産性向上支援センター・ソフトピアジャパンの、無料の範囲と有料の範囲</title>
+    <link href="https://vaynexis.jp/column/gifu-dx-support"/>
+    <id>https://vaynexis.jp/column/gifu-dx-support</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>岐阜県の中小企業がDX・AI導入を進めるときに使える窓口を、岐阜県よろず支援拠点、生産性向上支援センター、ソフトピアジャパン、岐阜市の公式ページで確かめてまとめました。無料の範囲と有料の範囲、スマート経営アドバイザー派遣の流れと費用、岐阜市の補助金、悩みの種類別の窓口の選び方つきです。</summary>
+  </entry>
+  <entry>
+    <title>福井県の中小企業がDXを進めるときに使える補助金と、無料の相談先。令和8年度の県の制度で、いま使えるものはどれか</title>
+    <link href="https://vaynexis.jp/column/fukui-dx-support"/>
+    <id>https://vaynexis.jp/column/fukui-dx-support</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>福井県の中小企業がDX・AI導入を進めるときに使える公的な制度を、福井県とふくい産業支援センター、福井県よろず支援拠点の公式ページで確かめてまとめました。ふくいDX加速化補助金（令和8年度は募集終了）、ふくいデジタル導入チャレンジ補助金、DX専門家派遣（最大3回・無料）、生産性向上支援センターの費用と受付状況、補助金を使う前の確認表つきです。</summary>
+  </entry>
+  <entry>
     <title>エクセルで会社名・住所の表記ゆれを統一する。関数でそろえる部分と、AIに候補を出させる部分</title>
     <link href="https://vaynexis.jp/column/name-variants-excel"/>
     <id>https://vaynexis.jp/column/name-variants-excel</id>
@@ -27,8 +163,8 @@
     <link href="https://vaynexis.jp/column/ai-service-changes"/>
     <id>https://vaynexis.jp/column/ai-service-changes</id>
     <published>2026-11-01T00:00:00+09:00</published>
-    <updated>2026-11-01T00:00:00+09:00</updated>
-    <summary>ChatGPTとClaudeの、事務で使うときに影響する変更を、公式のヘルプと料金ページで確かめて日付つきでまとめた記録です。2026年11月1日の確認で見つけた、PDFの図の扱い・GPTの作成・Claudeのプラン名と税込表示の変更と、変更を見つけたときの確かめ方つき。</summary>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>ChatGPTとClaudeの、事務で使うときに影響する変更を、公式のヘルプと料金ページで確かめて日付つきでまとめた記録です。2026年11月1日の確認で見つけた、PDFの図の扱い・GPTの作成・Claudeのプラン名と税の表示の変更と、変更を見つけたときの確かめ方つき。</summary>
   </entry>
   <entry>
     <title>情報の確かめ方と更新の方針。このサイトのページを、書く前・公開する前・公開した後に確かめていること</title>

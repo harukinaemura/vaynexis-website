@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIの要約・引用を原文に当てる｜言い回しが強くなるずれの見つけ方｜Vaynexis</title>
+  <meta name="description" content="AIが要約・引用した文章を社内の報告に使う前に、原文のどこを見ればよいのでしょうか。引用箇所の検索、前後の確認、数字や主語の照合を順に説明します。「可能性」が「断定」に変わる例と、確認表、原文の位置を示させる指示文も紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="AIの要約・引用を原文に当てる｜言い回しが強くなるずれの見つけ方｜Vaynexis">
+  <meta property="og:description" content="AIが要約・引用した文章を社内の報告に使う前に、原文のどこを見ればよいのでしょうか。引用箇所の検索、前後の確認、数字や主語の照合を順に説明します。「可能性」が「断定」に変わる例と、確認表、原文の位置を示させる指示文も紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/ai-quote-check">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/ai-quote-check">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AIの要約・引用を原文に当てる｜言い回しが強くなるずれの見つけ方","description":"AIが要約・引用した文章を社内の報告に使う前に、原文のどこを見ればよいのでしょうか。引用箇所の検索、前後の確認、数字や主語の照合を順に説明します。「可能性」が「断定」に変わる例と、確認表、原文の位置を示させる指示文も紹介します。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/ai-quote-check"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"AIの要約・引用を原文に当てる","item":"https://vaynexis.jp/column/ai-quote-check"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">AIの要約・引用を原文に当てる</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">AIの要約・引用を原文に当てる｜言い回しが強くなるずれの見つけ方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIの要約・引用を確認するときは、まず原文で該当箇所を探します。次に前後を読み、数字・日付・名前・主語・対象・条件を照合します。最後に「ことがある」「一部」「予定」などが残っているかを見ます。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこの記事の最後）</p>
+    <p>この記事は、AIに資料を要約・引用させて社内の文書や報告に使う担当者が、AIが写した引用を原文に当てて確かめる手順を整理するためのものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月2日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">引用を探し、前後を読み、意味の強さを比べます</a></li>
+      <li><a href="#s2">出典のリンクから、確認表を埋めるまで</a></li>
+      <li><a href="#s3">「一部」「予定」を落とした短い例を比べます</a></li>
+      <li><a href="#s4">○・△・×と保留を使い分けます</a></li>
+      <li><a href="#s5">AIには「要約の前に根拠」を求めます</a></li>
+      <li><a href="#check">AIの引用を原文に当てるときの確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．引用を探し、前後を読み、意味の強さを比べます</h2>
+    <p>個人情報保護委員会の注意喚起には、生成AIの応答に不正確な内容が含まれることがあると記されています。</p>
+    <p>引用と要約は分けて扱いましょう。引用としてかぎ括弧で示す部分は、原文の文字列と比べます。要約は言葉を変えても、対象や条件、確かさの程度を残します。「意味が近い」という判断だけで、書き換えた文を原文どおりの引用として扱わないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．出典のリンクから、確認表を埋めるまで</h2>
+    <h3 class="h3">確認する文と資料を対にします</h3>
+    <p>報告に使う文を取り出し、対応する資料の題名とURLを横に置きます。文の中に別々の説明があれば分けます。たとえば「利用でき、対象も拡大する」という文なら、利用条件と拡大の予定をそれぞれ確認します。</p>
+    <p>まずURLを人が開き、題名や発行元を見ます。AIが示したページ番号や見出しも確認対象に含めます。位置の指定だけを信用して、確認済みにしないでください。</p>
+    <h3 class="h3">引用の特徴的な言葉を原文で検索します</h3>
+    <p>引用文の一部を、ブラウザーやPDFの検索欄に入れます。長い文で見つからなければ、固有名詞や特徴的な短い語句で探します。同じ表現が複数あれば、見出しと対象を比べます。</p>
+    <p>PDFは、閲覧画面のページ順と紙面に印刷されたページ番号を分けて記録しましょう。検索できない資料は、該当しそうなページを目で確認します。読めない段階では「原文にない」と決めず、保留にします。</p>
+    <h3 class="h3">前後の条件と、数字の単位を読みます</h3>
+    <p>該当文だけでなく、前の段落、後の段落、表の見出しや注記まで読みます。「ただし」「対象外」「試行中」といった語を確認表に残しましょう。</p>
+    <p>数字は値だけを見ず、単位、期間、上限か目安かも比べます。日付は開始日なのか、更新日なのかを確認します。固有名詞は正式な表記と対応先を見ます。ここでは計算の正しさではなく、原文の記載が報告文へ正しく移っているかを確かめます。</p>
+    <p>最後に、誰が何をする文なのかを読み直します。申請者と受付担当を入れ替えると、同じ言葉が並んでいても別の指示になります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．「一部」「予定」を落とした短い例を比べます</h2>
+    <p>以下は照合の練習用に作った<strong>架空の短文</strong>です。実在の制度や製品、会社の運用を示すものではありません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">架空の原文</th><th scope="col">ずれた要約・引用</th><th scope="col">確認する箇所</th></tr></thead><tbody><tr><td data-label="架空の原文">混雑時は、返答が遅れることがあります。</td><td data-label="ずれた要約・引用">返答は遅れます。</td><td data-label="確認する箇所">「混雑時」の条件と「ことがあります」の可能性が消えています。</td></tr><tr><td data-label="架空の原文">一部の画面で補助表示に対応しています。</td><td data-label="ずれた要約・引用">全画面で補助表示に対応しています。</td><td data-label="確認する箇所">「一部」が「全部」に広がっています。</td></tr><tr><td data-label="架空の原文">次回の改訂で説明を追加する予定です。</td><td data-label="ずれた要約・引用">次回の改訂で説明を追加します。</td><td data-label="確認する箇所">「予定」が確定した説明に変わっています。</td></tr><tr><td data-label="架空の原文">受付担当が申請者へ不足資料を連絡します。</td><td data-label="ずれた要約・引用">申請者が受付担当へ不足資料を連絡します。</td><td data-label="確認する箇所">主語と連絡先が入れ替わっています。</td></tr></tbody></table></div>
+    <p>見つけたら、「予定」「一部」などを原文に合わせて戻します。文の末尾だけでなく、冒頭の対象や条件も直しましょう。引用として使うなら、原文を写し直して照合します。要約として直した文は、引用と区別して残します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．○・△・×と保留を使い分けます</h2>
+    <p>確認表は、担当者の印象ではなく、原文と比べた結果を残すために使います。次の印は本記事の運用案です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">印</th><th scope="col">判定の目安</th><th scope="col">次の扱い</th></tr></thead><tbody><tr><td data-label="印">○ 確認済み</td><td data-label="判定の目安">原文の場所を人が確認し、数字・主語・対象・条件・意味の強さが合っています。直接引用は文字列も一致しています。</td><td data-label="次の扱い">確認した文面を残します。</td></tr><tr><td data-label="印">△ 相違あり</td><td data-label="判定の目安">原文は見つかりましたが、数字や言い回しなどに違いがあります。</td><td data-label="次の扱い">原文に沿って修正し、再び照合します。</td></tr><tr><td data-label="印">× 根拠が見つからない</td><td data-label="判定の目安">提示された資料を確認しても、その説明を支える箇所が見つかりません。</td><td data-label="次の扱い">採用を止め、根拠を探し直すか削除します。</td></tr><tr><td data-label="印">保留 未確認</td><td data-label="判定の目安">資料が開けない、文字が読めないなどで比較できません。</td><td data-label="次の扱い">確認済みの文とは分けて残します。</td></tr></tbody></table></div>
+    <p>×は「世の中にその事実がない」という判定ではありません。今回の資料で裏付けられないという記録です。○も、その資料との一致を示す印として使います。資料自体の内容が現在も正しいかを保証する印にはしません。</p>
+    <p>確認表の列は、次の形から始められます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">報告に使う文</th><th scope="col">引用／要約</th><th scope="col">資料名・URL・版や更新日</th><th scope="col">原文の位置と短い抜粋</th><th scope="col">相違点・修正文</th><th scope="col">印・確認者・確認日</th></tr></thead><tbody><tr><td data-label="報告に使う文">確認対象を記入</td><td data-label="引用／要約">どちらか記入</td><td data-label="資料名・URL・版や更新日">資料上の表示を転記</td><td data-label="原文の位置と短い抜粋">見出し、ページ、前後の条件</td><td data-label="相違点・修正文">直した箇所を記入</td><td data-label="印・確認者・確認日">人が照合後に記入</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．AIには「要約の前に根拠」を求めます</h2>
+    <p>Anthropicは、長い文書を扱う作業で、先に原文どおりの引用を抜き出させる方法を示しています。</p>
+    <p>同じ資料では、説明ごとに引用と出典を付け、根拠となる引用が見つからなければ、その説明を取り下げさせる方法も示しています。</p>
+    <p>次は、この考え方を原文照合用に組み立てた指示文の作例です。</p>
+    <pre class="prompt">渡した資料だけを使って、社内報告に使う要約案を作ってください。
+先に、要約の根拠になる原文を短く、そのまま抜き出してください。
+説明ごとに、次の項目を対応させてください。
+・資料名と、渡したURLまたはファイル名
+・見出し、ページ番号とその数え方
+・原文の短い抜粋
+・要約案
+・原文にある主語、対象、条件、可能性や予定を示す語
+原文を見つけられない説明は採用せず、「未確認」としてください。
+読めない資料や分からない位置を推測で補わないでください。
+引用文と、言い換えた要約を区別してください。</pre>
+    <p>この指示で得た抜粋や位置も、人が原文を開いて確かめます。Anthropicのヘルプは、もっともらしくても事実に基づかない引用をClaudeが示すことがあると説明しています。</p>
+    <p>また、元サイトには要約で省かれた文脈や詳細があるとして、引用された出典を確認するよう案内しています。</p>
+    <p>まず、報告に使う文を確認表へ移してみましょう。原文の場所、前後の条件、修正後の文面を残し、人が照合を終えたところに印を付けます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．AIの引用を原文に当てるときの確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">確認する文と、その出典の資料を対にした</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">引用の特徴的な言葉を、原文で検索した</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">前後の条件と、数字の単位を読んだ</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">「一部」「予定」「可能性」などの言葉が、落ちていないかを確かめた</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">確認の結果を、○・△・×・保留で残した</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">確認できない箇所は、使わずに残した</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.ppc.go.jp/files/pdf/230602_alert_generative_AI_service.pdf" rel="noopener" target="_blank">個人情報保護委員会「生成AIサービスの利用に関する注意喚起等」</a>：冒頭の注意点。「（3）一般の利用者における留意点」②、PDFのページ順で2〜3ページ目。原文：「応答結果に不正確な内容が</li>
+      <li><a href="https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations" rel="noopener" target="_blank">Anthropic「Reduce hallucinations」</a>：原文の抜粋を先に求めること、説明ごとの根拠確認。原文：“ask Claude to extract word-for-w</li>
+      <li><a href="https://support.claude.com/en/articles/8525154-claude-is-providing-incorrect-or-misleading-responses-what-s-going-on" rel="noopener" target="_blank">Anthropic「Claude is providing incorrect or misleading responses. What’</a>：引用も確認する必要性、原文の文脈を読む根拠。原文：“Original websites may contain impo</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-document-demo">AI議事録で提案と決定事項を分ける方法（実演）</a></li>
+      <li><a href="/ai-consulting-guide">中小企業向けAIコンサルの選び方（相談先を目的別に比較）</a></li>
+      <li><a href="/column/shiga-ai-consultation">滋賀県のAI相談窓口｜公的な支援機関と民間の相談先の使い分け</a></li>
+      <li><a href="/column/ai-minutes-transcription">文字起こしから議事録を作るときの注意点</a></li>
+      <li><a href="/column/hallucination-office">ハルシネーションとは</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
