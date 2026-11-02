@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メール返信の下書きをAIで作るとき、送る前に確かめる5つ｜宛先・事実・約束・個人情報・文体｜Vaynexis</title>
+  <meta name="description" content="届いたメールへの返信をChatGPTやClaudeに下書きさせるときの、骨子の渡し方、指示文の作例、送る前に確かめる5つ（宛先・事実・約束・個人情報・文体）をまとめました。Gmailの宛先（To・Cc・Bcc）と送信取り消しの公式の説明、個人情報保護委員会の注意喚起も確かめています。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="メール返信の下書きをAIで作るとき、送る前に確かめる5つ｜宛先・事実・約束・個人情報・文体｜Vaynexis">
+  <meta property="og:description" content="届いたメールへの返信をChatGPTやClaudeに下書きさせるときの、骨子の渡し方、指示文の作例、送る前に確かめる5つ（宛先・事実・約束・個人情報・文体）をまとめました。Gmailの宛先（To・Cc・Bcc）と送信取り消しの公式の説明、個人情報保護委員会の注意喚起も確かめています。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/ai-email-reply">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/ai-email-reply">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"メール返信の下書きをAIで作る。先に人が骨子を決め、送る前に宛先・事実・約束・個人情報・文体の5つを確かめる","description":"届いたメールへの返信をChatGPTやClaudeに下書きさせるときの、骨子の渡し方、指示文の作例、送る前に確かめる5つ（宛先・事実・約束・個人情報・文体）をまとめました。Gmailの宛先（To・Cc・Bcc）と送信取り消しの公式の説明、個人情報保護委員会の注意喚起も確かめています。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/ai-email-reply"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"メール返信の下書きをAIで作る方法","item":"https://vaynexis.jp/column/ai-email-reply"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">メール返信の下書きをAIで作る方法</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">メール返信の下書きをAIで作る。先に人が骨子を決め、送る前に宛先・事実・約束・個人情報・文体の5つを確かめる</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>返信の下書きをAIに頼むときは、返す内容の<strong>骨子（結論・事実・相手にお願いすること）を人が先に書いて</strong>渡し、AIには文面にすることだけを頼みます。AIが補った事実や、勝手に書いた約束が混ざるためです。送る前には、<strong>宛先、事実（日付・曜日・金額・名称）、約束、個人情報、文体</strong>の5つを、元のメールと見比べて確かめます。Gmail には、送信後に5・10・20・30秒のいずれかの間は取り消せる設定がありますが、頼りにしすぎず、送る前の確認を主にします。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこの記事の最後）</p>
+    <p>この記事は、取引先や社内から届いたメールに返信するとき、文面の下書きをChatGPTやClaudeなどの生成AIに手伝ってもらう場面を想定しています。お客様からの問い合わせへの一次回答は、別のページ（<a href="/ai/tasks/inquiry-reply-draft">問い合わせメールの一次回答をAIで下書きする手順</a>）で扱っています。この記事は、日々のやり取りの返信を対象にします。</p>
+    <p>Gmail の宛先と送信取り消しの説明、個人情報保護委員会の注意喚起は、2026年11月2日に公式ページで確かめました。メールソフトやAIサービスの機能は変わることがあります。</p>
+    <p class="notice">表と指示文の例は、説明のための架空の例（A社・佐藤様など）です。AIへの指示文は当社の作例で、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#outline">先に人が決めるのは「何を返すか」</a></li>
+      <li><a href="#prompt">頼み方の作例：骨子を渡し、補った所に印をつけさせる</a></li>
+      <li><a href="#five">送る前に確かめる5つ</a></li>
+      <li><a href="#info">元のメールをAIに貼る前に、個人情報を外す</a></li>
+      <li><a href="#limits">AIに頼まない方がよい返信</a></li>
+      <li><a href="#check">返信を送る前の確認表</a></li>
+      <li><a href="#consult">メール返信の型を、社内で整えたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="outline" aria-labelledby="outline-title"><div class="wrap">
+    <h2 class="h2" id="outline-title">1．先に人が決めるのは「何を返すか」</h2>
+    <p>返信の下書きで起きやすい失敗は、文章が不自然なことよりも、<strong>元のメールにない事実が入る</strong>ことと、<strong>決めていない約束が書かれる</strong>ことです。個人情報保護委員会の注意喚起（令和5年6月2日）には、生成AIサービスの応答結果には不正確な内容が含まれることがある、と書かれています。そこで、返す内容を先に人が決め、AIには文面にすることだけを頼みます。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">作業</th><th scope="col">誰が</th><th scope="col">理由</th></tr></thead>
+      <tbody>
+        <tr><td data-label="作業">結論（承諾・辞退・保留・質問）</td><td data-label="誰が">人が決める</td><td data-label="理由">相手との約束になるため</td></tr>
+        <tr><td data-label="作業">日付・時刻・金額・数量・名称</td><td data-label="誰が">人が元のメールや資料から書き写して渡す</td><td data-label="理由">AIに推測で補わせない</td></tr>
+        <tr><td data-label="作業">相手にお願いすること（返事の期限、必要な資料）</td><td data-label="誰が">人が決める</td><td data-label="理由">期限は自社の都合で決まる</td></tr>
+        <tr><td data-label="作業">あいさつ、言い回し、文の順番、長さ</td><td data-label="誰が">AIに頼める</td><td data-label="理由">読んで直せば済む</td></tr>
+        <tr><td data-label="作業">宛先の確認と、送信</td><td data-label="誰が">人</td><td data-label="理由">自社の名で社外へ出す行為のため</td></tr>
+      </tbody>
+    </table></div>
+    <p>骨子は3行で足ります。たとえば「結論：13日（金）10時に伺う／事実：場所はA社本社、資料は前日に送る／お願い：当日の参加者を12日までに知らせてほしい」のようにします。</p>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">2．頼み方の作例：骨子を渡し、補った所に印をつけさせる</h2>
+    <p>次の指示文は、骨子と元のメールを渡し、AIが補った箇所に印をつけさせる作例です。印があれば、人が確かめる場所が決まります。</p>
+    <pre class="prompt">届いたメールへの返信の下書きを作ってください。
+・内容は、下の「骨子」と「元のメール」に書かれていることだけを使ってください。日付、曜日、時刻、金額、名称を、推測で足したり直したりしないでください。
+・骨子と元のメールにない事実を書く必要があるときは、その部分を【要確認：何を】と書いてください。
+・約束にあたること（期限、可否、値引き、納期）は、骨子に書いてあるものだけを書いてください。
+・宛名と署名は「（宛名）」「（署名）」と空欄にしてください。
+・文体は丁寧で簡潔に。最初の2行で結論が分かるようにしてください。
+
+【骨子】
+結論：11月13日（金）の10時に伺う
+事実：場所はA社（仮）本社。資料は前日の12日までにメールで送る
+お願い：当日の参加者を、12日（木）までに知らせてほしい
+
+【元のメール】
+（届いたメールの本文を貼る。個人情報は、この記事の4で説明する方法で外してから）</pre>
+    <p>返ってきた下書きは、骨子と見比べます。骨子にない日付が書かれていたり、「ご希望に沿えるよう対応いたします」のような約束の言い回しが足されていたりしたら、削ります。【要確認】の印が残っている文は、送れません。</p>
+  </div></section>
+
+  <section class="sec" id="five" aria-labelledby="five-title"><div class="wrap">
+    <h2 class="h2" id="five-title">3．送る前に確かめる5つ</h2>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">確認</th><th scope="col">何を見るか</th><th scope="col">取り違えの例（架空）</th></tr></thead>
+      <tbody>
+        <tr><td data-label="確認">①宛先</td><td data-label="何を見るか">To・Cc・Bcc。返信で宛先が増えたり減ったりしていないか。社外の人に見せてよい人だけが入っているか</td><td data-label="取り違えの例（架空）">社内だけで相談していた経緯の途中で、そのまま取引先に「全員に返信」してしまう</td></tr>
+        <tr><td data-label="確認">②事実</td><td data-label="何を見るか">日付・曜日・時刻・金額・数量・名称を、元のメールと骨子の両方と見比べる</td><td data-label="取り違えの例（架空）">「11月13日（金）」を「11月13日（木）」と書く。曜日だけ間違えても気づきにくい</td></tr>
+        <tr><td data-label="確認">③約束</td><td data-label="何を見るか">AIが足した「対応します」「可能です」「お値引きします」がないか。期限と可否が骨子のとおりか</td><td data-label="取り違えの例（架空）">骨子は「検討して来週返事」なのに、「ご希望の納期で承ります」と書かれる</td></tr>
+        <tr><td data-label="確認">④個人情報・社外秘</td><td data-label="何を見るか">AIに貼った元のメールに、個人名・電話番号・他社の情報が含まれていなかったか。引用で過去のやり取りが残っていないか</td><td data-label="取り違えの例（架空）">下の引用に、別の取引先の見積金額が残ったまま返信する</td></tr>
+        <tr><td data-label="確認">⑤文体と長さ</td><td data-label="何を見るか">相手との普段の関係に合っているか。結論が最初の2行にあるか。AIが足した前置きが長くないか</td><td data-label="取り違えの例（架空）">いつもは短い文面の相手に、定型句の多い長い返信を送る</td></tr>
+      </tbody>
+    </table></div>
+    <h3 class="h3">宛先：Gmail の説明で確かめる</h3>
+    <p>Gmail のヘルプには、Cc に追加された人は、このメールの他の宛先を見られると書かれています。一方、Bcc に追加された人は、他の Bcc の宛先を見られず、受信者が全員に返信しても、Bcc の人はその返信を見られません。受信者が Gmail を使っていない場合は、Bcc に追加されたことを認識できない可能性がある、という注意も書かれています。AIは宛先を決めません。宛先の欄は、人が最後に1つずつ読みます。</p>
+    <h3 class="h3">送ったあとに気づいたとき</h3>
+    <p>Gmail には、送信したあとに取り消せる設定があります。Gmail のヘルプによると、設定の「送信取り消し」で、取り消せる時間を5・10・20・30秒から選べます。送った直後に宛先や日付の間違いに気づいたときの、最後の手段です。時間は短いので、送る前の確認を主にします。メールソフトによって機能は違うため、自社で使っているソフトの機能は、公式の説明で確かめてください。</p>
+  </div></section>
+
+  <section class="sec" id="info" aria-labelledby="info-title"><div class="wrap">
+    <h2 class="h2" id="info-title">4．元のメールをAIに貼る前に、個人情報を外す</h2>
+    <p>返信のために、届いたメールをそのまま貼る人は多いはずです。メールには、相手の氏名、会社名、電話番号、署名欄、過去のやり取りが含まれます。個人情報保護委員会は、個人情報取扱事業者が個人情報を含むプロンプトを生成AIサービスに入力する場合には、利用目的の達成に必要な範囲内であることを十分に確認するよう求めています。個人データを含むプロンプトを入力し、その個人データが応答の出力以外の目的で取り扱われる場合は、事業者がその個人データを機械学習に利用しないこと等を十分に確認するよう書かれています。</p>
+    <p>実務では、次の順で進めると迷いません。</p>
+    <ol>
+      <li>返信に必要なのは、相手の質問と依頼の内容だけ。氏名・電話番号・署名欄・過去の引用は、貼る前に消すか、「A社の担当者」「（電話番号）」に置き換える</li>
+      <li>置き換えたら、あとで元に戻す場所を決める。戻したあとの文面は、もう一度元のメールと見比べる（置き換えを戻すときに、誤りが起きやすい）</li>
+      <li>使うサービスとプランで、入力した内容がAIの学習に使われるかが違う。設定は<a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a>で決めておき、会社として使うサービスは<a href="/column/claude-business-setup">Claudeを会社で使い始める前に確認すること</a>のように、公式の説明で確かめる</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="limits" aria-labelledby="limits-title"><div class="wrap">
+    <h2 class="h2" id="limits-title">5．AIに頼まない方がよい返信</h2>
+    <p>次の返信は、下書きもAIに任せず、人が書く方が安全です（当社の考えです）。</p>
+    <ul>
+      <li>クレームやお詫び：何を認め、何を約束するかを、人が決める必要がある</li>
+      <li>金額・契約・納期の変更：数字と責任の範囲が絡む</li>
+      <li>法律・税務の判断が要る問い合わせ：専門家に確かめてから返す</li>
+      <li>初めての相手への大事な依頼：言葉の選び方で印象が決まる</li>
+    </ul>
+    <p>迷うときは、AIには「返信の候補を3つ出す」のように頼み、使うのは人が選んだ1つだけにします。決めるのは人です。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．返信を送る前の確認表</h2>
+    <p>AIが作った下書きを、送る前にこの表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">返す内容の骨子（結論・事実・お願い）を、先に自分で書いた</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元のメールを貼る前に、氏名・電話番号・署名欄・過去の引用を外した</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">宛先（To・Cc・Bcc）を1つずつ読み、見せてよい相手だけが入っている</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">日付・曜日・時刻・金額・名称を、元のメールと骨子の両方と見比べた</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">AIが足した約束（対応します・可能です・値引きします）を消した</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">【要確認】の印が残っていない</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">結論が最初の2行にあり、相手との普段の文体に合っている</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">置き換えた名前や数字を戻したあとの文面を、もう一度見直した</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．メール返信の型を、社内で整えたいとき</h2>
+    <p>よく来る依頼（日程の調整、資料の送付、見積の依頼）ごとに、骨子の型と確認表を決めておくと、担当が替わっても同じ確認ができます。AIで文書を作る手順の実演は<a href="/ai-document-demo">AI議事録の実演ページ</a>にあります。送信と最終の判断は、貴社で行っていただきます。</p>
+    <p>自社のメールのやり取りで、どこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/" rel="noopener" target="_blank">個人情報保護委員会「生成AIサービスの利用に関する注意喚起等について」（令和5年6月2日）</a>：個人情報を含むプロンプトを入力する場合の確認・応答結果に不正確な内容が含まれることがある</li>
+      <li><a href="https://support.google.com/mail/answer/1284885?hl=ja" rel="noopener" target="_blank">Gmail ヘルプ「メールの送信または送信取り消し」</a>：To・Cc・Bcc の違い・送信取り消しの時間（5・10・20・30秒）</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-document-demo">AI議事録で提案と決定事項を分ける方法（実演）</a></li>
+      <li><a href="/ai/tasks/inquiry-reply-draft">問い合わせメールの一次回答をAIで下書きする手順</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a></li>
+      <li><a href="/column/ai-minutes-transcription">文字起こしから議事録を作るときの注意点</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

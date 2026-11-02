@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エクセルで表記ゆれを統一する方法｜会社名・住所をそろえる関数とAIの使い分け｜Vaynexis</title>
+  <meta name="description" content="取引先名簿の会社名・住所の表記ゆれを、エクセルの関数（CLEAN・TRIM・SUBSTITUTE・ASC・VLOOKUP）でそろえる手順をまとめました。照合用の列の作り方、法人格の対応表、AIに頼んでよいこと、法人番号での最終確認、直したあとの件数の確認表つきです。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="エクセルで表記ゆれを統一する方法｜会社名・住所をそろえる関数とAIの使い分け｜Vaynexis">
+  <meta property="og:description" content="取引先名簿の会社名・住所の表記ゆれを、エクセルの関数（CLEAN・TRIM・SUBSTITUTE・ASC・VLOOKUP）でそろえる手順をまとめました。照合用の列の作り方、法人格の対応表、AIに頼んでよいこと、法人番号での最終確認、直したあとの件数の確認表つきです。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/name-variants-excel">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/name-variants-excel">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"エクセルで会社名・住所の表記ゆれを統一する。関数でそろえる部分と、AIに候補を出させる部分","description":"取引先名簿の会社名・住所の表記ゆれを、エクセルの関数（CLEAN・TRIM・SUBSTITUTE・ASC・VLOOKUP）でそろえる手順をまとめました。照合用の列の作り方、法人格の対応表、AIに頼んでよいこと、法人番号での最終確認、直したあとの件数の確認表つきです。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/name-variants-excel"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"エクセルで表記ゆれを統一する方法","item":"https://vaynexis.jp/column/name-variants-excel"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">エクセルで表記ゆれを統一する方法</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">エクセルで会社名・住所の表記ゆれを統一する。関数でそろえる部分と、AIに候補を出させる部分</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>表記ゆれは、元のデータを書き換えずに<strong>照合用の列</strong>を作ってそろえます。見えない文字は CLEAN、半角スペースは TRIM、全角スペースと改行しないスペースは SUBSTITUTE で半角スペースに替えてから TRIM、全角と半角は ASC で、「（株）」「㈱」などの法人格は対応表と VLOOKUP でそろえます。同じ会社かどうか迷う違いは、AIに「同じと考えた理由つきの候補」を出させ、人が決めます。決めた対応表を式に反映し、直す前と後の件数を比べて確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこの記事の最後）</p>
+    <p>この記事は、取引先の名簿や売上の一覧で、同じ会社が別の書き方で入っていて、数えたり突き合わせたりできないときの整え方をまとめたものです。会社名と住所を例にします。</p>
+    <p>Excel の関数の説明は、Microsoft サポートの公式ページで2026年11月2日に確かめました。式の結果は、Excel（日本語版）で実際に計算して確かめています。</p>
+    <p class="notice">表の会社名・住所は説明のための架空の例です。AIへの指示文も当社の作例で、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#types">表記ゆれは、6つの型に分けると直し方が決まる</a></li>
+      <li><a href="#key">元の列は書き換えず、「照合用の列」を作る</a></li>
+      <li><a href="#corp">法人格の書き方は、対応表でそろえる</a></li>
+      <li><a href="#address">住所は、先にルールを決める。国税庁のサイトの置き換えも参考になる</a></li>
+      <li><a href="#ai">AIに頼んでよいのは「候補と理由」まで。置き換えは式で行う</a></li>
+      <li><a href="#houjin">最後の確認は、国税庁の法人番号公表サイトで</a></li>
+      <li><a href="#verify">直したあと、件数で確かめる</a></li>
+      <li><a href="#check">表記ゆれをそろえるときの確認表</a></li>
+      <li><a href="#consult">名簿・台帳のそろえ方を、仕組みにしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="types" aria-labelledby="types-title"><div class="wrap">
+    <h2 class="h2" id="types-title">1．表記ゆれは、6つの型に分けると直し方が決まる</h2>
+    <p>同じ会社でも、入力した人や元の資料によって書き方が変わります。エクセルは文字を1文字ずつ比べるため、見た目が同じでも、文字が違えば別のものとして数えます。たとえば <code>=COUNTIF(A:A,"山田商事")</code> は、「山田商事」と同じ文字のセルだけを数え、スペースや全角・半角が違うセルは数えません。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">ゆれの型</th><th scope="col">架空の例</th><th scope="col">直す手段</th></tr></thead>
+      <tbody>
+        <tr><td data-label="ゆれの型">①余分なスペース・見えない文字</td><td data-label="架空の例">「 山田商事」「山田商事　」（先頭・末尾の空白、全角スペース）</td><td data-label="直す手段">関数（CLEAN・TRIM・SUBSTITUTE）</td></tr>
+        <tr><td data-label="ゆれの型">②全角・半角</td><td data-label="架空の例">「ＡＢＣ商事」と「ABC商事」、「ヤマダ」と「ﾔﾏﾀﾞ」</td><td data-label="直す手段">関数（ASC・JIS）</td></tr>
+        <tr><td data-label="ゆれの型">③法人格の書き方</td><td data-label="架空の例">「（株）山田商事」「㈱山田商事」「株式会社山田商事」</td><td data-label="直す手段">対応表＋VLOOKUP（または SUBSTITUTE）</td></tr>
+        <tr><td data-label="ゆれの型">④ハイフン・長音の種類</td><td data-label="架空の例">「3-1-1」「3－1－1」「3−1−1」</td><td data-label="直す手段">SUBSTITUTE（または ASC で全角を半角に）</td></tr>
+        <tr><td data-label="ゆれの型">⑤住所の数え方</td><td data-label="架空の例">「三丁目」と「3丁目」、「1番1号」と「1-1」</td><td data-label="直す手段">ルールを決めて対応表。迷う分はAIの候補→人が決める</td></tr>
+        <tr><td data-label="ゆれの型">⑥呼び名の違い</td><td data-label="架空の例">略称・旧社名・「山田商事」と「山田商会」</td><td data-label="直す手段">関数では直せない。法人番号などで人が確かめる</td></tr>
+      </tbody>
+    </table></div>
+    <p>①〜④は、決まった手順で機械的に直せます。⑤は、ルールを先に決めれば直せます。⑥は、別の会社かもしれないため、文字を機械的にそろえてはいけません。この3段階に分けて、手順を変えます。</p>
+  </div></section>
+
+  <section class="sec" id="key" aria-labelledby="key-title"><div class="wrap">
+    <h2 class="h2" id="key-title">2．元の列は書き換えず、「照合用の列」を作る</h2>
+    <p>いきなり元のデータを上書きすると、直しすぎたときに戻せません。元の会社名の列（A列）はそのまま残し、となりに照合用の列（B列）を作って、そこでそろえます。名簿の突き合わせや重複の確認は B 列で行い、宛名の印刷など見た目が大事な用途には A 列を使います。</p>
+    <p>B 列の式は、次の順に重ねます（A2 が元のセルの場合）。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">順</th><th scope="col">そろえること</th><th scope="col">使う式</th><th scope="col">Microsoft サポートに書かれていること</th></tr></thead>
+      <tbody>
+        <tr><td data-label="順">1</td><td data-label="そろえること">見えない文字を除く</td><td data-label="使う式"><code>CLEAN(A2)</code></td><td data-label="Microsoft サポートに書かれていること">印刷できない文字（値0〜31）を除く。値127などの追加分は、CLEAN だけでは除かれない</td></tr>
+        <tr><td data-label="順">2</td><td data-label="そろえること">全角スペースと改行しないスペースを、半角スペースにする</td><td data-label="使う式"><code>SUBSTITUTE(SUBSTITUTE(…,"　"," "),CHAR(160)," ")</code></td><td data-label="Microsoft サポートに書かれていること">TRIM は値32の半角スペース用。値160の改行しないスペース（Webページからの貼り付けに多い）は TRIM だけでは除かれない</td></tr>
+        <tr><td data-label="順">3</td><td data-label="そろえること">先頭・末尾の空白を除き、語の間は1つにする</td><td data-label="使う式"><code>TRIM(…)</code></td><td data-label="Microsoft サポートに書かれていること">各単語間のスペースは1つ残し、不要なスペースをすべて削除する</td></tr>
+        <tr><td data-label="順">4</td><td data-label="そろえること">全角を半角にそろえる</td><td data-label="使う式"><code>ASC(…)</code></td><td data-label="Microsoft サポートに書かれていること">全角（2バイト）文字を半角（1バイト）文字に変える。全角文字を含まない文字列は変わらない</td></tr>
+      </tbody>
+    </table></div>
+    <p>4つを1つの式にすると、次のようになります。</p>
+    <pre class="prompt">=ASC(TRIM(SUBSTITUTE(SUBSTITUTE(CLEAN(A2),"　"," "),CHAR(160)," ")))</pre>
+    <p>この式で、「 ＡＢＣ　商事 」（先頭と末尾に半角スペース、間に全角スペース、英字は全角）は「ABC 商事」になりました。「 山田商事　株式会社 」（先頭と末尾の半角スペース、間の全角スペース）は、TRIM だけだと「山田商事　株式会社」で全角スペースが残り、SUBSTITUTE を挟んだ式では「山田商事 株式会社」になりました（Excel で計算）。</p>
+    <p>注意が2つあります。1つ目は、ASC は<strong>カタカナも半角カナにする</strong>点です（「ヤマダ商事」は「ﾔﾏﾀﾞ商事」になり、文字数は5から6になります）。B 列は突き合わせ専用と割り切り、見た目を直す用途には使いません。逆に、半角を全角にそろえたいときは JIS 関数を使います。2つ目は、<code>=A2=B2</code> のような比較は、英字の大文字と小文字を区別しない点です（「ABC」と「abc」は等しいと判定されます）。区別したいときは EXACT 関数を使います。</p>
+  </div></section>
+
+  <section class="sec" id="corp" aria-labelledby="corp-title"><div class="wrap">
+    <h2 class="h2" id="corp-title">3．法人格の書き方は、対応表でそろえる</h2>
+    <p>「（株）」「(株)」「㈱」「株式会社」は、機械にとっては別の文字列です。ASC を通すと、全角の「（株）」は半角の「(株)」になりますが、「㈱」はそのまま残ります（Excel で確認）。そこで、そろえ方を書いた<strong>対応表</strong>を別の場所（たとえば別シートの G 列と H 列）に作ります。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">元の書き方（G 列）</th><th scope="col">そろえる書き方（H 列）</th></tr></thead>
+      <tbody>
+        <tr><td data-label="元の書き方（G 列）">(株)</td><td data-label="そろえる書き方（H 列）">株式会社</td></tr>
+        <tr><td data-label="元の書き方（G 列）">㈱</td><td data-label="そろえる書き方（H 列）">株式会社</td></tr>
+        <tr><td data-label="元の書き方（G 列）">(有)</td><td data-label="そろえる書き方（H 列）">有限会社</td></tr>
+        <tr><td data-label="元の書き方（G 列）">㈲</td><td data-label="そろえる書き方（H 列）">有限会社</td></tr>
+      </tbody>
+    </table></div>
+    <p>表を引く式は VLOOKUP です。Microsoft サポートによると、検索の型を FALSE（または0）にすると、左端の列から検索値と<strong>完全に一致する値</strong>が検索されます。省略すると近似一致になるため、必ず FALSE を付けます。</p>
+    <pre class="prompt">=IFERROR(VLOOKUP(C2,$G$2:$H$5,2,FALSE),"要確認")</pre>
+    <p>C2 に法人格の部分だけを取り出した文字を入れた場合、「㈱」は「株式会社」に、表にない「合資」は「要確認」と表示されます。表にない書き方は、勝手に直さず「要確認」として人が見る、という動きにするためです。</p>
+    <p>会社名の中の法人格をまとめて置き換えるだけなら、SUBSTITUTE でも直せます。たとえば <code>=SUBSTITUTE(SUBSTITUTE(A2,"(株)","株式会社"),"㈱","株式会社")</code> です。ただし、「株式会社」が名前の前につくか後ろにつくか（前株・後株）は、<strong>別の会社かもしれない</strong>ため、式では直しません。位置の違いは、⑥の型として人が確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="address" aria-labelledby="address-title"><div class="wrap">
+    <h2 class="h2" id="address-title">4．住所は、先にルールを決める。国税庁のサイトの置き換えも参考になる</h2>
+    <p>住所の表記は、「3丁目1番1号」「3-1-1」「三丁目一番一号」など、正解が1つではありません。どれにそろえるかを先に決め、ルールを1行で書いておきます。たとえば「数字は半角の算用数字、番地の区切りはハイフン、丁目の漢数字は算用数字にする」のように決めます。</p>
+    <p>ASC を使うと、全角の数字とハイフンは半角になります（「３丁目１－１」が「3丁目1-1」に）。ただし漢数字は変わらないため、「三丁目」は「三丁目」のままです。漢数字を算用数字にする置き換えは、SUBSTITUTE で「三丁目」→「3丁目」のように1つずつ書くか、次の節のとおりAIの候補を使います。</p>
+    <p>参考になる公的な例があります。国税庁の法人番号公表サイトの検索画面には、丁目番地等を入力するときの注意として、「三丁目」は「三」を算用数字の「３」に、「１番１号」は「１－１」に置き換えて入力するよう書かれています（2026年11月2日確認）。サイトが検索のために決めた入力の約束ごとで、住所の書き方の標準を示すものではありませんが、置き換えの考え方の参考になります。</p>
+  </div></section>
+
+  <section class="sec" id="ai" aria-labelledby="ai-title"><div class="wrap">
+    <h2 class="h2" id="ai-title">5．AIに頼んでよいのは「候補と理由」まで。置き換えは式で行う</h2>
+    <p>⑤⑥のように、関数では決められない違いは、AIに候補を出させると速く進みます。ただし、AIに「直した一覧」を作らせて、そのまま上書きするのは避けます。どこがどう変わったかが見えず、別の会社を同じ会社にまとめてしまっても気づけないためです。</p>
+    <pre class="prompt">次の会社名の一覧から、同じ会社と思われる表記のグループを作ってください。
+・直した一覧は出さないでください。
+・出力は表にしてください。列は「グループ番号」「元の表記」「同じ会社と考えた理由」「確からしさ（高・中・低）」です。
+・文字の違い（全角・半角、株式会社の書き方など）だけで同じと言えるものは、確からしさを「高」にしてください。
+・社名そのものが違うもの（山田商事と山田商会など）は、同じグループにしないで「要確認」と書いてください。
+・一覧にない情報を推測で足さないでください。
+
+【一覧】
+（会社名を1行に1件で貼る）</pre>
+    <p>返ってきた表は、人が見て、同じと決めた分だけを対応表（元の書き方→そろえる書き方）に写します。置き換えは、その対応表を引く式で行います。こうすると、AIが示した理由と、実際に直した内容が、表の形で残ります。</p>
+    <p>名簿に個人事業主の氏名や住所が含まれる場合は、個人情報にあたることがあります。個人情報保護委員会は、個人情報取扱事業者が個人情報を含むプロンプトを生成AIサービスに入力する場合には、利用目的の達成に必要な範囲内であることを十分に確認するよう注意喚起しています。入力するサービスの学習の扱いと、入力してよい情報の範囲は、<a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a>で決めておきます。</p>
+  </div></section>
+
+  <section class="sec" id="houjin" aria-labelledby="houjin-title"><div class="wrap">
+    <h2 class="h2" id="houjin-title">6．最後の確認は、国税庁の法人番号公表サイトで</h2>
+    <p>⑥のような「本当に同じ会社か」の確認には、国税庁の法人番号公表サイトが使えます。このサイトでは、法人番号の指定を受けた法人等の基本3情報（商号または名称、本店または主たる事務所の所在地、法人番号）を検索でき、ダウンロードやWeb-APIでデータを取得することもできます（2026年11月2日確認）。</p>
+    <p>名簿に法人番号の列を足しておくと、会社名の書き方が違っても、法人番号が同じかどうかで同じ会社かを確かめられます。確認のしかたは、次のようにします。</p>
+    <ul>
+      <li>公表サイトで、名称・所在地、または法人番号から検索し、基本3情報を名簿と見比べる</li>
+      <li>公表サイトの検索には「公表以後の変更履歴を検索対象に含める」などの条件があるため、商号や所在地を変えた会社は、変更履歴を含めて探す</li>
+      <li>個人事業者は、法人番号の指定を受けた法人等ではないため、このサイトでは探せない。名刺や請求書の記載など、別の方法で確かめる</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="verify" aria-labelledby="verify-title"><div class="wrap">
+    <h2 class="h2" id="verify-title">7．直したあと、件数で確かめる</h2>
+    <p>そろえたあとは、「同じものが同じとして数えられるようになったか」と「別のものをまとめすぎていないか」の両方を、件数で確かめます。次の表は、架空の名簿80件での確認の例です。</p>
+    <div class="tbl"><table class="stack">
+      <thead><tr><th scope="col">確認</th><th scope="col">方法</th><th scope="col">例（架空）</th></tr></thead>
+      <tbody>
+        <tr><td data-label="確認">行数が変わっていない</td><td data-label="方法"><code>=COUNTA(A2:A81)</code> と <code>=COUNTA(B2:B81)</code></td><td data-label="例（架空）">どちらも80</td></tr>
+        <tr><td data-label="確認">重複が減った（同じ会社が1つにまとまった）</td><td data-label="方法">A 列と B 列で、それぞれ重複を除いた件数を数える（重複の削除は別の場所にコピーして試す）</td><td data-label="例（架空）">A 列 73件 → B 列 66件（減った7件は、中身を見て同じ会社と確かめる）</td></tr>
+        <tr><td data-label="確認">まとめすぎていない</td><td data-label="方法">減った分の組を1組ずつ見て、同じ会社か確かめる</td><td data-label="例（架空）">「山田商事」と「山田商会」は別の会社として残す</td></tr>
+        <tr><td data-label="確認">「要確認」が残っていない</td><td data-label="方法"><code>=COUNTIF(B2:B81,"要確認")</code></td><td data-label="例（架空）">0（残っていれば人が決める）</td></tr>
+      </tbody>
+    </table></div>
+    <p>件数・合計・重複を元の資料と数えて比べる考え方は、<a href="/column/data-entry-errors">転記ミスの原因と防止策</a>にまとめています。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">8．表記ゆれをそろえるときの確認表</h2>
+    <p>整える前と、整えたあとに、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">元の列は書き換えず、照合用の列を別に作った</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ゆれを6つの型（スペース・全角半角・法人格・ハイフン・住所・呼び名）に分けて、直す手段を決めた</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">全角スペースと改行しないスペースを、TRIM の前に半角スペースにした</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">法人格の対応表を作り、VLOOKUP の検索の型に FALSE を付けた</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表にない書き方は「要確認」にして、勝手に直していない</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">住所のルール（数字・ハイフン・丁目）を1行で書いて決めた</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">AIには「直した一覧」でなく「同じと考えた理由つきの候補」を出させた</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">名簿に個人情報が含まれる場合、入力してよい範囲を社内のルールで決めてからAIに渡した</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">前株・後株や、似た社名は、人が法人番号などで確かめた</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">行数が変わっていないこと、重複が減った組が同じ会社であることを確かめた</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">9．名簿・台帳のそろえ方を、仕組みにしたいとき</h2>
+    <p>表記ゆれは、一度そろえても、新しい入力でまた生まれます。入力の欄を選択式にする、受け取る資料の形を決める、そろえる式と対応表を台帳に付けておく、といった決めごとがあると、毎回の手直しが減ります。重複と件数を確かめる手順の実演は<a href="/ai-data-entry-demo">転記・集計の実演ページ</a>にあります。</p>
+    <p>自社の名簿や台帳の整え方を相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/clean-function" rel="noopener" target="_blank">Microsoft サポート「CLEAN 関数」</a>：印刷できない文字を除く・値0〜31の範囲</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/trim-function" rel="noopener" target="_blank">Microsoft サポート「TRIM 関数」</a>：値32の半角スペースを除く・値160の改行しないスペースは単独では除かれない</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/substitute-function" rel="noopener" target="_blank">Microsoft サポート「SUBSTITUTE 関数」</a>：文字列の中の指定した文字を置き換える</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/asc-function" rel="noopener" target="_blank">Microsoft サポート「ASC 関数」</a>：全角（2バイト）文字を半角（1バイト）文字に変える</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/jis-function" rel="noopener" target="_blank">Microsoft サポート「JIS 関数」</a>：半角の英数カナ文字を全角に変える</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/vlookup-function" rel="noopener" target="_blank">Microsoft サポート「VLOOKUP 関数」</a>：検索の型 FALSE（0）は完全一致、省略すると近似一致</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/use-the-countif-function-in-microsoft-excel" rel="noopener" target="_blank">Microsoft サポート「COUNTIF 関数」</a>：条件に合うセルの数を数える（件数の確認で使用）</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/counta-function" rel="noopener" target="_blank">Microsoft サポート「COUNTA 関数」</a>：空でないセルの数を数える（行数の確認で使用）</li>
+      <li><a href="https://www.houjin-bangou.nta.go.jp/" rel="noopener" target="_blank">国税庁法人番号公表サイト</a>：基本3情報の検索・ダウンロード・Web-API・丁目番地等の入力の注意</li>
+      <li><a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/" rel="noopener" target="_blank">個人情報保護委員会「生成AIサービスの利用に関する注意喚起等について」（令和5年6月2日）</a>：個人情報を含むプロンプトを入力する場合の注意</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a></li>
+      <li><a href="/column/ai-invoice-draft">請求書の下書きをAIで作るときの確認</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

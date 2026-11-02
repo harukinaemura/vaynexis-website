@@ -4,8 +4,24 @@
   <link href="https://vaynexis.jp/column/feed.xml" rel="self"/>
   <link href="https://vaynexis.jp/column"/>
   <id>https://vaynexis.jp/column</id>
-  <updated>2026-11-01T00:00:00+09:00</updated>
+  <updated>2026-11-02T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
+  <entry>
+    <title>エクセルで会社名・住所の表記ゆれを統一する。関数でそろえる部分と、AIに候補を出させる部分</title>
+    <link href="https://vaynexis.jp/column/name-variants-excel"/>
+    <id>https://vaynexis.jp/column/name-variants-excel</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>取引先名簿の会社名・住所の表記ゆれを、エクセルの関数（CLEAN・TRIM・SUBSTITUTE・ASC・VLOOKUP）でそろえる手順をまとめました。照合用の列の作り方、法人格の対応表、AIに頼んでよいこと、法人番号での最終確認、直したあとの件数の確認表つきです。</summary>
+  </entry>
+  <entry>
+    <title>メール返信の下書きをAIで作る。先に人が骨子を決め、送る前に宛先・事実・約束・個人情報・文体の5つを確かめる</title>
+    <link href="https://vaynexis.jp/column/ai-email-reply"/>
+    <id>https://vaynexis.jp/column/ai-email-reply</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>届いたメールへの返信をChatGPTやClaudeに下書きさせるときの、骨子の渡し方、指示文の作例、送る前に確かめる5つ（宛先・事実・約束・個人情報・文体）をまとめました。Gmailの宛先（To・Cc・Bcc）と送信取り消しの公式の説明、個人情報保護委員会の注意喚起も確かめています。</summary>
+  </entry>
   <entry>
     <title>ChatGPT・Claudeの変更記録。事務で使う前に、公式のページで確かめた更新を日付つきで残します</title>
     <link href="https://vaynexis.jp/column/ai-service-changes"/>
