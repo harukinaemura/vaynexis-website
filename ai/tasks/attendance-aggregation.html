@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>勤怠の集計をAIに任せる手順｜打刻の欠落・深夜と休日の区分・合計時間の確認｜Vaynexis</title>
+  <meta name="description" content="勤怠の集計をAIに任せる範囲を、打刻の整理と要確認の一覧づくりに分けて説明します。欠けた退勤時刻を推測で埋めず、日またぎや休日の扱いを人が確かめる進め方です。渡す資料、下書きの確認表、合計の照合方法、架空の指示文をまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="勤怠の集計をAIに任せる手順｜打刻の欠落・深夜と休日の区分・合計時間の確認｜Vaynexis">
+  <meta property="og:description" content="勤怠の集計をAIに任せる範囲を、打刻の整理と要確認の一覧づくりに分けて説明します。欠けた退勤時刻を推測で埋めず、日またぎや休日の扱いを人が確かめる進め方です。渡す資料、下書きの確認表、合計の照合方法、架空の指示文をまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/attendance-aggregation">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/attendance-aggregation">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"勤怠の集計をAIに任せる手順。打刻の欠落・深夜と休日の区分・合計時間の確認","description":"勤怠の集計をAIに任せる範囲を、打刻の整理と要確認の一覧づくりに分けて説明します。欠けた退勤時刻を推測で埋めず、日またぎや休日の扱いを人が確かめる進め方です。渡す資料、下書きの確認表、合計の照合方法、架空の指示文をまとめます。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/attendance-aggregation"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"勤怠の集計","item":"https://vaynexis.jp/ai/tasks/attendance-aggregation"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">勤怠の集計</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">勤怠の集計をAIに任せる手順。打刻の欠落・深夜と休日の区分・合計時間の確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、打刻の並べ替え、集計の下書き、要確認の一覧づくりを任せます。人が確かめる中心は、打刻の欠落、深夜と休日の区分、合計時間です。欠けた時刻を推測で補わせず、元の記録との対応を残し、給与額の算定や勤怠の確定は人が担います。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこのページの最後）</p>
+    <p>勤怠を締める際の確認について、公的なガイドラインは使用者自身が見て確認し、記録する方法を示しています。 公的な案内では、使用者が労働時間を適切に管理する責務を持つと説明されています。 割増賃金の計算方法は、法令で具体的に定められていると公的資料に示されています。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例であり、実在の会社の話や、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（勤怠の集計）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（勤怠の集計）</h2>
+    <p>ここからは当社の整理です。 AIへの依頼は、出勤・退勤の組み合わせを整理し、人が渡した区分ルールに沿って時間の下書きを出すところまでにします。出勤だけ、退勤だけ、重複、日またぎの記録は、元の行をたどれる形で別に出す流れです。欠けた時刻を予定から埋めたり、給与や割増分の金額を計算したりする依頼は含めません。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>対象者と対象期間をそろえ、元の行を識別できる印を付けた打刻データのコピー。</li>
+      <li>記録された休憩と、人が承認した打刻の修正内容。</li>
+      <li>担当者が確認した休日カレンダーと、区分・日またぎ・集計単位のルール。</li>
+      <li>出力欄の見本と、情報が足りない行を保留する方針。渡す情報の範囲は人が先に決めます。</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>元の行と対応する、日別・人別の集計の下書き。</li>
+      <li>打刻の欠落、重複、日またぎと、その確認理由の一覧。</li>
+      <li>区分別の時間と、深夜・休日などが重なる時間の内訳。</li>
+      <li>集計できた範囲と保留した範囲、使ったルールを記した照合用メモ。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>締める範囲をそろえる：</b>対象者・期間・休憩の記録をそろえ、期間の境をまたぐ勤務の扱いを決めます。集計から外す行にも、理由を残す形です。</li>
+      <li><b>原本を残す：</b>AIにはコピーを渡し、元のデータを直接書き換えさせません。修正が必要な行は候補として分け、人が確認して反映します。</li>
+      <li><b>区分を文章にする：</b>所定内・時間外・休日・深夜の区分と、その重なりの数え方を担当者が整理します。判断の付かない区分は、保留欄に出す方針です。</li>
+      <li><b>見本で試す：</b>欠落・日またぎ・休日出勤を含む見本で、先に人が作った確認結果と突き合わせます。合わない部分は指示や入力欄を直してから対象を広げます。</li>
+      <li><b>下書きと保留を分ける：</b>欠けた時刻や休憩は推測で埋めず、確認先と不足情報を一覧にします。未処理の行を除いた小計には、集計できた範囲を添えるとよいです。</li>
+      <li><b>元の記録から照合する：</b>担当者が別に再集計し、日別・人別・対象期間全体の合計を比べます。区分の重なりを含む内訳は、そのまま足して総時間にせず、差の理由を確認してから確定します。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>打刻の欠落、深夜と休日の区分、合計時間</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">打刻の欠落、深夜と休日の区分、合計時間</td><td data-label="見方">要確認の一覧、区分表、別に計算した合計を元の記録と突き合わせます。</td><td data-label="見落とすと">未処理の行や区分の違いが集計に残ります。</td></tr><tr><td data-label="確かめること">出勤・退勤の組み合わせ</td><td data-label="見方">出勤だけ・退勤だけの行と重複を探し、原本との対応を見ます。</td><td data-label="見落とすと">勤務の取りこぼしや重複計上が生じます。</td></tr><tr><td data-label="確かめること">日またぎと期間の境</td><td data-label="見方">出勤と退勤の日付を組で見て、集計対象への含め方を確認します。</td><td data-label="見落とすと">経過時間や対象期間が変わります。</td></tr><tr><td data-label="確かめること">休憩と申告との差</td><td data-label="見方">休憩の記録、申告、入退場などの記録を照合し、差の理由を人が確認します。</td><td data-label="見落とすと">未確認の時間が計算に混ざります。</td></tr><tr><td data-label="確かめること">区分の重なり</td><td data-label="見方">休日と深夜などが重なる時間をたどり、総時間と区分別内訳を分けて見ます。</td><td data-label="見落とすと">重なる時間が抜けたり、合計で重複したりします。</td></tr><tr><td data-label="確かめること">単位と保留分</td><td data-label="見方">時間と分の変換、端数処理、保留行が小計に含まれるかを見ます。</td><td data-label="見落とすと">同じ対象でも合計が一致しなくなります。</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>欠けた打刻の確認先と、本人への確認を経た修正内容。</li>
+      <li>休憩や勤務に当たる時間の扱い。記録の差だけで機械的に決めません。</li>
+      <li>区分ルールの適用と給与額に関する判断。導入で示した公式資料を参照し、専門家に確認する範囲です。</li>
+      <li>保留分の解消、勤怠の確定、給与担当者へ渡す内容。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>確認用の抜粋を使い、集計に含めた行と保留した行を分ける依頼例です。</p>
+
+    <p>提示した資料だけを使い、表にない日の勤務は推測しません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">対象</th><th scope="col">出勤</th><th scope="col">退勤</th><th scope="col">休憩の記録</th><th scope="col">担当者のメモ</th></tr></thead><tbody><tr><td data-label="対象">従業員A</td><td data-label="出勤">月曜09:00</td><td data-label="退勤">空欄</td><td data-label="休憩の記録">12:00〜13:00</td><td data-label="担当者のメモ">退勤の確認待ち</td></tr><tr><td data-label="対象">従業員B</td><td data-label="出勤">金曜21:00</td><td data-label="退勤">土曜05:00</td><td data-label="休憩の記録">土曜01:00〜02:00</td><td data-label="担当者のメモ">日またぎ</td></tr><tr><td data-label="対象">従業員C</td><td data-label="出勤">日曜09:00</td><td data-label="退勤">日曜12:00</td><td data-label="休憩の記録">なし</td><td data-label="担当者のメモ">休日出勤の記録</td></tr></tbody></table></div>
+    <pre class="prompt">勤怠集計の下書きと要確認の一覧を作る依頼です。
+対象は架空の従業員A・B・Cの月曜から日曜までの打刻で、以下は確認用の抜粋です。
+提示した資料だけを使い、表にない日の勤務は推測しません。
+
+| 対象 | 出勤 | 退勤 | 休憩の記録 | 担当者のメモ |
+|---|---|---|---|---|
+| 従業員A | 月曜09:00 | 空欄 | 12:00〜13:00 | 退勤の確認待ち |
+| 従業員B | 金曜21:00 | 土曜05:00 | 土曜01:00〜02:00 | 日またぎ |
+| 従業員C | 日曜09:00 | 日曜12:00 | なし | 休日出勤の記録 |
+
+元データは変更せず、欠落は補いません。
+出勤だけ・退勤だけ・重複・日またぎを確認対象として抽出します。
+提示されていない区分ルールは作らず、深夜と休日の区分は保留にします。
+時刻がそろった行では、打刻間の経過時間と休憩控除後の参考時間を分けます。
+参考時間を、確定した労働時間として扱いません。
+日別・人別の内訳と、集計できた行だけの小計を出します。
+各出力には対応する元の行と、使った計算の説明を添えます。
+自信のない所、不足資料、確認理由は別の欄に出します。
+給与額や割増分の金額、法令への適合性は判定しません。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.mhlw.go.jp/file/06-Seisakujouhou-11200000-Roudoukijunkyoku/0000149439.pdf" rel="noopener" target="_blank">労働時間の適正な把握のために使用者が講ずべき措置に関するガイドライン</a>：使用者自身が現認して確認・記録する方法。</li>
+      <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/roudouzikan/index.html" rel="noopener" target="_blank">労働時間・休日</a>：労働時間の適切な管理。公式の制度案内の入口。</li>
+      <li><a href="https://jsite.mhlw.go.jp/osaka-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/hourei_seido/jikan2/warimasi.html" rel="noopener" target="_blank">割増賃金</a>：割増賃金の計算方法が法令で定められていること。</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-people-time">人と時間：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/shift-draft">シフト表の下書き</a></li>
+      <li><a href="/ai/tasks/year-end-adjustment-prep">年末調整の書類の準備</a></li>
+      <li><a href="/column/daily-report-ai">日報をAIでまとめる手順</a></li>
+      <li><a href="/ai/tasks/shift-draft">シフト表の下書き</a></li>
+      <li><a href="/ai/tasks/year-end-adjustment-prep">年末調整の書類の準備</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在庫表の更新と発注点の警告をAIに任せる手順｜差引とマイナス在庫を確認｜Vaynexis</title>
+  <meta name="description" content="在庫表の更新をAIに任せるときに渡す資料、更新案と警告の出し方、人が確認する点をまとめます。入出庫の差引、マイナス在庫、承認済みの発注点との比較を軸に、同じ記録の重複反映を防ぐ手順と架空の指示文を示し、発注や在庫数の確定は人が行う形に整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="在庫表の更新と発注点の警告をAIに任せる手順｜差引とマイナス在庫を確認｜Vaynexis">
+  <meta property="og:description" content="在庫表の更新をAIに任せるときに渡す資料、更新案と警告の出し方、人が確認する点をまとめます。入出庫の差引、マイナス在庫、承認済みの発注点との比較を軸に、同じ記録の重複反映を防ぐ手順と架空の指示文を示し、発注や在庫数の確定は人が行う形に整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/inventory-update-alert">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/inventory-update-alert">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"在庫表の更新と発注点の警告をAIに任せる手順。差引とマイナス在庫を確認","description":"在庫表の更新をAIに任せるときに渡す資料、更新案と警告の出し方、人が確認する点をまとめます。入出庫の差引、マイナス在庫、承認済みの発注点との比較を軸に、同じ記録の重複反映を防ぐ手順と架空の指示文を示し、発注や在庫数の確定は人が行う形に整理します。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/inventory-update-alert"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"在庫表の更新と発注点の警告","item":"https://vaynexis.jp/ai/tasks/inventory-update-alert"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">在庫表の更新と発注点の警告</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">在庫表の更新と発注点の警告をAIに任せる手順。差引とマイナス在庫を確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、入出庫の記録を使った在庫表の更新案と、発注点を下回る行の抽出を任せます。人が確かめる中心は、入出庫の差引が合うかと、マイナス在庫が残っていないかです。出力は下書きとして扱い、元の在庫表への反映、数量の訂正、発注の判断は担当者が行います。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこのページの最後）</p>
+    <p>店や工場の事務では、入荷や出荷の記録を在庫表に反映する際に、表の数量と現物の動きを照らし合わせる必要があります。 公式資料では、安全在庫は欠品の危険を減らすために持つ品目の在庫量と説明されています。公式FAQでは、在庫がマイナスになる運用を認める場合に、こまめな監視と訂正を行うよう説明しています。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（在庫表の更新と発注点の警告）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（在庫表の更新と発注点の警告）</h2>
+    <p>人が定めた「期首＋入庫−出庫±調整＝期末」の式で、品目・保管場所ごとの更新案を作る仕事です。記録済みの期末との差、マイナス、承認済みの発注点未満を分けて出させます。理由が分からない差は推測で埋めず、調べる候補として残す範囲です。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>期首と記録済みの期末在庫、品目の識別記号、保管場所、数量の単位。</li>
+      <li>対象期間の入出庫履歴と、返品・廃棄・移動・取消・調整の記録。</li>
+      <li>品目・保管場所別の承認済み発注点と、発注済み・予約済み数量を比較に含めるかの決まり。</li>
+      <li>反映済みの記録を見分ける識別記号と、前回どこまで反映したかの記録。</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>元の記録をたどれる、計算過程つきの期末在庫の更新案。</li>
+      <li>差引の不一致とマイナス在庫の一覧。</li>
+      <li>発注点を下回る行と、発注点が未設定で比較を保留した行の一覧。</li>
+      <li>反映候補・反映済み・保留の記録と、それぞれの件数を照合する一覧。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>対象をそろえる：</b>在庫の基準時点と入出庫を集める期間を人が決めます。品目・保管場所・単位がそろわない記録は、計算から分けて保留にする扱いです。</li>
+      <li><b>見本で差引を試す：</b>架空の表を使い、担当者が計算した答えとAIの下書きを照合します。マイナス、発注点未満、発注点と同じ値、調整のある行で扱いを確かめるとよいです。</li>
+      <li><b>反映する記録を絞る：</b>識別記号で反映済みの入出庫を除き、今回の対象を残します。重複か判断できない記録は保留とし、反映候補・反映済み・保留の件数が元の履歴と合うかを見ます。</li>
+      <li><b>更新案と警告を分ける：</b>AIには元のデータを直接書き換えさせず、別の表として下書きを出させます。計算上の期末と記録済みの期末の差、マイナス、発注点未満を別々の欄に残す形です。</li>
+      <li><b>元の記録で理由を調べる：</b>担当者が入出庫の伝票や現物と照らし、入力漏れ・時点のずれ・実棚との差などを調べます。マイナスという理由だけで数量を訂正せず、確認できた理由を記録します。</li>
+      <li><b>確認後に反映して履歴を残す：</b>人が承認した行を在庫表へ反映し、対象の識別記号と範囲を記録します。再処理で同じ入出庫を重ねて足さないよう、前回の反映記録と照合する形です。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>入出庫の差引、マイナス在庫の検出</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">入出庫の差引、マイナス在庫の検出</td><td data-label="見方">品目・保管場所ごとに期首＋入庫−出庫±調整を再計算し、記録済み期末との差と負数を照合します。</td><td data-label="見落とすと">不一致や調べるべき行が残ります。</td></tr><tr><td data-label="確かめること">対象時点と単位</td><td data-label="見方">期首に含む記録と今回の対象を分け、個・箱などの単位や換算の決まりを見ます。</td><td data-label="見落とすと">同じ入出庫が重なったり、異なる単位で差引されたりします。</td></tr><tr><td data-label="確かめること">返品・移動・取消・調整</td><td data-label="見方">符号と元の記録を照合し、移動元と移動先の扱いも見ます。</td><td data-label="見落とすと">取消前の数量や移動中の数量が残ることがあります。</td></tr><tr><td data-label="確かめること">発注点との比較</td><td data-label="見方">承認済みの値、未満か以下かの決まり、発注済み・予約済み数量の扱いを見ます。</td><td data-label="見落とすと">警告の対象が変わり、追加発注の要否を取り違えることがあります。</td></tr><tr><td data-label="確かめること">未設定・不明な値</td><td data-label="見方">空欄を数値扱いせず、比較できない理由が保留欄にあるかを見ます。</td><td data-label="見落とすと">設定不足の行が確認済みに見えます。</td></tr><tr><td data-label="確かめること">件数と再処理</td><td data-label="見方">元の履歴と処理区分の件数、反映済みの識別記号を照合します。</td><td data-label="見落とすと">記録の取りこぼしや重複反映が起きることがあります。</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>発注点と安全在庫の数量、その根拠を見直す時期。</li>
+      <li>マイナス在庫の原因と、元の記録や数量を訂正してよいか。</li>
+      <li>発注済み・予約済み数量、納入までの期間を踏まえた追加発注の要否。</li>
+      <li>在庫表に反映する行と、保留した行を再確認する担当者。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>差引の不一致と警告を分ける作例です。</p>
+
+    <p>発注済み・予約済み数量は今回の比較に含めません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">品目</th><th scope="col">期首</th><th scope="col">入庫</th><th scope="col">出庫</th><th scope="col">調整</th><th scope="col">記録済み期末</th><th scope="col">発注点</th></tr></thead><tbody><tr><td data-label="品目">留め具</td><td data-label="期首">20</td><td data-label="入庫">5</td><td data-label="出庫">8</td><td data-label="調整">0</td><td data-label="記録済み期末">17</td><td data-label="発注点">10</td></tr><tr><td data-label="品目">保護板</td><td data-label="期首">8</td><td data-label="入庫">0</td><td data-label="出庫">11</td><td data-label="調整">0</td><td data-label="記録済み期末">-3</td><td data-label="発注点">未設定</td></tr><tr><td data-label="品目">緩衝材</td><td data-label="期首">12</td><td data-label="入庫">0</td><td data-label="出庫">8</td><td data-label="調整">0</td><td data-label="記録済み期末">4</td><td data-label="発注点">6</td></tr><tr><td data-label="品目">ふた材</td><td data-label="期首">15</td><td data-label="入庫">3</td><td data-label="出庫">4</td><td data-label="調整">-1</td><td data-label="記録済み期末">12</td><td data-label="発注点">8</td></tr><tr><td data-label="品目">仕切り材</td><td data-label="期首">10</td><td data-label="入庫">0</td><td data-label="出庫">2</td><td data-label="調整">0</td><td data-label="記録済み期末">8</td><td data-label="発注点">8</td></tr></tbody></table></div>
+    <pre class="prompt">架空の資材置場の在庫確認として、更新案の下書きを作ります。
+元の表は変更せず、渡した資料にあることだけを使います。
+全品目は同じ保管場所で、数量の単位は個です。
+入庫・出庫は今回の対象期間の集計、調整は符号つきです。
+発注点は架空の承認済み値で、未満を警告の対象にします。
+発注済み・予約済み数量は今回の比較に含めません。
+
+| 品目 | 期首 | 入庫 | 出庫 | 調整 | 記録済み期末 | 発注点 |
+|---|---|---|---|---|---|---|
+| 留め具 | 20 | 5 | 8 | 0 | 17 | 10 |
+| 保護板 | 8 | 0 | 11 | 0 | -3 | 未設定 |
+| 緩衝材 | 12 | 0 | 8 | 0 | 4 | 6 |
+| ふた材 | 15 | 3 | 4 | -1 | 12 | 8 |
+| 仕切り材 | 10 | 0 | 2 | 0 | 8 | 8 |
+
+計算式は「期首＋入庫−出庫＋符号つき調整」です。
+計算過程、計算上の期末、記録済み期末との差を出します。
+マイナス、発注点未満、発注点未設定は別々の欄に分けます。
+未設定の発注点は補わず、比較を保留します。
+自信のない所や不足資料は別の確認欄に出し、理由を推測しません。
+入出庫ごとの識別記号や反映履歴は、この表には含まれません。
+重複の有無は確認済みとせず、追加で必要な資料を挙げます。
+発注点の設定、数量の訂正、発注の確定は行いません。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://learn.microsoft.com/en-us/dynamics365/supply-chain/master-planning/safety-stock-replenishment" rel="noopener" target="_blank">Safety stock fulfillment for items</a>：導入の安全在庫の定義。製品の設定値や補充計画を一般的な発注点として転用していません。</li>
+      <li><a href="https://learn.microsoft.com/en-us/dynamics365/supply-chain/cost-management/inventory-costing-faq" rel="noopener" target="_blank">Inventory costing FAQ</a>：導入の、マイナス在庫を認める運用での監視・訂正。会計処理の判断には使用していません。</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-ordering">発注と在庫：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/purchase-order">発注書の作成</a></li>
+      <li><a href="/ai/tasks/order-email-to-ledger">受注メールから台帳への転記</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/ai/tasks/purchase-order">発注書の作成</a></li>
+      <li><a href="/ai/tasks/delivery-note-inspection">納品書・検収書の作成</a></li>
+      <li><a href="/ai/tasks/order-email-to-ledger">受注メールから台帳への転記</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

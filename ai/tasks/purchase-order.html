@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>発注書の作成をAIに任せる手順｜数量・単価・納期・宛先と送付前の確認｜Vaynexis</title>
+  <meta name="description" content="発注書をAIで作るときに渡す資料、下書きとして受け取る内容、人が確かめる点を整理します。承認された依頼書や見積書を基に、単価の不一致、希望納期と回答納期、宛先を確認し、下書き・社内承認・取引先の確認を分けて、送付を人が判断するまでの手順を示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="発注書の作成をAIに任せる手順｜数量・単価・納期・宛先と送付前の確認｜Vaynexis">
+  <meta property="og:description" content="発注書をAIで作るときに渡す資料、下書きとして受け取る内容、人が確かめる点を整理します。承認された依頼書や見積書を基に、単価の不一致、希望納期と回答納期、宛先を確認し、下書き・社内承認・取引先の確認を分けて、送付を人が判断するまでの手順を示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/purchase-order">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/purchase-order">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"発注書の作成をAIに任せる手順。数量・単価・納期・宛先と送付前の確認","description":"発注書をAIで作るときに渡す資料、下書きとして受け取る内容、人が確かめる点を整理します。承認された依頼書や見積書を基に、単価の不一致、希望納期と回答納期、宛先を確認し、下書き・社内承認・取引先の確認を分けて、送付を人が判断するまでの手順を示します。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/purchase-order"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"発注書の作成","item":"https://vaynexis.jp/ai/tasks/purchase-order"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">発注書の作成</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">発注書の作成をAIに任せる手順。数量・単価・納期・宛先と送付前の確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIに任せるのは、承認された依頼書や見積書から発注書の下書きと照合用の一覧を整えるところです。人は数量と単価、納期、宛先を原資料と照らし、空欄や不一致を解消してから送付を判断します。作成済みの下書きを、社内承認や取引先の確認が済んだ注文として扱わないことが中心です。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこのページの最後）</p>
+    <p>仕入れの依頼が承認されると、事務担当は見積内容や取引先情報を集め、仕入先に渡す発注書へまとめます。転記だけでなく、希望している内容と相手が応じた内容を見分ける必要があるため、書面が整った後にも確認が残ります。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものでもありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（発注書の作成）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（発注書の作成）</h2>
+    <p>AIには、資料にある品番・数量・単位・単価を所定の欄へ転記し、資料ごとの不一致や不足を別欄に出す下書きづくりを任せます。希望納期と取引先の回答納期、発注書の宛先と納品先も別に整理する方針です。未記入の価格や日付を補うこと、取引条件を交渉すること、承認や送信を行うことは任せる範囲に含めません。 Microsoft Learnの「発注書を作成する」では、発注ヘッダーに仕入先・配達場所・受領日などを含めています（確認日：2026年11月2日）。 同提供元の「発注書の承認と確認」では、仕入先の同意後に発注書の確定を記録する流れを示しています（確認日：2026年11月2日）。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>承認された依頼書と、その依頼に対応する見積書・単価表</li>
+      <li>取引先名、担当窓口、送付先、納品先を確かめた一覧</li>
+      <li>希望納期と、取引先から受け取った納期回答の記録</li>
+      <li>使用する発注書の見本と、変更・取消・再発注の記録</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>資料の記載を転記した発注書の下書き</li>
+      <li>転記元の資料名と該当箇所を付けた照合用の一覧</li>
+      <li>単価の不一致、空欄、読み取れない箇所をまとめた確認欄</li>
+      <li>下書き・承認状況・取引先の確認状況を分けた管理欄</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>発注の根拠をそろえる：</b>承認された依頼書と対応する見積書を組にし、品番や改訂の表示を照らします。取消・変更・再発注の記録も添えて、今回作る書面の対象を人が決めます。</li>
+      <li><b>見本で転記を試す：</b>架空の見本を使い、単価が違う行や回答納期が空欄の行を確認欄に出せるかを見ます。下書きが読みやすいことと、内容が正しいことは別に確かめる扱いです。</li>
+      <li><b>複製した資料から下書きを作る：</b>AIには作業用の複製を渡し、元の依頼書・見積書・取引先一覧を直接書き換えさせません。転記元を残し、不明点は空欄のまま別欄に出す形にします。</li>
+      <li><b>明細と合計を照合する：</b>人が数量・単位・単価を原資料へ戻って確かめ、数量と単価の掛け算や合計を別に検算します。依頼書と見積書の単価が違う行は、採用する価格を担当者が確かめるまで送付対象から外す扱いです。</li>
+      <li><b>納期と宛先を確かめる：</b>希望納期と回答納期を並べ、回答のない日付を約束済みとして記載していないかを見ます。送付先の担当窓口と、商品を届ける納品先も分けて照合します。</li>
+      <li><b>承認を経て送付を判断する：</b>人が確認事項を解消し、社内の承認を受けた版を選びます。送付の記録と取引先からの回答を別に残し、回答前の注文を取引先確認済みに変えない運用とします。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>数量と単価、納期、宛先</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">数量と単価、納期、宛先</td><td data-label="見方">承認された依頼書、見積書、納期回答、取引先一覧へ戻って照合します。</td><td data-label="見落とすと">依頼と異なる数量・価格・日程や、別の宛先で発注が進みます。</td></tr><tr><td data-label="確かめること">品番・品名・数量の単位</td><td data-label="見方">同じ品名でも品番を見比べ、箱・個などの単位を原資料と合わせます。</td><td data-label="見落とすと">別の商品や想定と違う量が注文に入ります。</td></tr><tr><td data-label="確かめること">単価の不一致と合計</td><td data-label="見方">依頼書と見積書の値を並べ、採用した単価を確認して別に検算します。</td><td data-label="見落とすと">古い単価や転記違いを含んだ金額が書面に残ります。</td></tr><tr><td data-label="確かめること">希望納期と回答納期</td><td data-label="見方">希望欄と回答欄を分け、回答の記録を確認します。</td><td data-label="見落とすと">希望日が取引先の約束した日として伝わります。</td></tr><tr><td data-label="確かめること">発注の宛先と納品先</td><td data-label="見方">送付先の窓口と商品の届け先を、それぞれ照合します。</td><td data-label="見落とすと">書面の送付先や商品の届け先が意図と変わります。</td></tr><tr><td data-label="確かめること">承認状況と注文の重なり</td><td data-label="見方">下書き・社内承認・取引先確認を分け、変更・取消・再発注の元の注文をたどります。</td><td data-label="見落とすと">承認前の送付や、旧版と新版の重複した発注につながります。</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>不一致がある単価や数量について、相手への確認を経て何を採用するか</li>
+      <li>回答された納期や代替品を受け入れるか、追加の調整を行うか</li>
+      <li>変更・取消・再発注の扱いと、元の注文をどう整理するか</li>
+      <li>社内承認を受けた内容を、どの版で誰に送付するか</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>架空の事務用品店への発注資料を照合し、単価の相違を下書きと分けて示す作例です。 付箋の行は、異なる単価を確認欄へ残し、人が確かめるまで採用単価を決めない想定です。</p>
+
+    <p>資料を照合するための表です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">品番・品名</th><th scope="col">依頼数量</th><th scope="col">依頼書の単価</th><th scope="col">見積書の単価</th></tr></thead><tbody><tr><td data-label="品番・品名">P-A・鉛筆</td><td data-label="依頼数量">10箱</td><td data-label="依頼書の単価">300円／箱</td><td data-label="見積書の単価">300円／箱</td></tr><tr><td data-label="品番・品名">P-B・付箋</td><td data-label="依頼数量">6包</td><td data-label="依頼書の単価">280円／包</td><td data-label="見積書の単価">240円／包</td></tr><tr><td data-label="品番・品名">P-C・クリップ</td><td data-label="依頼数量">4箱</td><td data-label="依頼書の単価">180円／箱</td><td data-label="見積書の単価">180円／箱</td></tr></tbody></table></div>
+    <pre class="prompt">目的：架空事務用品店甲への発注書の下書きと、確認用の一覧を作ります。
+資料にある情報だけを使い、元資料の変更・発注の確定・送信は行いません。
+
+宛先：架空事務用品店甲の受注窓口
+納品先：発注元の事務所
+希望納期：来月上旬
+取引先の回答納期：未回答
+元の依頼書：承認済みという設定
+発注書の社内承認：未承認
+取引先の確認：未確認
+
+資料を照合するための表です。
+| 品番・品名 | 依頼数量 | 依頼書の単価 | 見積書の単価 |
+|---|---|---|---|
+| P-A・鉛筆 | 10箱 | 300円／箱 | 300円／箱 |
+| P-B・付箋 | 6包 | 280円／包 | 240円／包 |
+| P-C・クリップ | 4箱 | 180円／箱 | 180円／箱 |
+
+各資料の記載を区別し、発注書の下書きには転記元を付けます。
+単価が違う行はどちらかを勝手に選ばず、採用単価を未確定にします。
+不一致、不足、読み取りに自信のない所を別欄にまとめます。
+希望納期を回答納期へ転記せず、未回答のまま残します。
+下書き、社内承認、取引先の確認を別の欄にし、不明な状態は補いません。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/tasks/create-purchase-order" rel="noopener" target="_blank">発注書を作成する - Supply Chain Management \</a>：発注ヘッダーの情報。特定製品の説明として参照し、共通の必須様式とは扱っていません。</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/purchase-order-approval-confirmation" rel="noopener" target="_blank">発注書の承認と確認 - Supply Chain Management \</a>：仕入先の同意後に確定を記録する流れ。製品の状態名と当社の管理欄は区別しています。</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-ordering">発注と在庫：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/delivery-note-inspection">納品書・検収書の作成</a></li>
+      <li><a href="/ai/tasks/inventory-update-alert">在庫表の更新と発注点の警告</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/ai/tasks/delivery-note-inspection">納品書・検収書の作成</a></li>
+      <li><a href="/ai/tasks/order-email-to-ledger">受注メールから台帳への転記</a></li>
+      <li><a href="/ai/tasks/inventory-update-alert">在庫表の更新と発注点の警告</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

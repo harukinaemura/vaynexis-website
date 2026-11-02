@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIでメールを下書きするときの接続権限・送信承認・記憶の確認｜Vaynexis</title>
+  <meta name="description" content="メールの下書きをAIに任せる前に、接続するアカウント、許可する操作、送信前の承認、記憶の設定をどう確かめるかを整理します。権限の正式名称と省略表示の違い、参照してよい情報を記す依頼票、下書き保存までを指定する依頼文と確認表をまとめました。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="AIでメールを下書きするときの接続権限・送信承認・記憶の確認｜Vaynexis">
+  <meta property="og:description" content="メールの下書きをAIに任せる前に、接続するアカウント、許可する操作、送信前の承認、記憶の設定をどう確かめるかを整理します。権限の正式名称と省略表示の違い、参照してよい情報を記す依頼票、下書き保存までを指定する依頼文と確認表をまとめました。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/ai-email-draft-permissions">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/ai-email-draft-permissions">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AIでメールを下書きするときの接続権限・送信承認・記憶の確認","description":"メールの下書きをAIに任せる前に、接続するアカウント、許可する操作、送信前の承認、記憶の設定をどう確かめるかを整理します。権限の正式名称と省略表示の違い、参照してよい情報を記す依頼票、下書き保存までを指定する依頼文と確認表をまとめました。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/ai-email-draft-permissions"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"AIでメールを下書きするときの接続権限・送信承認・記憶の確認","item":"https://vaynexis.jp/column/ai-email-draft-permissions"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">AIでメールを下書きするときの接続権限・送信承認・記憶の確認</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">AIでメールを下書きするときの接続権限・送信承認・記憶の確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>メールを下書きするときは、任せる操作の終点を先に決め、接続先と権限、操作時の承認、記憶される情報を別々に確かめます。「送らない」という依頼文だけで済ませず、設定と照合する進め方です。下書き保存までを依頼し、送信の判断は人に残します。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこの記事の最後）</p>
+    <p>この記事は、メールの返信案をAIに作らせたい事務の担当者が、アプリの接続や権限、送信前の承認、記憶の設定をどこで確かめるかを整理したものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月2日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">下書きの終点を、接続する前に決める</a></li>
+      <li><a href="#s2">権限は、正式名称と説明を合わせて読む</a></li>
+      <li><a href="#s3">承認は「何の操作か」を見て判断する</a></li>
+      <li><a href="#s4">参照してよい情報と、記憶の扱いを分ける</a></li>
+      <li><a href="#s5">接続を確かめてから使う依頼文</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．下書きの終点を、接続する前に決める</h2>
+    <p>この節は当社の整理です。この記事の例は説明のための架空の例です。実在の会社の話ではありません。</p>
+    <p>「返信を作る」という依頼には、画面に文章を出すことと、メール側に下書きを保存することが混ざりがちです。さらに、実際に送るところまで任せるのかも別に決めると、依頼する範囲が明確になります。</p>
+    <p>文章を手元で読みたい段階なら、会話内に返信案を出すところを終点にします。メール側への保存も任せたい段階では、保存先と許可する操作を確かめ、保存後に止まる形にします。送信・転送・削除は、その依頼に含めない整理です。</p>
+    <p>依頼する前に、「参照だけを許す情報」と「変更してよい対象」を分けて書きます。接続済みだから広く読ませる、下書きを頼んだから保存も任せる、といった曖昧さを残さないためです。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．権限は、正式名称と説明を合わせて読む</h2>
+    <p>この節は当社の整理です。製品の説明の確認日：2026年11月2日。</p>
+    <p>ChatGPTの「常に確認」は、情報の読み取りや変更の前に確認を求める設定です。「読み取りアクションを許可」は、読み取りの確認を省き、変更の前には確認を求めます。「低リスクのアクションを許可」は低リスクの操作を自動承認し、高リスクの操作では確認や拒否が生じる場合があります。「すべてのアクションを許可」は、対応する操作を追加の承認要求なしで実行できる選択肢です。</p>
+    <p>ただし、「すべてのアクションを許可」は、アカウント全体やワークスペース全体の標準の権限選択欄にはありません。一部のメニューでは、正式名称が「読み取りを許可」「低リスクを許可」「すべて許可」と省略されます。利用できる設定は、アカウント、アプリ、接続済みアカウント、ワークスペースによって異なります。権限設定は、接続元のシステムへのアクセスを変更したり、ワークスペースのポリシーを上書きしたりするものではありません。</p>
+    <p>下書きまでの依頼では、まず読み取りや変更の前に確認を挟む設定から検討するとよいです。名前だけで選ばず、現在の接続先に適用される説明まで読みます。読み取りを許すことと、外部へ送る操作を許すことは、別の確認欄にすると整理しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．承認は「何の操作か」を見て判断する</h2>
+    <p>この節は当社の整理です。</p>
+    <p>Claudeの公式ヘルプでは、Gmailからの送信・返信・転送に対応し、標準では各操作の前に承認を求めるとされています。TeamプランとEnterpriseプランでは、メンバーが毎回の確認なしで操作できるかをオーナーが決めます。</p>
+    <p>この説明を踏まえ、接続先の現在の設定と、組織側で許されている操作を確かめます。承認が出る前提だけで依頼するのではなく、依頼文にも下書きまでという範囲を残します。</p>
+    <p>承認を求められた場面では、操作の名前と対象を読みます。下書きを保存するつもりなのに送信や転送が含まれていたら、その場では進めず、依頼する範囲を修正する扱いです。削除や共有など、依頼に含めていない変更も同じように分けます。</p>
+    <p>権限の選択と、目の前の操作を承認する判断を一緒に済ませないことが大切です。下書きを保存した後は、人がメール側で確認してから送る流れにすると、作成と送信の区切りが見えます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．参照してよい情報と、記憶の扱いを分ける</h2>
+    <p>この節は当社の整理です。</p>
+    <p>ChatGPTと共有した機密情報は、メモリに記憶される場合があります。メモリをオフにしても、過去のチャットは削除されません。記憶の設定を変えることと、残った会話を整理することを分けて考えます。</p>
+    <p>下書きの依頼票には、参照を認める範囲と、入力から外す情報、記憶の扱いを並べます。長い履歴をまとめて渡す前に、今回の返答に使う材料だけを抜き出す整理です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">依頼票の欄</th><th scope="col">記入する内容</th></tr></thead><tbody><tr><td data-label="依頼票の欄">参照してよい情報</td><td data-label="記入する内容">対象の問い合わせと、今回案内してよい説明文だけを指定します。</td></tr><tr><td data-label="依頼票の欄">入力から外す情報</td><td data-label="記入する内容">問い合わせと関係のない顧客情報や、別の取引のやり取りを除きます。</td></tr><tr><td data-label="依頼票の欄">記憶の扱い</td><td data-label="記入する内容">記憶を使うか、現在の設定を誰が確かめたかを記録します。</td></tr><tr><td data-label="依頼票の欄">操作の終点</td><td data-label="記入する内容">会話内での表示か、指定先への下書き保存かを明記します。</td></tr></tbody></table></div>
+    <p>一時チャットの「パーソナライズなし」は、メモリ、カスタム指示、プラグインを使用しない選択肢です。一時チャットを通常のチャットとして保存すると、保存した時点からアカウントのパーソナライズ設定が適用されます。接続せずに文面だけを作る方法も含め、参照範囲に合う進め方を選びます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．接続を確かめてから使う依頼文</h2>
+    <p>この節は当社の整理です。</p>
+    <p>公式の指示作成資料では、Claudeに望む出力形式と制約を具体的に伝えるよう案内しています。下の例では、返答の目的と、許す操作の終点を分けています。機能の動作を保証する文ではなく、担当者が設定を確認してから使う依頼文です。</p>
+    <pre class="prompt">目的：問い合わせへの返答を人が確認するため、下書きだけを作ります。
+
+担当者の事前確認欄
+・接続：なし／あり（対象のアカウントを記入）
+・権限：現在の設定と、変更前の承認の扱いを記入
+・記憶：使うかどうかと、担当者が確認した設定を記入
+・保存先：会話内のみ／担当者が指定した下書きの保存先
+
+行う範囲：以下の問い合わせと案内内容だけを材料に、返信案を作成。
+接続先への保存を担当者が認めた場合のみ、指定先への下書き保存まで。
+行わない操作：送信、転送、削除、指定先以外の変更。
+保存先や許可する操作が不明な場合：操作せず、確認事項を表示。
+
+問い合わせ：案内資料を受け取る方法を知りたいです。
+案内してよい内容：窓口で受け取り方法を案内します。
+
+出力：返信案と、保存を行ったかどうかの報告。</pre>
+    <p>担当者が事前確認欄を埋められない段階では、外部への保存を含めず、会話内の返信案を受け取る形にとどめます。「保存した」という返答だけで作業を閉じず、指定した保存先で下書きを確認するところまでを人の担当にします。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">会話内での表示と、メール側への下書き保存のどちらを依頼するか決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">接続するアカウントと、そこから参照させる範囲を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">現在の権限設定の名称と説明を読んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">操作前の承認の扱いと、組織側の設定を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">記憶を使うかと、参照してよい情報を依頼票に記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">送信・転送・削除を今回の依頼から外したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">保存を依頼した場合、指定先に下書きがあるか人が確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://help.openai.com/ja-jp/articles/20001495-managing-app-permissions-in-chatgpt" rel="noopener" target="_blank">ChatGPT でのアプリの権限管理</a>：権限の正式名称、省略表示、利用条件、アクセスとの違い</li>
+      <li><a href="https://support.claude.com/ja/articles/10166901" rel="noopener" target="_blank">Google Workspace コネクタを使用する</a>：送信・返信・転送の標準の承認と組織設定</li>
+      <li><a href="https://help.openai.com/ja-jp/articles/8590148-memory-in-chatgpt" rel="noopener" target="_blank">ChatGPT のメモリ</a>：機密情報の記憶と、設定をオフにした場合の既存チャット</li>
+      <li><a href="https://help.openai.com/ja-jp/articles/8914046-temporary-chat-in-chatgpt" rel="noopener" target="_blank">ChatGPT の一時チャット</a>：パーソナライズなしの対象と、通常のチャットに保存した場合の設定</li>
+      <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" rel="noopener" target="_blank">Prompting best practices</a>：出力形式と制約を明示する指示文</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/ai-consulting-guide">中小企業向けAIコンサルの選び方（相談先を目的別に比較）</a></li>
+      <li><a href="/column/shiga-ai-consultation">滋賀県のAI相談窓口｜公的な支援機関と民間の相談先の使い分け</a></li>
+      <li><a href="/column/ai-email-reply">メール返信の下書きをAIで作る方法</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a></li>
+      <li><a href="/column/chatgpt-memory">ChatGPTのメモリとは｜会社の情報を覚えさせる前に確かめること</a></li>
+      <li><a href="/column/claude-business-setup">Claudeを会社で使い始める前に確認すること</a></li>
+      <li><a href="/column/ai-training-retention-check">ChatGPT・Claudeの学習設定と保存｜会社情報を入れる前の確認</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

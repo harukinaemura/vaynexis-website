@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>経費精算の点検と督促文の下書きをAIに任せる手順｜上限・添付・重複の確認｜Vaynexis</title>
+  <meta name="description" content="経費精算でAIに渡す申請一覧と社内規程、点検結果と督促文の下書きの作り方を整理します。上限額・添付書類・重複申請を軸に、不足と未確認を分けながら、基準の示し方から見本での試し方、宛先や提出状況の照合まで、人が確かめて判断する範囲を示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="経費精算の点検と督促文の下書きをAIに任せる手順｜上限・添付・重複の確認｜Vaynexis">
+  <meta property="og:description" content="経費精算でAIに渡す申請一覧と社内規程、点検結果と督促文の下書きの作り方を整理します。上限額・添付書類・重複申請を軸に、不足と未確認を分けながら、基準の示し方から見本での試し方、宛先や提出状況の照合まで、人が確かめて判断する範囲を示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/expense-claim-check">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/expense-claim-check">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"経費精算の点検と督促文の下書きをAIに任せる手順。上限・添付・重複の確認","description":"経費精算でAIに渡す申請一覧と社内規程、点検結果と督促文の下書きの作り方を整理します。上限額・添付書類・重複申請を軸に、不足と未確認を分けながら、基準の示し方から見本での試し方、宛先や提出状況の照合まで、人が確かめて判断する範囲を示します。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/expense-claim-check"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"経費精算の点検と督促文の下書き","item":"https://vaynexis.jp/ai/tasks/expense-claim-check"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">経費精算の点検と督促文の下書き</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">経費精算の点検と督促文の下書きをAIに任せる手順。上限・添付・重複の確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、渡した基準と申請一覧を照らした確認候補の抽出、不足資料を知らせる督促文の下書きを任せます。人が確かめる中心は上限額、添付書類、重複申請です。基準を先に表にし、例外の扱いや重複の確定、送信は人が担います。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこのページの最後）</p>
+    <p>経費精算の点検は、総務・経理が申請を受け付け、承認へ回す前に行う仕事です。申請と添付の対応だけでなく、担当者への確認や不足資料の催促まで続くため、何を根拠に差し戻すのかをそろえておく必要があります。</p>
+    <p class="notice">表・指示文・数字は、実在の会社の話ではなく説明のための架空の例であり、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（経費精算の点検と督促文の下書き）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（経費精算の点検と督促文の下書き）</h2>
+    <p>Dynamics 365 Expense Managementの公式資料には、社内方針に合わない経費や領収書を検出する説明があります（確認日：2026-11-02）。 重複する値を扱う公式資料では、別の行に一致する値を持つ行を抽出した結果が示されています。 国税庁の出張旅費等の案内には、一定の事項を記載した帳簿のみの保存による取扱いが示されています。 ここからは当社の整理です。 AIには確認が必要な申請と理由、照合先を並べてもらいます。添付の要否は渡した規程から扱い、不明な基準は補いません。税務・会計の扱いは、先の公式資料を基に専門家に確認する範囲です。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>個人情報を必要な範囲に絞った申請一覧と、申請を識別する記号</li>
+      <li>適用する規程の版、費目別の上限、必要な添付、例外の扱いをまとめた基準表</li>
+      <li>添付資料の一覧と、申請との対応が分かる情報</li>
+      <li>督促先、担当者が決めた提出期限、最新の提出状況</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>申請ごとの確認候補と、該当する基準の箇所</li>
+      <li>不足している添付資料と、照合できなかった項目</li>
+      <li>重複が疑われる申請の組合せと、一致した項目</li>
+      <li>不足資料の督促文の下書きと、人への確認事項</li>
+    </ul>
+    <p>例では、上限を示す欄に会社が決めた額を入れる想定です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">種別</th><th scope="col">規程・申請</th><th scope="col">費目と上限との関係</th><th scope="col">添付・照合の手掛かり</th></tr></thead><tbody><tr><td data-label="種別">規程</td><td data-label="規程・申請">交通費</td><td data-label="費目と上限との関係">上限は〔交通費上限〕</td><td data-label="添付・照合の手掛かり">領収書を添付</td></tr><tr><td data-label="種別">規程</td><td data-label="規程・申請">会議費</td><td data-label="費目と上限との関係">上限は〔会議費上限〕</td><td data-label="添付・照合の手掛かり">領収書を添付</td></tr><tr><td data-label="種別">申請</td><td data-label="規程・申請">あ</td><td data-label="費目と上限との関係">会議費・上限超過</td><td data-label="添付・照合の手掛かり">添付あり</td></tr><tr><td data-label="種別">申請</td><td data-label="規程・申請">い</td><td data-label="費目と上限との関係">交通費・上限内</td><td data-label="添付・照合の手掛かり">添付なし</td></tr><tr><td data-label="種別">申請</td><td data-label="規程・申請">う</td><td data-label="費目と上限との関係">交通費・上限内</td><td data-label="添付・照合の手掛かり">添付あり・かの重複元</td></tr><tr><td data-label="種別">申請</td><td data-label="規程・申請">え</td><td data-label="費目と上限との関係">会議費・上限内</td><td data-label="添付・照合の手掛かり">添付あり・重複なし</td></tr><tr><td data-label="種別">申請</td><td data-label="規程・申請">お</td><td data-label="費目と上限との関係">交通費・上限内</td><td data-label="添付・照合の手掛かり">添付あり・重複なし</td></tr><tr><td data-label="種別">申請</td><td data-label="規程・申請">か</td><td data-label="費目と上限との関係">交通費・上限内</td><td data-label="添付・照合の手掛かり">うと申請者・利用日・金額・証憑が同じ</td></tr></tbody></table></div>
+
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>基準をそろえる：</b>担当者が規程から上限と添付要件を整理します。適用する版と例外の相談先も添えるとよいです。</li>
+      <li><b>照合用の写しを用意する：</b>申請と添付を同じ記号で結び、AIには元のデータを直接書き換えさせません。出力先は点検結果用の別の表にします。</li>
+      <li><b>見本で試す：</b>上限超過、添付不足、重複候補、不足のない申請を含む見本を渡します。担当者の見方と比べ、拾い漏れや不要な指摘を確かめる段階です。</li>
+      <li><b>理由付きの候補を出す：</b>申請の記号、確認内容、基準の箇所を対応させます。読めない資料や判断材料のない項目は、未確認として分ける扱いです。</li>
+      <li><b>督促の下書きを作る：</b>提出状況と照合し、不足資料名と担当者が決めた期限を文面に入れます。根拠のない催促理由は加えません。</li>
+      <li><b>人が照合して引き継ぐ：</b>担当者が候補と元資料を確かめ、必要な修正を反映します。送信と承認への引継ぎは人が行う流れです。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>上限額、添付書類、重複申請</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">上限額、添付書類、重複申請</td><td data-label="見方">基準表・添付一覧・関連する申請を並べて照合する</td><td data-label="見落とすと">基準から外れた申請や重なった申請が次の処理に進む</td></tr><tr><td data-label="確かめること">規程の版と適用範囲</td><td data-label="見方">申請に適用する版、費目、例外の扱いを確かめる</td><td data-label="見落とすと">別の基準で差し戻しが行われる</td></tr><tr><td data-label="確かめること">金額・利用日・通貨</td><td data-label="見方">申請の記載を元資料と照らし、判読できない箇所を残す</td><td data-label="見落とすと">異なる内容で点検が進む</td></tr><tr><td data-label="確かめること">重複候補の理由</td><td data-label="見方">申請者・利用日・金額・証憑の対応を見て、別の支出か確認する</td><td data-label="見落とすと">別の支出を重複と扱ったり、同じ支出を重ねて処理したりする</td></tr><tr><td data-label="確かめること">宛先・不足資料名・提出期限</td><td data-label="見方">督促の下書きを担当者の指定と照らす</td><td data-label="見落とすと">別の相手や資料、期限で連絡される</td></tr><tr><td data-label="確かめること">最新の提出状況</td><td data-label="見方">送信直前に受付記録と照合する</td><td data-label="見落とすと">提出済みの資料が再び催促される</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>上限超過や添付不足について、例外を認めるか、追加の説明を求めるか。</li>
+      <li>重複候補が同じ支出か別の支出か、どの申請を訂正の対象にするか。</li>
+      <li>督促先と提出期限をどう決め、どの文面で送信するか。</li>
+      <li>確認が済んだ申請を承認へ回すか、差し戻すか。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>先の架空の表を添え、確認候補と督促文を分けて受け取る指示の作例です。</p>
+    <pre class="prompt">目的は、経費申請の点検と不足資料の督促文の下書き作成です。
+入力は添付した架空の規程表と申請表です。
+表にある情報だけを使い、上限の額や例外を推測しない方針です。
+申請ごとに「記号／確認候補／該当する基準／照合した情報／未確認」を出す形にします。
+重複は組合せと一致した項目を示し、確定せず候補として残します。
+不足のない申請も結果に残し、元のデータの変更や行の削除は行いません。
+自信のない所は未確認の欄へ分けます。
+督促文は添付不足の申請を対象にし、宛先と期限は〔宛先〕〔提出期限〕のまま残します。
+文面には不足資料名と確認の依頼だけを含め、送信は行いません。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://learn.microsoft.com/en-us/dynamics365/project-operations/prod-exp/expense-management" rel="noopener" target="_blank">Expense management overview</a>：社内方針に合わない経費・領収書の検出に関する説明</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/power-query/working-with-duplicates" rel="noopener" target="_blank">重複する値の操作</a>：別の行に一致する値を持つ行の抽出結果</li>
+      <li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6459.htm" rel="noopener" target="_blank">No.6459 出張旅費、宿泊費、日当、通勤手当などの取扱い</a>：出張旅費等に関する帳簿のみの保存による取扱い。個別の税務判断には用いない</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-billing">請求と入金：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/payment-notice-transfer">支払通知・振込データの作成</a></li>
+      <li><a href="/ai/tasks/receipt-sorting">経費・領収書の仕分け</a></li>
+      <li><a href="/column/hallucination-office">ハルシネーションとは｜事務で起きる誤りと資料・数字の確かめ方</a></li>
+      <li><a href="/ai/tasks/invoice-preparation">請求書の作成と送付の準備</a></li>
+      <li><a href="/ai/tasks/estimate-drafting">見積書の作成</a></li>
+      <li><a href="/ai/tasks/payment-matching">入金の消込</a></li>
+      <li><a href="/ai/tasks/receipt-sorting">経費・領収書の仕分け</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

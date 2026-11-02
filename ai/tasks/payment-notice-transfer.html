@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>支払通知・振込データをAIで下書きする手順｜口座・金額と二重支払の確認｜Vaynexis</title>
+  <meta name="description" content="支払通知の下書きと振込データの確認表をAIに任せるために、渡す資料、進め方、人が確かめる点を整理します。承認済みの口座一覧との照合、明細からの合計の検算、過去の支払を含む二重支払候補の確認を軸に、銀行への取込・送信までの役割を分けます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="支払通知・振込データをAIで下書きする手順｜口座・金額と二重支払の確認｜Vaynexis">
+  <meta property="og:description" content="支払通知の下書きと振込データの確認表をAIに任せるために、渡す資料、進め方、人が確かめる点を整理します。承認済みの口座一覧との照合、明細からの合計の検算、過去の支払を含む二重支払候補の確認を軸に、銀行への取込・送信までの役割を分けます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/payment-notice-transfer">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/payment-notice-transfer">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"支払通知・振込データをAIで下書きする手順。口座・金額と二重支払の確認","description":"支払通知の下書きと振込データの確認表をAIに任せるために、渡す資料、進め方、人が確かめる点を整理します。承認済みの口座一覧との照合、明細からの合計の検算、過去の支払を含む二重支払候補の確認を軸に、銀行への取込・送信までの役割を分けます。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/payment-notice-transfer"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"支払通知・振込データの作成","item":"https://vaynexis.jp/ai/tasks/payment-notice-transfer"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">支払通知・振込データの作成</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">支払通知・振込データをAIで下書きする手順。口座・金額と二重支払の確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIに任せるのは、支払通知の下書きと振込データの確認表づくりです。人は口座と金額の突合、二重支払の検出を中心に確かめます。振込先は承認済みの一覧と照合し、候補の採否、銀行への取込・送信、承認は人が担う流れにします。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこのページの最後）</p>
+    <p>取引先への支払をまとめる経理事務では、通知文を作り、銀行へ渡す内容を整えます。金額が合っていても振込先や対象の請求が違えば意図した支払にならないため、文面と支払内容を対応させる確認が必要です。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例であり、実在の会社の話や、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（支払通知・振込データの作成）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（支払通知・振込データの作成）</h2>
+    <p>承認済みの一覧から、取引先ごとの通知文と、元の明細をたどれる確認表を下書きにします。不一致や請求の重なりは候補として残し、口座の補完や支払対象の確定は含めません。 阿波銀行の総合振込の資料には、振込先の口座番号を示す項目があります。 Power Queryの「重複を保持」は、選択した列で値が繰り返される行を表示する機能です（確認日：2026-11-02）。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>承認済みの支払一覧：取引先、請求番号、金額、支払日、元資料の参照先を含めます。</li>
+      <li>承認済みの振込先マスター：銀行・支店・口座種別・口座番号・受取人の一覧です。</li>
+      <li>支払済み・保留中の一覧です。</li>
+      <li>支払通知の見本と、利用銀行・契約の受入形式の資料です。</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>取引先ごとの支払通知の下書きです。</li>
+      <li>支払一覧・口座一覧・振込用の値を並べた、参照元付きの確認表です。</li>
+      <li>不一致、未記入、二重支払の疑いと理由の一覧です。</li>
+      <li>対象件数・金額の集計案、人の検算欄です。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>支払対象と資料を固定する：</b>支払対象と保留分を人が分け、渡す情報の範囲を先に決めます。元の台帳や口座一覧をAIに直接書き換えさせず、写しと別の出力先を用意する形です。</li>
+      <li><b>ダミーの見本で試す：</b>口座の先頭のゼロ、未記入、請求の重複を含む例を用意します。候補が出るか、人が見本と照合します。</li>
+      <li><b>通知と確認表を対応させる：</b>元の行をたどれる印を付け、通知と確認表を作ります。口座一覧にない値や不一致は補完せず、別欄に残す扱いです。</li>
+      <li><b>過去の支払も並べて比べる：</b>請求番号・取引先・支払日を組み合わせ、同額の明細や支払済みの請求を候補にします。支払日が違う同じ請求も見られるよう、請求番号と取引先だけでも照合するとよいです。</li>
+      <li><b>明細から別に検算する：</b>人が確定した対象について、件数と合計金額を元の明細から別に算出し、集計案と照合します。合計だけで済ませず、取引先ごとの通知額と振込用の値も確かめます。</li>
+      <li><b>形式を確かめて人が取り込む：</b>利用銀行・契約の資料に沿って人が振込用ファイルを整え、送信・確定を伴わない方法で取込テストを行います。桁数・文字種・先頭のゼロを確認し、表示された受取人・金額を照合した後、承認と送信を人が担います。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>口座と金額の突合、二重支払の検出</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">口座と金額の突合、二重支払の検出</td><td data-label="見方">承認済みの口座一覧・支払一覧・支払済み一覧と、確認表の各明細を照合します。</td><td data-label="見落とすと">別口座への支払、金額の相違、同じ請求への重複した支払につながります。</td></tr><tr><td data-label="確かめること">振込先の対応</td><td data-label="見方">銀行・支店・口座種別・口座番号・受取人を承認済み情報と比べます。</td><td data-label="見落とすと">別の取引先の口座が結び付きます。</td></tr><tr><td data-label="確かめること">通知と振込用の値</td><td data-label="見方">通知の明細金額と支払日が、確定した支払一覧・振込用の値に対応するかを見ます。</td><td data-label="見落とすと">相手への案内と実際の支払内容が食い違います。</td></tr><tr><td data-label="確かめること">候補の扱い</td><td data-label="見方">同じ請求番号・取引先・金額の行と、支払日をまたぐ行を比べ、残す理由を記録します。</td><td data-label="見落とすと">重複した請求が残る一方、別の支払が除外されることもあります。</td></tr><tr><td data-label="確かめること">件数・合計金額</td><td data-label="見方">確定対象の明細から別に集計し、振込用ファイルと比べます。</td><td data-label="見落とすと">対象の抜けや余分な明細が生じます。</td></tr><tr><td data-label="確かめること">取込後の表示</td><td data-label="見方">利用先の指定形式に沿うかを確認し、桁数・文字種・先頭のゼロが保たれているかを見ます。</td><td data-label="見落とすと">取込エラーや意図した値との相違が生じます。</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>不一致の解消に使う根拠と、振込先の変更を承認するかどうかです。</li>
+      <li>重複候補が同じ請求なのか、別の支払なのか、保留が必要なのかです。</li>
+      <li>金額・支払日・手数料の負担など、取引先との合意に照らした支払内容です。</li>
+      <li>通知文の宛先と送付、振込用ファイルの取込、最終承認と送信です。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>架空の支払一覧を使い、候補を残す指示の形を示します。</p>
+
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">取引先</th><th scope="col">請求番号</th><th scope="col">支払金額の置き方</th><th scope="col">確認候補</th></tr></thead><tbody><tr><td data-label="取引先">架空甲社</td><td data-label="請求番号">請求あ</td><td data-label="支払金額の置き方">甲社の承認額</td><td data-label="確認候補">同じ請求番号・同額の行があります。</td></tr><tr><td data-label="取引先">架空乙社</td><td data-label="請求番号">請求い</td><td data-label="支払金額の置き方">乙社の承認額</td><td data-label="確認候補">照合対象です。</td></tr><tr><td data-label="取引先">架空丙社</td><td data-label="請求番号">請求う</td><td data-label="支払金額の置き方">丙社の承認額</td><td data-label="確認候補">照合対象です。</td></tr><tr><td data-label="取引先">架空丁社</td><td data-label="請求番号">請求え</td><td data-label="支払金額の置き方">丁社の承認額</td><td data-label="確認候補">照合対象です。</td></tr><tr><td data-label="取引先">架空戊社</td><td data-label="請求番号">請求お</td><td data-label="支払金額の置き方">戊社の承認額</td><td data-label="確認候補">照合対象です。</td></tr><tr><td data-label="取引先">架空甲社</td><td data-label="請求番号">請求あ</td><td data-label="支払金額の置き方">甲社の承認額</td><td data-label="確認候補">重複の疑いとして人に戻します。</td></tr></tbody></table></div>
+    <pre class="prompt">目的：上の表から、通知の下書きと振込データの確認表を作る。
+銀行・支店は「架空銀行・架空支店」、口座番号は「0000000」というダミーとする。
+支払日は承認済み一覧の指定日とし、記載がなければ未記入とする。
+金額の記号は数値にせず、集計欄は確認待ちにする。
+使う資料：支払一覧、承認済み口座一覧、支払済み一覧、通知の見本。
+資料の値だけを使い、推測・補完しない。
+出力：通知の下書き、元の行をたどれる照合表、確認候補の一覧。
+請求番号・取引先・支払日・金額を照合し、日が違う同じ請求も候補に残す。
+架空甲社の同じ請求は削除せず、候補の理由を添える。
+資料の不足や判断に自信のない所は「人への確認」欄に出す。
+元データは変更せず、銀行に取り込むファイルの確定・送信・承認は行わない。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.awabank.co.jp/houjin/service/fb/zengin/sougou/" rel="noopener" target="_blank">総合振込（全銀協制定フォーマット）</a>：同行の資料に振込先口座番号の項目があること。利用銀行への適用は未確認です。</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/power-query/working-with-duplicates" rel="noopener" target="_blank">重複する値の操作 - Power Query</a>：選択した列の値が繰り返される行を表示する説明。二重支払の確定を説明した資料ではありません。</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-billing">請求と入金：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/payment-matching">入金の消込</a></li>
+      <li><a href="/ai/tasks/expense-claim-check">経費精算の点検と督促文の下書き</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/ai/tasks/invoice-preparation">請求書の作成と送付の準備</a></li>
+      <li><a href="/ai/tasks/estimate-drafting">見積書の作成</a></li>
+      <li><a href="/ai/tasks/payment-matching">入金の消込</a></li>
+      <li><a href="/ai/tasks/receipt-sorting">経費・領収書の仕分け</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

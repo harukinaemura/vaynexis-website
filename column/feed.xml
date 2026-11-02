@@ -7,6 +7,94 @@
   <updated>2026-11-02T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
   <entry>
+    <title>福井・岐阜・三重と近畿のDX・AI支援｜府県別記事の入口</title>
+    <link href="https://vaynexis.jp/column/dx-ai-support-prefecture-guide"/>
+    <id>https://vaynexis.jp/column/dx-ai-support-prefecture-guide</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>中小企業がDX・AIの補助金と相談先を調べる際に、どの府県別記事から読み、公式ページのどこへ進むかを整理します。窓口の役割、費用負担、募集状況の見分け方を比較し、受付が終わっていた場合に次に確かめる先まで、迷いやすい点をまとめた入口です。</summary>
+  </entry>
+  <entry>
+    <title>ChatGPT・Claudeの学習設定と保存｜会社情報を入れる前の確認</title>
+    <link href="https://vaynexis.jp/column/ai-training-retention-check"/>
+    <id>https://vaynexis.jp/column/ai-training-retention-check</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>会社の情報を入力する前に、学習への利用、画面に残る履歴、提供元での保存期間を分けて確かめます。個人向け・法人向け・外部システムとの連携で説明が異なる点を公式資料から整理し、設定名、確認する担当者、確認後に残す記録を一覧表で示します。</summary>
+  </entry>
+  <entry>
+    <title>AIの調べものは出典の状態を確かめる｜保留の理由と記録の残し方</title>
+    <link href="https://vaynexis.jp/column/ai-research-source-check"/>
+    <id>https://vaynexis.jp/column/ai-research-source-check</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>AIの回答に出典が付いていても、リンク先を読み、情報の時点と対象が合うかを確かめます。出典が開けない・古い・回答を支えない状態を区別する表と、保留の理由を残す方法を紹介します。調べ直しの依頼文、共有前の確認項目まで整理します。</summary>
+  </entry>
+  <entry>
+    <title>ダブルチェックのやり方｜見落としを考える独立性と知識、再確認</title>
+    <link href="https://vaynexis.jp/column/double-check-design"/>
+    <id>https://vaynexis.jp/column/double-check-design</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>ダブルチェックをしても誤りが残るときは、人数だけでなく確認の進め方を見直します。医療安全の一次資料を手がかりに、依頼と完了の区別、相手に答えを合わせない確認、知識に応じた役割分担、中断や修正後の見直し、確認範囲を残す記録を事務の視点で整理します。</summary>
+  </entry>
+  <entry>
+    <title>議事録のテンプレート｜決定事項・担当・期限・未定事項の分け方</title>
+    <link href="https://vaynexis.jp/column/meeting-minutes-fields"/>
+    <id>https://vaynexis.jp/column/meeting-minutes-fields</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>議事録の欄を、会議情報、議論、決定事項と理由、未定事項に分ける考え方を整理します。担当と期限を実行する作業に結び付け、不足する情報と次の確認まで残す方法を、表の見本とともに紹介します。会議後に決定内容を追える記録にしたい担当者向けの解説です。</summary>
+  </entry>
+  <entry>
+    <title>領収書・レシートのAI読取で確かめる原本の項目と保存の注意</title>
+    <link href="https://vaynexis.jp/column/receipt-ai-reading-check"/>
+    <id>https://vaynexis.jp/column/receipt-ai-reading-check</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>領収書・レシートをAIで読み取った後に、日付・支払先・金額・税率・印字番号を原本と照合する進め方を整理します。架空の照合表を使い、入力する文字データの確認と、紙に代わる画像・保存方法の確認を分け、紙の扱いを専門家に確認する前の準備までまとめます。</summary>
+  </entry>
+  <entry>
+    <title>Claude Codeの初期設定｜課金先・権限・共通指示を確かめる</title>
+    <link href="https://vaynexis.jp/column/claude-code-setup-check"/>
+    <id>https://vaynexis.jp/column/claude-code-setup-check</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>Claude Codeを仕事で使い始める前に、サブスクリプションとAPI従量課金のどちらが使われるかを確かめる手順を整理します。導入経路の選び方、作業フォルダと権限を絞る依頼票、CLAUDE.mdに残す共通指示の考え方を、公式資料に沿って紹介します。</summary>
+  </entry>
+  <entry>
+    <title>Claudeのファイル作成を確認する｜設定・保存先と形式別の検品</title>
+    <link href="https://vaynexis.jp/column/claude-file-creation-check"/>
+    <id>https://vaynexis.jp/column/claude-file-creation-check</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>作成を頼んだファイルは、受け取ってから何を確かめればよいのでしょうか。機能の設定と保存先を確認する流れ、表計算・スライド・文書・配布用ファイルで見る点を整理します。元のファイルを残して修正版を依頼する短い指示文と、業務で使う前の確認表もまとめました。</summary>
+  </entry>
+  <entry>
+    <title>日本語スクショをAIに読ませる前後の確認｜画像の準備と照合・削除</title>
+    <link href="https://vaynexis.jp/column/japanese-screenshot-ai"/>
+    <id>https://vaynexis.jp/column/japanese-screenshot-ai</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>日本語のスクショを読み取らせる前の文字の拡大や向き、伏せる情報を整理します。数字・名前・日付を原画像の位置と並べる照合表と、読めない箇所を保留にする指示文を掲載。作業後に確認する会話と別保存の画像、削除と保持の違いも公式資料に沿って説明します。</summary>
+  </entry>
+  <entry>
+    <title>AIでメールを下書きするときの接続権限・送信承認・記憶の確認</title>
+    <link href="https://vaynexis.jp/column/ai-email-draft-permissions"/>
+    <id>https://vaynexis.jp/column/ai-email-draft-permissions</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>メールの下書きをAIに任せる前に、接続するアカウント、許可する操作、送信前の承認、記憶の設定をどう確かめるかを整理します。権限の正式名称と省略表示の違い、参照してよい情報を記す依頼票、下書き保存までを指定する依頼文と確認表をまとめました。</summary>
+  </entry>
+  <entry>
+    <title>録音から議事録を作る前に｜入力条件と原音照合、配布後のファイル整理</title>
+    <link href="https://vaynexis.jp/column/audio-to-minutes-check"/>
+    <id>https://vaynexis.jp/column/audio-to-minutes-check</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>録音から議事録の下書きを作る担当者向けに、渡せる契約・形式・容量の確認、決定事項や担当を原音に戻して確かめる方法、配布後の保存・削除を整理します。投入前の選び方、原音の位置と確認者を残す照合表、推測で補わない指示文、最後の確認表をまとめました。</summary>
+  </entry>
+  <entry>
     <title>ClaudeでExcel・PowerPointを作る｜材料と確認</title>
     <link href="https://vaynexis.jp/column/claude-excel-powerpoint"/>
     <id>https://vaynexis.jp/column/claude-excel-powerpoint</id>
