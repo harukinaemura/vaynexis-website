@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDFの表をExcelへ変換した後の確認｜件数・合計・行のずれ｜Vaynexis</title>
+  <meta name="description" content="PDFの表をExcelへ変換した後、明細の件数、金額の合計、列の位置を原本と照合する手順をまとめます。空に見える識別欄や、文字列になった金額を見落とす場面を短い表で示し、ページの境目の確認、ずれの修正、確認結果の記録まで整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="PDFの表をExcelへ変換した後の確認｜件数・合計・行のずれ｜Vaynexis">
+  <meta property="og:description" content="PDFの表をExcelへ変換した後、明細の件数、金額の合計、列の位置を原本と照合する手順をまとめます。空に見える識別欄や、文字列になった金額を見落とす場面を短い表で示し、ページの境目の確認、ずれの修正、確認結果の記録まで整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/pdf-table-to-excel">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/pdf-table-to-excel">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"PDFの表をExcelへ変換した後の確認｜件数・合計・行のずれ","description":"PDFの表をExcelへ変換した後、明細の件数、金額の合計、列の位置を原本と照合する手順をまとめます。空に見える識別欄や、文字列になった金額を見落とす場面を短い表で示し、ページの境目の確認、ずれの修正、確認結果の記録まで整理します。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/pdf-table-to-excel"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"PDFの表をExcelへ変換した後の確認","item":"https://vaynexis.jp/column/pdf-table-to-excel"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">PDFの表をExcelへ変換した後の確認</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">PDFの表をExcelへ変換した後の確認｜件数・合計・行のずれ</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>変換後の表は、原本の明細と対応づけて、件数、金額の合計、列の位置を順に確かめます。件数が合っていても、空に見えるセルや数字として扱われない金額が混ざっている可能性を見直すことが大切です。差が出た箇所は原本のページと明細まで戻り、直した内容と再確認の結果を残します。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこの記事の最後）</p>
+    <p>この記事は、請求書・納品書・報告書のPDFの表をExcelに移して集計する小さな会社の事務の担当者が、変換した表をそのまま使う前に、件数と合計で確かめるときの整理です。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月2日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">行の区切りとページの境目を見る</a></li>
+      <li><a href="#s2">取り込みでは対象の表を先に確かめる</a></li>
+      <li><a href="#s3">明細の範囲をそろえて件数・合計・列を見る</a></li>
+      <li><a href="#s4">空に見える識別欄と文字列の金額を区別する</a></li>
+      <li><a href="#s5">差が出た場所だけ直し、同じ範囲で確かめ直す</a></li>
+      <li><a href="#s6">照合した範囲と結果を短く残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．行の区切りとページの境目を見る</h2>
+    <p>この記事の例は説明のための架空の例です。実在の会社の話ではありません。</p>
+    <p>複数行にまたがるデータを正しく識別できない場合、画面操作や専用のコードで整形できることがあります（確認日：2026-11-02）。 連続ページの似た表を自動で結合するかどうかは、MultiPageTablesという設定で制御されます（確認日：2026-11-02）。</p>
+    <p>ここからの確認手順は当社の整理です。取り込み後の見た目を整える前に、原本のどのページの、どの明細に対応するかを追える状態にします。原本で改行された品名や備考は、明細の続きなのか、別の明細なのかを内容から見分けます。表がページをまたぐ箇所では、前ページの最後と次ページの最初を並べて見るとよいです。</p>
+    <p>この段階では、行が増えた理由を確かめずに削除したり、空欄をまとめて埋めたりしない方が、元の対応関係をたどりやすくなります。特に品名と金額が別の行へ移ったように見える箇所は、まとまりを確かめてから直します。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．取り込みでは対象の表を先に確かめる</h2>
+    <p>Excelの取り込み手順では、ファイルを開くとNavigatorという画面に利用可能な表が表示されます（確認日：2026-11-02）。 Power Queryで先にデータを整える場合は、Transform Dataを選びます（確認日：2026-11-02）。</p>
+    <p>ここからは当社の整理です。取り込む表を選ぶときは、表示された列名だけで判断せず、先頭と末尾の明細、金額のある列を原本と見比べます。隣の集計表や注記を選んでいないかも、この時点で確認する流れです。</p>
+    <p>また、整形前の表を残しておくと、後で生じた差が読み取り時からあったのか、修正中に生じたのかを調べる手掛かりになります。作業用の表には原本のファイル名と対象ページを書き添え、照合の途中で参照先が分からなくならないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．明細の範囲をそろえて件数・合計・列を見る</h2>
+    <p>この節は当社の整理です。</p>
+    <p>まず、件数として数える単位を「明細」にそろえます。原本の見出し、小計、ページ番号、説明だけの行は、明細と区別して控える方が照合しやすくなります。取り込んだ表の行数をそのまま原本の件数と比べる前に、何を数えた値なのかを合わせます。</p>
+    <p>次に、同じ明細範囲の金額を比較します。原本に小計と総合計がある場合は、どちらと照合したかを記録します。合計欄を明細の中に混ぜていないか、最後の明細まで計算対象にしたかも確認の対象です。差があるときはページごと、次に明細ごとへと範囲を狭めると、戻る場所を絞れます。</p>
+    <p>最後に、品名、数量、単価、金額の位置を横にたどります。合計の一致だけでは、品名と金額の組み合わせまで確かめたことにはなりません。原本と同じ列に同じ内容があるか、隣の明細へ移っていないかまで見て、確認済みの範囲を区切ります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．空に見える識別欄と文字列の金額を区別する</h2>
+    <p>この節の表と計算結果は、説明のために当社が設定・計算した値です。見出しを先頭行に置き、列は左から順に配置した想定です。金額は円単位で、文字列と記した金額以外は数値とします。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">原本の識別（A列）</th><th scope="col">原本の金額（B列）</th><th scope="col">変換後の識別（C列）</th><th scope="col">変換後の金額（D列）</th></tr></thead><tbody><tr><td data-label="原本の識別（A列）">甲</td><td data-label="原本の金額（B列）">100</td><td data-label="変換後の識別（C列）">甲</td><td data-label="変換後の金額（D列）">100</td></tr><tr><td data-label="原本の識別（A列）">乙</td><td data-label="原本の金額（B列）">200</td><td data-label="変換後の識別（C列）">乙</td><td data-label="変換後の金額（D列）">200</td></tr><tr><td data-label="原本の識別（A列）">丙</td><td data-label="原本の金額（B列）">300</td><td data-label="変換後の識別（C列）">丙</td><td data-label="変換後の金額（D列）">文字列の「300」</td></tr><tr><td data-label="原本の識別（A列）">丁</td><td data-label="原本の金額（B列）">400</td><td data-label="変換後の識別（C列）">丁</td><td data-label="変換後の金額（D列）">400</td></tr><tr><td data-label="原本の識別（A列）">戊</td><td data-label="原本の金額（B列）">500</td><td data-label="変換後の識別（C列）">戊</td><td data-label="変換後の金額（D列）">500</td></tr><tr><td data-label="原本の識別（A列）">己</td><td data-label="原本の金額（B列）">600</td><td data-label="変換後の識別（C列）">数式 `=""`（表示は空）</td><td data-label="変換後の金額（D列）">空白</td></tr><tr><td data-label="原本の識別（A列）">照合値（当社計算）</td><td data-label="原本の金額（B列）">合計2,100／明細6件</td><td data-label="変換後の識別（C列）">識別できる明細5件</td><td data-label="変換後の金額（D列）">下記の式による合計1,200</td></tr></tbody></table></div>
+    <p>COUNTAは空文字列も数えるため、例の識別欄を`=COUNTA(C2:C7)`で数えると、空文字列を含めて6件になります（表に基づく当社計算、機能の確認日：2026-11-02）。 SUMは参照したセルの文字列を無視するため、例の金額欄を`=SUM(D2:D7)`で合計すると、文字列の金額を除いた1,200円になります（表に基づく当社計算、機能の確認日：2026-11-02）。</p>
+    <p>これは、欠けた明細の識別欄を空文字列にする加工まで行った想定です。取り込み機能がこの数式を自動で作るという意味ではありません。件数の一致だけで終えず、原本の識別内容を照らし合わせる理由がここにあります。合計の差を調べるときも、読み取れた数字の見た目と、計算で扱われている内容を分けて見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．差が出た場所だけ直し、同じ範囲で確かめ直す</h2>
+    <p>この節の修正方針は当社の整理です。</p>
+    <p>行のずれは、原本で同じ明細に属する内容を見定めてから直します。ページの境目で抜けを見つけたときは、欠けた明細を補う前に、別の場所へ移っていないかも確認します。原本のページ、明細の識別内容、修正前と修正後を記録しておくと、後から追い直せます。</p>
+    <p>文字列の金額を数値に直す方法として、VALUE関数で文字列の数値を取り出せます（確認日：2026-11-02）。 変換の対象は計算に使う金額欄に絞り、識別用の文字を同じ操作の対象に含めない、という進め方です。</p>
+    <p>修正後は、最初と同じ明細範囲で件数と合計を確かめ直します。行を足した場合も、対象範囲の末尾まで含めたかを見直します。差が解消した後は、原本との列の対応も再確認してから集計に使う流れにします。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．照合した範囲と結果を短く残す</h2>
+    <p>この節は当社の整理です。</p>
+    <p>確認した表と日付だけでなく、どのページ、どの明細、どの金額欄を見たかも残します。未解消の差があれば「一致」とまとめず、差の内容と確認を引き継ぐ相手を書き添える形です。記録のひな形は、次のように短くできます。</p>
+    <pre class="prompt">確認日：［日付］／原本：［ファイル名・対象ページ］／対象：［明細の始めと終わり・金額欄］／件数：［原本・変換後・差］／合計：［原本・変換後・差］／列の対応：［確認結果］／修正記録：［保存先］／確認者：［担当者］</pre>
+    <p>次の担当者が差のある場所へ戻れることを目安にします。変換できた段階と、原本と照合して使えると判断した段階を、記録から区別できる状態にするとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">原本のファイル名と対象ページを記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見出し・小計・説明行を明細と区別し、件数の対象をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">空に見える識別欄の内容を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">同じ明細範囲と金額欄の合計を比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">改行箇所とページの境目で、抜け・分割・列のずれを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">金額が数値として扱われているかを確かめ、修正後にも照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">確認日・確認者・修正内容・未解消の差を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://learn.microsoft.com/en-us/power-query/connectors/pdf" rel="noopener" target="_blank">Power Query PDF connector</a>：複数行のデータを識別できない場合の整形</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/powerquery-m/pdf-tables" rel="noopener" target="_blank">Pdf.Tables</a>：連続ページの表を結合する設定</li>
+      <li><a href="https://support.microsoft.com/en-us/excel/import-data-from-data-sources-power-query" rel="noopener" target="_blank">Import data from data sources (Power Query)</a>：表の表示と、読み込み前に整形する選択肢</li>
+      <li><a href="https://support.microsoft.com/en-us/excel/functions/counta-function" rel="noopener" target="_blank">COUNTA function</a>：空文字列を含むセルの数え方と例の件数計算</li>
+      <li><a href="https://support.microsoft.com/en-us/excel/functions/sum-function" rel="noopener" target="_blank">SUM function</a>：参照セル内の文字列を無視する仕様と例の合計計算</li>
+      <li><a href="https://support.microsoft.com/en-us/excel/convert-numbers-stored-as-text-to-numbers-in-excel?ns=excel" rel="noopener" target="_blank">Convert numbers stored as text to numbers in Excel</a>：文字列から数値を取り出す方法</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/ai-consulting-guide">中小企業向けAIコンサルの選び方（相談先を目的別に比較）</a></li>
+      <li><a href="/column/shiga-ai-consultation">滋賀県のAI相談窓口｜公的な支援機関と民間の相談先の使い分け</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/column/name-variants-excel">エクセルで表記ゆれを統一する方法</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理</a></li>
+      <li><a href="/column/pdf-reading-ai">ChatGPT・ClaudeにPDFを読ませるときの注意</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

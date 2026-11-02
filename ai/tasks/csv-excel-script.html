@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV・Excelの変換・突合スクリプトをAIで作る手順と確認する点｜Vaynexis</title>
+  <meta name="description" content="AIにファイルの変換と突合のスクリプトを作らせる際、渡す材料、受け取る下書き、人が確認する点を整理します。元のファイルを残して見本で試し、件数の保存、文字化け、桁落ちを点検する進め方と、重複や不一致を人の判断に戻す指示文の作例を紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="CSV・Excelの変換・突合スクリプトをAIで作る手順と確認する点｜Vaynexis">
+  <meta property="og:description" content="AIにファイルの変換と突合のスクリプトを作らせる際、渡す材料、受け取る下書き、人が確認する点を整理します。元のファイルを残して見本で試し、件数の保存、文字化け、桁落ちを点検する進め方と、重複や不一致を人の判断に戻す指示文の作例を紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/csv-excel-script">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/csv-excel-script">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"CSV・Excelの変換・突合スクリプトをAIで作る手順と確認する点","description":"AIにファイルの変換と突合のスクリプトを作らせる際、渡す材料、受け取る下書き、人が確認する点を整理します。元のファイルを残して見本で試し、件数の保存、文字化け、桁落ちを点検する進め方と、重複や不一致を人の判断に戻す指示文の作例を紹介します。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/csv-excel-script"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"CSV・Excelの変換と突合のスクリプト","item":"https://vaynexis.jp/ai/tasks/csv-excel-script"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">CSV・Excelの変換と突合のスクリプト</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">CSV・Excelの変換・突合スクリプトをAIで作る手順と確認する点</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIに任せるのは、変換と突合を行うスクリプトと確認用の記録の下書きです。人は件数の保存、文字化け、桁落ちを中心に確かめます。元のファイルを残し、正解を用意した見本で試してから、実際のデータへの使用を判断する流れです。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこのページの最後）</p>
+    <p>システムから出した一覧を別の形式へ直し、手元の名簿と照らし合わせる仕事は、事務のデータ受け渡しで起こります。変換後に表が開けても、番号や行の対応まで確認する必要があります。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものでもありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（CSV・Excelの変換と突合のスクリプト）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（CSV・Excelの変換と突合のスクリプト）</h2>
+    <p>公式説明の確認日：2026-11-02。 Excelでは、BOM付きのUTF-8で保存されたCSVファイルを通常どおり開くことができます。 Excelには、数値テキストの先頭のゼロを削除して数値へ変換する動作があります。 Excelの数値の有効桁数は最大15桁です。 後から書式を変えても、削除された先頭のゼロは復元されません。 ここからは当社の整理です 列の対応、番号の扱い、照合する項目を人が決め、その内容に沿うスクリプトの下書きをAIに作らせます。実行方法だけでなく、変換前後の件数と、照合できなかった行を別に出す処理も対象です。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>入出力の形式、文字コード、区切りと改行の指定</li>
+      <li>列名、列の意味、番号と金額の扱い、照合する項目</li>
+      <li>個人情報を架空の値へ置き換えた見本と、人が用意した正解</li>
+      <li>使用する環境、保存先、元のファイルを上書きしない方針</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>変換と突合を行うスクリプトの下書き</li>
+      <li>必要な実行環境と、入力・出力の指定方法</li>
+      <li>入力、出力、保留の件数と、各行の行き先が分かる記録</li>
+      <li>不一致・重複・読めない行の一覧と、確認が必要な点</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>受渡条件を整理する：</b>出力する列、文字コード、番号の扱い、照合する項目を決めます。分からない条件は推測で埋めず、確認事項に分ける方針です。</li>
+      <li><b>元のデータを保護する：</b>AIに元のデータを直接書き換えさせず、コピーを入力、別の場所を出力先に指定します。既存ファイルと同じ保存先になる処理も止める設計にします。</li>
+      <li><b>下書きと記録を作らせる：</b>変換・突合の処理に加え、処理した行と保留した行を追える記録を求めます。重複や読めない行を黙って捨てないことも指示に含めるとよいです。</li>
+      <li><b>見本で試す：</b>人が実行内容を確認し、正解を用意した見本のコピーで試します。先頭のゼロ、長い番号、日本語、カンマ・引用符・セル内改行を含む値も検査対象です。</li>
+      <li><b>前後を突き合わせる：</b>入力行の行き先と出力行の元をたどり、照合する一覧のどちらにだけ存在する行も確かめます。正解との差はAIへ戻し、修正後も同じ見本で再確認する流れです。</li>
+      <li><b>人が使用を決める：</b>見本が正解と合うことを確認してから、実際のデータのコピーに使います。結果を受渡先で読み直し、人が確認を終えたものを渡す運用です。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>件数の保存、文字化け、桁落ち</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">件数の保存、文字化け、桁落ち</td><td data-label="見方">入出力と保留の記録を照合し、日本語・番号を元の値と比べる</td><td data-label="見落とすと">行の欠落や値の変化が残る</td></tr><tr><td data-label="確かめること">行の対応</td><td data-label="見方">入力行の行き先を追い、出力が増減した理由を見る</td><td data-label="見落とすと">重複や結合で対象が変わる</td></tr><tr><td data-label="確かめること">照合する項目の重複・空欄</td><td data-label="見方">重なる番号と番号のない行が保留に残るかを見る</td><td data-label="見落とすと">別の会員が結び付く</td></tr><tr><td data-label="確かめること">両方向の不一致</td><td data-label="見方">元の一覧と照合先のそれぞれにしかない行を見る</td><td data-label="見落とすと">片側の不足だけが残る</td></tr><tr><td data-label="確かめること">セル内の区切り・改行</td><td data-label="見方">カンマ・引用符・改行を含む見本が正解の列に収まるかを見る</td><td data-label="見落とすと">列や行の対応がずれる</td></tr><tr><td data-label="確かめること">保存先と再読み込み</td><td data-label="見方">元のファイルが残り、受渡先で読んだ値が正解と合うかを見る</td><td data-label="見落とすと">元の値や受渡後の変化を追えなくなる</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>照合に使う列と、同じ相手として扱う範囲</li>
+      <li>重複や不一致を残すか、修正するか、確認に戻すか</li>
+      <li>番号の補完、氏名の置換、金額の修正が必要かどうか</li>
+      <li>確認を終えた結果を、業務に使い受渡先へ渡すかどうか</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>架空の会員一覧と照合先を渡し、処理と確認事項を分けて受け取る作例です。</p>
+    <pre class="prompt">架空の会員一覧を、指定の表形式へ変換し、照合先と突合するスクリプトの下書きを作る依頼です。
+材料は会員番号・氏名・金額の列を持つ見本、照合先、出力仕様、正解結果です。
+会員番号は文字列として先頭のゼロと末尾まで保持し、金額とは分けて扱う方針です。
+提供資料にある仕様だけを使い、文字コードや照合する列が不明なら、先に確認事項を出す形とします。
+元のファイルは読み取りだけに使い、別の場所へ保存する構成を求めます。
+重複、不一致、読めない行は削除や自動補完をせず、元の行を追える保留一覧に残す方針です。
+入力・出力・保留の件数、両方向の不一致、実行方法、見本での確認方法も必要です。
+自信のない処理や未確定の仕様は別の欄に分け、人が確認する前提の下書きとして提示する形を求めます。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、当社のAI（Claude）で作り、作る係と確かめる係を分けて、検査記録つきで納めます。AIの契約がなくてもお受けできます。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/opening-csv-utf-8-files-correctly-in-excel" rel="noopener" target="_blank">Excel で CSV UTF-8 ファイルを正しく開くには</a>：BOM付きUTF-8の読み込み条件</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/keeping-leading-zeros-and-large-numbers" rel="noopener" target="_blank">先頭のゼロおよび大きい数値の保持</a>：先頭ゼロの変換、有効桁数、書式変更で復元できない点</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-small-automation">小さな自動化：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/spreadsheet-gas">スプレッドシート・GAS（1機能）</a></li>
+      <li><a href="/column/pdf-table-to-excel">PDFの表をExcelにする方法｜変換したあとに確かめる件数と合計</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/ai/tasks/spreadsheet-gas">スプレッドシート・GAS（1機能）</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

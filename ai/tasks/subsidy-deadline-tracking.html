@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>補助金・助成金の締切をAIで追跡する手順｜公募要領の版と原文を確かめる｜Vaynexis</title>
+  <meta name="description" content="補助金・助成金の締切管理では、AIに公式資料から一覧の下書きと変更候補を出させ、人が公募要領の版と締切の原文を照合します。渡す資料、期限を分ける表の作り方、見本での確認、更新時に履歴を残す手順を整理し、申請するかどうかは人が判断する流れを示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="補助金・助成金の締切をAIで追跡する手順｜公募要領の版と原文を確かめる｜Vaynexis">
+  <meta property="og:description" content="補助金・助成金の締切管理では、AIに公式資料から一覧の下書きと変更候補を出させ、人が公募要領の版と締切の原文を照合します。渡す資料、期限を分ける表の作り方、見本での確認、更新時に履歴を残す手順を整理し、申請するかどうかは人が判断する流れを示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/subsidy-deadline-tracking">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/subsidy-deadline-tracking">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"補助金・助成金の締切をAIで追跡する手順。公募要領の版と原文を確かめる","description":"補助金・助成金の締切管理では、AIに公式資料から一覧の下書きと変更候補を出させ、人が公募要領の版と締切の原文を照合します。渡す資料、期限を分ける表の作り方、見本での確認、更新時に履歴を残す手順を整理し、申請するかどうかは人が判断する流れを示します。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/subsidy-deadline-tracking"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"補助金・助成金の締切の追跡","item":"https://vaynexis.jp/ai/tasks/subsidy-deadline-tracking"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">補助金・助成金の締切の追跡</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">補助金・助成金の締切をAIで追跡する手順。公募要領の版と原文を確かめる</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIに任せるのは、渡した公式資料から締切一覧と変更候補の下書きを作る範囲です。人は公募要領の版と締切日の原文を中心に、年度・枠・募集回、期限の種類、時刻を確かめます。申請するかどうかを判断する前に、出所と取得日までたどれる一覧を整えます。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこのページの最後）</p>
+    <p>募集情報を集めて申請準備の予定を立てる事務では、転記した日付が何の期限なのかを確かめる必要があります。デジタル化・AI導入補助金2026の公式日程では、確定した募集回だけを公表し、以降の日程を随時更新すると案内しています。同補助金の通常枠のページも、以降の日程は事業スケジュールで確認するよう案内しています。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（補助金・助成金の締切の追跡）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（補助金・助成金の締切の追跡）</h2>
+    <p>ここからは当社の整理です。 担当者が集めた公式ページと公募要領を材料に、AIへ期限の抜き出し、一覧の下書き、前回から変わった箇所の抽出を任せます。渡した資料にない日付を補わせず、不明点は確認待ちに分ける扱いです。情報を集め直す担当者と再確認の予定も人が決め、資料を渡すたびに前回分と比べる運用にします。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>制度名・年度・枠・募集回を指定した追跡対象の一覧</li>
+      <li>公式ページと公募要領の本文、URL、取得日、版や改訂日の表示</li>
+      <li>前回確認した資料と締切一覧の複製、確認済み箇所の記録</li>
+      <li>申請、事前書類の発行、事業後の報告など、分けて管理する期限の種類</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>年度・枠・募集回と期限の種類を分けた一覧の下書き</li>
+      <li>締切の原文、公募要領の版・改訂日、出所URL・取得日を添えた行</li>
+      <li>前回と今回の記載の差、変更箇所をたどるページや見出し</li>
+      <li>記載なし、読み取り不能、資料間の食い違いを集めた確認待ち欄</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>追跡対象を固定する：</b>制度名だけでまとめず、年度・枠・募集回まで識別できるようにします。確認する公式ページと公募要領を人が選びます。</li>
+      <li><b>資料の状態を残す：</b>本文とURL、取得日時、版・改訂日を控えます。版表示が見当たらない資料は、その旨と作成日などを残し、AIに版番号を作らせません。</li>
+      <li><b>見本で抜き出しを試す：</b>範囲を絞って下書きを作り、原文・期限の種類・時刻が対応しているかを人が照合します。予定や記載なしの扱いもここで確かめるとよいです。</li>
+      <li><b>元の一覧とは別に出す：</b>AIに元のデータを直接書き換えさせず、複製から更新案を作ります。前回の値と今回の値を並べ、違いが分かる形にします。</li>
+      <li><b>食い違いを保留する：</b>日程ページと公募要領の記載が異なる箇所は、双方の原文と出所を残します。どちらを採るかAIに決めさせず、人が変更告知や窓口を確認します。</li>
+      <li><b>照合後に更新する：</b>確認した担当者が一覧へ反映し、変更前の値と確認日を残します。次に公式資料を開き直す担当者と時期も決めておきます。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>公募要領の版、締切日の原文確認</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">公募要領の版、締切日の原文確認</td><td data-label="見方">掲載元の案内と要領の版・改訂日を照合し、締切の該当箇所を開く</td><td data-label="見落とすと">旧資料の日付が一覧に残る</td></tr><tr><td data-label="確かめること">年度・枠・募集回</td><td data-label="見方">締切と同じ欄の見出しや注記まで読む</td><td data-label="見落とすと">別の募集の期限として管理される</td></tr><tr><td data-label="確かめること">期限の種類</td><td data-label="見方">申請、事前書類の発行、事業後の報告を分ける</td><td data-label="見落とすと">別の手続きの期限が申請予定に入る</td></tr><tr><td data-label="確かめること">時刻と予定表記</td><td data-label="見方">日付に続く時刻や「予定」を原文と比べる</td><td data-label="見落とすと">時刻や確定状況が伝わらない</td></tr><tr><td data-label="確かめること">出所と取得日時</td><td data-label="見方">行ごとのURLから該当箇所へ戻れるかを見る</td><td data-label="見落とすと">変更箇所の確認に使う資料が分からなくなる</td></tr><tr><td data-label="確かめること">変更・不明点の扱い</td><td data-label="見方">変更前後の原文と確認待ち欄を確認する</td><td data-label="見落とすと">未確認の日付が確定扱いになる</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>追跡する募集の選定と、申請するかどうかの判断</li>
+      <li>公式資料間に食い違いがある場合の問い合わせと、確認後の採用値</li>
+      <li>社内の準備期限、再確認の時期、担当者への連絡と一覧の確定</li>
+      <li>対象要件や法律・税務・労務・会計に関わる解釈は、出典の公式資料を示して専門家に確認</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>架空の一覧を材料に、原文と不明点を分けて出すための指示文です。</p>
+    <pre class="prompt">目的は、架空の青い机支援・白い棚支援・丸い窓支援の締切一覧の下書き作成です。
+材料は、担当者が添える今回の資料、前回の資料、既存一覧の複製です。
+資料に書かれたことだけを使い、日付・版番号・URLの推測はしない扱いとします。
+
+出力欄は、制度名、年度、枠、募集回、期限の種類、締切の原文、
+整理した日付と時刻、予定の表示、公募要領の版・改訂日、
+出所URL、該当ページや見出し、取得日、確認状況とします。
+申請と事前書類の発行、事業後の報告は別の行に分けます。
+前回からの変更候補は、変更前後の原文と出所を並べます。
+自信のない所、記載なし、資料間の食い違いは別の確認待ち欄に出します。
+同じ記載でも、今回開いて確認したか分かる形とします。
+元の一覧への上書きや予定表への登録はせず、下書きだけを出す範囲です。
+申請の可否や採択の見込みは判断しません。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://it-shien.smrj.go.jp/schedule/" rel="noopener" target="_blank">事業スケジュール ｜ デジタル化・AI導入補助金2026</a>：導入：確定した募集回のみ公表し、以降は随時更新する案内</li>
+      <li><a href="https://it-shien.smrj.go.jp/applicant/subsidy/normal/" rel="noopener" target="_blank">通常枠 ｜ デジタル化・AI導入補助金2026</a>：導入：以降の日程を事業スケジュールへ案内する記載</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-data-cleanup">整える・調べる：この分野の入口ページ</a></li>
+      <li><a href="/column/yorozu-ai-adviser">よろず支援拠点・生産性向上支援センターのAIアドバイザーとは</a></li>
+      <li><a href="/ai-consulting-guide">中小企業向けAIコンサルの選び方（相談先を目的別に比較）</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a></li>
+      <li><a href="/ai/tasks/paper-pdf-to-ledger">紙・PDFの読み取りと台帳化</a></li>
+      <li><a href="/ai/tasks/table-reconciliation">複数の表の突合（重複・欠落の検出）</a></li>
+      <li><a href="/ai/tasks/notation-unification">表記ゆれの統一（住所・社名・日付）</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

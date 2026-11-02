@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>紙・PDFをAIで台帳にする手順｜枚数の突合と読み取り誤りを確かめる｜Vaynexis</title>
+  <meta name="description" content="紙の伝票やPDFから、日付・取引先・金額・摘要を台帳の下書きにする仕事を整理します。AIに渡す資料と出してもらうもの、原本の枚数と台帳の行の対応、読み取りが不確かな箇所の扱いを示し、人が確認してから転記するための手順と指示文の作例をまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="紙・PDFをAIで台帳にする手順｜枚数の突合と読み取り誤りを確かめる｜Vaynexis">
+  <meta property="og:description" content="紙の伝票やPDFから、日付・取引先・金額・摘要を台帳の下書きにする仕事を整理します。AIに渡す資料と出してもらうもの、原本の枚数と台帳の行の対応、読み取りが不確かな箇所の扱いを示し、人が確認してから転記するための手順と指示文の作例をまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/paper-pdf-to-ledger">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/paper-pdf-to-ledger">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"紙・PDFをAIで台帳にする手順。枚数の突合と読み取り誤りを確かめる","description":"紙の伝票やPDFから、日付・取引先・金額・摘要を台帳の下書きにする仕事を整理します。AIに渡す資料と出してもらうもの、原本の枚数と台帳の行の対応、読み取りが不確かな箇所の扱いを示し、人が確認してから転記するための手順と指示文の作例をまとめます。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/paper-pdf-to-ledger"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"紙・PDFの読み取りと台帳化","item":"https://vaynexis.jp/ai/tasks/paper-pdf-to-ledger"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">紙・PDFの読み取りと台帳化</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">紙・PDFをAIで台帳にする手順。枚数の突合と読み取り誤りを確かめる</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、書類から項目を抜き出し、台帳の下書きと確認が必要な箇所の一覧を作る役割を任せます。人が確かめる中心は、枚数の突合と読み取り誤りの抽出です。原本と台帳の各行を対応させ、抜けや重複、数字の読み違いを調べてから転記します。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこのページの最後）</p>
+    <p>受け取った紙の伝票やPDFを、事務担当者が台帳へ入力する場面を扱います。文字を拾う作業だけで終えず、どの書類の内容がどの行に入ったかまで追える形にすることが、確認の出発点です。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例であり、実在の会社の話やAIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（紙・PDFの読み取りと台帳化）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（紙・PDFの読み取りと台帳化）</h2>
+    <p> 任せる範囲は、読み取れる項目を指定した列へ並べ、出所と不確かな読み取りを添えた下書きの作成までです。Google ドライブの変換では、表や列などが検出されない可能性があります（確認日：2026-11-02）。 Adobe Acrobat には、スキャンされた画像と認識されたテキストを表示する機能があります（確認日：2026-11-02）。 当社の手順では、文字の抜き出しと、原本との照合を分けて進めます。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>読み取りに使う紙の画像やPDFのコピーと、対象書類の一覧</li>
+      <li>書類ごとの管理用の印、ページの対応、対象枚数の控え</li>
+      <li>台帳の列名と、伝票ごとにまとめるか明細ごとに分けるかのルール</li>
+      <li>読み取れない箇所と、原本から空欄の箇所を区別するルール</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>指定した列順の台帳の下書き</li>
+      <li>各行の出所となる書類・ページ・記載位置</li>
+      <li>読み取りに自信がない箇所と、確認が要る理由の一覧</li>
+      <li>対象書類ごとの処理状況と、未処理・重複の候補</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>対象と数え方を決める：</b>原本を控えと照らし、対象の枚数、文書のまとまり、ページ数を記録します。台帳の行を何に対応させるかも決めるとよいです。</li>
+      <li><b>コピーと列の定義を渡す：</b>原本と既存の台帳は保管し、AIに元のデータを直接書き換えさせない運用にします。列名に加え、表紙や明細の扱いを伝えます。</li>
+      <li><b>見本で試す：</b>読みやすい書類と文字が不鮮明な書類を見本にし、下書きと原本を見比べます。列のずれや空欄の扱いを直してから、対象全体へ広げる流れです。</li>
+      <li><b>下書きと確認欄を出す：</b>資料にある記載だけを使い、不確かな読み取りは別の欄へ分ける方針にします。原本が空欄なのか、読めないのかも残す形がよいです。</li>
+      <li><b>枚数と出所を突き合わせる：</b>対象書類の一覧と各行の出所を照合し、未処理と重複の候補を調べます。明細で行を分ける場合は、合計の行数だけで完了を判断せず、書類ごとに対応を追います。</li>
+      <li><b>原本を見て確定する：</b>人が原本と下書きを照合し、誤りを直した内容と保留箇所を記録します。確認を終えた行を、人が管理する台帳へ転記する流れです。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>枚数の突合、読み取り誤りの抽出</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">枚数の突合、読み取り誤りの抽出</td><td data-label="見方">対象書類の控えと台帳の出所欄を突き合わせ、原本の文字を見て誤りの候補を拾います。</td><td data-label="見落とすと">書類の抜け・重複や読み違いが台帳に残ります。</td></tr><tr><td data-label="確かめること">金額の桁・小数点・桁区切り</td><td data-label="見方">原本の金額欄と下書きを照合し、数字の欠落や記号の混入を見ます。</td><td data-label="見落とすと">原本と異なる金額が記録されます。</td></tr><tr><td data-label="確かめること">日付と取引先の文字</td><td data-label="見方">年月日の位置や、似た文字、濁点まで原本と見比べます。</td><td data-label="見落とすと">別の日付や相手先の記録として扱われます。</td></tr><tr><td data-label="確かめること">行・列とページのつながり</td><td data-label="見方">金額と摘要が同じ明細に属するか、続きのページや繰り返しの見出しを確かめます。</td><td data-label="見落とすと">別の明細が結び付いたり、見出しが台帳に入ったりします。</td></tr><tr><td data-label="確かめること">空欄と読めない箇所の区別</td><td data-label="見方">原本が空欄の項目と、文字が不鮮明な項目を分け、推測した値がないかを見ます。</td><td data-label="見落とすと">原本にない内容が記録される場合があります。</td></tr><tr><td data-label="確かめること">確認欄以外の記載</td><td data-label="見方">AIが不確かとした箇所に加え、残りの記載も原本と照合します。</td><td data-label="見落とすと">確認欄に出なかった誤りが残ります。</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>明細を分けるか伝票ごとにまとめるか、台帳の記録単位を決めます。</li>
+      <li>似た内容の書類が重複か別取引かを、原本や受領の控えから判断します。</li>
+      <li>不鮮明な文字を再撮影で確かめるか、書類の発行元へ照会するかを決めます。</li>
+      <li>原本と異なる記載の採用、保留の解除、台帳への確定や外部への送信は、人が判断する範囲です。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p> 架空の伝票を台帳にする依頼では、出所と確認欄を残す方針を次のように伝えます。</p>
+    <pre class="prompt">題材：架空の伝票10枚の台帳化
+目的：人が原本と照合するための下書き作成
+
+対象は、添付したコピーと対象書類の一覧です。
+元のファイルと既存の台帳は変更せず、別の下書きを作る方針です。
+台帳の列は、日付・取引先・金額・摘要です。
+この作例では、伝票ごとに内容をまとめる想定です。
+
+使う情報は資料にある記載だけです。
+金額の計算や不足する日付の推測で、空欄を埋めない方針です。
+各行に、元の書類の印・ページ・記載位置を添える形を希望します。
+自信のない読み取りは「要確認」の別欄へ分け、対象の項目と理由を残します。
+原本が空欄の場合と、読めない場合は区別します。
+下書きの末尾には、処理した書類、未処理の書類、重複の候補を並べます。
+対象の枚数と下書きの対応が合わない場合は、その箇所を確認事項にします。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/drive/answer/176692?hl=ja" rel="noopener" target="_blank">PDF や写真のファイルをテキストに変換する</a>：変換時に表や列などが検出されない可能性。取得本文に更新日の表示はありません。</li>
+      <li><a href="https://helpx.adobe.com/jp/acrobat/desktop/create-documents/scan-documents-to-pdfs/fix-scanned-text.html" rel="noopener" target="_blank">スキャンした PDF のテキストの問題を修正</a>：スキャンされた画像と認識されたテキストの表示。ページ記載の更新日は2025-11-05です。</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-data-cleanup">整える・調べる：この分野の入口ページ</a></li>
+      <li><a href="/column/pdf-table-to-excel">PDFの表をExcelにする方法｜変換したあとに確かめる件数と合計</a></li>
+      <li><a href="/column/pdf-reading-ai">ChatGPT・ClaudeにPDFを読ませるときの注意</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/ai/tasks/table-reconciliation">複数の表の突合（重複・欠落の検出）</a></li>
+      <li><a href="/ai/tasks/notation-unification">表記ゆれの統一（住所・社名・日付）</a></li>
+      <li><a href="/ai/tasks/subsidy-deadline-tracking">補助金・助成金の締切の追跡</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

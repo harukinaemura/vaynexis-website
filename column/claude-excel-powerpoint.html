@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClaudeでExcel・PowerPointを作る｜材料と確認｜Vaynexis</title>
+  <meta name="description" content="ファイル作成を依頼する事務担当者向けに、元データ・構造・書式をどこまで渡すかを整理します。短い依頼例を使い、利用前の設定、添付資料の読み取り範囲、繰り返す書式の扱い、生成後の数式・合計・図表・レイアウトの点検まで、公式資料と当社の確認手順を分けて紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="ClaudeでExcel・PowerPointを作る｜材料と確認｜Vaynexis">
+  <meta property="og:description" content="ファイル作成を依頼する事務担当者向けに、元データ・構造・書式をどこまで渡すかを整理します。短い依頼例を使い、利用前の設定、添付資料の読み取り範囲、繰り返す書式の扱い、生成後の数式・合計・図表・レイアウトの点検まで、公式資料と当社の確認手順を分けて紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/claude-excel-powerpoint">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/claude-excel-powerpoint">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ClaudeでExcel・PowerPointを作る｜材料と確認","description":"ファイル作成を依頼する事務担当者向けに、元データ・構造・書式をどこまで渡すかを整理します。短い依頼例を使い、利用前の設定、添付資料の読み取り範囲、繰り返す書式の扱い、生成後の数式・合計・図表・レイアウトの点検まで、公式資料と当社の確認手順を分けて紹介します。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/claude-excel-powerpoint"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"ClaudeでExcel・PowerPointを作る","item":"https://vaynexis.jp/column/claude-excel-powerpoint"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">ClaudeでExcel・PowerPointを作る</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">ClaudeでExcel・PowerPointを作る｜材料と確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>元データだけでなく、作りたい構造、計算の決まり、書式、出力形式まで渡すとよいです。できたファイルは下書きとして扱い、数式の参照先、合計、図表、配布時の見え方を人が確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこの記事の最後）</p>
+    <p>この記事は、ExcelやPowerPointの下書きまでAIで作りたい事務の担当者が、Claudeのファイル作成の機能に渡す材料と、できたファイルの確認の仕方を整理するためのものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月2日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">生成を頼む前に、利用できる範囲を確かめる</a></li>
+      <li><a href="#s2">元データ・構造・書式を分けて伝える</a></li>
+      <li><a href="#s3">繰り返す書式はスキルの対象を見極める</a></li>
+      <li><a href="#s4">添付する資料の読み取り範囲に注意する</a></li>
+      <li><a href="#s5">計算の中身と配布時の見え方を分けて点検する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．生成を頼む前に、利用できる範囲を確かめる</h2>
+    <p>この節は当社の整理です。</p>
+    <p>機能・設定に関する記述の確認日：2026-11-02（以下の各節も同日確認）</p>
+    <p>Claudeには、会話からExcelの表計算ファイルやPowerPointのスライドを作成・編集する機能があります。 Team・Enterpriseでは、組織の所有者がファイル作成の機能を無効にできます。 また、スキルのネットワークへのアクセス範囲は、利用者や管理者の設定によって変わります。</p>
+    <p>利用前には、社内で入力を認めている資料か、作成に使う機能が有効か、外部への接続が認められているかを確かめます。添付した資料だけで作る依頼と、外部の情報を取りに行く依頼も分けて考えるとよいです。機能が画面に見当たらないときは、管理者と利用条件を確認するところから始めます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．元データ・構造・書式を分けて伝える</h2>
+    <p>この節は当社の整理です。</p>
+    <p>公式ヘルプでは、Claudeへの依頼に、求める構造・内容・書式を具体的に記すよう案内しています。 また、出力形式を指定しないと、ファイルではなく、会話内で編集するアーティファクトとして作られる場合があります。</p>
+    <p>「見やすい表を作る」だけで終えず、入力欄と計算欄の区別まで言葉にします。社内の備品購入一覧を下書きにするなら、渡す材料は次のように整理できます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">渡すもの</th><th scope="col">書き方の例</th></tr></thead><tbody><tr><td data-label="渡すもの">元データと対象範囲</td><td data-label="書き方の例">添付した購入一覧だけを使い、空欄は推測で埋めない</td></tr><tr><td data-label="渡すもの">表の構造</td><td data-label="書き方の例">元データを残すシートと、分類別に集計するシートを分ける</td></tr><tr><td data-label="渡すもの">計算の決まり</td><td data-label="書き方の例">数量と単価から金額を計算し、合計は数式で求める</td></tr><tr><td data-label="渡すもの">書式と見本</td><td data-label="書き方の例">入力欄と計算欄を見分けられるようにし、見本の色と見出しに合わせる</td></tr><tr><td data-label="渡すもの">図表の扱い</td><td data-label="書き方の例">図表を付ける場合は、集計表と同じ分類・単位を使う</td></tr><tr><td data-label="渡すもの">出力後に知りたいこと</td><td data-label="書き方の例">計算方法、参照元、未入力の箇所を、ファイルと別に説明する</td></tr></tbody></table></div>
+    <p>短い依頼文なら、次の形です。</p>
+    <pre class="prompt">添付した購入一覧を使った表計算ファイルの下書きを希望します。
+元データを残すシートと、分類別の集計シートを分ける構成です。
+金額と合計には数式を使い、空欄や分類不明の項目は補完せず残す方針です。
+入力欄と計算欄を区別し、見本に合わせた書式を希望します。
+出力形式は、表計算ソフトで編集できるファイルを指定します。
+計算方法と確認が必要な箇所の説明も依頼します。</pre>
+    <p>実際の依頼では、出力形式の正式な名前も明記します。スライドを作る場合は、対象の読み手、各ページに載せる内容、使用する図表、手元の見本を添えます。文章をどこまで短くしてよいか、残す必要のある注記は何かも、依頼する側で決めておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．繰り返す書式はスキルの対象を見極める</h2>
+    <p>この節は当社の整理です。</p>
+    <p>Skillsは、Claudeが必要に応じて読み込む、指示・スクリプト・資料をまとめたフォルダです。 提供元のスキルは、関連する依頼で自動的に呼び出されます。 自社用のカスタムスキルの用途には、文書やスライドへのブランドの書式ルールの適用が挙げられています。</p>
+    <p>運用を考えるときは、毎回変わる材料と、共通して守るルールを分けます。対象の期間や使うデータは依頼ごとの材料です。見出しの表記、色の使い方、注記の位置などは、繰り返すルールとして整理できます。</p>
+    <p>まず短い依頼と見本で試し、同じ修正が続く部分を洗い出すとよいです。共通ルールをまとめる前に、部署ごとに書式が違わないか、古い見本が混ざっていないかも確認します。見た目の統一と、計算内容の正しさは、確認する対象を分けて扱います。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．添付する資料の読み取り範囲に注意する</h2>
+    <p>Claudeのアップロードに関する公式ヘルプでは、101〜1000ページのPDFはテキストのみを処理し、画像や図表などの視覚的な要素は解析しないとしています。</p>
+    <p>ここからの渡し方は当社の整理です。資料を添付するときは、ファイル名に加えて、参照してほしい箇所を依頼文にも記します。見た目をまねてほしい資料と、計算に使う元データは、用途が分かるように分けるとよいです。</p>
+    <p>図表の見た目だけを根拠に計算を頼むのは避け、可能なら元の表も用意します。色で区分を示している箇所や、脚注で集計対象を限定している箇所は、意味を文章でも伝えるとよいです。読み取った内容を先に確認してから作成に進む依頼にすると、材料の取り違えを確認する機会を持てます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．計算の中身と配布時の見え方を分けて点検する</h2>
+    <p>この節は当社の整理です。</p>
+    <p>受け取ったファイルは、元データと照合する前の下書きとして扱います。見た目が整っていても、そのまま配布せず、計算の中身から確認する順序がよいです。</p>
+    <h3 class="h3">数式・合計・図表をつなげて見る</h3>
+    <p>まず、計算欄のセルを開いて、数式と参照先を見ます。集計対象の末尾が抜けていないか、別のシートの違う項目を参照していないか、計算欄に固定の値が入っていないかを確かめます。入力欄と計算欄の区別も、依頼したとおりかを見比べます。</p>
+    <p>次に、元データから別に求めた合計と、作成された表の合計を照合します。差があれば、空欄、対象外の行、丸め方、非表示の行など、計算の前提を確認します。合計を合わせるために結果だけを書き換えると、原因が残るため、参照範囲や計算方法から直すとよいです。</p>
+    <p>図表では、元にした集計表の値と、表示された値を対応させます。分類名、単位、対象の期間、軸の目盛りまで見ると、値は合っていても意味が違う図表を見分ける確認になります。</p>
+    <h3 class="h3">編集する画面と配布する形で見直す</h3>
+    <p>スライドは、使う環境で開き、文字のはみ出し、図表の重なり、注記の欠けを点検します。表計算ファイルを印刷する場合も、改ページや見出しの位置を確認します。画面で読めることと、配布した状態で読めることは、別に確かめるとよいです。</p>
+    <p>修正を頼む際は、「見づらい」だけでなく、対象のシートやページ、問題の場所、期待する状態を伝えます。計算を直したあとは図表の値も、書式を直したあとは配布時の表示も、関係する箇所を見直して完了とします。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">入力してよい元データと、利用できる設定を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元データ・構造・計算の決まり・書式・出力形式を区別して伝えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見本と計算用の資料を分け、参照してほしい箇所を明記したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数式の参照先と集計対象の範囲を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元データから求めた合計と、表・図表の値を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">編集する環境と配布する形で、表示の崩れを点検したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">修正した箇所に関係する計算や表示を見直したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://claude.com/resources/articles/create-files" rel="noopener" target="_blank">提供元の記事</a>：表計算ファイルとスライドの作成・編集。公開時のプランや設定の説明は採用していない</li>
+      <li><a href="https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude" rel="noopener" target="_blank">公式ヘルプ</a>：組織の所有者による機能の無効化、構造・内容・書式の具体的な指定</li>
+      <li><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" rel="noopener" target="_blank">提供元の技術資料</a>：利用者や管理者の設定によるネットワークアクセスの違い</li>
+      <li><a href="https://academy.claude.com/tutorials/create-and-edit-files-with-claude-to-eliminate-hours-of-busy-work" rel="noopener" target="_blank">提供元の教材</a>：出力形式を指定しない場合の扱い</li>
+      <li><a href="https://claude.com/resources/articles/skills" rel="noopener" target="_blank">提供元の記事</a>：スキルに含まれる指示・スクリプト・資料の説明</li>
+      <li><a href="https://support.claude.com/en/articles/12512176-what-are-skills" rel="noopener" target="_blank">公式ヘルプ</a>：提供元のスキルの呼び出し、自社の書式ルールの適用</li>
+      <li><a href="https://support.claude.com/en/articles/8241126-upload-files-to-claude" rel="noopener" target="_blank">公式ヘルプ</a>：長いPDFの視覚的要素の読み取り範囲</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-document-demo">AI議事録で提案と決定事項を分ける方法（実演）</a></li>
+      <li><a href="/ai-consulting-guide">中小企業向けAIコンサルの選び方（相談先を目的別に比較）</a></li>
+      <li><a href="/column/shiga-ai-consultation">滋賀県のAI相談窓口｜公的な支援機関と民間の相談先の使い分け</a></li>
+      <li><a href="/column/pdf-table-to-excel">PDFの表をExcelにする方法｜変換したあとに確かめる件数と合計</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理</a></li>
+      <li><a href="/column/chatgpt-for-word">ChatGPT for Wordでできる作業｜社内文書の直しで確かめること</a></li>
+      <li><a href="/column/ai-service-changes">ChatGPT・Claudeの変更記録（2026年11月）</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

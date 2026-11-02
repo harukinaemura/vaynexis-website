@@ -7,6 +7,70 @@
   <updated>2026-11-02T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
   <entry>
+    <title>ClaudeでExcel・PowerPointを作る｜材料と確認</title>
+    <link href="https://vaynexis.jp/column/claude-excel-powerpoint"/>
+    <id>https://vaynexis.jp/column/claude-excel-powerpoint</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>ファイル作成を依頼する事務担当者向けに、元データ・構造・書式をどこまで渡すかを整理します。短い依頼例を使い、利用前の設定、添付資料の読み取り範囲、繰り返す書式の扱い、生成後の数式・合計・図表・レイアウトの点検まで、公式資料と当社の確認手順を分けて紹介します。</summary>
+  </entry>
+  <entry>
+    <title>ChatGPT for Wordで直した社内文書を確認する手順</title>
+    <link href="https://vaynexis.jp/column/chatgpt-for-word"/>
+    <id>https://vaynexis.jp/column/chatgpt-for-word</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>社内文書の下書きや修正を頼む前に、原文と変えたくない内容を残します。修正後は、追加・削除、対象者や条件、数値や引用、表や書式を照合。公式資料で確認した機能と注意点を踏まえ、変更を比較して配布する版を決めるまでの確認手順を整理します。</summary>
+  </entry>
+  <entry>
+    <title>ChatGPT・Claudeのプロジェクト｜社内資料は誰に見えるか</title>
+    <link href="https://vaynexis.jp/column/ai-project-sharing"/>
+    <id>https://vaynexis.jp/column/ai-project-sharing</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>社内資料をまとめて参照させる前に、誰が資料を見られ、会話でき、内容を変更できるかを確認します。共有相手と権限の違い、組織への公開範囲、利用を終えた人のアクセス解除を公式資料から整理し、管理者と照合する項目を示します。</summary>
+  </entry>
+  <entry>
+    <title>ChatGPTのメモリ｜停止・会話削除・ファイル削除の違い</title>
+    <link href="https://vaynexis.jp/column/chatgpt-memory"/>
+    <id>https://vaynexis.jp/column/chatgpt-memory</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>会社の情報を覚えさせる前に、参照される情報と、消したい情報の保存先を整理します。設定をオフにする操作、会話を削除する操作、ファイルを削除する操作を分けて確認し、一時的な会話を保存する際の注意点と、社内の管理者に聞く項目までまとめます。</summary>
+  </entry>
+  <entry>
+    <title>仕事で使うプロンプトのコツ｜公式の手引きから依頼文を整える</title>
+    <link href="https://vaynexis.jp/column/work-prompt-tips"/>
+    <id>https://vaynexis.jp/column/work-prompt-tips</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>仕事で使うプロンプトは、何のために、どの材料を使い、どんな形で答えてほしいかを具体的に伝えることから始めます。公式の手引きに沿って、目的・材料・制約・出力形式・例の渡し方、結果を見た直し方、開発側の設定との違い、使う前の確認を整理します。</summary>
+  </entry>
+  <entry>
+    <title>ChatGPT・ClaudeでPDFの図や表が読まれない原因と確認方法</title>
+    <link href="https://vaynexis.jp/column/pdf-reading-ai"/>
+    <id>https://vaynexis.jp/column/pdf-reading-ai</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>PDFを添付しても図や表が答えに出ないときに、資料の中身、渡した場所、サービス側の条件をどう切り分けるかを整理します。公式資料で確かめた画像解析の範囲とページ数の条件、対象箇所の渡し直し方、原本との照合手順を、事務担当者向けに説明します。</summary>
+  </entry>
+  <entry>
+    <title>シフト表をAIで作るときの条件の書き方｜人が確かめるポイント</title>
+    <link href="https://vaynexis.jp/column/ai-shift-schedule"/>
+    <id>https://vaynexis.jp/column/ai-shift-schedule</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>シフト表をAIで作成するときに、勤務希望・必要人数・契約や制度で決まる条件をどう分けて渡すかを整理します。条件表と指示文の例、勤務時間・休憩・休日の公式資料、人が確定前後に確かめる観点をまとめます。労務の個別判断は専門家に確認する進め方です。</summary>
+  </entry>
+  <entry>
+    <title>PDFの表をExcelへ変換した後の確認｜件数・合計・行のずれ</title>
+    <link href="https://vaynexis.jp/column/pdf-table-to-excel"/>
+    <id>https://vaynexis.jp/column/pdf-table-to-excel</id>
+    <published>2026-11-02T00:00:00+09:00</published>
+    <updated>2026-11-02T00:00:00+09:00</updated>
+    <summary>PDFの表をExcelへ変換した後、明細の件数、金額の合計、列の位置を原本と照合する手順をまとめます。空に見える識別欄や、文字列になった金額を見落とす場面を短い表で示し、ページの境目の確認、ずれの修正、確認結果の記録まで整理します。</summary>
+  </entry>
+  <entry>
     <title>DXと業務効率化の違い｜中小企業が受注事務から考える最初の一歩</title>
     <link href="https://vaynexis.jp/column/dx-vs-efficiency"/>
     <id>https://vaynexis.jp/column/dx-vs-efficiency</id>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>複数の表の突合をAIに任せる手順｜重複・欠落を両方向の差分と件数で確かめる｜Vaynexis</title>
+  <meta name="description" content="受注表と請求表などを突き合わせる仕事で、AIに渡す資料、差分の下書きの作らせ方、人が判断する範囲を整理します。片方だけにある行を両方向から探し、件数を表計算ソフトで数え直す手順と、重複を分けて確認するための指示文を紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="複数の表の突合をAIに任せる手順｜重複・欠落を両方向の差分と件数で確かめる｜Vaynexis">
+  <meta property="og:description" content="受注表と請求表などを突き合わせる仕事で、AIに渡す資料、差分の下書きの作らせ方、人が判断する範囲を整理します。片方だけにある行を両方向から探し、件数を表計算ソフトで数え直す手順と、重複を分けて確認するための指示文を紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/table-reconciliation">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/table-reconciliation">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"複数の表の突合をAIに任せる手順。重複・欠落を両方向の差分と件数で確かめる","description":"受注表と請求表などを突き合わせる仕事で、AIに渡す資料、差分の下書きの作らせ方、人が判断する範囲を整理します。片方だけにある行を両方向から探し、件数を表計算ソフトで数え直す手順と、重複を分けて確認するための指示文を紹介します。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/table-reconciliation"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"複数の表の突合（重複・欠落の検出）","item":"https://vaynexis.jp/ai/tasks/table-reconciliation"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">複数の表の突合（重複・欠落の検出）</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">複数の表の突合をAIに任せる手順。重複・欠落を両方向の差分と件数で確かめる</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、表を照合する項目の整理と、片方だけにある行・重複候補の一覧の下書きを任せます。人が確かめる中心は、両方向の差分と件数です。元の表の行へ戻れる形で結果を受け取り、件数は表計算ソフトで数え直します。重複の削除や欠落の補完は、人が判断する範囲です。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこのページの最後）</p>
+    <p>受注の記録と請求の記録を突き合わせる事務では、片方の表を起点に探すだけでなく、逆側にしかない行も確認する必要があります。 Power Queryでは、複数列による結合で各表の列を選ぶ順序をそろえる必要があります。 完全外部結合では、左右両方の表のすべての行が取り込まれます。</p>
+    <p class="notice">表・指示文・数字は実在の会社とは関係のない説明用の架空の例であり、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（複数の表の突合（重複・欠落の検出））</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（複数の表の突合（重複・欠落の検出））</h2>
+    <p>AIには、受け取った表の列の意味を整理させ、指定した項目で対応する行を探す作業を任せます。結果は、対応あり・片方だけ・重複候補・判断待ちに分けた下書きです。行の存在の確認と、対応する行の内容の違いは分けて出し、元の表を訂正する作業には進めません。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>対象範囲と抽出時点をそろえ、元の行をたどれる目印を付けた表のコピー。</li>
+      <li>列の意味と、同じ記録を見分ける照合キーとなる項目。</li>
+      <li>表記の違いを同一と扱う範囲と、勝手に変更しない値。</li>
+      <li>重複候補や判断待ちの出し方と、人が答え合わせした見本。</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>対応する行の一覧と、両側の元の行の目印。</li>
+      <li>Aだけにある行とBだけにある行を分けた差分一覧。</li>
+      <li>同じ照合キーが繰り返される箇所と、判断待ちの理由。</li>
+      <li>表ごとの入力件数、分類別の件数、照合に使った項目のメモ。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>原本を残して範囲をそろえる：</b>AIにはコピーを渡し、元のデータを直接書き換えさせません。対象外の行や集計行の扱いも、作業前に決めます。</li>
+      <li><b>照合キーを決める：</b>同じ記録を識別する項目を人が選び、文字か数値か、先頭のゼロや桁をどう扱うかを整理します。同じキーが繰り返される箇所は、対応を決める前に分けておくとよいです。</li>
+      <li><b>答えの分かる見本で試す：</b>対応あり、片方だけ、重複候補、空欄を含む見本で、期待した分類になるかを確認します。ずれた箇所は指示を直して再確認する段階です。</li>
+      <li><b>両方向の差分を出す：</b>Aを起点にBにない行を探し、Bを起点にAにない行も探させます。対応先の候補が重なる行は、無理に対応を決めず判断待ちに分ける方針です。</li>
+      <li><b>件数と内訳を数え直す：</b>人が表計算ソフトで入力表と結果を数え直します。重複・判断待ちを別管理し、照合キーに重複がない範囲では「Aの件数＝対応あり＋Aだけ」「Bの件数＝対応あり＋Bだけ」を照らし合わせるとよいです。</li>
+      <li><b>差分の理由を確認する：</b>元の行と照合キーへ戻り、抽出時点の違いや記録の未反映などを担当者が調べます。件数の照合後も、行の対応と内容を確認してから修正の要否を判断する流れです。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>両方向の差分、件数</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">両方向の差分、件数</td><td data-label="見方">Aだけ・Bだけを別々に確認し、表ごとの入力件数と分類別の内訳を数え直します。</td><td data-label="見落とすと">片側だけの行や、分類から外れた行が確認対象に残ります。</td></tr><tr><td data-label="確かめること">対象範囲と抽出時点</td><td data-label="見方">対象外の行、集計行、後から追加された行を見比べます。</td><td data-label="見落とすと">比べる範囲の違いが欠落候補に混ざります。</td></tr><tr><td data-label="確かめること">照合キーの対応</td><td data-label="見方">列の意味、型、桁、組み合わせる列の順序を元の表で確認します。</td><td data-label="見落とすと">別の記録を対応ありとしたり、対応する記録を差分としたりします。</td></tr><tr><td data-label="確かめること">キーの重複と対応関係</td><td data-label="見方">繰り返されるキーを両表で探し、結果の件数が変わった理由を確認します。</td><td data-label="見落とすと">同じ記録の繰り返しと、別の明細との区別がつかなくなります。</td></tr><tr><td data-label="確かめること">空欄・未登録・ゼロ</td><td data-label="見方">元の値と出力を並べ、補完や置換がないかを確かめます。</td><td data-label="見落とすと">値がない理由や元の記録の違いが失われます。</td></tr><tr><td data-label="確かめること">元の行への追跡</td><td data-label="見方">差分一覧の目印から原本へ戻り、対応先と内容を読みます。</td><td data-label="見落とすと">差分の理由や修正対象の特定に追加確認が要ります。</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>何を同じ記録とするか、どの項目を照合キーに使うか。</li>
+      <li>同じキーが繰り返される理由と、明細を分ける必要の有無。</li>
+      <li>表記の違いや内容の差を許容する範囲。</li>
+      <li>差分が欠落なのか対象外なのかという判断と、修正・削除・追加の確定。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>架空の受注表と請求表を別添で渡す想定の指示文です。</p>
+    <pre class="prompt">目的は受注表Aと請求表Bの突合の下書き作成です。
+使う情報は添付の表と列の説明にある内容に限ります。
+照合キーは受注記号で、行の並び順は対応の根拠にしません。
+元データの変更、削除、空欄の補完、表記の自動統一は行わない方針です。
+
+出力は、対応あり、Aだけ、Bだけ、重複候補、判断待ちに分けます。
+各行には、元の表の名前、行の目印、照合キー、分類理由を添えます。
+キーが重複する行と、キーが空欄の行は、対応ありへ自動分類しません。
+根拠が足りない所は判断待ちの欄へ出し、不足情報を記載する形式です。
+対応する行の内容が異なる所は、行の有無とは別の欄に残します。
+
+表ごとの入力件数と分類別の件数をまとめます。
+同じ元の行の重複計上や、どの分類にも入らない行は確認対象です。
+件数は人が表計算ソフトで数え直す前提です。
+修正案は元の値と分け、採用は人の判断とします。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://learn.microsoft.com/en-us/power-query/merge-queries-overview" rel="noopener" target="_blank">Merge queries overview</a>：複数列の結合で列を選ぶ順序を合わせる必要。</li>
+      <li><a href="https://learn.microsoft.com/en-us/power-query/merge-queries-full-outer" rel="noopener" target="_blank">Full outer join</a>：完全外部結合が左右両方のすべての行を取り込む説明。</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-data-cleanup">整える・調べる：この分野の入口ページ</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/column/name-variants-excel">エクセルで表記ゆれを統一する方法</a></li>
+      <li><a href="/ai/tasks/invoice-preparation">請求書の作成と送付の準備</a></li>
+      <li><a href="/ai/tasks/paper-pdf-to-ledger">紙・PDFの読み取りと台帳化</a></li>
+      <li><a href="/ai/tasks/notation-unification">表記ゆれの統一（住所・社名・日付）</a></li>
+      <li><a href="/ai/tasks/subsidy-deadline-tracking">補助金・助成金の締切の追跡</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

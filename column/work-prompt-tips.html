@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>仕事で使うプロンプトのコツ｜公式の手引きから依頼文を整える｜Vaynexis</title>
+  <meta name="description" content="仕事で使うプロンプトは、何のために、どの材料を使い、どんな形で答えてほしいかを具体的に伝えることから始めます。公式の手引きに沿って、目的・材料・制約・出力形式・例の渡し方、結果を見た直し方、開発側の設定との違い、使う前の確認を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="仕事で使うプロンプトのコツ｜公式の手引きから依頼文を整える｜Vaynexis">
+  <meta property="og:description" content="仕事で使うプロンプトは、何のために、どの材料を使い、どんな形で答えてほしいかを具体的に伝えることから始めます。公式の手引きに沿って、目的・材料・制約・出力形式・例の渡し方、結果を見た直し方、開発側の設定との違い、使う前の確認を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/work-prompt-tips">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/work-prompt-tips">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"仕事で使うプロンプトのコツ｜公式の手引きから依頼文を整える","description":"仕事で使うプロンプトは、何のために、どの材料を使い、どんな形で答えてほしいかを具体的に伝えることから始めます。公式の手引きに沿って、目的・材料・制約・出力形式・例の渡し方、結果を見た直し方、開発側の設定との違い、使う前の確認を整理します。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/work-prompt-tips"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"仕事で使うプロンプトのコツ","item":"https://vaynexis.jp/column/work-prompt-tips"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">仕事で使うプロンプトのコツ</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">仕事で使うプロンプトのコツ｜公式の手引きから依頼文を整える</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>仕事の依頼では、目的・材料・制約・出力の形を具体化し、必要に応じて望む答えの例を添えます。出た答えと意図のずれを見て、依頼の不足を直す進め方です。以下では、この考え方を仕事に当てはめる当社の整理と、公式の手引きの説明を分けて示します。</p></div>
+    <p class="col-meta">公開：2026年11月2日／情報の確認日：2026年11月2日（出典はこの記事の最後）</p>
+    <p>この記事は、ChatGPTやClaudeに仕事の依頼を出すが、答えが毎回ばらつく事務の担当者が、公式の手引きに共通する考え方を、仕事の依頼文に置き換えるための整理です。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月2日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">公式の手引きから、依頼のどこを整えるか</a></li>
+      <li><a href="#s2">目的・材料・制約・出力の形を渡す</a></li>
+      <li><a href="#s3">例は望む答えの形を示し、作業の順番も書く</a></li>
+      <li><a href="#s4">答えのずれを、依頼文の不足に戻して考える</a></li>
+      <li><a href="#s5">チャットの依頼と、開発側の設定を分けて読む</a></li>
+      <li><a href="#s6">使う前に、材料と結果を見比べる</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．公式の手引きから、依頼のどこを整えるか</h2>
+    <p>この節は当社の整理です。この記事の例は説明のための架空の例です。実在の会社の話ではありません。</p>
+    <p>ChatGPT の手引きは、曖昧さを避け、依頼をできるだけ具体的にするよう勧めています（確認日：2026-11-02）。 Anthropic の手引きは、求める出力形式と制約を具体的にするよう勧めています（確認日：2026-11-02）。</p>
+    <p>仕事に置き換えると、整える対象は、何を作るか、何のために使うか、どの材料に基づくか、何を守るか、どの形で受け取るかです。これらは当社が依頼文を見直すために分けた項目です。公式が共通の固定リストとして定めた分類という扱いにはしません。</p>
+    <p>プロンプトは、ここでは仕事を頼むための指示文と呼びます。長さよりも、依頼する側が頭の中だけで分かっている前提を書き出すことを考えます。受け取った文章を誰が読み、何に使うのかまで決めると、依頼文を点検する観点がはっきりします。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．目的・材料・制約・出力の形を渡す</h2>
+    <p>この節は当社の整理です。社内向けの案内文を頼む場面で、情報の足りない依頼と、具体化した依頼の違いを並べます。表は依頼の内容を比べるもので、生成結果の比較ではありません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">観点</th><th scope="col">情報が足りない依頼</th><th scope="col">具体化した依頼</th></tr></thead><tbody><tr><td data-label="観点">目的</td><td data-label="情報が足りない依頼">案内文という種類だけ</td><td data-label="具体化した依頼">社員が変更内容と必要な対応を把握するための案内</td></tr><tr><td data-label="観点">材料</td><td data-label="情報が足りない依頼">参照する情報が不明</td><td data-label="具体化した依頼">担当者が確認した変更内容のメモ</td></tr><tr><td data-label="観点">制約</td><td data-label="情報が足りない依頼">補ってよい内容が不明</td><td data-label="具体化した依頼">メモにない理由や予定は加えない方針</td></tr><tr><td data-label="観点">出力の形</td><td data-label="情報が足りない依頼">文体や構成が不明</td><td data-label="具体化した依頼">件名、変更内容、必要な対応に分けた、です・ます調の文章</td></tr></tbody></table></div>
+    <p>目的は文章の使い道、材料は答えを組み立てる土台、制約は守ってほしい範囲です。出力の形は、受け取った後にどう読むかを決めるものとして分けます。制約と材料を混ぜずに整理すると、依頼を直す際にも、どこを変更したのか説明できます。</p>
+    <p>背景を長く並べるより、今回使ってほしいメモと、参考にする説明を分けて置くとよいです。社内だけで通じる略語には意味を添えます。完成した文章の見た目だけでなく、材料から何を取り出してほしいかも、依頼する側で言葉にしておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．例は望む答えの形を示し、作業の順番も書く</h2>
+    <p>この節は当社の整理です。OpenAI の依頼文の手引きは、入力の例と、それに対して望む出力の例を渡す方法を示しています（確認日：2026-11-02）。</p>
+    <p>例を添える際は、今回の材料と、形を示すための見本を区別します。見本に含まれる内容を、そのまま今回の答えへ移す指示にならないよう、見出しを分けておく考え方です。</p>
+    <pre class="prompt">目的：確認待ちの項目を拾い出す
+出力の形：項目｜状態｜次の確認先
+形を示す入力の例：備品の納品日は仕入先からの連絡待ち
+対応する出力の例：納品日｜未確認｜仕入先
+今回の材料：この欄に、実際に整理するメモを置く</pre>
+    <p>また、作業の順番は、材料を読む、確認待ちの項目を拾う、指定した形にまとめる、というように区切って書きます。ここで示すのは業務上の作業順です。読み手に必要な途中の成果物も、依頼内容として明記する進め方にします。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．答えのずれを、依頼文の不足に戻して考える</h2>
+    <p>この節は当社の整理です。ChatGPT の手引きでは、依頼文の作成には反復して調整する取り組みが必要になるとされています（確認日：2026-11-02）。</p>
+    <p>見直しでは、返ってきた答えを読む前に、今回の目的と守ってほしい範囲を手元に置きます。読み終えてから評価の基準を変えるのではなく、依頼時に伝えた内容と照らし合わせるためです。</p>
+    <p>長すぎる答えについては、読み手と使う場面、残してほしい内容を依頼文へ足す観点があります。論点の違う答えについては、目的や参照する材料の指定を見直します。資料にない説明が混ざった箇所については、使う情報の範囲や、分からない部分の扱いを点検するとよいです。</p>
+    <p>修正の理由も、依頼文と一緒に残しておきます。直した箇所と、直す前に困った点を対応させるためです。気に入った言い回しだけを保存するより、どんな用途に向けて整えた依頼なのかを添える方法にします。別の仕事へ転用する際は、材料と目的から見直します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．チャットの依頼と、開発側の設定を分けて読む</h2>
+    <p>この節は当社の整理です。OpenAI のモデル説明では、スナップショットはモデルの特定の版を固定し、性能や振る舞いの一貫性を保つための仕組みです（確認日：2026-11-02）。</p>
+    <p>ここでは、画面で依頼を書く仕事と、プログラムから呼び出す側の設定を扱う仕事を分けて考えます。事務担当者がこの段階で整える対象は、依頼文と渡す材料です。資料に登場する開発側の設定を、そのまま事務担当者の操作一覧に加える進め方にはしません。</p>
+    <p>公式資料を読む際も、日常の依頼に取り入れる考え方と、社内の開発担当者と検討する内容を分けて控えます。仕事の目的や出力の形を伝える部分は、依頼文へ取り入れる対象です。プログラム側の設定については、担当者との確認事項として扱います。操作の名称を覚えることと、仕事の頼み方を整えることを分けて進めるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．使う前に、材料と結果を見比べる</h2>
+    <p>この節は当社の整理です。OpenAI の利用規約には、出力が常に正確とは限らないと記されています（確認日：2026-11-02）。 ChatGPT のヘルプも、引用、データ、技術情報、外部文書への参照を検証するよう求めています（確認日：2026-11-02）。</p>
+    <p>仕事に使う前の確認では、金額や日付は元の資料、社名や商品名は元の表記と見比べます。文章の読みやすさとは別に、材料のどこが答えの根拠になっているかをたどる進め方です。依頼どおりの形で返ってきたことだけでは、確認を終えた扱いにしません。</p>
+    <p>確認する担当者には、依頼文、使った材料、返ってきた答えをまとめて渡します。材料に戻れない記述は確認待ちにし、文章を整える作業と、内容を確かめる作業を区別しておくとよいです。次に同じ仕事を頼むための依頼文にも、確認で分かった不足を反映します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">何のために、誰が使う答えかを依頼文に書いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">参照する材料と、指示や見本を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">加えない情報と、分からない部分の扱いを決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">受け取りたい構成や文体を具体化したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">例の内容と、今回処理する材料を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">答えのずれを見て、依頼文のどこを直すか考えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数字や名称、引用を元の資料と照合したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月2日）</h2>
+    <ul class="col-src">
+      <li><a href="https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt" rel="noopener" target="_blank">Prompt engineering best practices for ChatGPT</a>：依頼の具体化、反復して調整する取り組み</li>
+      <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" rel="noopener" target="_blank">Prompting best practices</a>：出力形式と制約の具体化</li>
+      <li><a href="https://developers.openai.com/api/docs/guides/prompt-engineering" rel="noopener" target="_blank">Prompt engineering</a>：入力と望む出力の例</li>
+      <li><a href="https://developers.openai.com/api/docs/models/gpt-4.1" rel="noopener" target="_blank">GPT-4.1 Model</a>：特定の版を固定する仕組みの説明</li>
+      <li><a href="https://openai.com/policies/terms-of-use/" rel="noopener" target="_blank">Terms of Use</a>：出力の正確性に関する注意</li>
+      <li><a href="https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth" rel="noopener" target="_blank">Does ChatGPT tell the truth?</a>：引用、データ、外部文書への参照の検証</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/ai-consulting-guide">中小企業向けAIコンサルの選び方（相談先を目的別に比較）</a></li>
+      <li><a href="/column/shiga-ai-consultation">滋賀県のAI相談窓口｜公的な支援機関と民間の相談先の使い分け</a></li>
+      <li><a href="/column/ai-email-reply">メール返信の下書きをAIで作る方法</a></li>
+      <li><a href="/column/daily-report-ai">日報をAIでまとめる手順</a></li>
+      <li><a href="/column/ai-shift-schedule">シフト表をAIで作るときの条件の書き方</a></li>
+      <li><a href="/column/meeting-materials-ai">会議資料をAIで作る</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
