@@ -8,7 +8,7 @@
 export const TO = "vaynexis177@gmail.com";
 export const FROM = { email: "form@vaynexis.jp", name: "Vaynexis サイトのフォーム" };
 
-const KINDS = ["30分の無料相談", "そのほかのお問い合わせ", "協業・紹介・共同提案"];
+const KINDS = ["初回無料相談", "30分の無料相談", "そのほかのお問い合わせ", "協業・紹介・共同提案"]; // 2026-11-03：新しい値と古い値の両方を受ける（古いページ・キャッシュからの送信を弾かない）。数週間後に「30分の無料相談」を外す
 const STYLES = ["オンライン", "滋賀県内の訪問", "未定"];
 // 名前: [見出し, 必須か, 上限の字数]
 const FIELDS = {
