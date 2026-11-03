@@ -7,6 +7,254 @@
   <updated>2026-11-03T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
   <entry>
+    <title>freee会計の登録済み取引に証憑をひも付ける手順と確認</title>
+    <link href="https://vaynexis.jp/column/freee-attach-documents-to-transactions"/>
+    <id>https://vaynexis.jp/column/freee-attach-documents-to-transactions</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>登録済みの取引と保存済みの書類を関連付ける操作を、公式ヘルプに沿って整理します。候補を確認して添付する流れ、非表示との違い、対象を特定して個別に添付する方法、作業後の確認までをまとめ、引き継ぎに使える短い照合例と確認表を添えます。</summary>
+  </entry>
+  <entry>
+    <title>Googleフォームの回答受付を締切日時で止める設定と確認手順</title>
+    <link href="https://vaynexis.jp/column/google-forms-closing-date-time"/>
+    <id>https://vaynexis.jp/column/google-forms-closing-date-time</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>Googleフォームの受付終了に向けて、公開状態の見方、終了日時を選ぶ操作、保存後の確かめ方を整理します。締切後の案内文や変更時の引き継ぎも含め、事務担当者が案内と設定を照合するときに使える手順と確認表をまとめました。</summary>
+  </entry>
+  <entry>
+    <title>返品処理だけ済ませて後回しにした返金はどこから実行するか</title>
+    <link href="https://vaynexis.jp/column/shopify-deferred-refund-execution"/>
+    <id>https://vaynexis.jp/column/shopify-deferred-refund-execution</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>返品処理後に返金を後回しにしたとき、注文画面のどこから再開するかを整理します。対象の注文、返金先、金額、通知の確認から、表示が異なるときの切り分けまでをまとめ、承認済みの内容を担当者が引き継いで操作するための確認表を示します。</summary>
+  </entry>
+  <entry>
+    <title>社用スマホをなくす前に、探せる設定と確認の手順を整える</title>
+    <link href="https://vaynexis.jp/column/company-smartphone-find-my-settings"/>
+    <id>https://vaynexis.jp/column/company-smartphone-find-my-settings</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>社用スマホをなくしたときに備え、端末側の設定と別の端末から探す手順を確かめます。会社の管理方針と照らし、対象端末、操作する担当者、点検結果の残し方を整理。設定が有効なことと、対象を画面に表示できることを分け、貸与時や引き継ぎの確認に使える形にします。</summary>
+  </entry>
+  <entry>
+    <title>電子車検証の券面だけで足りる？整備受付でそろえる車両情報</title>
+    <link href="https://vaynexis.jp/column/electronic-vehicle-inspection-certificate-intake"/>
+    <id>https://vaynexis.jp/column/electronic-vehicle-inspection-certificate-intake</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>整備受付で、手元の券面と追加で確認する情報をどう結び付けるかを整理します。書類にある日付と受付で確認した日を分け、資料の取り違えや古い控えの混在を点検する流れ、担当者へ渡す記録、確認待ちの残し方までまとめます。</summary>
+  </entry>
+  <entry>
+    <title>GMPの逸脱報告は何を添える？発生記録と是正措置の資料整理</title>
+    <link href="https://vaynexis.jp/column/gmp-deviation-report-attachments"/>
+    <id>https://vaynexis.jp/column/gmp-deviation-report-attachments</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>逸脱報告に添える資料を、発生時の記録、影響の調査、措置の計画と実施、確認の記録に分けて整理します。元の記録から報告内容をたどる表の例と、確認を受けた文書の所在、進行中の対応の引き継ぎ方を示し、事務担当者が資料をそろえる範囲を考えます。</summary>
+  </entry>
+  <entry>
+    <title>コリンズ登録で何を確認してもらう？確認依頼と登録結果の保管</title>
+    <link href="https://vaynexis.jp/column/corins-confirmation-request-records"/>
+    <id>https://vaynexis.jp/column/corins-confirmation-request-records</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>確認依頼を送ったあと、返事と登録結果をどう残せばよいか迷う事務担当者向けに、依頼前の調整から書類の受け取り、保管までを整理します。確認してもらう内容と登録完了の違いを押さえ、担当者が替わっても経緯を追えるよう、書類のつなぎ方と確認表を紹介します。</summary>
+  </entry>
+  <entry>
+    <title>Wordへ文章を貼ると字体が変わるときの書式の選び方と確認手順</title>
+    <link href="https://vaynexis.jp/column/word-paste-formatting-options"/>
+    <id>https://vaynexis.jp/column/word-paste-formatting-options</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>Wordに文章を貼ると字体が変わるときは、残したい書式に合わせて貼り付け方法を選びます。Windowsデスクトップ版を対象に、その場での操作と既定設定の見直し、図や表を含む場合の注意、引き継ぎに残す確認点を公式資料に基づいて整理します。</summary>
+  </entry>
+  <entry>
+    <title>Teamsで業務用ウィンドウだけを共有するには？準備と停止の手順</title>
+    <link href="https://vaynexis.jp/column/teams-share-window-only"/>
+    <id>https://vaynexis.jp/column/teams-share-window-only</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>会議で見せる資料と、手元だけで使う情報を分けたい担当者へ。画面全体を共有せずに対象を選ぶ操作、開始前の資料の整理、別の資料へ移る際の停止、音の確認をまとめます。共有対象を選べないときに社内管理者へ伝える内容も整理します。</summary>
+  </entry>
+  <entry>
+    <title>相見積の回答を単価・合計額・納入日で並べて比較する手順</title>
+    <link href="https://vaynexis.jp/column/dynamics365-rfq-bid-comparison"/>
+    <id>https://vaynexis.jp/column/dynamics365-rfq-bid-comparison</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>相見積の回答を比較するときは、単価だけでなく、回答数量、合計額、納入時期を依頼内容と照らし合わせます。回答を登録して並べる手順と、見積書に戻って確かめる点、採用の判断前に残すメモを、事務担当者が引き継ぎやすい形で整理します。</summary>
+  </entry>
+  <entry>
+    <title>商品ページと注文時の商品名が違うとき、受注内容はどこで確認するか</title>
+    <link href="https://vaynexis.jp/column/shopify-order-product-name-difference"/>
+    <id>https://vaynexis.jp/column/shopify-order-product-name-difference</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>商品ページの商品名と注文に残る名前が違うときは、表示している情報の時点を分けて確認します。対象の注文の探し方から、注文内の表示とリンク先の読み分け、差を記録する方法、引き継ぐ前の確認までを整理します。名前を合わせるための編集に進む前の受注照会の手順です。</summary>
+  </entry>
+  <entry>
+    <title>社用スマホの端末と回線を取り違えず識別番号を調べる事務の手順</title>
+    <link href="https://vaynexis.jp/column/company-smartphone-identifier-check"/>
+    <id>https://vaynexis.jp/column/company-smartphone-identifier-check</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>社用スマホの端末と回線の番号を取り違えないために、確認画面の開き方、項目名の控え方、複数回線の照合方法を整理します。引き継ぎに使える短い記録例と、番号が一致しないときの確認の進め方を示し、現物の確認と契約資料との照合を分けて進めます。</summary>
+  </entry>
+  <entry>
+    <title>アンケートの回答数に途中回答が混じるとき完了分を確かめる手順</title>
+    <link href="https://vaynexis.jp/column/survey-completed-responses-count"/>
+    <id>https://vaynexis.jp/column/survey-completed-responses-count</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>アンケートの総回答数をそのまま報告せず、完了した回答だけの件数を確かめる手順を整理します。回答の状態による絞り込みと個別の確認、分岐で飛ばされた質問の見方を公式ヘルプに沿って説明し、集計の範囲や確認時点を引き継ぐための表と確認項目をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>会社宛ての不在郵便を窓口へ取りに行く前の書類と確認事項</title>
+    <link href="https://vaynexis.jp/column/company-mail-pickup-post-office"/>
+    <id>https://vaynexis.jp/column/company-mail-pickup-post-office</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>会社宛ての不在郵便を窓口へ取りに行く担当者に向けて、持参物の基本、宛名と受取に行く人の伝え方、保管先と期限の確認を整理します。本人向けの案内と会社側で確かめることを分け、出発前の問い合わせから受取後の引き継ぎまで、準備の順をまとめました。</summary>
+  </entry>
+  <entry>
+    <title>酒類の受払帳簿は何を残す？品目・数量・取引資料のまとめ方</title>
+    <link href="https://vaynexis.jp/column/liquor-receipt-payment-ledger"/>
+    <id>https://vaynexis.jp/column/liquor-receipt-payment-ledger</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>酒類小売業の受払帳簿に残す品目、数量、価格、取引日、取引先を、公式資料に沿って整理します。元の伝票との対応、個数と容量の区別、一括記帳と保管の条件、引継ぎで残したい確認先をまとめ、記帳担当者が資料をそろえるときの確認に使える形で紹介します。</summary>
+  </entry>
+  <entry>
+    <title>認証用スマホが使えない日に備える予備コードの保管と更新の手順</title>
+    <link href="https://vaynexis.jp/column/google-backup-codes-storage"/>
+    <id>https://vaynexis.jp/column/google-backup-codes-storage</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>認証用スマホが使えなくなる前に、予備コードの取得から本人による保管、使った後の管理までを整理します。紙や保存ファイルの置き場所を考える観点、コードを載せない共有台帳の例、更新後の差し替え、取得できない場合の確認先をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>飲食店のアレルギー情報は何を根拠に更新する？原材料資料の管理</title>
+    <link href="https://vaynexis.jp/column/restaurant-allergen-info-update-records"/>
+    <id>https://vaynexis.jp/column/restaurant-allergen-info-update-records</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>飲食店のアレルギー情報を更新するときは、仕入先の原材料資料、実際に使う食材、レシピ、店頭で伝える内容を対応づけて確認します。資料の版と使用開始日を残す表、変更時に確認する担当者とタイミング、判断に迷う情報の扱いを整理します。</summary>
+  </entry>
+  <entry>
+    <title>Acrobatで複数の提出資料を一つのPDFにまとめる手順</title>
+    <link href="https://vaynexis.jp/column/acrobat-combine-submission-pdf"/>
+    <id>https://vaynexis.jp/column/acrobat-combine-submission-pdf</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>提出資料をまとめる事務担当者に向け、資料を追加し、並び順を整えて保存するまでの流れを説明します。元の資料との照合、旧版の混入やページの抜けの確認、引き継ぎ用の短い表も整理し、提出前に内容と読みやすさを見直すポイントを示します。</summary>
+  </entry>
+  <entry>
+    <title>Googleカレンダーの予定を引き継ぎ用に書き出す方法と確認点</title>
+    <link href="https://vaynexis.jp/column/google-calendar-export-handover"/>
+    <id>https://vaynexis.jp/column/google-calendar-export-handover</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>担当交代に備えて予定をファイルに残すときは、対象を選ぶことと、保存できたかを確かめることが大切です。個別と一括の書き出し手順、必要な権限、保存したファイルの照合方法を整理し、引き継ぐ相手に渡す情報と、読み込み時に注意する制約も確認します。</summary>
+  </entry>
+  <entry>
+    <title>Excelの備考欄が途中までしか見えないときの折り返しと行の高さ</title>
+    <link href="https://vaynexis.jp/column/excel-remark-wrap-row-height"/>
+    <id>https://vaynexis.jp/column/excel-remark-wrap-row-height</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>備考欄の長い文章が途中までしか見えないときに、入力済みの内容を読み取れる状態へ整える手順を紹介します。表示を整える操作と、文章の末尾まで読めるかの確認を分け、引き継ぎ前に見ておく点や、調整後も見えないときの確認先をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>Excelで完了と入力した作業の行全体を薄く表示する設定方法</title>
+    <link href="https://vaynexis.jp/column/excel-dim-completed-rows"/>
+    <id>https://vaynexis.jp/column/excel-dim-completed-rows</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>Excelの作業一覧で、完了した行全体を薄く表示する方法を整理します。条件付き書式で状態を判定する数式、列だけを固定する参照方法、適用する範囲の選び方を短い例で説明し、行がずれる・一部しか薄くならないときの確認点と引き継ぎの要点もまとめます。</summary>
+  </entry>
+  <entry>
+    <title>電子申請で公文書を受け取ったら？電子署名を確認する手順と記録</title>
+    <link href="https://vaynexis.jp/column/e-gov-official-document-signature-check"/>
+    <id>https://vaynexis.jp/column/e-gov-official-document-signature-check</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>電子申請の結果として届いた公文書について、受領ファイルの準備から署名の検証、結果の記録、発行元への照会までを整理します。文書を表示する作業と署名を調べる作業の違いを押さえ、担当交代後にも確認の経緯を追えるよう、社内で使う記録例と確認表を示します。</summary>
+  </entry>
+  <entry>
+    <title>取引かけこみ寺へ初めて相談するとき、経緯と資料をどう整理する？</title>
+    <link href="https://vaynexis.jp/column/kakekomidera-first-consultation-prep"/>
+    <id>https://vaynexis.jp/column/kakekomidera-first-consultation-prep</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>初めての取引相談に向けて、起きたことを時系列に並べ、合意した内容と後から変わった内容を元の資料に結び付ける準備を整理します。公式案内の相談方法や匿名相談の条件を確かめながら、担当者の役割分担、相談で聞きたいこと、相談後に残す記録までをまとめます。</summary>
+  </entry>
+  <entry>
+    <title>雇用保険の適用事業所を廃止するときの届出と証明書のそろえ方</title>
+    <link href="https://vaynexis.jp/column/employment-insurance-office-closure-documents"/>
+    <id>https://vaynexis.jp/column/employment-insurance-office-closure-documents</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>雇用保険の適用事業所を廃止するときに準備する届出と確認資料を整理します。廃止届の期限・提出先、廃止を示す書類、資格喪失届・離職証明書との提出関係を公式資料で確認し、担当者の準備表と最終確認の項目、窓口や専門家に確認する点をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>資格確認書を紛失した従業員の再交付はどこへ申請するか</title>
+    <link href="https://vaynexis.jp/column/kyokai-kenpo-certificate-reissue-lost"/>
+    <id>https://vaynexis.jp/column/kyokai-kenpo-certificate-reissue-lost</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>資格確認書をなくした従業員から相談を受けた総務担当者に向け、再交付の申請先と会社での進め方を整理します。似た書類との区別、申請前の確認、受け取り後の記録まで、公式資料の案内と社内で用意する段取りを分けてまとめます。</summary>
+  </entry>
+  <entry>
+    <title>契約書に印紙が必要か専門家へ相談する前にそろえる資料と作成の経緯</title>
+    <link href="https://vaynexis.jp/column/stamp-duty-consultation-prep"/>
+    <id>https://vaynexis.jp/column/stamp-duty-consultation-prep</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>契約書に印紙が必要かを専門家へ相談する前に、全文、別紙、原契約、作成から受け渡しまでの経緯をそろえる方法をまとめます。文書名だけの質問を避け、相談対象の版や署名・押印の状態を伝える準備と、回答の前提を記録に残す流れを整理します。</summary>
+  </entry>
+  <entry>
+    <title>インボイス登録をやめると決めた後、届出期限をどこで確認する？</title>
+    <link href="https://vaynexis.jp/column/invoice-registration-withdrawal-deadline"/>
+    <id>https://vaynexis.jp/column/invoice-registration-withdrawal-deadline</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>登録を取りやめる方針が決まった後、届出期限を調べる入口と、書類・送付先を確かめる順序を整理します。提出する日と効力が失われる日の違い、休日の扱い、担当者が残す記録を押さえ、税務の判断が必要な点は専門家に確認する流れを示します。</summary>
+  </entry>
+  <entry>
+    <title>文書貸出記録には何を書く？借りた原本・利用目的・返却確認の欄</title>
+    <link href="https://vaynexis.jp/column/document-lending-record-fields"/>
+    <id>https://vaynexis.jp/column/document-lending-record-fields</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>文書貸出記録は、貸し出した原本を特定し、利用目的、借りた担当者、返却予定日、実際の返却日、受取確認を追える形に整えます。記入欄と短い架空の例を示し、貸出前の照合、予定変更の残し方、返却後に保管場所へ戻すまでの確認を整理します。</summary>
+  </entry>
+  <entry>
+    <title>清掃チェックリストには何を書く？場所・頻度・実施日の確認欄</title>
+    <link href="https://vaynexis.jp/column/cleaning-checklist-fields"/>
+    <id>https://vaynexis.jp/column/cleaning-checklist-fields</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>事務所共用部の清掃チェックリストに入れる場所・作業内容・頻度・実施日・実施者・未実施理由を整理します。項目の説明表と短い架空の記入例を通じ、予定と実施の記録の書き分け、担当範囲の照合、保管先や書式の更新時に確かめる点を紹介します。</summary>
+  </entry>
+  <entry>
+    <title>新しいブログ記事を孤立させない、既存記事からの内部リンクの選び方</title>
+    <link href="https://vaynexis.jp/column/blog-internal-link-sources"/>
+    <id>https://vaynexis.jp/column/blog-internal-link-sources</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>新しいブログ記事へのリンク元は、分野の入口、関連する既存記事、前の手順を扱う記事から検討します。読者が次に知りたい内容とのつながりを基準に、リンクを置く位置と文言、担当者の記録、公開画面での確認までを整理。記事の公開と既存ページの更新を組にして進めるための考え方です。</summary>
+  </entry>
+  <entry>
+    <title>日報に残した約束ごとを、同じ案件の続報につなぐ記録の残し方</title>
+    <link href="https://vaynexis.jp/column/daily-report-promise-followup"/>
+    <id>https://vaynexis.jp/column/daily-report-promise-followup</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>過去の日報に残した約束を続報につなぐには、案件名だけでなく、約束の原文と所在を残し、今回の対応と照合します。書き手が替わっても前回の宿題をたどれるよう、記録する項目、返答待ちや変更の扱い、AIに下書きを頼む際に人が確かめる点を整理します。</summary>
+  </entry>
+  <entry>
     <title>見積依頼の送付後に仕様が変わったら、改訂内容をどう通知するか</title>
     <link href="https://vaynexis.jp/column/quotation-request-spec-change-notice"/>
     <id>https://vaynexis.jp/column/quotation-request-spec-change-notice</id>
@@ -157,253 +405,5 @@
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
     <summary>申請表を配る前に、記入を受け付ける欄と固定したい欄を整理します。入力欄だけを編集できるようにする設定の順序、既存の表を見直すときの着眼点、配布前に試す操作、設定を引き継ぐ際に残す内容を、短い例とともにまとめます。</summary>
-  </entry>
-  <entry>
-    <title>Excelで部門と費目を掛け合わせた経費集計表を作る手順</title>
-    <link href="https://vaynexis.jp/column/excel-pivot-department-by-expense"/>
-    <id>https://vaynexis.jp/column/excel-pivot-department-by-expense</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>部門別に、どの費目へ経費がかかっているかを見たい事務担当者向けに、明細の整え方、集計表の作成、項目の配置を整理します。金額が件数になったときや、追記した明細が反映されないときの確認先も示し、引き継ぎ前に元の明細と集計結果を照合する流れまでまとめます。</summary>
-  </entry>
-  <entry>
-    <title>ドメイン更新メールが前任者宛てのときに残す引き継ぎの記録</title>
-    <link href="https://vaynexis.jp/column/domain-renewal-handover-record"/>
-    <id>https://vaynexis.jp/column/domain-renewal-handover-record</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>ドメイン更新のお知らせが前任者へ届いたとき、通知先の変更と今回の更新を分けて確認するための引き継ぎ項目を整理します。契約先・期限・支払担当・完了の記録を表にまとめ、後任者が確かめる点と、AIにメモの下書きを任せる範囲を紹介します。</summary>
-  </entry>
-  <entry>
-    <title>勤怠の承認者が休みのとき、保留中の申請を引き継ぐ確認と記録</title>
-    <link href="https://vaynexis.jp/column/attendance-approver-absent-handover"/>
-    <id>https://vaynexis.jp/column/attendance-approver-absent-handover</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>勤怠の承認者が休みのときは、社内で代理として定めた人と、対象の申請を承認できる設定を確認して引き継ぎます。連絡先が不明なときの確認先、保留中の申請に添える記録、引き継ぎ後の処理状況の見方を整理します。事務担当者が独自に権限を付けない進め方です。</summary>
-  </entry>
-  <entry>
-    <title>取引先ごとに違う支払サイトを請求予定へ反映する管理表の作り方</title>
-    <link href="https://vaynexis.jp/column/payment-terms-per-client-schedule"/>
-    <id>https://vaynexis.jp/column/payment-terms-per-client-schedule</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>取引先ごとに異なる支払サイトを、合意済みの資料から請求予定へ反映するための整理方法です。締め日と入金予定の分け方、条件の適用開始、根拠資料と確認先の残し方をまとめます。AIには照合の下書きを依頼し、人が期日を確かめる流れを扱います。</summary>
-  </entry>
-  <entry>
-    <title>自動車事故報告は何をそろえる？速報と正式報告の情報整理</title>
-    <link href="https://vaynexis.jp/column/vehicle-accident-report-prep"/>
-    <id>https://vaynexis.jp/column/vehicle-accident-report-prep</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>運送事業の事故報告に向け、発生日時・場所、車両、被害、連絡済みの内容をどう集め、速報から正式報告へ引き継ぐかを整理します。公式の速報要領と記載例を手がかりに、元の記録との照合、不明事項の扱い、確認する担当者と期限の残し方を紹介します。</summary>
-  </entry>
-  <entry>
-    <title>HACCP記録の振り返りで何をまとめる？衛生管理計画の改訂へ</title>
-    <link href="https://vaynexis.jp/column/haccp-record-review"/>
-    <id>https://vaynexis.jp/column/haccp-record-review</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>衛生管理の記録を振り返る際は、問題の発生状況、取った措置、その後の状態、計画の変更候補をつなげて整理します。元の記録から改訂理由をたどれるまとめ方と、確認する人、変更後の共有、保管や相談の準備まで、小さな飲食店の事務担当者向けに解説します。</summary>
-  </entry>
-  <entry>
-    <title>工事出来高内訳書の数字はどこから？部分払の資料をそろえる</title>
-    <link href="https://vaynexis.jp/column/construction-progress-breakdown"/>
-    <id>https://vaynexis.jp/column/construction-progress-breakdown</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>工事出来高内訳書の数字を、現場の数量の計算根拠や前回までの記録へたどるための整理方法を紹介します。公式資料で書類の役割と算出方法の範囲を確かめ、元の記録から内訳書、提出版の保管までをつなぐ表と、担当者・締切を確認する項目をまとめます。</summary>
-  </entry>
-  <entry>
-    <title>Googleドライブの資料を後任へ移すには？所有者変更の手順と確認</title>
-    <link href="https://vaynexis.jp/column/drive-ownership-transfer-handover"/>
-    <id>https://vaynexis.jp/column/drive-ownership-transfer-handover</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>資料を後任へ引き継ぐときは、共有の連絡と所有者の変更を分けて考えます。Googleドライブの公式ヘルプを基に、個人用と職場・学校用の違い、共有画面での操作、承諾後の確認を整理します。フォルダ内の資料や共有ドライブとの違い、引き継ぎ記録の例も扱います。</summary>
-  </entry>
-  <entry>
-    <title>Gmailで誤送信を取り消せる時間の設定と送信直後の操作</title>
-    <link href="https://vaynexis.jp/column/gmail-undo-send-time"/>
-    <id>https://vaynexis.jp/column/gmail-undo-send-time</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>送った後に間違いに気づく場面に備え、取り消せる時間を選び、保存するまでの手順を整理します。送信直後に押す場所、操作後に確かめること、事務での短い使い方の例も紹介。設定を変える作業と、その場で取り消す操作を分けて引き継ぐための記事です。</summary>
-  </entry>
-  <entry>
-    <title>Excelで期限を過ぎた未完了の作業にだけ色を付ける設定方法</title>
-    <link href="https://vaynexis.jp/column/excel-overdue-incomplete-highlight"/>
-    <id>https://vaynexis.jp/column/excel-overdue-incomplete-highlight</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>Excelの作業一覧で、期限を過ぎても未完了の行に色を付ける方法を整理します。期限と状態を組み合わせる数式、行全体への設定手順、空欄や期限当日の扱いを短い架空の表で確認し、色が合わないときに見る入力内容・参照先・適用範囲も説明します。</summary>
-  </entry>
-  <entry>
-    <title>Excelで締め日から次の締め日までの金額を集計する方法</title>
-    <link href="https://vaynexis.jp/column/excel-closing-period-sum"/>
-    <id>https://vaynexis.jp/column/excel-closing-period-sum</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>締め期間の集計では、前回の締め日を含めるか、今回の締め日をどこまで含めるかをそろえることが大切です。日付列と金額列を使う数式を、短い架空の表で説明します。時刻が混じる場合の条件の変え方や、合計が合わないときの確認点も整理します。</summary>
-  </entry>
-  <entry>
-    <title>ChatGPT・Claude無料版｜仕事で試す上限と使い分け</title>
-    <link href="https://vaynexis.jp/column/ai-free-plan-limits"/>
-    <id>https://vaynexis.jp/column/ai-free-plan-limits</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>無料版を仕事で試す前に、任せる範囲と途中で止まったときの戻り方を整理します。機能別の上限、時間枠と会話の長さ、添付先やページ数の条件を公式資料で確かめ、記入表と切り分け表で、渡す資料・人が確認する内容・代替手順を決めるための記事です。</summary>
-  </entry>
-  <entry>
-    <title>小さな会社のAI導入の進め方｜業務の選定から試行後の判断まで</title>
-    <link href="https://vaynexis.jp/column/ai-adoption-steps"/>
-    <id>https://vaynexis.jp/column/ai-adoption-steps</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>小さな会社が生成AIを事務に取り入れる際は、試す業務の選定から始めます。件数、誤りの影響、元の資料、人が確認できる範囲を比べ、入力する情報と担当者を決めて試す流れを整理。確認の手間と見つかった誤りを記録し、継続・見直し・中止を判断する方法を示します。</summary>
-  </entry>
-  <entry>
-    <title>経理の効率化はどこから始めるか｜作業を分けて見直す順番を決める</title>
-    <link href="https://vaynexis.jp/column/accounting-efficiency-review"/>
-    <id>https://vaynexis.jp/column/accounting-efficiency-review</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>経理の効率化で、どの作業から見直すか迷う担当者向けに、受け取り・記録・照合・締めの流れと、件数・手戻り・属人化・制度上の期限から順番を決める考え方を整理します。公式資料で確認する所、人が照合する基準、最初の月の進め方も示します。</summary>
-  </entry>
-  <entry>
-    <title>仕事で生成AIの文章・画像を使う前に確かめる著作権のポイント</title>
-    <link href="https://vaynexis.jp/column/ai-copyright-check"/>
-    <id>https://vaynexis.jp/column/ai-copyright-check</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>生成した文章や画像を仕事に使う前に、入力素材の出所、提供元の規約、既存の作品との関係を確かめる視点を整理します。公式資料をもとに学習と生成・利用の場面を分け、確認表と記録の残し方、個別の判断を専門家へ相談する際にそろえる情報を紹介します。</summary>
-  </entry>
-  <entry>
-    <title>AI導入を外部に頼む前に｜データの扱いと終了時の引き継ぎ確認</title>
-    <link href="https://vaynexis.jp/column/ai-outsourcing-data-handover"/>
-    <id>https://vaynexis.jp/column/ai-outsourcing-data-handover</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>AI導入を外部の会社に頼む前に、個人データの取扱範囲、学習への利用、成果物の利用範囲、終了時の引き継ぎを何で確かめるかを整理します。公式資料を手がかりに、委託先から受け取る書面と、設定・手順・アカウントを社内に引き継ぐための確認項目を示します。</summary>
-  </entry>
-  <entry>
-    <title>AIの試作品・デモはどう評価する？試す入力と使えるかを決める基準</title>
-    <link href="https://vaynexis.jp/column/ai-prototype-demo-evaluation"/>
-    <id>https://vaynexis.jp/column/ai-prototype-demo-evaluation</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>AIの試作品やデモを見せられたときは、整った入力で動くかに加え、空欄・誤字・桁違いへの対応も確かめます。試す前に決める正解と許容する誤り、入力ごとの判断基準を残す記入表、間違いに気づける仕組み、引き渡し時に見る点を整理します。</summary>
-  </entry>
-  <entry>
-    <title>AIに渡す前に個人情報を伏せる手順｜置換表で戻すまでの確認</title>
-    <link href="https://vaynexis.jp/column/ai-personal-data-masking"/>
-    <id>https://vaynexis.jp/column/ai-personal-data-masking</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>AIに資料を渡す前に、氏名・電話番号・住所を記号に置き換え、不要な情報を削り、伏せ漏れを調べる手順を整理します。置換表を手元で保管し、返ってきた結果を元の情報に戻すまでの確認と、法律上の加工情報との違いを事務担当者向けに説明します。</summary>
-  </entry>
-  <entry>
-    <title>AIが止まったときの業務の戻し方｜手元に残すものと先に決めること</title>
-    <link href="https://vaynexis.jp/column/ai-outage-fallback"/>
-    <id>https://vaynexis.jp/column/ai-outage-fallback</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>AIサービスの停止や変更に備え、指示文、入力資料、確認済みの出力、手順の控えをどう残すかを整理します。作業別の「AIなしの戻し方」の表を軸に、切替を判断する人、途中の仕事の引継ぎ、公式情報の確認、再開前の点検まで、小さな会社の事務に沿って考えます。</summary>
-  </entry>
-  <entry>
-    <title>業務棚卸しで抜けやすい項目｜属人化・承認待ち・繁忙期を拾う聞き方</title>
-    <link href="https://vaynexis.jp/column/task-inventory-gaps"/>
-    <id>https://vaynexis.jp/column/task-inventory-gaps</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>業務棚卸しの聞き取りで抜けやすい、担当者だけが知る仕事、承認待ち、勘所と理由、紙の書類、月次・年次の例外、作業時間を整理します。質問例の表を軸に、繁忙期の記録のたどり方や、概算と実測を区別して残す方法、棚卸表を見直す場面まで解説します。</summary>
-  </entry>
-  <entry>
-    <title>ClaudeのMaxとUltra｜使用量の枠と契約前の確認</title>
-    <link href="https://vaynexis.jp/column/claude-max-ultra-check"/>
-    <id>https://vaynexis.jp/column/claude-max-ultra-check</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>有料プランを選ぶ前に、使用量の倍率だけでなく対象期間と認証の条件を確かめます。購読に含まれる枠、上限後の追加使用、開発向け残高の違いを整理し、加入済みの人が確認する場所と、契約前に確認日を記録するための表をまとめます。</summary>
-  </entry>
-  <entry>
-    <title>ChatGPTのdot｜対象・端末・止め方と依頼の書き分け</title>
-    <link href="https://vaynexis.jp/column/chatgpt-dot-check"/>
-    <id>https://vaynexis.jp/column/chatgpt-dot-check</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>仕事で継続的な確認を任せる前に、公式ヘルプで利用対象と対応端末を照合する手順を整理します。通常の依頼との書き分け、報告条件と人の判断を待つ条件の記入例、進行中の仕事と今後の予定を分けて止める確認点をまとめます。</summary>
-  </entry>
-  <entry>
-    <title>ChatGPT・Claudeの音声利用枠と止まったときの確認</title>
-    <link href="https://vaynexis.jp/column/ai-voice-mode-limits-check"/>
-    <id>https://vaynexis.jp/column/ai-voice-mode-limits-check</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>音声で相談する前に、会話する場所と利用枠の数え方を確かめます。途中で止まったときに見る通知や接続状態、映像を見せたい場合の切り分け、声で入力する機能との違いを整理し、仕事の情報を話す前の点検と、依頼の範囲を区切る短い指示例をまとめます。</summary>
-  </entry>
-  <entry>
-    <title>Claude Coworkを始める前に｜処理の場所と渡す情報の確認</title>
-    <link href="https://vaynexis.jp/column/claude-cowork-cloud-check"/>
-    <id>https://vaynexis.jp/column/claude-cowork-cloud-check</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>事務の作業を任せる前に、処理が動く場所と、手元のファイルにアクセスする条件を分けて確かめます。画面の違いを見分ける手順、渡すフォルダの点検表、端末を閉じる前の確認をまとめました。必要な情報と変更してよい範囲を整理してから始めるための記事です。</summary>
-  </entry>
-  <entry>
-    <title>業務改善助成金と滋賀県の補助金｜対象・申請先・時期の違い</title>
-    <link href="https://vaynexis.jp/column/business-improvement-subsidy-shiga"/>
-    <id>https://vaynexis.jp/column/business-improvement-subsidy-shiga</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>賃上げと設備導入を考える小さな会社に向け、国の助成と県の上乗せ補助を、対象・支援内容・申請先・時期から比較します。申請前と申請済みで調べる順番を分け、募集欄の読み方や、問い合わせる前に手元で整理する書類・確認項目をまとめます。</summary>
-  </entry>
-  <entry>
-    <title>AI導入の公的な事例集の読み方｜自社に合うかを確かめる観点</title>
-    <link href="https://vaynexis.jp/column/ai-case-study-reading"/>
-    <id>https://vaynexis.jp/column/ai-case-study-reading</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>公的なAI導入事例を読んでも、自社で使えるか迷うことがあります。規模・業種・業務・利用範囲・効果の測り方・公開時期を照合し、参考にできる部分と追加で確かめる部分を整理します。効果の数字を転用せず、最初に試す業務へ読み替えるための読み方です。</summary>
-  </entry>
-  <entry>
-    <title>生成AIとは｜小さな会社が仕事で使う前に知っておくこと</title>
-    <link href="https://vaynexis.jp/column/what-is-generative-ai"/>
-    <id>https://vaynexis.jp/column/what-is-generative-ai</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>生成AIを仕事で使う前に、用語の意味と、出力の誤り・入力情報の扱い・社内で使う範囲を整理します。公的資料と提供元の公式説明をもとに、従来のAIや検索との使い分け、最初に試す作業の選び方を紹介。操作手順の前に、下書きと人の判断の境目を押さえます。</summary>
-  </entry>
-  <entry>
-    <title>AIエージェントとは｜事務で任せる範囲と人が確かめる所</title>
-    <link href="https://vaynexis.jp/column/what-is-ai-agent"/>
-    <id>https://vaynexis.jp/column/what-is-ai-agent</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>AIエージェントを事務で使う際は、何ができるかに加えて、どこまで操作を許すかを考えます。公式資料の定義と注意点をもとに、権限、実行前の承認、操作の記録を整理。検索や下書きから試し、更新や送信へ進む前に人が確かめる所を、短い例と表で示します。</summary>
-  </entry>
-  <entry>
-    <title>RPAと生成AIの違い｜事務作業をどちらに任せるかの見分け方</title>
-    <link href="https://vaynexis.jp/column/rpa-vs-generative-ai"/>
-    <id>https://vaynexis.jp/column/rpa-vs-generative-ai</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>RPAと生成AIの違いを、事務作業の選び方から整理します。手順と入力の形が決まっているか、文章の読み取りや下書きが必要か、人が結果を確かめられるかを軸に、転記・問い合わせ対応などの短い例で比較。組み合わせる際の確認場所と、導入を見送る目安も示します。</summary>
-  </entry>
-  <entry>
-    <title>福井・岐阜・三重と近畿のDX・AI支援｜府県別記事の入口</title>
-    <link href="https://vaynexis.jp/column/dx-ai-support-prefecture-guide"/>
-    <id>https://vaynexis.jp/column/dx-ai-support-prefecture-guide</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated>
-    <summary>中小企業がDX・AIの補助金と相談先を調べる際に、どの府県別記事から読み、公式ページのどこへ進むかを整理します。窓口の役割、費用負担、募集状況の見分け方を比較し、受付が終わっていた場合に次に確かめる先まで、迷いやすい点をまとめた入口です。</summary>
-  </entry>
-  <entry>
-    <title>ChatGPT・Claudeの学習設定と保存｜会社情報を入れる前の確認</title>
-    <link href="https://vaynexis.jp/column/ai-training-retention-check"/>
-    <id>https://vaynexis.jp/column/ai-training-retention-check</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated>
-    <summary>会社の情報を入力する前に、学習への利用、画面に残る履歴、提供元での保存期間を分けて確かめます。個人向け・法人向け・外部システムとの連携で説明が異なる点を公式資料から整理し、設定名、確認する担当者、確認後に残す記録を一覧表で示します。</summary>
   </entry>
 </feed>

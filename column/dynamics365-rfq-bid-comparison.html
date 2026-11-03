@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>相見積の回答を単価・合計額・納入日で並べて比較する手順｜Vaynexis</title>
+  <meta name="description" content="相見積の回答を比較するときは、単価だけでなく、回答数量、合計額、納入時期を依頼内容と照らし合わせます。回答を登録して並べる手順と、見積書に戻って確かめる点、採用の判断前に残すメモを、事務担当者が引き継ぎやすい形で整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="相見積の回答を単価・合計額・納入日で並べて比較する手順｜Vaynexis">
+  <meta property="og:description" content="相見積の回答を比較するときは、単価だけでなく、回答数量、合計額、納入時期を依頼内容と照らし合わせます。回答を登録して並べる手順と、見積書に戻って確かめる点、採用の判断前に残すメモを、事務担当者が引き継ぎやすい形で整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/dynamics365-rfq-bid-comparison">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/dynamics365-rfq-bid-comparison">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"相見積の回答を単価・合計額・納入日で並べて比較する手順","description":"相見積の回答を比較するときは、単価だけでなく、回答数量、合計額、納入時期を依頼内容と照らし合わせます。回答を登録して並べる手順と、見積書に戻って確かめる点、採用の判断前に残すメモを、事務担当者が引き継ぎやすい形で整理します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/dynamics365-rfq-bid-comparison"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"相見積の回答を単価・合計額・納入日で並べて比較する手順","item":"https://vaynexis.jp/column/dynamics365-rfq-bid-comparison"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">相見積の回答を単価・合計額・納入日で並べて比較する手順</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">相見積の回答を単価・合計額・納入日で並べて比較する手順</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>相見積の回答は、「回答の比較」で明細行の価格・入荷日・価格の合計を見比べられます。比較する品目と数量をそろえ、単価、合計額、納入時期の順に確認すると整理しやすくなります。順位を付ける前に、仕入先への確認事項を分けておくとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
+    <p>この記事は、相見積の回答を単価・合計額・納入日で見比べる小さな会社の購買・事務担当者が、Dynamics 365 Supply Chain Management の見積依頼で回答を比較する手順と、見積書に戻って確かめる点を整理するためのものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">比較を始める前に、回答と依頼内容を対応させる</a></li>
+      <li><a href="#s2">仕入先ごとの回答を登録して比較画面を開く</a></li>
+      <li><a href="#s3">行を並べ替え、単価・合計額・納入時期を読み分ける</a></li>
+      <li><a href="#s4">価格と納入時期が食い違う回答を短く整理する</a></li>
+      <li><a href="#s5">表示できない回答と、承認前に確認すること</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．比較を始める前に、回答と依頼内容を対応させる</h2>
+    <p>ここでは、Dynamics 365 Supply Chain Management の見積依頼への回答を比較する操作を扱います。操作説明の確認日は、出典の一覧に記載しています。</p>
+    <p>比較画面には、依頼時の数量と一致しない回答数量が含まれる場合があります。</p>
+    <p>以下は比較の準備についての当社の整理です。最初に、届いた回答を依頼した品目に対応させます。品名の似た別仕様や、まとめ売りと個別売りを混ぜず、単価の対象となる単位を元の見積書で確かめる進め方です。</p>
+    <p>比較を担当する人の手元には、依頼内容と仕入先の回答を一緒に置きます。回答に書かれた内容と、担当者が確認した内容を分けて残すと、別の担当者も判断の経緯を追いやすくなります。空欄は推測で埋めず、問い合わせる項目として扱うとよいです。回答が届いた順に確認を進める場合も、どの品目まで照合を終えたかを残しておくと、確認途中の回答を判断済みとして扱う混乱を避けやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．仕入先ごとの回答を登録して比較画面を開く</h2>
+    <p>調達担当者が代理入力する公式手順では、「調達 &gt; 設定 &gt; 調達パラメーター」の見積依頼タブで「購買担当者は仕入先入札を編集可能」を「はい」にする設定を確認します。</p>
+    <p>「調達 &gt; 見積依頼 &gt; すべての見積依頼」から、送信済の対象を開き、「返信を管理する」で仕入先ごとの回答を表示します。</p>
+    <p>未返信の対象を選び、「編集 &gt; RFQ 返信の編集」で回答を入力し、入力を終えたら「送信」を選びます。</p>
+    <p>比較は、アクションペインの「一般」タブにある「回答の比較」から開きます。</p>
+    <p>ここでの入力内容の確認は当社の整理です。代理入力では、回答元の見積書を見ながら品目ごとに照合します。入力できたことだけで確認を終えず、回答に含まれる備考も読み返すとよいです。回答の明細と備考の説明が食い違って見える箇所は、担当者の解釈で整えず、仕入先へ問い合わせるメモに分けます。引き継ぎには、比較の対象とした回答を特定できる情報も添えます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．行を並べ替え、単価・合計額・納入時期を読み分ける</h2>
+    <p>比較画面では、グリッドを並べ替えて類似する行を隣り合わせにできます。同じ品目の回答を見比べる準備ができたら、価格と日付を確認する流れです。</p>
+    <p>「正味金額」は、明細行の品目に対する見積価格から割引を差し引いた額です。「誤差」は、入札ヘッダーまたは明細行の受領日と、依頼の入荷希望日との日数差を示します。</p>
+    <p>読み分けの順序は当社の整理です。まず単価の対象となる品目と単位を確かめ、次に合計額に含まれる範囲を確認します。最後に、希望する納入時期と回答の時期を照合する流れが考えられます。明細の金額と全体の合計を混同せず、それぞれを見積書に戻って確認するとよいです。</p>
+    <p>納入日という言葉を使う際も、発送と到着を区別して読むことが大切です。回答の文面に書かれた時点をそのままメモし、受け取りたい時期との関係を整理します。合計額の差についても、単価の差だけで説明を付けず、見積書の内訳を順にたどります。比較する範囲がそろっているかを確かめてから、価格差の理由を担当者の言葉で短く残す進め方です。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．価格と納入時期が食い違う回答を短く整理する</h2>
+    <p>比較した内容を引き継ぐ際は、金額の順番だけでなく、判断を保留した理由を短く添えると伝わりやすくなります。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">回答</th><th scope="col">単価の見え方</th><th scope="col">合計額の見え方</th><th scope="col">納入時期</th><th scope="col">比較後に残すメモ</th></tr></thead><tbody><tr><td data-label="回答">仕入先あ</td><td data-label="単価の見え方">相対的に低い</td><td data-label="合計額の見え方">送料の扱いを確認中</td><td data-label="納入時期">希望より遅い</td><td data-label="比較後に残すメモ">受け取り時期の調整を相談する</td></tr><tr><td data-label="回答">仕入先い</td><td data-label="単価の見え方">相対的に高い</td><td data-label="合計額の見え方">送料を含む回答</td><td data-label="納入時期">希望に沿う</td><td data-label="比較後に残すメモ">含まれる費用を見積書で再確認する</td></tr></tbody></table></div>
+    <p>この表は、回答を読んだ担当者の整理用メモを表したものです。安さと受け取り時期のどちらを優先するかは、使用する部署の事情と合わせて考えます。価格差の説明と確認中の項目を分けておけば、採用を判断する人へ渡しやすくなります。</p>
+    <p>問い合わせの返答を受けた後は、比較に使う回答を差し替え、古い回答との区別を付けるとよいです。採用理由も、見積書で確認できた事柄に結び付けて残します。担当者が付けた評価と、仕入先から返ってきた説明の区別が付く書き方にすると、後から確認の経緯を読み返しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．表示できない回答と、承認前に確認すること</h2>
+    <p>封緘された入札では、設定された有効期限日時を過ぎると「開封」が使用可能になり、開封後に入札データと添付ファイルを表示できます。</p>
+    <p>各入札には、比較画面の「ランク」へ数値を入力できます。順位と採用理由を照らし合わせる作業は、人が判断する範囲として整理します。</p>
+    <p>入札や特定の明細行を承認した後は、購買タイプに応じて購買契約書・発注書の生成、または購買要求の更新が行われます。</p>
+    <p>承認前の確認は当社の整理です。比較を終えた段階で、採用する回答、採用する範囲、仕入先への確認事項を担当者間ですり合わせます。未回答の問い合わせと採用理由を区別し、判断する人が元の回答をたどれる状態にしておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">依頼品目と回答品目の対応を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">回答数量と単価の対象となる単位を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">明細の金額と全体の合計を区別して確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">送料など、合計額に含まれる範囲を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">希望する納入時期と回答の時期を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">回答の修正版と古い回答を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">採用理由と、仕入先への確認事項を分けて整理したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/request-quotations" rel="noopener" target="_blank">見積依頼 (RFQ) の概要</a>：比較できる価格・入荷日・合計、製品の対象、承認後の処理</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/tasks/enter-compare-rfq-bids-award-contracts" rel="noopener" target="_blank">RFQ入札の価格を入力して比較し、契約を授与します。</a>：代理入力の設定と操作、比較画面、並べ替え、数量・正味金額・誤差・ランク</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/sealed-bidding" rel="noopener" target="_blank">RFQ の封緘入札</a>：開封できる時点と開封後の表示</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順｜重複・件数・金額の確認例</a></li>
+      <li><a href="/column/liquor-receipt-payment-ledger">酒類の受払帳簿は何を残す？品目・数量・取引資料のまとめ方</a></li>
+      <li><a href="/column/shopify-deferred-refund-execution">返品処理だけ済ませて後回しにした返金はどこから実行するか</a></li>
+      <li><a href="/column/kyokai-kenpo-certificate-reissue-lost">資格確認書を紛失した従業員の再交付はどこへ申請するか</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策。件数・合計・重複の3つで照合する</a></li>
+      <li><a href="/column/ai-invoice-draft">請求書の下書きをAIで作るときの確認。インボイスの記載事項と、消費税額の端数の照合</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

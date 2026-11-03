@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで完了と入力した作業の行全体を薄く表示する設定方法｜Vaynexis</title>
+  <meta name="description" content="Excelの作業一覧で、完了した行全体を薄く表示する方法を整理します。条件付き書式で状態を判定する数式、列だけを固定する参照方法、適用する範囲の選び方を短い例で説明し、行がずれる・一部しか薄くならないときの確認点と引き継ぎの要点もまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで完了と入力した作業の行全体を薄く表示する設定方法｜Vaynexis">
+  <meta property="og:description" content="Excelの作業一覧で、完了した行全体を薄く表示する方法を整理します。条件付き書式で状態を判定する数式、列だけを固定する参照方法、適用する範囲の選び方を短い例で説明し、行がずれる・一部しか薄くならないときの確認点と引き継ぎの要点もまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-dim-completed-rows">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-dim-completed-rows">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで完了と入力した作業の行全体を薄く表示する設定方法","description":"Excelの作業一覧で、完了した行全体を薄く表示する方法を整理します。条件付き書式で状態を判定する数式、列だけを固定する参照方法、適用する範囲の選び方を短い例で説明し、行がずれる・一部しか薄くならないときの確認点と引き継ぎの要点もまとめます。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-dim-completed-rows"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで完了と入力した作業の行全体を薄く表示する設定方法","item":"https://vaynexis.jp/column/excel-dim-completed-rows"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで完了と入力した作業の行全体を薄く表示する設定方法</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで完了と入力した作業の行全体を薄く表示する設定方法</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>完了した作業の行を薄くするには、条件付き書式で状態を判定し、表示を変える範囲を行の各項目まで広げます。判定する列だけを固定し、行は明細に合わせて変わる参照にするのがポイントです。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelの作業一覧で、完了と入力した作業の行全体を薄く表示したい小さな会社の事務担当者が、条件付き書式の数式と参照の考え方、表示が合わないときの確認点を整理するためのものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">まず「薄くする範囲」と状態の言葉を決める</a></li>
+      <li><a href="#s2">明細を選んで数式のルールを作る</a></li>
+      <li><a href="#s3">列だけを固定すると、同じ行の状態を見られる</a></li>
+      <li><a href="#s4">表示が合わないときは、入力・範囲・競合を分ける</a></li>
+      <li><a href="#s5">完了とそれ以外の両方を確かめて引き継ぐ</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．まず「薄くする範囲」と状態の言葉を決める</h2>
+    <p>ここでいう「行全体」は、表の中で作業名から状態まで横に並ぶ項目を指します。表の外側まで薄くする想定ではありません。残っている作業を探しやすくするため、終わった作業の文字を落ち着いた色にする方針です。</p>
+    <p>説明用には、次のような小さな一覧を使います。見出しの下に明細が続き、状態には「完了」「対応中」「未着手」を入れる構成です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">作業名</th><th scope="col">担当</th><th scope="col">状態</th></tr></thead><tbody><tr><td data-label="作業名">資料の整理</td><td data-label="担当">事務</td><td data-label="状態">完了</td></tr><tr><td data-label="作業名">内容の確認</td><td data-label="担当">営業</td><td data-label="状態">対応中</td></tr><tr><td data-label="作業名">案内の準備</td><td data-label="担当">事務</td><td data-label="状態">未着手</td></tr><tr><td data-label="作業名">共有先の確認</td><td data-label="担当">営業</td><td data-label="状態">完了</td></tr></tbody></table></div>
+    <p>薄くしたいのは、資料の整理と共有先の確認です。状態の言葉はあらかじめそろえ、完了にした人が後から内容を読み返せる程度の濃さを選びます。色の意味を「作業が終わった」に統一しておくと、引き継ぐ人も一覧を読み取りやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．明細を選んで数式のルールを作る</h2>
+    <p>機能・操作の確認日：2026-11-03（以下の製品の記述に共通）。</p>
+    <h3 class="h3">対象を選び、新しいルールを開く</h3>
+    <p>表示を変える明細の範囲を選び、［ホーム］→［条件付き書式］→［新しいルール］へ進みます。状態の欄だけでなく、横に並ぶ作業名と担当の欄まで選ぶ点が、この設定の要所です。</p>
+    <p>説明用の配置は当社で決めたもので、作業名・担当・状態を左から並べ、見出しを除く範囲を次のように選ぶ想定です。選び始めるセルは左上にそろえます。</p>
+    <pre class="prompt">作業名：A列
+担当：B列
+状態：C列
+選択範囲：A2:C5
+選択の基準：A2</pre>
+    <h3 class="h3">判定式を入れ、薄い書式を選ぶ</h3>
+    <p>［数式を使用して書式設定するセルを決定する］を選び、数式を入力して書式を指定します。次は、説明用の状態欄に合わせて当社で組み立てた式です。</p>
+    <pre class="prompt">=$C2="完了"</pre>
+    <p>数式は先頭の等号から入力する形です。［書式］でフォントや塗りつぶしを指定し、［OK］で確定できます。この例では、文字を読み取れる灰色にするか、背景を淡い灰色にする方針です。薄さを優先しすぎず、作業名も状態も読めるか見比べるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．列だけを固定すると、同じ行の状態を見られる</h2>
+    <p>複合参照は、列と行の片方を固定し、もう片方を相対参照にする参照方法です。この例では参照する列を固定し、下の明細では同じ行の状態を読む形にします。</p>
+    <p>説明用の式にある「$C2」は、状態の列を固定し、行番号は変わるようにした参照です。どの項目の表示を変える場合も、その行の状態欄を判定するために使います。</p>
+    <pre class="prompt">$C2：列を固定し、行は変える
+$C$2：列と行を固定する
+C2：列と行の両方を相対参照にする</pre>
+    <p>上の違いは、公式資料の絶対参照と相対参照の説明を、例の配置に当てはめたものです。列と行を両方固定した形では、明細ごとに別の状態を読む設定になりません。色が合わないときは、先にこの記号の位置を見直すとよいです。</p>
+    <p>また、比較の等号は値が等しいかを調べる演算子です。例の式は、状態欄の値と「完了」が等しいかを調べる、当社で組み立てた設定です。この例では、対象を完了の表記にそろえる方針なので、対応中などを含む曖昧な判定には広げません。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．表示が合わないときは、入力・範囲・競合を分ける</h2>
+    <p>表示のずれを見つけたら、いきなり色を重ねて直すより、どの行・どの項目がおかしいかを分けて確認すると原因を探しやすくなります。</p>
+    <p>状態欄の文字を、式で指定した表記と見比べます。「完了済み」など別の表記を混ぜていないか、貼り付けた入力に余分な文字がないかを見る順番です。表示だけでなく、欄に入っている内容を確認するのが出発点になります。</p>
+    <p>行の一部だけ薄くなるときは、表示を変える対象の横幅を見ます。隣の行が薄くなるときは、選び始めた明細と、式が読む明細の位置を照らし合わせます。追加した作業だけ変わらないときは、対象の末尾まで含めたかを確認するとよいです。</p>
+    <p>公式手順では、［ルールの管理］の［適用先］で対象範囲を変更できます。また、書式が競合すると、優先順位が上のルールが適用されます。別の色分けがある表では、判定式と範囲に加え、既存の設定も見比べます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．完了とそれ以外の両方を確かめて引き継ぐ</h2>
+    <p>確認用の表では、完了の行が薄くなることと、対応中・未着手の行が通常の表示を保つことを見比べます。状態を完了から対応中へ戻したときも、意図した表示に戻るかが確認点です。文字の薄さだけで作業状況を判断せず、状態欄も一緒に読みます。</p>
+    <p>引き継ぎのメモには、判定する欄、入力する言葉、表示を変える範囲を残すとよいです。式だけを記録するより、何を終えたら完了にするのかも添えると、入力する人と確認する人の理解を合わせやすくなります。</p>
+    <p>薄くなった行を削除するかどうかは、表示の設定とは別に扱います。終わった内容を後から確認する用途も考え、一覧を管理する人が残し方を決める形です。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">完了の状態を表す言葉をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見出しを除き、作業名から状態までの明細を選択したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">状態の列だけを固定し、行は変わる参照にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">選び始めた明細と、式が参照する明細の位置を合わせたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">完了とそれ以外の状態で、表示を見比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">状態を戻した行や、追加した行の表示も確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">読める濃さと、引き継ぎ用の設定メモを確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/use-conditional-formatting-to-highlight-information-in-excel" rel="noopener" target="_blank">条件付き書式を使用して Excel 内の情報を強調表示する</a>：数式による判定、作成手順、フォントと塗りつぶし、適用先、競合</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/using-if-with-and-or-and-not-functions-in-excel" rel="noopener" target="_blank">Excel で IF と AND、OR、NOT 関数を使用する</a>：数式を使った書式設定の操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/overview-of-formulas-in-excel" rel="noopener" target="_blank">Excel の数式の概要</a>：数式の先頭の記号、参照が変わる仕組み</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/switch-between-relative-absolute-and-mixed-references" rel="noopener" target="_blank">相対参照、絶対参照、複合参照を切り替える</a>：列だけを固定する参照</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/calculation-operators-and-precedence-in-excel" rel="noopener" target="_blank">演算子と Excel での優先順位</a>：値の比較と等号</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順｜重複・件数・金額の確認例</a></li>
+      <li><a href="/column/cleaning-checklist-fields">清掃チェックリストには何を書く？場所・頻度・実施日の確認欄</a></li>
+      <li><a href="/column/freee-attach-documents-to-transactions">freee会計の登録済み取引に証憑をひも付ける手順と確認</a></li>
+      <li><a href="/column/blog-internal-link-sources">新しいブログ記事を孤立させない、既存記事からの内部リンクの選び方</a></li>
+      <li><a href="/column/task-listing">業務の洗い出し方。部署名ではなく「作業」で書く</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策。件数・合計・重複の3つで照合する</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
