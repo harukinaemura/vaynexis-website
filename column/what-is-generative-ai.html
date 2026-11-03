@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生成AIとは｜小さな会社が仕事で使う前に知っておくこと｜Vaynexis</title>
+  <meta name="description" content="生成AIを仕事で使う前に、用語の意味と、出力の誤り・入力情報の扱い・社内で使う範囲を整理します。公的資料と提供元の公式説明をもとに、従来のAIや検索との使い分け、最初に試す作業の選び方を紹介。操作手順の前に、下書きと人の判断の境目を押さえます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="生成AIとは｜小さな会社が仕事で使う前に知っておくこと｜Vaynexis">
+  <meta property="og:description" content="生成AIを仕事で使う前に、用語の意味と、出力の誤り・入力情報の扱い・社内で使う範囲を整理します。公的資料と提供元の公式説明をもとに、従来のAIや検索との使い分け、最初に試す作業の選び方を紹介。操作手順の前に、下書きと人の判断の境目を押さえます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/what-is-generative-ai">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/what-is-generative-ai">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"生成AIとは｜小さな会社が仕事で使う前に知っておくこと","description":"生成AIを仕事で使う前に、用語の意味と、出力の誤り・入力情報の扱い・社内で使う範囲を整理します。公的資料と提供元の公式説明をもとに、従来のAIや検索との使い分け、最初に試す作業の選び方を紹介。操作手順の前に、下書きと人の判断の境目を押さえます。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/what-is-generative-ai"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"生成AIとは","item":"https://vaynexis.jp/column/what-is-generative-ai"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">生成AIとは</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">生成AIとは｜小さな会社が仕事で使う前に知っておくこと</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>生成AIは仕事の下書き作りに使い、内容を確かめてから採用する、と考えると整理しやすくなります。使う前には、出力の誤り、入力情報の扱い、社内で使う範囲を確かめます。機能の多さより、渡せる情報と、自分たちで確認できる成果物から始めることが大切です。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
+    <p>この記事は、ChatGPTなどの生成AIを仕事で使い始める前に、用語の意味と、確かめる3つ（出力の誤り・入力情報の扱い・社内で使う範囲）を押さえたい小さな会社の担当者に向けた整理です。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">生成AIの「生成」は、文章などを作ることです</a></li>
+      <li><a href="#s2">出力は完成品にせず、下書きとして受け取ります</a></li>
+      <li><a href="#s3">入力する前に、契約と情報の扱いを確かめます</a></li>
+      <li><a href="#s4">社内で使う範囲を、試す前に共有します</a></li>
+      <li><a href="#s5">最初の作業は、人が確かめられる範囲から選びます</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．生成AIの「生成」は、文章などを作ることです</h2>
+    <p>用語の意味を押さえたうえで、仕事の中で何を任せるかを考えます。</p>
+    <p>生成AIとは、文章や画像、プログラムなどを生成できるモデルに基づくAIの総称です。</p>
+    <p>従来のAIとの違いは、分類や分析・推論を行うことに加えて、新しい内容を作り出すことに目を向けると捉えやすくなります。事務で関わる用途には、文書の作成や要約もあります。</p>
+    <p>仕事では、原文を探して読む場面を検索、渡した材料から文章の形を考える場面を下書き作りとして使い分けるとよいです。「文案がほしい」と「事実を確かめたい」を依頼する側で分けておきます。読みやすい回答が出たことと、元の資料を確認したことも別に扱います。</p>
+    <p>専門用語を覚え終えてから使い始める、という順番にする必要はありません。まず、任せたいものが文章の形なのか、確認済みの答えなのかを言葉にすると、仕事での役割を決めやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．出力は完成品にせず、下書きとして受け取ります</h2>
+    <p>使い始める前に、出てきた内容を誰が確かめるかを決めておきます。</p>
+    <p>生成AIの回答には、不正確な内容が含まれることがあります。</p>
+    <p>そこで当社では、出力を採用前の下書きとして扱う考え方を示します。文面を整える作業は任せても、書かれた内容を会社として使ってよいかは人が判断する、という区切りです。「丁寧な文章になったか」と「伝える内容が合っているか」を分けて見るとよいです。</p>
+    <p>たとえば社内向けの案内文なら、読みやすさを見直す役割と、案内する内容を確かめる役割を分けて考えます。下書きを作った人だけでは判断できない部分は、内容を知る担当者に戻す扱いにします。</p>
+    <p>誤りを探す詳しい手順を覚える前に、まず確認できる人と元の資料がある仕事を選びます。内容を確かめる手掛かりがないまま、文章だけを完成させる進め方は避けるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．入力する前に、契約と情報の扱いを確かめます</h2>
+    <p>ここでは設定の操作ではなく、仕事の情報を渡す前の確認に絞ります。</p>
+    <p>提供元の公式説明には、事業向けの契約を対象としたものがあります。また、利用者が会話などの学習利用を許可するかを選ぶ仕組みを持つサービスもあります。</p>
+    <p>このため、自社で使う製品と契約に対応する公式ページを開き、学習への利用と保存の扱いをそれぞれ確かめる、という進め方にします。確認日：2026年11月3日。ここで参照した説明を、別の製品や契約にそのまま当てはめないことが大切です。</p>
+    <p>個人情報保護委員会も、利用規約やプライバシーポリシー等を十分に確認し、入力する情報の内容等を踏まえて利用を判断するよう示しています。</p>
+    <p>実務上は、設定についての説明を読んだことと、その仕事の資料を入力してよいと会社が判断したことを分けておきます。初めて試す段階では、仕事の原本をそのまま持ち込まず、公開済みの説明や、試すために用意した文章から始めるとよいです。個人情報を扱う可否などの法的判断は、公式資料を示して専門家に確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．社内で使う範囲を、試す前に共有します</h2>
+    <p>担当者が自分の判断で使い始める前に、会社としての利用範囲を共有します。</p>
+    <p>国は、事業者等の自発的な取組を支援するための「AI事業者ガイドライン」を策定しています。</p>
+    <p>会社で最初にそろえるのは、使ってよい場面、渡してよい情報、出力を採用する前の確認担当です。公的な資料の存在を知ることと、自社の仕事について許可を出すことは分けて考えます。利用範囲が決まっていない仕事は、試す対象から外しておく扱いが考えられます。</p>
+    <p>ここでは社内ルールのひな形や詳しい作り方には立ち入りません。使う担当者が「この仕事は試せる」「ここからは確認が要る」と見分けられる状態を、利用開始の目安にします。判断に迷ったときに戻れる相手を決めておくことも大切です。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．最初の作業は、人が確かめられる範囲から選びます</h2>
+    <p>最初の作業を選ぶときは、入力してよい材料があり、出力を見直せる人がいるかを軸にします。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">試す作業の例</th><th scope="col">渡す材料</th><th scope="col">人が判断する所</th></tr></thead><tbody><tr><td data-label="試す作業の例">社内の呼び掛け文の言い換え</td><td data-label="渡す材料">試すために用意した短文</td><td data-label="人が判断する所">読み手に合う言葉か、意味を変えていないか</td></tr><tr><td data-label="試す作業の例">資料の見出し案づくり</td><td data-label="渡す材料">公開してよい話題の概要</td><td data-label="人が判断する所">話の順番や、抜けている観点</td></tr><tr><td data-label="試す作業の例">説明文の短縮</td><td data-label="渡す材料">入力を認めた説明文</td><td data-label="人が判断する所">短くしても必要な意味が残るか</td></tr></tbody></table></div>
+    <p>この表は、効果や正確さを保証するものではありません。仕事を丸ごと任せる前に、試す範囲と人が判断する所を小さく区切るための例です。</p>
+    <p>試した後は、文案を採用できたかだけでなく、確認の負担も振り返ります。元の文章を読み直す手間や、意図と違う表現を直す手間も含めて、仕事に合う使い方かを考えるとよいです。確認の負担が大きい場合は、渡す材料や任せる範囲を見直します。</p>
+    <p>担当者が変わっても続けられるよう、何を任せ、どの部分を人が直したかを共有する方法も考えます。うまく整った文案だけで判断せず、確認する担当者が内容を理解し、採用の理由を説明できるところまでを試す範囲に含めます。</p>
+    <p>生成AIを使い始める準備は、機能を覚えることだけではありません。何を渡せて、何を下書きとして受け取り、誰が採用を決めるかをそろえることが、仕事で使うための出発点になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">作りたい下書きと、事実を確かめたいことを分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">出力を採用する前に、内容を確認できる人を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">自社で使う製品と契約に対応する公式説明を読んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力する情報の学習利用と保存の扱いを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">社内で使える場面と、渡せる情報の範囲を共有したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">最初の作業を、材料と出力を人が確認できる範囲に絞ったか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/b7cbb25f-2b3b-414a-b601-404469af221f/49e4ccc3/20250527_resources_standard_guidelines_guideline_01.pdf" rel="noopener" target="_blank">デジタル庁：行政の進化と革新のための生成AIの調達・利活用に係るガイドライン</a>：用語の定義、AI事業者ガイドラインの存在。2025-05-27版の用語表と背景を参照し、最新の運用要件には用いていない。</li>
+      <li><a href="https://www.pref.fukuoka.lg.jp/contents/fukuoka-generative-ai-guideline.html" rel="noopener" target="_blank">福岡県：生成AI庁内利活用ガイドラインについて</a>：従来のAIとの違い。ページ更新日2026-04-01。庁内の利用条件は会社に転用していない。</li>
+      <li><a href="https://www.ipa.go.jp/digital/ai/transformation.html" rel="noopener" target="_blank">IPA：AIの利活用、AIによるDXの推進</a>：文書作成・要約の用途。ページ更新日2026-09-11。</li>
+      <li><a href="https://www.ppc.go.jp/files/pdf/230602_alert_generative_AI_service.pdf" rel="noopener" target="_blank">個人情報保護委員会：生成AIサービスの利用に関する注意喚起等</a>：不正確な回答、利用規約等の確認。公表日2023-06-02の資料。現行一覧にも同資料が掲載されていることを確認。</li>
+      <li><a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training" rel="noopener" target="_blank">Anthropic：Is my data used for model training?（Commercial Customers）</a>：事業向けの契約を対象とする公式説明があること。更新日2026-08-18。</li>
+      <li><a href="https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training" rel="noopener" target="_blank">Anthropic：Is my data used for model training?（Consumers）</a>：学習利用に関する利用者の選択。更新日2026-03-16。安全上の審査等に関する記載も読んでおり、許可の有無だけで全用途</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/ai-consulting-guide">中小企業向けAIコンサルの選び方（相談先を目的別に比較）</a></li>
+      <li><a href="/column/shiga-ai-consultation">滋賀県のAI相談窓口｜公的な支援機関と民間の相談先の使い分け</a></li>
+      <li><a href="/column/hallucination-office">ハルシネーションとは</a></li>
+      <li><a href="/column/ai-training-retention-check">ChatGPT・Claudeの学習設定と保存</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

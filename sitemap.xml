@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://vaynexis.jp/</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://vaynexis.jp/price</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/record</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/works</loc><lastmod>2026-11-01</lastmod></url>
@@ -10,9 +10,9 @@
   <url><loc>https://vaynexis.jp/contact</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/privacy</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/tokushoho</loc><lastmod>2026-11-01</lastmod></url>
-  <url><loc>https://vaynexis.jp/office-inventory</loc><lastmod>2026-11-01</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai-data-entry-demo</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai-document-demo</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/office-inventory</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai-data-entry-demo</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai-document-demo</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://vaynexis.jp/rates</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/sample-report</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/sample-audit</loc><lastmod>2026-11-01</lastmod></url>
@@ -21,7 +21,7 @@
   <url><loc>https://vaynexis.jp/ai-consulting-guide</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://vaynexis.jp/business-improvement</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://vaynexis.jp/ai-manual-guide</loc><lastmod>2026-11-02</lastmod></url>
-  <url><loc>https://vaynexis.jp/column</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://vaynexis.jp/column/data-entry-errors</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://vaynexis.jp/column/task-listing</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://vaynexis.jp/column/ai-minutes-transcription</loc><lastmod>2026-10-30</lastmod></url>
@@ -31,7 +31,7 @@
   <url><loc>https://vaynexis.jp/column/claude-business-setup</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/column/editorial-policy</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://vaynexis.jp/column/ai-service-changes</loc><lastmod>2026-11-01</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai/tasks</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai/tasks</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://vaynexis.jp/ai/templates</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://vaynexis.jp/ai/tasks/field-billing</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://vaynexis.jp/ai/tasks/field-documents-materials</loc><lastmod>2026-11-02</lastmod></url>
@@ -104,4 +104,15 @@
   <url><loc>https://vaynexis.jp/ai/tasks/attendance-aggregation</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://vaynexis.jp/ai/tasks/shift-draft</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://vaynexis.jp/ai/tasks/year-end-adjustment-prep</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/rpa-vs-generative-ai</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/what-is-ai-agent</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/what-is-generative-ai</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai/tasks/field-customer-support</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai/tasks/field-internal-documents</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai/tasks/complaint-log</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai/tasks/business-card-ledger</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai/tasks/weekly-monthly-report</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai/tasks/approval-memo</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai/tasks/contract-dates-list</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai/tasks/proposal-template</loc><lastmod>2026-11-03</lastmod></url>
 </urlset>

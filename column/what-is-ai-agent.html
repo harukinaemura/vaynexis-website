@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIエージェントとは｜事務で任せる範囲と人が確かめる所｜Vaynexis</title>
+  <meta name="description" content="AIエージェントを事務で使う際は、何ができるかに加えて、どこまで操作を許すかを考えます。公式資料の定義と注意点をもとに、権限、実行前の承認、操作の記録を整理。検索や下書きから試し、更新や送信へ進む前に人が確かめる所を、短い例と表で示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="AIエージェントとは｜事務で任せる範囲と人が確かめる所｜Vaynexis">
+  <meta property="og:description" content="AIエージェントを事務で使う際は、何ができるかに加えて、どこまで操作を許すかを考えます。公式資料の定義と注意点をもとに、権限、実行前の承認、操作の記録を整理。検索や下書きから試し、更新や送信へ進む前に人が確かめる所を、短い例と表で示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/what-is-ai-agent">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/what-is-ai-agent">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AIエージェントとは｜事務で任せる範囲と人が確かめる所","description":"AIエージェントを事務で使う際は、何ができるかに加えて、どこまで操作を許すかを考えます。公式資料の定義と注意点をもとに、権限、実行前の承認、操作の記録を整理。検索や下書きから試し、更新や送信へ進む前に人が確かめる所を、短い例と表で示します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/what-is-ai-agent"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"AIエージェントとは","item":"https://vaynexis.jp/column/what-is-ai-agent"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">AIエージェントとは</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">AIエージェントとは｜事務で任せる範囲と人が確かめる所</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIエージェントは、利用者に代わって目標を追い、仕事を完了させるために動く仕組みです。事務で任せる範囲は、読む・下書きする・変更するという操作ごとに考えます。当社では、任せる範囲を広げる前に、渡す権限、実行前の承認、操作の記録を確かめる進め方を提案します。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
+    <p>この記事は、AIエージェントを事務で使えるのかを知りたい小さな会社の経営者・担当者が、任せる範囲を広げる前に、権限・承認・記録の3点で確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">答えを返す先に、どんな操作があるか</a></li>
+      <li><a href="#s2">事務の仕事を、許す操作に分ける</a></li>
+      <li><a href="#s3">権限・承認・記録をつなげて考える</a></li>
+      <li><a href="#s4">任せる案と、確認する場所を並べる</a></li>
+      <li><a href="#s5">最初は読み取りから、受け渡しを試す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．答えを返す先に、どんな操作があるか</h2>
+    <p>Anthropicの設計解説では、エージェントを、言語モデルが自ら処理の進め方や道具の使い方を動的に決める仕組みとして区別しています。産総研は、従来の生成AIでは生成内容の品質や創造性、AIエージェントでは目的を遂行できたかどうかが評価のポイントになると説明しています。</p>
+    <p>事務の担当者にとっては、回答を読んだ後の作業まで任せたいかを考えると、違いをつかみやすくなります。資料を探す相談に答えてもらうことと、保存場所を調べて候補を選び、次の処理へ進めてもらうことでは、人が見ておきたい範囲が変わります。</p>
+    <p>当社が見るのは、文章の出来に加えて、実際に何をしたかです。完了の報告を受け取るだけでなく、依頼した範囲に収まっているかを確かめる所まで、仕事の流れに含めます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．事務の仕事を、許す操作に分ける</h2>
+    <p>Microsoftの開発者向け資料には、道具が行う操作として、検索、読み取り、更新、削除、提出、送信などが挙げられています。</p>
+    <p>この区分を使い、任せたい仕事を操作の単位に分けてみます。「資料をまとめる」なら、探す所、読む所、候補を整理する所、保存済みの内容を変える所まで書き出す形です。任せる目的が同じでも、どの操作まで許すかは別に決めます。</p>
+    <p>最初の対象には、候補探しや下書きなど、人が内容を受け取って判断できる所を選ぶとよいです。当社では、候補が出た段階を区切りにし、更新や送信の判断を担当者へ戻す形を考えます。作業全体をまとめて任せる前に、どこで受け渡すかを明らかにするためです。</p>
+    <p>担当者は、終わりの状態も言葉にしておきます。「調べ終えた」と「変更を反映した」を分け、今回の依頼がどちらを求めているかを共有します。これが、完了した範囲を後から確かめる基準になります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．権限・承認・記録をつなげて考える</h2>
+    <p>IPAは、機密情報や個人情報へアクセスする過程で、意図しないデータ漏洩が発生するリスクを挙げています。Microsoftの開発者向け資料では、道具ごとに必要な範囲まで権限を小さくする考え方を示しています。また、同社の試験的なエージェント機能の説明は、活動を示すログを出せることと、必要に応じて利用者の承認や判断を明示的に求められることを原則に含めています。</p>
+    <p>当社では、この考え方を「触れてよい範囲」「止まって確認する所」「後から見返すもの」に置き換えます。読むために見せる資料と、変更してよい資料を分け、送信や削除は担当者の判断に戻す形です。依頼文で禁止事項を伝えることに加えて、実際に渡している権限も確認の対象にします。</p>
+    <p>承認の際は、対象と操作を見て判断します。送信なら宛先と送る内容、更新なら対象の項目と変更前後の内容を並べる、という整理です。「進めてよいか」という問いだけで判断を求める運用は避けます。</p>
+    <p>操作後は、許可した内容と行われた内容を見比べます。途中で止まった作業も、済んだ所と残った所を分けて受け取ると、担当者が引き継ぐ範囲を把握しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．任せる案と、確認する場所を並べる</h2>
+    <p>表は、依頼内容を決めるための見本です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">任せる案</th><th scope="col">渡す権限の考え方</th><th scope="col">実行前に人が確かめる所</th><th scope="col">残したい記録・戻し方</th></tr></thead><tbody><tr><td data-label="任せる案">指定の社内資料から候補を探す</td><td data-label="渡す権限の考え方">対象を絞った読み取り</td><td data-label="実行前に人が確かめる所">見せる資料の範囲と探す目的</td><td data-label="残したい記録・戻し方">参照した資料と候補の一覧</td></tr><tr><td data-label="任せる案">案内文の下書きをまとめる</td><td data-label="渡す権限の考え方">参照と下書きの作成まで</td><td data-label="実行前に人が確かめる所">下書きの置き場所と渡し先</td><td data-label="残したい記録・戻し方">参照元と作成した案。送信は人へ戻す</td></tr><tr><td data-label="任せる案">台帳の変更候補を整理する</td><td data-label="渡す権限の考え方">最初は参照まで</td><td data-label="実行前に人が確かめる所">反映する項目と変更前後の内容</td><td data-label="残したい記録・戻し方">変更案と承認内容。反映前の状態を保つ方法</td></tr></tbody></table></div>
+    <p>当社では、操作を取り消せるかも事前の確認に含めます。取り消しの方法を確認できた操作だけを、次の試行の候補とする進め方です。承認した画面、操作の記録、元に戻す手段を、実際に使う仕組みで確認する所まで準備に含めます。</p>
+    <p>この表を埋める際は、任せる側と確認する側の名前を添えるとよいです。担当が曖昧な所は、任せる範囲を狭めて人へ戻す区切りを増やします。操作が増えるたびに、確認する対象も表へ足していく考え方です。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．最初は読み取りから、受け渡しを試す</h2>
+    <p>最初の試行では、見せてよい資料を選び、検索と結果の整理までを依頼する進め方を提案します。元の資料を書き換える権限や、外へ送信する権限は渡さず、担当者が出力を受け取る所を終点にします。</p>
+    <p>見るのは、答えの読みやすさだけではありません。どの資料を参照したか、依頼のどこまで進んだか、人の判断へ戻した所はどこかを確認します。読み取りの試行でも、対象の資料を絞る作業は省かない方針です。</p>
+    <p>次へ進む判断は、業務上の必要性と確認のしやすさで考えます。当社では、操作の対象、承認する担当、残す記録、戻す手段を具体的に説明できる所から、任せる範囲を見直します。日常の作業へ組み込む前に、担当者が途中で止め、残りを引き取る流れも試すとよいです。</p>
+    <p>試行の区切りには、使い終えた資料へのアクセスを残すかも見直します。誰が権限を外すか、次の依頼でも同じ範囲を使うかを決め、試したときの設定をそのまま日常の運用へ持ち込まない形にします。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">任せたい仕事を、読み取り・下書き・変更などの操作に分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">閲覧や変更を許す資料と、その範囲を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">実行前に承認する操作と、承認する担当者を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">承認時に、対象と実行内容を具体的に確認できるかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">途中の操作と結果を見返せるかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">取り消しの方法と、止まった作業を人が引き取る手順を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">読み取りから試し、任せる範囲を広げる判断材料を整理したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.anthropic.com/research/building-effective-agents" rel="noopener" target="_blank">Building effective AI agents（Anthropic）</a>：処理と道具の使用を動的に決めるという用語整理。公開当時の設計概念を使用し、変化が速い実装製品の記述は使用していない</li>
+      <li><a href="https://www.aist.go.jp/aist_j/magazine/20250917.html" rel="noopener" target="_blank">AIエージェントとは？（産総研）</a>：目的を遂行できたかという評価の観点。公開日が2025-09-17のため、個別製品の現行機能の根拠には使用していない</li>
+      <li><a href="https://learn.microsoft.com/en-us/startups/build/identity-management/access-patterns-controls" rel="noopener" target="_blank">Access patterns and controls for AI agents（Microsoft Learn）</a>：道具が行う操作の種類、道具ごとに絞る権限</li>
+      <li><a href="https://www.ipa.go.jp/digital/kaihatsu/sds-column/ai-agent.html" rel="noopener" target="_blank">SDS技術コラム：AIエージェント（IPA）</a>：機密情報等へアクセスする過程での漏洩リスク。公開日が2025-07-08のため、掲載製品の現行情報の根拠には使用していな</li>
+      <li><a href="https://support.microsoft.com/en-us/windows/ai/ai-features/experimental-agentic-features" rel="noopener" target="_blank">Experimental Agentic Features（Microsoft Support）</a>：操作ログと必要に応じた承認要求という設計原則。試験的機能の説明であり、全製品への搭載を示す根拠にはしていない</li>
+      <li><a href="https://cloud.google.com/discover/what-are-ai-agents" rel="noopener" target="_blank">What is an AI agent?（Google Cloud）</a>：利用者に代わり目標を追い、仕事を完了させるという定義</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/ai-consulting-guide">中小企業向けAIコンサルの選び方（相談先を目的別に比較）</a></li>
+      <li><a href="/column/shiga-ai-consultation">滋賀県のAI相談窓口｜公的な支援機関と民間の相談先の使い分け</a></li>
+      <li><a href="/column/ai-email-draft-permissions">AIでメールを下書きするときの接続権限・送信承認・記憶の確認</a></li>
+      <li><a href="/column/hallucination-office">ハルシネーションとは</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

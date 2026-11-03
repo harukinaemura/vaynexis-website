@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>契約書の期限・更新日をAIで一覧にする手順｜抽出漏れと原本の突合を確かめる｜Vaynexis</title>
+  <meta name="description" content="契約書の開始日・満了日・自動更新日・解約の通知期限を、根拠の条文とともに一覧へ整理する仕事です。AIに渡す資料、下書きの出し方、抽出漏れと原本との突合、覚書や更新合意書の扱いを説明します。日付の抜き出しと、条項の解釈や更新の判断を分けて進めます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="契約書の期限・更新日をAIで一覧にする手順｜抽出漏れと原本の突合を確かめる｜Vaynexis">
+  <meta property="og:description" content="契約書の開始日・満了日・自動更新日・解約の通知期限を、根拠の条文とともに一覧へ整理する仕事です。AIに渡す資料、下書きの出し方、抽出漏れと原本との突合、覚書や更新合意書の扱いを説明します。日付の抜き出しと、条項の解釈や更新の判断を分けて進めます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/contract-dates-list">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/contract-dates-list">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"契約書の期限・更新日をAIで一覧にする手順。抽出漏れと原本の突合を確かめる","description":"契約書の開始日・満了日・自動更新日・解約の通知期限を、根拠の条文とともに一覧へ整理する仕事です。AIに渡す資料、下書きの出し方、抽出漏れと原本との突合、覚書や更新合意書の扱いを説明します。日付の抜き出しと、条項の解釈や更新の判断を分けて進めます。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/contract-dates-list"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"契約書の期限と更新日の抽出と一覧化","item":"https://vaynexis.jp/ai/tasks/contract-dates-list"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">契約書の期限と更新日の抽出と一覧化</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">契約書の期限・更新日をAIで一覧にする手順。抽出漏れと原本の突合を確かめる</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには契約書から期限に関する記載を抜き出し、根拠の場所を添えた一覧の下書きを作らせます。人が確かめる中心は、抽出漏れと原本との突合です。開始日・満了日・自動更新日・解約の通知期限は別欄にし、明記されていない日付を推測で埋めない運用にします。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこのページの最後）</p>
+    <p>総務や経理で契約書を保管していても、更新を検討するときに通知期限の記載を探し直すことがあります。本文だけでなく、別紙や後から交わした覚書にも目を通し、どの記載を一覧に移したか追える状態が必要です。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話でも、AIが実際にそう答えることを示すものでもありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（契約書の期限と更新日の抽出と一覧化）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（契約書の期限と更新日の抽出と一覧化）</h2>
+    <p>AI Builderでは、抽出する日付フィールドの名前を指定します（確認日：2026-11-03）。 一般ドキュメントでは、テーブルとセルの信頼度スコアを利用できます（確認日：2026-11-03）。 ここからは当社の整理です。 任せる範囲は、期限に関する原文の抽出と、日付の種類ごとの仕分けです。記載された日付と、日付を求めるための条件文は分けて残します。更新するか、どの文書を優先するかは確定させず、人に戻す疑問も一覧に添える形です。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>対象契約の管理番号と、保管場所を記した一覧</li>
+      <li>入力が社内で認められた契約本文・別紙・覚書・更新合意書の写し</li>
+      <li>開始日・満了日・自動更新日・通知期限など、抜き出す欄の名前</li>
+      <li>原本のページ・条項を示す情報と、担当者が把握している文書間の対応関係</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>管理番号ごとに日付を分けた一覧の下書き</li>
+      <li>各欄の根拠となる原文と、文書名・ページ・条項</li>
+      <li>日付の明記がない欄と、計算や解釈を要する条件文</li>
+      <li>読み取れなかった文書、記載が食い違う箇所、確認が必要な理由</li>
+    </ul>
+    <p>日付と根拠を隣に置く形です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">契約</th><th scope="col">満了日の記載</th><th scope="col">自動更新日の記載</th><th scope="col">通知期限の記載</th><th scope="col">根拠の場所</th></tr></thead><tbody><tr><td data-label="契約">保守契約</td><td data-label="満了日の記載">［満了日］</td><td data-label="自動更新日の記載">明記なし</td><td data-label="通知期限の記載">［通知期限］</td><td data-label="根拠の場所">［文書名・ページ・条項］</td></tr><tr><td data-label="契約">賃貸借契約</td><td data-label="満了日の記載">［満了日］</td><td data-label="自動更新日の記載">明記なし</td><td data-label="通知期限の記載">［通知期限］</td><td data-label="根拠の場所">［文書名・ページ・条項］</td></tr><tr><td data-label="契約">秘密保持契約</td><td data-label="満了日の記載">［満了日］</td><td data-label="自動更新日の記載">明記なし</td><td data-label="通知期限の記載">明記なし</td><td data-label="根拠の場所">［文書名・ページ・条項］</td></tr></tbody></table></div>
+
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>契約と関連文書をそろえる：</b>対象一覧に管理番号を付け、本文と覚書などの関係を人が整理します。契約の数とファイルの数は分けて数えるとよいです。</li>
+      <li><b>抜く欄を先に決める：</b>開始日・満了日・自動更新日・解約の通知期限を別欄にします。原文、根拠の場所、確認待ちの理由も残す形です。</li>
+      <li><b>見本で試す：</b>担当者が原本と見比べられる見本を使い、明記のない日付を補っていないか確かめます。読み取りにくい箇所や関連文書の扱いも見て、指示を整えます。</li>
+      <li><b>原本を保って下書きを出す：</b>AIに元の契約書や管理台帳を直接書き換えさせず、別の下書きへ出力します。読めない文書も管理番号と理由を残し、対象から消さない運用です。</li>
+      <li><b>原本と照合して担当者へ渡す：</b>対象契約の数と一覧の管理番号を突合し、日付ごとの根拠を読み直します。確認済みと確認待ちを分け、人が承認した内容を管理台帳へ移します。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>抽出漏れ、原本との突合</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">抽出漏れ、原本との突合</td><td data-label="見方">対象一覧から契約をたどり、各欄の原文・ページ・条項を照合する</td><td data-label="見落とすと">契約や期限の記載が一覧から抜ける</td></tr><tr><td data-label="確かめること">日付の種類</td><td data-label="見方">開始日・満了日・自動更新日・通知期限を別々に見る</td><td data-label="見落とすと">満了日を通知期限として扱う</td></tr><tr><td data-label="確かめること">関連文書と版</td><td data-label="見方">本文と別紙・覚書・更新合意書の対応、記載の食い違いを見る</td><td data-label="見落とすと">変更前の記載が残る</td></tr><tr><td data-label="確かめること">条件文と日付の区別</td><td data-label="見方">相対的な期限や営業日・暦日の表現が原文のまま残っているか見る</td><td data-label="見落とすと">計算や解釈を経た日が確定値として残る</td></tr><tr><td data-label="確かめること">明記なしと読取不能</td><td data-label="見方">記載を探しても見つからない欄と、文字を読めない欄を分ける</td><td data-label="見落とすと">再読が必要な箇所を探し直しにくくなる</td></tr><tr><td data-label="確かめること">契約終了後の期限</td><td data-label="見方">秘密保持などの義務が続く記載を、契約の満了日と分けて見る</td><td data-label="見落とすと">性質の違う期限が同じ欄に入る</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>どの文書を確認対象にし、変更や食い違いを誰へ照会するか。</li>
+      <li>条項の法的な意味や通知期限の扱いは、弁護士などの専門家に確認します。</li>
+      <li>契約を更新するか、終了や条件変更を申し出るか。</li>
+      <li>一覧を確定する担当者と、相手への通知内容・送付方法・送付の承認。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>次の短い記載を題材に、日付と条件を分けて下書きへ出す指示です。</p>
+    <pre class="prompt">目的は、契約の期限を一覧の下書きに整理することです。
+資料にあることだけを使い、元の文書や管理台帳は変更しません。
+
+入力する記載：
+【保守契約】
+期間は［開始日］から［満了日］までとします。
+［通知期限］までに終了の通知がなければ自動更新します。
+【賃貸借契約】
+期間は［開始日］から［満了日］までとします。
+更新を希望しない場合の通知期限は［通知期限］とします。
+【秘密保持契約】
+期間は［開始日］から［満了日］までとします。
+契約終了後も秘密保持義務は［存続期限］まで続きます。
+
+出力する欄：
+管理番号／文書名／開始日／満了日／自動更新日／解約の通知期限／
+その他の期限／根拠の原文／原本のページ・条項／確認が必要な理由
+
+日付が明記されていない欄は「明記なし」とします。
+自動更新の記載だけから更新日を計算せず、条件文を残します。
+［ ］内は仮の欄名で、実際の日付ではありません。
+ページや条項を示す情報がない場合は補いません。
+読取不能、記載の食い違い、自信のない所は確認待ちの欄へ出します。
+契約の有効性、条項の優先関係、更新や通知の可否は判断しません。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://learn.microsoft.com/ja-jp/ai-builder/create-form-processing-model" rel="noopener" target="_blank">AI Builder でドキュメント処理カスタム モデルを作成する</a>：日付フィールドの名前の指定。表示上の最終更新は2026-01-14</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/ai-builder/interpret-confidence-score" rel="noopener" target="_blank">テーブルとテーブル セルの信頼度スコアを解釈する</a>：一般ドキュメントでのスコアの利用。表示上の最終更新は2026-01-14</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-data-cleanup">整える・調べる：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/subsidy-deadline-tracking">補助金・助成金の締切の追跡</a></li>
+      <li><a href="/ai/tasks/paper-pdf-to-ledger">紙・PDFの読み取りと台帳化</a></li>
+      <li><a href="/column/pdf-reading-ai">ChatGPT・ClaudeにPDFを読ませるときの注意</a></li>
+      <li><a href="/ai/tasks/paper-pdf-to-ledger">紙・PDFの読み取りと台帳化</a></li>
+      <li><a href="/ai/tasks/table-reconciliation">複数の表の突合（重複・欠落の検出）</a></li>
+      <li><a href="/ai/tasks/notation-unification">表記ゆれの統一（住所・社名・日付）</a></li>
+      <li><a href="/ai/tasks/subsidy-deadline-tracking">補助金・助成金の締切の追跡</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

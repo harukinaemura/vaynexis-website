@@ -4,8 +4,32 @@
   <link href="https://vaynexis.jp/column/feed.xml" rel="self"/>
   <link href="https://vaynexis.jp/column"/>
   <id>https://vaynexis.jp/column</id>
-  <updated>2026-11-02T00:00:00+09:00</updated>
+  <updated>2026-11-03T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
+  <entry>
+    <title>生成AIとは｜小さな会社が仕事で使う前に知っておくこと</title>
+    <link href="https://vaynexis.jp/column/what-is-generative-ai"/>
+    <id>https://vaynexis.jp/column/what-is-generative-ai</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>生成AIを仕事で使う前に、用語の意味と、出力の誤り・入力情報の扱い・社内で使う範囲を整理します。公的資料と提供元の公式説明をもとに、従来のAIや検索との使い分け、最初に試す作業の選び方を紹介。操作手順の前に、下書きと人の判断の境目を押さえます。</summary>
+  </entry>
+  <entry>
+    <title>AIエージェントとは｜事務で任せる範囲と人が確かめる所</title>
+    <link href="https://vaynexis.jp/column/what-is-ai-agent"/>
+    <id>https://vaynexis.jp/column/what-is-ai-agent</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>AIエージェントを事務で使う際は、何ができるかに加えて、どこまで操作を許すかを考えます。公式資料の定義と注意点をもとに、権限、実行前の承認、操作の記録を整理。検索や下書きから試し、更新や送信へ進む前に人が確かめる所を、短い例と表で示します。</summary>
+  </entry>
+  <entry>
+    <title>RPAと生成AIの違い｜事務作業をどちらに任せるかの見分け方</title>
+    <link href="https://vaynexis.jp/column/rpa-vs-generative-ai"/>
+    <id>https://vaynexis.jp/column/rpa-vs-generative-ai</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>RPAと生成AIの違いを、事務作業の選び方から整理します。手順と入力の形が決まっているか、文章の読み取りや下書きが必要か、人が結果を確かめられるかを軸に、転記・問い合わせ対応などの短い例で比較。組み合わせる際の確認場所と、導入を見送る目安も示します。</summary>
+  </entry>
   <entry>
     <title>福井・岐阜・三重と近畿のDX・AI支援｜府県別記事の入口</title>
     <link href="https://vaynexis.jp/column/dx-ai-support-prefecture-guide"/>

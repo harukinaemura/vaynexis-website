@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPAと生成AIの違い｜事務作業をどちらに任せるかの見分け方｜Vaynexis</title>
+  <meta name="description" content="RPAと生成AIの違いを、事務作業の選び方から整理します。手順と入力の形が決まっているか、文章の読み取りや下書きが必要か、人が結果を確かめられるかを軸に、転記・問い合わせ対応などの短い例で比較。組み合わせる際の確認場所と、導入を見送る目安も示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="RPAと生成AIの違い｜事務作業をどちらに任せるかの見分け方｜Vaynexis">
+  <meta property="og:description" content="RPAと生成AIの違いを、事務作業の選び方から整理します。手順と入力の形が決まっているか、文章の読み取りや下書きが必要か、人が結果を確かめられるかを軸に、転記・問い合わせ対応などの短い例で比較。組み合わせる際の確認場所と、導入を見送る目安も示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/rpa-vs-generative-ai">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/rpa-vs-generative-ai">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"RPAと生成AIの違い｜事務作業をどちらに任せるかの見分け方","description":"RPAと生成AIの違いを、事務作業の選び方から整理します。手順と入力の形が決まっているか、文章の読み取りや下書きが必要か、人が結果を確かめられるかを軸に、転記・問い合わせ対応などの短い例で比較。組み合わせる際の確認場所と、導入を見送る目安も示します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/rpa-vs-generative-ai"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"RPAと生成AIの違い","item":"https://vaynexis.jp/column/rpa-vs-generative-ai"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">RPAと生成AIの違い</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">RPAと生成AIの違い｜事務作業をどちらに任せるかの見分け方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>使い分けは、決めた操作を繰り返したいのか、内容を読み取って下書きを作りたいのかで考えます。当社では、手順と入力の形が決まる作業は操作の自動化、文章の整理は下書き支援の候補にします。どちらを選ぶ場合も、人が結果を確認する場所を先に決めることが出発点です。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
+    <p>この記事は、事務の作業を自動化したい小さな会社の担当者が、RPAと生成AIのどちらに任せるかを、作業の入力と手順の形で見分けるための整理です。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">RPAは、決まった操作を繰り返す仕組みです</a></li>
+      <li><a href="#s2">生成AIは、内容を作る側から考えます</a></li>
+      <li><a href="#s3">作業名より、入力と手順の形で見分けます</a></li>
+      <li><a href="#s4">操作の確認と、内容の確認を分けます</a></li>
+      <li><a href="#s5">導入を見送る目安と、最初に切り出す範囲</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．RPAは、決まった操作を繰り返す仕組みです</h2>
+    <p>RPAは、人が行っている定型的なパソコン作業を自動化する仕組みです。ソフトウェアのロボットが、ルールに基づく反復作業を担います。画面での操作に関しては、マウスやキーボードの操作を再現する説明が示されています。</p>
+    <p>事務で候補を探す際は、「どこから何を取り、どこへ入れるか」を担当者が説明できる範囲に絞ります。処理するたびに担当者が意味を読み直したり、転記する項目を選び直したりする部分は、操作の繰り返しと分けて考えるとよいです。</p>
+    <p>また、手順を書き出すときは、普段どおりに進む流れだけでなく、途中で人に戻す場所も記しておきます。作業の名前が同じでも、入力の形や処理先までそろっているかを見直すことが、任せる範囲の整理につながります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．生成AIは、内容を作る側から考えます</h2>
+    <p>生成AIは、文章や画像などのデータを学習し、新しいコンテンツを生成する技術です。質問や作業指示に応じて文章などを生成するサービスもあります。文章作成や情報整理は、生成AIの用途として挙げられています。</p>
+    <p>文章を生成する言語モデルでは、同じ指示でも異なる応答になることがあります。また、生成AIは事実と異なる内容や、裏付けのない見解を出力することがあります。</p>
+    <p>当社では、文章を整える部分と、その内容を業務上の確定情報にする部分を分けます。下書きを作るところまで任せ、元の資料や社内で決めた方針との照合を担当者に残す考え方です。読みやすい文になったことと、社外に出してよい内容になったことは、別々に確認するとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．作業名より、入力と手順の形で見分けます</h2>
+    <p>候補を選ぶときは、困っている作業を「受け取るもの」「行う処理」「出来上がるもの」に分けて眺めます。以下は製品の対応可否を示す表ではなく、検討の入口をそろえるための見分け方です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">作業の状態</th><th scope="col">事務の短い例</th><th scope="col">検討する方向</th><th scope="col">人に残す確認</th></tr></thead><tbody><tr><td data-label="作業の状態">入力する項目と、移す先の欄が決まっている</td><td data-label="事務の短い例">同じ形式の請求書データから管理表への転記</td><td data-label="検討する方向">RPAによる操作の反復を候補にする</td><td data-label="人に残す確認">元データと転記先の対応、途中で止まった場所</td></tr><tr><td data-label="作業の状態">文章を読み、伝える内容を整理したい</td><td data-label="事務の短い例">問い合わせ内容の要約と返信の下書き</td><td data-label="検討する方向">生成AIによる下書き支援を候補にする</td><td data-label="人に残す確認">元の問い合わせとの対応、会社としての回答方針</td></tr><tr><td data-label="作業の状態">読み取りの後に決まった入力作業がある</td><td data-label="事務の短い例">備品申請の自由記述から登録項目の候補を作る</td><td data-label="検討する方向">生成AIで候補を作り、人の確認後にRPAへ渡す構成を検討する</td><td data-label="人に残す確認">項目の意味と不足情報、登録を認める担当者</td></tr><tr><td data-label="作業の状態">処理先を担当者の判断で変える部分が残る</td><td data-label="事務の短い例">個別の事情を踏まえて対応先を決める</td><td data-label="検討する方向">人が判断する範囲として切り出す</td><td data-label="人に残す確認">判断する人と、その判断に必要な材料</td></tr></tbody></table></div>
+    <p>同じ「転記」でも、内容の読み取りから必要なのか、決まった欄を移すだけなのかで、検討する方向を分けます。最初から作業全体をまとめて任せようとせず、人が確認できる単位で区切る考え方です。</p>
+    <p>組み合わせの行では、候補作成と登録の間に確認を置いています。この構成は当社の検討案です。読み取り結果を後続の入力へ渡す前に、何を確定したのかが残る流れを考えます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．操作の確認と、内容の確認を分けます</h2>
+    <h3 class="h3">操作の自動化では、止まった場所を見つけられる形にします</h3>
+    <p>確認したいのは、開始したことだけでなく、どこまで処理したかです。担当者が処理済みの範囲と未処理の範囲を見分けられる記録を残す運用にします。再開する前に、重ねて登録する箇所がないかも点検対象です。</p>
+    <p>画面や入力する帳票を変更するときは、自動化した手順を確認する機会として扱います。普段の流れに加えて、入力欄の不足や想定外の表示を見つけた際の戻し先まで決めておくとよいです。確認担当が不在でも動かし続ける設計より、担当者に引き継ぐ位置を明らかにすることを重視します。</p>
+    <h3 class="h3">下書き支援では、元の材料に戻って確かめます</h3>
+    <p>確認の中心は、文章が整っているかだけでなく、入力した材料と内容が対応しているかです。出力だけを眺める方法ではなく、元の材料を横に置いて読める流れを用意します。担当者が判断するための資料も、下書きと一緒に受け取れる形がよいです。</p>
+    <p>組み合わせて使う案でも、「内容を確認する人」と「後続の処理を開始する人」を決めます。どこで人の判断を挟むのかを、運用前に担当者どうしで共有しておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．導入を見送る目安と、最初に切り出す範囲</h2>
+    <p>処理の機会が少ない作業では、仕組みを整えて保守する負担と、そのまま処理する負担を比べます。例外の扱いが整理できていない作業や、担当者自身が正しい結果を説明できない作業は、導入を急がず手順の整理を先に行う候補です。</p>
+    <p>また、相手への配慮や会社としての方針を決める部分は、人の担当として残します。資料を整理する補助まで任せる案と、判断そのものを任せる案を区別しておくと、必要な確認も考えやすくなります。</p>
+    <p>最初に試す対象は、出来上がりの形が明確で、担当者が元の材料と結果を照合できる範囲から選びます。本番の情報を書き換える前に、見本の材料と処理結果を比べて点検する流れがよいです。うまく進んだ部分だけでなく、手作業に戻した部分も残し、次に任せる範囲を判断する材料にします。確認にかかる手間も含めて、導入前より扱いやすい流れになったかを担当者が振り返ります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">任せたい作業の入口と、出来上がるものを整理したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">操作の繰り返しと、内容を読み取る部分を分けて確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力の形と、処理の手順がそろっているかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">出力を元の材料と照合する担当者を設定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">止まった場所と、手作業に戻す場所を明確にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">組み合わせる案では、次の処理へ渡す前の確認を設定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見本での点検と、保守する負担を含めた導入判断を実施したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.pref.kanagawa.jp/docs/b8k/rpa/rpa.html" rel="noopener" target="_blank">RPAの推進に向けた取組（神奈川県）</a>：定型的なパソコン作業の自動化という定義</li>
+      <li><a href="https://www.uipath.com/rpa/robotic-process-automation" rel="noopener" target="_blank">What is Robotic Process Automation - RPA Software（UiPath）</a>：反復するルールベースの作業という定義のみ</li>
+      <li><a href="https://j-net21.smrj.go.jp/tasuku/case24.html" rel="noopener" target="_blank">第24回：RPA導入編（中小企業基盤整備機構 J-Net21）</a>：マウスやキーボード操作の再現。公表が2020年のため定義・操作説明に限定</li>
+      <li><a href="https://www.pref.fukuoka.lg.jp/contents/fukuoka-generative-ai-guideline.html" rel="noopener" target="_blank">生成AI庁内利活用ガイドラインについて（福岡県）</a>：学習したデータから新しいコンテンツを生成するという定義</li>
+      <li><a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/" rel="noopener" target="_blank">生成AIサービスの利用に関する注意喚起等について（個人情報保護委員会）</a>：質問・作業指示に応じて文章等を生成するという説明</li>
+      <li><a href="https://www.ai-lab.pref.aichi.jp/ai" rel="noopener" target="_blank">生成AIとは｜あいちAIラボ（愛知県）</a>：文章作成、長文読解・要約、情報整理という用途</li>
+      <li><a href="https://learn.microsoft.com/en-us/agent-framework/journey/llm-fundamentals" rel="noopener" target="_blank">LLM Fundamentals（Microsoft Learn）</a>：言語モデルでは同じ指示でも応答が異なることがある点</li>
+      <li><a href="https://www.digital.go.jp/policies/genai/agentchat-intermediate" rel="noopener" target="_blank">【ガバメントAI 源内】エージェントチャット 中級編（デジタル庁）</a>：一般的な生成AIの出力誤りに関する注意のみ</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/ai-consulting-guide">中小企業向けAIコンサルの選び方（相談先を目的別に比較）</a></li>
+      <li><a href="/column/shiga-ai-consultation">滋賀県のAI相談窓口｜公的な支援機関と民間の相談先の使い分け</a></li>
+      <li><a href="/column/dx-vs-efficiency">DXと業務効率化の違い</a></li>
+      <li><a href="/column/hallucination-office">ハルシネーションとは</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

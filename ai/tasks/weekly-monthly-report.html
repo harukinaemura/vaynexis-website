@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>週報・月報の下書きをAIで作る手順｜数字の出どころと前月との整合を確認｜Vaynexis</title>
+  <meta name="description" content="週報・月報の文章をAIで下書きするときに渡す資料、出させる内容、担当者の確認を整理します。数字ごとの出どころを残し、前月確定後の訂正は差分と理由を別欄で管理。架空の小売店を題材に、比較の前提や根拠のない原因説明を確かめる手順と指示文を示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="週報・月報の下書きをAIで作る手順｜数字の出どころと前月との整合を確認｜Vaynexis">
+  <meta property="og:description" content="週報・月報の文章をAIで下書きするときに渡す資料、出させる内容、担当者の確認を整理します。数字ごとの出どころを残し、前月確定後の訂正は差分と理由を別欄で管理。架空の小売店を題材に、比較の前提や根拠のない原因説明を確かめる手順と指示文を示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/weekly-monthly-report">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/weekly-monthly-report">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"週報・月報の下書きをAIで作る手順。数字の出どころと前月との整合を確認","description":"週報・月報の文章をAIで下書きするときに渡す資料、出させる内容、担当者の確認を整理します。数字ごとの出どころを残し、前月確定後の訂正は差分と理由を別欄で管理。架空の小売店を題材に、比較の前提や根拠のない原因説明を確かめる手順と指示文を示します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/weekly-monthly-report"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"週報・月報の下書き","item":"https://vaynexis.jp/ai/tasks/weekly-monthly-report"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">30分の無料相談</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">週報・月報の下書き</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">週報・月報の下書きをAIで作る手順。数字の出どころと前月との整合を確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>ここからは当社の整理です。AIには、確認済みの数字とメモから週報・月報の文章を下書きさせます。人が確かめる中心は、数字の出どころと前月との整合です。報告の数字から元表の位置と集計時点をたどれる形にし、前月確定後の訂正は上書きせず、差分と修正理由を残します。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこのページの最後）</p>
+    <p>週や月の締め後には、事務担当が集計済みの表を見ながら、社内報告の文章を整える仕事があります。前回の文章には訂正前の数字や比較の前提が残ることもあり、書きぶりと数字を合わせて確かめる必要があります。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（週報・月報の下書き）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（週報・月報の下書き）</h2>
+    <p>任せる範囲は、集計済みの資料に沿った文章の下書き、訂正の説明案、確認事項の整理です。数字の転記と検算は人が受け持ち、AIには確認済みの値を使わせます。増減の原因や先の見通しを、数字だけから事実として書かせない形にします。 公式資料によると、Excel の［数式の検証］では、入れ子になった数式の各部分を計算順に確認できます（確認日：2026-11-03）。 また、Excel の［変更の表示］では、一部の変更が利用できず、履歴の表示に空きが生じる場合があります（確認日：2026-11-03）。 当社の手順では、計算過程と元資料を別々に確かめ、前月確定版と訂正理由を残します。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>人が転記・検算した当期の数字と、その台帳名・シート名・セル範囲・集計時点</li>
+      <li>前月の確定報告と、訂正後の数字・差分・修正理由を記した資料</li>
+      <li>指標の意味、対象期間、締め方、単位、単月か累計かを記した定義</li>
+      <li>今回の報告の見出し、読み手、確認済みの出来事のメモ</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>確認済みの数字と出来事に沿った報告文の下書き</li>
+      <li>文中の数字と元資料の位置を対応させた出どころ欄</li>
+      <li>前月確定版からの差分と修正理由を添える注記案</li>
+      <li>根拠のない原因候補や不足資料を分けた確認待ち欄</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>比較の基準を固定する：</b>対象期間、単位、指標の意味を前月の定義と照らします。比較に使う前月の版は担当者が決め、資料名に明記します。</li>
+      <li><b>数字に出どころを添える：</b>人が元表から必要な値を転記・検算し、台帳・シート・セル範囲・集計時点を添えます。AIが扱う資料は複製や抜粋にし、元のデータを直接書き換えさせません。</li>
+      <li><b>訂正のある見本で試す：</b>前月の数字が変わった項目を含む見本を渡し、文章と差分欄を下書きさせます。出どころが保たれ、訂正前後の値が混ざらないかを見る段階です。</li>
+      <li><b>報告の下書きを広げる：</b>見本の確認後に、必要な項目へ対象を広げます。資料で確かめられる事実と、原因・見通しの候補は欄を分け、根拠のない説明は確認待ちに置く形がよいです。</li>
+      <li><b>本文と比較値を照合する：</b>担当者が文中の数字を元表に戻って確かめ、前月比の式と分母も検算します。分母がゼロ、または値が欠けている項目は、比較文を確定する前に扱いを決めます。</li>
+      <li><b>訂正理由と承認を残す：</b>前月の確定報告を上書きせず、訂正前後の値・差分・修正理由を別欄に残します。確認待ちを解消し、人が報告文を確定して共有します。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>数字の出どころ、前月との整合</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">数字の出どころ、前月との整合</td><td data-label="見方">文中の数字から台帳・シート・セル範囲・集計時点をたどり、採用した前月の版と照合</td><td data-label="見落とすと">訂正前後の数字が混ざった報告になります</td></tr><tr><td data-label="確かめること">比較の前提</td><td data-label="見方">対象期間、締め方、単位、指標の定義、単月・累計の区別を確認</td><td data-label="見落とすと">集計範囲の違いが業務の変化として伝わります</td></tr><tr><td data-label="確かめること">差分と修正理由</td><td data-label="見方">前月確定版を残し、訂正後の値との差分、理由、確認者を見る</td><td data-label="見落とすと">過去の報告から数字が変わった経緯をたどりにくくなります</td></tr><tr><td data-label="確かめること">前月比の計算</td><td data-label="見方">式と分母を検算し、ゼロや欠測の扱いを確認</td><td data-label="見落とすと">比較できない項目にも増減の説明が付きます</td></tr><tr><td data-label="確かめること">原因と見通しの根拠</td><td data-label="見方">数字から分かる事実と、別資料の裏付けが要る説明を分ける</td><td data-label="見落とすと">仮の原因が確定した説明として読まれます</td></tr><tr><td data-label="確かめること">確認待ちの残り</td><td data-label="見方">不足資料と確認先を見直し、本文の断定表現と突き合わせる</td><td data-label="見落とすと">未確定の内容が報告に残ります</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>比較に使う前月の版と、指標の定義を変える場合の扱い</li>
+      <li>締め後訂正の採否と、過去の報告を訂正する範囲</li>
+      <li>原因・見通しの説明に採用できる根拠と表現</li>
+      <li>確認待ちを残したまま共有できる範囲、報告の確定と送信</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>架空の小売店で、担当者が検算した資料を渡す場面の指示文です。</p>
+
+    <p>小売店の月報で、前月確定後の訂正を残す欄の例です。値と差分は人が元表から転記・検算します。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">項目</th><th scope="col">訂正による差分</th><th scope="col">修正理由・確認先</th></tr></thead><tbody><tr><td data-label="項目">売上</td><td data-label="訂正による差分">増額分を記入</td><td data-label="修正理由・確認先">入力漏れの補完／月次台帳の売上欄</td></tr><tr><td data-label="項目">来店数</td><td data-label="訂正による差分">増加分を記入</td><td data-label="修正理由・確認先">未反映の記録を追加／来店記録の対象範囲</td></tr><tr><td data-label="項目">返品数</td><td data-label="訂正による差分">変更なしと記入</td><td data-label="修正理由・確認先">返品台帳の対象範囲と照合</td></tr><tr><td data-label="項目">前月比</td><td data-label="訂正による差分">訂正後の値で検算した差を記入</td><td data-label="修正理由・確認先">採用した前月の版と計算式を併記</td></tr><tr><td data-label="項目">訂正の注記</td><td data-label="訂正による差分">修正理由を追記</td><td data-label="修正理由・確認先">修正した時点・確認者・集計時点を記録</td></tr></tbody></table></div>
+    <pre class="prompt">小売店の月報の下書きを作ります。
+添付は、確認済みの当期の数字、前月確定版、訂正後の数字と差分、修正理由、指標の定義、出来事のメモです。
+資料にあることだけを使い、元のデータは書き換えず、不足する値を推測で補わない形にします。
+渡した値を使い、台帳名・シート名・セル範囲・集計時点を各項目に添えます。
+前月確定版は残し、訂正は差分と修正理由の欄に分けます。
+売上・来店数・返品数について、本文案、出どころ、訂正の注記、確認待ちを出します。
+数字から分かる事実と、原因や見通しの候補は分けます。
+比較の定義が合わない所、自信のない所、根拠のない原因説明は本文で断定せず、確認待ち欄に確認先とともに出す形にします。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/evaluate-a-nested-formula-one-step-at-a-time" rel="noopener" target="_blank">ネストした数式を 1 レベルずつ検証する</a>：入れ子の数式を計算順に確認できること</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-help-with-show-changes-in-excel" rel="noopener" target="_blank">Excel で変更を表示してヘルプを取得する</a>：変更履歴の表示に空きが生じる場合があること</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-internal-documents">社内の文書：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/daily-report-aggregation">日報・作業報告の転記と集計</a></li>
+      <li><a href="/ai/tasks/table-reconciliation">複数の表の突合（重複・欠落の検出）</a></li>
+      <li><a href="/column/daily-report-ai">日報をAIでまとめる手順</a></li>
+      <li><a href="/ai/tasks/approval-memo">稟議書・社内通達の下書き</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず30分、お話ししませんか。</h2>
+      <p>オンライン、または滋賀県内は訪問・1回限り・棚卸しの前提確認と、事前に伺った1業務の短いデモ。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">30分の無料相談</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
