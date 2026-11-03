@@ -255,155 +255,155 @@
     <summary>過去の日報に残した約束を続報につなぐには、案件名だけでなく、約束の原文と所在を残し、今回の対応と照合します。書き手が替わっても前回の宿題をたどれるよう、記録する項目、返答待ちや変更の扱い、AIに下書きを頼む際に人が確かめる点を整理します。</summary>
   </entry>
   <entry>
-    <title>見積依頼の送付後に仕様が変わったら、改訂内容をどう通知するか</title>
-    <link href="https://vaynexis.jp/column/quotation-request-spec-change-notice"/>
-    <id>https://vaynexis.jp/column/quotation-request-spec-change-notice</id>
+    <title>廃棄証明書には何を残す？対象物・実施者・処理記録の確認欄</title>
+    <link href="https://vaynexis.jp/column/disposal-certificate-fields"/>
+    <id>https://vaynexis.jp/column/disposal-certificate-fields</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>見積依頼を送った後の仕様変更は、変更前後の内容と再回答してほしい範囲をそろえ、改訂した依頼を仕入先へ通知します。専用画面での修正開始から確定、通知までの手順と、回答の入力状況による注意点を整理し、通知例と送付後の確認項目を紹介します。</summary>
+    <summary>廃棄証明書を作るときは、対象物の管理番号や数量、実施日、実施者に加え、処理を確かめた資料の参照先をそろえます。社内で使う項目の表と短い記入例を示し、引渡しと処理完了の区別、元の依頼との照合、保管時に残す確認欄を整理します。</summary>
   </entry>
   <entry>
-    <title>事務所移転で郵便の転居届を誰がどう出すか｜提出方法と確認資料</title>
-    <link href="https://vaynexis.jp/column/office-move-postal-forwarding"/>
-    <id>https://vaynexis.jp/column/office-move-postal-forwarding</id>
+    <title>車両管理表には何を書く？車両番号・管理担当・更新確認の欄</title>
+    <link href="https://vaynexis.jp/column/vehicle-management-sheet-fields"/>
+    <id>https://vaynexis.jp/column/vehicle-management-sheet-fields</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>事務所の移転に伴う郵便の手続きを担当する方向けに、提出者の決め方、窓口・投函・オンラインで用意するものを整理します。届出の準備から受付状況の確認、移転後の受け取りまで、社内で担当と記録を分け、確認漏れを防ぐための進め方を紹介します。</summary>
+    <summary>車両管理表を新しく作る事務・総務の方向けに、車両番号、管理担当、参照書類、確認予定などの欄を整理します。短い記入例をもとに、書類から転記する情報と社内で決める情報の分け方、期限の照合、担当交代や書類の差し替えに伴う更新確認の残し方を紹介します。</summary>
   </entry>
   <entry>
-    <title>席を離れた社用PCを自動ロックする設定と、復帰時の確かめ方</title>
-    <link href="https://vaynexis.jp/column/pc-auto-lock-setting-check"/>
-    <id>https://vaynexis.jp/column/pc-auto-lock-setting-check</id>
+    <title>身上異動届には何を書く？変更前後・適用日・確認担当を残す欄</title>
+    <link href="https://vaynexis.jp/column/personal-change-notice-fields"/>
+    <id>https://vaynexis.jp/column/personal-change-notice-fields</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>席を離れた後に社用パソコンを自動で保護するため、操作しない時間と復帰時の認証を組み合わせる手順を整理します。画面が暗くなる設定との違い、設定後の確認、引き継ぎに残す内容まで、小さな会社の事務担当者が端末ごとに確かめる流れを紹介します。</summary>
+    <summary>身上異動届を新しく作る、古い書式を見直す担当者に向けて、変更前後・変更日・社内での適用日・確認担当を残す欄を整理します。本人が届け出る内容と担当者が記録する処理状況を分け、受付から照合、登録先への反映、保管まで追える書式の考え方を示します。</summary>
   </entry>
   <entry>
-    <title>食品の商品規格書が変わったら何を確認する？表示原稿との対応</title>
-    <link href="https://vaynexis.jp/column/food-spec-sheet-change-check"/>
-    <id>https://vaynexis.jp/column/food-spec-sheet-change-check</id>
+    <title>変更依頼書には何を残す？対象番号・変更前後・適用日の確認欄</title>
+    <link href="https://vaynexis.jp/column/change-request-form-fields"/>
+    <id>https://vaynexis.jp/column/change-request-form-fields</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>食品の商品規格書を受け取った後、旧版との差分を自社商品の承認した規格、表示原稿、印刷用原稿、届いた包材へとつなぐ確認の進め方を整理します。元の記録と反映先を結ぶ表を使い、切替時期や確認者の残し方、判断を専門家へつなぐためにそろえる資料を解説します。</summary>
+    <summary>変更依頼書に残す対象番号、変更前後、理由、適用日と確認欄を整理します。元の資料との照合、希望と確定の書き分け、反映後の点検までを、項目の表と短い記入例で紹介します。書式を新しく作る、または古い欄を見直す事務担当者に向けた内容です。</summary>
   </entry>
   <entry>
-    <title>介護加算の根拠資料はどこ？自己点検項目と所在を対応させる</title>
-    <link href="https://vaynexis.jp/column/care-addition-evidence-index"/>
-    <id>https://vaynexis.jp/column/care-addition-evidence-index</id>
+    <title>インシデント報告書には何を書く？発生事実・影響範囲・対応の欄</title>
+    <link href="https://vaynexis.jp/column/incident-report-fields"/>
+    <id>https://vaynexis.jp/column/incident-report-fields</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>根拠資料を探すときは、点検項目から元の記録へたどれる索引を用意します。公式様式の位置づけを押さえ、対象期間、保管場所、確認する人、次の確認日をどう結びつけるかを整理します。書類の所在を確かめる作業と、内容の判断を分けて引き継ぐための考え方です。</summary>
+    <summary>インシデント報告書を新しく作る事務・総務担当者向けに、発生事実、影響範囲、対応経過、連絡先の欄を整理します。誤送付の短い記入例とともに、発覚と発生、確認済みと調査中、実施済みと予定の書き分け、記録の照合・保管・更新で確かめる点を紹介します。</summary>
   </entry>
   <entry>
-    <title>画像が多いPowerPointの容量を小さくする手順と確認点</title>
-    <link href="https://vaynexis.jp/column/powerpoint-reduce-file-size-images"/>
-    <id>https://vaynexis.jp/column/powerpoint-reduce-file-size-images</id>
+    <title>通勤経路確認書には何を書く？交通手段・経路・適用開始日の欄</title>
+    <link href="https://vaynexis.jp/column/commute-route-confirmation-form"/>
+    <id>https://vaynexis.jp/column/commute-route-confirmation-form</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>写真や画面の画像が多い資料を、原本を残して共有用に軽くする進め方を整理します。圧縮の対象範囲、画質の決め方、削除すると戻せないデータの扱いを確認し、保存後に見直す箇所まで紹介します。容量と読みやすさの両方を見て仕上げたい事務担当者向けです。</summary>
+    <summary>通勤経路確認書を作る事務・総務担当者に向けて、交通手段、利用区間、適用開始日、確認先の欄を整理します。公式様式から参考にする点と社内用の項目案を分け、短い記入例、本人への確認、保管と更新の流れまで紹介します。日付の取り違えや、確認途中のままの受け渡しを防ぐための確認表も付けています。</summary>
   </entry>
   <entry>
-    <title>Wordの文書末尾に残る空白ページを印刷前に消す手順と確認</title>
-    <link href="https://vaynexis.jp/column/word-remove-trailing-blank-page"/>
-    <id>https://vaynexis.jp/column/word-remove-trailing-blank-page</id>
+    <title>書類送付状には何を書く？宛先・同封物・部数と返送要否の確認項目</title>
+    <link href="https://vaynexis.jp/column/document-cover-letter-items"/>
+    <id>https://vaynexis.jp/column/document-cover-letter-items</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>文書の最後だけ白紙が残るときは、削除を繰り返す前に段落と区切りを見分けます。末尾の段落を小さくする方法、手動の改ページの削除、セクション区切りの扱いを公式資料から整理し、印刷前に内容と配置を見比べる手順まで紹介します。</summary>
+    <summary>書類送付状に入れる項目を、宛先・同封する書類名・部数・返送要否を中心に整理します。欄ごとの記入内容と間違えやすい点、短い記入例、封筒や書類との照合方法、発送後に控える内容をまとめ、ひな形を作る事務担当者の確認に役立てます。</summary>
   </entry>
   <entry>
-    <title>Excelの作業予定表で日付と曜日を同じセルに表示する手順</title>
-    <link href="https://vaynexis.jp/column/excel-date-with-weekday-display"/>
-    <id>https://vaynexis.jp/column/excel-date-with-weekday-display</id>
+    <title>個人情報の漏えい確報を出すとき、速報から何を追加・更新するか</title>
+    <link href="https://vaynexis.jp/column/data-breach-final-report"/>
+    <id>https://vaynexis.jp/column/data-breach-final-report</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>作業予定表の日付に曜日も添えたい事務担当者向けに、日付の値を残して見た目を整える手順を紹介します。日本語の曜日に使う書式、短い予定表の例、表示が合わないときの切り分け、引き継ぐ前の確認までをまとめます。</summary>
+    <summary>漏えいの調査後に、前回の報告から何を更新するかを整理します。報告項目ごとの追加情報、再発防止策の実施済みと予定の分け方、期限、調査が終わらない場合の扱い、提出控えの残し方を、公式資料と事務準備の表で確認できます。</summary>
   </entry>
   <entry>
-    <title>Excelで数量と単価の明細から総額を出す手順と確認のしかた</title>
-    <link href="https://vaynexis.jp/column/excel-quantity-unit-price-total"/>
-    <id>https://vaynexis.jp/column/excel-quantity-unit-price-total</id>
+    <title>補助金の確定通知が届いたら？持続化補助金＜創業型＞の精算払請求と添付資料</title>
+    <link href="https://vaynexis.jp/column/sogyo-subsidy-payment-claim"/>
+    <id>https://vaynexis.jp/column/sogyo-subsidy-payment-claim</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>数量と単価の明細から総額を求めるために、入力する式と範囲の選び方を整理します。短い表で計算の流れを示し、範囲のずれや数値以外の入力を見直す方法、計算後の照合、担当者が替わるときに残すメモまで、事務で使う際の確認点をまとめます。</summary>
+    <summary>確定通知を受け取った担当者に向け、請求前に照合する通知額、口座名義、添付資料を整理します。創業型の公式案内をもとに、通帳やネットバンキングの資料のそろえ方、入力内容との見比べ方、提出後に残す記録、迷ったときの確認先をまとめます。</summary>
   </entry>
   <entry>
-    <title>フリーランス契約の解除理由を求められたら｜受付から回答までの事務</title>
-    <link href="https://vaynexis.jp/column/freelance-contract-termination-reason-request"/>
-    <id>https://vaynexis.jp/column/freelance-contract-termination-reason-request</id>
+    <title>開示請求の本人確認、来所・電話・郵送の受付で用意するもの</title>
+    <link href="https://vaynexis.jp/column/disclosure-request-identity-check"/>
+    <id>https://vaynexis.jp/column/disclosure-request-identity-check</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>契約の解除や不更新の理由を求められたとき、担当者が受け取った請求をどう記録し、誰に回答案を確認してもらい、送付後に何を残すかを整理します。公式資料で確かめる回答時期と方法、専門家への確認が必要な点を分け、受付から回答までの引き継ぎに役立つ確認表も付けました。</summary>
+    <summary>開示請求を受け付ける会社の担当者向けに、来所・電話・郵送で準備する本人確認の資料や照合方法を整理します。公式資料にある例と社内で決める事項を分け、必要以上の情報を集めないための考え方、受付前の分担、迷ったときの確認先をまとめます。</summary>
   </entry>
   <entry>
-    <title>追加注文の見積を元の注文と混ぜずに案件ごとに管理するには</title>
-    <link href="https://vaynexis.jp/column/additional-order-quote-per-project"/>
-    <id>https://vaynexis.jp/column/additional-order-quote-per-project</id>
+    <title>補助金に採択された会社が交付申請までにそろえる資料と確認の順序</title>
+    <link href="https://vaynexis.jp/column/subsidy-after-adoption-application"/>
+    <id>https://vaynexis.jp/column/subsidy-after-adoption-application</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>追加注文の見積は、元の注文との関係を残しながら、追加する範囲と確認状況を分けて管理します。案件ごとに残す項目、元見積を置き換える修正との区別、送付済みの版と受注への引き継ぎ、AIに差分の下書きを任せる際の確認点を整理します。</summary>
+    <summary>補助金に採択された後の提出準備を、届いた案内、見積書、申請内容の照合から整理します。担当者と回収予定日を決める表や、提出前の確認項目を示し、事務局に尋ねる内容をまとめます。制度別の公式案内と社内での進め方を分け、採択済みの案件の準備に絞って解説します。</summary>
   </entry>
   <entry>
-    <title>確定後のシフト交代で、本人同士の合意と管理者の承認を記録する方法</title>
-    <link href="https://vaynexis.jp/column/shift-swap-approval-record"/>
-    <id>https://vaynexis.jp/column/shift-swap-approval-record</id>
+    <title>外国人の雇入れ・離職時の雇用状況届出はどこへいつまでに出すか</title>
+    <link href="https://vaynexis.jp/column/foreign-worker-employment-report"/>
+    <id>https://vaynexis.jp/column/foreign-worker-employment-report</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>確定後のシフト交代では、本人同士の了承だけで勤務表を変更した扱いにせず、管理者の返答と確定連絡までを結び付けて残します。変更前後の勤務、返答の対象、承認待ちの状態、勤務表への反映を確かめる記録欄と、AIに下書きを頼む範囲を整理します。</summary>
+    <summary>外国人の従業員を雇い入れたとき、離職したときに、どの書類をどこへいつまでに出すかを整理します。対象の確認から、本人の情報の転記、様式の選び分け、提出後の記録まで、少人数で事務を担う担当者が確認する順序をまとめます。</summary>
   </entry>
   <entry>
-    <title>店頭とメールの顧客アンケートを回収経路別に集計する手順</title>
-    <link href="https://vaynexis.jp/column/survey-results-by-channel"/>
-    <id>https://vaynexis.jp/column/survey-results-by-channel</id>
+    <title>退職者の雇用保険資格喪失届・離職証明書に必要な資料と確認の順序</title>
+    <link href="https://vaynexis.jp/column/employment-insurance-loss-notice"/>
+    <id>https://vaynexis.jp/column/employment-insurance-loss-notice</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>店頭とメールで集めた顧客アンケートを、回収経路ごとに集計する担当者向けの手順です。収集先の対応確認から対象の切り替え、件数が合わないときの点検までを整理します。集計メモの短い例と、担当者が替わっても条件をたどれる記録の残し方をまとめます。</summary>
+    <summary>退職時の書類を初めて準備する総務担当者に向け、届出用紙と裏付け資料の集め方を整理します。本人の希望と年齢、出勤・賃金の記録、退職理由を確認できる書類、本人への内容確認、提出期限を順に扱い、社内の分担例と最後に使える確認表をまとめます。</summary>
   </entry>
   <entry>
-    <title>会社アカウントの二段階認証を設定する前後の確認点と進め方</title>
-    <link href="https://vaynexis.jp/column/workspace-two-step-verification-setup"/>
-    <id>https://vaynexis.jp/column/workspace-two-step-verification-setup</id>
+    <title>賞与の支払予定月に支給しなかったときの届出と事務の進め方</title>
+    <link href="https://vaynexis.jp/column/bonus-nonpayment-report"/>
+    <id>https://vaynexis.jp/column/bonus-nonpayment-report</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>会社で使うアカウントの認証設定は、操作の完了に加え、会社が許可する方法と端末を使えないときの対応まで確かめます。本人が進める設定の流れ、管理者への確認事項、引き継ぎに残す項目を整理し、設定後に通知やコードで迷いやすい点もまとめます。</summary>
+    <summary>賞与を予定した月に支払わなかったとき、担当者が確認する書類と事務の流れを整理します。全員が不支給の場合と一部の人だけが不支給の場合を分け、対象年月の記入、今後の予定月の変更、提出先・時期の確認、控えの保管までを公式資料に沿ってまとめます。</summary>
   </entry>
   <entry>
-    <title>仕入食材は後から追える？納入日・製造ロット・使用献立を結ぶ記録</title>
-    <link href="https://vaynexis.jp/column/food-ingredient-traceability-record"/>
-    <id>https://vaynexis.jp/column/food-ingredient-traceability-record</id>
+    <title>従業員の家族を扶養に入れる・外すときの添付書類と確認の順番</title>
+    <link href="https://vaynexis.jp/column/health-insurance-dependent-documents"/>
+    <id>https://vaynexis.jp/column/health-insurance-dependent-documents</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>給食・仕出しの仕入食材を後から追うために、納入日、製造元などのロット表示、実際の使用日・献立をどう結ぶかを整理します。公式資料の記録項目と当社の整理を分け、元資料の保管先、担当者の確認時点、引き継ぎ前の点検を表と確認表で示します。</summary>
+    <summary>従業員の家族を扶養に入れる・外すとき、続柄と収入の証明、別居時の送金資料、削除時に返す書類をどうそろえるかを整理します。発行日や写しの可否、添付を省ける条件も公式資料に沿って確認し、本人と事務担当の準備、判断が要る点の確認先を分けて示します。</summary>
   </entry>
   <entry>
-    <title>不動産の重要事項説明の前に何を集める？物件資料の所在を整える</title>
-    <link href="https://vaynexis.jp/column/real-estate-disclosure-documents"/>
-    <id>https://vaynexis.jp/column/real-estate-disclosure-documents</id>
+    <title>初めて従業員を雇った会社の労働保険の届出順序と窓口・期限</title>
+    <link href="https://vaynexis.jp/column/labor-insurance-first-hire-filing"/>
+    <id>https://vaynexis.jp/column/labor-insurance-first-hire-filing</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>重要事項説明の準備では、資料の名前だけでなく、対象物件、収集元、取得日、保管場所を結び付けて整理します。公式の様式例で資料の種類を確かめ、手元にあるものと照会中のものを区別する方法、確認担当と社内期限の残し方、専門家へ引き継ぐ点をまとめます。</summary>
+    <summary>初めての雇用後に行う届出について、公式資料を基に提出の順序、期限、窓口の違いを整理します。用紙や添付資料の確認から申告・納付の分担、控えの保管まで、担当者が準備する流れと、専門家に確認する点をまとめます。提出と支払の完了を分けて管理する確認表も付けています。</summary>
   </entry>
   <entry>
-    <title>Googleカレンダーで予定名を伏せて空きだけ共有するには？</title>
-    <link href="https://vaynexis.jp/column/calendar-share-free-busy-only"/>
-    <id>https://vaynexis.jp/column/calendar-share-free-busy-only</id>
+    <title>退職した従業員に証明書を求められたら｜交付前に確認すること</title>
+    <link href="https://vaynexis.jp/column/retirement-certificate-request"/>
+    <id>https://vaynexis.jp/column/retirement-certificate-request</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>予定の名前を見せず、日程調整に必要な空き具合だけを伝える方法を整理します。共有相手への権限の付け方に加え、全体の共有範囲、個々の予定の公開設定、会社の管理者による制限を確認し、最後に相手側の表示を確かめるまでを扱います。</summary>
+    <summary>退職した従業員から証明書の発行を頼まれた担当者に向け、書類の取り違えを防ぐ確認の順序をまとめます。本人の希望と手元の記録の照合、下書きから交付までの役割分担、控えに残す情報、迷う場合に確認する先を、公式資料と事務の整理を分けて紹介します。</summary>
   </entry>
   <entry>
-    <title>共同編集で消した表を戻す｜スプレッドシートの変更履歴と復元前の確認</title>
-    <link href="https://vaynexis.jp/column/sheets-restore-deleted-table"/>
-    <id>https://vaynexis.jp/column/sheets-restore-deleted-table</id>
+    <title>入社する従業員の社会保険資格取得届は何をそろえていつ出すか</title>
+    <link href="https://vaynexis.jp/column/social-insurance-acquisition-notice"/>
+    <id>https://vaynexis.jp/column/social-insurance-acquisition-notice</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>共同編集で表を消してしまったとき、どの時点へ戻すかを決めるための確認と、実際に戻すまでの操作を整理します。現行の内容を残す考え方、ほかの担当者が加えた修正との見比べ方、戻した後の点検まで、小さな表の例とともに説明します。</summary>
+    <summary>入社時の届出に向けて、本人に用意してもらう情報、会社側でそろえる書類、提出先を整理します。担当者が収集から提出までを進めるための分担表と、記入漏れを点検する確認表を掲載し、例外の扱いや個別の判断を専門家へ確認するときの準備も紹介します。</summary>
   </entry>
   <entry>
-    <title>Excelの申請表で入力欄だけ編集できるようにする設定と確認</title>
-    <link href="https://vaynexis.jp/column/excel-lock-cells-input-only"/>
-    <id>https://vaynexis.jp/column/excel-lock-cells-input-only</id>
+    <title>採用時の労働条件通知書に何をそろえるか｜必要事項と交付前の確認</title>
+    <link href="https://vaynexis.jp/column/labor-conditions-notice-items"/>
+    <id>https://vaynexis.jp/column/labor-conditions-notice-items</id>
     <published>2026-11-03T00:00:00+09:00</published>
     <updated>2026-11-03T00:00:00+09:00</updated>
-    <summary>申請表を配る前に、記入を受け付ける欄と固定したい欄を整理します。入力欄だけを編集できるようにする設定の順序、既存の表を見直すときの着眼点、配布前に試す操作、設定を引き継ぐ際に残す内容を、短い例とともにまとめます。</summary>
+    <summary>採用時に渡す書類を準備する担当者向けに、必要事項を集める順序、対象者に合わせた様式の選び方、決定済みの条件との照合、交付までの段取りを整理します。基本欄と追加欄の確認を分け、記入に迷った箇所を専門家へ引き継ぐための確認表も付けています。</summary>
   </entry>
 </feed>

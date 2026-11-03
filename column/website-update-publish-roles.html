@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サイトの更新担当と公開担当を分ける権限の選び方と承認の残し方｜Vaynexis</title>
+  <meta name="description" content="サイトの更新担当にはどこまで権限を渡せばよいのでしょうか。投稿の下書きと公開を分ける考え方を軸に、画像の追加、固定ページ、公開済み内容の修正を切り分けます。権限の設定と社内の承認を区別し、対象の原稿や判断を引き継ぐための記録項目も整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="サイトの更新担当と公開担当を分ける権限の選び方と承認の残し方｜Vaynexis">
+  <meta property="og:description" content="サイトの更新担当にはどこまで権限を渡せばよいのでしょうか。投稿の下書きと公開を分ける考え方を軸に、画像の追加、固定ページ、公開済み内容の修正を切り分けます。権限の設定と社内の承認を区別し、対象の原稿や判断を引き継ぐための記録項目も整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/website-update-publish-roles">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/website-update-publish-roles">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"サイトの更新担当と公開担当を分ける権限の選び方と承認の残し方","description":"サイトの更新担当にはどこまで権限を渡せばよいのでしょうか。投稿の下書きと公開を分ける考え方を軸に、画像の追加、固定ページ、公開済み内容の修正を切り分けます。権限の設定と社内の承認を区別し、対象の原稿や判断を引き継ぐための記録項目も整理します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/website-update-publish-roles"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"サイトの更新担当と公開担当を分ける権限の選び方と承認の残し方","item":"https://vaynexis.jp/column/website-update-publish-roles"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">サイトの更新担当と公開担当を分ける権限の選び方と承認の残し方</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">サイトの更新担当と公開担当を分ける権限の選び方と承認の残し方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>WordPress の標準の役割を例に、更新担当には原稿を準備する範囲、公開担当には確認した内容を外へ出す範囲の権限を渡す、という順で整理します。担当名だけで選ばず、更新する対象と操作を先に決めることが出発点です。権限の設定に加え、誰がどの原稿を承認したかを記録する運用も用意します。使っているシステムが WordPress でない場合は、そのシステムの公式の説明で権限を確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
+    <p>この記事は、会社のサイトの更新を人に任せたい小さな会社の担当者が、更新と公開の権限、承認の記録を分けて決める流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">権限を選ぶ前に、更新する対象を決める</a></li>
+      <li><a href="#s2">新しい投稿は、寄稿と公開の権限で分ける</a></li>
+      <li><a href="#s3">画像・固定ページ・公開後の修正を切り分ける</a></li>
+      <li><a href="#s4">公開待ちの状態と、社内の承認を分けて残す</a></li>
+      <li><a href="#s5">担当者の権限を点検し、AIは原稿準備に使う</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．権限を選ぶ前に、更新する対象を決める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>お知らせの文面を整えた人が、内容の確認を待ってから公開担当へ渡す場面を考えます。先に決めたいのは、「更新を任せる」という言葉の範囲です。文章を直すこと、画像を追加すること、公開済みの内容を差し替えることを、別の作業として書き出します。</p>
+    <p>依頼の内容は「お知らせの原稿を準備する」「掲載の可否を判断して公開する」のように、作業と責任が分かる表現にします。依頼の中に、会社紹介の書き換えやサイト全体の設定変更まで含めるかも明らかにするとよいです。</p>
+    <p>権限を選ぶ段階で困った操作を、そのまま担当者の権限拡大で解決しようとせず、公開担当や保守担当に渡す作業として残す方法もあります。引き継ぐ対象が明らかであれば、下書き担当の仕事の終点も決めやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．新しい投稿は、寄稿と公開の権限で分ける</h2>
+    <p>新しい記事の原稿を準備する担当と、他の人の原稿を確認して公開する担当を分ける形から検討します。</p>
+    <p>WordPress の公式の説明では、標準の寄稿者は、自分の投稿を作成・管理できますが、公開はできません。編集者は、他のユーザーの投稿を含めて公開・管理できる役割です。一方、投稿者は自分の投稿を公開・管理できる役割です（確認日：2026-11-03）。</p>
+    <p>ここで検討する分担は、下書き担当と公開担当が別々のアカウントを使い、担当する操作だけを行う形です。これは当社の分担案です。公開の判断を別の人に残す目的に合わせ、役割を選びます。</p>
+    <p>公開担当に任せる対象も、担当する記事の範囲まで書き添えます。内容の公開を任せることと、利用者の追加やサイト全体の設定変更を任せることは、社内の依頼として分けておくとよいです。困った操作の連絡先は、権限を選ぶ担当とは別に決めておきます。</p>
+    <p>「原稿を書く人だから」という担当名だけで権限を決めると、任せたい操作と食い違うおそれがあります。選ぶ際には、文章を扱えるかに加えて、外へ出せるかも確かめることが大切です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．画像・固定ページ・公開後の修正を切り分ける</h2>
+    <p>投稿の担当を決めた後は、原稿以外に必要な作業を分けて検討します。</p>
+    <p>同じく公式の学習ページでは、寄稿者は画像などのメディアファイルをアップロードできません。また、WordPress では、サイトに載せる内容に投稿と固定ページという区別があります（確認日：2026-11-03）。</p>
+    <p>画像の追加は公開担当へ渡し、原稿には使う画像と配置の希望を添える運用にすると、権限を広げる前に分担を整理できます。画像を受け取る担当と、文章を受け取る担当が異なる場合も、依頼先を原稿と一緒に残します。</p>
+    <p>会社紹介などの記事以外の更新や、すでに外へ出ている文章の差し替えは、新しい原稿を準備する作業とは別に扱います。投稿用に決めた分担をサイト全体へ広げず、対象の内容、変更する箇所、確認する人を先に決める形です。</p>
+    <p>当面の運用として、更新担当は変更案を別の文書で用意し、公開担当が承認された差分を反映する方法があります。画面上での編集まで任せたい場合は、必要な操作と公開を止めたい範囲を保守担当へ渡し、権限の設計を詰めるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．公開待ちの状態と、社内の承認を分けて残す</h2>
+    <p>公開担当への引き継ぎには、原稿そのものと、掲載してよいという判断の記録をそろえます。</p>
+    <p>WordPress の公式の説明では、投稿の状態の一つ pending は、公開権限を持つユーザーによる公開を待つ状態とされています（確認日：2026-11-03）。</p>
+    <p>この状態を作業の目印にしつつ、社内で誰が内容を認めたかは、原稿と対応する記録として残す運用にします。「公開できる担当者」と「その文面を承認した人」は、分けて記入するとよいです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">残す項目</th><th scope="col">記録する内容</th><th scope="col">引き継ぐときの見方</th></tr></thead><tbody><tr><td data-label="残す項目">更新の対象</td><td data-label="記録する内容">対象の記事や掲載場所</td><td data-label="引き継ぐときの見方">別の内容を公開しようとしていないか</td></tr><tr><td data-label="残す項目">変更する範囲</td><td data-label="記録する内容">追加・修正する箇所と理由</td><td data-label="引き継ぐときの見方">依頼されていない変更が混ざっていないか</td></tr><tr><td data-label="残す項目">確認対象の原稿</td><td data-label="記録する内容">保存場所と版を区別できる名前</td><td data-label="引き継ぐときの見方">承認後に書き換わっていないか</td></tr><tr><td data-label="残す項目">内容の承認</td><td data-label="記録する内容">判断した人、判断した時点、承認・差し戻し</td><td data-label="引き継ぐときの見方">誰の判断で進めるか分かるか</td></tr><tr><td data-label="残す項目">公開の担当</td><td data-label="記録する内容">操作する人と引き継ぎ先</td><td data-label="引き継ぐときの見方">不在時にも連絡先が分かるか</td></tr><tr><td data-label="残す項目">公開後の照合</td><td data-label="記録する内容">承認した内容との一致、修正の要否</td><td data-label="引き継ぐときの見方">掲載した内容を確認して区切れたか</td></tr></tbody></table></div>
+    <p>表は当社の記録案です。承認の後に文面を直す場合は、直した範囲を示して再び確認へ戻す運用にします。公開担当が手元で修正した内容も、元の承認に含まれると扱わず、確認対象を明らかにします。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．担当者の権限を点検し、AIは原稿準備に使う</h2>
+    <p>分担を書面で決めた後は、担当者ごとの権限と依頼内容が合っているかを点検します。</p>
+    <p>公式の説明では、ユーザー一覧の Role 欄に、そのユーザーに割り当てられた役割が表示されるとされています（確認日：2026-11-03）。</p>
+    <p>確認用の環境を用意し、更新担当と公開担当それぞれの立場で、任せる操作と止める操作を確かめる手順を設けます。役割の名前を確認して終わりにせず、依頼した作業を進められるか、承認を待つ箇所で止められるかを見る考え方です。</p>
+    <p>AIを使う範囲は、文章の下書きや変更箇所の整理までとします。内容の承認と公開の判断は人が行う分担案です。AIへ渡す材料も、原稿準備に必要なものに絞り、実際の公開操作とは切り離して扱います。</p>
+    <p>担当が交代したときには、原稿の受け渡し先と公開を判断する人を更新します。操作できる人の一覧と、社内の承認の連絡先を一緒に見直すことで、引き継ぎを区切りやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">更新担当が準備する範囲と、公開担当が反映する範囲を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">下書き担当が公開できない分担になっているかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">画像追加と記事以外の更新を誰に渡すか決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">公開済み内容の修正を、承認へ戻す流れを決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">承認した原稿の版と、判断した人を対応させたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">公開する担当と不在時の引き継ぎ先を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">担当者ごとの操作範囲と、掲載後の内容を確かめたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://wordpress.org/documentation/article/roles-and-capabilities/" rel="noopener" target="_blank">Roles and Capabilities</a>：寄稿者の投稿作成・管理と公開の区別。標準の権限表も参照</li>
+      <li><a href="https://learn.wordpress.org/lesson-plan/user-management/" rel="noopener" target="_blank">User Management</a>：編集者が他のユーザーの投稿も公開・管理できること</li>
+      <li><a href="https://ja.wordpress.org/support/article/roles-and-capabilities/" rel="noopener" target="_blank">ユーザーの種類と権限</a>：投稿者の公開・管理の範囲、日本語の役割名</li>
+      <li><a href="https://learn.wordpress.org/lesson/user-management/" rel="noopener" target="_blank">User management</a>：寄稿者によるメディアファイルのアップロードの制限</li>
+      <li><a href="https://wordpress.org/documentation/article/create-pages/" rel="noopener" target="_blank">Create pages</a>：投稿と固定ページの区別</li>
+      <li><a href="https://wordpress.org/documentation/article/post-status/" rel="noopener" target="_blank">Post Status</a>：pending の意味。ページの最終更新表示は2023-01-13で、現行画面の操作手順の根拠には用いていない</li>
+      <li><a href="https://wordpress.org/documentation/article/users-screen/" rel="noopener" target="_blank">Users screen</a>：ユーザー一覧の Role 欄</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/ai-email-draft-permissions">AIでメールを下書きするときの接続権限・送信承認・記憶の確認</a></li>
+      <li><a href="/column/double-check-design">ダブルチェックのやり方</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a></li>
+      <li><a href="/column/handover-document">引き継ぎ書の作り方</a></li>
+      <li><a href="/column/proposal-review-conflicting-comments">提案書のレビュー指摘が食い違うとき、採否と理由をどう確定するか</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
