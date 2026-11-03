@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表記ゆれの変換表のひな形（Excel・CSV）｜規則と保留を残す記入例つき｜Vaynexis</title>
+  <meta name="description" content="対象列に適用する変換候補を一行ずつ残す、表記ゆれの変換表です。変換前の値・変換後の候補・根拠と版・一致方式・適用範囲・試行件数などの列を用意しました。品目名を使った記入例とCSVつきで、部分一致による件数の差や、規則の連鎖で保留する理由まで、自分の仕事に写して使えます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="表記ゆれの変換表のひな形（Excel・CSV）｜規則と保留を残す記入例つき｜Vaynexis">
+  <meta property="og:description" content="対象列に適用する変換候補を一行ずつ残す、表記ゆれの変換表です。変換前の値・変換後の候補・根拠と版・一致方式・適用範囲・試行件数などの列を用意しました。品目名を使った記入例とCSVつきで、部分一致による件数の差や、規則の連鎖で保留する理由まで、自分の仕事に写して使えます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/templates/notation-rules">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/templates/notation-rules">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"表記ゆれの変換表のひな形。置換の規則と保留の理由を残して確かめる","description":"対象列に適用する変換候補を一行ずつ残す、表記ゆれの変換表です。変換前の値・変換後の候補・根拠と版・一致方式・適用範囲・試行件数などの列を用意しました。品目名を使った記入例とCSVつきで、部分一致による件数の差や、規則の連鎖で保留する理由まで、自分の仕事に写して使えます。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/templates/notation-rules"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"ひな形・確認表","item":"https://vaynexis.jp/ai/templates"},{"@type":"ListItem","position":4,"name":"表記ゆれの変換表（規則と保留の理由を残す）","item":"https://vaynexis.jp/ai/templates/notation-rules"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/templates">ひな形・確認表</a></li><li aria-current="page">表記ゆれの変換表（規則と保留の理由を残す）</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">表記ゆれの変換表のひな形。置換の規則と保留の理由を残して確かめる</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>対象列に適用する変換候補を一行ずつ記録し、候補を決めた根拠と、複製で確かめた結果を結び付けます。候補件数と変更件数に差があれば保留理由を残す使い方です。採用する表記や適用の可否は人が決め、照合済という状態だけで原データへの反映を決めません。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこのページの最後）</p>
+    <p>品目表をまとめるとき、置換した文字だけでは適用条件や止めた理由が残りません。規則と試行の記録をこの表で引き継ぎます。</p>
+    <p class="notice">表の中身は説明のための架空の例です（実在の人物・法人・債権の同一性や、似た表記の統合の可否は判定しません）。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#use">このひな形で確かめること</a></li>
+      <li><a href="#sheet">ひな形と記入例</a></li>
+      <li><a href="#howto">使い方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#download">ダウンロード</a></li>
+      <li><a href="#notes">記入するときの注意</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="use" aria-labelledby="use-title"><div class="wrap">
+    <h2 class="h2" id="use-title">1．このひな形で確かめること</h2>
+    <p>使える環境なら、Power Queryでは選択した列の値を置き換えられます。 Power Queryは表内の値からデータ型を自動検出します。 ここからは当社の整理です。 対象列ごとの変換候補を単位に、元の文字・適用範囲・複製での変更結果を照合します。名称の正しさや同一性は確定しません。</p>
+  </div></section>
+
+  <section class="sec" id="sheet" aria-labelledby="sheet-title"><div class="wrap">
+    <h2 class="h2" id="sheet-title">2．ひな形と記入例</h2>
+    <h3 class="h3">列の一覧</h3>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">番号</th><th scope="col">列名</th><th scope="col">入れる中身</th><th scope="col">記入例（1行目の値）</th></tr></thead><tbody><tr><td data-label="番号">1</td><td data-label="列名">規則ID</td><td data-label="入れる中身">当社案：候補を区別する符号。</td><td data-label="記入例（1行目の値）">R01</td></tr><tr><td data-label="番号">2</td><td data-label="列名">対象ファイル・列</td><td data-label="入れる中身">当社案：対象の表と列を固定。</td><td data-label="記入例（1行目の値）">〇〇商店品目表・品目名</td></tr><tr><td data-label="番号">3</td><td data-label="列名">変換前の値</td><td data-label="入れる中身">公式の「検索する値」に対応する原文。</td><td data-label="記入例（1行目の値）">ラベルＡ</td></tr><tr><td data-label="番号">4</td><td data-label="列名">変換後の候補</td><td data-label="入れる中身">公式の置換先の入力欄に対応する候補。</td><td data-label="記入例（1行目の値）">ラベルA</td></tr><tr><td data-label="番号">5</td><td data-label="列名">表記根拠・版</td><td data-label="入れる中身">当社案：候補を裏付ける資料と版。</td><td data-label="記入例（1行目の値）">品目基準・2026-10版</td></tr><tr><td data-label="番号">6</td><td data-label="列名">一致方式</td><td data-label="入れる中身">セル全体の一致か部分の一致か。</td><td data-label="記入例（1行目の値）">完全一致</td></tr><tr><td data-label="番号">7</td><td data-label="列名">適用範囲</td><td data-label="入れる中身">当社案：対象区分や除外条件。</td><td data-label="記入例（1行目の値）">文具のみ</td></tr><tr><td data-label="番号">8</td><td data-label="列名">空白・記号と型</td><td data-label="入れる中身">当社案：残す文字と試行前後の型。</td><td data-label="記入例（1行目の値）">空白・記号維持／文字列</td></tr><tr><td data-label="番号">9</td><td data-label="列名">順序・競合</td><td data-label="入れる中身">当社案：適用順と他規則への連鎖。</td><td data-label="記入例（1行目の値）">先行／競合未検出</td></tr><tr><td data-label="番号">10</td><td data-label="列名">候補件数</td><td data-label="入れる中身">当社案：変更を見込む元の行数。</td><td data-label="記入例（1行目の値）">3</td></tr><tr><td data-label="番号">11</td><td data-label="列名">試行結果・件数</td><td data-label="入れる中身">当社案：複製で変わった行数。</td><td data-label="記入例（1行目の値）">3件変更</td></tr><tr><td data-label="番号">12</td><td data-label="列名">保留理由</td><td data-label="入れる中身">当社案：適用を止める理由。</td><td data-label="記入例（1行目の値）">保留せず</td></tr><tr><td data-label="番号">13</td><td data-label="列名">確認の状態</td><td data-label="入れる中身">当社案：未確認／照合済／差あり。</td><td data-label="記入例（1行目の値）">照合済</td></tr></tbody></table></div>
+    <h3 class="h3">記入例（架空）</h3>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">規則ID</th><th scope="col">対象ファイル・列</th><th scope="col">変換前の値</th><th scope="col">変換後の候補</th><th scope="col">表記根拠・版</th><th scope="col">一致方式</th><th scope="col">適用範囲</th><th scope="col">空白・記号と型</th><th scope="col">順序・競合</th><th scope="col">候補件数</th><th scope="col">試行結果・件数</th><th scope="col">保留理由</th><th scope="col">確認の状態</th></tr></thead><tbody><tr><td data-label="規則ID">R01</td><td data-label="対象ファイル・列">〇〇商店品目表・品目名</td><td data-label="変換前の値">ラベルＡ</td><td data-label="変換後の候補">ラベルA</td><td data-label="表記根拠・版">品目基準・2026-10版</td><td data-label="一致方式">完全一致</td><td data-label="適用範囲">文具のみ</td><td data-label="空白・記号と型">空白・記号維持／文字列</td><td data-label="順序・競合">先行／競合未検出</td><td data-label="候補件数">3</td><td data-label="試行結果・件数">3件変更</td><td data-label="保留理由">保留せず</td><td data-label="確認の状態">照合済</td></tr><tr><td data-label="規則ID">R02</td><td data-label="対象ファイル・列">〇〇商店品目表・品目名</td><td data-label="変換前の値">００７テープ</td><td data-label="変換後の候補">007テープ</td><td data-label="表記根拠・版">品目基準・2026-10版</td><td data-label="一致方式">完全一致</td><td data-label="適用範囲">文具のみ</td><td data-label="空白・記号と型">空白・記号維持／文字列</td><td data-label="順序・競合">独立／競合未検出</td><td data-label="候補件数">2</td><td data-label="試行結果・件数">2件変更</td><td data-label="保留理由">保留せず</td><td data-label="確認の状態">照合済</td></tr><tr><td data-label="規則ID">R03</td><td data-label="対象ファイル・列">〇〇商店品目表・品目名</td><td data-label="変換前の値">ラベルＢ</td><td data-label="変換後の候補">ラベルB</td><td data-label="表記根拠・版">品目基準・2026-10版</td><td data-label="一致方式">部分一致</td><td data-label="適用範囲">文具のみ</td><td data-label="空白・記号と型">空白・記号維持／文字列</td><td data-label="順序・競合">R04と競合</td><td data-label="候補件数">2</td><td data-label="試行結果・件数">3件変更・差1件</td><td data-label="保留理由">ラベルＢ用も変化／保留</td><td data-label="確認の状態">差あり</td></tr><tr><td data-label="規則ID">R04</td><td data-label="対象ファイル・列">〇〇商店品目表・品目名</td><td data-label="変換前の値">ラベルB</td><td data-label="変換後の候補">ラベルC</td><td data-label="表記根拠・版">品目基準・2026-10版</td><td data-label="一致方式">完全一致</td><td data-label="適用範囲">文具のみ</td><td data-label="空白・記号と型">空白・記号維持／文字列</td><td data-label="順序・競合">R03の後に再変換</td><td data-label="候補件数">1</td><td data-label="試行結果・件数">未実施</td><td data-label="保留理由">連鎖の確認待ち／保留</td><td data-label="確認の状態">未確認</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="howto" aria-labelledby="howto-title"><div class="wrap">
+    <h2 class="h2" id="howto-title">3．使い方</h2>
+    <ol>
+      <li><b>複製を用意：</b>元の資料・データを書き換えず、複製で試します。対象の表・列と基準の版を残します。</li>
+      <li><b>候補を写す：</b>変換前は原データから写し、候補は基準資料と照合します。AIに記入させるときは資料にある値だけを写させ、分からない欄は「未確認」と書かせます。</li>
+      <li><b>規則を試す：</b>範囲と一致方式を固定し、規則ごとに元の複製から試します。候補件数と変わった行数を記録します。</li>
+      <li><b>差と連鎖を追う：</b>差の出た元の行と、他の規則で再変換される値を拾い、理由を残して保留します。</li>
+      <li><b>人が確かめる：</b>AIの記入は下書きとして、最後は人が元の値・根拠・試行結果を確かめます。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">4．確かめる点</h2>
+    <ol>
+      <li><b>原文と件数：</b>変換前の値を原データから確かめ、複製の変更件数を候補件数と照合します。原データは変えません。</li>
+      <li><b>差の出た対象：</b>部分一致の例では末尾に「用」が付く品目まで変わります。差の行を見て適用範囲を絞り直します。</li>
+      <li><b>規則の連鎖：</b>変換後の候補が別規則の変換前と重なる箇所を探し、順番を変えた結果も複製で比べます。</li>
+      <li><b>候補の根拠：</b>資料の版と掲載位置をたどり、候補が資料どおりか見ます。似た文字という理由だけでは採用しません。</li>
+      <li><b>残す文字と型：</b>空白や記号を勝手に消さず、保存・再取り込み後も先頭のゼロと文字列の型が保たれるか比べます。</li>
+      <li><b>保留の扱い：</b>差や連鎖が残る行は適用を止め、理由と確認の進み具合を残します。未実施を変更なしと数えません。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">5．人が判断する所</h2>
+    <ul>
+      <li>参照する基準資料と版、採用する表記を選ぶこと。</li>
+      <li>部分一致を使う範囲と、競合する規則の順序を決めること。</li>
+      <li>保留を解消し、原データへの反映対象を決めること。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="download" aria-labelledby="download-title"><div class="wrap">
+    <h2 class="h2" id="download-title">6．ダウンロード</h2>
+    <p><a href="/assets/templates/notation-rules.csv" download>表記ゆれの変換表のひな形（CSV・Excelで開けます）</a>を保存できます。表の見出しと、架空の記入例と、空の行が入っています。社内で、そのまま使えます。</p>
+  </div></section>
+
+  <section class="sec" id="notes" aria-labelledby="notes-title"><div class="wrap">
+    <h2 class="h2" id="notes-title">7．記入するときの注意</h2>
+    <ul>
+      <li>変換前の値を打ち直さず、原文を保持します。</li>
+      <li>資料がない「未提供」、まだ確かめていない「未確認」、読んだ資料にない「未記載」を分けます。</li>
+      <li>試行結果は規則ごとの記録です。重なる対象があるため件数を単純に足しません。</li>
+      <li>社内で自由に使えます。担当や確認日など必要な列を足してもよいです。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．当社に相談するとき</h2>
+    <p>この表を自社の仕事に合わせて作り変えたいときや、結果の確かめ方を一緒に決めたいときは、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/replace-values-power-query" rel="noopener" target="_blank">値の置換 (Power Query)</a>：列の値の置換・検索値・置換先・一致方式</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/add-or-change-data-types-power-query" rel="noopener" target="_blank">データ型を追加または変更する (Power Query)</a>：値からのデータ型の自動検出</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/notation-unification">表記ゆれの統一</a></li>
+      <li><a href="/column/name-variants-excel">エクセルで会社名・住所の表記ゆれを統一する方法</a></li>
+      <li><a href="/ai/tasks/table-reconciliation">複数の表の突合</a></li>
+      <li><a href="/ai/templates/handover-check">引き継ぎの受領確認表（資料・試行・残件）</a></li>
+      <li><a href="/ai/templates/grant-guideline-check">公募要領の確認表（原文と要約を分けて残す）</a></li>
+      <li><a href="/ai/templates/manual-gap-check">マニュアルの抜け確認表（初めて読む担当が試して不足を残す）</a></li>
+      <li><a href="/ai/templates">ひな形・確認表の一覧</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>件数照合シートのひな形（Excel・CSV）｜元と先の差を残す記入例｜Vaynexis</title>
+  <meta name="description" content="同じ抽出条件で比べる元と先のデータ集合をひと組として記録する、件数照合シートのひな形です。元と先の行数・行数差・キー欠損・重複超過・片側だけのキー数を分けた列と、受付一覧を台帳へ移す架空の記入例、CSVつき。件数がそろっても調べる箇所と、差の理由・次の行動を残せます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="件数照合シートのひな形（Excel・CSV）｜元と先の差を残す記入例｜Vaynexis">
+  <meta property="og:description" content="同じ抽出条件で比べる元と先のデータ集合をひと組として記録する、件数照合シートのひな形です。元と先の行数・行数差・キー欠損・重複超過・片側だけのキー数を分けた列と、受付一覧を台帳へ移す架空の記入例、CSVつき。件数がそろっても調べる箇所と、差の理由・次の行動を残せます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/templates/count-check">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/templates/count-check">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"件数照合シートのひな形。元と先の行数・重複・片側だけのキーを記録する","description":"同じ抽出条件で比べる元と先のデータ集合をひと組として記録する、件数照合シートのひな形です。元と先の行数・行数差・キー欠損・重複超過・片側だけのキー数を分けた列と、受付一覧を台帳へ移す架空の記入例、CSVつき。件数がそろっても調べる箇所と、差の理由・次の行動を残せます。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/templates/count-check"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"ひな形・確認表","item":"https://vaynexis.jp/ai/templates"},{"@type":"ListItem","position":4,"name":"件数照合シート（元と先の行数・重複・片側だけのキー）","item":"https://vaynexis.jp/ai/templates/count-check"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/templates">ひな形・確認表</a></li><li aria-current="page">件数照合シート（元と先の行数・重複・片側だけのキー）</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">件数照合シートのひな形。元と先の行数・重複・片側だけのキーを記録する</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>同じ条件・数え方で比べる元と先のデータ集合をひと組として記入します。行数差、元と先の欠損・重複、片側だけのキーを残す表です。差の理由は原本で確かめ、重複の扱いや再転記は人が決めます。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこのページの最後）</p>
+    <p>受付一覧を別の台帳へ移したあと、照合範囲と調べ直す場所を引き継ぐ際に使います。</p>
+    <p class="notice">表の中身は説明のための架空の例です（件数一致から内容・金額や会計・税務上の正確性は判定しません）。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#use">このひな形で確かめること</a></li>
+      <li><a href="#sheet">ひな形と記入例</a></li>
+      <li><a href="#howto">使い方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#download">ダウンロード</a></li>
+      <li><a href="#notes">記入するときの注意</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="use" aria-labelledby="use-title"><div class="wrap">
+    <h2 class="h2" id="use-title">1．このひな形で確かめること</h2>
+    <p>Excel の公式資料では、セル・行・列を数える複数の手法が紹介されています（確認日：2026-11-03）。 使える環境なら、Power Query の完全外部結合は左右の表のすべての行を取り込む方法として参照できます（確認日：2026-11-03）。 ここからは当社の整理です。 元と先の集合ごとに件数とキーを照合し、内容・金額の正しさは確認対象に含めません。</p>
+  </div></section>
+
+  <section class="sec" id="sheet" aria-labelledby="sheet-title"><div class="wrap">
+    <h2 class="h2" id="sheet-title">2．ひな形と記入例</h2>
+    <h3 class="h3">列の一覧</h3>
+    <p>列はすべて当社の実務案です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">番号</th><th scope="col">列名</th><th scope="col">入れる中身</th><th scope="col">記入例（1行目の値）</th></tr></thead><tbody><tr><td data-label="番号">1</td><td data-label="列名">対象・元資料・先資料</td><td data-label="入れる中身">案：対象名と元・先の資料名・版。</td><td data-label="記入例（1行目の値）">〇〇商店／元受付初版／先台帳初版</td></tr><tr><td data-label="番号">2</td><td data-label="列名">対象条件・数え方</td><td data-label="入れる中身">案：抽出日・除外範囲・数える単位。</td><td data-label="記入例（1行目の値）">2026-10-01受付／データ行</td></tr><tr><td data-label="番号">3</td><td data-label="列名">照合キー・型</td><td data-label="入れる中身">案：対応を探す項目と文字列などの型。</td><td data-label="記入例（1行目の値）">受付番号・文字列</td></tr><tr><td data-label="番号">4</td><td data-label="列名">元の行数</td><td data-label="入れる中身">案：対象条件に沿う元のデータ行数。</td><td data-label="記入例（1行目の値）">4</td></tr><tr><td data-label="番号">5</td><td data-label="列名">先の行数</td><td data-label="入れる中身">案：同じ数え方による先のデータ行数。</td><td data-label="記入例（1行目の値）">4</td></tr><tr><td data-label="番号">6</td><td data-label="列名">行数差（先－元）</td><td data-label="入れる中身">案：先の行数から元の行数を引く値。</td><td data-label="記入例（1行目の値）">0</td></tr><tr><td data-label="番号">7</td><td data-label="列名">元のキー欠損行数</td><td data-label="入れる中身">案：元でキーを作れない行の数。</td><td data-label="記入例（1行目の値）">0</td></tr><tr><td data-label="番号">8</td><td data-label="列名">先のキー欠損行数</td><td data-label="入れる中身">案：先でキーを作れない行の数。</td><td data-label="記入例（1行目の値）">0</td></tr><tr><td data-label="番号">9</td><td data-label="列名">元の重複超過行数</td><td data-label="入れる中身">案：元の同一キーで最初の行を除いた行数。</td><td data-label="記入例（1行目の値）">0</td></tr><tr><td data-label="番号">10</td><td data-label="列名">先の重複超過行数</td><td data-label="入れる中身">案：先の同一キーで最初の行を除いた行数。</td><td data-label="記入例（1行目の値）">0</td></tr><tr><td data-label="番号">11</td><td data-label="列名">元だけのキー数・明細</td><td data-label="入れる中身">案：元にしかない異なるキーの数と明細位置。</td><td data-label="記入例（1行目の値）">0・該当なし</td></tr><tr><td data-label="番号">12</td><td data-label="列名">先だけのキー数・明細</td><td data-label="入れる中身">案：先にしかない異なるキーの数と明細位置。</td><td data-label="記入例（1行目の値）">0・該当なし</td></tr><tr><td data-label="番号">13</td><td data-label="列名">確認の状態</td><td data-label="入れる中身">案：未確認／照合済／差あり。</td><td data-label="記入例（1行目の値）">照合済</td></tr><tr><td data-label="番号">14</td><td data-label="列名">理由・次の行動・担当・日付</td><td data-label="入れる中身">案：確認した理由・次の作業・担当・確認日。</td><td data-label="記入例（1行目の値）">件数・キーを照合／内容は別確認／事務係／2026-10-02</td></tr></tbody></table></div>
+    <h3 class="h3">記入例（架空）</h3>
+    <p>例では見出し・空行を除き、非表示のデータ行とキー欠損行は行数に含めます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">対象・元資料・先資料</th><th scope="col">対象条件・数え方</th><th scope="col">照合キー・型</th><th scope="col">元の行数</th><th scope="col">先の行数</th><th scope="col">行数差（先－元）</th><th scope="col">元のキー欠損行数</th><th scope="col">先のキー欠損行数</th><th scope="col">元の重複超過行数</th><th scope="col">先の重複超過行数</th><th scope="col">元だけのキー数・明細</th><th scope="col">先だけのキー数・明細</th><th scope="col">確認の状態</th><th scope="col">理由・次の行動・担当・日付</th></tr></thead><tbody><tr><td data-label="対象・元資料・先資料">〇〇商店／元受付初版／先台帳初版</td><td data-label="対象条件・数え方">2026-10-01受付／データ行</td><td data-label="照合キー・型">受付番号・文字列</td><td data-label="元の行数">4</td><td data-label="先の行数">4</td><td data-label="行数差（先－元）">0</td><td data-label="元のキー欠損行数">0</td><td data-label="先のキー欠損行数">0</td><td data-label="元の重複超過行数">0</td><td data-label="先の重複超過行数">0</td><td data-label="元だけのキー数・明細">0・該当なし</td><td data-label="先だけのキー数・明細">0・該当なし</td><td data-label="確認の状態">照合済</td><td data-label="理由・次の行動・担当・日付">件数・キーを照合／内容は別確認／事務係／2026-10-02</td></tr><tr><td data-label="対象・元資料・先資料">△△印刷／元受付初版／先台帳初版</td><td data-label="対象条件・数え方">2026-10-02受付／データ行</td><td data-label="照合キー・型">受付番号・文字列</td><td data-label="元の行数">4</td><td data-label="先の行数">4</td><td data-label="行数差（先－元）">0</td><td data-label="元のキー欠損行数">0</td><td data-label="先のキー欠損行数">0</td><td data-label="元の重複超過行数">0</td><td data-label="先の重複超過行数">0</td><td data-label="元だけのキー数・明細">1・差分表の元側0014</td><td data-label="先だけのキー数・明細">1・差分表の先側0015</td><td data-label="確認の状態">差あり</td><td data-label="理由・次の行動・担当・日付">片側キーあり／受付原票と照合／事務係／2026-10-03</td></tr><tr><td data-label="対象・元資料・先資料">□□工房／元受付初版／先台帳初版</td><td data-label="対象条件・数え方">2026-10-03受付／データ行</td><td data-label="照合キー・型">受付番号・文字列</td><td data-label="元の行数">4</td><td data-label="先の行数">5</td><td data-label="行数差（先－元）">1</td><td data-label="元のキー欠損行数">0</td><td data-label="先のキー欠損行数">0</td><td data-label="元の重複超過行数">0</td><td data-label="先の重複超過行数">1</td><td data-label="元だけのキー数・明細">0・該当なし</td><td data-label="先だけのキー数・明細">0・該当なし</td><td data-label="確認の状態">差あり</td><td data-label="理由・次の行動・担当・日付">先の0034が重複／原票の明細を確認／照合係／2026-10-04</td></tr><tr><td data-label="対象・元資料・先資料">◇◇商店／元受付初版／先台帳初版</td><td data-label="対象条件・数え方">2026-10-04受付／データ行</td><td data-label="照合キー・型">受付番号・文字列</td><td data-label="元の行数">4</td><td data-label="先の行数">4</td><td data-label="行数差（先－元）">0</td><td data-label="元のキー欠損行数">1</td><td data-label="先のキー欠損行数">0</td><td data-label="元の重複超過行数">0</td><td data-label="先の重複超過行数">0</td><td data-label="元だけのキー数・明細">0・該当なし</td><td data-label="先だけのキー数・明細">1・差分表の先側0044</td><td data-label="確認の状態">差あり</td><td data-label="理由・次の行動・担当・日付">元に欠損行あり／元資料と転記記録を照合／照合係／2026-10-05</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="howto" aria-labelledby="howto-title"><div class="wrap">
+    <h2 class="h2" id="howto-title">3．使い方</h2>
+    <ol>
+      <li><b>複製で試す：</b>元の資料・データを書き換えず、複製で試し、資料の版を控えます。</li>
+      <li><b>条件をそろえる：</b>抽出範囲・行の扱い・キーの型を決めます。行数と一意のキー数は分けます。</li>
+      <li><b>値を写す：</b>AIに記入させるときは、資料にある値だけを写させ、分からない欄は「未確認」と書かせます。出力は下書きです。</li>
+      <li><b>原本に戻る：</b>最後は人が件数と差分明細を確かめ、理由・次の行動・担当・日付を残します。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">4．確かめる点</h2>
+    <ol>
+      <li><b>別々の数を見たか：</b>行数差、元だけ・先だけのキー、元と先の欠損・重複を別に見ます。差のない行も対象です。</li>
+      <li><b>対象範囲が同じか：</b>抽出日・版と、見出し・空行・非表示行の扱いを見比べます。</li>
+      <li><b>キーを同じ意味で比べたか：</b>先頭のゼロと型、組み合わせる項目の順を見ます。</li>
+      <li><b>重複の数え方が同じか：</b>同一キーの最初の行以外を超過行とし、欠損キーは除きます。</li>
+      <li><b>片側の明細を追えるか：</b>欠損を除く一意のキーで比べ、元側・先側の明細を開きます。</li>
+      <li><b>理由を原本で確かめたか：</b>推測で差を埋めず、調べる資料と次の作業を残します。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">5．人が判断する所</h2>
+    <ul>
+      <li>抽出条件、照合に使うキー、欠損とする範囲を決めます。</li>
+      <li>重複が正当な明細かを原本で調べ、残すか修正するかを決めます。</li>
+      <li>差を残したまま次の工程へ進むかを決めます。AIに理由を推測させません。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="download" aria-labelledby="download-title"><div class="wrap">
+    <h2 class="h2" id="download-title">6．ダウンロード</h2>
+    <p><a href="/assets/templates/count-check.csv" download>件数照合シートのひな形（CSV・Excelで開けます）</a>を保存できます。表の見出しと、架空の記入例と、空の行が入っています。社内で、そのまま使えます。</p>
+  </div></section>
+
+  <section class="sec" id="notes" aria-labelledby="notes-title"><div class="wrap">
+    <h2 class="h2" id="notes-title">7．記入するときの注意</h2>
+    <ul>
+      <li>数えて対象がなかった場合はゼロ、資料自体がない場合は「未提供」、資料に記述がない場合は「未記載」と区別します。</li>
+      <li>未照合の項目があれば状態は「未確認」とし、判明した差は理由欄に残します。「照合済」は件数・キーの照合だけを表します。</li>
+      <li>社内で自由に使ってよく、必要な列を足して構いません。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．当社に相談するとき</h2>
+    <p>この表を自社の仕事に合わせて作り変えたいときや、結果の確かめ方を一緒に決めたいときは、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/ways-to-count-values-in-a-worksheet" rel="noopener" target="_blank">ワークシート内の値の個数をカウントする方法</a>：セル・行・列のカウント手法</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/power-query/merge-queries-full-outer" rel="noopener" target="_blank">完全外部結合 - Power Query</a>：左右の表のすべての行を取り込む説明</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/table-reconciliation">複数の表の突合</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/column/pdf-table-to-excel">PDFの表をExcelへ変換した後の確認</a></li>
+      <li><a href="/ai/templates/notation-rules">表記ゆれの変換表（規則と保留の理由を残す）</a></li>
+      <li><a href="/ai/templates/handover-check">引き継ぎの受領確認表（資料・試行・残件）</a></li>
+      <li><a href="/ai/templates/grant-guideline-check">公募要領の確認表（原文と要約を分けて残す）</a></li>
+      <li><a href="/ai/templates">ひな形・確認表の一覧</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

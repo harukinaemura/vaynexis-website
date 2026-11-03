@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>追加注文の見積を元の注文と混ぜずに案件ごとに管理するには｜Vaynexis</title>
+  <meta name="description" content="追加注文の見積は、元の注文との関係を残しながら、追加する範囲と確認状況を分けて管理します。案件ごとに残す項目、元見積を置き換える修正との区別、送付済みの版と受注への引き継ぎ、AIに差分の下書きを任せる際の確認点を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="追加注文の見積を元の注文と混ぜずに案件ごとに管理するには｜Vaynexis">
+  <meta property="og:description" content="追加注文の見積は、元の注文との関係を残しながら、追加する範囲と確認状況を分けて管理します。案件ごとに残す項目、元見積を置き換える修正との区別、送付済みの版と受注への引き継ぎ、AIに差分の下書きを任せる際の確認点を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/additional-order-quote-per-project">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/additional-order-quote-per-project">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"追加注文の見積を元の注文と混ぜずに案件ごとに管理するには","description":"追加注文の見積は、元の注文との関係を残しながら、追加する範囲と確認状況を分けて管理します。案件ごとに残す項目、元見積を置き換える修正との区別、送付済みの版と受注への引き継ぎ、AIに差分の下書きを任せる際の確認点を整理します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/additional-order-quote-per-project"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"追加注文の見積を元の注文と混ぜずに案件ごとに管理するには","item":"https://vaynexis.jp/column/additional-order-quote-per-project"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">追加注文の見積を元の注文と混ぜずに案件ごとに管理するには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">追加注文の見積を元の注文と混ぜずに案件ごとに管理するには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>追加注文の見積は、同じ案件の中で元注文への参照を残し、追加する範囲を別の記録として管理します。元の見積を置き換える修正か、元の注文に加える追加分かを明記し、金額が示す範囲と相手の確認状況を揃えることが中心です。番号だけで関係を表さず、対象範囲を文章でも残すと追いやすくなります。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
+    <p>この記事は、追加注文の見積を元の注文と混ぜずに管理したい小さな会社の事務担当者が、案件ごとに元注文への参照と追加する範囲を残す方法を整理するためのものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">元の範囲と追加する範囲を言葉で分ける</a></li>
+      <li><a href="#s2">案件ごとの記録に元注文への参照を残す</a></li>
+      <li><a href="#s3">案件への紐付けと見積の枝番を使い分ける</a></li>
+      <li><a href="#s4">送った版と確認した範囲を揃えて引き継ぐ</a></li>
+      <li><a href="#s5">AIには範囲の差と確認事項の下書きを任せる</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．元の範囲と追加する範囲を言葉で分ける</h2>
+    <p>案内状の印刷を注文した後に、封入作業の見積を求める場面を考えます。追加の見積には「封入作業を追加」と書き、元の注文である印刷との関係を残します。「案内状の手配」という広い件名だけでは、印刷を含めた見積なのか、封入だけの見積なのかが読み取りにくいためです。</p>
+    <p>書類を作り始める前に、元注文に含む仕事、追加する仕事、今回も対象にしない仕事を言葉にします。元注文の記載が曖昧な箇所は、担当者への確認事項として残します。追加という依頼の呼び名だけで扱いを決めず、元の注文書や見積書の記載と照らし合わせる進め方です。</p>
+    <p>元の範囲を変更する話と、範囲を増やす話も区別します。作業の説明と見積の位置付けを揃えてから、金額を記入する流れにするとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．案件ごとの記録に元注文への参照を残す</h2>
+    <p>案件名を共通にし、その中で元注文と追加見積を別に追えるようにします。管理表では、見積を識別する欄と、元注文を参照する欄を分けて設けます。ファイルの置き場所にも同じ案件名を使い、記録から対応する書類を開ける形に揃えます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">記録する項目</th><th scope="col">確かめること</th><th scope="col">記入例</th></tr></thead><tbody><tr><td data-label="記録する項目">案件名</td><td data-label="確かめること">元注文と追加見積の所属先</td><td data-label="記入例">案内状の手配</td></tr><tr><td data-label="記録する項目">元注文の参照先</td><td data-label="確かめること">追加の前提になった書類</td><td data-label="記入例">印刷の注文書と元見積の保存先</td></tr><tr><td data-label="記録する項目">見積の位置付け</td><td data-label="確かめること">追加分か、元見積の置き換えか</td><td data-label="記入例">元注文を残した追加分</td></tr><tr><td data-label="記録する項目">対象範囲</td><td data-label="確かめること">今回加える仕事と含めない仕事</td><td data-label="記入例">封入を追加、印刷は対象外</td></tr><tr><td data-label="記録する項目">金額が示す範囲</td><td data-label="確かめること">追加分だけか、全体を含むか</td><td data-label="記入例">封入分のみ</td></tr><tr><td data-label="記録する項目">依頼と回答の記録</td><td data-label="確かめること">誰が何を依頼し、どう回答したか</td><td data-label="記入例">追加依頼と見積回答の保存先</td></tr><tr><td data-label="記録する項目">確認状況と担当者</td><td data-label="確かめること">何の確認を誰が待っているか</td><td data-label="記入例">対象範囲は確認済み、金額は回答待ち／担当者名</td></tr></tbody></table></div>
+    <p>表の項目は、製品の入力欄をそのまま写したものではありません。社内の記録を揃えるための整理です。書類の金額を見る前に、その金額がどこまでの仕事を含むかを確かめます。</p>
+    <p>全体を載せ直した見積と、追加分だけの見積を併記する際は、集計対象にする書類を担当者が定めます。双方をそのまま足す扱いを避け、元注文との関係と集計範囲を記録に残します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．案件への紐付けと見積の枝番を使い分ける</h2>
+    <p>freee販売では、案件詳細の画面下部で、その案件に紐づく業務データを確認・登録できます（確認日：2026年11月3日）。 freee販売の見積では、パターンごとに「枝番」が付与されます（確認日：2026年11月3日）。</p>
+    <p>ここからの運用は当社の整理です。案件への紐付けは関連する書類を探す手がかり、見積の識別は書類の違いを追う手がかりとして使います。追加分の管理には、それに加えて元注文との関係を言葉で残す運用を組み合わせます。</p>
+    <p>同じ追加見積の金額や内容を直すことと、さらに別の仕事を加えることは分けて記録します。前者は追加見積の修正、後者は追加する対象の増加として整理すると、何が変わったかを担当者が辿れます。</p>
+    <p>番号の規則に多くの意味を詰め込むより、見積の位置付けと対象範囲を記録の項目として持たせるとよいです。元注文をそのまま残すか、置き換えるかも文章で示し、修正前の書類への参照を残します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．送った版と確認した範囲を揃えて引き継ぐ</h2>
+    <p>freee販売では、登録済みの見積から受注を登録する際、見積登録時の入力データが引き継がれます（確認日：2026年11月3日）。</p>
+    <p>ここからの運用は当社の整理です。受注へ進める前には、相手が確認した見積と、担当者が引き継ごうとしている見積を照合します。案件名が同じという理由だけで選ばず、元注文への参照、追加する範囲、対象の金額を見ます。</p>
+    <p>送付済みの見積は、送付時の内容を辿れる形で残します。後から直した内容には、どこを変更したかと、送り直した書類への参照を付けます。担当者の手元にある最新版と、相手が確認している版を照合できることが大切です。</p>
+    <p>「確認済み」という記録にも、確認した範囲を添えます。作業範囲への回答と金額への回答は分けて残し、残っている問いと次の確認先を明らかにします。社内での確認と相手からの回答も混ぜず、それぞれの記録を参照できる形にします。</p>
+    <p>引き継ぎでは、追加分として採用する見積の参照先と、保留している事項を併せて渡します。受注後の担当者も、元注文を含む全体と今回の追加分を読み分けられる状態を目指します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．AIには範囲の差と確認事項の下書きを任せる</h2>
+    <p>AIに依頼する範囲は、社内で利用を認めた資料から、元注文と追加依頼の違いを整理する下書きまでとします。依頼する前に共有してよい情報を選び、取引先名などを伏せた見本で確認します。</p>
+    <p>指示には、元注文の範囲を追加分に混ぜないことと、不明な点を確認事項に分けることを含めます。</p>
+    <pre class="prompt">元注文の内容と追加依頼の内容を比較し、管理用のメモを下書きする。
+元注文の範囲、追加する範囲、今回の対象外を分ける。
+追加分だけの見積か、元見積を置き換える内容かは、資料の明記を根拠に整理する。
+資料に記載がない関係や、確認されていない金額は補わず、確認事項に分ける。
+各記載の根拠になった書類名と該当箇所を添える。</pre>
+    <p>出てきた下書きは、担当者が元の資料と照合します。特に、元注文の仕事が追加分へ重複して入っていないか、資料にない了承を補っていないかを確認する流れです。照合後の修正と確認者を残し、その内容をもとに管理表へ転記します。書類の選択と確認状況の確定は、人が行う範囲として扱います。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">元注文の参照先を追加見積の記録に記載したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元注文に含む範囲と今回追加する範囲を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">追加分か、元見積の置き換えかを明記したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見積金額が対象とする範囲と集計対象を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">送付した版と相手が確認した版を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象範囲と金額についての回答、保留事項、確認先を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">受注へ引き継ぐ見積と元注文の関係を担当者が確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.freee.co.jp/hc/ja/articles/10982913971865-%E6%A1%88%E4%BB%B6%E3%82%92%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B" rel="noopener" target="_blank">案件を登録する – freee ヘルプセンター</a>：案件詳細で紐づいた業務データを確認・登録できること</li>
+      <li><a href="https://support.freee.co.jp/hc/ja/articles/11125681042201-%E8%A6%8B%E7%A9%8D%E3%82%92%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B" rel="noopener" target="_blank">見積を登録する – freee ヘルプセンター</a>：見積のパターンごとに枝番が付与されること</li>
+      <li><a href="https://support.freee.co.jp/hc/ja/articles/11151036077081-%E5%8F%97%E6%B3%A8%E3%82%92%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B" rel="noopener" target="_blank">受注を登録する – freee ヘルプセンター</a>：登録済み見積からの受注登録で入力データが引き継がれること</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順｜重複・件数・金額の確認例</a></li>
+      <li><a href="/column/ai-invoice-draft">請求書の下書きをAIで作るときの確認。インボイスの記載事項と、消費税額の端数の照合</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理｜行の単位・重複基準・更新日の決め方</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策。件数・合計・重複の3つで照合する</a></li>
+      <li><a href="/column/task-listing">業務の洗い出し方。部署名ではなく「作業」で書く</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
