@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント｜Vaynexis</title>
+  <meta name="description" content="Excelの表で、手入力する欄と計算する欄を見分けたい事務担当者向けに、検索する範囲の決め方から計算欄の選択、背景色の付け方までを整理します。選び漏れを調べる順番や、色の意味を引き継ぐメモも紹介し、元の表を扱う前の確認につなげます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント｜Vaynexis">
+  <meta property="og:description" content="Excelの表で、手入力する欄と計算する欄を見分けたい事務担当者向けに、検索する範囲の決め方から計算欄の選択、背景色の付け方までを整理します。選び漏れを調べる順番や、色の意味を引き継ぐメモも紹介し、元の表を扱う前の確認につなげます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-select-formula-cells">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-select-formula-cells">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント","description":"Excelの表で、手入力する欄と計算する欄を見分けたい事務担当者向けに、検索する範囲の決め方から計算欄の選択、背景色の付け方までを整理します。選び漏れを調べる順番や、色の意味を引き継ぐメモも紹介し、元の表を扱う前の確認につなげます。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-select-formula-cells"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイ","item":"https://vaynexis.jp/column/excel-select-formula-cells"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイ</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>計算欄は、「ジャンプ」から「セル選択」を開き、数式を含むセルをまとめて選びます。 選択したセルは「塗りつぶしの色」で背景を変えられます。 対象範囲と選ばれた欄を照合し、色の意味を残すと引き継ぎにも使えます。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelの表で手入力する欄と計算する欄を見分けたい小さな会社の事務担当者が、数式のセルをまとめて選び、色の意味を引き継ぐまでの流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">公式ヘルプにある、数式のセルの選択と背景色の手順（Windows 版）</a></li>
+      <li><a href="#s2">確認範囲と使っている版をそろえる</a></li>
+      <li><a href="#s3">数式だけを選ぶ前後の進め方</a></li>
+      <li><a href="#s4">選んだ計算欄に背景色を付ける</a></li>
+      <li><a href="#s5">選び漏れは範囲・条件・中身の順に調べる</a></li>
+      <li><a href="#s6">引き継ぎには色の意味と対象範囲を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．公式ヘルプにある、数式のセルの選択と背景色の手順（Windows 版）</h2>
+    <p>Microsoft サポートの各ページは、適用先を次のように示しています。「Excel で特定の条件を満たすセルを検索して選択する」は Excel for Microsoft 365・Excel 2024・Excel 2021、「数式を含むセルを検索」は Excel 2024・Excel 2021・Excel 2019・Excel 2016、「Excel で特定のセルまたは範囲を選択する」「Excel でセルの背景色を追加または変更する」「数式の表示や印刷を行う」「Excel の数式の概要」は Excel for Microsoft 365・Excel 2024・Excel 2021・Excel 2019・Excel 2016 です。（確認日：2026-11-03）</p>
+    <p>「Excel で特定の条件を満たすセルを検索して選択する」のページは、Excel for Windows では、[ジャンプ] コマンド（Ctrl+G）を使うと、数式などの特定の種類のデータを含むすべてのセルをすばやく検索して選択できると説明しています。（確認日：2026-11-03）</p>
+    <p>「数式を含むセルを検索」のページは、1 つのセルを選択するとワークシート全体が検索され、範囲を選択するとその範囲のみが検索されると説明しています。（確認日：2026-11-03）</p>
+    <p>公式ヘルプにある、数式を含むセルをまとめて選ぶ操作は、次のとおりです。</p>
+    <ul>
+      <li>Ctrl+G（または F5）キーを押して、「ジャンプ」の画面を開きます。（確認日：2026-11-03）</li>
+      <li>「ジャンプ」の画面で「セル選択」をクリックし、目的のオプションをクリックします。（確認日：2026-11-03）</li>
+      <li>「数式」を選びます。「数式」の下のチェックボックスは、数式の種類を定義します。（確認日：2026-11-03）</li>
+      <li>「OK」をクリックします。（確認日：2026-11-03）</li>
+    </ul>
+    <p>ただし、この画面の呼び方は、ページによって異なります。「Excel で特定のセルまたは範囲を選択する」のページは「ジャンプ」の画面の [セル選択] をクリックするとしていますが、「Excel で特定の条件を満たすセルを検索して選択する」のページは [特殊] を選択するとしています。（確認日：2026-11-03）</p>
+    <p>同じ「特定の条件を満たすセルを検索して選択する」のページは、選択条件の [数式] を「数式を含むセル」と説明し、[数式] の下のチェックボックスは数式の種類を定義すると書いています。（確認日：2026-11-03）</p>
+    <p>背景色については、「Excel でセルの背景色を追加または変更する」のページの Windows 向けの手順で、強調表示するセルを選び、[ホーム] の [塗りつぶしの色] の横にある矢印を選ぶか Alt+H、H キーを押して、[テーマの色] または [標準の色] のパレットから目的の色を選ぶとされています。（確認日：2026-11-03）</p>
+    <p>「数式の表示や印刷を行う」のページは、ワークシートのセルには数式の結果が表示され、数式バーには数式が表示されると説明しています。（確認日：2026-11-03） 「Excel の数式の概要」のページは、数式バーに数式を表示するにはセルを選択する、としています。（確認日：2026-11-03）</p>
+    <p>ここからは当社の整理です。</p>
+    <p>この記事は、Windows 版の手順だけを扱います。Mac 版と Excel for the web で同じ手順が使えるかは確認していません。公式ヘルプの説明をもとにまとめたもので、実際の画面で操作を試した記録ではありません。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．確認範囲と使っている版をそろえる</h2>
+    <p>作業前には元のファイルを残し、複製した見本で、どの欄を目印の対象にするかを確かめるとよいです。すでに色に意味がある表は、その意味を担当者に確認してから変更の範囲を決めます。</p>
+    <p>検索の範囲は、セルをひとつだけ選ぶとワークシート全体、範囲を選ぶとその範囲だけです。まずは確認したい表の内側に絞ると、意図した欄と選ばれた欄を比べやすくなります。離れた場所の集計欄も対象にしたいか、明細欄だけでよいかを先に整理します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．数式だけを選ぶ前後の進め方</h2>
+    <p>操作は、確認したい表を選んだ状態から始めます。どの範囲を選んだかを控えておくと、やり直す際の基準になります。</p>
+    <p>すべての計算欄を目印にする作業では、種類を絞る意図がないのにチェックを外していないかを確認します。何を選ぶかを決める操作と、選ばれた場所が想定どおりかを確かめる作業を分けると、途中で判断が混ざりにくくなります。</p>
+    <p>操作メモは、画面の位置だけでなく、使った項目の名前も残す形がよいです。ページによって「セル選択」と「特殊」のように呼び方が違うため、引き継ぐ相手の画面と表示が合わないときは、いったん止めて、利用している版と公式ヘルプの適用先を照合します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．選んだ計算欄に背景色を付ける</h2>
+    <p>選んだセルには、目印の背景色を付けます。目印にする色は、既存の注意表示や承認済みの表示と区別できるものを担当者同士で決めます。色の種類を増やす前に、何を表す目印なのかを短い言葉にすると整理しやすくなります。</p>
+    <p>備品の購入明細を例にすると、色分けの方針は次のように置けます。これは表示の決め方の例です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">欄</th><th scope="col">見本での役割</th><th scope="col">表示の方針</th></tr></thead><tbody><tr><td data-label="欄">品名</td><td data-label="見本での役割">担当者が入力する欄</td><td data-label="表示の方針">今の背景を残す</td></tr><tr><td data-label="欄">数量</td><td data-label="見本での役割">担当者が入力する欄</td><td data-label="表示の方針">今の背景を残す</td></tr><tr><td data-label="欄">単価</td><td data-label="見本での役割">担当者が入力する欄</td><td data-label="表示の方針">今の背景を残す</td></tr><tr><td data-label="欄">明細金額</td><td data-label="見本での役割">数量と単価から求める欄</td><td data-label="表示の方針">計算欄の目印を付ける</td></tr><tr><td data-label="欄">合計金額</td><td data-label="見本での役割">明細を集計する欄</td><td data-label="表示の方針">計算欄の目印を付ける</td></tr></tbody></table></div>
+    <p>表全体を同じ色にする方針では、入力する欄との区別が付きません。選ばれた場所が意図した計算欄に当たるかを見てから、背景を変える流れにします。色付け後も、文字の読みやすさと元からあった目印の意味を確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．選び漏れは範囲・条件・中身の順に調べる</h2>
+    <p>想定より少ない欄しか選ばれなかったときは、まず対象にした表の端まで含めたかを見直します。次に、選択する種類を意図せず狭めていないかを確認し、それでも合わない欄は中身を調べます。見た目だけを頼りに、選ばれなかった場所まで同じ色を付け足すことは避けるとよいです。</p>
+    <p>上で挙げたとおり、選択条件の「数式」が対象にするのは、数式を含むセルです。計算欄として使う予定の場所でも、今入っている内容が予定どおりかを確かめる必要があります。選ばれなかった欄を、そのまま入力用と判断しないことが確認の要所です。</p>
+    <p>セルには計算結果、数式バーには数式が表示されるため、気になるセルを選択すると、数式バーでその数式を確認できます。金額の見た目が同じでも、欄の役割と中身が合っているかを見比べる姿勢が大切です。内容を直すかどうかは、表の管理者に確認してから判断します。</p>
+    <p>また、計算欄を見つける作業と、計算の意味や答えが合っているかを確認する作業は分けて記録します。今回は、対象にした範囲で計算欄の位置を見分けられるところまでを区切りにします。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．引き継ぎには色の意味と対象範囲を残す</h2>
+    <p>操作のあとに残すのは、色を付けたという報告だけでは足りません。どの表を対象にしたか、何の意味で色を選んだか、判断を保留した欄はどこかを合わせて記録します。確認した範囲が分かれば、次の担当者も続きの作業を決めやすくなります。</p>
+    <p>引き継ぎメモは、次のように短くまとめられます。</p>
+    <pre class="prompt">対象：今回確認した明細表の内側
+目印の意味：計算に使う欄として位置を確認した箇所
+入力する欄：元の背景を残す方針
+保留：欄の役割と中身が合わない箇所は管理者へ確認</pre>
+    <p>目印を付けたという記録と、内容まで確認済みという記録を混同しないことが大切です。見本での確認が済んだら、保留箇所を引き継いだうえで、元の表に同じ方針を適用してよいかを管理者と決めます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">元のファイルを残し、複製した見本で確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象にする表や範囲を先に決め、その範囲を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">選択する種類を、意図せず絞っていないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">想定した計算欄と、実際に選ばれた場所を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">選ばれなかった欄の中身を確かめ、判断を保留した箇所を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">目印の色が既存の表示と混同されないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">色の意味と確認した範囲を、次の担当者へ伝えたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/find-and-select-cells-that-meet-specific-conditions-in-excel" rel="noopener" target="_blank">Excel で特定の条件を満たすセルを検索して選択する</a>：Excel for Windows の [ジャンプ] コマンド、数式の選択、[数式] の意味、適用先（Excel for</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/find-cells-that-contain-formulas" rel="noopener" target="_blank">数式を含むセルを検索</a>：範囲の違い（1つのセルならシート全体）、選択の確定、適用先（Excel 2024・2021・2019・2016）</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/select-specific-cells-or-ranges-in-excel" rel="noopener" target="_blank">Excel で特定のセルまたは範囲を選択する</a>：ジャンプの起動とセル選択</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/add-or-change-the-background-color-of-cells-in-excel" rel="noopener" target="_blank">Excel でセルの背景色を追加または変更する</a>：選択したセルの背景色の変更（Windows 向けの手順：塗りつぶしの色の矢印、Alt+H、H）</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/show-and-print-formulas" rel="noopener" target="_blank">数式の表示や印刷を行う</a>：セルの表示結果と数式バーの違い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/overview-of-formulas-in-excel" rel="noopener" target="_blank">Excel の数式の概要</a>：選択したセルの数式を数式バーで確認する方法</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/name-variants-excel">エクセルで会社名・住所の表記ゆれを統一する</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理</a></li>
+      <li><a href="/column/double-check-design">ダブルチェックのやり方</a></li>
+      <li><a href="/column/handover-document">引き継ぎ書の作り方</a></li>
+      <li><a href="/column/merge-notice-date-amount-check">差し込み通知書の日付や金額が元データの表示と違うのはなぜか</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

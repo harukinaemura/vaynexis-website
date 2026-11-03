@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>差し込み通知書の日付や金額が元データの表示と違うのはなぜか｜Vaynexis</title>
+  <meta name="description" content="差し込み通知書の日付や金額が元表と違うときに、元の値、表の表示形式、出力文面を分けて確かめる方法を整理します。見た目だけの差と内容の誤りを切り分ける確認表、修正前後に残す記録、AIに下書きを頼む範囲を紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="差し込み通知書の日付や金額が元データの表示と違うのはなぜか｜Vaynexis">
+  <meta property="og:description" content="差し込み通知書の日付や金額が元表と違うときに、元の値、表の表示形式、出力文面を分けて確かめる方法を整理します。見た目だけの差と内容の誤りを切り分ける確認表、修正前後に残す記録、AIに下書きを頼む範囲を紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/merge-notice-date-amount-check">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/merge-notice-date-amount-check">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"差し込み通知書の日付や金額が元データの表示と違うのはなぜか","description":"差し込み通知書の日付や金額が元表と違うときに、元の値、表の表示形式、出力文面を分けて確かめる方法を整理します。見た目だけの差と内容の誤りを切り分ける確認表、修正前後に残す記録、AIに下書きを頼む範囲を紹介します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/merge-notice-date-amount-check"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"差し込み通知書の日付や金額が元データの表示と違うのはなぜか","item":"https://vaynexis.jp/column/merge-notice-date-amount-check"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">差し込み通知書の日付や金額が元データの表示と違うのはなぜか</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">差し込み通知書の日付や金額が元データの表示と違うのはなぜか</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>差し込み通知書の日付や金額が元表と違って見える原因の一つとして、Microsoft の資料は、データソースで書式を設定しても、データをメイン文書に差し込むときにその書式が保持されないと説明しています。ただし、この資料は適用先に Microsoft Word 2010 とだけ記載されており、OLEDB で Access または Excel のデータソースに接続した差し込み印刷を扱っています。お使いの環境に当てはまるかは、この記事では確かめていません。当社の整理では、元の値、表の表示形式、出力文面を分けて照合し、値の誤りか見せ方の差かを確かめます。修正箇所と確認した出力を残してから、送付の判断へ進むとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
+    <p>この記事は、差し込み印刷で作る通知書の日付や金額が元の表と違って見える場面に困っている小さな会社の事務担当者が、元の値・表の表示形式・出力文面を分けて確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">元の値と、表で見える形を分ける</a></li>
+      <li><a href="#s2">通知日が読みにくい場面で、照合の軸を決める</a></li>
+      <li><a href="#s3">見た目の差と、内容の差で確認先を分ける</a></li>
+      <li><a href="#s4">差し込み結果は、記号と前後の文章まで読む</a></li>
+      <li><a href="#s5">AIには差の説明案を頼み、確定は人が担う</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．元の値と、表で見える形を分ける</h2>
+    <p>公式資料の確認日：2026-11-03（以下の製品説明に共通）。各ページの最終更新日は確認できていません。</p>
+    <p>Microsoft の Excel for Mac 向けの案内では、数値の表示形式は、実際の数値を変えずに日付や時刻などの見た目を変えるものとされています。Excelの通貨形式では、通貨記号を付けて金銭を表す値を表示します。</p>
+    <p>差し込み印刷の側について、先に挙げた Microsoft の資料は、回避策の一つとして、メイン文書の差し込みフィールドに書式スイッチを付けて結果の書式を設定する方法を示しています。操作の詳しい手順はこの記事では扱わず、公式の資料で確かめます。</p>
+    <p>ここからは当社の整理です。表の見た目を正解の基準にする前に、通知で伝える内容を定めます。日付なら、通知日なのか対象日なのか、金額なら何の金額なのかを項目名で区別します。そのうえで、元の値と通知に載せたい表記を別に記録すると、修正する場所を考えやすくなります。</p>
+    <p>「表と違う」という報告だけでは、日付そのものが違うのか、年月日の区切りが違うのかが分かりません。金額も、値の相違と、通貨記号や桁区切りの有無を分けて扱います。見た目をそろえる作業と、内容を訂正する作業を混ぜないための整理です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．通知日が読みにくい場面で、照合の軸を決める</h2>
+    <p>架空の更新通知で、担当者が元表と通知文を見比べ、日付の表し方と金額の区切りに違いを見つけた場面を考えます。まず元表と出力を残し、違って見える箇所を書き出します。見つけた箇所をその場で書き換える前に、参照した項目と伝える内容を確認する進め方です。</p>
+    <p>照合には、元の値、表での見え方、通知文での見え方を使います。通知日を対象日の欄と比べていないか、案内する金額と別の金額を見ていないかも、項目名に戻って確かめます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">対象</th><th scope="col">元の値で確かめること</th><th scope="col">表の表示形式で確かめること</th><th scope="col">出力文面で確かめること・残す記録</th></tr></thead><tbody><tr><td data-label="対象">通知日</td><td data-label="元の値で確かめること">承認された通知日を参照しているか</td><td data-label="表の表示形式で確かめること">年月日の並びと区切りは何か</td><td data-label="出力文面で確かめること・残す記録">意図した日付として読めるか。元の項目名と出力の該当箇所を残す</td></tr><tr><td data-label="対象">対象日</td><td data-label="元の値で確かめること">通知日と取り違えていないか</td><td data-label="表の表示形式で確かめること">通知日と異なる表記を使う意図はあるか</td><td data-label="出力文面で確かめること・残す記録">前後の文と合わせて対象日だと分かるか。表記の基準を残す</td></tr><tr><td data-label="対象">案内する金額</td><td data-label="元の値で確かめること">参照する金額の項目は合っているか</td><td data-label="表の表示形式で確かめること">通貨記号、桁区切り、小数部分の見せ方は何か</td><td data-label="出力文面で確かめること・残す記録">承認した金額と意味が一致するか。差がある箇所と修正前の状態を残す</td></tr><tr><td data-label="対象">単位や補足</td><td data-label="元の値で確かめること">元の項目が何を表すか</td><td data-label="表の表示形式で確かめること">表の見出しに単位が含まれているか</td><td data-label="出力文面で確かめること・残す記録">本文だけでも意味が伝わるか。単位を置く場所を残す</td></tr></tbody></table></div>
+    <p>表の記録は、違いを説明するためのものです。金額をどう確定するかや、通知内容を承認するかは、確認担当者の判断として別に残します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．見た目の差と、内容の差で確認先を分ける</h2>
+    <p>参照する項目や元の値に相違が見つかったものは、元データの管理担当者への確認に回します。どの資料を根拠に直すかが決まるまでは、通知文の数値だけを合わせる対応は保留にするとよいです。元データの誤りを、通知文だけの修正で覆わないためです。</p>
+    <p>一方、値と項目の対応を確認でき、違いが表し方にあると整理したものは、通知文の表記を管理する担当者と確認します。年月日の並び、通貨記号、桁区切り、単位などを、承認済みの見本と照合する進め方です。表と同じ見た目に戻すだけでなく、受け取る人に何を伝えるかを基準にします。</p>
+    <p>判断がつかない箇所には、「表示形式」と原因を先に書かず、見えた違いをそのまま残します。参照項目、元の値、通知文の該当箇所があれば、次の担当者も確認を引き継ぎやすくなります。</p>
+    <p>修正の記録には、直した場所と理由、確認した人、確認後の出力を含めます。元表を変えたのか、通知文の表記を変えたのかが追える書き方にしておくと、後で同じ通知を作り直す際の手がかりになります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．差し込み結果は、記号と前後の文章まで読む</h2>
+    <p>Microsoftの準備手順では、通貨とパーセンテージの値を例に、差し込みフィールドの前後に適切な記号があるか確かめるよう示しています。Wordの公式手順には、レコードを切り替えながら差し込み結果を確認する流れがあります。</p>
+    <p>当社の整理では、修正後は日付や金額の部分だけでなく、その前後の言葉まで続けて読みます。何の日付か、どの金額か、単位がどこにあるかを、通知文として確認するためです。単位が見出し側にしかないものは、通知本文の中でも意味が伝わるかを見ます。</p>
+    <p>確認する見本には、表記の違いが出た項目や、補足が必要な項目を含めるとよいです。直した箇所を見直した後は、その出力が確認対象の元データから作られたものかも照合します。修正前に作った出力と、確認後に送る出力を取り違えないよう、保存名や確認記録で区別する進め方です。</p>
+    <p>確認者には「見た目が合ったか」だけでなく、「伝える内容が合ったか」を記録してもらいます。送付を保留した項目があれば、回答する担当者と再確認する対象を残し、承認済みの出力と区別して管理します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．AIには差の説明案を頼み、確定は人が担う</h2>
+    <p>AIに任せる範囲は、照合用の材料から違いの説明案と確認待ちを作るところまでにします。元の表と通知文の写し、承認済みの表記方針を材料にし、元データの変更や送付の判断は人の作業として残す進め方です。材料に個人名や取引先名などが含まれる場合は、AIに渡してよい範囲を社内の取り決めで先に確かめ、必要な項目だけにします。</p>
+    <p>依頼文は、次のように範囲を絞れます。</p>
+    <pre class="prompt">目的：通知文と元表の照合メモの下書きを作る。
+材料：元の値、表での表示、通知文の該当箇所、承認済みの表記方針。
+出力：違いが見える箇所、確認する項目、担当者への質問案。
+制約：元表と通知文は変更しない。欠けた値は補わない。
+表示だけの差か内容の誤りか判断できないものは、理由とともに確認待ちに残す。</pre>
+    <p>人が確かめる中心は、元の項目を取り違えていないか、説明案が材料と合うか、直した後の通知文が承認した内容になっているかです。もっともらしい原因名を付けることより、元の値と出力をたどれるメモを残すことを優先します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">通知で伝える日付と金額について、参照する項目を確定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の値と、表で見えている表示形式を分けて確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">出力文面との差を、日付の並び、桁区切り、通貨記号、単位に分けて記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">内容の誤りと表示上の差を区別し、判断待ちを担当者に引き継いだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">修正した場所と理由、確認者、確認後の出力を残したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">送付する出力が確認済みのものか、前後の文章も含めて照合したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/display-dates-times-currency-fractions-or-percentages" rel="noopener" target="_blank">日付、時刻、通貨、小数、またはパーセンテージを表示する</a>：実際の数値と見た目の区別。適用先は Mac 版</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/available-number-formats-in-excel" rel="noopener" target="_blank">Excel で利用可能な表示形式</a>：通貨形式での通貨記号の表示</li>
+      <li><a href="https://support.microsoft.com/en-us/word/date-phone-number-and-currency-fields-are-merged-incorrectly-when-you-use-an-access-or-excel-data-so" rel="noopener" target="_blank">Date, Phone Number, and Currency fields are merged incorrectly when yo</a>：元データの書式が差し込み先で保持されない原因。適用先に Microsoft Word 2010 と記載された旧版向け資料</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/prepare-your-excel-data-source-for-a-word-mail-merge" rel="noopener" target="_blank">Word 差し込み印刷用に、Excel データ ソースを準備する</a>：差し込みフィールド前後の記号の確認</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/use-mail-merge-to-personalize-letters" rel="noopener" target="_blank">差し込み印刷を使って手紙を個人用にカスタマイズする</a>：レコードを切り替えた差し込み結果の確認</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/column/double-check-design">ダブルチェックのやり方</a></li>
+      <li><a href="/column/name-variants-excel">エクセルで会社名・住所の表記ゆれを統一する</a></li>
+      <li><a href="/ai/tasks/flyer-dm">チラシ・DM・挨拶状の文面と差し込み印刷</a></li>
+      <li><a href="/column/excel-budget-usage-rate">Excelで予算に対する使用率を計算し百分率で表示する手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

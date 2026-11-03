@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで予算に対する使用率を計算し百分率で表示する手順｜Vaynexis</title>
+  <meta name="description" content="予算に対してどれだけ使ったかを割合で示すために、使用額と予算額の置き方、割り算の入力、百分率への表示変更を順に整理します。短い表で計算と見え方を確認し、金額の単位のそろえ方や、表示が大きすぎる場合、予算額が未入力の場合の確認点も扱います。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで予算に対する使用率を計算し百分率で表示する手順｜Vaynexis">
+  <meta property="og:description" content="予算に対してどれだけ使ったかを割合で示すために、使用額と予算額の置き方、割り算の入力、百分率への表示変更を順に整理します。短い表で計算と見え方を確認し、金額の単位のそろえ方や、表示が大きすぎる場合、予算額が未入力の場合の確認点も扱います。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-budget-usage-rate">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-budget-usage-rate">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで予算に対する使用率を計算し百分率で表示する手順","description":"予算に対してどれだけ使ったかを割合で示すために、使用額と予算額の置き方、割り算の入力、百分率への表示変更を順に整理します。短い表で計算と見え方を確認し、金額の単位のそろえ方や、表示が大きすぎる場合、予算額が未入力の場合の確認点も扱います。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-budget-usage-rate"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで予算に対する使用率を計算し百分率で表示する手順","item":"https://vaynexis.jp/column/excel-budget-usage-rate"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで予算に対する使用率を計算し百分率で表示する手順</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで予算に対する使用率を計算し百分率で表示する手順</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>予算に対する使用率は、使用額を予算額で割り、求めた割合を百分率の表示に切り替えて示します。事務の表では、分母にする予算額の範囲と、使用額の集計範囲をそろえることが出発点です。計算する欄と金額を入力する欄を分けると、引き継ぐ人も式の意味を追いやすくなります。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelで予算の使用状況を管理する小さな会社の事務担当者が、使用額を予算額で割って百分率で表示し、結果が合っているかを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">使用額を予算額で割り、表示を切り替える</a></li>
+      <li><a href="#s2">予算表では、計算の前に範囲と単位をそろえる</a></li>
+      <li><a href="#s3">金額の欄と、割合を計算する欄を分ける</a></li>
+      <li><a href="#s4">小さな予算表で計算結果を見る</a></li>
+      <li><a href="#s5">表示が合わないときは、式と元の金額を分けて見る</a></li>
+      <li><a href="#s6">引き継ぎには、式の意味と入力元を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．使用額を予算額で割り、表示を切り替える</h2>
+    <p>Microsoft サポートのページ「Excel で数値をパーセンテージとして書式設定する」と「パーセンテージを計算する」は、Excel for Microsoft 365、Excel 2024、Excel 2021（どれも Mac 版を含む）と、Excel 2019、Excel 2016 を適用先に挙げています。（確認日：2026-11-03）</p>
+    <p>「書式設定」のページは、パーセンテージを「値 / 合計 = パーセンテージ」という等式で計算すると説明しています。たとえば、セルに「=10/100」という数式があれば計算結果は 0.1 になり、その 0.1 の表示形式をパーセンテージに設定すると 10% と表示されます。（確認日：2026-11-03）</p>
+    <p>数式には、金額を直接書く代わりに、その金額が入っているセルを選び、選んだセルの間に演算子を入力できます。入力した数式は Enter キーで確定します。（確認日：2026-11-03）</p>
+    <p>「書式設定」のページの例では、50 点満点のテストで 42 点を取った学生の正解率を求めるために、B2 に正解した得点、C2 に満点の数値が入っている場合、D2 に「=B2/C2」と入力します。（確認日：2026-11-03）</p>
+    <p>選択したセルにパーセンテージの表示形式をすばやく適用するには、[ホーム] タブの [数値] グループにあるパーセンテージ スタイルをクリックするか、Ctrl+Shift+% を押します。表示する小数点以下の桁数を決めるときは、[セルの書式設定] ウィンドウの [カテゴリ] リストで [パーセンテージ] を選び、[小数点以下の桁数] ボックスに桁数を入力します（このウィンドウの開き方は Windows と Mac で異なります）。（確認日：2026-11-03）</p>
+    <p>「パーセンテージを計算する」のページの例では、全 50 問のテストで 42 問正解したとき、空白のセルに「=42/50」と入力すると結果は 0.84 になり、その結果のセルを選んで [ホーム] タブでパーセント スタイルを選ぶと 84.00% となります。表示される小数点以下の桁数は、変更できるとも書かれています。（確認日：2026-11-03）</p>
+    <p>「書式設定」のページは、すでに数値が入っているセルにパーセンテージの表示形式を適用すると、Excel はその数値に 100 を掛けて表示するとしています。たとえば、セルに数値 10 が含まれていると、1000.00% と表示されます。正確に表示するには、表示形式をパーセンテージにする前に、その数値がパーセンテージ値として計算されていて、小数点付きで表示されていることを確認する、とされています。（確認日：2026-11-03）</p>
+    <p>「エラー値 #DIV/0! を修正する方法」のページは、0 や空白のセルを数式で参照したときなどに、Excel で #DIV/0! エラーが表示されると説明しています。（確認日：2026-11-03） 解決の方法として、数式の除数がゼロまたは空白セルでないことを確認することが挙げられています。（確認日：2026-11-03） また、IFERROR 関数と IF(ISERROR()) の方法は、どちらも #DIV/0! だけでなくすべてのエラーを抑制するため、エラー処理を適用する前に数式が適切に動作することを確認する必要がある、と注意しています。（確認日：2026-11-03）</p>
+    <p>Mac 版の Excel（Excel for Microsoft 365 for Mac、Excel 2024 for Mac、Excel 2021 for Mac）を適用先とするページ「日付、時刻、通貨、小数、またはパーセンテージを表示する」には、表示形式を設定しても、計算の実行時に使用されるセルの値には影響せず、実際の値は数式バーに表示されると書かれています。（確認日：2026-11-03） Windows 版の Excel について同じことを説明するページは、この記事では確認していません。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>以下は、上の公式ヘルプの説明を予算の表に当てはめた手順案です。公式ヘルプが予算の表の例を示しているわけではなく、実際のブックで操作を試した記録でもありません。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．予算表では、計算の前に範囲と単位をそろえる</h2>
+    <p>まず、何の予算に対する割合なのかを表の見出しに残します。費目別の予算を見るのか、まとめた予算を見るのかを決め、その範囲に対応する使用額を並べる形です。予算と使用額の集計期間が食い違っていないかも、入力前に確認するとよいです。</p>
+    <p>分母は、割る側に置く基準の金額を指します。ここでは予算額を基準とし、使用額がどの程度を占めるかを求める方針です。「予算額」と「使用額」の列名を省かずに書いておくと、後から式を見直す手がかりになります。</p>
+    <p>金額の単位は、予算額と使用額でそろえます。元の資料と表の単位が異なる場合は、そろえた後の金額を入力する運用にします。入力した人だけが単位を覚えている状態を避け、見出しにも単位を添えるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．金額の欄と、割合を計算する欄を分ける</h2>
+    <p>下表の配置では、使用額をB2、予算額をC2に入れ、使用率を表示するD2に「=B2/C2」と入力します。公式ヘルプの例（得点をB2、満点をC2に入れる並び）に合わせた配置です。先に列の意味を決めてから、使用率を求める欄へ式を入れる流れです。金額が入っている欄に上書きすることを避け、入力欄と計算欄を区別しておきます。引き継ぎ用の説明では、「使用額を予算額で割る」という式の意味も添えるとよいです。</p>
+    <p>表示を百分率に切り替える対象は、割合を計算した結果の欄です。金額を入力した欄までまとめて選ばず、どの列の表示を変えているかを確かめながら進めます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．小さな予算表で計算結果を見る</h2>
+    <p>下表は、公式ヘルプの計算例の数字（42と50）を借りて、予算表の形に当てはめた配置です。金額の欄は、同じ単位で入力する形にしています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">A列：費目</th><th scope="col">B列：使用額（円）</th><th scope="col">C列：予算額（円）</th><th scope="col">D列：使用率</th></tr></thead><tbody><tr><td data-label="A列：費目">説明用の費目</td><td data-label="B列：使用額（円）">42</td><td data-label="C列：予算額（円）">50</td><td data-label="D列：使用率">84.00%</td></tr></tbody></table></div>
+    <p>表の数値と計算結果は、説明用の例です。D列の84.00%は、小数点以下を2桁表示した場合の見え方で、桁数は設定で変わります。</p>
+    <p>この配置は、使用額と予算額の関係を見るための最小限の形です。日々の表へ移すときは、費目の名称を対象の資料と合わせておきます。表の見た目だけを移すのではなく、基準にした金額がどの資料のどの範囲なのかも残すと、確認を引き継ぎやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．表示が合わないときは、式と元の金額を分けて見る</h2>
+    <p>まず数式を見直し、その後に金額の入力状況を確かめる順序です。</p>
+    <h3 class="h3">表示が大きすぎる場合</h3>
+    <p>上で挙げたとおり、数値 10 が入っているセルにパーセンテージの表示形式を適用すると、1000.00% と表示されます。当社の確認手順では、表示を変更する前に割合の計算が済んでいるか、式に不要な掛け算を足していないかを先に見ます。予算額と使用額の入力欄まで、表示を変更していないかも確認対象です。</p>
+    <h3 class="h3">予算額が未入力の場合</h3>
+    <p>予算額のセルがゼロまたは空白だと、割り算で「#DIV/0!」が出る原因になります。当社の整理では、エラーを見えなくする設定を加える前に、予算額の入力状況を調べます。金額が未入力なのか、参照する欄を取り違えたのかを区別し、元の表へ戻って確認する方が、修正の理由を残しやすくなります。</p>
+    <h3 class="h3">見える桁と計算に使う値を混同しない</h3>
+    <p>上で挙げた Mac 版のページでは、表示形式を変えても、計算に使われるセルの値自体には影響しないとされています。当社の整理では、見た目を整える作業と、入力した金額を直す作業を分けます。表示だけを直して作業を終えず、元の金額と式の向きも併せて確かめる運用です。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．引き継ぎには、式の意味と入力元を残す</h2>
+    <p>使用率だけを切り出して渡すより、予算額と使用額を並べ、どの金額から計算したかをたどれる形にするとよいです。</p>
+    <p>計算の欄を変更したときは、列名との対応も見直します。入力元の資料、集計の範囲、金額の単位を表の近くへ残しておくと、次の担当者も同じ基準で確認できます。表示された割合から予算の配分や支出の是非を判断する手順は、この記事では扱いません。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">基準にした予算額の範囲を明記したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">予算額と使用額の集計期間をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">金額の単位を見出しに残し、入力値もそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">割られる側が使用額、割る側が予算額になっているかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表示を変える対象を、使用率の計算欄に絞ったか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">予算額の入力状況と、式が参照する欄を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">引き継ぐ人が入力元の資料をたどれる形にしたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/format-numbers-as-percentages-in-excel" rel="noopener" target="_blank">Excel で数値をパーセンテージとして書式設定する</a>：適用先、値/合計の等式、「=B2/C2」の例、Ctrl+Shift+%・パーセンテージ スタイル・桁数、数値10が100</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/calculate-percentages" rel="noopener" target="_blank">パーセンテージを計算する</a>：適用先、「=42/50」の結果0.84と84.00%の表示、桁数を変更できること</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/create-a-simple-formula" rel="noopener" target="_blank">簡単な数式を作成する</a>：金額を含むセルの指定、数式の確定</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/how-to-correct-a-div-0-error" rel="noopener" target="_blank">エラー値 #DIV/0! を修正する方法</a>：分母のゼロ・空白、エラー抑制の注意点</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/display-dates-times-currency-fractions-or-percentages" rel="noopener" target="_blank">日付、時刻、通貨、小数、またはパーセンテージを表示する</a>：表示形式と計算に使う値の違い（適用先はExcel for Microsoft 365 for Mac・Excel 202</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/column/pdf-table-to-excel">PDFの表をExcelへ変換した後の確認</a></li>
+      <li><a href="/column/handover-document">引き継ぎ書の作り方</a></li>
+      <li><a href="/column/excel-select-formula-cells">Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
