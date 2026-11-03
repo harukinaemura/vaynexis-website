@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社内ルール集の下書きをAIで作る手順｜決まりの矛盾と例外の漏れを確かめる｜Vaynexis</title>
+  <meta name="description" content="散らばった社内の決まりをAIでルール集の下書きにまとめる仕事です。元のメモを残し、誰に・いつ・何を求める決まりかを整理します。承認の条件が食い違う箇所や例外の記載漏れを確認表に分け、採用する内容と改訂の扱いは人が判断する進め方を紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="社内ルール集の下書きをAIで作る手順｜決まりの矛盾と例外の漏れを確かめる｜Vaynexis">
+  <meta property="og:description" content="散らばった社内の決まりをAIでルール集の下書きにまとめる仕事です。元のメモを残し、誰に・いつ・何を求める決まりかを整理します。承認の条件が食い違う箇所や例外の記載漏れを確認表に分け、採用する内容と改訂の扱いは人が判断する進め方を紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/internal-rules">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/internal-rules">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"社内ルール集の下書きをAIで作る手順。決まりの矛盾と例外の漏れを確かめる","description":"散らばった社内の決まりをAIでルール集の下書きにまとめる仕事です。元のメモを残し、誰に・いつ・何を求める決まりかを整理します。承認の条件が食い違う箇所や例外の記載漏れを確認表に分け、採用する内容と改訂の扱いは人が判断する進め方を紹介します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/internal-rules"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"社内ルール集（10頁程度）","item":"https://vaynexis.jp/ai/tasks/internal-rules"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">社内ルール集（10頁程度）</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">社内ルール集の下書きをAIで作る手順。決まりの矛盾と例外の漏れを確かめる</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、資料に書かれた決まりの抜き出しと、社内ルール集の下書きを任せます。人が確かめる中心は、ルール同士の矛盾と例外の漏れです。食い違う記述をAIに選ばせず、出所を並べた確認表に残し、採用する決まりは責任者が判断します。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこのページの最後）</p>
+    <p>総務や管理の担当が社内の決まりをまとめる際、共有文書や引き継ぎメモに同じ話題が散らばっていることがあります。文章を読みやすくまとめる前に、対象者や適用する場面が同じか、古い決まりが混じっていないかを確かめる必要があります。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（社内ルール集（10頁程度））</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（社内ルール集（10頁程度））</h2>
+    <p>参考資料では、厚生労働省が「モデル就業規則」の規程例や解説を参考に、各事業場の実情に応じた就業規則を作成・届出するよう案内しています。 また、Wordでは変更の追跡がオンのとき、削除箇所は取り消し線、追加箇所は下線で示されます（確認日：2026-11-03）。 ここからは当社の整理です。 元の文書を「誰が・いつ・何を・例外は」に分け、同じ話題の決まりを並べる下書きを作ります。各項目に元の文書名と該当箇所を付け、矛盾の候補や記載のない例外は本文へ補わず、確認表へ分ける進め方です。 ここで扱う仕事は、手元の決まりを整理する下書きです。労務に関わる内容や作成・変更の扱いは、社会保険労務士などの専門家に確認します。改訂箇所の表示とは別に、決まり同士の内容も照らし合わせる方針です。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>整理対象の文書やメモの写しと、文書名・該当箇所</li>
+      <li>現行・旧版の区別、施行日、承認者が分かる記録</li>
+      <li>上位の決まりや別紙、優先関係を責任者が確認した記録</li>
+      <li>対象者、用途、載せる範囲と、共有してよい情報の範囲</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>出所を付けた決まりの一覧と、話題別の構成案</li>
+      <li>資料に書かれた内容だけで作るルール集の下書き</li>
+      <li>矛盾の候補、例外の記載漏れ、版が不明な箇所の確認表</li>
+      <li>元の記述から言い換えた箇所と、残した疑問の一覧</li>
+    </ul>
+    <p>決まりの一覧には、内容と確認待ちの理由を並べます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">メモ</th><th scope="col">決まりの抜き出し</th><th scope="col">確認待ちの理由</th></tr></thead><tbody><tr><td data-label="メモ">甲</td><td data-label="決まりの抜き出し">経費は金額にかかわらず事前承認</td><td data-label="確認待ちの理由">乙の少額経費の扱いと食い違う</td></tr><tr><td data-label="メモ">乙</td><td data-label="決まりの抜き出し">少額経費は事後報告</td><td data-label="確認待ちの理由">少額の範囲と緊急時の例外が書かれていない</td></tr><tr><td data-label="メモ">丙</td><td data-label="決まりの抜き出し">経費は管理担当へ事後報告</td><td data-label="確認待ちの理由">旧版のため、現行の決まりと分けて扱う</td></tr></tbody></table></div>
+
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>元の資料を残す：</b>AIには写しを渡し、元のデータを直接書き換えさせません。現行か不明な資料は、確定した決まりと分けます。</li>
+      <li><b>見本で抜き出しを試す：</b>短いメモで、対象者・場面・行為・例外・出所が残るかを確かめます。否定や但し書きが抜ける場合は、指示を直して再確認するとよいです。</li>
+      <li><b>話題をそろえて比べる：</b>同じ経費や備品の決まりを並べ、対象者と適用場面も照合します。似た表現というだけで同じ意味にまとめない進め方です。</li>
+      <li><b>矛盾と空欄を分ける：</b>記述が食い違う箇所と、例外が書かれていない箇所を別々に出します。例外の記載がないことを「例外を認めない」と読み替えない扱いにします。</li>
+      <li><b>判断を受けて下書きにする：</b>責任者が採用する決まりや資料の優先関係を決め、その記録に沿って構成を整えます。未決の項目は確定本文に混ぜず、確認表に残す形です。</li>
+      <li><b>原文と改訂箇所を照合する：</b>下書きの追加・削除・言い換えを原文と比べます。承認された版と配布先は人が確かめ、旧版の扱いも決めます。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>ルール同士の矛盾、例外の漏れ</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">ルール同士の矛盾、例外の漏れ</td><td data-label="見方">同じ対象・場面の決まりを並べ、食い違いと例外の空欄を見る</td><td data-label="見落とすと">場面によって異なる案内が残ります</td></tr><tr><td data-label="確かめること">出所と原文</td><td data-label="見方">文書名・該当箇所から元の文に戻り、但し書きまで読む</td><td data-label="見落とすと">要約で適用範囲が変わります</td></tr><tr><td data-label="確かめること">対象者と用語</td><td data-label="見方">部門や役割の違い、同じ語の意味を照合する</td><td data-label="見落とすと">別の対象向けの決まりが混ざります</td></tr><tr><td data-label="確かめること">資料の優先関係</td><td data-label="見方">本文・別紙・上位の決まりの関係を責任者の記録と比べる</td><td data-label="見落とすと">採用する根拠が曖昧になります</td></tr><tr><td data-label="確かめること">例外の扱い</td><td data-label="見方">適用場面、判断者、連絡方法が原文にあるかを見る</td><td data-label="見落とすと">原文にない扱いが決まりとして載ります</td></tr><tr><td data-label="確かめること">施行日・版・承認者</td><td data-label="見方">下書きと採用した資料の記録を照合する</td><td data-label="見落とすと">旧版や未承認の記述が配布されます</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>食い違う決まりの採否と、上位の決まりや別紙との優先関係</li>
+      <li>例外を設けるか、その適用範囲と判断者をどう定めるか</li>
+      <li>労務など専門家に確認する内容と、その回答の反映</li>
+      <li>最終承認、施行日、配布先、旧版の保管と利用停止の扱い</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>決まりを補う依頼にせず、原文の整理と確認待ちの抽出を依頼します。</p>
+    <pre class="prompt">社内ルール集の下書きに向け、次のメモを整理する。
+甲（現行）：経費は金額にかかわらず部門責任者の事前承認を受ける。
+乙（版の記載なし）：少額経費は担当者の事後報告とする。少額の範囲、緊急時の例外は記載なし。
+丙（旧版）：経費は管理担当へ事後報告とする。
+
+資料にあることだけを使い、「誰が・いつ・何を・例外は」に分け、メモ名と原文を添える。
+書かれていない項目は「記載なし」とする。
+矛盾の候補、例外の記載漏れ、版の不明点を確認表に出す。
+自信のない所は別の欄に出し、推測で埋めない。
+甲と乙のどちらを採用するかは決めず、丙は旧版として分ける。
+人の判断が済むまで、確認待ちの内容を確定した決まりとして本文に入れない。
+元のメモは変更せず、決まりの一覧、構成案、確認表を下書きとして返す。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、当社のAI（Claude）で作り、作る係と確かめる係を分けて、検査記録つきで納めます。AIの契約がなくてもお受けできます。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/zigyonushi/model/index.html" rel="noopener" target="_blank">モデル就業規則について｜厚生労働省</a>：規程例や解説を参考に各事業場の実情に応じて作成・届出する旨の案内</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/training/track-changes-in-word?ad=jp&amp;rs=ja-jp&amp;ui=ja-jp" rel="noopener" target="_blank">Word で変更履歴を記録する｜Microsoft Support</a>：変更の追跡がオンの場合の削除・追加箇所の表示</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-documents-materials">文書と資料：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/operations-manual">業務マニュアル（20頁程度）</a></li>
+      <li><a href="/ai/tasks/procedure-document">手順書（1業務・5頁程度）</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a></li>
+      <li><a href="/ai/tasks/operations-manual">業務マニュアル（20頁程度）</a></li>
+      <li><a href="/ai/tasks/procedure-document">手順書（1業務・5頁程度）</a></li>
+      <li><a href="/ai/tasks/training-material">研修資料（半日分・30枚程度）</a></li>
+      <li><a href="/ai/tasks/faq-collection">FAQ・回答集（50問）</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

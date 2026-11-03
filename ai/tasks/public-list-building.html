@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公開情報から名簿・リストを作る手順｜出所URLと取得日・利用条件の確認｜Vaynexis</title>
+  <meta name="description" content="公開情報を使う企業リスト作成で、AIに渡す資料と出力の形、人が確かめる点を整理します。組織ごとに出所URL・取得日・利用条件を残し、同名組織や空欄を確認する進め方と指示文を紹介します。公開されている情報の利用範囲は、人が判断する前提です。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="公開情報から名簿・リストを作る手順｜出所URLと取得日・利用条件の確認｜Vaynexis">
+  <meta property="og:description" content="公開情報を使う企業リスト作成で、AIに渡す資料と出力の形、人が確かめる点を整理します。組織ごとに出所URL・取得日・利用条件を残し、同名組織や空欄を確認する進め方と指示文を紹介します。公開されている情報の利用範囲は、人が判断する前提です。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/public-list-building">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/public-list-building">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"公開情報から名簿・リストを作る手順。出所URLと取得日・利用条件の確認","description":"公開情報を使う企業リスト作成で、AIに渡す資料と出力の形、人が確かめる点を整理します。組織ごとに出所URL・取得日・利用条件を残し、同名組織や空欄を確認する進め方と指示文を紹介します。公開されている情報の利用範囲は、人が判断する前提です。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/public-list-building"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"公開情報からの名簿・リスト作成","item":"https://vaynexis.jp/ai/tasks/public-list-building"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">公開情報からの名簿・リスト作成</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">公開情報から名簿・リストを作る手順。出所URLと取得日・利用条件の確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、確認済みの公開資料から組織情報を抜き出し、出所をたどれる一覧の下書きに整える役割を任せます。人が確かめる中心は、出所URLと取得日、利用条件の確認です。見つからない項目は空欄にし、利用範囲や外部への提供は人が判断します。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこのページの最後）</p>
+    <p>営業や企画の事務では、業界団体の会員一覧などから候補の組織をまとめます。一覧を使う目的に照らして、集める項目と利用条件を確かめる工程を設けます。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（公開情報からの名簿・リスト作成）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（公開情報からの名簿・リスト作成）</h2>
+    <p>個人情報保護委員会は、既に公表されている個人情報も、他の個人情報と区別せず保護の対象としています。 国税庁法人番号公表サイトでは、商号又は名称、本店又は主たる事務所の所在地、法人番号を検索できます。 同サイトは、権利表記の記載がない限り、公共データ利用規約（第1.0版）に準拠した利用条件で利用できます。 公共データ利用規約（第1.0版）は、対象コンテンツの出典と、加工時には加工の事実・主体の記載を求めています。 ここからは当社の整理です。 収集元ごとに規約を確認し、利用範囲を決めた資料を渡します。AIに任せるのは組織情報の転記と出所の整理です。資料ごとの内容や利用条件を混ぜず、確認待ちの欄を残す下書きにします。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>一覧を作る目的、対象となる地域・業種、集める項目</li>
+      <li>人が開いて確認した会員一覧の写し、出所URL、ページ名、取得日</li>
+      <li>利用条件の原文、規約のURL、確認日、人が決めた利用範囲</li>
+      <li>出力の列と、空欄・食い違い・確認待ちの示し方</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>組織名・所在地・組織の代表番号を並べた下書き</li>
+      <li>行ごとの出所URL・取得日・利用条件</li>
+      <li>記載なし、読取不能、資料間の食い違いを分けた確認欄</li>
+      <li>同名組織や重複の候補と、それぞれの出所</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>目的と収集元を決める：</b>人が項目を絞り、利用条件を読みます。大量の自動取得は手順に含めません。</li>
+      <li><b>資料と出所を組にする：</b>写しにURL・ページ名・取得日を添え、規約の原文も残します。掲載側の更新日と取得日は分けます。</li>
+      <li><b>見本で試す：</b>資料の一部で、組織情報と出所が同じ行に残るかを試します。組織の代表番号かも見ます。</li>
+      <li><b>別の下書きに出す：</b>AIに元のデータを直接書き換えさせず、別の一覧を作らせます。出所のない値は補わず、確認待ちにします。</li>
+      <li><b>原文へ戻って照合する：</b>人が各行の出所を開き、転記と利用条件を確認します。同名の組織は統合せず候補に残します。</li>
+      <li><b>利用する版を確定する：</b>確認済みと確認待ちを分けて保存します。社外へ渡す範囲も人が判断します。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>出所URLと取得日、利用条件の確認</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">出所URLと取得日、利用条件の確認</td><td data-label="見方">各行から元ページと規約へ戻り、確認日と利用範囲も見る</td><td data-label="見落とすと">情報の由来や使える範囲を追えなくなります</td></tr><tr><td data-label="確かめること">項目ごとの出所</td><td data-label="見方">別の資料で補った値にも取得元を残す</td><td data-label="見落とすと">別組織の情報が同じ行に入ります</td></tr><tr><td data-label="確かめること">同名組織と重複</td><td data-label="見方">名称だけでまとめず、所在地などを原文と照合する</td><td data-label="見落とすと">異なる組織が統合されます</td></tr><tr><td data-label="確かめること">空欄と読取不能</td><td data-label="見方">元から記載がないのか、読めなかったのかを分ける</td><td data-label="見落とすと">未取得の項目が確認済みに見えます</td></tr><tr><td data-label="確かめること">連絡先の範囲</td><td data-label="見方">組織の代表番号であることを掲載箇所で見る</td><td data-label="見落とすと">目的に含めていない連絡先が混ざります</td></tr><tr><td data-label="確かめること">取得時点と情報の時点</td><td data-label="見方">取得日と掲載側の更新表示を区別する</td><td data-label="見落とすと">古い掲載内容が現在の情報として扱われます</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>対象とする組織と、目的に必要な収集項目を決めます。</li>
+      <li>各サイトの利用条件に照らして、採用する資料とその利用範囲を決めます。</li>
+      <li>個人に関わる情報の扱いや、外部提供の可否を決めます。法的な判断は、上記の公式資料を示して専門家に確認します。</li>
+      <li>確認待ちの行を採用するか、いつ再確認して一覧を更新するかを決めます。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>架空の地域の業界団体の会員一覧を渡す想定です。出力は、次のような表の下書きになります（10組織のうち3組織を抜き出した例）。</p>
+
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">組織名</th><th scope="col">代表番号</th><th scope="col">出所</th><th scope="col">取得日</th><th scope="col">利用条件</th><th scope="col">確認欄</th></tr></thead><tbody><tr><td data-label="組織名">工房あ</td><td data-label="代表番号">記載なし（空欄）</td><td data-label="出所">会員一覧のページ（架空）</td><td data-label="取得日">取得した日を記入</td><td data-label="利用条件">社内閲覧のみ</td><td data-label="確認欄">資料に番号の記載がないため空欄</td></tr><tr><td data-label="組織名">工房い</td><td data-label="代表番号">読み取れない</td><td data-label="出所">会員一覧のページ（架空）</td><td data-label="取得日">取得した日を記入</td><td data-label="利用条件">社内閲覧のみ</td><td data-label="確認欄">数字が判読できず、確認待ち</td></tr><tr><td data-label="組織名">工房う</td><td data-label="代表番号">資料から転記</td><td data-label="出所">会員一覧のページ（架空）</td><td data-label="取得日">取得した日を記入</td><td data-label="利用条件">社内閲覧のみ</td><td data-label="確認欄">個人の連絡先に見える記載は出力しない</td></tr></tbody></table></div>
+    <pre class="prompt">架空の「こはる野地域工芸会」の会員一覧（10組織）を、下書きに整えます。
+資料にあることだけ使い、組織名、組織の代表番号、出所URL、取得日、利用条件、確認欄を出します。
+個人名と個人の連絡先は出力対象外です。記載のない代表番号は空欄にします。
+元資料の変更、追加の検索、外部への送信は行いません。
+自信のない所は確認欄へ分け、利用可能かどうかは判断しません。
+
+入力：会員一覧の写しと規約の原文を添付する想定です。
+代表番号は資料から転記し、読めない値は確認欄に残します。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、当社のAI（Claude）で作り、作る係と確かめる係を分けて、検査記録つきで納めます。AIの契約がなくてもお受けできます。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.ppc.go.jp/all_faq_index/faq1-q1-5/" rel="noopener" target="_blank">新聞やインターネットなどで既に公表されている個人情報は、個人情報保護法で保護されるのですか。</a>：公表済みの個人情報も保護の対象</li>
+      <li><a href="https://www.houjin-bangou.nta.go.jp/pc/index.html" rel="noopener" target="_blank">国税庁法人番号公表サイト</a>：検索できる組織情報の範囲</li>
+      <li><a href="https://www.houjin-bangou.nta.go.jp/riyokiyaku/" rel="noopener" target="_blank">利用規約｜国税庁法人番号公表サイト</a>：同サイトで適用する利用条件</li>
+      <li><a href="https://www.digital.go.jp/resources/open_data/public_data_license_v1.0" rel="noopener" target="_blank">公共データ利用規約（第1.0版）</a>：対象コンテンツの出典・加工の記載</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-research-summary">調べてまとめる：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/business-card-ledger">名刺・メール署名から顧客台帳へ</a></li>
+      <li><a href="/ai/tasks/notation-unification">表記ゆれの統一（住所・社名・日付）</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理する方法</a></li>
+      <li><a href="/ai/tasks/law-source-summary">法令・官公庁の資料の原文取得と要点整理</a></li>
+      <li><a href="/ai/tasks/competitor-research">競合・相場の調べもの</a></li>
+      <li><a href="/ai/tasks/regulation-tracking">業界の制度変更の追跡</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

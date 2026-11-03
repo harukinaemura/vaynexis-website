@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>業務フロー図をAIに任せる手順｜手順書との一致と抜け・差し戻しの確認｜Vaynexis</title>
+  <meta name="description" content="業務フロー図をAIに任せるときは、手順書の文から作業や判断を分類し、つながりの下書きを作ります。渡す資料、分類表の作例、分岐の行き先や差し戻し先を照合する進め方を整理し、担当者が図をたどって確かめる点と、人が決める範囲を紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="業務フロー図をAIに任せる手順｜手順書との一致と抜け・差し戻しの確認｜Vaynexis">
+  <meta property="og:description" content="業務フロー図をAIに任せるときは、手順書の文から作業や判断を分類し、つながりの下書きを作ります。渡す資料、分類表の作例、分岐の行き先や差し戻し先を照合する進め方を整理し、担当者が図をたどって確かめる点と、人が決める範囲を紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/flow-diagram">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/flow-diagram">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"業務フロー図をAIに任せる手順。手順書との一致と抜け・差し戻しの確認","description":"業務フロー図をAIに任せるときは、手順書の文から作業や判断を分類し、つながりの下書きを作ります。渡す資料、分類表の作例、分岐の行き先や差し戻し先を照合する進め方を整理し、担当者が図をたどって確かめる点と、人が決める範囲を紹介します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/flow-diagram"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"図解・業務フロー図（流れを1枚に）","item":"https://vaynexis.jp/ai/tasks/flow-diagram"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">図解・業務フロー図（流れを1枚に）</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">業務フロー図をAIに任せる手順。手順書との一致と抜け・差し戻しの確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、手順書の文を開始・処理・判断・終了に分類し、図のつながりを下書きにする所まで任せます。人が確かめる中心は、手順書との一致、抜けと戻りの経路です。通常の流れだけでなく、分岐の行き先と差し戻し後の再確認までたどり、元の文にないつながりは保留にします。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこのページの最後）</p>
+    <p>担当者への引継ぎや部門間の説明では、申請から受付完了までの流れを図で共有する場面があります。図の見た目が整っていても、途中の確認や差し戻し先が省かれると、読む人が次の作業を判断できなくなります。</p>
+    <p class="notice">表・指示文は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（図解・業務フロー図（流れを1枚に））</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（図解・業務フロー図（流れを1枚に））</h2>
+    <p>Visio の公式ヘルプには、手順ごとに図形を配置する操作が示されています（確認日：2026-11-03）。同じく公式ヘルプは、各ステップの担当者や部門を表す枠を「スイムレーン」と説明しています（確認日：2026-11-03）。 ここからは当社の整理です。 AIには、元の文と図の要素を対応させた分類表、作業の前後関係、分岐と戻り先の候補を出させます。まず分類表を人が確かめ、その後に人が図を描く進め方です。AIに図のつながりをテキストで出させる場合も、資料にない条件や経路を補わず、不明点を別欄へ分ける形にします。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>対象業務の範囲と、版・更新履歴が分かる手順書のコピー</li>
+      <li>担当者、確認者、引継ぎ先を示す業務分担の資料</li>
+      <li>分岐条件と、差し戻し・再申請の扱いを記した資料</li>
+      <li>図の用途と、表示する作業の細かさについての指定</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>元の文を添えた、開始・処理・判断・終了の分類表</li>
+      <li>作業名、担当、次の行き先を対応させた一覧</li>
+      <li>分岐と戻り先を含む、図のつながりの下書き</li>
+      <li>資料だけでは決められない箇所と、人への確認事項</li>
+    </ul>
+    <p>経費申請の図の下書きで、分岐の片側や修正後の経路が抜けている場面を考えます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">手順書にある内容</th><th scope="col">分類</th><th scope="col">図の下書きで確かめる点</th></tr></thead><tbody><tr><td data-label="手順書にある内容">申請を受け付ける</td><td data-label="分類">開始</td><td data-label="図の下書きで確かめる点">内容確認へつながっているか</td></tr><tr><td data-label="手順書にある内容">担当者が内容を確認する</td><td data-label="分類">処理</td><td data-label="図の下書きで確かめる点">記載漏れの判断へ進めるか</td></tr><tr><td data-label="手順書にある内容">記載漏れがないか判断する</td><td data-label="分類">判断</td><td data-label="図の下書きで確かめる点">「はい」は承認へ進むが、「いいえ」の先が空欄になっていないか</td></tr><tr><td data-label="手順書にある内容">記載漏れがあれば差し戻し、修正後に再確認する</td><td data-label="分類">処理</td><td data-label="図の下書きで確かめる点">申請者による修正から、担当者の内容確認へ戻る矢印があるか</td></tr><tr><td data-label="手順書にある内容">承認して受付を終える</td><td data-label="分類">終了</td><td data-label="図の下書きで確かめる点">途中の行き止まりと区別できるか</td></tr></tbody></table></div>
+
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>図にする範囲をそろえる：</b>開始と終了、使う手順書の版を決めます。元のデータはAIに直接書き換えさせず、コピーを材料にして別の下書きへ出す形です。</li>
+      <li><b>短い見本で分類を試す：</b>通常の流れと差し戻しを含む短い範囲を渡し、元の文と分類が対応するかを人が確認します。作業と判断が混ざる箇所は、分け方をそろえてから対象を広げるとよいです。</li>
+      <li><b>図の要素と出所を対応させる：</b>分類表の各要素に、元の見出しや該当文を添えさせます。元の文に対応しない要素と、図に入っていない文を探すためです。</li>
+      <li><b>分岐と戻り先を並べる：</b>「はい」「いいえ」の行き先と、差し戻し後の再開位置を一覧にします。不明な行き先は空欄を埋めず、確認事項として取り出す扱いです。</li>
+      <li><b>人が図にして経路をたどる：</b>確認した分類表から図を描き、通常・差し戻しの流れを現場担当者と追います。矢印の向き、担当の切替え、途中の行き止まりが照合の対象です。</li>
+      <li><b>採用する版を人が確定する：</b>直した経路を手順書に照らし直し、確認者と元資料の版を残します。業務ルールの変更が必要な箇所は、図の修正とは分けて責任者へ戻すとよいです。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>手順書との一致、抜けと戻りの経路</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">手順書との一致、抜けと戻りの経路</td><td data-label="見方">元の文と図の要素を照合し、通常・差し戻しの経路をたどる</td><td data-label="見落とすと">手順書と図で、作業の進め方が食い違う</td></tr><tr><td data-label="確かめること">分岐の行き先</td><td data-label="見方">判断の文と「はい」「いいえ」の先を照らす</td><td data-label="見落とすと">分岐の片側で次の作業が分からなくなる</td></tr><tr><td data-label="確かめること">修正後の再開位置</td><td data-label="見方">修正した申請が、誰のどの確認へ戻るかを見る</td><td data-label="見落とすと">修正後の確認先が図から読み取れなくなる</td></tr><tr><td data-label="確かめること">矢印の向きと接続</td><td data-label="見方">作業順に追い、孤立した要素や途切れを探す</td><td data-label="見落とすと">処理の順序を異なる意味で読み取る</td></tr><tr><td data-label="確かめること">担当と引継ぎ点</td><td data-label="見方">作業名ごとの担当と、受け渡す相手を照合する</td><td data-label="見落とすと">担当する範囲の認識がずれる</td></tr><tr><td data-label="確かめること">開始・終了と元資料の版</td><td data-label="見方">対象範囲と版を確認し、終点まで追えるかを見る</td><td data-label="見落とすと">別の版の手順や対象外の作業が混ざる</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>図に含める業務の範囲と、細かい作業をまとめる程度</li>
+      <li>資料どうしで食い違う担当や分岐の扱い、確認を依頼する相手</li>
+      <li>差し戻し先や承認経路を変える必要性と、変更を認める責任者</li>
+      <li>現場で使う図としての採用、共有する範囲、版の確定</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>経費申請の手順から分類表を作り、図にする前の確認事項を分ける指示の例です。</p>
+    <pre class="prompt">目的は、経費申請の業務フロー図にするための下書きです。
+資料にあることだけを使い、元の資料は変更しない扱いです。
+
+手順のメモ：
+申請を受け付け、担当者が内容を確認する。
+記載漏れがなければ承認して受付を終える。
+記載漏れがあれば申請者へ差し戻す。
+申請者が修正した後、担当者が内容を再確認する。
+
+出力の形：
+・開始／処理／判断／終了の分類表。元の文、作業名、担当、行き先を併記する。
+・判断の「はい」「いいえ」それぞれの行き先と、修正後の戻り先。
+・図のつながりを表したテキストの下書き。
+・不明点、自信のない分類、資料だけでは決められない点を別欄にまとめる。
+資料にない担当や経路は推測で確定せず、図としての採用は人の確認待ちとする。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、当社のAI（Claude）で作り、作る係と確かめる係を分けて、検査記録つきで納めます。AIの契約がなくてもお受けできます。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/visio/create-a-basic-flowchart-in-visio" rel="noopener" target="_blank">Visio で基本フローチャートを作成します。</a>：手順ごとに図形を配置する操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/visio/process-diagrams-in-visio" rel="noopener" target="_blank">Visio のプロセス図</a>：担当者・部門を表すスイムレーンの説明</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-media-print">図・動画・印刷物：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/procedure-document">手順書（1業務・5頁程度）</a></li>
+      <li><a href="/ai/tasks/operations-manual">業務マニュアル（20頁程度）</a></li>
+      <li><a href="/column/task-listing">業務の洗い出し方</a></li>
+      <li><a href="/ai/tasks/video-script">動画の台本と字幕（1本・12分）</a></li>
+      <li><a href="/ai/tasks/thumbnail-figure">サムネイル・図版の指定</a></li>
+      <li><a href="/ai/tasks/flyer-dm">チラシ・DM・挨拶状の文面と差し込み印刷</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>定型メールの下書き生成をAIと作る手順｜差し込み項目の欠落を確かめる｜Vaynexis</title>
+  <meta name="description" content="定型メールの本文、差し込み項目の一覧、値の表を基に、AIと下書き生成の仕組みを組み立てます。会社名の空欄、日付の表記違い、差し込み記号の残りを見本で点検し、元のデータを保ちながら、生成を止める条件と人が確かめる範囲を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="定型メールの下書き生成をAIと作る手順｜差し込み項目の欠落を確かめる｜Vaynexis">
+  <meta property="og:description" content="定型メールの本文、差し込み項目の一覧、値の表を基に、AIと下書き生成の仕組みを組み立てます。会社名の空欄、日付の表記違い、差し込み記号の残りを見本で点検し、元のデータを保ちながら、生成を止める条件と人が確かめる範囲を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/email-template-generator">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/email-template-generator">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"定型メールの下書き生成をAIと作る手順。差し込み項目の欠落を確かめる","description":"定型メールの本文、差し込み項目の一覧、値の表を基に、AIと下書き生成の仕組みを組み立てます。会社名の空欄、日付の表記違い、差し込み記号の残りを見本で点検し、元のデータを保ちながら、生成を止める条件と人が確かめる範囲を整理します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/email-template-generator"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"定型メールの下書き生成の仕組み","item":"https://vaynexis.jp/ai/tasks/email-template-generator"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">定型メールの下書き生成の仕組み</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">定型メールの下書き生成をAIと作る手順。差し込み項目の欠落を確かめる</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、定型文と値の表を対応づけ、メールの下書きを作る処理案と検査案を出させます。人が先に確かめる中心は、差し込み項目の欠落です。空欄を推測で補わせず、入力の行と下書きを照合し、日付の表記や記号の残りを見本で点検してから使います。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこのページの最後）</p>
+    <p>日程調整の連絡では、前のメールをコピーし、相手先や候補日を書き換える作業が生じます。定型文を再利用する仕組みを作る際も、どの項目をどの列から取り出すかが曖昧なままだと、本文だけ整っていて必要な値が抜けた下書きになりかねません。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（定型メールの下書き生成の仕組み）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（定型メールの下書き生成の仕組み）</h2>
+    <p>GmailApp の createDraft は、メールの下書きを作成する機能です（確認日：2026-11-03）。 Google の HTML テンプレートには、値を出力するときに文脈に応じて文字をエスケープする書き方があります（確認日：2026-11-03）。 ここからは当社の整理です。 AIには、定型文の差し込み箇所と入力の列を結びつけ、必要な値がそろった行だけを下書きにする処理案を作らせます。コード案を求める場合も、下書き作成までを範囲とし、文字の処理と必須項目の欠落の検査は分けて設計します。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>件名と本文の定型文、差し込み箇所の記号。</li>
+      <li>差し込み項目の一覧と、必須・任意、対応する列、表記の決まり。</li>
+      <li>実在の連絡先を除いた値の表と、入力の行を区別する管理用の印。</li>
+      <li>欠落した行を保留する扱いと、人が下書きを確認する流れ。</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>定型文の差し込み箇所と入力の列の対応案。</li>
+      <li>不足や形式の違いを検出し、保留する処理案。</li>
+      <li>下書きを生成するコードの下書きと、見本で試す手順。</li>
+      <li>入力の行と生成した下書きの対応、不足理由を残す確認表。</li>
+    </ul>
+    <p>日程調整メールの確認例です。修正値は元の表に戻って人が確かめ、意味が確定しないまま表記だけをそろえません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">見本</th><th scope="col">下書きで見つけた点</th><th scope="col">人が確認すること</th></tr></thead><tbody><tr><td data-label="見本">甲</td><td data-label="下書きで見つけた点">会社名が空欄</td><td data-label="人が確認すること">必須の会社名を入力元で確認し、判明まで保留する</td></tr><tr><td data-label="見本">乙</td><td data-label="下書きで見つけた点">候補日が「2027/02/05」と「２月５日」で混在</td><td data-label="人が確認すること">意図する年と日付を確認してから表記をそろえる</td></tr><tr><td data-label="見本">丙</td><td data-label="下書きで見つけた点">本文に「[候補時刻]」が残る</td><td data-label="人が確認すること">対応する列と値を調べ、置換後の下書きを再確認する</td></tr></tbody></table></div>
+
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>変える箇所を棚卸しする：</b>件名と本文から差し込み箇所を拾い、必須項目と入力の列を対応づけます。似た名前の列は意味まで確認して、人が対応を決めます。</li>
+      <li><b>元のデータを保つ：</b>AIには見本のコピーを渡し、元の表や定型文を直接書き換えさせません。修正候補は別の欄に出す方針にします。</li>
+      <li><b>欠けた行の扱いを組み込む：</b>必須値が空欄、空白だけ、列自体がない場合は、その行を保留する処理案にします。前の行の値で埋めず、理由を確認表に残す形です。</li>
+      <li><b>見本で試す：</b>会社名の欠落、日付の表記違い、差し込み記号の残りを含む見本で処理を確かめます。全角・半角、記号、改行、長い名前でも、人が見える下書きの表示まで比べるとよいです。</li>
+      <li><b>入力と下書きを突き合わせる：</b>管理用の印を手掛かりに、宛先・件名・本文を入力の行と照合します。保留した行から下書きが作られていないか、再実行で重複しないかも点検します。</li>
+      <li><b>確認後に使う範囲を決める：</b>人が見本を確認し、問題がある場合は処理案に戻ります。下書きを作る処理に送信処理を含めず、送るかどうかは内容を確認した人が決めます。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>差し込み項目の欠落</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">差し込み項目の欠落</td><td data-label="見方">必須一覧と各行の値を照合し、空欄・空白だけの値・列の不足で保留されるかを見る</td><td data-label="見落とすと">相手先や候補日が抜けた下書きができる</td></tr><tr><td data-label="確かめること">列と差し込み箇所の対応</td><td data-label="見方">件名と本文の各項目が、指定した列から取られているか比べる</td><td data-label="見落とすと">別の意味の値が本文に入る</td></tr><tr><td data-label="確かめること">入力の行との対応</td><td data-label="見方">管理用の印で照合し、別の相手先の値や前の行の値が混ざらないかを見る</td><td data-label="見落とすと">宛先と本文の相手先が食い違う</td></tr><tr><td data-label="確かめること">日付と文字の表記</td><td data-label="見方">年の有無、全角・半角、記号、改行を見本と比べる</td><td data-label="見落とすと">日程が曖昧になったり表示が崩れたりする</td></tr><tr><td data-label="確かめること">差し込み記号の残り</td><td data-label="見方">件名と本文に、未置換の記号や項目名が残っていないか探す</td><td data-label="見落とすと">差し込み前の文字が相手に見える</td></tr><tr><td data-label="確かめること">保留と再実行の動き</td><td data-label="見方">不足のある行の保留理由、生成済みの行の扱いを確かめる</td><td data-label="見落とすと">不備のある下書きや重複した下書きが増える</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>どの項目を必須にし、欠落した場合にどこへ確認するか。</li>
+      <li>日程の解釈、相手への約束、定型文では扱えない例外。</li>
+      <li>入力データをAIへ渡してよい範囲と、仕組みを使う権限。</li>
+      <li>修正後の下書きを採用するか、実際に送信するか。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>日程調整の定型文を基に、差し込みの対応と欠落検査の案を求める指示です。</p>
+    <pre class="prompt">目的は、定型メールの下書き生成の仕組みを設計することです。
+資料にある値だけを使い、元の表や定型文は変更しない方針です。
+
+定型文
+件名：日程のご相談
+本文：[会社名] 御中。打合せ候補は[候補日]の[候補時刻]です。
+ご都合を伺えますと幸いです。
+
+差し込み項目
+会社名・候補日・候補時刻は必須とします。
+入力の列名も同じです。宛先と管理用の印は別の列にあります。
+
+値の表
+管理用の印／宛先／会社名／候補日／候補時刻
+甲／甲の試験用宛先／（空欄）／2027/02/05／午前
+乙／乙の試験用宛先／架空の乙社／２月５日／午前
+丙／丙の試験用宛先／架空の丙社／2027/02/05／[候補時刻]
+（空欄）は値がないことを表します。
+
+出力は、項目と列の対応案、下書き作成までの処理案、
+不足のある行の保留理由、見本での確認手順とします。
+必須値の空欄・空白だけの値・列の不足を分けて検査する案にします。
+日付の解釈は推測せず、全角・半角と差し込み記号の残りも確認対象です。
+自信のない箇所は「要確認」欄に分け、値は補いません。
+送信処理は含めず、人が下書きを確認して採否を決める設計とします。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、当社のAI（Claude）で作り、作る係と確かめる係を分けて、検査記録つきで納めます。AIの契約がなくてもお受けできます。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://developers.google.com/apps-script/reference/gmail/gmail-app" rel="noopener" target="_blank">Class GmailApp</a>：createDraft の下書き作成機能</li>
+      <li><a href="https://developers.google.com/apps-script/guides/html/templates" rel="noopener" target="_blank">HTML Service: Templated HTML</a>：出力時の文脈に応じたエスケープ</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-small-automation">小さな自動化：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/spreadsheet-gas">スプレッドシート・GAS（1機能）</a></li>
+      <li><a href="/ai/tasks/csv-excel-script">CSV・Excelの変換と突合のスクリプト</a></li>
+      <li><a href="/column/rpa-vs-generative-ai">RPAと生成AIの違い｜事務作業をどちらに任せるかの見分け方</a></li>
+      <li><a href="/column/ai-email-reply">メール返信の下書きをAIで作る方法</a></li>
+      <li><a href="/ai/tasks/spreadsheet-gas">スプレッドシート・GAS（1機能）</a></li>
+      <li><a href="/ai/tasks/csv-excel-script">CSV・Excelの変換と突合のスクリプト</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

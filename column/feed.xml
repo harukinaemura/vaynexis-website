@@ -7,6 +7,126 @@
   <updated>2026-11-03T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
   <entry>
+    <title>ChatGPT・Claude無料版｜仕事で試す上限と使い分け</title>
+    <link href="https://vaynexis.jp/column/ai-free-plan-limits"/>
+    <id>https://vaynexis.jp/column/ai-free-plan-limits</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>無料版を仕事で試す前に、任せる範囲と途中で止まったときの戻り方を整理します。機能別の上限、時間枠と会話の長さ、添付先やページ数の条件を公式資料で確かめ、記入表と切り分け表で、渡す資料・人が確認する内容・代替手順を決めるための記事です。</summary>
+  </entry>
+  <entry>
+    <title>小さな会社のAI導入の進め方｜業務の選定から試行後の判断まで</title>
+    <link href="https://vaynexis.jp/column/ai-adoption-steps"/>
+    <id>https://vaynexis.jp/column/ai-adoption-steps</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>小さな会社が生成AIを事務に取り入れる際は、試す業務の選定から始めます。件数、誤りの影響、元の資料、人が確認できる範囲を比べ、入力する情報と担当者を決めて試す流れを整理。確認の手間と見つかった誤りを記録し、継続・見直し・中止を判断する方法を示します。</summary>
+  </entry>
+  <entry>
+    <title>経理の効率化はどこから始めるか｜作業を分けて見直す順番を決める</title>
+    <link href="https://vaynexis.jp/column/accounting-efficiency-review"/>
+    <id>https://vaynexis.jp/column/accounting-efficiency-review</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>経理の効率化で、どの作業から見直すか迷う担当者向けに、受け取り・記録・照合・締めの流れと、件数・手戻り・属人化・制度上の期限から順番を決める考え方を整理します。公式資料で確認する所、人が照合する基準、最初の月の進め方も示します。</summary>
+  </entry>
+  <entry>
+    <title>仕事で生成AIの文章・画像を使う前に確かめる著作権のポイント</title>
+    <link href="https://vaynexis.jp/column/ai-copyright-check"/>
+    <id>https://vaynexis.jp/column/ai-copyright-check</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>生成した文章や画像を仕事に使う前に、入力素材の出所、提供元の規約、既存の作品との関係を確かめる視点を整理します。公式資料をもとに学習と生成・利用の場面を分け、確認表と記録の残し方、個別の判断を専門家へ相談する際にそろえる情報を紹介します。</summary>
+  </entry>
+  <entry>
+    <title>AI導入を外部に頼む前に｜データの扱いと終了時の引き継ぎ確認</title>
+    <link href="https://vaynexis.jp/column/ai-outsourcing-data-handover"/>
+    <id>https://vaynexis.jp/column/ai-outsourcing-data-handover</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>AI導入を外部の会社に頼む前に、個人データの取扱範囲、学習への利用、成果物の利用範囲、終了時の引き継ぎを何で確かめるかを整理します。公式資料を手がかりに、委託先から受け取る書面と、設定・手順・アカウントを社内に引き継ぐための確認項目を示します。</summary>
+  </entry>
+  <entry>
+    <title>AIの試作品・デモはどう評価する？試す入力と使えるかを決める基準</title>
+    <link href="https://vaynexis.jp/column/ai-prototype-demo-evaluation"/>
+    <id>https://vaynexis.jp/column/ai-prototype-demo-evaluation</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>AIの試作品やデモを見せられたときは、整った入力で動くかに加え、空欄・誤字・桁違いへの対応も確かめます。試す前に決める正解と許容する誤り、入力ごとの判断基準を残す記入表、間違いに気づける仕組み、引き渡し時に見る点を整理します。</summary>
+  </entry>
+  <entry>
+    <title>AIに渡す前に個人情報を伏せる手順｜置換表で戻すまでの確認</title>
+    <link href="https://vaynexis.jp/column/ai-personal-data-masking"/>
+    <id>https://vaynexis.jp/column/ai-personal-data-masking</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>AIに資料を渡す前に、氏名・電話番号・住所を記号に置き換え、不要な情報を削り、伏せ漏れを調べる手順を整理します。置換表を手元で保管し、返ってきた結果を元の情報に戻すまでの確認と、法律上の加工情報との違いを事務担当者向けに説明します。</summary>
+  </entry>
+  <entry>
+    <title>AIが止まったときの業務の戻し方｜手元に残すものと先に決めること</title>
+    <link href="https://vaynexis.jp/column/ai-outage-fallback"/>
+    <id>https://vaynexis.jp/column/ai-outage-fallback</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>AIサービスの停止や変更に備え、指示文、入力資料、確認済みの出力、手順の控えをどう残すかを整理します。作業別の「AIなしの戻し方」の表を軸に、切替を判断する人、途中の仕事の引継ぎ、公式情報の確認、再開前の点検まで、小さな会社の事務に沿って考えます。</summary>
+  </entry>
+  <entry>
+    <title>業務棚卸しで抜けやすい項目｜属人化・承認待ち・繁忙期を拾う聞き方</title>
+    <link href="https://vaynexis.jp/column/task-inventory-gaps"/>
+    <id>https://vaynexis.jp/column/task-inventory-gaps</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>業務棚卸しの聞き取りで抜けやすい、担当者だけが知る仕事、承認待ち、勘所と理由、紙の書類、月次・年次の例外、作業時間を整理します。質問例の表を軸に、繁忙期の記録のたどり方や、概算と実測を区別して残す方法、棚卸表を見直す場面まで解説します。</summary>
+  </entry>
+  <entry>
+    <title>ClaudeのMaxとUltra｜使用量の枠と契約前の確認</title>
+    <link href="https://vaynexis.jp/column/claude-max-ultra-check"/>
+    <id>https://vaynexis.jp/column/claude-max-ultra-check</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>有料プランを選ぶ前に、使用量の倍率だけでなく対象期間と認証の条件を確かめます。購読に含まれる枠、上限後の追加使用、開発向け残高の違いを整理し、加入済みの人が確認する場所と、契約前に確認日を記録するための表をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>ChatGPTのdot｜対象・端末・止め方と依頼の書き分け</title>
+    <link href="https://vaynexis.jp/column/chatgpt-dot-check"/>
+    <id>https://vaynexis.jp/column/chatgpt-dot-check</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>仕事で継続的な確認を任せる前に、公式ヘルプで利用対象と対応端末を照合する手順を整理します。通常の依頼との書き分け、報告条件と人の判断を待つ条件の記入例、進行中の仕事と今後の予定を分けて止める確認点をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>ChatGPT・Claudeの音声利用枠と止まったときの確認</title>
+    <link href="https://vaynexis.jp/column/ai-voice-mode-limits-check"/>
+    <id>https://vaynexis.jp/column/ai-voice-mode-limits-check</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>音声で相談する前に、会話する場所と利用枠の数え方を確かめます。途中で止まったときに見る通知や接続状態、映像を見せたい場合の切り分け、声で入力する機能との違いを整理し、仕事の情報を話す前の点検と、依頼の範囲を区切る短い指示例をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>Claude Coworkを始める前に｜処理の場所と渡す情報の確認</title>
+    <link href="https://vaynexis.jp/column/claude-cowork-cloud-check"/>
+    <id>https://vaynexis.jp/column/claude-cowork-cloud-check</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>事務の作業を任せる前に、処理が動く場所と、手元のファイルにアクセスする条件を分けて確かめます。画面の違いを見分ける手順、渡すフォルダの点検表、端末を閉じる前の確認をまとめました。必要な情報と変更してよい範囲を整理してから始めるための記事です。</summary>
+  </entry>
+  <entry>
+    <title>業務改善助成金と滋賀県の補助金｜対象・申請先・時期の違い</title>
+    <link href="https://vaynexis.jp/column/business-improvement-subsidy-shiga"/>
+    <id>https://vaynexis.jp/column/business-improvement-subsidy-shiga</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>賃上げと設備導入を考える小さな会社に向け、国の助成と県の上乗せ補助を、対象・支援内容・申請先・時期から比較します。申請前と申請済みで調べる順番を分け、募集欄の読み方や、問い合わせる前に手元で整理する書類・確認項目をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>AI導入の公的な事例集の読み方｜自社に合うかを確かめる観点</title>
+    <link href="https://vaynexis.jp/column/ai-case-study-reading"/>
+    <id>https://vaynexis.jp/column/ai-case-study-reading</id>
+    <published>2026-11-03T00:00:00+09:00</published>
+    <updated>2026-11-03T00:00:00+09:00</updated>
+    <summary>公的なAI導入事例を読んでも、自社で使えるか迷うことがあります。規模・業種・業務・利用範囲・効果の測り方・公開時期を照合し、参考にできる部分と追加で確かめる部分を整理します。効果の数字を転用せず、最初に試す業務へ読み替えるための読み方です。</summary>
+  </entry>
+  <entry>
     <title>生成AIとは｜小さな会社が仕事で使う前に知っておくこと</title>
     <link href="https://vaynexis.jp/column/what-is-generative-ai"/>
     <id>https://vaynexis.jp/column/what-is-generative-ai</id>
@@ -285,125 +405,5 @@
     <published>2026-11-02T00:00:00+09:00</published>
     <updated>2026-11-02T00:00:00+09:00</updated>
     <summary>和歌山県の中小企業がDX・AI導入を進めるときの相談先と補助金を、和歌山県、わかやま産業振興財団、和歌山県よろず支援拠点、和歌山市の公式ページで確かめてまとめました。県のデジタル専門家派遣（無料）、成長企業支援補助金（人材採用の手数料が対象）、和歌山市のツール導入補助金のAIの扱い、申請前に止めること、確認表つきです。</summary>
-  </entry>
-  <entry>
-    <title>奈良県の中小企業向けDX・省力化の補助金と相談先。名前が似た窓口と、一覧と個別ページの受付状況の違いに注意して調べる</title>
-    <link href="https://vaynexis.jp/column/nara-dx-support"/>
-    <id>https://vaynexis.jp/column/nara-dx-support</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated>
-    <summary>奈良県の中小企業がDX・AI導入や省力化に使える補助金と相談先を、県と奈良県地域産業振興センター、奈良県よろず支援拠点の公式ページで確かめてまとめました。名前が似た窓口の違い、デジならキャンペーン・賃上げ環境整備支援補助金・デジタル化等支援事業の受付状況、県の受付が終わっているときの探し方、応募前の確認表つきです。</summary>
-  </entry>
-  <entry>
-    <title>三重県の中小企業のDXと補助金。終了した募集と、これから使える講座・相談窓口を分けて確かめる</title>
-    <link href="https://vaynexis.jp/column/mie-dx-support"/>
-    <id>https://vaynexis.jp/column/mie-dx-support</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated>
-    <summary>三重県の中小企業がDX・AI導入に使える県の制度と相談窓口を、三重県と三重県産業支援センター、三重県よろず支援拠点の公式ページで確かめてまとめました。生産性向上・業態転換支援補助金（第3期は受付終了）、三重県版経営向上計画との関係、みえDX・AIチャレンジプログラムの講座日程、相談前の確認表つきです。</summary>
-  </entry>
-  <entry>
-    <title>岐阜県の中小企業のDX支援。県のよろず支援拠点・生産性向上支援センター・ソフトピアジャパンの、無料の範囲と有料の範囲</title>
-    <link href="https://vaynexis.jp/column/gifu-dx-support"/>
-    <id>https://vaynexis.jp/column/gifu-dx-support</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated>
-    <summary>岐阜県の中小企業がDX・AI導入を進めるときに使える窓口を、岐阜県よろず支援拠点、生産性向上支援センター、ソフトピアジャパン、岐阜市の公式ページで確かめてまとめました。無料の範囲と有料の範囲、スマート経営アドバイザー派遣の流れと費用、岐阜市の補助金、悩みの種類別の窓口の選び方つきです。</summary>
-  </entry>
-  <entry>
-    <title>福井県の中小企業がDXを進めるときに使える補助金と、無料の相談先。令和8年度の県の制度で、いま使えるものはどれか</title>
-    <link href="https://vaynexis.jp/column/fukui-dx-support"/>
-    <id>https://vaynexis.jp/column/fukui-dx-support</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated>
-    <summary>福井県の中小企業がDX・AI導入を進めるときに使える公的な制度を、福井県とふくい産業支援センター、福井県よろず支援拠点の公式ページで確かめてまとめました。ふくいDX加速化補助金（令和8年度は募集終了）、ふくいデジタル導入チャレンジ補助金、DX専門家派遣（最大3回・無料）、生産性向上支援センターの費用と受付状況、補助金を使う前の確認表つきです。</summary>
-  </entry>
-  <entry>
-    <title>エクセルで会社名・住所の表記ゆれを統一する。関数でそろえる部分と、AIに候補を出させる部分</title>
-    <link href="https://vaynexis.jp/column/name-variants-excel"/>
-    <id>https://vaynexis.jp/column/name-variants-excel</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated>
-    <summary>取引先名簿の会社名・住所の表記ゆれを、エクセルの関数（CLEAN・TRIM・SUBSTITUTE・ASC・VLOOKUP）でそろえる手順をまとめました。照合用の列の作り方、法人格の対応表、AIに頼んでよいこと、法人番号での最終確認、直したあとの件数の確認表つきです。</summary>
-  </entry>
-  <entry>
-    <title>メール返信の下書きをAIで作る。先に人が骨子を決め、送る前に宛先・事実・約束・個人情報・文体の5つを確かめる</title>
-    <link href="https://vaynexis.jp/column/ai-email-reply"/>
-    <id>https://vaynexis.jp/column/ai-email-reply</id>
-    <published>2026-11-02T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated>
-    <summary>届いたメールへの返信をChatGPTやClaudeに下書きさせるときの、骨子の渡し方、指示文の作例、送る前に確かめる5つ（宛先・事実・約束・個人情報・文体）をまとめました。Gmailの宛先（To・Cc・Bcc）と送信取り消しの公式の説明、個人情報保護委員会の注意喚起も確かめています。</summary>
-  </entry>
-  <entry>
-    <title>ChatGPT・Claudeの変更記録。事務で使う前に、公式のページで確かめた更新を日付つきで残します</title>
-    <link href="https://vaynexis.jp/column/ai-service-changes"/>
-    <id>https://vaynexis.jp/column/ai-service-changes</id>
-    <published>2026-11-01T00:00:00+09:00</published>
-    <updated>2026-11-02T00:00:00+09:00</updated>
-    <summary>ChatGPTとClaudeの、事務で使うときに影響する変更を、公式のヘルプと料金ページで確かめて日付つきでまとめた記録です。2026年11月1日の確認で見つけた、PDFの図の扱い・GPTの作成・Claudeのプラン名と税の表示の変更と、変更を見つけたときの確かめ方つき。</summary>
-  </entry>
-  <entry>
-    <title>情報の確かめ方と更新の方針。このサイトのページを、書く前・公開する前・公開した後に確かめていること</title>
-    <link href="https://vaynexis.jp/column/editorial-policy"/>
-    <id>https://vaynexis.jp/column/editorial-policy</id>
-    <published>2026-11-01T00:00:00+09:00</published>
-    <updated>2026-11-01T00:00:00+09:00</updated>
-    <summary>合同会社Vaynexis のサイトで、数字・制度・料金・機能を公式の資料で確かめて確認日を載せること、公開の前に確かめる8つの項目、載せないもの、更新と訂正の方針をまとめました。記事を読むときの確認表つき。</summary>
-  </entry>
-  <entry>
-    <title>Claudeを会社で使い始める前に確認すること。TeamとEnterpriseの違い、データの扱い、管理者の決め方</title>
-    <link href="https://vaynexis.jp/column/claude-business-setup"/>
-    <id>https://vaynexis.jp/column/claude-business-setup</id>
-    <published>2026-11-01T00:00:00+09:00</published>
-    <updated>2026-11-01T00:00:00+09:00</updated>
-    <summary>Claudeを会社で使い始める前に、法人向けのTeamとEnterpriseの違い、入力した内容がモデルの学習に使われるか、管理者とメンバーの招待・削除のしかたを、Anthropicの公式ページで確かめてまとめました。社内で決めること5つと確認表つき。</summary>
-  </entry>
-  <entry>
-    <title>請求書の下書きをAIで作るときの確認。インボイスの記載事項と、消費税額の端数の照合</title>
-    <link href="https://vaynexis.jp/column/ai-invoice-draft"/>
-    <id>https://vaynexis.jp/column/ai-invoice-draft</id>
-    <published>2026-11-01T00:00:00+09:00</published>
-    <updated>2026-11-01T00:00:00+09:00</updated>
-    <summary>請求書の下書きをChatGPTやClaudeに頼むときの確認を、国税庁の資料で確かめてまとめました。インボイスの記載事項6項目、消費税額の端数処理（1枚の請求書につき税率ごとに1回）の例、AIへの頼み方の作例、Excelの式での検算、送る前の確認表つきです。</summary>
-  </entry>
-  <entry>
-    <title>滋賀県でAIの相談ができる窓口。公的な支援機関と民間の相談先の使い分け</title>
-    <link href="https://vaynexis.jp/column/shiga-ai-consultation"/>
-    <id>https://vaynexis.jp/column/shiga-ai-consultation</id>
-    <published>2026-11-01T00:00:00+09:00</published>
-    <updated>2026-11-01T00:00:00+09:00</updated>
-    <summary>滋賀県内でAIやデジタル化の相談ができる公的な窓口（滋賀県よろず支援拠点、滋賀県産業支援プラザの窓口相談、滋賀県DX官民協創サロン、商工会議所のエキスパートバンク）の費用と条件を公式ページで確かめてまとめ、民間の相談先との使い分けと、相談の前に用意するものを紹介します。</summary>
-  </entry>
-  <entry>
-    <title>生成AIの社内ルールの作り方。最初に決める6項目と、参考にできる公的な資料</title>
-    <link href="https://vaynexis.jp/column/generative-ai-policy"/>
-    <id>https://vaynexis.jp/column/generative-ai-policy</id>
-    <published>2026-10-30T00:00:00+09:00</published>
-    <updated>2026-10-30T00:00:00+09:00</updated>
-    <summary>生成AIの社内ルール（利用ガイドライン）を作るときに最初に決める6項目と書き方の作例。経済産業省・総務省「AI事業者ガイドライン（第1.2版）」、JDLA「生成AIの利用ガイドライン」のひな形、個人情報保護委員会の注意喚起、ChatGPT・Claude の学習設定の違い（公式ヘルプで確認）つき。</summary>
-  </entry>
-  <entry>
-    <title>AIで文字起こしから議事録を作るときの注意点。録音の前と、議事録にする前の確認</title>
-    <link href="https://vaynexis.jp/column/ai-minutes-transcription"/>
-    <id>https://vaynexis.jp/column/ai-minutes-transcription</id>
-    <published>2026-10-30T00:00:00+09:00</published>
-    <updated>2026-10-30T00:00:00+09:00</updated>
-    <summary>会議の録音や文字起こしをAIで議事録にする前に確かめること。録音を伝える、社外秘と個人情報の扱い、使うAIの学習設定（OpenAI・Anthropic の公式ヘルプで確認）と、文字起こしで見る話者・固有名詞・数字・聞き取れない箇所。確認表つき。</summary>
-  </entry>
-  <entry>
-    <title>業務の洗い出し方。部署名ではなく「作業」で書く</title>
-    <link href="https://vaynexis.jp/column/task-listing"/>
-    <id>https://vaynexis.jp/column/task-listing</id>
-    <published>2026-10-30T00:00:00+09:00</published>
-    <updated>2026-10-30T00:00:00+09:00</updated>
-    <summary>業務の洗い出しで、1件をどの大きさで書くかの目安と、総務・経理・営業事務の作業の書き方の例、漏れやすい作業、担当者に聞くときの質問の例。洗い出したあとは、業務棚卸しチェックシートで1業務ずつ見ます。</summary>
-  </entry>
-  <entry>
-    <title>転記ミスの原因と防止策。件数・合計・重複の3つで照合する</title>
-    <link href="https://vaynexis.jp/column/data-entry-errors"/>
-    <id>https://vaynexis.jp/column/data-entry-errors</id>
-    <published>2026-10-30T00:00:00+09:00</published>
-    <updated>2026-10-30T00:00:00+09:00</updated>
-    <summary>転記ミスが起きる5つの型と、防ぎ方の2つの方向（写す回数を減らす・写したあとに照合する）。Excel の COUNTA・SUM・COUNTIF で件数・合計・重複を確かめる手順と、印刷して使える確認表。AIに転記を任せる場合の確認にも使えます。</summary>
   </entry>
 </feed>

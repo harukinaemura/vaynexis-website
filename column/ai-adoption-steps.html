@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小さな会社のAI導入の進め方｜業務の選定から試行後の判断まで｜Vaynexis</title>
+  <meta name="description" content="小さな会社が生成AIを事務に取り入れる際は、試す業務の選定から始めます。件数、誤りの影響、元の資料、人が確認できる範囲を比べ、入力する情報と担当者を決めて試す流れを整理。確認の手間と見つかった誤りを記録し、継続・見直し・中止を判断する方法を示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="小さな会社のAI導入の進め方｜業務の選定から試行後の判断まで｜Vaynexis">
+  <meta property="og:description" content="小さな会社が生成AIを事務に取り入れる際は、試す業務の選定から始めます。件数、誤りの影響、元の資料、人が確認できる範囲を比べ、入力する情報と担当者を決めて試す流れを整理。確認の手間と見つかった誤りを記録し、継続・見直し・中止を判断する方法を示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/ai-adoption-steps">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/ai-adoption-steps">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"小さな会社のAI導入の進め方｜業務の選定から試行後の判断まで","description":"小さな会社が生成AIを事務に取り入れる際は、試す業務の選定から始めます。件数、誤りの影響、元の資料、人が確認できる範囲を比べ、入力する情報と担当者を決めて試す流れを整理。確認の手間と見つかった誤りを記録し、継続・見直し・中止を判断する方法を示します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/ai-adoption-steps"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"小さな会社のAI導入の進め方","item":"https://vaynexis.jp/column/ai-adoption-steps"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">小さな会社のAI導入の進め方</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">小さな会社のAI導入の進め方｜業務の選定から試行後の判断まで</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>生成AIの導入は、結果を人が確かめられる業務に対象を絞り、扱う情報と確認担当を決めて試すところから始めます。試した後は、下書きの出来栄えだけでなく、準備・確認・修正の手間と見つかった誤りを見て、続けるか、範囲を変えて試すか、止めるかを判断します。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
+    <p>この記事は、生成AIを事務に取り入れようとする小さな会社の経営者・担当者が、試す業務の選び方から、試したあとに続ける・直す・やめるを判断するまでの流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">公的資料から押さえる、目的と評価の順序</a></li>
+      <li><a href="#s2">最初に試す業務は、確認できる範囲から選ぶ</a></li>
+      <li><a href="#s3">試す前に、情報・担当・中断の扱いを決める</a></li>
+      <li><a href="#s4">記録するのは、確認の手間と見つかった誤り</a></li>
+      <li><a href="#s5">続ける・試し直す・止めるを、記録から選ぶ</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．公的資料から押さえる、目的と評価の順序</h2>
+    <p>デジタル庁の生成AIの調達・利活用に関するガイドラインは、政府向けの資料です。企画時の対応事項では、生成AIで実現・解決したい目的の明確化と、適切な目標設定を挙げています。会社で進める際の参考になるのは、使う道具の検討に先立って、解決したい困りごとを言葉にする順序です。</p>
+    <p>IPAのサイトに掲載された『生成AIおよびAIエージェントを安全に活用するための手引書』は、機関を代表する意見ではなく、著者の見解に基づく文書です。同手引書は、本番稼働の前に、出力品質や安全性、利用目的への適合性を確認する考え方を示しています。導入を決めることと、日常業務に使える状態かを確かめることを分けて捉えます。</p>
+    <p>ここでは、公的資料を参照しながら、小さな会社で進める際の判断材料を整理します。政府向けの体制をそのまま当てはめるのではなく、対象業務、試す範囲、確認の負担を社内で説明できる状態を目指します。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．最初に試す業務は、確認できる範囲から選ぶ</h2>
+    <p>洗い出した業務の候補から、何を試すかを比べます。「忙しい仕事」だけを基準にせず、出力の正誤を見分ける資料が手元にあるか、誤りを見つけた後に修正できるかにも目を向けるとよいです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">選ぶ観点</th><th scope="col">試す候補として見たい状態</th><th scope="col">着手前に整理する点</th></tr></thead><tbody><tr><td data-label="選ぶ観点">件数・発生の頻度</td><td data-label="試す候補として見たい状態">試した結果を比べられる程度に、似た作業が発生する</td><td data-label="着手前に整理する点">特殊な案件に偏っていないか</td></tr><tr><td data-label="選ぶ観点">誤りの影響</td><td data-label="試す候補として見たい状態">社内で確認・修正してから次へ渡せる</td><td data-label="着手前に整理する点">誤りがそのまま社外へ届く工程がないか</td></tr><tr><td data-label="選ぶ観点">元の資料の有無</td><td data-label="試す候補として見たい状態">出力と照らし合わせる資料がそろっている</td><td data-label="着手前に整理する点">資料の不足と出力の誤りを区別できるか</td></tr><tr><td data-label="選ぶ観点">人が確かめられるか</td><td data-label="試す候補として見たい状態">内容を理解する担当者が確認を引き受けられる</td><td data-label="着手前に整理する点">確認する時間と担当が確保できるか</td></tr></tbody></table></div>
+    <p>表は候補を比べるための目安です。件数の多さだけで選ばず、確認を担当する人の見通しも含めて検討します。</p>
+    <p>初回に扱う範囲は、仕事の入口から出口まで任せる形にせず、下書きや整理までにとどめます。最後に人が何を受け取り、どの資料と比べ、どこで仕事を終えるのかが説明できる候補を選ぶ考え方です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．試す前に、情報・担当・中断の扱いを決める</h2>
+    <p>個人情報保護委員会のFAQでは、個人情報を含む入力は利用目的の達成に必要な範囲内か、個人データを含む入力は提供事業者が機械学習に利用しないかなどを、十分に確認する必要があるとしています。個人情報の取扱いに関する法的な判断は、公式資料を示して専門家に確認します。</p>
+    <p>試用では、個人情報や機密情報を含まない見本から着手する進め方を提案します。実際の資料をそのまま渡す前に、試す目的に必要な内容を切り分けます。社内で決めるのは、入力に使う資料の範囲、出力を確認する担当、業務へ使うかを判断する担当です。</p>
+    <p>中断の目安も先に書き残します。元の資料で確かめられない内容が混ざる、確認を引き受ける人がいない、扱う情報の範囲が曖昧になる、といった状態を、試行を止めて相談する目安にします。止めた後に従来の手順へ戻れる状態も用意しておくとよいです。</p>
+    <p>試行の終わりには、記録を見て社内で判断する機会を設けます。試す担当者だけの感想で継続を決めず、確認を担った人も判断に加わります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．記録するのは、確認の手間と見つかった誤り</h2>
+    <p>個人情報保護委員会の注意喚起は、入力への応答に不正確な内容が含まれることがあるとしています。試した記録には、出力の評価に加えて、確認・修正に何が必要だったかを残します。</p>
+    <p>手間は、入力前の資料の準備、出力の確認、修正、最終的な仕上げに分けて振り返ります。測定する際は、従来の作業と同じ範囲で比べることを提案します。下書きを受け取るまでと、確認を終えた成果物ができるまでを混同しないためです。</p>
+    <p>誤りの記録は、細かな検品項目の一覧に広げず、継続判断に使う内容に絞ります。抜けがあったのか、元の資料にない説明が加わったのか、修正に別の資料が必要だったのかを残す形です。個々の案件の内容を記録へ写しすぎず、判断の理由が分かる程度にまとめます。</p>
+    <pre class="prompt">試した範囲：社内向け案内文の下書きまで
+元の資料：個人情報・機密情報を含まない説明用の見本
+確認で見つかったこと：元の資料にない注意事項が加わっていた
+確認・修正の手間：資料との照合後、追加された箇所を削除した
+次の扱い：同じ範囲で再試行し、追加された記述の有無を見直す</pre>
+    <p>このメモだけで継続を決めるのではなく、他の試行分と合わせて、確認の負担や誤りの傾向を見ます。うまくいかなかった出力も、判断材料として残すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．続ける・試し直す・止めるを、記録から選ぶ</h2>
+    <p>記録を見直す際は、社内で確認を引き受けられる範囲かを起点にします。続ける方向で検討する材料は、元の資料と照合でき、修正の内容と負担を説明できることです。範囲の変更によって確かめやすくなる点は、次に試す課題として分けておきます。</p>
+    <p>元の資料に不足がある場合は、資料の整理後に試し直します。確認できない出力が残る場合は、業務での使用を保留する判断です。試行の記録には、採用した扱いと、その理由を並べて残します。</p>
+    <p>前述の安全な活用の手引書は、重大な問題が見つかった場合に、提供範囲の縮小やリリース延期などを検討するとしています。</p>
+    <h3 class="h3">全社へ広げる前に、試す範囲へ戻る</h3>
+    <p>以前に公開された『テキスト生成AIの導入・運用ガイドライン』では、小さな規模から始める考え方を示しています。対象者や業務を広げる前に、現在の範囲で確認と修正を回せるかを見直します。</p>
+    <p>次に試す範囲も、確認を担う人が引き受けられる広さにとどめます。入力する情報の範囲を曖昧にしたまま実データで試すことや、確認の担当が決まらないまま全社へ広げることは避ける、というのが当社の進め方の提案です。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">最初に試す業務と、下書きまでにとどめる範囲を明確にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">件数だけでなく、誤りの影響と確認のしやすさを比較したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力する情報の範囲を明確にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">出力を確認する担当と、利用を判断する担当を明確にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">試行を中断する目安と、従来の手順へ戻る方法を明確にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">準備・確認・修正の手間と、見つかった誤りを記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">継続・再試行・中止の判断と、その理由を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">30分の無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/8b8d1635-cea3-4d36-bb9a-bac732779d1e/5107818b/20260612_meeting_executive_guideline_02.pdf" rel="noopener" target="_blank">行政の進化と革新のための生成AIの調達・利活用に係るガイドライン（第2.0版）</a>：政府向けという対象範囲、企画時の目的・目標の設定。本体の該当箇所を確認</li>
+      <li><a href="https://www.ipa.go.jp/jinzai/ics/core_human_resource/final_project/2026/rcu1hd0000018kkn-att/rcu1hd0000019kwj.pdf" rel="noopener" target="_blank">生成AIおよびAIエージェントを安全に活用するための手引書</a>：著者の見解という位置付け、運用前の確認、重大な問題への対応。2026年7月の資料</li>
+      <li><a href="https://www.ppc.go.jp/all_fad_index/fad2-3-3-q1/" rel="noopener" target="_blank">クラウドサービスで提供されている生成AIサービスに関して個人データをプロンプトに入力するに当たり留意すべき点は何か。</a>：個人情報・個人データを含む入力時に確認する事項</li>
+      <li><a href="https://www.ppc.go.jp/files/pdf/230602_alert_generative_AI_service.pdf" rel="noopener" target="_blank">生成AIサービスの利用に関する注意喚起等</a>：応答に不正確な内容が含まれる可能性。2023年の資料として確認し、入力時の注意は上記FAQとも照合</li>
+      <li><a href="https://www.ipa.go.jp/jinzai/ics/core_human_resource/final_project/2024/f55m8k0000003spo-att/f55m8k0000003svn.pdf" rel="noopener" target="_blank">テキスト生成AIの導入・運用ガイドライン</a>：小さな規模から始める考え方。2024年7月の資料であり、現在の製品仕様や唯一の最新手順の根拠には使用しない</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-consulting-guide">中小企業向けAIコンサルの選び方（相談先を目的別に比較）</a></li>
+      <li><a href="/column/shiga-ai-consultation">滋賀県のAI相談窓口｜公的な支援機関と民間の相談先の使い分け</a></li>
+      <li><a href="/column/fukui-dx-support">福井県の中小企業のDX・AI導入に使える補助金と無料の相談先</a></li>
+      <li><a href="/column/what-is-generative-ai">生成AIとは</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方</a></li>
+      <li><a href="/column/hallucination-office">ハルシネーションとは</a></li>
+      <li><a href="/column/accounting-efficiency-review">経理の効率化の見直し方</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

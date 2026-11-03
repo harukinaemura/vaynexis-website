@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>業界の制度変更の追跡をAIに任せる手順｜台帳で原文の版と施行日を確かめる｜Vaynexis</title>
+  <meta name="description" content="業界の制度変更を継続して追うために、AIへ渡す公式資料と台帳、出させる更新案、人が確認する原文の版と施行日を整理します。公布日との取り違えや経過措置・適用除外の見落としを確認し、社内への案内を確定するまでの手順を、架空の台帳と指示文で示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="業界の制度変更の追跡をAIに任せる手順｜台帳で原文の版と施行日を確かめる｜Vaynexis">
+  <meta property="og:description" content="業界の制度変更を継続して追うために、AIへ渡す公式資料と台帳、出させる更新案、人が確認する原文の版と施行日を整理します。公布日との取り違えや経過措置・適用除外の見落としを確認し、社内への案内を確定するまでの手順を、架空の台帳と指示文で示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/regulation-tracking">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/regulation-tracking">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"業界の制度変更の追跡をAIに任せる手順。台帳で原文の版と施行日を確かめる","description":"業界の制度変更を継続して追うために、AIへ渡す公式資料と台帳、出させる更新案、人が確認する原文の版と施行日を整理します。公布日との取り違えや経過措置・適用除外の見落としを確認し、社内への案内を確定するまでの手順を、架空の台帳と指示文で示します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/regulation-tracking"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"業界の制度変更の追跡","item":"https://vaynexis.jp/ai/tasks/regulation-tracking"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">業界の制度変更の追跡</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">業界の制度変更の追跡をAIに任せる手順。台帳で原文の版と施行日を確かめる</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、集めた公式発表の要約と、追う制度の台帳の更新案を下書きとして任せます。人が確かめる中心は、原文の版と施行日です。変更前の記録を残し、公布日、経過措置、適用除外を原文に戻って照合したうえで、社内での対応は専門家に確認して判断します。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこのページの最後）</p>
+    <p>総務や管理の担当が所管官庁の発表を集めて部署へ知らせる際は、発表日を施行日と取り違えない確認が要ります。 e-Gov法令検索の2024年7月の案内には、廃止法令や新規制定未施行法令の検索などを拡充したと記されています（確認日：2026-11-03）。 求人票の明示に関するハローワークの案内も、令和6年4月1日以降の求人申込みから明示が必要になると、始まる時点を本文に書いています。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものでもありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（業界の制度変更の追跡）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（業界の制度変更の追跡）</h2>
+    <p>ここからは当社の整理です。 AIに任せる範囲は、渡した資料から変更点と根拠箇所を抜き出し、前回の台帳との差を並べるところまでです。新しい発表を見つけたことと、自社の対応が決まったことを分けて記録します。要約だけでは確定せず、読み取れない欄は確認待ちとして残す形にするとよいです。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>追う制度の候補、所管、対象の業種・地域と、調べる期間を記したメモ</li>
+      <li>公式発表と変更前後の原文の写し、原文のURL、取得日</li>
+      <li>制度名・所管・原文のURL・版・公布日・施行日・社内の担当・確認日を持つ既存の台帳</li>
+      <li>経過措置と適用除外の欄、前回の保留事項、社内での確認担当</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>公式発表の要約と、根拠に使った原文の箇所</li>
+      <li>既存の記録を残したまま比較できる台帳の更新案</li>
+      <li>公布日・施行日・適用開始日を分け、経過措置と適用除外を添えた確認メモ</li>
+      <li>原文と要約の食い違い、空欄、追加調査が要る事項の一覧</li>
+    </ul>
+    <p>次の表は、台帳から版と施行日の照合欄を抜き出した見本です。所管や原文のURL、担当などは台帳側に保持します。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">架空の制度名</th><th scope="col">原文の版</th><th scope="col">原文の施行日</th><th scope="col">要約の施行日</th><th scope="col">確認結果</th></tr></thead><tbody><tr><td data-label="架空の制度名">架空事業者届出制度</td><td data-label="原文の版">改定版</td><td data-label="原文の施行日">公布日の翌月初日</td><td data-label="要約の施行日">公布当日</td><td data-label="確認結果">日付が食い違うため確認待ち</td></tr><tr><td data-label="架空の制度名">架空設備報告制度</td><td data-label="原文の版">初版</td><td data-label="原文の施行日">公布日の翌日</td><td data-label="要約の施行日">公布日の翌日</td><td data-label="確認結果">施行日の記載は一致、適用条件は別途照合</td></tr><tr><td data-label="架空の制度名">架空取引記録制度</td><td data-label="原文の版">訂正版</td><td data-label="原文の施行日">対象区分ごとに別記</td><td data-label="要約の施行日">記載なし</td><td data-label="確認結果">区分別の原文確認が必要</td></tr></tbody></table></div>
+
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>追う範囲を決める：</b>対象の制度・所管・地域と確認の間隔を人が決め、公式の発表先を台帳に登録します。担当と確認予定も置き、未確認のまま残る項目を見えるようにするとよいです。</li>
+      <li><b>比較する原文を保存する：</b>前回と今回の原文を、URL・取得日・版が分かる形で保管します。既存の台帳は複製を渡し、AIに元のデータを直接書き換えさせません。</li>
+      <li><b>見本で試す：</b>版の違いと施行日の食い違いを人が把握した見本で、更新案を作らせます。要約と根拠箇所が対応し、不明な内容が別欄に出るかを確認する段階です。</li>
+      <li><b>更新候補を並べる：</b>資料ごとに新規・変更・訂正の候補を出させ、変更前後の値を併記します。記載が見つからない事項を「該当なし」に置き換えない形にします。</li>
+      <li><b>原文と照合する：</b>版と施行日を起点に、日付の意味、経過措置、適用除外を人が読み直します。要約と原文が違う場合は、原文の該当箇所と保留理由を残すとよいです。</li>
+      <li><b>人が確定し次回につなぐ：</b>必要な対応は専門家に確認し、確認済みの更新だけを担当者が台帳へ反映します。社内への案内は人が承認し、保留事項には次の確認先と担当を付けます。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>原文の版、施行日</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">原文の版、施行日</td><td data-label="見方">保存した原文の版と施行の記載を、更新案の値と照合します</td><td data-label="見落とすと">古い版や別の施行時点を前提に案内します</td></tr><tr><td data-label="確かめること">日付の種類</td><td data-label="見方">公布・施行・適用開始を別欄で確認します</td><td data-label="見落とすと">発表された日を対応開始の基準として扱います</td></tr><tr><td data-label="確かめること">経過措置</td><td data-label="見方">本文や附則、関連資料の記載と、移行中の扱いの欄を突き合わせます</td><td data-label="見落とすと">移行中の扱いが案内から抜けます</td></tr><tr><td data-label="確かめること">適用除外と対象区分</td><td data-label="見方">業種・規模・地域などの記載箇所を特定し、不明な区分を残します</td><td data-label="見落とすと">異なる対象区分の情報が混ざります</td></tr><tr><td data-label="確かめること">訂正と根拠箇所</td><td data-label="見方">所管の公式発表先を再確認し、訂正の有無と引用箇所を照合します</td><td data-label="見落とすと">訂正前の説明が更新案に残ります</td></tr><tr><td data-label="確かめること">確認の状態</td><td data-label="見方">確認日、担当、保留理由、次の確認先が対応しているか見ます</td><td data-label="見落とすと">確認待ちの情報が確定済みとして共有されます</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>自社に関係する制度の範囲と、追跡を続ける担当・間隔を決めます。</li>
+      <li>法律・税務・労務・会計上の適用や対応は、収集した公式資料を示して専門家に確認します。</li>
+      <li>経過措置や適用除外を自社の事情に当てはめる判断を、AIの要約だけで確定しない運用にします。</li>
+      <li>台帳への正式反映、社内案内の内容と送信時点は、人が承認します。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>架空事業者届出制度などの台帳と比較用資料を渡す際の指示文です。</p>
+    <pre class="prompt">目的は、追跡用台帳の更新案を作ることです。
+題材は架空事業者届出制度、架空設備報告制度、架空取引記録制度です。
+渡した台帳と公式資料役の比較用原文にあることだけを使います。
+元の台帳は変更せず、変更前と変更案を別欄に並べます。
+制度名、所管、原文のURL、版、公布日、施行日、適用開始日、
+経過措置、適用除外、社内の担当、確認日を欄にします。
+要約には根拠となる原文の箇所を付けます。
+要約と原文の日付が違う場合は、両方の記載を残します。
+不明な欄は推測せず「確認待ち」とし、自信のない所は別欄に出します。
+法的な適用や社内対応は決めず、人が確認する問いとして整理します。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、当社のAI（Claude）で作り、作る係と確かめる係を分けて、検査記録つきで納めます。AIの契約がなくてもお受けできます。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://laws.e-gov.go.jp/file/e-Gov%E6%B3%95%E4%BB%A4%E6%A4%9C%E7%B4%A2%E3%83%AA%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%A2%E3%83%AB%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B202407.pdf" rel="noopener" target="_blank">e-Gov法令検索 リニューアルのお知らせ</a>：過去の案内に記された検索対象の拡充。現行画面の操作説明には使っていません</li>
+      <li><a href="https://jsite.mhlw.go.jp/hokkaido-hellowork/list/iwamizawa/roudou_jyouken.html" rel="noopener" target="_blank">令和6年4月1日以降求人票に明示する労働条件が3点追加されます</a>：対象となる申込みの時点を明記した公的案内。改正内容の解説や現行制度の網羅的な説明には使っていません</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-research-summary">調べてまとめる：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/subsidy-deadline-tracking">補助金・助成金の締切の追跡</a></li>
+      <li><a href="/ai/tasks/contract-dates-list">契約書の期限と更新日の抽出と一覧化</a></li>
+      <li><a href="/column/ai-service-changes">ChatGPT・Claudeの変更記録</a></li>
+      <li><a href="/ai/tasks/law-source-summary">法令・官公庁の資料の原文取得と要点整理</a></li>
+      <li><a href="/ai/tasks/public-list-building">公開情報からの名簿・リスト作成</a></li>
+      <li><a href="/ai/tasks/competitor-research">競合・相場の調べもの</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>備品の発注をAIで下書きする手順｜品番・数量・単価をマスターと照合｜Vaynexis</title>
+  <meta name="description" content="備品や消耗品の補充依頼を、AIで発注の下書きにまとめる進め方です。商品マスターと照合する品番・数量・単価を軸に、色やサイズの取り違え、箱と個の混同を確かめます。渡す資料、確認表、指示文の作例を示し、代替品の採否や送信を人が判断する所まで整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="備品の発注をAIで下書きする手順｜品番・数量・単価をマスターと照合｜Vaynexis">
+  <meta property="og:description" content="備品や消耗品の補充依頼を、AIで発注の下書きにまとめる進め方です。商品マスターと照合する品番・数量・単価を軸に、色やサイズの取り違え、箱と個の混同を確かめます。渡す資料、確認表、指示文の作例を示し、代替品の採否や送信を人が判断する所まで整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/supplies-ordering">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/supplies-ordering">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"備品の発注をAIで下書きする手順。品番・数量・単価をマスターと照合","description":"備品や消耗品の補充依頼を、AIで発注の下書きにまとめる進め方です。商品マスターと照合する品番・数量・単価を軸に、色やサイズの取り違え、箱と個の混同を確かめます。渡す資料、確認表、指示文の作例を示し、代替品の採否や送信を人が判断する所まで整理します。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/supplies-ordering"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"備品の発注","item":"https://vaynexis.jp/ai/tasks/supplies-ordering"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">備品の発注</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">備品の発注をAIで下書きする手順。品番・数量・単価をマスターと照合</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、補充依頼と商品マスターを並べ、発注候補と食い違いの下書きを出すところを任せます。人が確かめる中心は、品番と数量、単価です。似た品番でも名称・色・サイズまで照合し、数量と単位を別々に見ます。合わない行は保留にし、発注の確定と送信は人が行います。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこのページの最後）</p>
+    <p>現場や事務所から届いた消耗品の補充依頼を、まとめて発注する場面を扱います。名称だけでまとめると規格の違いが埋もれるため、依頼に書かれた品番と、購入する商品の対応を確かめる流れにします。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（備品の発注）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（備品の発注）</h2>
+    <p>Microsoft の Dynamics 365 の操作例では、発注明細に商品、数量、価格などを記載すると説明しています（確認日：2026-11-03）。 Excel の XLOOKUP 関数は、範囲や配列を検索し、最初に見つかった一致に対応する項目を返します（確認日：2026-11-03）。 ここからは当社の整理です。 AIに依頼する範囲は、補充依頼を商品マスターと突き合わせ、発注候補と要確認の行に分ける下書きです。検索結果だけで同じ商品と断定せず、依頼の記載と照合先の値を併記させます。品番の補正、単位の換算、単価の採用は人が確認してから反映します。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>補充依頼の写し。依頼者、品番、名称・規格、希望数量と単位を残します。</li>
+      <li>商品マスターの抜粋。品番、名称・規格、購入単位、入り数を含めます。</li>
+      <li>承認済みの単価表や見積。単価の対象となる単位も添えます。</li>
+      <li>発注済み・納品待ちの一覧と、担当者が確認した在庫の状況。</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>依頼の記載とマスターの値を並べた発注候補。</li>
+      <li>品番、数量・単位、単価の食い違いを分けた確認欄。</li>
+      <li>照合に使った資料名と該当箇所。</li>
+      <li>資料不足や判断に迷う行の保留一覧。</li>
+    </ul>
+    <p>突合の見本です。単価は表記した購入単位あたりの架空の金額です。「記載は一致」の行も、発注済み分との重複や補充の要否まで承認した扱いにはしません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">依頼の品番・品名</th><th scope="col">依頼数量・単価</th><th scope="col">マスターの抜粋</th><th scope="col">確認の下書き</th></tr></thead><tbody><tr><td data-label="依頼の品番・品名">A-411 拭き取り布・白</td><td data-label="依頼数量・単価">2袋・300円／袋</td><td data-label="マスターの抜粋">A-410 白・袋・300円／袋</td><td data-label="確認の下書き">品番が違うため保留</td></tr><tr><td data-label="依頼の品番・品名">A-411 拭き取り布・青</td><td data-label="依頼数量・単価">1袋・300円／袋</td><td data-label="マスターの抜粋">A-411 青・袋・300円／袋</td><td data-label="確認の下書き">記載は一致</td></tr><tr><td data-label="依頼の品番・品名">B-520 ごみ袋・小</td><td data-label="依頼数量・単価">3個・240円／箱</td><td data-label="マスターの抜粋">B-520 小・箱・10個入り・240円／箱</td><td data-label="確認の下書き">個と箱の違いを確認</td></tr><tr><td data-label="依頼の品番・品名">C-630 養生テープ・幅広</td><td data-label="依頼数量・単価">4巻・210円／巻</td><td data-label="マスターの抜粋">C-630 幅広・巻・180円／巻</td><td data-label="確認の下書き">単価の違いを確認</td></tr><tr><td data-label="依頼の品番・品名">D-740 マーカー・黒</td><td data-label="依頼数量・単価">2本・120円／本</td><td data-label="マスターの抜粋">D-740 黒・本・120円／本</td><td data-label="確認の下書き">記載は一致</td></tr><tr><td data-label="依頼の品番・品名">E-850 清掃用スポンジ</td><td data-label="依頼数量・単価">1袋・200円／袋</td><td data-label="マスターの抜粋">E-850 標準・袋・200円／袋</td><td data-label="確認の下書き">記載は一致</td></tr></tbody></table></div>
+
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>照合元をそろえる：</b>使う商品マスターと単価表を人が選び、依頼の写しに対応づけます。使用する版もそろえます。</li>
+      <li><b>見本で試す：</b>品番の取り違え、単位の食い違い、単価の違いを含む見本を渡します。違いを別の欄に残せるか確かめます。</li>
+      <li><b>元データを保護する：</b>AIには写しを渡し、元の表を直接書き換えさせません。結果は別の下書きとして受け取ります。</li>
+      <li><b>根拠を並べて出す：</b>依頼値とマスターの値、照合元を併記させます。空欄や対応先が定まらない行は、推測で埋めず保留欄に出します。</li>
+      <li><b>食い違いを担当者に戻す：</b>確認表で照合し、品番や単位の訂正内容を依頼者と確認します。修正後も該当行を見直す流れです。</li>
+      <li><b>承認して送信する：</b>発注済み分と補充の要否を人が確かめ、承認した内容を送信します。保留行は確定分に混ぜません。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>品番と数量、単価</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">品番と数量、単価</td><td data-label="見方">依頼・下書き・マスター・承認済み単価表を行ごとに見比べます</td><td data-label="見落とすと">購入する品や金額が依頼と異なります</td></tr><tr><td data-label="確かめること">名称・色・サイズ</td><td data-label="見方">品番に対応する規格を照合し、似た名称だけでまとめていないか見ます</td><td data-label="見落とすと">用途に合わない規格が届きます</td></tr><tr><td data-label="確かめること">数量と購入単位</td><td data-label="見方">数量、箱・個・本などの単位、入り数を別々に照合します</td><td data-label="見落とすと">必要量に対して過不足が出ます</td></tr><tr><td data-label="確かめること">単価の対象と追加費用</td><td data-label="見方">単価の対象単位と、資料にある割引・送料の扱いを確認します</td><td data-label="見落とすと">承認時と請求時の金額に差が出ます</td></tr><tr><td data-label="確かめること">重複と補充の要否</td><td data-label="見方">同じ依頼、発注済み分、納品待ちと担当者の在庫確認を突き合わせます</td><td data-label="見落とすと">同じ補充を重ねて発注します</td></tr><tr><td data-label="確かめること">空欄と保留行</td><td data-label="見方">不明点が埋められていないか、保留が確定分に入っていないか見ます</td><td data-label="見落とすと">未確認の内容が発注に含まれます</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>似た規格や別の色を代替品として認めるか。</li>
+      <li>単位の食い違いをどう直し、補充量をどこまで認めるか。</li>
+      <li>単価の違いや追加費用を承認するか。</li>
+      <li>保留を解消して発注を確定し、送信するか。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>上の架空の表に添える指示文です。</p>
+    <pre class="prompt">目的は、現場の消耗品の補充依頼を発注候補の下書きにすることです。
+渡した表の依頼欄とマスター欄にある情報だけを使います。
+元の表は変更せず、別に下書きを出します。
+
+品番の対応、名称・規格、数量、単位、入り数、単価を照合します。
+出力欄は「依頼の記載／マスターの値／照合元／食い違い／人への確認事項／保留の理由」です。
+食い違いは品番、数量・単位、単価に分けて残します。
+品番の似た候補を見つけても、置き換えや行の合算は行いません。
+単位の自動換算、単価の採用、空欄の推測補完は行いません。
+自信のない所や資料が足りない所は保留の理由に出します。
+記載の一致と発注の承認を分け、送信は行いません。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://learn.microsoft.com/ja-jp/dynamics365/supply-chain/procurement/tasks/create-purchase-order" rel="noopener" target="_blank">発注書を作成する</a>：特定製品の操作例における発注明細の項目</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/xlookup-function" rel="noopener" target="_blank">XLOOKUP 関数</a>：最初に見つかった一致に対応する項目を返す動作</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-records">現場の記録：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/purchase-order">発注書の作成</a></li>
+      <li><a href="/ai/tasks/inventory-update-alert">在庫表の更新と発注点の警告</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/ai/tasks/daily-report-aggregation">日報・作業報告の転記と集計</a></li>
+      <li><a href="/ai/tasks/inspection-record-entry">点検記録の転記</a></li>
+      <li><a href="/ai/tasks/photo-organizing">写真の整理・命名・台帳への紐付け</a></li>
+      <li><a href="/ai/tasks/safety-documents">安全書類の下書き</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

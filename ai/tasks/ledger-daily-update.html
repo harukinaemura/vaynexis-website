@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台帳の日次更新と差分の報告をAIに任せる手順｜前回との差と欠測の確認｜Vaynexis</title>
+  <meta name="description" content="台帳の日次更新で、AIに渡す資料、差分表の作り方、人が確かめる点を整理します。前回の台帳を保存し、追加・削除・変更・変化なしを分けて確認。今日あるはずの行や項目の欠測も拾い、元のデータを直接書き換えずに、更新案と差分報告の下書きを点検する手順です。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="台帳の日次更新と差分の報告をAIに任せる手順｜前回との差と欠測の確認｜Vaynexis">
+  <meta property="og:description" content="台帳の日次更新で、AIに渡す資料、差分表の作り方、人が確かめる点を整理します。前回の台帳を保存し、追加・削除・変更・変化なしを分けて確認。今日あるはずの行や項目の欠測も拾い、元のデータを直接書き換えずに、更新案と差分報告の下書きを点検する手順です。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/ai/tasks/ledger-daily-update">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/ai/tasks/ledger-daily-update">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"台帳の日次更新と差分の報告をAIに任せる手順。前回との差と欠測の確認","description":"台帳の日次更新で、AIに渡す資料、差分表の作り方、人が確かめる点を整理します。前回の台帳を保存し、追加・削除・変更・変化なしを分けて確認。今日あるはずの行や項目の欠測も拾い、元のデータを直接書き換えずに、更新案と差分報告の下書きを点検する手順です。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/ai/tasks/ledger-daily-update"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"AIコンサルティング","item":"https://vaynexis.jp/ai"},{"@type":"ListItem","position":3,"name":"AIでできる仕事64項目","item":"https://vaynexis.jp/ai/tasks"},{"@type":"ListItem","position":4,"name":"台帳の日次更新と差分の報告","item":"https://vaynexis.jp/ai/tasks/ledger-daily-update"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai/tasks">AIでできる仕事64項目</a></li><li aria-current="page">台帳の日次更新と差分の報告</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">台帳の日次更新と差分の報告をAIに任せる手順。前回との差と欠測の確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>AIには、保存した前回の台帳と今回の更新案を比べ、差分表と確認待ちの一覧を作るところまで任せます。人が確かめる中心は、前回との差と欠測の検出です。行の増減だけでなく、届いていない入力や空欄への変化も見て、更新の確定と報告の送信を判断します。</p></div>
+    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこのページの最後）</p>
+    <p>案件の進捗を台帳へ反映する事務では、更新後に変化の説明が求められます。件数が合っていても、日付の消失や入力の未着を見落とす場合があるため、更新前後を残して確かめることが大切です。</p>
+    <p class="notice">表・指示文・数字は説明のための架空の例で、実在の会社の話ではなく、AIが実際にそう答えることを示すものではありません。</p>
+  </div></header>
+
+  <nav aria-label="このページの内容"><div class="wrap">
+    <ol>
+      <li><a href="#what">AIに任せること（台帳の日次更新と差分の報告）</a></li>
+      <li><a href="#steps">AIでの進め方</a></li>
+      <li><a href="#checks">確かめる点</a></li>
+      <li><a href="#human">人が判断する所</a></li>
+      <li><a href="#prompt">AIへの指示文の作例</a></li>
+      <li><a href="#consult">当社に相談するとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="what" aria-labelledby="what-title"><div class="wrap">
+    <h2 class="h2" id="what-title">1．AIに任せること（台帳の日次更新と差分の報告）</h2>
+    <p>Excelの［変更］ウィンドウには、特定の編集の以前の値が表示されない場合があります（確認日：2026-11-03）。 また、データの入力規則では、コピーやオートフィルによる入力時にメッセージは表示されません（確認日：2026-11-03）。 AIには更新案と差分表の下書きを作らせます。案件番号で行を対応づけ、追加・削除・変更・変化なしに分類する役割です。元の行と列、変更前後の値を添え、入力不足や曖昧な所は確認待ちに分けます。</p>
+    <p><b>渡すもの</b></p>
+    <ul>
+      <li>前回確定時の台帳のコピーと、今回の更新に使う入力資料</li>
+      <li>行を識別する案件番号と、比較する列の説明</li>
+      <li>対象範囲・締め時点・版、および今回入力が届く予定の一覧</li>
+      <li>空欄・未着・ゼロの扱いと、削除や更新を認める社内の基準</li>
+    </ul>
+    <p><b>AIが出すもの</b></p>
+    <ul>
+      <li>元の台帳とは別に作る更新案</li>
+      <li>案件番号、区分、変更した列、前後の値、入力元を載せた差分表</li>
+      <li>行の未着や必要な項目の空欄をまとめた欠測・確認待ち一覧</li>
+      <li>前回と今回の行数、増減の内訳、処理できなかった範囲の報告用メモ</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="steps" aria-labelledby="steps-title"><div class="wrap">
+    <h2 class="h2" id="steps-title">2．AIでの進め方</h2>
+    <ol>
+      <li><b>前回の状態を残す：</b>確定済み台帳を別名で保存し、対象範囲と締め時点を記録します。比較元を更新途中の台帳で置き換えない運用にします。</li>
+      <li><b>比較の基準をそろえる：</b>案件番号と比較列、入力が届く予定の範囲を決めます。値が空欄でもよい場面と、入力不足として扱う場面を区別するとよいです。</li>
+      <li><b>見本で試す：</b>追加・削除・値の変更・空欄化を含む見本で、想定した分類が出るかを人が確認します。同じ入力を再処理して、二重追加や不要な上書きが起きないかも点検します。</li>
+      <li><b>更新案と差分を出す：</b>AIに元のデータを直接書き換えさせず、更新案を別に作らせます。前回と更新案の比較に加え、届く予定の入力と実際に届いた入力の差も出す流れです。</li>
+      <li><b>差分と欠測を照らす：</b>人が入力元へ戻り、行の増減、値の変更、空欄になった項目を確認します。今回もあるはずなのに見当たらない行は、削除候補と欠測候補の両面から調べます。</li>
+      <li><b>確定後に報告を合わせる：</b>人が承認した内容を台帳へ反映し、確定後の台帳で差分を取り直します。報告の件数はその差分表から引き、保留・失敗を処理済みと混ぜずに残します。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="checks" aria-labelledby="checks-title"><div class="wrap">
+    <h2 class="h2" id="checks-title">3．確かめる点</h2>
+    <p>検査の中心は、<b>前回との差、欠測の検出</b>です（当社の「できること64項目」の記載）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">見方</th><th scope="col">見落とすと</th></tr></thead><tbody><tr><td data-label="確かめること">前回との差、欠測の検出</td><td data-label="見方">前後の値と入力予定を照合し、消えた行や空欄化した項目を拾う</td><td data-label="見落とすと">未着や空欄が更新済みとして報告される</td></tr><tr><td data-label="確かめること">比較元の範囲と版</td><td data-label="見方">対象範囲・締め時点・確定済みの版をそろえる</td><td data-label="見落とすと">別の時点の値が差分に混ざる</td></tr><tr><td data-label="確かめること">案件番号の対応</td><td data-label="見方">番号の重複や欠落を調べ、行の並び順で対応づけていないかを見る</td><td data-label="見落とすと">別案件の変更として扱われる</td></tr><tr><td data-label="確かめること">行数と区分の整合</td><td data-label="見方">前回＋追加−削除＝今回を確かめ、変更と変化なしも集計する</td><td data-label="見落とすと">分類漏れや重複が報告に残る</td></tr><tr><td data-label="確かめること">値が同じ行の入力到着</td><td data-label="見方">変化なしの行も入力元と照合し、前回の値の持ち越しかを確認する</td><td data-label="見落とすと">今回の入力不足が見えないままになる</td></tr><tr><td data-label="確かめること">再処理と確定後の一致</td><td data-label="見方">同じ入力で増減が重ならないか、確定台帳と報告が合うかを見る</td><td data-label="見落とすと">二重追加や未反映の値が残る</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="human" aria-labelledby="human-title"><div class="wrap">
+    <h2 class="h2" id="human-title">4．人が判断する所</h2>
+    <ul>
+      <li>消えた行を削除として確定するか、未着・抽出漏れとして保留するか</li>
+      <li>空欄を許容するか、担当者へ確認して更新を止めるか</li>
+      <li>金額や予定日の変更を承認するか、入力元の訂正を待つか</li>
+      <li>更新案を確定台帳へ反映し、差分報告を誰に送るか</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="prompt" aria-labelledby="prompt-title"><div class="wrap">
+    <h2 class="h2" id="prompt-title">5．AIへの指示文の作例</h2>
+    <p>架空の案件台帳と更新用資料、入力予定一覧を添える指示文です。</p>
+
+    <p>架空の案件台帳は前日が10行、今日が11行という設定です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">区分</th><th scope="col">案件番号</th><th scope="col">前日から今日への差</th><th scope="col">行数</th></tr></thead><tbody><tr><td data-label="区分">追加</td><td data-label="案件番号">P11・P12</td><td data-label="前日から今日への差">前日はなく、今日の台帳に存在</td><td data-label="行数">2</td></tr><tr><td data-label="区分">削除</td><td data-label="案件番号">P10</td><td data-label="前日から今日への差">前日は存在し、今日の台帳にはない</td><td data-label="行数">1</td></tr><tr><td data-label="区分">変更</td><td data-label="案件番号">P03</td><td data-label="前日から今日への差">金額が50,000円から55,000円へ変化</td><td data-label="行数">1</td></tr><tr><td data-label="区分">変更・欠測候補</td><td data-label="案件番号">P06</td><td data-label="前日から今日への差">予定日が入力済みから空欄へ変化</td><td data-label="行数">1</td></tr><tr><td data-label="区分">変化なし</td><td data-label="案件番号">P01・P02・P04・P05・P07・P08・P09</td><td data-label="前日から今日への差">比較対象の値が同じ</td><td data-label="行数">7</td></tr></tbody></table></div>
+    <pre class="prompt">案件台帳の更新案と差分報告の下書きを作ります。
+元の台帳は書き換えず、資料にあることだけを使う方針です。
+案件番号を行の識別に使い、金額・予定日・進捗を比較します。
+まず前日版から今日の更新案を別に作り、前日版と比較します。
+差分表の区分は「追加・削除・変更・変化なし」です。
+案件番号、変更した列、前後の値、入力元の行を載せます。
+前日版だけにある行は削除候補とし、削除の確定は人に残します。
+入力予定と到着済み資料も比べ、未着の行と必要項目の空欄を別欄に出します。
+空欄・未着・ゼロは区別し、前回の値で推測して埋めない扱いです。
+重複した案件番号、自信のない対応、不明な変更理由は確認待ち欄に出します。
+前回＋追加−削除＝今回の件数を示し、変更・変化なしも集計します。
+再処理で重複が生じそうな所や処理不能な範囲も記載します。
+報告用メモは差分表を根拠にし、保留事項を分けます。</pre>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．当社に相談するとき</h2>
+    <p>この仕事は、手順書と検査を当社が設計し、お手元のAIで回していただく形が基本です。</p>
+    <p>どの業務から始めるか迷う場合も、<a href="/contact#soudan">滋賀の中小企業向けAI相談（30分の無料相談）</a>をご利用ください。料金は<a href="/price">料金のページ</a>に載せています。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連するページ"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-help-with-show-changes-in-excel" rel="noopener" target="_blank">Excel で変更を表示してヘルプを取得する</a>：特定の編集で以前の値が表示されない場合があること</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/more-on-data-validation" rel="noopener" target="_blank">データの入力規則の詳細</a>：コピーやオートフィルによる入力時のメッセージの制約</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai/tasks/field-data-cleanup">整える・調べる：この分野の入口ページ</a></li>
+      <li><a href="/ai/tasks/table-reconciliation">複数の表の突合（重複・欠落の検出）</a></li>
+      <li><a href="/ai/tasks/daily-report-aggregation">日報・作業報告の転記と集計</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/ai/tasks/paper-pdf-to-ledger">紙・PDFの読み取りと台帳化</a></li>
+      <li><a href="/ai/tasks/table-reconciliation">複数の表の突合（重複・欠落の検出）</a></li>
+      <li><a href="/ai/tasks/notation-unification">表記ゆれの統一（住所・社名・日付）</a></li>
+      <li><a href="/ai/tasks/contract-dates-list">契約書の期限と更新日の抽出と一覧化</a></li>
+      <li><a href="/ai/tasks">AIでできる仕事64項目の一覧</a></li>
+      <li><a href="/ai#can">AIコンサルティング：できること64項目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
