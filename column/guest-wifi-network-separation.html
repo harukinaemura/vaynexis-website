@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>バッファローのゲストポートで来客用Wi-Fiを業務用と分ける設定と確認｜Vaynexis</title>
+  <meta name="description" content="バッファローのWi-Fiルーターで、来客のインターネット接続を業務用から分けたい事務担当者に向けて、対応機種の確認、接続者の認証を使う設定、案内の渡し方、設定後の確認を整理します。中継環境の制限も押さえ、接続できたことと社内に届かないことを分けて確認する流れを紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="バッファローのゲストポートで来客用Wi-Fiを業務用と分ける設定と確認｜Vaynexis">
+  <meta property="og:description" content="バッファローのWi-Fiルーターで、来客のインターネット接続を業務用から分けたい事務担当者に向けて、対応機種の確認、接続者の認証を使う設定、案内の渡し方、設定後の確認を整理します。中継環境の制限も押さえ、接続できたことと社内に届かないことを分けて確認する流れを紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/guest-wifi-network-separation">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/guest-wifi-network-separation">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"バッファローのゲストポートで来客用Wi-Fiを業務用と分ける設定と確認","description":"バッファローのWi-Fiルーターで、来客のインターネット接続を業務用から分けたい事務担当者に向けて、対応機種の確認、接続者の認証を使う設定、案内の渡し方、設定後の確認を整理します。中継環境の制限も押さえ、接続できたことと社内に届かないことを分けて確認する流れを紹介します。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/guest-wifi-network-separation"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"バッファローのゲストポートで来客用Wi-Fiを業務用と分ける","item":"https://vaynexis.jp/column/guest-wifi-network-separation"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">バッファローのゲストポートで来客用Wi-Fiを業務用と分ける</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">バッファローのゲストポートで来客用Wi-Fiを業務用と分ける設定と確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>来客の接続を業務用から分けるには、対応機種のゲストポートを使い、来客にはインターネットだけを利用する接続先を案内します。設定した画面を確認するだけでなく、来客側から社内の機器へ届かないことまで確かめてから案内を渡すとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、バッファローのWi-Fiルーターで来客用の接続を業務用と分けたい小さな会社の事務担当者が、ゲストポートの設定と、社内に届かないことの確かめ方を整理するためのものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">対応機種と管理画面の入口を確かめる</a></li>
+      <li><a href="#s2">認証を使う設定は登録から有効化へ進める</a></li>
+      <li><a href="#s3">来客への案内と社内の控えを分ける</a></li>
+      <li><a href="#s4">接続できたことと分離できたことを別々に確かめる</a></li>
+      <li><a href="#s5">中継機の近くでも使えるとは限らない</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．対応機種と管理画面の入口を確かめる</h2>
+    <p>確認日：2026-11-03</p>
+    <p>対象はバッファローのゲストポート対応機種で、公式FAQの末尾にある対象商品の表示から確認します。手元の機器の型番を控え、管理を担当する人と照らし合わせてから設定に入ります。別の機器にある似た名前の設定へ、そのまま手順を当てはめることは避けます。</p>
+    <p>設定項目の名称は、機種やファームウェアのバージョンによって異なる場合があります。同じ位置にボタンが見当たらないときは、画面の見た目だけで選ばず、手元の機器の説明と項目名を照合する進め方がよいです。</p>
+    <p>設定画面へ入るパスワードと、無線接続に使うパスワードは異なります。来客に案内する情報と管理者が扱う情報は、作業を始める時点で分けておきます。管理情報を来客向けの案内に転記せず、設定を変更できる人が管理画面を開く役割を担います。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．認証を使う設定は登録から有効化へ進める</h2>
+    <p>管理担当者が設定画面を開き、接続する人の登録から設定の反映まで進めます。</p>
+    <h3 class="h3">設定画面を開き、接続者を登録する</h3>
+    <p>対象の設定画面で［詳細設定］から［Wi-Fi（無線）設定］、［ゲストポート］へ進みます。管理担当者が対象の機器を確認したうえで操作すると、別の機器の設定との取り違えを防ぐ確認になります。</p>
+    <p>［ゲストユーザーの編集］を開き、ゲストユーザーを設定して［新規追加］で登録します。</p>
+    <h3 class="h3">登録後に認証と接続条件を整える</h3>
+    <p>登録後は［編集を終了して前の画面へ戻る］を選び、ゲストポート機能とゲストユーザー認証機能を「使用する」に設定します。利用可能時間やSSIDを必要に応じて設定し、最後に「設定」を選んで反映します。</p>
+    <p>暗号化設定や利用可能時間を変更する入口は、「ゲストポート」のパネルです。認証の有効化だけを作業の終点にせず、通信の保護も管理担当者の確認項目に入れます。来客への案内を作る前に、社内で決めた接続条件と画面上の設定を照合する流れです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．来客への案内と社内の控えを分ける</h2>
+    <p>受付で渡す案内は、来客が接続するために必要な内容に絞ります。管理者だけが使う情報まで同じ紙にまとめると、渡す相手を区別しにくくなります。引き継ぎ用の控えには、接続情報そのものを広く共有するより、情報の保管先と問い合わせ先を残す形がよいです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">場面</th><th scope="col">来客への案内</th><th scope="col">社内だけで持つ控え</th></tr></thead><tbody><tr><td data-label="場面">受付で案内を渡す</td><td data-label="来客への案内">来客向けの接続先と接続方法</td><td data-label="社内だけで持つ控え">案内を更新する担当者</td></tr><tr><td data-label="場面">接続について質問を受ける</td><td data-label="来客への案内">困ったときの連絡先</td><td data-label="社内だけで持つ控え">管理担当者への取り次ぎ方法</td></tr><tr><td data-label="場面">利用が終わる</td><td data-label="来客への案内">終了時の扱い</td><td data-label="社内だけで持つ控え">接続を終了させる担当と確認方法</td></tr><tr><td data-label="場面">別の担当へ引き継ぐ</td><td data-label="来客への案内">更新済みの案内</td><td data-label="社内だけで持つ控え">設定の確認日と確認した場所</td></tr></tbody></table></div>
+    <p>表は運用を整理する例です。案内に載せる接続先や秘密の情報の実値は、ここには記載していません。配布用の案内と管理用の控えは保管先も分け、古い案内が受付に残らないよう、更新時に差し替える担当を決めておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．接続できたことと分離できたことを別々に確かめる</h2>
+    <p>確認は、来客側の接続を使う状態で行います。普段の業務用の接続が残ったままでは、どちらの経路で確認したのか分かりにくくなるためです。確認用の端末と確認する場所を管理担当者が決め、操作した内容と結果を控えます。</p>
+    <p>まず、来客向けに案内する接続で外部のページが開くかを見ます。続いて、社内だけで使う保存先や機器へ届かないかを、管理担当者が許可した確認方法で調べます。外部のページが開いたという結果だけで、分離まで確認した扱いにしないことが大切です。</p>
+    <p>社内側へ届く結果になった場合は、来客への案内を止め、接続先の選択と機器の設定を管理担当者に確認します。逆に、何も開かない場合も、分離ができたという結論にはせず、来客向けの接続自体が使えているかを先に切り分けます。</p>
+    <p>終了時の扱いも社内の確認項目に入れます。受付では案内を渡せても終了操作は別の人しか行えない、といった役割の空白を残さず、設定した人から案内を渡す人へ確認結果を引き継ぐ形がよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．中継機の近くでも使えるとは限らない</h2>
+    <p>バッファローの説明では、親機のゲスト用SSIDは中継機に中継されず、来客は親機に接続する形になります。受付でつながっていても、案内する部屋で使えるかは別に確認する必要があります。</p>
+    <p>中継機として動作するWi-Fiルーターでは原則としてゲストポートを使えませんが、WHR-1166DHP2とWHR-1166DHP3は例外として利用できます。</p>
+    <p>担当者への引き継ぎでは、使える機能の有無だけでなく、どの機器をどの役割で使っているかも控えます。場所によって接続できないときに、来客を業務用の接続へ切り替えて済ませず、利用場所と接続先を管理担当者が見直す流れを決めておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">手元の機器の型番を公式の対象商品と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">管理者向けの情報と来客へ渡す情報を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">接続する人の登録から設定の反映まで確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">通信の保護と利用を終える際の扱いを管理担当者と確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">来客側から外部へ接続でき、社内側には届かないかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">来客が利用する場所と、中継を含む機器の役割を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">案内の更新担当と、接続できないときの問い合わせ先を確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.buffalo.jp/support/faq/detail/12273.html" rel="noopener" target="_blank">ゲストポートとは何ですか/どの商品がゲストポートに対応していますか</a>：分離の範囲、対象商品の確認、中継時の制限と例外機種</li>
+      <li><a href="https://www.buffalo.jp/support/faq/detail/15962.html" rel="noopener" target="_blank">ゲストポートの設定方法/来訪者向けの無線設定を行う方法</a>：画面名の違い、接続者の登録、機能の有効化、接続条件の設定</li>
+      <li><a href="https://www.buffalo.jp/support/faq/detail/129.html" rel="noopener" target="_blank">Wi-Fiルーターの設定画面を表示する方法（Windows）</a>：管理画面用と無線接続用のパスワードの区別</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作る方法｜記入例と確認点</a></li>
+      <li><a href="/column/parking-permit-application-fields">駐車場利用申請書には何を書く？登録車両・使用区画・利用期間の欄</a></li>
+      <li><a href="/column/prtimes-import-list-delivery-check">PR TIMESで自社の配信先にプレスリリースが届かないときの確認先と記録</a></li>
+      <li><a href="/column/security-self-assessment-evidence-records">情報セキュリティ自社診断表は何を確かめる？回答根拠の残し方</a></li>
+      <li><a href="/column/company-smartphone-identifier-check">社用スマホの端末と回線を取り違えず識別番号を調べる事務の手順</a></li>
+      <li><a href="/column/google-backup-codes-storage">認証用スマホが使えない日に備える予備コードの保管と更新の手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

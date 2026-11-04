@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopifyの配送先変更｜注文の特定から住所の保存・確認まで｜Vaynexis</title>
+  <meta name="description" content="注文後に届け先の変更依頼が届いたとき、どの注文を開き、どの住所を直すかを整理します。依頼内容との照合、編集に必要な権限、保存までの操作、住所の警告への対応、担当者への引き継ぎをまとめ、変更対象を取り違えないための確認項目を示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Shopifyの配送先変更｜注文の特定から住所の保存・確認まで｜Vaynexis">
+  <meta property="og:description" content="注文後に届け先の変更依頼が届いたとき、どの注文を開き、どの住所を直すかを整理します。依頼内容との照合、編集に必要な権限、保存までの操作、住所の警告への対応、担当者への引き継ぎをまとめ、変更対象を取り違えないための確認項目を示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/shopify-order-shipping-address-change">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/shopify-order-shipping-address-change">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Shopifyの配送先変更｜注文の特定から住所の保存・確認まで","description":"注文後に届け先の変更依頼が届いたとき、どの注文を開き、どの住所を直すかを整理します。依頼内容との照合、編集に必要な権限、保存までの操作、住所の警告への対応、担当者への引き継ぎをまとめ、変更対象を取り違えないための確認項目を示します。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/shopify-order-shipping-address-change"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Shopifyの配送先変更","item":"https://vaynexis.jp/column/shopify-order-shipping-address-change"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Shopifyの配送先変更</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Shopifyの配送先変更｜注文の特定から住所の保存・確認まで</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>変更するのは、依頼の対象となる個別注文の配送先住所で、Shopifyの注文画面から編集できます。依頼内容と注文番号を照合し、発送状況を確かめてから対象を絞ります。保存後も同じ注文を開いて、届け先と引き継ぎ内容を確認するとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、Shopifyで注文後に届け先の変更を受けた小さな会社の担当者が、対象の注文を特定して配送先住所を直し、保存後の表示を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">依頼の対象を注文番号で絞る</a></li>
+      <li><a href="#s2">編集権限を確かめ、注文の住所を保存する</a></li>
+      <li><a href="#s3">住所の警告や発送状況を見落とさない</a></li>
+      <li><a href="#s4">受付の控えを小さな表にする</a></li>
+      <li><a href="#s5">保存後は依頼内容と照合して区切る</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．依頼の対象を注文番号で絞る</h2>
+    <p>変更依頼を受けたら、まず注文番号と変更後の届け先をそろえます。同じお客様から複数の注文が入っている場合、氏名だけでは対象が曖昧になります。依頼文にある購入商品や注文時の連絡先も照合材料にし、今回変更する注文を絞る流れです。</p>
+    <p>注文番号、顧客名、メールアドレス、商品の詳細を使った注文の検索に加え、フルフィルメント状況などによる絞り込みができます。</p>
+    <p>依頼の範囲が分からない場合は、今回の荷物だけか、今後の送り先も含むかをお客様に確かめます。複数の注文への一括した依頼でも、変更対象を注文ごとに書き出しておくと、処理する範囲を共有しやすくなります。</p>
+    <p>お客様プロフィールの住所を編集する操作も、公式ヘルプに別途用意されています。依頼の受付では、注文の変更と顧客情報の整備を分けて扱い、顧客情報の修正だけで今回の対応を終えないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．編集権限を確かめ、注文の住所を保存する</h2>
+    <p>この記事の操作名・権限・機能の説明は、公式ヘルプを確認した時点のものです（確認日：2026-11-04）。画面上の表示と見比べながら進めます。</p>
+    <p>配送先住所を編集するには、注文情報の管理、注文の編集、または注文をフルフィルメントして配送する権限が必要です。操作項目が見つからないときは、別の担当者の権限を借りて進めず、管理者に自分の担当範囲を確認する流れにします。</p>
+    <h3 class="h3">変更する注文を開く</h3>
+    <p>管理画面の「注文」へ移動し、編集する注文をクリックします。開いた注文が依頼の対象かを見直し、対象が違っていれば入力前に戻ります。</p>
+    <h3 class="h3">届け先を入力して保存する</h3>
+    <p>「お客様」セクションでアイコンをクリックし、「配送先住所を編集する」をクリックして、住所の項目を更新します。転記の際は、依頼文と入力欄を見比べて、郵便番号から建物名・部屋番号までの抜けを確かめます。</p>
+    <p>入力内容を確認したら「保存」をクリックします。保存後の確認は、入力中の表示を見た記憶に頼らず、同じ注文を開き直して行う手順にします。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．住所の警告や発送状況を見落とさない</h2>
+    <p>配送先住所の変更時に、住所の検証や税の調整の確認を求められる場合があります。税務上の判断が必要な場合は、参照先の公式資料を示して専門家に確認します。</p>
+    <p>住所の検証では、サポート対象外の国の注文も確認されますが、具体的な住所の提案が少ない場合があります。検証の問題をどう解決するか分からないときは、発送の処理前にお客様へ住所を確認するよう公式ヘルプに案内があります。</p>
+    <p>注文一覧のデフォルトのビュー「未発送」は、フルフィルメント状況が未発送と一部発送済みの注文に絞り込む設定です。一覧の表示だけで判断せず、変更対象の荷物がすでに発送されていないかを担当者と照合する運用にします。住所の入力と、出荷担当者による手配の確認は分けて記録するとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．受付の控えを小さな表にする</h2>
+    <p>ここからは当社の整理です。次の表は、依頼と変更対象を対応させるための記入例です。画面の入力欄を再現したものではありません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">控えの項目</th><th scope="col">記入例</th></tr></thead><tbody><tr><td data-label="控えの項目">対象の注文</td><td data-label="記入例">依頼文に記載された注文番号</td></tr><tr><td data-label="控えの項目">変更の範囲</td><td data-label="記入例">今回の注文の届け先のみ</td></tr><tr><td data-label="控えの項目">変更後の住所</td><td data-label="記入例">お客様から受け取った住所を照合</td></tr><tr><td data-label="控えの項目">発送状況</td><td data-label="記入例">出荷担当者へ確認中</td></tr><tr><td data-label="控えの項目">処理の状態</td><td data-label="記入例">注文の住所を保存し、内容を照合済み</td></tr><tr><td data-label="控えの項目">残る対応</td><td data-label="記入例">出荷担当者からの確認待ち</td></tr></tbody></table></div>
+    <p>表のように、住所を保存した状態と、関係者の確認が終わった状態を分けます。「変更済み」だけでは、どこまで進んだかが読み取れません。対象の注文、済んだ作業、返事を待つ相手を短く残すと、引き継ぎ時の確認先が明確になります。</p>
+    <p>共有用の控えでは、元の依頼をたどれるようにし、住所の全文を必要以上に複製しない運用も考えられます。連絡の履歴と作業状況が対応していれば、担当が替わっても依頼の範囲から確認を再開できます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．保存後は依頼内容と照合して区切る</h2>
+    <p>確認の終点は、保存操作だけでなく、依頼された注文に依頼どおりの届け先が表示されていることです。注文番号と届け先を並べて確認し、建物名などが依頼文と食い違う場合は、自己判断で補わず確認へ戻します。</p>
+    <p>お客様への返答にも、確認できた範囲を書きます。注文の住所を更新したことと、出荷側の確認が済んだことを分け、返事待ちの対応を完了扱いにしない形です。担当者の控えとお客様への返答の範囲がそろっているかも見直すとよいです。</p>
+    <p>依頼を受けた後に出荷作業が進むことも考慮し、受付時の確認と保存直前の確認を分けておきます。作業中に担当が交代する場合は、どの時点の状況を確かめたかを残し、引き継いだ担当者が最新の状態を確認する流れにします。</p>
+    <p>途中で対象の注文が変わったり、追加の住所変更が届いたりした場合は、受付時の控えを見直します。古い依頼の処理をそのまま続けず、どの依頼を基準に更新するかを関係者とそろえてから再開します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">依頼文と注文番号を照合し、変更する注文を特定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">今回だけの変更か、今後の送り先も含むかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更対象の荷物の発送状況を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">住所に不足や曖昧な箇所がある場合の確認先を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">保存後の注文を開き直し、届け先を依頼内容と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">済んだ作業と確認待ちの対応を分けて記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">お客様への返答と担当者への引き継ぎの範囲をそろえたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://help.shopify.com/ja/manual/fulfillment/managing-orders/viewing-orders" rel="noopener" target="_blank">注文の表示と絞り込み</a>：注文番号・顧客名・メールアドレス・商品の詳細での検索と絞り込み</li>
+      <li><a href="https://help.shopify.com/ja/manual/customers/manage-customers" rel="noopener" target="_blank">お客様の管理</a>：お客様プロフィールの住所を編集する操作</li>
+      <li><a href="https://help.shopify.com/ja/manual/fulfillment/managing-orders/editing-orders/customer-details" rel="noopener" target="_blank">注文のお客様詳細を編集する</a>：個別注文の編集対象、必要な権限、住所の更新と保存、検証・税の調整の確認</li>
+      <li><a href="https://help.shopify.com/ja/manual/fulfillment/managing-orders/validating-order-address" rel="noopener" target="_blank">管理画面での住所の検証</a>：サポート対象外の国への検証の範囲、不明な住所をお客様に確認する案内</li>
+      <li><a href="https://help.shopify.com/ja/manual/fulfillment/managing-orders/viewing-orders/searching-orders" rel="noopener" target="_blank">注文の検索と表示</a>：「未発送」の注文表示に含まれるフルフィルメント状況</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/shopify-order-product-name-difference">商品ページと注文時の商品名が違うとき、受注内容はどこで確認するか</a></li>
+      <li><a href="/column/shopify-deferred-refund-execution">返品処理だけ済ませて後回しにした返金はどこから実行するか</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理</a></li>
+      <li><a href="/column/sns-image-alt-text">SNS画像の代替テキストには投稿本文とは別に何を書くべきか</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
