@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの同じファイルを複数人で同時編集する手順と確認点｜Vaynexis</title>
+  <meta name="description" content="同じ表を複数人で入力したい事務担当者向けに、保存先とファイル形式の確認、相手への編集権限の付け方、共有リンクの開き方を整理します。別々のコピーを回す運用から移る際に、相手の変更が届くか、ロックが出ないかを確かめる流れまでまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの同じファイルを複数人で同時編集する手順と確認点｜Vaynexis">
+  <meta property="og:description" content="同じ表を複数人で入力したい事務担当者向けに、保存先とファイル形式の確認、相手への編集権限の付け方、共有リンクの開き方を整理します。別々のコピーを回す運用から移る際に、相手の変更が届くか、ロックが出ないかを確かめる流れまでまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-coauthoring-same-workbook">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-coauthoring-same-workbook">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの同じファイルを複数人で同時編集する手順と確認点","description":"同じ表を複数人で入力したい事務担当者向けに、保存先とファイル形式の確認、相手への編集権限の付け方、共有リンクの開き方を整理します。別々のコピーを回す運用から移る際に、相手の変更が届くか、ロックが出ないかを確かめる流れまでまとめます。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-coauthoring-same-workbook"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの同じファイルを複数人で同時編集する手順と確認点","item":"https://vaynexis.jp/column/excel-coauthoring-same-workbook"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの同じファイルを複数人で同時編集する手順と確認点</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの同じファイルを複数人で同時編集する手順と確認点</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>同じブックを複数人で同時に入力するには、共同編集を使います。保存場所と開き方をそろえ、相手の入力が自分の画面にも現れるかまで確かめると、共有したつもりの状態との違いを見分けやすくなります。</p></div>
+    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、同じExcelの表を複数人で同時に入力したい小さな会社の事務担当者が、保存先と形式、編集の権限、相手の変更の反映を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">共有する前に保存先と形式をそろえる</a></li>
+      <li><a href="#s2">編集する相手を指定してリンクを送る</a></li>
+      <li><a href="#s3">相手の参加と変更の反映を見分ける</a></li>
+      <li><a href="#s4">入力担当の分け方を短い表で決める</a></li>
+      <li><a href="#s5">編集できないときは権限と開き方を確認する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．共有する前に保存先と形式をそろえる</h2>
+    <p>確認日：2026年11月4日。</p>
+    <p>まず、全員が開く表の保存先を定めます。共同編集するブックは、OneDrive、OneDrive for Business、SharePoint Onlineのライブラリへアップロードするか、そこで新しく作成します。手元の表を各担当者に配る運用から移るなら、今後どの保存場所を開くのかを先に伝えるとよいです。</p>
+    <p>共同編集で使うファイル形式は、.xlsx、.xlsm、.xlsbです。ただし、Strict Open XMLスプレッドシート形式は共同編集の対象外です。ファイル名だけで判断せず、保存するときの形式まで確かめるのが出発点になります。</p>
+    <p>似た名前の機能にも注意が要ります。旧「共有ブック」は以前の機能で、制限が多いため共同編集に置き換えられています。古い手順書にある設定を探す前に、ここで進める操作と区別しておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．編集する相手を指定してリンクを送る</h2>
+    <p>ここでは、公式ヘルプの Windows 向けの説明を基に、デスクトップの Excel から共有し、受け取った人がリンクから開く流れを整理します。まず保存先のファイル名を選び、共有する表を開きます。</p>
+    <p>ブックを開いて［共有］を選び、アクセス許可を選んで［適用］を押し、共有するユーザーを追加します。共有の設定では、［編集を許可する］が既定でオンになっていると案内されています。初期状態を前提に進めず、実際の設定で相手が何をできるかを見るとよいです。</p>
+    <p>確認だけの相手には表示のみ、入力する相手には編集の権限を設定できます。入力担当と確認担当を分ける場合も、先に誰が書き込むのかを整理すると、渡す権限を選びやすくなります。</p>
+    <p>必要に応じてメッセージを入力し、［送信］を選びます。相手には、添付した別のコピーを開くのではなく、届いた共有先を開いてもらう、という運用にそろえます。普段の連絡文にも、編集対象の表がどこにあるかを書いておくとよいです。</p>
+    <p>受信したリンクを開くと、ブラウザーでExcel for the webのブックが開く場合があります。開けたことだけで終えず、相手が入力する状態まで進めたかを確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．相手の参加と変更の反映を見分ける</h2>
+    <p>ブラウザーでは、右上に編集している相手を示すメッセージが出ているかが、共同編集の確認点です。デスクトップでは、右上のイニシャルから、ほかに作業している人と作業場所を確認できます。名前が見えるかと、入力が届いているかを分けて確かめると、どこで止まったのかを整理しやすくなります。</p>
+    <p>共同編集は、自動保存が有効な場合に最適に機能すると案内されています。デスクトップアプリで作業するときは、表示されている保存の状態にも目を向けます。</p>
+    <p>運用を始める前の確認として、業務に影響しない練習用の表を用意するとよいです。相手が変更した文字を自分の側で読み、自分が直した内容も相手の側で読めるかを照らし合わせます。「開ける」「入力できる」「変更を見られる」を別々に確かめる進め方です。</p>
+    <p>反映を確かめるときは、入力した欄と内容を口頭などでも照合します。画面のどこかが変わったという確認で済ませず、意図した欄が意図した状態になっているかまで見ると、日々の入力に移りやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．入力担当の分け方を短い表で決める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>同じ表を開ける状態が整ったら、日々の仕事で誰がどこを入力するかを決めます。たとえば備品の補充表なら、依頼を書く人と手配状況を更新する人を分ける形が考えられます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">品目</th><th scope="col">依頼欄の担当</th><th scope="col">状況欄の担当</th></tr></thead><tbody><tr><td data-label="品目">コピー用紙</td><td data-label="依頼欄の担当">利用部門が補充希望を記入</td><td data-label="状況欄の担当">手配係が確認中・手配済を記入</td></tr><tr><td data-label="品目">封筒</td><td data-label="依頼欄の担当">利用部門が用途を記入</td><td data-label="状況欄の担当">手配係が回答を記入</td></tr></tbody></table></div>
+    <p>この表は入力分担の例です。欄の担当を決めることと、担当外の欄を書き換えられなくすることは分けて考えます。</p>
+    <p>引き継ぐときは、表を開く場所、入力する欄、判断に迷ったときの連絡先を短く残すとよいです。訂正が必要になった場合も、相手が入力している途中なのか、確認待ちなのかを先に声で確かめる運用にします。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．編集できないときは権限と開き方を確認する</h2>
+    <p>表を閲覧できても入力できない場合は、共有した側と受け取った側で、渡した権限と開いている対象を照合します。担当者用のコピーを別に保存してしまっていないかも、運用上の確認点です。</p>
+    <p>公式ヘルプでは、共同編集に対応しない版を使う人がいると、ファイルがロックされる場合があると案内されています。デスクトップのExcel for Microsoft 365とMac向けの同製品で共同編集するには、Microsoft 365サブスクリプションでのサインインが必要です。主催する人の環境だけで判断せず、参加する人の開き方も確かめます。</p>
+    <p>ブラウザーで進める手順と、手元のアプリで進める手順を途中で行き来するときは、誰がどちらで開いているのかを整理するとよいです。問題が出た場合は、表示されたメッセージ、開いている保存先、相手が入力できるかをそろえて担当者に伝えます。</p>
+    <p>OneDriveやSharePoint上のファイルを移動・削除すると、共同作業する相手が利用できなくなる可能性があります。共有を始めた後の整理は、入力担当への連絡と合わせて進めるとよいです。引き継ぎでは、ファイル名を伝えるだけでなく、普段開く場所を相手とそろえておきます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">全員が開く表の保存先をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ファイルの保存形式を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力する相手に編集の権限を渡したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">受信した共有先から対象の表を開けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">相手の入力と自分の入力が互いに反映されるか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">参加者の開き方と保存の状態を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力する欄の担当と、変更時の連絡先を決めたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/collaborate-on-excel-workbooks-at-the-same-time-with-co-authoring" rel="noopener" target="_blank">Excel ブックの共同編集を使用して同時に共同作業を行う</a>：保存先・ファイル形式・リンクから開く流れ（Windows の欄）、ブラウザーでの共同編集の表示（Web の欄）</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/about-the-shared-workbook-feature" rel="noopener" target="_blank">共有ブック機能について</a>：旧「共有ブック」と共同編集の区別</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/share-your-excel-workbook-with-others" rel="noopener" target="_blank">Excel のブックを他のユーザーと共有する</a>：表示のみと編集の権限・共有から送信までの操作（Windows の欄）</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/co-author-a-workbook" rel="noopener" target="_blank">ブックを共同編集する</a>：編集許可の初期状態・参加者と作業場所の確認</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/best-practices-for-coauthoring-in-excel" rel="noopener" target="_blank">Excel でのコオーサリングのベスト プラクティス</a>：自動保存・共有中のファイル移動や削除の影響</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/excel-file-is-locked-for-editing" rel="noopener" target="_blank">Excel ファイルの編集中にロックされる</a>：非対応の版によるロック・デスクトップのサインイン条件</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-overwrite-restore-previous-version">Excelを誤って上書きしたとき、以前の版を確認して戻す手順</a></li>
+      <li><a href="/column/sheets-restore-deleted-table">共同編集で消した表を戻す</a></li>
+      <li><a href="/column/excel-lock-cells-input-only">Excelの申請表で入力欄だけ編集できるようにする設定と確認</a></li>
+      <li><a href="/column/excel-round-amount-formula">Excelで端数を四捨五入した金額を計算結果として残すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

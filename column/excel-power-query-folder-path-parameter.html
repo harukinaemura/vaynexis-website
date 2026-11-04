@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの取込ファイルの場所をパラメーターで切り替えるには｜Vaynexis</title>
+  <meta name="description" content="取込元のフォルダーが変わるたびに、どこを直すか迷っていませんか。場所を値として管理し、取込設定に結び付けて切り替える流れを整理します。設定を作る段階から変更後の表を確かめる段階まで、引き継ぎにも使えるよう、操作と確認点を分けて説明します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの取込ファイルの場所をパラメーターで切り替えるには｜Vaynexis">
+  <meta property="og:description" content="取込元のフォルダーが変わるたびに、どこを直すか迷っていませんか。場所を値として管理し、取込設定に結び付けて切り替える流れを整理します。設定を作る段階から変更後の表を確かめる段階まで、引き継ぎにも使えるよう、操作と確認点を分けて説明します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-power-query-folder-path-parameter">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-power-query-folder-path-parameter">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの取込ファイルの場所をパラメーターで切り替えるには","description":"取込元のフォルダーが変わるたびに、どこを直すか迷っていませんか。場所を値として管理し、取込設定に結び付けて切り替える流れを整理します。設定を作る段階から変更後の表を確かめる段階まで、引き継ぎにも使えるよう、操作と確認点を分けて説明します。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-power-query-folder-path-parameter"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの取込ファイルの場所をパラメーターで切り替えるには","item":"https://vaynexis.jp/column/excel-power-query-folder-path-parameter"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの取込ファイルの場所をパラメーターで切り替えるには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの取込ファイルの場所をパラメーターで切り替えるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>取込元の場所を値として持つパラメーターを作り、データソースの引数に使う構成にします。最初に値と取込設定の対応を作り、その後は切替先の場所を変更して、読み込まれた内容まで確かめる流れです。</p></div>
+    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelの取込元フォルダーの場所が変わる小さな会社の担当者が、Power Query のパラメーターで参照先を切り替える流れと、切り替えた後の確かめ方を Microsoft のヘルプで確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">切替先に置くファイルの形を先に確かめる</a></li>
+      <li><a href="#s2">場所を保存する設定を作る</a></li>
+      <li><a href="#s3">取込元の設定に作った値を結び付ける</a></li>
+      <li><a href="#s4">場所を書き換えた後は表まで更新する</a></li>
+      <li><a href="#s5">架空の切替例で引き継ぐ内容を決める</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．切替先に置くファイルの形を先に確かめる</h2>
+    <p>ここでは、フォルダーからの取込設定があるブックを対象に、Windows版のデスクトップ画面で参照先を切り替える操作を扱います。参照したクエリ管理のヘルプには Windows の手順があり、適用先は Excel for Microsoft 365、Excel 2024、Excel 2021 です。パラメーター クエリの作成を説明するヘルプの適用先は、Excel for Microsoft 365 と Excel for Microsoft 365 for Mac です。認証情報やスクリプトを保存する話は扱いません。</p>
+    <p>フォルダー内のファイルを結合する場合は、配下のサブフォルダーも含め、形式と構造をそろえることが公式資料の確認事項です。</p>
+    <p>作業前には、現在の参照先と変更後の参照先を手元に控えておくとよいです。変更前の状態に戻せるよう、元のブックのコピーを使って設定を確かめる進め方にします。作業中のブックと日常業務で使うブックの名前を控え、試した内容をどちらに反映したかも区別しておきます。取込元の移動と、書類の列や項目の変更は分けて扱います。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．場所を保存する設定を作る</h2>
+    <p>Excelの［データ］から［データの取得］へ進み、Power Query エディターを起動します。エディターの［ホーム］にある［パラメーターの管理］から［新しいパラメーター］を選んで作成を始めます。</p>
+    <p>［名前］は他のパラメーターと区別するために使い、［説明］には値を指定する人が用途を理解できる情報を入れられます。</p>
+    <p>［型］は値のデータ型を指定する項目で、［現在の値］が実際に格納されている値です。場所を入れる設定として、名前は「取込元フォルダー」、説明は「取込対象を置く場所」とするなど、担当者が用途を読み取れる表記にします。</p>
+    <p>場所を文字列として扱うため、［型］には［テキスト］を選びます。候補は［任意の値］にして、［現在の値］へ今の取込元のフォルダーパスを入力します。入力するのは、ファイルを置いている場所の表記です。引き継ぐ人にも同じ場所を指していると伝わるよう、画面の値と作業メモを見比べます。</p>
+    <p>入力を終えたら［OK］でパラメーターを作成します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．取込元の設定に作った値を結び付ける</h2>
+    <p>取込クエリの［ソース］を選び、ステップの設定アイコンから、そのステップの設定ページへ進めます。［ファイル パス］のオプションが［パラメーター］に設定されていることを確かめ、作成したパラメーターをドロップダウン リストから選びます。</p>
+    <p>設定を作る作業と、取込元に結び付ける作業を分けて記録しておくと、引き継ぐ人が変更箇所をたどれます。「場所を控えた」「設定を作った」「取込元との対応を確かめた」という区切りで、作業の記録を残すとよいです。値を置く設定の名前と、取込結果を作る設定の名前を並べて控えると、変更時に選ぶ対象も伝えやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．場所を書き換えた後は表まで更新する</h2>
+    <p>作成後のパラメーターは［パラメーターの管理］に戻って変更できるため、切替時は［現在の値］に入れた場所を見直します。</p>
+    <p>値を変えた後は、エディターの［ホーム］から、エディターを閉じてワークシートへ読み込む操作を選びます。このコマンドの名前は、日本語のヘルプではページによって「[読み込み &amp; 閉じる]」「[閉じる] &amp; [読み込み]」と表記が分かれているため、手元の画面の表示で確かめます。ブック内のすべてのデータの更新には、［データ］タブの［すべて更新］を使います。</p>
+    <p>候補を一覧にした場合も、［既定値］と［現在の値］は別の値なので、変更対象を取り違えないようにします。</p>
+    <p>変更後は、表の対象期間や見出しを手元の取込元と照合します。表示された内容が想定と違うときは、変更した場所と、そこに置いたファイルを見比べるところから確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．架空の切替例で引き継ぐ内容を決める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>資料の置き場を整理し、取込元を移す場面を考えます。変更前後で書類の形はそろえ、場所の変更を確かめる例です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確認すること</th><th scope="col">変更前</th><th scope="col">変更後</th></tr></thead><tbody><tr><td data-label="確認すること">取込元の場所</td><td data-label="変更前">C:\取込\旧置場</td><td data-label="変更後">C:\取込\新置場</td></tr><tr><td data-label="確認すること">書類の見出し</td><td data-label="変更前">管理番号・受付日・区分</td><td data-label="変更後">管理番号・受付日・区分</td></tr><tr><td data-label="確認すること">結果の照合に使うもの</td><td data-label="変更前">変更前の保存済みの表</td><td data-label="変更後">新しい置き場の原票</td></tr><tr><td data-label="確認すること">引き継ぐ記録</td><td data-label="変更前">元の参照先</td><td data-label="変更後">変更先と照合した内容</td></tr></tbody></table></div>
+    <p>担当者には、変更先だけでなく、どの原票と表を照合したかを渡します。変更したという記録と、結果を見て業務に使えると判断した記録を分けておくと、確認が止まっている箇所を追いやすくなります。表が表示されたことだけを完了の印にせず、対象期間、抜けている書類、重ねて読み込んだ書類を確認したかまで記録に含めます。引き継ぎメモには、変更理由、戻すときの参照先、照合に使った原票の保管場所を短く残すとよいです。</p>
+    <p>Microsoft Learn のフォルダーの説明では、フォルダー取込ではサブフォルダー内のファイル情報も表示されるとされているため、意図していない書類が配下にないかも確認します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">元の参照先と変更後の場所を控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">切替先の書類の見出しと構造を見比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">場所を保持する設定を作り、用途の分かる名前を付けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">取込元が作成した設定を参照する状態になったか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更後の場所が、実際に使用する値に入っているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">読込先の表を更新し、取込元の原票と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">配下の不要な書類と、引き継ぐ記録を確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/manage-queries-power-query" rel="noopener" target="_blank">クエリの管理 (Power Query)｜Microsoft Support</a>：クエリ管理手順のWindowsタブと適用先。</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/create-a-parameter-query-power-query" rel="noopener" target="_blank">パラメーター クエリを作成する (Power Query)｜Microsoft Support</a>：適用先、取込元のファイルパスをパラメーターに置き換える操作、値を変えた後の読み込み。</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/power-query/connectors/folder" rel="noopener" target="_blank">フォルダー｜Microsoft Learn</a>：結合対象の形式・構造とサブフォルダーの扱い。</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/create-load-or-edit-a-query-in-excel-power-query" rel="noopener" target="_blank">Excel (Power Query) でクエリを作成、読み込み、または編集する｜Microsoft Support</a>：エディターの起動と、ワークシートへ読み込むコマンドの表記。</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/power-query/power-query-query-parameters" rel="noopener" target="_blank">パラメーターの使用｜Microsoft Learn</a>：値を保持する仕組み、作成、名前・説明・型・現在の値、変更、既定値との区別。</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/power-query/data-types" rel="noopener" target="_blank">Power Queryのデータ型｜Microsoft Learn</a>：フォルダーパスを文字列として扱うための型の選択。</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/power-query/applied-steps" rel="noopener" target="_blank">適用されたステップのリストを使用する方法｜Microsoft Learn</a>：ステップの設定アイコンから設定ページを開く操作。</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/refresh-an-external-data-connection-in-excel" rel="noopener" target="_blank">Excel で外部データ接続を更新する｜Microsoft Support</a>：ブック内のすべてのデータを更新するコマンド。</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/pdf-table-to-excel">PDFの表をExcelへ変換した後の確認</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理</a></li>
+      <li><a href="/column/excel-overwrite-restore-previous-version">Excelを誤って上書きしたとき、以前の版を確認して戻す手順</a></li>
+      <li><a href="/column/excel-cell-comment-question-reply">Excelの数字への質問と返答をセルのコメントに残すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

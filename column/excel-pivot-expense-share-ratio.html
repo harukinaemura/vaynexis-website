@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelのピボットで費目別金額と構成比を横に並べる手順｜Vaynexis</title>
+  <meta name="description" content="費目別の金額を残したまま、集計全体に占める割合を隣に表示する手順を整理します。金額の項目を重ねて追加し、割合の計算だけを切り替える方法から、分母の選び方、列名と表示の整え方、元の明細との照合までを、事務担当者の引き継ぎにも使える形でまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelのピボットで費目別金額と構成比を横に並べる手順｜Vaynexis">
+  <meta property="og:description" content="費目別の金額を残したまま、集計全体に占める割合を隣に表示する手順を整理します。金額の項目を重ねて追加し、割合の計算だけを切り替える方法から、分母の選び方、列名と表示の整え方、元の明細との照合までを、事務担当者の引き継ぎにも使える形でまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-pivot-expense-share-ratio">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-pivot-expense-share-ratio">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelのピボットで費目別金額と構成比を横に並べる手順","description":"費目別の金額を残したまま、集計全体に占める割合を隣に表示する手順を整理します。金額の項目を重ねて追加し、割合の計算だけを切り替える方法から、分母の選び方、列名と表示の整え方、元の明細との照合までを、事務担当者の引き継ぎにも使える形でまとめます。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-pivot-expense-share-ratio"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelのピボットで費目別金額と構成比を横に並べる手順","item":"https://vaynexis.jp/column/excel-pivot-expense-share-ratio"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelのピボットで費目別金額と構成比を横に並べる手順</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelのピボットで費目別金額と構成比を横に並べる手順</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>同じ金額フィールドを［値］へ重ねて追加し、片方を［総計に対する比率］にすると、費目別金額と構成比を並べられます。分母にする集計の対象を先にそろえ、仕上げに元の明細との金額照合と、割合の計算の確認を分けて行うとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelのピボットテーブルで費目別の金額と構成比を並べたい小さな会社の担当者が、値の表示方法の設定と、金額・割合の確かめ方を Microsoft のヘルプで確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">何に対する割合なのかを先に決める</a></li>
+      <li><a href="#s2">金額を残し、追加した側だけ割合へ変える</a></li>
+      <li><a href="#s3">小さな内訳表で分母のそろい方を見る</a></li>
+      <li><a href="#s4">割合が意図と違うときは計算の基準を見る</a></li>
+      <li><a href="#s5">金額の照合と割合の検算を分けて終える</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．何に対する割合なのかを先に決める</h2>
+    <p>ピボットテーブルの動作は利用するプラットフォームによって少し異なるため、以下はWindows版の公式手順を基準に整理します。値フィールドの計算を説明するヘルプの適用先は、Excel for Microsoft 365、Excel for Microsoft 365 for Mac、Excel 2024、Excel 2024 for Mac、Excel 2021、Excel 2021 for Mac、Excel 2019、Excel 2016 です。</p>
+    <p>ここでは、費目別の合計ができている表から進めます。見たいのは、集計した経費全体の中で各費目が占める割合です。予算額に対してどこまで使ったかを求める計算とは、分母が異なります。対象期間と含める明細を決め、比較する金額の意味をそろえてから作業に入るとよいです。</p>
+    <p>［行］のフィールドは左側の行ラベル、［値］のフィールドは集計された数値として表示されます。この配置の考え方に沿って、費目を縦に読み、金額と割合を横に見比べる表にします。元の費目名や明細を直す作業は、表示を追加する作業と分けて進めます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．金額を残し、追加した側だけ割合へ変える</h2>
+    <h3 class="h3">同じ金額を値の領域へ重ねる</h3>
+    <p>フィールド リストで、「金額」を、すでに金額が入っている［値］領域へドラッグし、元の金額フィールドのすぐ下へ置きます。追加する対象は、元の合計と同じ金額欄です。別の金額欄を選ぶと、隣に並んでいても比較の前提がそろいません。追加前に元の合計を控え、表示を変えた後も照合できるようにしておきます。</p>
+    <h3 class="h3">追加した側の計算を切り替える</h3>
+    <p>追加した側の値を右クリックして［値の表示の種類］を開き、使う計算オプションを選びます。［総計に対する比率］は、レポート全体の総計に対して各値が占める割合を表示する設定です。元の金額欄までまとめて変えず、追加した側を対象にしているかを、開いた位置と列名で見直すとよいです。</p>
+    <p>金額を残す側は［計算しない］にすると、フィールドに入力された値の表示を保てます。金額が消えて割合だけになったときには、追加した側と元の側を取り違えていないか、作業前の控えと比較します。</p>
+    <h3 class="h3">列の意味を読めるようにする</h3>
+    <p>追加後のフィールド名は編集できます。名前は「金額合計」「構成比」など、読む人が内容を区別できるものにするとよいです。［値フィールドの設定］では、［表示形式］からフィールド全体の表示形式を変更できます。見た目を整える前に、金額を示す欄と割合を示す欄が分かれているかを確認します。列名だけを付け替えて済ませず、選んだ計算と名前の意味を一致させることが大切です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．小さな内訳表で分母のそろい方を見る</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>費目別の支出を共有する場面では、次のような読み方になります。金額の大小と、全体の中で占める位置を、同じ行で確認するための見本です。表内の「対象全体」は、含める明細をそろえた経費全体を指します。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">費目</th><th scope="col">金額の欄で読むもの</th><th scope="col">構成比の欄で読むもの</th></tr></thead><tbody><tr><td data-label="費目">交通費</td><td data-label="金額の欄で読むもの">交通費の合計</td><td data-label="構成比の欄で読むもの">交通費の合計 ÷ 対象全体の合計</td></tr><tr><td data-label="費目">消耗品費</td><td data-label="金額の欄で読むもの">消耗品費の合計</td><td data-label="構成比の欄で読むもの">消耗品費の合計 ÷ 対象全体の合計</td></tr><tr><td data-label="費目">通信費</td><td data-label="金額の欄で読むもの">通信費の合計</td><td data-label="構成比の欄で読むもの">通信費の合計 ÷ 対象全体の合計</td></tr></tbody></table></div>
+    <p>見比べたい費目が変わっても、分母の意味はそろえておきます。資料には対象期間と集計の対象を短く添えると、受け取った人が割合の意味を読み違えにくくなります。割合の大きさだけから支出の妥当性を判断せず、必要な理由や明細の内容は担当者と確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．割合が意図と違うときは計算の基準を見る</h2>
+    <p>Microsoft のヘルプの説明では、［列集計に対する比率］は列や系列の合計、［行集計に対する比率］は行や項目の集計を分母にします。集計全体の内訳を求める今回の目的と、選んだ項目の分母が合っているかを確認します。似た名前の項目が並んでいても、表の見た目だけを頼りに選ばないほうがよいです。</p>
+    <p>列の並びも見直します。同じ領域内の表示順は、フィールドを必要な位置へドラッグして変更できると、Microsoft のヘルプにあります。ここでは金額の後に割合が続く順を目指し、読みたい費目と対応しているかを見比べます。</p>
+    <p>Mac版で目的の計算がメニューに見当たらない場合は、［その他のオプション］を選ぶ案内が Microsoft のヘルプにあります。引き継ぎのメモには、使った環境と選んだ計算名を残すと、受け取った人も確認先を探しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．金額の照合と割合の検算を分けて終える</h2>
+    <p>Microsoft のヘルプでは、集計結果を手動で更新するときは、ピボットテーブルを右クリックし、［更新］を選ぶと案内されています。元の明細を変更した後は、表示された結果を見直してから資料として共有するとよいです。</p>
+    <p>まず、元の明細から対象の費目に該当する支出を拾い、金額の合計を突き合わせます。次に、その金額を対象全体の合計で割り、割合の欄と比べます。金額が合っていることと、意図した分母で割合を求めていることを、別々に確かめる進め方です。</p>
+    <p>差があるときは、対象期間、含めた明細、費目の分類を順に見直します。比べている相手の対象がずれたまま表示だけを直しても、照合は終わりません。原因が分からない明細は、割合を合わせるために書き換えず、記入者へ戻して確認します。</p>
+    <p>引き継ぎでは、元の資料の保存場所、集計の対象、分母の意味、照合を終えた箇所を短く残します。後から同じ対象をたどり、金額と割合の対応を説明できる状態が、今回の作業の区切りになります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">対象期間と、含める明細の範囲をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">金額を残す欄と割合を示す欄を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">割合の分母が、見たい集計全体を指しているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">列名から金額と割合の意味を区別できるようにしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の明細を変更した後の集計結果を見直したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">費目別金額の照合と、割合の検算を分けて行ったか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">集計の対象と分母の意味を、引き継ぎに残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/create-a-pivottable-to-analyze-worksheet-data" rel="noopener" target="_blank">ピボットテーブルを作成してワークシート データを分析する</a>：プラットフォームによる違い、Windows向け手順、表示形式の変更</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/show-different-calculations-in-pivottable-value-fields" rel="noopener" target="_blank">ピボット テーブルの値フィールドに別の計算を表示する</a>：適用先、金額と割合の併記、フィールドの追加、計算の選択、名前の編集、Mac版の選択肢</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/use-the-field-list-to-arrange-fields-in-a-pivottable" rel="noopener" target="_blank">フィールド リストを使ってピボットテーブル内でフィールドを配置する</a>：行・値の役割と、同じ領域内での順序変更</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/calculate-values-in-a-pivottable" rel="noopener" target="_blank">ピボットテーブルで値を計算する</a>：総計・列集計・行集計に対する比率の分母の違い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/refresh-pivottable-data" rel="noopener" target="_blank">ピボットテーブルのデータを更新する</a>：右クリックによる手動更新</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-pivot-amount-shows-count-fix">Excelのピボットで金額が件数になるとき合計に直すには</a></li>
+      <li><a href="/column/excel-pivot-department-by-expense">Excelで部門と費目を掛け合わせた経費集計表を作る手順</a></li>
+      <li><a href="/column/excel-budget-usage-rate">Excelで予算に対する使用率を計算し百分率で表示する手順</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/column/excel-power-query-folder-path-parameter">Excelの取込ファイルの場所をパラメーターで切り替えるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

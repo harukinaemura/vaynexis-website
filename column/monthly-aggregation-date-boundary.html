@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>月初の自動集計で前月分が外れるときに点検する日時と対象期間｜Vaynexis</title>
+  <meta name="description" content="月初の自動集計で前月分が抜けるときは、起動時刻、表と処理のタイムゾーン、対象期間の境界を分けて点検します。公式資料で確かめた時刻指定の仕様を踏まえ、記録に残す項目、月をまたぐデータの確認方法、再集計前の照合、AIに渡す調査メモを整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="月初の自動集計で前月分が外れるときに点検する日時と対象期間｜Vaynexis">
+  <meta property="og:description" content="月初の自動集計で前月分が抜けるときは、起動時刻、表と処理のタイムゾーン、対象期間の境界を分けて点検します。公式資料で確かめた時刻指定の仕様を踏まえ、記録に残す項目、月をまたぐデータの確認方法、再集計前の照合、AIに渡す調査メモを整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/monthly-aggregation-date-boundary">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/monthly-aggregation-date-boundary">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"月初の自動集計で前月分が外れるときに点検する日時と対象期間","description":"月初の自動集計で前月分が抜けるときは、起動時刻、表と処理のタイムゾーン、対象期間の境界を分けて点検します。公式資料で確かめた時刻指定の仕様を踏まえ、記録に残す項目、月をまたぐデータの確認方法、再集計前の照合、AIに渡す調査メモを整理します。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/monthly-aggregation-date-boundary"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"月初の自動集計で前月分が外れるときに点検する日時と対象期間","item":"https://vaynexis.jp/column/monthly-aggregation-date-boundary"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">月初の自動集計で前月分が外れるときに点検する日時と対象期間</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">月初の自動集計で前月分が外れるときに点検する日時と対象期間</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>月初の自動集計で前月分が外れたら、起動した日時、日付を解釈するタイムゾーン、対象期間の開始と終了を別々に確認します。対象月と照合する日付の列を先に決め、境界付近の明細を元の表と突き合わせるのが点検の出発点です。</p></div>
+    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、月初の自動集計で前月分の明細が外れた小さな会社の担当者が、起動した日時・タイムゾーン・対象期間の境界を分けて点検する流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">起動した時刻と、集計した範囲を切り分ける</a></li>
+      <li><a href="#s2">表とスクリプトのタイムゾーンを別々に読む</a></li>
+      <li><a href="#s3">対象期間は開始と終了の境界を言葉にする</a></li>
+      <li><a href="#s4">外れた明細を起点に、判定までたどる</a></li>
+      <li><a href="#s5">AIへの依頼は、変更案と調査メモまでにする</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．起動した時刻と、集計した範囲を切り分ける</h2>
+    <p>月初に集計表が届いても、前月の末尾にある明細が見当たらない。こうした場面では、処理が動いたかという確認と、どの明細を選んだかという確認を分けると、調べる場所を絞れます。</p>
+    <p>ここでは、Google スプレッドシートの表を Google Apps Script の時間主導型トリガーで集計している場合を例に、Apps Script の公式リファレンスの記載を引きます。ほかの道具で集計している場合は、その道具の公式の説明で、起動時刻の幅、タイムゾーン、日付の値の扱いを同じように確かめます。</p>
+    <p>時間主導型トリガーの起動時刻は、多少ランダム化されることがあります。 nearMinute() による分の指定には、前後15分の幅があります。</p>
+    <p>起動予定と実際の開始を記録し、続いて抽出に使った範囲を確かめる流れがよいです。時刻の指定だけを見て原因を判断せず、担当者には「起動の設定」と「集計対象を選ぶ処理」を別の確認項目として渡します。修正前の結果を残しておくと、比較する元の状態も明確になります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．表とスクリプトのタイムゾーンを別々に読む</h2>
+    <p>スクリプトとスプレッドシートのタイムゾーンが異なることは、不具合の原因になり得ます。 Session.getScriptTimeZone() は、スクリプトのタイムゾーンを取得するメソッドです。 getSpreadsheetTimeZone() は、スプレッドシートのタイムゾーンを取得するメソッドです。</p>
+    <p>inTimezone() はトリガーが使う日時のタイムゾーンを指定し、既定ではスクリプトのタイムゾーンが使われます。 getValues() で取得するセルの値は、セルの値に応じて日付型や文字列型などになります。</p>
+    <p>点検では、画面に表示された日付、処理が受け取った値、その値を日付として解釈する基準を区別します。表と処理の設定名を転記し、食い違いがあれば、集計に使う基準と合っているかを確認担当者が見ます。設定が同じかどうかの確認だけで調査を終えず、取り込んだ値の扱いまでたどるとよいです。</p>
+    <p>修正を依頼するときは、表の表示を撮った画像に加え、読み取り方と日付の変換箇所も示します。表示の変更と処理の変更を混同せず、何を直したのかが追える形にするためです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．対象期間は開始と終了の境界を言葉にする</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>抽出ルールの案として、開始を含み、終了を含めない範囲を担当者間で共有するとよいです。前月を集計するための記入案では、開始を「対象月の月初」、終了を「その翌月の月初」と置き、どちらも集計に使うタイムゾーンで扱う方針を明記します。これは処理を点検するための提案で、製品が自動で対象月を決めるという説明ではありません。</p>
+    <p>「月末まで」の言葉だけで済ませず、終了の境界を含むのか、どの日付列を比較するのかまで書きます。受付日、処理日、登録日などの候補から、業務上どれを集計対象の日付とするかを人が決めることも必要です。以下は、月初の問い合わせ集計を点検するための記入例です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確認する場所</th><th scope="col">記録する内容の例</th><th scope="col">突き合わせるもの</th></tr></thead><tbody><tr><td data-label="確認する場所">集計する月</td><td data-label="記録する内容の例">前月を対象月として明記</td><td data-label="突き合わせるもの">集計担当者が合意した対象月</td></tr><tr><td data-label="確認する場所">採用する日付</td><td data-label="記録する内容の例">問い合わせの受付日</td><td data-label="突き合わせるもの">元の表の日付列</td></tr><tr><td data-label="確認する場所">開始の境界</td><td data-label="記録する内容の例">対象月の月初を含む案</td><td data-label="突き合わせるもの">開始直前と開始時点の明細</td></tr><tr><td data-label="確認する場所">終了の境界</td><td data-label="記録する内容の例">対象月の翌月の月初を含めない案</td><td data-label="突き合わせるもの">終了直前と終了時点の明細</td></tr><tr><td data-label="確認する場所">日時の基準</td><td data-label="記録する内容の例">集計に使うタイムゾーンの設定名</td><td data-label="突き合わせるもの">表と処理から読み取った設定</td></tr><tr><td data-label="確認する場所">出力との対応</td><td data-label="記録する内容の例">対象にした行と外した理由</td><td data-label="突き合わせるもの">集計結果に含まれる明細</td></tr></tbody></table></div>
+    <p>この表は、実際の処理が記入案どおりかを調べるために使います。先に正解とする範囲を担当者が決め、処理が選んだ範囲との差を確認する順序です。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．外れた明細を起点に、判定までたどる</h2>
+    <p>対象外になった明細を選び、元の日付、取得した値、変換後の日時、抽出の判定を順に追います。担当者の想定と処理の結果を並べ、食い違いが現れた場所を記録すると、修正を依頼する範囲が明確になります。理由が読み取れない明細は、推測で分類せず、調査待ちとして残す扱いがよいです。</p>
+    <h3 class="h3">再集計では、対象月を引き継ぐ</h3>
+    <p>起動した日の情報とは別に、集計対象として決めた月を調査メモに残す運用を提案します。やり直す際にも、その月を担当者が指定してから比較すれば、見直したい範囲を共有しやすくなります。起動予定、実際の開始、対象月、開始と終了の境界、採用した日付列を同じ記録に置く形です。</p>
+    <p>修正後は、開始や終了の境界付近にある明細の採否を照合します。合計の一致に加えて、残す明細と外す明細が想定どおりかを見ることが大切です。比較が済むまでは修正前後の出力を分け、以前の結果を上書きする判断は担当者が行います。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．AIへの依頼は、変更案と調査メモまでにする</h2>
+    <p>AIには、現状の設定と日付を選ぶ処理を整理した資料を渡し、調べる箇所や修正案の下書きを依頼する使い方が考えられます。元の表にある個人情報や社内情報の扱いは、社内の利用ルールに合わせます。渡す内容は、問題の判断に必要な範囲に絞るとよいです。</p>
+    <p>対象月、使う日付列、期間の境界、再集計の結果を採用するかは、人が判断する項目です。AIが挙げた原因は確認待ちの仮説として扱い、元の記録との照合を経て修正に進めます。依頼の骨組みは次のように書けます。</p>
+    <pre class="prompt">月初の集計で対象から外れた明細を調べるためのメモを作ります。
+添付した設定と処理の記述だけを使い、変更は行わない方針です。
+起動する日時の指定と、集計対象を選ぶ処理を分けた整理を依頼します。
+日付を読み取る箇所、変換する箇所、対象か判定する箇所を示す下書きが必要です。
+資料から確かめられることと、追加確認が必要な仮説を別の欄に置く形式です。
+修正案には、境界付近の明細をどう照合するかも含めます。
+対象月や集計ルールの決定は、担当者が行います。</pre>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">起動予定と実際の開始を、集計対象の範囲と分けて記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表と処理それぞれのタイムゾーンを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象月と、集計に使う日付の列を担当者が決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">開始と終了の境界を含むかどうかを明文化したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">取得した値から抽出の判定まで、外れた明細を追跡したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">再集計の対象月を共有し、境界付近の明細を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">修正前後の出力を残し、採用する結果を人が確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://developers.google.com/apps-script/guides/triggers/installable?hl=ja" rel="noopener" target="_blank">インストール可能なトリガー｜Google for Developers</a>：時間主導型トリガーの起動時刻に幅があること</li>
+      <li><a href="https://developers.google.com/apps-script/reference/script/clock-trigger-builder?hl=ja" rel="noopener" target="_blank">Class ClockTriggerBuilder｜Google for Developers</a>：分の指定の許容幅と、起動に使うタイムゾーン</li>
+      <li><a href="https://developers.google.com/apps-script/reference/base/session?hl=ja" rel="noopener" target="_blank">Class Session｜Google for Developers</a>：スクリプトのタイムゾーンの取得と表との相違</li>
+      <li><a href="https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet" rel="noopener" target="_blank">Class Spreadsheet｜Google for Developers</a>：表のタイムゾーンを取得する方法</li>
+      <li><a href="https://developers.google.com/apps-script/reference/spreadsheet/range" rel="noopener" target="_blank">Class Range｜Google for Developers</a>：取得したセルの値に含まれるデータ型</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/excel-closing-period-sum">Excelで締め日から次の締め日までの金額を集計する方法</a></li>
+      <li><a href="/column/merge-notice-date-amount-check">差し込み通知書の日付や金額が元データの表示と違うのはなぜか</a></li>
+      <li><a href="/column/receipt-card-date-mismatch">領収書の日付とカード利用日が一日ずれたときの照合と記録の残し方</a></li>
+      <li><a href="/column/excel-pivot-expense-share-ratio">Excelのピボットで費目別金額と構成比を横に並べる手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
