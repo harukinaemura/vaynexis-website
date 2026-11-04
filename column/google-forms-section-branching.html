@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Googleフォームで回答により質問を分けるセクション分岐の設定手順｜Vaynexis</title>
+  <meta name="description" content="Googleフォームで、回答に合わせて質問を分ける設定を整理します。移動先を用意してから分岐を設定する流れ、受付の要否を選ぶ短い例、途中の進み先や終了位置の確認、担当者が交代するときに残す情報まで、事務で使う際の確認点をまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Googleフォームで回答により質問を分けるセクション分岐の設定手順｜Vaynexis">
+  <meta property="og:description" content="Googleフォームで、回答に合わせて質問を分ける設定を整理します。移動先を用意してから分岐を設定する流れ、受付の要否を選ぶ短い例、途中の進み先や終了位置の確認、担当者が交代するときに残す情報まで、事務で使う際の確認点をまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/google-forms-section-branching">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/google-forms-section-branching">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Googleフォームで回答により質問を分けるセクション分岐の設定手順","description":"Googleフォームで、回答に合わせて質問を分ける設定を整理します。移動先を用意してから分岐を設定する流れ、受付の要否を選ぶ短い例、途中の進み先や終了位置の確認、担当者が交代するときに残す情報まで、事務で使う際の確認点をまとめます。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-forms-section-branching"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Googleフォームで回答により質問を分けるセクション分岐の","item":"https://vaynexis.jp/column/google-forms-section-branching"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Googleフォームで回答により質問を分けるセクション分岐の</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Googleフォームで回答により質問を分けるセクション分岐の設定手順</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Googleフォームでは、［回答に応じてセクションに移動］で、選んだ回答ごとに進む先を設定できます。必要な質問を移動先ごとにまとめてから、回答と行き先を対応させる流れです。設定後は、選択肢を変えて進み、見せたい質問と終了位置が合っているかを確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、Googleフォームで回答に応じて次の質問を分けたい小さな会社の担当者が、セクションの用意・移動先の指定・終了位置の確かめ方を整理する流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">分岐の質問と、移動先のまとまりを用意する</a></li>
+      <li><a href="#s2">回答ごとの行き先と、その後の進み先を設定する</a></li>
+      <li><a href="#s3">受付の要否から、聞く内容を分ける例</a></li>
+      <li><a href="#s4">予想と違う質問が出たときに見直す場所</a></li>
+      <li><a href="#s5">選択肢を変えて確かめ、引き継ぎに残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．分岐の質問と、移動先のまとまりを用意する</h2>
+    <p>分岐に使う質問形式は、専用ヘルプで示されている多肢選択式かプルダウン形式から選びます。一方、質問形式の一覧では、ラジオボタン、チェックボックス、プルダウンのどの欄にも、回答に応じて特定のセクションに移動するように設定できると書かれています。一覧のラジオボタンは、回答者が回答を1つのみ選択できる形式です。この記事では専用ヘルプに合わせ、1つだけ選ぶ形式かプルダウンで分岐を作る前提で書きます。日本語のヘルプには、AI 技術を使用して翻訳されたコンテンツが含まれている場合があると書かれているため、形式の名前は自分の画面と照合します。画面で質問形式を探す際は、回答を選ぶ質問と、移動後に記入する質問を分けて考えると整理しやすくなります。</p>
+    <p>移動先を作るには、編集するフォームでセクション追加アイコンを押し、新しいセクションの名前を入力します。名前には、移動後に何を答える場所かが分かる言葉を使うとよいです。「詳細入力」「共通の確認」のように役割を表す名前なら、設定を引き継ぐ人も行き先を見比べやすくなります。</p>
+    <p>質問を作り始める前に、全員に聞く内容と、回答に応じて聞く内容を紙に分けておきます。詳しく聞きたい内容をすべて冒頭に置くと、どこから分けたいのかが分かりにくくなります。先に分かれ目を決めることが、設定を見直すときの手掛かりになります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．回答ごとの行き先と、その後の進み先を設定する</h2>
+    <p>質問のタイトルの右側で形式を選び、回答の選択肢を入力します。「はい」「いいえ」のような短い言葉だけで意味が伝わりにくいときは、何について選ぶのかが質問文から分かるように整えます。</p>
+    <p>分岐する質問の右下にあるその他アイコンから［回答に応じてセクションに移動］を選び、回答に対応する移動先を指定します。選択肢の文面と行き先の名前を横に見比べながら設定すると、対応の取り違えを探しやすくなります。</p>
+    <p>回答に基づいて終了させるときは、移動先として［フォームを送信］も選べます。各セクションの下部では、その先に進むセクションも指定できます。分かれ目から進む先に加え、移動した後の終わり方まで確認するのが要領です。途中の質問へ正しく進んでも、その後に別の回答者向けの内容へ進む構成では、意図した流れになりません。</p>
+    <p>回答を省略させない設定は、質問の［必須］をオンにする操作です。受付の要否など、後の流れを決める問いについては、回答を求めるかどうかも作成時に検討します。質問の追加と行き先の指定を終えてから、文面だけでなく回答の流れとして読み直すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．受付の要否から、聞く内容を分ける例</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>社内の事務受付で、詳しい聞き取りが必要かを選ぶ場面を考えます。まず「詳しい聞き取りは必要ですか」と尋ね、必要と答えた人には内容を記入してもらい、不要と答えた人はそこで回答を終える、という設計です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">選ぶ回答</th><th scope="col">進む先の設計案</th><th scope="col">その先で確かめること</th></tr></thead><tbody><tr><td data-label="選ぶ回答">必要</td><td data-label="進む先の設計案">詳しい内容を記入する場所へ進む</td><td data-label="その先で確かめること">記入後に回答を終える流れになっているか</td></tr><tr><td data-label="選ぶ回答">不要</td><td data-label="進む先の設計案">詳しい内容の記入へ進まず、回答を終える</td><td data-label="その先で確かめること">不要な質問が途中に現れないか</td></tr></tbody></table></div>
+    <p>この表は、聞きたい内容と進み先を対応させるための見本です。実際に使う質問文や受付項目は、業務に合わせて決めます。受付の要否を選ぶ問いに、受付内容を長く書き込む役割まで持たせないほうが、分かれ目を読み取りやすくなります。</p>
+    <p>全員に知らせたい注意事項は、途中で回答を終える人にも届く位置を検討します。詳しい内容を尋ねる場所にだけ案内を書いてしまうと、その場所へ進まない人には伝わりません。どこで聞き取りを終えてよいかを先に決め、終了の手前で必要な案内を読める構成に整えます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．予想と違う質問が出たときに見直す場所</h2>
+    <p>質問を特定の順序で見せる場合について、公式ヘルプは質問をシャッフルしないよう案内しています。同じヘルプでは、質問の順序のシャッフルは、フォームの上部にある［設定］の［プレゼンテーション］の［フォームの表示］で［質問の順序をシャッフルする］をオンにする設定とされています。分岐を使うフォームでは、この設定がオンになっていないかも見ます。</p>
+    <p>回答者に送信するフォームへのリンクは、右上の［プレビュー］または［共有］から［回答者に送信するリンクをコピー］で取得できると案内されています。編集画面の設定を見直した後は、回答者に送るのと同じリンクの側でも、意図した流れかを確認する段取りにします。</p>
+    <p>余分な質問が現れたときは、まず選んだ回答と設定した行き先を照合し、次に移動後の終わり方を見直します。想定より早く終了した場合も、途中の行き先だけでなく、どこを終了地点にしたかまでたどると整理しやすくなります。</p>
+    <p>表示された質問が正しいかだけで確認を終えず、表示するつもりのなかった質問が途中にないかも見ます。作成者は内容を知っているため、余分な質問にも答えて先へ進みがちです。質問の必要性を知らない人のつもりで読み直すと、案内の不足にも気づきやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．選択肢を変えて確かめ、引き継ぎに残す</h2>
+    <p>確認は、用意した選択肢ごとに進み方を変えて行います。目当ての入力先へ進めたことと、入力を終えられたことを分けて記録すると、修正する場所がはっきりします。回答内容には確認用の文面を使い、確認を担当する人の間で見分けられるようにしておくとよいです。</p>
+    <p>記録には、選んだ回答、見せたい内容、見せたくない内容、終わる位置、確認した結果を残します。設定の名前だけを控えるよりも、どう進むことを意図しているかが伝わります。うまく進んだ選択肢だけを記録せず、確認した範囲が後で分かる形にします。</p>
+    <p>担当者へ渡す際は、質問を追加した箇所や行き先を変更した箇所も共有します。文言を直しただけなのか、進む順番まで変えたのかを分けて残すと、再確認の範囲を考えやすくなります。最後に、回答を終えた人へ追加で聞く必要がないかを見直し、受付後の作業につながる内容かを確認します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">回答の分かれ目になる問いと、移動後に尋ねる内容を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">用意した選択肢と、それぞれの行き先を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">詳しく答える人に、必要な入力内容が表示されるか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">詳しい回答が不要な人に、余分な質問が出ないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">移動先で答えた後、意図した位置で終了するか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">途中で回答を終える人にも、必要な案内が届くか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">確認した範囲と、変更した箇所を引き継ぎ用に記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/docs/answer/141062?hl=ja" rel="noopener" target="_blank">回答に応じて質問を表示する</a>：回答別の移動先、対象の質問形式、終了の指定、各セクション下部の設定、AI翻訳の注記</li>
+      <li><a href="https://support.google.com/docs/answer/7322334?hl=ja" rel="noopener" target="_blank">フォームの質問の形式を選択する</a>：形式ごとの分岐の記載（ラジオボタン・チェックボックス・プルダウン）、必須の設定</li>
+      <li><a href="https://support.google.com/docs/answer/2839737?hl=ja" rel="noopener" target="_blank">フォームを編集する</a>：質問とセクションの追加、命名、質問の順序のシャッフルの注意と設定の場所</li>
+      <li><a href="https://support.google.com/docs/answer/2839588?hl=ja" rel="noopener" target="_blank">フォームを公開して回答者と共有する</a>：回答者に送信するリンクを取得する操作</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/google-forms-closing-date-time">Googleフォームの回答受付を締切日時で止める設定と確認手順</a></li>
+      <li><a href="/column/google-forms-add-editor-handover">Googleフォームの担当者を共同編集に加える手順と権限の確認</a></li>
+      <li><a href="/column/survey-completed-responses-count">アンケートの回答数に途中回答が混じるとき完了分を確かめる手順</a></li>
+      <li><a href="/column/inquiry-forwarded-owner-unassigned">問い合わせを部署へ回した後、担当者未定をどう見つけるか</a></li>
+      <li><a href="/column/chrome-saved-password-location">会社用パスワードがブラウザーのどこに保存されたか調べるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

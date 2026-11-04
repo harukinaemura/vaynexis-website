@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordで表紙を除いて本文からページ番号を振る手順と確認点｜Vaynexis</title>
+  <meta name="description" content="表紙には番号を表示せず、本文から数え始めたいときの設定を整理します。表紙の直後に本文がある場合と、目次などを挟む場合の違い、番号を入れる手順、表示が合わないときの確認点をまとめ、資料を配布する前や担当者へ引き継ぐ際の見直しに使える形で説明します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Wordで表紙を除いて本文からページ番号を振る手順と確認点｜Vaynexis">
+  <meta property="og:description" content="表紙には番号を表示せず、本文から数え始めたいときの設定を整理します。表紙の直後に本文がある場合と、目次などを挟む場合の違い、番号を入れる手順、表示が合わないときの確認点をまとめ、資料を配布する前や担当者へ引き継ぐ際の見直しに使える形で説明します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/word-page-numbers-skip-cover">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/word-page-numbers-skip-cover">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wordで表紙を除いて本文からページ番号を振る手順と確認点","description":"表紙には番号を表示せず、本文から数え始めたいときの設定を整理します。表紙の直後に本文がある場合と、目次などを挟む場合の違い、番号を入れる手順、表示が合わないときの確認点をまとめ、資料を配布する前や担当者へ引き継ぐ際の見直しに使える形で説明します。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/word-page-numbers-skip-cover"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Wordで表紙を除いて本文からページ番号を振る手順と確認点","item":"https://vaynexis.jp/column/word-page-numbers-skip-cover"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Wordで表紙を除いて本文からページ番号を振る手順と確認点</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Wordで表紙を除いて本文からページ番号を振る手順と確認点</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>表紙が1ページだけの場合は、先頭ページの番号を非表示にし、番号の開始値を「0」にすると、次の本文を「1」から始められます。表紙に番号がないことと、本文が意図した番号で始まることを別々に確かめるのが要点です。</p></div>
+    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、Wordの資料で表紙に番号を出さず本文から数え始めたい小さな会社の事務担当者が、設定の手順と配布前の見直しを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">番号を入れる前に、本文の始まりを決める</a></li>
+      <li><a href="#s2">表紙を非表示にし、本文の開始番号を合わせる</a></li>
+      <li><a href="#s3">目次なども除く場合は、本文の境目で区切る</a></li>
+      <li><a href="#s4">配布用の説明資料では、表示の結果を見比べる</a></li>
+      <li><a href="#s5">番号が合わないときは、境目と表示を見直す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．番号を入れる前に、本文の始まりを決める</h2>
+    <p>確認日：2026年11月4日。対象：Windowsデスクトップ版の Word。</p>
+    <p>最初に、配布する資料のどこから本文として数えるかを決めます。表紙の次に本文が来る構成と、本文の前に目次などが入る構成では、確認する境目が違います。操作前の文書を残し、コピーで試す進め方も考えられます。</p>
+    <p>番号を置くヘッダーまたはフッターをダブルクリックし、編集する場所を開きます。［挿入］→［ページ番号付け］へ進み、［現在の位置］を選んでスタイルを指定します。</p>
+    <p>ここでは資料の内容や表紙のデザインは変えず、番号の開始位置と表示に絞って進めます。番号が既に入っている文書では、入れ直す前に、現在どこから表示されているかを見ておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．表紙を非表示にし、本文の開始番号を合わせる</h2>
+    <p>表紙の直後に本文がある文書では、表紙に番号を見せるかどうかと、本文にどの番号を付けるかを順に設定します。</p>
+    <h3 class="h3">表紙に番号を表示しない設定</h3>
+    <p>表紙のヘッダーまたはフッターを編集している状態で、［先頭ページのみ別指定］を選びます。先頭ページに番号が残っているときは、そのページ番号を選択して Delete キーで削除します。</p>
+    <p>削除した後は、そのまま本文の冒頭へ移って表示を確かめます。表紙だけを見て作業を終えず、本文にも意図した番号が出ているかを続けて見る進め方です。</p>
+    <h3 class="h3">本文を先頭の番号から始める設定</h3>
+    <p>文書の物理的な2ページ目を「1」で始めるには、［挿入］→［ページ番号］→［ページ番号の書式設定］で、［開始位置］を「0」に設定します。</p>
+    <p>この設定は、表紙の番号を隠す操作と分けて見直すと、どちらを変更したか整理しやすくなります。表紙の見た目だけで判断せず、本文の冒頭と続きの両方を見比べるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．目次なども除く場合は、本文の境目で区切る</h2>
+    <p>表紙と目次を置く両面印刷の文書では、本文側にセクション区切りを追加し、前の区間とのリンクを解除して番号を入れる方法があります。番号を始めたい本文の位置を先に決め、前の部分と分けて進めます。</p>
+    <p>本文の境目では、［レイアウト］から区切りのメニューを開きます。次のページで新しいセクションを始める種類を選びます。通常の改ページとセクション区切りは別のものなので、既存の改ページを区切りとして扱わないようにします。</p>
+    <p>新しい本文のヘッダーまたはフッターをダブルクリックし、前のセクションとのリンクをオフにします。ヘッダーとフッターは個別にリンクされるため、番号を置く側のリンクを確認します。</p>
+    <p>リンクを解除した後、表紙や目次がある前のセクションの番号を選び、Delete キーで削除します。</p>
+    <p>続いて［ページ番号］→［ページ番号の書式設定］を開きます。［開始番号］で本文セクションの開始値を指定し、本文の先頭から番号を振り直します。</p>
+    <p>先に説明した表紙だけを除く構成と、本文を区切って番号を振り直す構成を混ぜず、今の文書がどちらかを見ながら進めるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．配布用の説明資料では、表示の結果を見比べる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>社内で配る説明資料を想定し、完成時に見たい状態を短い表にまとめます。操作した項目の記録とは分けて、読み手にどう見えるかを確認するための表です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめる場所</th><th scope="col">完成時に見たい状態</th></tr></thead><tbody><tr><td data-label="確かめる場所">表紙</td><td data-label="完成時に見たい状態">番号が表示されていない</td></tr><tr><td data-label="確かめる場所">本文の冒頭</td><td data-label="完成時に見たい状態">決めた開始番号が表示されている</td></tr><tr><td data-label="確かめる場所">本文の続き</td><td data-label="完成時に見たい状態">番号が順に続いている</td></tr></tbody></table></div>
+    <p>最初に本文の冒頭を見た後、表紙へ戻って表示を比べます。さらに本文を先へ送り、途中の表示も確認する流れです。印刷して渡す資料なら、配布する形でも同じ箇所を見ておくとよいです。</p>
+    <p>引き継ぎでは表紙の番号を消したという操作だけを残すより、どこを本文の始まりとしたか、どの状態を見て確認したかを添えると、次の担当者が判断の前提をたどりやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．番号が合わないときは、境目と表示を見直す</h2>
+    <p>公式ヘルプによると、［先頭ページのみ別指定］は、文書の先頭だけでなく各セクションの先頭にも適用できるため、本文を区切った文書では本文側の設定も確認します。</p>
+    <p>公式ヘルプでは、前の区間とのリンクを解除する項目を選べないときは、セクション区切りが作成されているかを確認するよう案内されています。項目が見つからないまま操作を重ねず、本文の境目を見直す順番です。</p>
+    <p>ヘルプには、番号が見えにくい場合に、ヘッダーやフッター内の図形などを動かす必要があるという説明もあります。番号を入れる設定と、入れた番号が見えるかどうかは、分けて確かめるとよいです。</p>
+    <p>編集を終えるときは、公式ヘルプのとおり［ヘッダーとフッターを閉じる］を選ぶか、Esc キーで終了します。最後に読み手の順番で文書をたどり、表紙、本文の冒頭、本文の続きの表示を見直します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">番号を付け始める本文の位置を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表紙だけを除く構成か、目次なども除く構成かを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表紙に番号が表示されていないことを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">本文の冒頭に決めた開始番号が表示されていることを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">本文の続きでも番号が順につながっていることを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表紙側の変更が本文に意図しない影響を与えていないことを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">配布する形で表示を確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/word/add-page-numbers-to-a-header-or-footer-in-word" rel="noopener" target="_blank">Word でヘッダーまたはフッターにページ番号を追加する</a>：番号の挿入操作と、図形などによって番号が見えにくい場合の確認</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/start-page-numbering-later-in-your-document" rel="noopener" target="_blank">文書の途中からページ番号を開始する</a>：表紙の番号の非表示と開始値の設定</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/start-page-numbering-on-page-3-double-sided-printing" rel="noopener" target="_blank">3 ページ目からページ番号を開始する - 両面印刷</a>：表紙と目次を置く両面印刷の構成と、前の区間のページ番号を削除する手順</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/insert-a-section-break" rel="noopener" target="_blank">セクション区切りを挿入する</a>：本文の境目で次のページから区切る操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/change-or-delete-a-header-or-footer-on-a-single-page" rel="noopener" target="_blank">1 つのページでヘッダーまたはフッターを変更または削除する</a>：通常の改ページとセクション区切りの違い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/configure-headers-and-footers-for-different-sections-of-a-word-document" rel="noopener" target="_blank">Word ドキュメントのさまざまなセクションのヘッダーとフッターを構成する</a>：前の区間とのリンク解除と、上下で別々に扱う注意点</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/customize-page-numbers-and-their-formats-in-different-word-document-sections" rel="noopener" target="_blank">さまざまなWordドキュメント セクションでページ番号とその形式をカスタマイズする</a>：本文での番号の振り直しと設定を選べない場合の確認</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/training/insert-page-numbers" rel="noopener" target="_blank">ページ番号を挿入する</a>：要点で示す、先頭ページを除き本文を先頭の番号から始める方法</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-document-demo">AI議事録で提案と決定事項を分ける方法（実演）</a></li>
+      <li><a href="/column/word-remove-trailing-blank-page">Wordの文書末尾に残る空白ページを印刷前に消す手順と確認</a></li>
+      <li><a href="/column/word-paste-formatting-options">Wordへ文章を貼ると字体が変わるときの書式の選び方と確認手順</a></li>
+      <li><a href="/column/chatgpt-for-word">ChatGPT for Wordで直した社内文書を確認する手順</a></li>
+      <li><a href="/column/google-forms-prefilled-link">Googleフォームの一部を入力済みで配る事前入力リンクの作り方</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gmailで案内メールの宛先を互いに見せずに送る手順と確認点｜Vaynexis</title>
+  <meta name="description" content="案内メールで送信先のアドレスを互いに見せたくないときの宛先指定を、公式ヘルプに沿って整理します。入力欄による見え方の違い、パソコンでの操作、送信前に本文や添付資料まで見直す流れをまとめ、担当者どうしの引き継ぎにも使える確認表を添えました。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Gmailで案内メールの宛先を互いに見せずに送る手順と確認点｜Vaynexis">
+  <meta property="og:description" content="案内メールで送信先のアドレスを互いに見せたくないときの宛先指定を、公式ヘルプに沿って整理します。入力欄による見え方の違い、パソコンでの操作、送信前に本文や添付資料まで見直す流れをまとめ、担当者どうしの引き継ぎにも使える確認表を添えました。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/gmail-bcc-hide-recipients">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/gmail-bcc-hide-recipients">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Gmailで案内メールの宛先を互いに見せずに送る手順と確認点","description":"案内メールで送信先のアドレスを互いに見せたくないときの宛先指定を、公式ヘルプに沿って整理します。入力欄による見え方の違い、パソコンでの操作、送信前に本文や添付資料まで見直す流れをまとめ、担当者どうしの引き継ぎにも使える確認表を添えました。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/gmail-bcc-hide-recipients"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Gmailで案内メールの宛先を互いに見せずに送る手順と確認点","item":"https://vaynexis.jp/column/gmail-bcc-hide-recipients"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Gmailで案内メールの宛先を互いに見せずに送る手順と確認点</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Gmailで案内メールの宛先を互いに見せずに送る手順と確認点</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>案内メールの宛先を互いに見せずに送るには、送信先を［Bcc］に追加し、同じ欄に追加された受信者どうしでは他の宛先の名前やメールアドレスが見えない仕組みを使います。 送信前には、宛先の入力先と、本文や添付資料に公開したくない情報が残っていないかを分けて点検します。</p></div>
+    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、Gmailで案内メールの宛先を受信者どうしに見せずに送りたい小さな会社の事務担当者が、宛先欄の使い分けと送信前の確かめ方を整理するためのものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">非表示にする宛先と、見える宛先を分ける</a></li>
+      <li><a href="#s2">パソコンで宛先を指定して送る</a></li>
+      <li><a href="#s3">送付先一覧では公開の扱いを先に決める</a></li>
+      <li><a href="#s4">宛先欄の外にある情報と返信の流れも見る</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．非表示にする宛先と、見える宛先を分ける</h2>
+    <p>確認日：2026-11-04。以下の操作は、パソコン向けの公式ヘルプを対象にしています。</p>
+    <p>［Cc］に追加された受信者は、そのメールの他の宛先を見ることができます。 また、［Bcc］の受信者からも［To］と［Cc］の宛先は見えるため、これらの欄には相手に見えてよい宛先だけを残すのが確認のポイントです。</p>
+    <p>案内の送付先を決める際には、メールを届ける相手と、受信者どうしで共有してよい連絡先を分けて考えます。名簿から転記する前に「他の相手にも見えてよいか」を整理しておくと、入力後の確認の基準ができます。公開範囲が決まっていない連絡先は、確認が済むまで送付先を確定しない運用にするとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．パソコンで宛先を指定して送る</h2>
+    <h3 class="h3">作成画面を開き、送信先を入れる</h3>
+    <p>パソコンでGmailを開き、左上の［作成］をクリックします。 ［Bcc］をクリックして受信者を追加できます。 非表示にする送信先は、［Bcc］に入力します。 複数の宛先を入力するときは、名前またはメールアドレスの間をカンマで区切ります。</p>
+    <p>転記した後は、元の送付先一覧と画面上のアドレスを照合します。表示された名前だけで済ませず、意図した相手のアドレスかどうかまで見ます。入力を終えた段階でいったん手を止め、公開する連絡先と非公開にする連絡先が、当初の整理に合っているかを点検する流れです。</p>
+    <h3 class="h3">案内を書き、送信前に見直す</h3>
+    <p>件名を追加し、メッセージを入力します。 宛先の点検と文章の見直しを同時に進めるより、宛先を確認してから案内の内容を読む順にすると、確認する対象を絞れます。</p>
+    <p>宛先と内容を点検した後、メッセージ下部の［送信］をクリックして送ります。 送る直前には、文面を直した後に宛先を追加していないかも見返すとよいです。下書きの確認を人に頼んだ後も、修正した箇所を確かめてから送る流れにします。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．送付先一覧では公開の扱いを先に決める</h2>
+    <p>社外への案内では、送信先の一覧に「公開の扱い」を添えておくと、入力する担当者と確認する担当者が同じ基準で見られます。たとえば、説明会の案内を送る準備では、次のように分けます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">対象</th><th scope="col">今回の公開の扱い</th><th scope="col">入力前に確かめること</th></tr></thead><tbody><tr><td data-label="対象">自社の案内窓口</td><td data-label="今回の公開の扱い">受信者に見せてよい連絡先</td><td data-label="入力前に確かめること">窓口のアドレスが正しいか</td></tr><tr><td data-label="対象">参加予定者</td><td data-label="今回の公開の扱い">他の参加者には見せない連絡先</td><td data-label="入力前に確かめること">送付先一覧とアドレスが一致するか</td></tr><tr><td data-label="対象">社内の確認担当</td><td data-label="今回の公開の扱い">案内の送付先に含めるかを別に判断</td><td data-label="入力前に確かめること">内容の確認だけを頼む相手ではないか</td></tr></tbody></table></div>
+    <p>この表は、今回の案内で誰の連絡先を公開するかを決めるための見本です。社内の確認担当へ文章を見てもらうことと、その担当者を案内の送付先に加えることは、作業として分けておくとよいです。</p>
+    <p>過去の案内を再利用する際も、前回の送付先をそのまま今回の対象と扱わず、今回使う一覧に戻って照合します。引き継ぎ用のメモには、使った一覧の置き場所と、宛先を確認した担当を残します。実際のアドレスを説明用の資料へ写し広げず、作業に必要な範囲で管理する流れです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．宛先欄の外にある情報と返信の流れも見る</h2>
+    <p>受信者が全員に返信した場合、［Bcc］に追加された人はその返信を見ることができません。</p>
+    <p>そのため、案内を受け取った相手からの回答を、関係する相手全員が同じように見られる前提では進めないほうがよいです。回答を受ける窓口と、社内で回答を確認する担当を決めておくと、届いた連絡を誰が扱うかが明確になります。</p>
+    <p>宛先の表示とは別に、本文の宛名、過去のやり取りを写した部分、添付資料の名簿にも目を通します。メールの文章を整える作業と、公開してよい情報を選ぶ作業は、確認の観点が異なります。「宛先欄を点検したので確認を終える」とせず、受信者へ渡す内容全体を読む流れにします。</p>
+    <p>操作に慣れる前は、社内で受信側の表示を確認する機会を設けるのも方法です。試すための文章には、実際の送付先一覧や参加者の連絡先を持ち込まない形にするとよいです。画面の見え方を確認する作業と、本番の案内を送る作業を分けておきます。</p>
+    <p>この記事で扱うのは、少人数への案内で宛先を指定する手順です。大量配信の代わりに使う方法や、送信制限を避ける運用は扱いません。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">今回の案内を送る相手を、使用する送付先一覧で確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">受信者に見せてよい連絡先と、見せない連絡先を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">非公開にする宛先の入力先が、意図した欄になっているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表示名だけでなく、入力されたメールアドレスまで照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">本文や添付資料に、公開しない連絡先が残っていないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">回答を受ける窓口と、社内で確認する担当を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">最後の修正後に宛先と内容を見返したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/mail/answer/2819488?hl=ja" rel="noopener" target="_blank">メールの送信または送信取り消し - パソコン - Gmail ヘルプ</a>：宛先を非表示にする指定、各宛先欄から見える範囲、複数宛先の入力と返信の扱いの根拠に用いました。</li>
+      <li><a href="https://support.google.com/a/users/answer/9259846?hl=ja" rel="noopener" target="_blank">メールの送信を開始する - Google Workspace ラーニング センター</a>：パソコンでの作成、件名・メッセージの入力、送信操作の根拠に用いました。</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作る方法｜記入例と確認点</a></li>
+      <li><a href="/column/word-mail-merge-conditional-text-check">相手の条件で案内文が変わる差し込み印刷、分かれ目からの検品方法</a></li>
+      <li><a href="/column/google-sheets-freeze-header-row">スプレッドシートの長い事務台帳で見出し行を固定する手順</a></li>
+      <li><a href="/column/third-party-provision-record-links">個人データの第三者提供記録は取引の何と結び付けて残す？</a></li>
+      <li><a href="/column/ai-email-draft-permissions">AIでメールを下書きするときの接続権限・送信承認・記憶の確認</a></li>
+      <li><a href="/column/ai-email-reply">メール返信の下書きをAIで作る。先に人が骨子を決め、送る前に宛先・事実・約束・個人情報・文体の5つを確かめる</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

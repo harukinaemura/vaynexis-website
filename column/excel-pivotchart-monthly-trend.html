@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelのピボット集計をグラフにして月ごとの推移を見る手順｜Vaynexis</title>
+  <meta name="description" content="集計済みの表から月ごとの推移を見たいときに、グラフを作る操作と表示内容の確認を整理します。日付のまとめ方、古い順への並べ替え、軸と凡例の役割、元の表を直した後の更新までを扱い、事務担当者が引き継ぐ際に残す項目も示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelのピボット集計をグラフにして月ごとの推移を見る手順｜Vaynexis">
+  <meta property="og:description" content="集計済みの表から月ごとの推移を見たいときに、グラフを作る操作と表示内容の確認を整理します。日付のまとめ方、古い順への並べ替え、軸と凡例の役割、元の表を直した後の更新までを扱い、事務担当者が引き継ぐ際に残す項目も示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-pivotchart-monthly-trend">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-pivotchart-monthly-trend">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelのピボット集計をグラフにして月ごとの推移を見る手順","description":"集計済みの表から月ごとの推移を見たいときに、グラフを作る操作と表示内容の確認を整理します。日付のまとめ方、古い順への並べ替え、軸と凡例の役割、元の表を直した後の更新までを扱い、事務担当者が引き継ぐ際に残す項目も示します。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-pivotchart-monthly-trend"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelのピボット集計をグラフにして月ごとの推移を見る手順","item":"https://vaynexis.jp/column/excel-pivotchart-monthly-trend"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelのピボット集計をグラフにして月ごとの推移を見る手順</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelのピボット集計をグラフにして月ごとの推移を見る手順</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>集計済みのピボットテーブルからピボットグラフを作ると、表のレイアウトやデータの変更をグラフにも反映できます。時間の並びと集計対象をそろえ、表の数値と図の対応を確かめてから共有するとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、集計済みのピボットテーブルから月ごとの推移をグラフで見たい小さな会社の事務担当者が、作成・並べ替え・更新後の照合を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">既存の集計表からグラフを挿入する</a></li>
+      <li><a href="#s2">日付の粒度と並びをそろえる</a></li>
+      <li><a href="#s3">軸と凡例の役割を決めて推移を表示する</a></li>
+      <li><a href="#s4">受付件数の例で表示の目的を整理する</a></li>
+      <li><a href="#s5">表示が合わないときは配置と更新を確認する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．既存の集計表からグラフを挿入する</h2>
+    <p>確認日：2026-11-04（日本時間）</p>
+    <p>ピボットテーブルの動作は利用環境によって少し異なるため、ここではWindows版を基準に操作を整理します。すでに集計ができている表を出発点にし、集計の項目を決める作業と、図として見せる作業を分けて進めます。</p>
+    <p>既存のピボットテーブル内のセルを選び、［挿入］から［ピボットグラフ］を開きます。表示するグラフを選び、［OK］で確定します。元の明細表を選ぶ操作と取り違えないよう、集計結果の中にカーソルがあるかを見てから進めるとよいです。</p>
+    <p>完成した図を整える前に、対象期間、集計した数量の単位、含める対象を手元で確認します。見た目だけが目的に合っていても、集計対象が違えば、共有したい内容とはずれてしまいます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．日付の粒度と並びをそろえる</h2>
+    <h3 class="h3">日ごとの一覧を月単位にまとめる</h3>
+    <p>ピボットテーブルでは、日付や時刻の項目を月や四半期でグループ化できます。対象の日付を右クリックして［グループ化］を開きます。［基準］で期間を選びます。［OK］で確定します。月ごとの推移を見る目的に合わせて、表示する期間の細かさをそろえます。</p>
+    <h3 class="h3">数量の大小より時間の順を確かめる</h3>
+    <p>日付の項目は、古い順にも並べ替えられます。並びを直した後は、先頭と末尾の期間を見比べます。年が変わる境目も確認し、月の名前だけでは対象期間を読み違えないかを見直すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．軸と凡例の役割を決めて推移を表示する</h2>
+    <p>ピボットテーブル内をクリックすると、フィールドの一覧が表示されます。フィールドはドラッグして、一覧と配置先の領域との間を移動できます。</p>
+    <p>ピボットグラフの［軸フィールド (カテゴリ)］は、項目をグラフの軸に表示する役割です。［凡例フィールド (系列)］は項目を凡例に表示する役割です。［値］は集計した数値を表示する役割です。今回の配置案は、横方向に期間、凡例に比較したい分類、数量を示す部分に集計値を置く形です。図と表を見比べながら、見たい順序になったかを確かめます。</p>
+    <p>折れ線グラフは、月や四半期など、等間隔の期間で推移を示す用途に向いています。積み上げ折れ線グラフはデータを加算するため、分類ごとの値をそのまま比べる目的と合うか、選ぶ際に確認します。増減を読む前に、図に表れた高さが何を意味するかをそろえることが大切です。</p>
+    <p>グラフのタイトルや凡例の位置、データラベルなども変更できます。表題には何の推移かが分かる名前を付け、数量の単位と対象期間も読み手に伝わるか確認します。線の色や装飾を整える前に、各分類の名前が読める状態かを見直すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．受付件数の例で表示の目的を整理する</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>受付方法ごとの対応件数を月単位で集計した場面を考えます。見たい内容を次のように整理してから、表示を整えるためのメモにします。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">見たい内容</th><th scope="col">用意する項目</th><th scope="col">図で確かめること</th></tr></thead><tbody><tr><td data-label="見たい内容">いつの受付か</td><td data-label="用意する項目">受付月</td><td data-label="図で確かめること">古い月から順に読めるか</td></tr><tr><td data-label="見たい内容">どの窓口か</td><td data-label="用意する項目">電話・メールの区分</td><td data-label="図で確かめること">区分の名前を見分けられるか</td></tr><tr><td data-label="見たい内容">どれだけ対応したか</td><td data-label="用意する項目">対応件数の集計値</td><td data-label="図で確かめること">元の集計結果と対応しているか</td></tr></tbody></table></div>
+    <p>担当者は、ある月の区分別の数値を元の集計表と照合します。合っているかを確かめる際には、図の形だけで判断せず、期間と区分の名前も対応させます。共有時には、対象期間と件数の数え方を添えると、読み手と前提を合わせやすくなります。</p>
+    <p>この例では、増減の理由や対応の良しあしまで結論づけません。受付方法の違いや集計対象を確かめる材料として図を使い、原因を考える作業は別に扱います。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．表示が合わないときは配置と更新を確認する</h2>
+    <h3 class="h3">行列の向きを変えたいとき</h3>
+    <p>公式ヘルプによると、ピボットグラフでは［データ ソースの選択］で行列の向きを切り替えられず、関連するピボットテーブルの行と列のラベルを入れ替えて対応します。横方向に読みたい項目と分類として分けたい項目を、配置先と照らし合わせます。</p>
+    <p>公式ヘルプによると、ピボットグラフの［フィルター］ウィンドウでは、基になるデータの並べ替えや絞り込みができます。表示が少ないと感じたときは、含めたい期間や分類が選択から外れていないかを見ます。共有用に対象を絞った状態と、全体を見直す状態を区別し、どの範囲を示した図なのかをメモに残します。</p>
+    <h3 class="h3">元の表を直した後</h3>
+    <p>公式ヘルプによると、ピボットテーブルを右クリックし、［更新］を選ぶと、手動で更新できます。自動で変わることを前提にせず、共有前に更新して、追加・修正した期間の数値を確認する進め方にします。</p>
+    <p>元の明細、集計結果、図の順に見比べ、どこから違いが生じたかを追います。集計自体が違う場合と、表示の対象や並びだけが違う場合を分けると、戻って確認する箇所を絞れます。引き継ぎには、元の表の場所、表示した対象、更新後に照合した箇所を残します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">対象期間と数量の単位をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">日付をまとめる期間の細かさを決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">期間が古い順に並び、年の境目も読み取れるか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">横方向の期間と比較する分類を意図した位置に置いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表示対象から必要な期間や分類が外れていないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の表を直した後に更新し、集計結果と図を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">引き継ぐ相手に対象・数え方・更新後の確認箇所を残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/create-a-pivottable-to-analyze-worksheet-data" rel="noopener" target="_blank">ピボットテーブルを作成してワークシート データを分析する</a>：利用環境による動作の違い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/create-a-pivotchart" rel="noopener" target="_blank">ピボットグラフを作成する</a>：既存の集計表から作成する操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/group-or-ungroup-data-in-a-pivottable" rel="noopener" target="_blank">ピボットテーブルでデータをグループ化またはグループ化解除する</a>：日付を月などの期間にまとめる操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/sort-data-in-a-pivottable-or-pivotchart" rel="noopener" target="_blank">ピボットテーブルまたはピボットグラフのデータの並べ替え</a>：日付を古い順に並べる操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/use-the-field-list-to-arrange-fields-in-a-pivottable" rel="noopener" target="_blank">フィールド リストを使ってピボットテーブル内でフィールドを配置する</a>：フィールド一覧の表示</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/pivot-data-in-a-pivottable-or-pivotchart" rel="noopener" target="_blank">ピボットテーブルまたはピボットグラフでデータをピボットする</a>：軸・凡例・値の役割と配置変更</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/available-chart-types-in-office" rel="noopener" target="_blank">Office で利用可能なグラフの種類</a>：折れ線グラフで示す推移と積み上げの性質</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/overview-of-pivottables-and-pivotcharts" rel="noopener" target="_blank">ピボットテーブルおよびピボットグラフの概要</a>：集計表とグラフの連動、行列の向き</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/refresh-pivottable-data" rel="noopener" target="_blank">ピボットテーブルのデータを更新する</a>：手動で更新する操作</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-pivot-department-by-expense">Excelで部門と費目を掛け合わせた経費集計表を作る手順</a></li>
+      <li><a href="/column/excel-pivot-amount-shows-count-fix">Excelのピボットで金額が件数になるとき合計に直すには</a></li>
+      <li><a href="/column/survey-results-by-channel">店頭とメールの顧客アンケートを回収経路別に集計する手順</a></li>
+      <li><a href="/column/excel-closing-period-sum">Excelで締め日から次の締め日までの金額を集計する方法</a></li>
+      <li><a href="/column/excel-power-query-privacy-levels">Excelで社内・外部データを結合する前のプライバシー設定確認</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで社内・外部データを結合する前のプライバシー設定確認｜Vaynexis</title>
+  <meta name="description" content="社内の表と外部の公開データを組み合わせる前に、どの設定を見ればよいかを整理します。取込元ごとの分類を確認する操作と、結合時にその分類に従う設定を区別し、確認する順序、機密性の判断を担当者へ戻す場面、引き継ぎに残す内容を説明します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで社内・外部データを結合する前のプライバシー設定確認｜Vaynexis">
+  <meta property="og:description" content="社内の表と外部の公開データを組み合わせる前に、どの設定を見ればよいかを整理します。取込元ごとの分類を確認する操作と、結合時にその分類に従う設定を区別し、確認する順序、機密性の判断を担当者へ戻す場面、引き継ぎに残す内容を説明します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-power-query-privacy-levels">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-power-query-privacy-levels">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで社内・外部データを結合する前のプライバシー設定確認","description":"社内の表と外部の公開データを組み合わせる前に、どの設定を見ればよいかを整理します。取込元ごとの分類を確認する操作と、結合時にその分類に従う設定を区別し、確認する順序、機密性の判断を担当者へ戻す場面、引き継ぎに残す内容を説明します。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-power-query-privacy-levels"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで社内・外部データを結合する前のプライバシー設定確","item":"https://vaynexis.jp/column/excel-power-query-privacy-levels"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで社内・外部データを結合する前のプライバシー設定確</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで社内・外部データを結合する前のプライバシー設定確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Power Queryで社内・外部データを結合する前は、データソースのプライバシーレベルと、結合時にその分類を適用するオプションを分けて確かめます。取込元に含まれる情報と閲覧を認める範囲を整理し、判断が付かないものは管理担当者へ確認してから進める流れにします。</p></div>
+    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、社内の表と外部の公開データをExcelで結合したい小さな会社の事務担当者が、取込元ごとの分類と結合時の設定を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">結合の前に、情報を見せてよい範囲を整理する</a></li>
+      <li><a href="#s2">データソースごとの分類を開いて確かめる</a></li>
+      <li><a href="#s3">結合時に分類へ従う設定も見る</a></li>
+      <li><a href="#s4">架空の照合例では、分類の前に項目を洗い出す</a></li>
+      <li><a href="#s5">警告や停止があれば、対象と設定へ戻る</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．結合の前に、情報を見せてよい範囲を整理する</h2>
+    <p>確認日：2026年11月4日。</p>
+    <p>公式ヘルプは、プライバシーレベルの誤設定によって機密データが信頼できる環境の外へ漏れる可能性を示しています。取込元を確認する目的は、表を表示できるようにすることだけではなく、含まれる情報をどこまで扱ってよいかを確かめることです。</p>
+    <p>機密性の高いデータを含むデータソースは［プライベート］に分類するのが公式の案内です。［組織］は表示を信頼できるユーザーグループに制限する分類で、［パブリック］は誰もがデータを見られる分類です。</p>
+    <p>ここでは、既存の接続があるデスクトップ版のブックについて、設定を確認する操作を扱います。Mac版のExcelでは、現在プライバシーレベルがサポートされていないため、同じ操作を前提にしません。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．データソースごとの分類を開いて確かめる</h2>
+    <p>まず、作業対象のブックと取込元の場所を照合します。似た名前のファイルを取り違えないよう、担当者へ渡された一覧と、これから確認する対象を対応させておくとよいです。</p>
+    <p>Excelの［データ］から［データの取得］、［データ ソース設定］へ進みます。一覧で対象のデータソースを選び、［アクセス許可の編集］を開きます。［プライバシー レベル］の選択欄で、現在の分類を確認して変更できます。</p>
+    <p>この段階で、表示された分類と、情報を見せてよい範囲についての社内判断を突き合わせます。社内に置いた表、外から取り込んだ表という呼び方だけで判断を済ませず、管理担当者が確認できるよう、含まれる項目と用途も控えます。</p>
+    <p>変更する場合は［OK］を選び、［閉じる］で画面を閉じます。確認の仕上げとして、同じデータソースの［アクセス許可の編集］を開き直し、選択したプライバシーレベルを見ます。</p>
+    <p>取込元が複数ある場合は、確認を終えた対象と、判断を待っている対象を分けて記録します。変更した内容を記憶だけに頼らず、元の分類と変更後の分類、判断した担当者を残す形にすると、引き継ぎ先も経緯をたどれます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．結合時に分類へ従う設定も見る</h2>
+    <p>続いて、［データ］から［データの取得］、［クエリ オプション］を開きます。［クエリ オプション］には、［グローバル］の［プライバシー］と、［現在のブック］の［プライバシー］があります。</p>
+    <p>［グローバル］には、常に各ソースの設定に従う選択肢や、各ファイルの設定に従う選択肢があります。確認したいブックだけを見る前に、全体でどの扱いになっているかを把握する流れです。管理担当者が全体の設定を決めている場合は、その方針と影響する範囲を確認してから変更を検討します。</p>
+    <p>［現在のブック］では、各ソースのプライバシーレベル設定に従ってデータを結合する選択肢を確認します。プライバシーレベルを無視する設定は、承認されていない人への機密データの開示につながる可能性があります。</p>
+    <p>ここでの作業記録には、確認した範囲も添えます。分類を確かめたとだけ書くより、取込元の分類を見たのか、結合時の扱いを見たのかを区別した方が、未確認の箇所を追いやすくなります。会社全体の運用に関わる変更は、事務担当者だけで進めず管理担当者と相談する流れです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．架空の照合例では、分類の前に項目を洗い出す</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>社内で管理する配送先の表に、外部の公開地域一覧を結び付ける場面を考えます。結果を作る担当者が、分類を決める担当者へ渡す確認材料の例です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">取込元</th><th scope="col">含まれる項目の例</th><th scope="col">分類を判断する前の確認</th></tr></thead><tbody><tr><td data-label="取込元">社内の配送先表</td><td data-label="含まれる項目の例">担当者名、届け先、地域名</td><td data-label="分類を判断する前の確認">各項目を見せてよい範囲を管理担当者へ確認する</td></tr><tr><td data-label="取込元">外部の公開地域一覧</td><td data-label="含まれる項目の例">地域名、地域の区分</td><td data-label="分類を判断する前の確認">参照する一覧の公開範囲と内容を確認する</td></tr><tr><td data-label="取込元">照合して作る表</td><td data-label="含まれる項目の例">配送先と地域の区分</td><td data-label="分類を判断する前の確認">誰へ渡す予定の表かを先に控える</td></tr></tbody></table></div>
+    <p>公開されている一覧を使う場面でも、社内の表に含まれる項目の扱いは別に確認します。判断に必要な情報がそろっていなければ、設定変更を保留し、不明な項目と確認先を記録する進め方です。担当者名を含まない見本を用意し、結び付ける項目の対応を先に確かめておくと、操作の問題と情報の扱いの判断を切り分けられます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．警告や停止があれば、対象と設定へ戻る</h2>
+    <p>Power Query の公式資料によると、未設定の取込元がある場合や分類が異なる場合、Power Queryはデータのプライバシー情報を求める警告を表示します。制限の厳しい分離レベルは情報交換をブロックする一方で、機能や処理性能に影響する可能性があります。</p>
+    <p>警告を見たら、画面の文言と、そのとき扱っていた取込元を控えます。結合を通すための変更を重ねる前に、未設定の対象があるか、社内で確認した内容と表示が合うかを見直す順序にします。判断が付かないまま分類をそろえず、管理担当者が元の状態を確かめられるよう、変更した箇所も併記するとよいです。</p>
+    <p>設定の確認を終えた後は、作成された表の列、照合した項目、想定外の行の増減を元の表と見比べます。結合できたことと、業務で使う結果が合っていることは分けて確認し、引き継ぎには設定の確認状況と結果の照合状況を残します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">結合する取込元と、その中に含まれる項目を洗い出したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">情報を見せてよい範囲を管理担当者へ確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">各取込元の分類を開き、社内の判断と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">分類と、結合時の扱いを決める設定を分けて確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更後に設定を開き直し、確認した範囲と内容を控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">警告の内容と未解決の確認先を引き継ぎに残したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">作成された表を元の表と照合したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/set-privacy-levels-power-query" rel="noopener" target="_blank">プライバシー レベルを設定する (Power Query)｜Microsoft Support</a>：誤設定のリスク、分類の意味、データソース設定とクエリオプションの操作、結合時に従う設定。</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/power-query/privacy-levels" rel="noopener" target="_blank">Power Queryのプライバシー レベル｜Microsoft Learn</a>：分類と適用オプションの区別、機密情報の分類、設定の保存と再確認、適用範囲、警告と処理への影響、Mac版ではプライバシーレ</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/ai-personal-data-masking">AIに渡す前に個人情報を伏せる手順</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理</a></li>
+      <li><a href="/column/name-variants-excel">エクセルで会社名・住所の表記ゆれを統一する</a></li>
+      <li><a href="/ai/tasks/csv-excel-script">CSV・Excelの変換と突合のスクリプト</a></li>
+      <li><a href="/column/excel-sheet-view-filter-without-affecting-others">Excelの共有表で他の人の表示を変えずに絞り込む手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
