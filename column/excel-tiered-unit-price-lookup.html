@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで数量の段階別料金表から適用単価を求める手順と境界の確認｜Vaynexis</title>
+  <meta name="description" content="数量に応じて単価が変わる料金表を、下限と上限のどちらで管理するか整理します。近似一致の向き、短い数式と説明用の表、境界の前後での照合、対象外の数量やコピー後の参照先まで、段階別の単価検索に絞って確認する手順をまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで数量の段階別料金表から適用単価を求める手順と境界の確認｜Vaynexis">
+  <meta property="og:description" content="数量に応じて単価が変わる料金表を、下限と上限のどちらで管理するか整理します。近似一致の向き、短い数式と説明用の表、境界の前後での照合、対象外の数量やコピー後の参照先まで、段階別の単価検索に絞って確認する手順をまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-tiered-unit-price-lookup">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-tiered-unit-price-lookup">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで数量の段階別料金表から適用単価を求める手順と境界の確認","description":"数量に応じて単価が変わる料金表を、下限と上限のどちらで管理するか整理します。近似一致の向き、短い数式と説明用の表、境界の前後での照合、対象外の数量やコピー後の参照先まで、段階別の単価検索に絞って確認する手順をまとめます。","datePublished":"2026-11-05","dateModified":"2026-11-05","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-tiered-unit-price-lookup"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで数量の段階別料金表から適用単価を求める手順と境界","item":"https://vaynexis.jp/column/excel-tiered-unit-price-lookup"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで数量の段階別料金表から適用単価を求める手順と境界</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで数量の段階別料金表から適用単価を求める手順と境界の確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>下限を並べた段階別料金表は、XLOOKUP関数の一致モードを「-1」にして、数量と一致する下限、なければ数量より小さい側の直近の下限に対応する単価を求めます。料金表がどちらの境界を持つかを先に決め、切り替わる数量の前後で結果を照合するとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月5日／情報の確認日：2026年11月5日（出典はこの記事の最後）</p>
+    <p>この記事は、数量で単価が変わる料金表から適用単価をExcelで取り出したい小さな会社の事務担当者が、下限か上限かの決め方・XLOOKUPの一致モード・境界の前後での照合を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月5日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">下限の表か上限の表かを先にそろえる</a></li>
+      <li><a href="#s2">下限と単価を並べて検索する式を作る</a></li>
+      <li><a href="#s3">一致の向きと検索順序を混同しない</a></li>
+      <li><a href="#s4">単価が出た後に境界と入力内容を照合する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．下限の表か上限の表かを先にそろえる</h2>
+    <p>ここでは、公式ヘルプの適用先に含まれるExcel for Microsoft 365のWindows版を対象にします。</p>
+    <p>料金表を読み直す際は、「この数量から同じ単価になる」という下限と、「この数量までは同じ単価になる」という上限を区別します。検索に使う列には、境界の数値だけを置き、どちらの意味かを列名で示すとよいです。境界と単価は同じ行で対応させます。</p>
+    <p>一致モードは、下限を検索する方式では「-1」、上限を検索する方式では「1」を指定し、完全一致がなければそれぞれ小さい側、大きい側の値を選びます。一致モードを省略したときの既定値は完全一致の「0」なので、段階の途中の数量を扱う式では近似一致を明示します。</p>
+    <p>料金の取り決めで境界を含む側が不明なときは、数式を作る前に確認を分けます。ここで扱うのは、決まっている料金表から適用単価を取り出す手順です。単価そのものや契約上の料金の決定は扱いません。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．下限と単価を並べて検索する式を作る</h2>
+    <p>下の表の配置、数量、単価、期待値は当社が設定した説明用の値です。公式ヘルプの料金例ではありません。ここでは数量を正の整数とし、最後の区分には上限を設けない前提にします。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">行</th><th scope="col">A列：数量の下限・個（当社設定）</th><th scope="col">B列：単価・円（当社設定）</th><th scope="col">照合する数量・個（当社設定）</th><th scope="col">単価の期待値・円（当社設定）</th></tr></thead><tbody><tr><td data-label="行">2</td><td data-label="A列：数量の下限・個（当社設定）">1</td><td data-label="B列：単価・円（当社設定）">120</td><td data-label="照合する数量・個（当社設定）">1、9</td><td data-label="単価の期待値・円（当社設定）">120</td></tr><tr><td data-label="行">3</td><td data-label="A列：数量の下限・個（当社設定）">10</td><td data-label="B列：単価・円（当社設定）">110</td><td data-label="照合する数量・個（当社設定）">10、11、49</td><td data-label="単価の期待値・円（当社設定）">110</td></tr><tr><td data-label="行">4</td><td data-label="A列：数量の下限・個（当社設定）">50</td><td data-label="B列：単価・円（当社設定）">100</td><td data-label="照合する数量・個（当社設定）">50、51</td><td data-label="単価の期待値・円（当社設定）">100</td></tr></tbody></table></div>
+    <p>式の引数は、検索値、検索範囲、戻り配列、見つからない場合、一致モード、検索モードの順です。</p>
+    <p>数量の入力場所と単価の出力場所を料金表から離して置き、下の配置で式を組み立てます。セルの位置と表示文字は当社の設定です。</p>
+    <pre class="prompt">数量の入力：E2
+単価の出力：F2
+F2に入力する式：
+=XLOOKUP(E2,$A$2:$A$4,$B$2:$B$4,"下限未満",-1)</pre>
+    <p>「見つからない場合」には、有効な一致が見つからないときに表示する文字を指定できます。この例の表示文字は、入力漏れや入力の種類まで判定するためのものではなく、検索の不一致を知らせるために使います。</p>
+    <p>料金表の参照をコピー先でも固定するには、列と行の前に「$」を付けた絶対参照にします。上の式では数量の参照だけを固定せず、料金表側を固定する組み立てです。複数の入力行へ展開する前に、検索する数量と料金表の参照が意図した場所を指すかを読み直すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．一致の向きと検索順序を混同しない</h2>
+    <p>下限の表から上限の表へ変更する際は、列名だけを変更せず、境界値の意味と選ぶ向きを合わせます。上限方式では「ここまで含む」という上限を数値で管理し、対応する単価を同じ行に置く整理です。末尾を「上限なし」とした下限方式の表を、そのまま上限方式へ流用しないようにします。</p>
+    <p>検索モードを省略すると先頭から検索するため、同じ境界値を重複させずに管理するとよいです。検索モードの「2」は昇順、「-2」は降順に並べた検索範囲を前提とするバイナリ検索で、並べ替えられていない場合は無効な結果が返されます。</p>
+    <p>この例では検索モードを省略しています。照合しやすいよう境界を小さい順に並べることと、バイナリ検索に必要な並び順を満たすことは、目的を分けて考えるとよいです。数量に合う境界を選ぶ設定と、表を探す順序の設定を混同しないことが中心になります。</p>
+    <p>境界を修正するときは、その行の単価との対応も一緒に見直します。同じ境界に異なる単価が残っていたり、途中の段階が抜けていたりすると、検索方法だけを調整しても、料金表としての内容は確定しません。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．単価が出た後に境界と入力内容を照合する</h2>
+    <p>文字列として保存された数値は予期しない結果を招く可能性があるため、数量と境界値が数値として保存されているかも見直します。Windows版で文字列の数値の警告が表示された場合は、変換するセルのエラーインジケーターを選び、メニューから［数値に変換］を選ぶ手順です。</p>
+    <p>ここからは当社の整理です。照合は、表の「照合する数量」を入力し、表示された単価を「期待値」と見比べる流れにします。特に、区分が変わる直前と変わった直後を分けて確かめるとよいです。単価の増減だけで判断せず、どの境界の行を採用したかまで料金表と突き合わせます。</p>
+    <p>入力の妥当性も別に確認します。空欄、負の数量、端数を業務でどう扱うかを先に決め、扱いが決まっていない入力を料金計算へ進めない整理です。式が値を返したことだけで、その数量を受け付けてよいとは判断しません。</p>
+    <p>最後の区分を無期限に適用してよいかも料金表で確かめます。対象数量に上限がある料金表なら、その上限を超えた入力を別途止める仕組みが必要です。上限方式でも、対象数量の下限を別に確認します。片側の境界を検索する式と、対象範囲の両端を確認する作業は分けて管理するとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">検索する境界が下限か上限かを列名と元の料金表で確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">境界を含む側と、単価を適用する数量の範囲を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">境界と単価の行の対応、境界の重複や欠落を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">区分が切り替わる前後の数量を入力し、期待した単価と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力漏れ、文字列の数値、負の数量や端数の扱いを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">コピー後も料金表の参照先が固定されているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象数量の上限と下限を外れた入力の扱いを確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月5日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/xlookup-function" rel="noopener" target="_blank">XLOOKUP 関数</a>：対象製品、引数の順序、近似一致の向き、不一致時の表示、検索モード</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/switch-between-relative-absolute-and-mixed-references" rel="noopener" target="_blank">相対参照、絶対参照、複合参照を切り替える</a>：料金表の列と行を絶対参照で固定する方法</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/convert-numbers-stored-as-text-to-numbers-in-excel" rel="noopener" target="_blank">Excel で文字列として保存されている数値を数値に変換する</a>：文字列の数値の影響と、Windows版で警告が出た場合の変換操作</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/excel-quantity-unit-price-total">Excelで数量と単価の明細から総額を出す手順と確認のしかた</a></li>
+      <li><a href="/column/excel-round-amount-formula">Excelで端数を四捨五入した金額を計算結果として残すには</a></li>
+      <li><a href="/column/excel-blank-denominator-ratio-pending">Excelで分母が未入力の比率を「未計算」と表示する方法</a></li>
+      <li><a href="/column/excel-id-length-input-restriction">Excelで管理番号の文字数が違う入力を止める設定と確認</a></li>
+      <li><a href="/column/gmail-multiple-signatures-by-department">Gmailで部署別の署名を複数作成し、メールごとに切り替える手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
