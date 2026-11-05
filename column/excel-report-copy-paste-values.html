@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの報告用コピーを数式ではなく確定した値で残すには｜Vaynexis</title>
+  <meta name="description" content="報告時点の計算結果を残すために、計算用の原本を別に保ち、報告用コピーで値を貼り付ける流れを整理します。置き換える範囲の決め方、書式を引き継ぐ際の選択肢、表示と計算値の違い、保存前に照合する内容まで、引き継ぎにも使える確認の順序をまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの報告用コピーを数式ではなく確定した値で残すには｜Vaynexis">
+  <meta property="og:description" content="報告時点の計算結果を残すために、計算用の原本を別に保ち、報告用コピーで値を貼り付ける流れを整理します。置き換える範囲の決め方、書式を引き継ぐ際の選択肢、表示と計算値の違い、保存前に照合する内容まで、引き継ぎにも使える確認の順序をまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-report-copy-paste-values">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-report-copy-paste-values">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの報告用コピーを数式ではなく確定した値で残すには","description":"報告時点の計算結果を残すために、計算用の原本を別に保ち、報告用コピーで値を貼り付ける流れを整理します。置き換える範囲の決め方、書式を引き継ぐ際の選択肢、表示と計算値の違い、保存前に照合する内容まで、引き継ぎにも使える確認の順序をまとめます。","datePublished":"2026-11-05","dateModified":"2026-11-05","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-report-copy-paste-values"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの報告用コピーを数式ではなく確定した値で残すには","item":"https://vaynexis.jp/column/excel-report-copy-paste-values"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの報告用コピーを数式ではなく確定した値で残すには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの報告用コピーを数式ではなく確定した値で残すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>報告用には計算用の原本を残した別コピーを用意し、残したい範囲をコピーして［値］を貼り付けると、数式の計算結果を残せます。対象の範囲と報告時点を決めてから操作し、結果の照合と承認は別に行います。</p></div>
+    <p class="col-meta">公開：2026年11月5日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelの計算表から報告時点の結果を残したい小さな会社の事務担当者が、原本を残したまま報告用コピーを値に置き換えて照合する流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">計算用の原本を残してから報告用を作る</a></li>
+      <li><a href="#s2">報告用コピーの対象範囲を値に置き換える</a></li>
+      <li><a href="#s3">計算結果と書式を分けて考える</a></li>
+      <li><a href="#s4">小さな報告表で原本とコピーの役割を整理する</a></li>
+      <li><a href="#s5">値への置き換えと報告内容を確かめて保存する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．計算用の原本を残してから報告用を作る</h2>
+    <p>公式ヘルプの確認日：2026-11-04（日本時間）／操作の対象：Windows版</p>
+    <p>開いているブックは、［ファイル］から［名前を付けて保存］へ進み、別名で保存するとコピーを作れます。数式をその値で置き換えると、Excel では数式が完全に削除されます。公式ヘルプは、数式を計算値に置き換える前にブックをコピーしておくことを勧めています。このため、これから入力や再計算を続ける原本と、報告時点の結果を残すコピーは、操作前に分けておくとよいです。</p>
+    <p>コピーを作った後は、開いているファイルの名前と保存先を見直します。原本と似た名前だけでは用途が伝わりにくいため、報告対象の期間や報告用という用途が読み取れる名前にします。操作する担当者と、後から受け取る担当者が同じものを指せることが大切です。</p>
+    <p>値に置き換える前に、どの時点の結果を残すかも決めます。入力途中の表をそのまま渡すことと、内容を確認してから報告用として残すことは、仕事の区切りが異なります。ファイルを分ける準備と内容の確認を続けて行うと、取り違えを見つけやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．報告用コピーの対象範囲を値に置き換える</h2>
+    <p>報告用コピーを開き、値に置き換える数式が入ったセル、またはセル範囲を選びます。対象は、今回の報告に含める計算欄から決めます。明細だけを残すのか、合計欄まで含めるのかを先に整理し、元の表と照らして範囲の始まりと終わりを確かめます。</p>
+    <p>選んだ範囲をコピーした後は、同じ範囲を貼り付け先とし、［ホーム］の［貼り付け］にあるメニューから［値］を選びます。ここでは、報告用コピーの中で計算欄を置き換える流れに絞ります。原本から別の表へ移す操作も一度に進めると、計算結果を固定する確認と配置の確認が混ざるためです。</p>
+    <p>操作前に、対象の見出し、行の並び、合計を見比べられるようにしておきます。操作後も同じ箇所を照合すると、範囲から漏れた欄や、別の欄を対象にした取り違えに気づく手がかりになります。見た目が似ているという理由だけで確認を終えないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．計算結果と書式を分けて考える</h2>
+    <p>別の場所へ表を移し、値と見た目を併せて引き継ぎたい場合は、［元の書式設定 &amp; 値］という選択肢があります。報告先の書式に合わせるのか、元の表の見た目を引き継ぐのかを、結果を移す前に決めておくとよいです。</p>
+    <p>小数点以下がある計算では、セル上の表示と実際の計算値が異なる場合があるため、値への置き換えを表示桁への丸め処理として扱わないようにします。見た目を整えることと、計算結果の扱いを決めることは分けて考えます。報告に使う桁や単位が決まっている場合は、その取り決めに合った状態かを別に確認します。</p>
+    <p>貼り付け後の表では、金額の単位や割合の表し方も見比べます。計算結果が同じでも、受け手が意味を読み違える見せ方になっていないか、見出しや注記を含めて点検するためです。罫線や色だけで判断せず、表の内容が伝わる状態を確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．小さな報告表で原本とコピーの役割を整理する</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>備品費の報告表なら、計算を続けるために残すものと、報告用に残すものを、次のように分けて考えます。表は運用の分け方を示したもので、金額の正しさを判断する基準ではありません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">対象</th><th scope="col">計算用の原本に残すもの</th><th scope="col">報告用コピーに残したいもの</th></tr></thead><tbody><tr><td data-label="対象">備品費の計算欄</td><td data-label="計算用の原本に残すもの">金額を求める式と入力内容</td><td data-label="報告用コピーに残したいもの">内容を確認した時点の計算結果</td></tr><tr><td data-label="対象">報告対象の説明</td><td data-label="計算用の原本に残すもの">入力の前提や計算の条件</td><td data-label="報告用コピーに残したいもの">対象期間と対象範囲</td></tr><tr><td data-label="対象">確認状況</td><td data-label="計算用の原本に残すもの">修正が必要な内容</td><td data-label="報告用コピーに残したいもの">確認担当と承認状況が分かる記録</td></tr></tbody></table></div>
+    <p>計算の仕組みを残す場所と、報告した内容を照合する場所が分かれていれば、修正の依頼が来たときも戻る先を判断しやすくなります。報告用の表だけを見て、確認や承認が済んだと判断する運用にはしません。</p>
+    <p>後から差し替える場合にも、先に渡した内容との区別が必要です。報告対象や修正理由を記録し、差し替えたことが受け手にも伝わるようにします。これは保存操作の効果ではなく、担当者間で決めておく扱いです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．値への置き換えと報告内容を確かめて保存する</h2>
+    <p>公式ヘルプの例では、数式から値に変換した後、数式バーに値が表示されます。置き換え後は対象セルを選び、数式バーに計算式ではなく値が表示されていることを確かめるとよいです。確認対象を選ぶ際は、明細欄と合計欄など、役割の異なる箇所を含めておくとよいです。</p>
+    <p>次に、操作前に確認した内容と、操作後の表を照合します。報告に含める項目、合計、対象期間、単位を見比べ、抜けや取り違えがないかを点検する流れです。原本が別に残っていることと、報告用の内容が正しいことは、それぞれ確認します。</p>
+    <p>値への置き換えの完了を、元の入力や計算方法が正しいこと、提出してよい版であること、承認済みであることの判定には使いません。報告用に残す範囲の確認と、内容を認める担当者の確認を分けて記録すると、引き継ぎで説明しやすくなります。</p>
+    <p>公式ヘルプでは、作業の保存に［上書き保存］ボタンまたは Ctrl キーを押しながら S キーを押す方法が案内されています。保存後に報告用コピーを開き直し、対象の表と保存先が意図したものかを確認してから受け渡すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">計算を続ける原本を残し、操作する報告用コピーを分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">報告対象の時点と範囲を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">明細欄と合計欄の対象漏れを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">操作前後で計算結果と表示を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表示桁と計算値の扱いを混同していないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">内容の確認と承認の状況を別に記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">保存先とファイル名を確かめ、保存後に開き直したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/rename-a-worksheet" rel="noopener" target="_blank">ワークシートの名前を変更する</a>：「ブックの名前を変更する」の別名保存によるコピー</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/replace-a-formula-with-its-result-in-excel" rel="noopener" target="_blank">Excel の数式をその結果と置き換える</a>：値への置き換えによる数式の削除、置き換え前にブックをコピーする勧め、対象範囲の選択、置き換え後の表示、計算値と表示値の違</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/paste-options" rel="noopener" target="_blank">貼り付けのオプション</a>：値の貼り付け、操作するメニュー、書式を併せて貼る選択肢</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/basic-tasks-in-excel" rel="noopener" target="_blank">Excel の基本的な作業</a>：作業内容の保存方法</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-overwrite-restore-previous-version">Excelを誤って上書きしたとき、以前の版を確認して戻す手順</a></li>
+      <li><a href="/column/excel-select-formula-cells">Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント</a></li>
+      <li><a href="/column/excel-lock-cells-input-only">Excelの申請表で入力欄だけ編集できるようにする設定と確認</a></li>
+      <li><a href="/column/excel-quantity-unit-price-total">Excelで数量と単価の明細から総額を出す手順と確認のしかた</a></li>
+      <li><a href="/column/excel-print-heading-page-break">Excelの印刷で見出しと明細が分かれるときの改ページ調整</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
