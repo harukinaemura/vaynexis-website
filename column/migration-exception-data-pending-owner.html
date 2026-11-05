@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新システムへ入らなかった例外データは誰の確認待ちで残すか｜Vaynexis</title>
+  <meta name="description" content="新システムに入らなかったデータは、保留理由と次に答える人を結び付けて残します。対象番号、内容の確認者、再投入の担当、移行先での反映確認までを追う記録の考え方を整理します。元の記録を勝手に削除せず、担当の交代後も確認を引き継ぐための運用案です。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="新システムへ入らなかった例外データは誰の確認待ちで残すか｜Vaynexis">
+  <meta property="og:description" content="新システムに入らなかったデータは、保留理由と次に答える人を結び付けて残します。対象番号、内容の確認者、再投入の担当、移行先での反映確認までを追う記録の考え方を整理します。元の記録を勝手に削除せず、担当の交代後も確認を引き継ぐための運用案です。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/migration-exception-data-pending-owner">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/migration-exception-data-pending-owner">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"新システムへ入らなかった例外データは誰の確認待ちで残すか","description":"新システムに入らなかったデータは、保留理由と次に答える人を結び付けて残します。対象番号、内容の確認者、再投入の担当、移行先での反映確認までを追う記録の考え方を整理します。元の記録を勝手に削除せず、担当の交代後も確認を引き継ぐための運用案です。","datePublished":"2026-11-05","dateModified":"2026-11-05","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/migration-exception-data-pending-owner"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"新システムへ入らなかった例外データは誰の確認待ちで残すか","item":"https://vaynexis.jp/column/migration-exception-data-pending-owner"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">新システムへ入らなかった例外データは誰の確認待ちで残すか</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">新システムへ入らなかった例外データは誰の確認待ちで残すか</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>新システムへ入らなかったデータは、内容を判断する人と、移行先への反映を確かめる人を決めて、対象番号ごとに保留します。記録には、保留理由、次に答える人、確認する内容、再投入後の確認結果を残します。担当者の返答と反映確認をつなぐ運用案です。</p></div>
+    <p class="col-meta">公開：2026年11月5日／情報の確認日：2026年11月5日（出典はこの記事の最後）</p>
+    <p>この記事は、新しいシステムへの移行で入らなかったデータを、誰の確認待ちなのかが分かる形で残したい小さな会社の事務担当者が、保留の記録と反映確認までの受け渡しを整理するための運用案をまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月5日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">手作業で直したデータも確認の範囲に入れる</a></li>
+      <li><a href="#s2">確認待ちは、答えられる人に割り当てる</a></li>
+      <li><a href="#s3">対象番号から反映確認までを同じ記録で追う</a></li>
+      <li><a href="#s4">修正の返答を、移行先での確認につなぐ</a></li>
+      <li><a href="#s5">AIへの依頼は、保留理由と確認事項の下書きまでにする</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．手作業で直したデータも確認の範囲に入れる</h2>
+    <p>確認日：2026年11月4日</p>
+    <p>デジタル庁の公開ページは、「デジタル・ガバメント推進標準ガイドライン解説書」を、標準ガイドラインを逐条的に解説する参考文書と位置付けています。解説書の「第３編第７章 設計・開発」の表紙の日付は、2026年（令和8年）6月12日です。解説書には、本ガイドラインの対象は政府情報システムである、と書かれています。</p>
+    <p>同じ章の「８. 移行の実施・管理」には、データを変換・移行した後は、移行後のデータだけでなく、例外データ等についても確認を行い、データの品質の確保を図る、という記載があります。 その解説では、移行手順やツールで移したデータに加え、他の関係者が手作業で投入・変更したデータも、整合性や正確性を確認する対象に含めています。また、複数の関係者が役割を分担して作業する場合などに、データの確認漏れがないよう配慮するとしています。</p>
+    <p>解説書の説明は、移行したデータと、手作業で投入・変更したデータの確認を対象にしています。この記事では、新システムへ投入できず確認待ちとして残すデータについて、確認の受け渡しを考えます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．確認待ちは、答えられる人に割り当てる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>保留の担当は、答えてほしい内容から決めます。元の記録が正しいか、どの内容を採用するかという問いは、その業務を把握する担当者に渡す形です。移行先で受け付ける形式や、取り込み時の処理を調べる問いは、システムを管理する担当者や移行作業者に渡します。</p>
+    <p>窓口になる人は、回答を取りまとめ、次の確認へ回す役割を持ちます。問い合わせの送信者と、内容を判断する人を記録上で区別しておくと、引き継いだ人も連絡先をたどれます。「担当部署へ確認中」とだけ残すより、担当者名と、答えてほしい問いまで書く運用です。</p>
+    <p>原因の見当がつかない段階は、窓口が調査先を決めるまでを受け持ちます。詳しい人を推測して名前を置くのではなく、引き受けた人を記録する方が、確認の所在を明らかにできます。担当が替わる際は、引き継ぐ相手が受け取ったことも確かめます。</p>
+    <p>内容確認者と反映確認者を兼ねる運用も考えられます。その場合も、何の返答を待っているのかを分けて書くとよいです。「修正内容の了承待ち」と「移行先で使えるかの確認待ち」を区別しておくためです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．対象番号から反映確認までを同じ記録で追う</h2>
+    <p>確認待ちの一覧は、元のデータへ戻れる形で作ります。備品の保管場所が食い違い、新しい管理表へ入れられなかった場面を、短い記入例にしています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">記録する欄</th><th scope="col">残す内容</th><th scope="col">架空の記入例</th></tr></thead><tbody><tr><td data-label="記録する欄">対象番号・元の所在</td><td data-label="残す内容">照合に使う識別名と元の記録の場所</td><td data-label="架空の記入例">例外A／備品一覧の対象行</td></tr><tr><td data-label="記録する欄">保留理由</td><td data-label="残す内容">何が確かめられずに止まったか</td><td data-label="架空の記入例">保管場所の記載が食い違う</td></tr><tr><td data-label="記録する欄">内容確認者・確認する問い</td><td data-label="残す内容">判断する人と、答えてほしい内容</td><td data-label="架空の記入例">管理担当／現在の保管場所はどこか</td></tr><tr><td data-label="記録する欄">次の確認予定</td><td data-label="残す内容">返答を待つ時点と、その後の連絡先</td><td data-label="架空の記入例">棚卸しの確認後／返答がなければ窓口へ</td></tr><tr><td data-label="記録する欄">修正・再投入の担当</td><td data-label="残す内容">合意した内容を反映する人</td><td data-label="架空の記入例">移行作業担当</td></tr><tr><td data-label="記録する欄">移行先の確認者・結果</td><td data-label="残す内容">元の対象との対応と、反映内容の確認</td><td data-label="架空の記入例">受入担当／保管場所の反映確認待ち</td></tr><tr><td data-label="記録する欄">経緯の参照先</td><td data-label="残す内容">返答、修正内容、確認結果の所在</td><td data-label="架空の記入例">保留票の回答欄</td></tr></tbody></table></div>
+    <p>対象番号は、担当者間のやり取りでも共通で使います。表示名が似たデータを取り違えないよう、元の記録の所在も一緒に残す考え方です。新しい管理表で別の識別名が付いた場合は、移行前との対応を書き添えます。</p>
+    <p>保留理由は、画面の表示と担当者の見立てを分けます。表示された内容は加工せずに控え、調べて分かったことを追記する形です。理由を短くまとめる際も、推測した原因で元の記録を置き換えない運用にします。</p>
+    <p>次の確認予定は、返答を待ち続けないための目印です。相手と合意した予定を置き、回答が届かなかったときに誰が追うかも記録します。予定を変更した経緯は、保留理由と混ぜずに追えるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．修正の返答を、移行先での確認につなぐ</h2>
+    <p>回答を受け取った窓口は、採用する内容と、その判断をした人を記録してから、移行作業者へ回します。問い合わせの履歴だけでは、どの返答を反映するのかが曖昧になるためです。未回答の問いは、回答済みの問いと分けて残します。</p>
+    <p>修正や再投入が済んだ段階では、反映確認者が移行先の対象を開き、決まった内容になっているかを見ます。移行作業者から受け取るのは、作業した対象、変えた内容、結果をたどる場所です。受入側では、その対象を業務で使う際に必要な内容まで確かめます。</p>
+    <p>保留を終える目印は、あらかじめ関係者でそろえておきます。内容の判断が済み、反映後の確認結果を残したところで完了にする運用です。再び取り込めなかったデータは、同じ対象番号で経緯を追い、今度は誰の何の返答を待つかを書き直します。</p>
+    <p>移行しないと決めた対象も、判断した人と理由を残します。失敗したという理由だけで元データや保留行を削除せず、対象から外す判断と、記録を消す作業を分けて扱う考え方です。保存先や削除の扱いは、社内で決めた管理方法に沿って確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．AIへの依頼は、保留理由と確認事項の下書きまでにする</h2>
+    <p>AIを使う場合の担当範囲は、保留理由の整理と、確認する問いの下書きまでにとどめます。入力には、社内で扱いを確認した説明用の写しを使い、元データや移行先の表を直接更新させない運用です。個人や取引先を特定する情報を含める前に、その入力先へ渡せる範囲を確認します。</p>
+    <p>依頼文では、記録にある事実と、判断が要る問いを分けます。担当者の候補を出させる場合も、割当ては人が引き受けを確かめて決めます。情報が足りないところは、推測で補う対象から外します。</p>
+    <pre class="prompt">対象は説明用に置き換えた保留記録とする。
+記録にある保留理由を、元の意味を変えずに短く整理する。
+確定している事実と、人に確認する問いを分けて下書きする。
+確認者の記載がない箇所は「未割当」とする。
+元データの修正、削除、再投入、完了判定は行わない。</pre>
+    <p>人が確認する中心は、原因の推測が事実として混ざっていないか、問いが答えられる形か、回答後の反映確認先まで決まっているかです。下書きを一覧へ採用した後も、回答の受領と完了の判断は担当者が行います。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">対象番号から元の記録と移行先の対象をたどれるようにしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">保留理由で、表示された事実と原因の推測を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">次に答える人と、具体的に答えてほしい問いを記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">次の確認予定と、返答が届かない場合の窓口を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">修正・再投入の担当から反映確認者へ結果を渡したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">完了にする際、判断した人と移行先での確認結果を残したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">移行できなかった元データや保留記録を、担当者の独断で削除していないか確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月5日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.digital.go.jp/resources/standard_guidelines" rel="noopener" target="_blank">デジタル社会推進標準ガイドライン｜デジタル庁</a>：解説書を参考文書とする位置付け。</li>
+      <li><a href="https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/e2a06143-ed29-4f1d-9c31-0f06fca67afc/50952dae/20260715_resources_standard_guidelines_guideline_03.pdf" rel="noopener" target="_blank">デジタル・ガバメント推進標準ガイドライン解説書（第３編第７章 設計・開発）ほか収録</a>：該当章の表紙の日付、対象範囲、移行後の例外データ等の確認の記載、手作業で投入・変更したデータの確認、役割分担時の確認漏れ</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策</a></li>
+      <li><a href="/column/attendance-approver-absent-handover">勤怠の承認者が休みのとき、保留中の申請を引き継ぐ確認と記録</a></li>
+      <li><a href="/column/handover-document">引き継ぎ書の作り方</a></li>
+      <li><a href="/ai/tasks/csv-excel-script">CSV・Excelの変換と突合のスクリプト</a></li>
+      <li><a href="/column/company-laptop-drive-encryption-check">持ち出す社用PCのドライブは暗号化済み？貸出前に確かめる手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

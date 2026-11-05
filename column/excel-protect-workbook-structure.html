@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで共有するブックのシート削除や名前変更を防ぐには｜Vaynexis</title>
+  <meta name="description" content="共有するブックでシートが消えたり、名前が変わったりするのを防ぐための設定と確認の流れを整理します。パスワードの扱い、配布前の確認、構成を変更した後の戻し方まで、事務担当者が引き継ぎに使える形でまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで共有するブックのシート削除や名前変更を防ぐには｜Vaynexis">
+  <meta property="og:description" content="共有するブックでシートが消えたり、名前が変わったりするのを防ぐための設定と確認の流れを整理します。パスワードの扱い、配布前の確認、構成を変更した後の戻し方まで、事務担当者が引き継ぎに使える形でまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-protect-workbook-structure">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-protect-workbook-structure">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで共有するブックのシート削除や名前変更を防ぐには","description":"共有するブックでシートが消えたり、名前が変わったりするのを防ぐための設定と確認の流れを整理します。パスワードの扱い、配布前の確認、構成を変更した後の戻し方まで、事務担当者が引き継ぎに使える形でまとめます。","datePublished":"2026-11-05","dateModified":"2026-11-05","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-protect-workbook-structure"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで共有するブックのシート削除や名前変更を防ぐには","item":"https://vaynexis.jp/column/excel-protect-workbook-structure"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで共有するブックのシート削除や名前変更を防ぐには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで共有するブックのシート削除や名前変更を防ぐには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>共有するブックのシート削除や名前変更を防ぐには、シート構成をパスワードで保護します。設定後は、保護の表示と操作メニューを確かめ、構成を変える担当者や解除時の扱いまで引き継ぐとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月5日／情報の確認日：2026年11月5日（出典はこの記事の最後）</p>
+    <p>この記事は、共有する Excel のブックでシートの削除や名前変更を防ぎたい小さな会社の担当者が、ブックの保護の設定と、設定後の確認・解除後のかけ直しを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月5日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">守る対象をシート名と並び順に絞る</a></li>
+      <li><a href="#s2">パスワードを指定して構成を保護する</a></li>
+      <li><a href="#s3">削除・名前変更のメニューで結果を確かめる</a></li>
+      <li><a href="#s4">日常の入力と構成変更の窓口を分ける</a></li>
+      <li><a href="#s5">構成を変えた後は保護と確認を戻す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．守る対象をシート名と並び順に絞る</h2>
+    <p>ブック保護の公式ヘルプの適用先は、Excel for Microsoft 365 とその Mac 版、Excel 2024・2021 とそれぞれの Mac 版、Excel 2019・2016 で、手順は Windows・macOS・Web に分けて書かれています。この記事では Windows のデスクトップ版の手順を扱い、ほかの環境での操作は扱いません。</p>
+    <p>Excel の保護とセキュリティの公式ヘルプでは、ファイルへのアクセスを制御するファイル レベル、ブック構造内のワークシートに対する操作を制御するブック レベル、個々のワークシート内の作業を制御するワークシート レベルに、保護を分けて説明しています。最初に、困っているのがシートそのものが消えることなのか、入力した内容が書き換わることなのかを整理すると、担当者の認識をそろえやすくなります。</p>
+    <p>日常の入力と、シート名や並び順を変える作業は、引き継ぎでも分けて伝えるとよいです。配布前には、残しておくシート名と並び順を見直し、不要なものを整理してから設定に進みます。すでに配っているファイルを見本として使う場合も、編集する対象を取り違えないように、保存場所とファイル名を確認しておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．パスワードを指定して構成を保護する</h2>
+    <h3 class="h3">設定の流れ</h3>
+    <ol>
+      <li>リボンの［校閲］タブにある［保護］グループから［ブックの保護］を選びます。</li>
+      <li>表示された画面の［パスワード］欄に、設定するパスワードを入力します。</li>
+      <li>［OK］を選んだ後、確認のために同じパスワードを再入力し、再び［OK］を選びます。</li>
+    </ol>
+    <p>パスワードを省略して設定した場合は、誰でも保護を解除して変更できます。意図しない解除を避けたい運用では、入力を空欄のまま終えないことも確認の対象になります。</p>
+    <p>入力を終えただけで配布に進まず、次の節の見方で設定結果を確かめます。引き継ぎ用の手順書には、入力した値ではなく、担当者と保管先を確かめる方法を書いておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．削除・名前変更のメニューで結果を確かめる</h2>
+    <p>［校閲］タブの［ブックの保護］が強調表示されていれば、ブックは保護されています。保護された状態では、シートの削除や名前変更、移動、コピー、非表示など、構成を変える項目が使えなくなります。</p>
+    <p>確認では、守りたかった操作の項目が選べないかを見ます。実データを削除して試すのではなく、メニューを開いたところで選択できる状態かを確かめるとよいです。続けて、残したシートの名前と並び順が、配布する予定のものと合っているかを見比べます。</p>
+    <p>操作を制限したつもりでも項目が選べるときは、そのまま配布せず、設定したファイルと確認中のファイルが同じかを見直します。引き継ぎ相手にも、同じ保存先から対象を開いてもらい、何を確かめたかを共有しておく運用が考えられます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．日常の入力と構成変更の窓口を分ける</h2>
+    <p>ここからは当社の整理です。たとえば、共有する事務用の表では、日常の記入担当者と、シートの構成を見直す担当者を引き継ぎメモに分けて記します。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">残すシート名の例</th><th scope="col">日常の記入内容</th><th scope="col">構成を見直す相談</th></tr></thead><tbody><tr><td data-label="残すシート名の例">受付</td><td data-label="日常の記入内容">受け付けた内容の追記</td><td data-label="構成を見直す相談">区分の追加</td></tr><tr><td data-label="残すシート名の例">処理中</td><td data-label="日常の記入内容">対応状況の記入</td><td data-label="構成を見直す相談">シート名の変更</td></tr><tr><td data-label="残すシート名の例">完了</td><td data-label="日常の記入内容">終了内容の確認</td><td data-label="構成を見直す相談">古い区分の整理</td></tr></tbody></table></div>
+    <p>担当者に伝えるのは、「変えてよい内容」と「相談してから変える構成」の境目です。新しい区分が必要になったときの相談先も決めておくと、日常の記入を続ける人が判断に迷いにくくなります。</p>
+    <p>メモには、変更を受け付ける担当者、対象ファイルの置き場、変更理由を残す場所をまとめます。担当者の交代時には、名前だけを差し替えるのではなく、保管先を引き継げる状態かも確かめるとよいです。例のシート名をそのまま採用する必要はなく、今使っている表の構成に置き換えて整理します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．構成を変えた後は保護と確認を戻す</h2>
+    <p>ブック保護の公式ヘルプでは、解除も［ブックの保護］から行い、設定したパスワードを入力して［OK］を選ぶ手順です。変更を担当する人が解除の作業を行い、必要な構成変更を済ませた後は、設定の手順に戻って保護をかけ直す運用にします。解除から再設定までを、変更作業のまとまりとして扱うとよいです。</p>
+    <p>保護とセキュリティの公式ヘルプには、パスワードを忘れたり紛失したりしても、Microsoft は取り戻せないとの警告があります。保管場所と、それを確認できる担当者は、引き継ぎの対象に含めます。配布するメモに値を直接書くのではなく、社内で決めた保管方法に沿って扱うとよいです。</p>
+    <p>変更後には、シート名と並び順の確認に加え、削除や名前変更の項目が選べない状態に戻ったかを確認します。変更理由と確認した人を記録しておけば、後から構成を見直す際にも、何を意図して残したかをたどれます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">守りたい対象が、シート名や並び順であることを整理したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">設定するファイルの保存先と、配布対象が合っているかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">解除を制限するためのパスワードを設定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">設定後に、削除や名前変更の項目が選べないかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">構成を変える担当者と、パスワードの保管方法を引き継いだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">構成変更後に保護をかけ直し、同じ項目を確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月5日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/protect-a-workbook" rel="noopener" target="_blank">ブックを保護する</a>：シート構成の保護、適用先、パスワードの設定・省略、保護状態と操作メニューの確認、解除</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/protection-and-security-in-excel" rel="noopener" target="_blank">Excel の保護とセキュリティ</a>：ファイル・ブック・ワークシートの3つの保護の違い、紛失したパスワードを取り戻せないこと</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/lock-cells-to-protect-them-in-excel" rel="noopener" target="_blank">Excel でセルを保護するためにロックする</a>：［校閲］タブの［保護］グループから［ブックの保護］を選ぶ位置</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/excel-lock-cells-input-only">Excelの申請表で入力欄だけ編集できるようにする設定と確認</a></li>
+      <li><a href="/column/excel-open-password-encryption">Excelファイルを開くときにパスワードを求める設定と確認</a></li>
+      <li><a href="/column/excel-sheet-view-filter-without-affecting-others">Excelの共有表で他の人の表示を変えずに絞り込む手順</a></li>
+      <li><a href="/column/excel-coauthoring-same-workbook">Excelの同じファイルを複数人で同時編集する手順と確認点</a></li>
+      <li><a href="/column/workspace-lost-device-sign-out">端末を紛失した社員を管理者がログアウトさせる手順と確認点</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

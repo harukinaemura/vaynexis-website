@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スプレッドシートで同じ計算を全行へ適用する式と空欄の扱い｜Vaynexis</title>
+  <meta name="description" content="スプレッドシートで同じ計算を明細の各行へまとめて適用する方法を、公式ヘルプに沿って解説します。数式を入れる位置、計算する範囲のそろえ方、未入力の行を空欄で返す考え方を短い例で示し、明細を追記した後の対象漏れや、結果を引き継ぐ際の確認点も整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="スプレッドシートで同じ計算を全行へ適用する式と空欄の扱い｜Vaynexis">
+  <meta property="og:description" content="スプレッドシートで同じ計算を明細の各行へまとめて適用する方法を、公式ヘルプに沿って解説します。数式を入れる位置、計算する範囲のそろえ方、未入力の行を空欄で返す考え方を短い例で示し、明細を追記した後の対象漏れや、結果を引き継ぐ際の確認点も整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/google-sheets-arrayformula-blank-rows">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/google-sheets-arrayformula-blank-rows">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"スプレッドシートで同じ計算を全行へ適用する式と空欄の扱い","description":"スプレッドシートで同じ計算を明細の各行へまとめて適用する方法を、公式ヘルプに沿って解説します。数式を入れる位置、計算する範囲のそろえ方、未入力の行を空欄で返す考え方を短い例で示し、明細を追記した後の対象漏れや、結果を引き継ぐ際の確認点も整理します。","datePublished":"2026-11-05","dateModified":"2026-11-05","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-sheets-arrayformula-blank-rows"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"スプレッドシートで同じ計算を全行へ適用する式と空欄の扱い","item":"https://vaynexis.jp/column/google-sheets-arrayformula-blank-rows"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">スプレッドシートで同じ計算を全行へ適用する式と空欄の扱い</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">スプレッドシートで同じ計算を全行へ適用する式と空欄の扱い</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>同じ計算を各行へまとめて適用するには、ARRAYFORMULAでセル範囲を使った数式を指定します。対象の明細と結果の置き場所を先に決め、未入力をどう扱うかも式に含めるとよいです。下へ続く結果が必要な範囲を覆っているか、元の値と照合して確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月5日／情報の確認日：2026年11月5日（出典はこの記事の最後）</p>
+    <p>この記事は、Googleスプレッドシートで同じ計算を明細の全行にまとめて入れたい小さな会社の事務担当者が、ARRAYFORMULAの使い方と、未入力の行を空欄のままにする式、範囲の見直し方を整理するためのものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月5日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">計算する範囲と、結果を置く列を決める</a></li>
+      <li><a href="#s2">結果欄の先頭へ、範囲を使う式を入れる</a></li>
+      <li><a href="#s3">未入力の行は、条件を付けて表示を分ける</a></li>
+      <li><a href="#s4">明細を増やすときは、範囲の末尾も見直す</a></li>
+      <li><a href="#s5">合計だけでなく、空欄と末尾の表示を点検する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．計算する範囲と、結果を置く列を決める</h2>
+    <p>確認日：2026年11月4日</p>
+    <p>ここでは、公式ヘルプの「パソコン」の説明に沿い、セルへ等号記号と関数を入力する方法を扱います。作業中の表へ直接入れるより、内容を写した作業用の表で対象と結果を見比べるとよいです。</p>
+    <p>配列は、値を行と列に並べた表を意味します。ARRAYFORMULAは、その計算結果を複数の行や列に表示するために使えます。対象の「全行」を、計算したい明細の範囲として先に決めます。表の見出しや末尾の集計欄を明細と混ぜず、入力する列と結果を見る列を分けておく考え方です。</p>
+    <p>複数の範囲を使う数式では、同じサイズの範囲を指定します。計算対象の列どうしで開始位置と終わりの位置をそろえることが、範囲を決める際の確認になります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．結果欄の先頭へ、範囲を使う式を入れる</h2>
+    <p>まず、入力内容がそろった行だけで計算の形を確かめます。下の表は、午前と午後の受付数を足すために当社で組み立てた配置です。数値も配置も公式ヘルプの例を転載したものではなく、合計欄は期待する表示を示しています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">行</th><th scope="col">A列：区分</th><th scope="col">B列：午前</th><th scope="col">C列：午後</th><th scope="col">D列：合計</th></tr></thead><tbody><tr><td data-label="行">2</td><td data-label="A列：区分">甲</td><td data-label="B列：午前">4</td><td data-label="C列：午後">3</td><td data-label="D列：合計">7</td></tr><tr><td data-label="行">3</td><td data-label="A列：区分">乙</td><td data-label="B列：午前">0</td><td data-label="C列：午後">2</td><td data-label="D列：合計">2</td></tr><tr><td data-label="行">4</td><td data-label="A列：区分">丙</td><td data-label="B列：午前">未入力</td><td data-label="C列：午後">5</td><td data-label="D列：合計">空欄</td></tr><tr><td data-label="行">5</td><td data-label="A列：区分">丁</td><td data-label="B列：午前">1</td><td data-label="C列：午後">未入力</td><td data-label="D列：合計">空欄</td></tr><tr><td data-label="行">6</td><td data-label="A列：区分">戊</td><td data-label="B列：午前">未入力</td><td data-label="C列：午後">未入力</td><td data-label="D列：合計">空欄</td></tr></tbody></table></div>
+    <p>表の「未入力」は何も入力していないセルを表す説明用の印で、セルへ文字として入力する値ではありません。「空欄」も結果欄の見え方を表す印です。</p>
+    <p>数式は、結果を置くセルへ「=」から入力します。この配置では、合計欄の先頭に、次の式を置く構成です。結果を並べる場所には、集計のメモや手入力の値を置かない運用にしておきます。</p>
+    <pre class="prompt">=ARRAYFORMULA(B2:B6+C2:C6)</pre>
+    <p>この式は、同じサイズの範囲を使うというARRAYFORMULAの構文に沿って当社で組み立てた、範囲どうしの加算例です。空欄の扱いを加える前の段階として、入力内容がそろった行の計算を点検します。まずは手計算した合計と表示が合うかを見ると、対象の列を取り違えていないか確認しやすくなります。</p>
+    <p>参照先は、数式の入力中や完成した数式のセルを選んだときに、色で強調表示されます。選ばれている範囲と表の見出しを見比べ、意図した入力欄を参照しているかを確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．未入力の行は、条件を付けて表示を分ける</h2>
+    <p>表の例では、午前と午後の入力がそろうまで合計を表示しない方針です。受付がなかったと確認した値と、まだ記入していない状態は分けて扱います。</p>
+    <p>IFは、条件の判定結果に応じて返す値を切り替える関数です。ISBLANKは、参照先のセルが空白かを調べる関数です。これらを組み合わせ、未入力のまま計算済みのように見せない式を考えます。</p>
+    <pre class="prompt">=ARRAYFORMULA(IF(ISBLANK(B2:B6),"",IF(ISBLANK(C2:C6),"",B2:B6+C2:C6)))</pre>
+    <p>この例のIFでは、午前の入力が空なら空の表示を返し、午前が入っていても午後が空なら空の表示を返すよう、条件を重ねています。式の配置と組み合わせは当社の説明例です。先ほどの式と置き換え、入力がそろった行だけを合計する方針と、表に示した期待する表示が一致するかを見ます。</p>
+    <p>ISBLANKは、空のセルへの参照ではTRUE、データへの参照ではFALSEを返します。空欄を判定する考え方と、入力された数値の大小を判定する考え方は分けておくとよいです。未入力と受付なしを同じ意味にするかどうかは、表を使う側で先にそろえます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．明細を増やすときは、範囲の末尾も見直す</h2>
+    <p>開始位置と終了位置を指定する参照は、限定範囲として説明されています。上の式は終わりを決めてあるので、担当者が追記する場所と、式が対象にする場所を照らし合わせる運用にします。「全行へ計算を入れた」という引き継ぎだけで済ませず、対象の末尾まで共有するとよいです。</p>
+    <p>公式ヘルプでは、列全体を参照する合計の例と比べ、限定した範囲を参照すると読み込む行を絞れて計算速度が上がると説明しています。計算する場所を広げることと、必要な範囲に収めることを合わせて考えます。明細の増え方が分かる表では、終わりを決めて定期的に見直す運用も選べます。</p>
+    <p>範囲を延ばす際には、足し算の対象だけでなく、未入力を調べる対象も一緒に見直します。式の中で同じ入力欄を参照している場所を拾い、開始位置や終わりの位置がそろっているかを見比べます。入力側と結果側のどちらを変えたか、変更後にどこまで確かめたかを残しておくと、次の担当者も点検の範囲を追えます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．合計だけでなく、空欄と末尾の表示を点検する</h2>
+    <p>確認は、入力内容がそろった行、未入力を含む行、明細の末尾に分けて行います。合計が合う行だけを見て終えると、未入力をどう表すかという運用まで確かめたことにはなりません。入力を終えた行が計算対象から漏れていないかも、末尾で見ます。</p>
+    <p>見た目が空いている結果欄についても、元の入力が未完了なのか、期待した表示になっていないのかを分けて点検します。原因を確かめる前に結果を手で書き足すより、参照している入力欄と式の範囲に戻って確認する順序を決めるとよいです。</p>
+    <p>引き継ぎでは、結果の置き場所、計算する明細の範囲、未入力を残す方針を短くまとめます。入力担当者には追記する欄を、確認担当者には結果と照らし合わせる欄を伝え、表の使い方と点検する場所をそろえておきます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">明細の範囲に見出しや集計欄を混ぜていないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力する列と結果を置く列を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">計算対象と未入力を調べる対象の開始位置・終了位置をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">未入力と受付がなかった値を区別する方針を共有したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力内容がそろった行を手計算と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">未入力を含む行と明細の末尾の表示を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">明細を追記した後の対象範囲を見直したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月5日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/docs/answer/46977?co=GENIE.Platform%3DDesktop&amp;hl=ja" rel="noopener" target="_blank">数式と関数を追加する - パソコン</a>：パソコンでの数式入力と参照範囲の表示</li>
+      <li><a href="https://support.google.com/docs/answer/6208276?hl=ja" rel="noopener" target="_blank">Google スプレッドシートで配列を使用する</a>：配列の意味</li>
+      <li><a href="https://support.google.com/docs/answer/3093275?hl=ja" rel="noopener" target="_blank">ARRAYFORMULA</a>：複数行への結果表示、構文、範囲のサイズ</li>
+      <li><a href="https://support.google.com/docs/answer/3093364?hl=ja" rel="noopener" target="_blank">Google ヘルプのページ</a>：条件に応じて返す値の切り替え</li>
+      <li><a href="https://support.google.com/docs/answer/3093290?hl=ja" rel="noopener" target="_blank">ISBLANK</a>：空の入力セルとデータがあるセルの区別</li>
+      <li><a href="https://support.google.com/docs/answer/12159115?hl=ja" rel="noopener" target="_blank">データの参照を最適化してスプレッドシートのパフォーマンスを上げる</a>：限定範囲の意味と参照範囲を絞る考え方</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順｜重複・件数・金額の確認例</a></li>
+      <li><a href="/column/former-price-display-sales-records">値下げ前の通常価格を表示に使う前に集めたい販売記録と確認の進め方</a></li>
+      <li><a href="/column/powerpoint-hide-backup-slides">PowerPointで補足スライドを本番だけ非表示にするには？</a></li>
+      <li><a href="/column/excel-filter-amount-range-category">Excelの明細を金額の範囲と区分で絞り込んで見る手順</a></li>
+      <li><a href="/column/sheets-highlight-blank-cells">スプレッドシートの未入力セルを色で見つける設定と確認の手順</a></li>
+      <li><a href="/column/google-sheets-freeze-header-row">スプレッドシートの長い事務台帳で見出し行を固定する手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの明細を金額の範囲と区分で絞り込んで見る手順｜Vaynexis</title>
+  <meta name="description" content="明細の中から必要な範囲を調べるために、金額の下限・上限と区分を組み合わせる手順を整理します。境目に当たる金額を含めるかの決め方、短い表を使う結果の照合、候補が見つからない場合の確認点、調べ終えた後に条件を戻す方法までを扱います。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの明細を金額の範囲と区分で絞り込んで見る手順｜Vaynexis">
+  <meta property="og:description" content="明細の中から必要な範囲を調べるために、金額の下限・上限と区分を組み合わせる手順を整理します。境目に当たる金額を含めるかの決め方、短い表を使う結果の照合、候補が見つからない場合の確認点、調べ終えた後に条件を戻す方法までを扱います。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-filter-amount-range-category">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-filter-amount-range-category">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの明細を金額の範囲と区分で絞り込んで見る手順","description":"明細の中から必要な範囲を調べるために、金額の下限・上限と区分を組み合わせる手順を整理します。境目に当たる金額を含めるかの決め方、短い表を使う結果の照合、候補が見つからない場合の確認点、調べ終えた後に条件を戻す方法までを扱います。","datePublished":"2026-11-05","dateModified":"2026-11-05","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-filter-amount-range-category"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの明細を金額の範囲と区分で絞り込んで見る手順","item":"https://vaynexis.jp/column/excel-filter-amount-range-category"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの明細を金額の範囲と区分で絞り込んで見る手順</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの明細を金額の範囲と区分で絞り込んで見る手順</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>金額列で範囲を指定し、区分列で表示したい項目を選ぶと、条件を重ねて明細を絞り込めます。作業前に探したい範囲を言葉で決め、表示された明細と条件を照合するとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月5日／情報の確認日：2026年11月5日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelの明細を金額の範囲と区分で絞り込んで確かめたい小さな会社の事務担当者が、フィルターの設定と境目の扱い、結果の照合、条件の戻し方を整理するためのものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月5日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">対象の版と元の表を確かめる</a></li>
+      <li><a href="#s2">金額列の範囲と区分列の選択を重ねる</a></li>
+      <li><a href="#s3">境目を含む短い明細で結果を照合する</a></li>
+      <li><a href="#s4">候補が消えたときは別の列とデータ型を見る</a></li>
+      <li><a href="#s5">調べ終えたら条件を戻す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．対象の版と元の表を確かめる</h2>
+    <p>確認日：2026年11月4日。</p>
+    <p>基本手順が対象とする製品はExcel for Microsoft 365とExcel 2024・2021・2019・2016です。ここではWindows版の操作に絞ります。</p>
+    <p>まず、どの金額を調べるのか、どの区分を残すのかを決めます。税込み・税抜きなどの意味が曖昧な列を選ぶと、表示が意図に合っているかを判断しにくくなります。見出しだけで分からなければ、表を管理する担当者に列の意味を確かめるとよいです。</p>
+    <p>対象のデータを選択し、［データ］タブの［並べ替えとフィルター］で［フィルター］を選びます。すでにテーブルになっている表では、見出し行にフィルターの操作部が自動で追加されています。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．金額列の範囲と区分列の選択を重ねる</h2>
+    <h3 class="h3">金額の下限と上限を設定する</h3>
+    <p>金額列の見出しの矢印から［数値フィルター］を開き、下限と上限で範囲を指定する比較を選びます（公式ヘルプの日本語版の表記は［間］です）。表示された画面で下限と上限の条件を入力します。下限と上限の条件を両方満たすように組み合わせる場合は、［AND］を選び、［OK］で確定します。</p>
+    <p>範囲を決めるときは、下限と上限に一致する金額も対象に含めたいかを、先に言葉にしておくとよいです。金額だけを控えるより、「境目を含めるか」まで残すほうが、引き継ぐ相手も意図を確かめやすくなります。</p>
+    <h3 class="h3">区分列で残す項目を選ぶ</h3>
+    <p>続いて区分列の矢印を開き、［すべて選択］のチェックを外して残したい区分にチェックを入れ、［OK］で確定します。金額列と区分列のどちらかが条件に合わない明細は、行全体が非表示になります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．境目を含む短い明細で結果を照合する</h2>
+    <p>照合用の条件を「金額は下限を超え、上限未満」「区分は備品」と決めたとします。次の表は、操作後に期待する表示をあらかじめ書き出したものです。金額そのものを並べる代わりに、範囲との位置関係で示しています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">金額と範囲の関係</th><th scope="col">区分</th><th scope="col">照合用に想定する表示</th></tr></thead><tbody><tr><td data-label="金額と範囲の関係">下限より小さい</td><td data-label="区分">備品</td><td data-label="照合用に想定する表示">表示しない</td></tr><tr><td data-label="金額と範囲の関係">下限と同じ</td><td data-label="区分">備品</td><td data-label="照合用に想定する表示">表示しない</td></tr><tr><td data-label="金額と範囲の関係">下限を超え、上限未満</td><td data-label="区分">備品</td><td data-label="照合用に想定する表示">表示する</td></tr><tr><td data-label="金額と範囲の関係">下限を超え、上限未満</td><td data-label="区分">消耗品</td><td data-label="照合用に想定する表示">表示しない</td></tr><tr><td data-label="金額と範囲の関係">上限と同じ</td><td data-label="区分">備品</td><td data-label="照合用に想定する表示">表示しない</td></tr><tr><td data-label="金額と範囲の関係">上限より大きい</td><td data-label="区分">備品</td><td data-label="照合用に想定する表示">表示しない</td></tr></tbody></table></div>
+    <p>同じ金額帯でも区分が違えば対象から外す、という意図を表に残せます。下限や上限を含む条件に変えたい場合は、境目の明細についても期待する表示を書き直します。</p>
+    <p>結果を見る際は、残った明細が合っているかに加え、対象にしたかった明細が抜けていないかも確かめます。金額の意味と区分の付け方を知る担当者が照合すると、条件の読み違いを見つけやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．候補が消えたときは別の列とデータ型を見る</h2>
+    <p>想定より明細が少ないときは、金額列だけでなく他の列に設定した条件も見直します。</p>
+    <p>候補が見当たらないときは、その区分が表にないと判断する前に、先に指定した金額の範囲を見直すとよいです。対象外にした範囲に探している明細がないか、元の条件メモと突き合わせます。</p>
+    <p>金額列で数値と文字列が混在していると、最も多いデータ型に応じたフィルターのコマンドが表示されます。</p>
+    <p>見慣れない選択肢が出た場合は、列の見出しと実際の入力内容を合わせて確認します。意味を確かめないまま値を書き換えると、元の明細との照合が難しくなるため、入力元が分かる担当者に確認する流れを残すとよいです。</p>
+    <p>フィルター処理中に［検索］ダイアログボックスを使うと、表示されているデータだけが検索対象になります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．調べ終えたら条件を戻す</h2>
+    <p>区分だけを変えるときは、その列の適用済みアイコンからフィルターを変更またはクリアできます。</p>
+    <p>ワークシート内の絞り込み条件をまとめてクリアする場合は、［データ］タブから［クリア］を選びます。フィルターそのものを削除する場合は、［データ］タブで［フィルター］ボタンを選びます。</p>
+    <p>作業を渡すときには、対象にした金額の意味、範囲の境目、残した区分、作業後に条件を戻したかを短く記録します。表示中の明細だけを見た相手にも、どの範囲を確認したのかが伝わる書き方にするとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">調べる金額列の意味と対象の明細を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">下限と上限に一致する金額を含めるか決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">金額の範囲と残したい区分を組み合わせたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">境目の明細と区分が違う明細で表示を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">候補が見当たらないときに他の列の条件と入力内容を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">作業後の表示と、条件を戻したかを引き継ぎメモに残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月5日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/use-autofilter-to-filter-your-data" rel="noopener" target="_blank">オートフィルターを使ってデータにフィルターを適用する</a>：適用先、区分の選択、条件に合わない行の非表示</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/quick-start-filter-data-by-using-an-autofilter" rel="noopener" target="_blank">クイック スタート: オートフィルターを使用してデータをフィルターする</a>：操作の開始場所とANDで条件を組み合わせる方法</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/filter-data-in-a-range-or-table-in-excel" rel="noopener" target="_blank">Excel で範囲またはテーブルのデータをフィルター処理する</a>：範囲指定、条件の累積、テーブルの操作部、他の列の条件、データ型、検索、列の条件変更</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/clear-or-remove-a-filter" rel="noopener" target="_blank">フィルターをクリアまたは削除する</a>：条件をまとめてクリアする方法とフィルターを削除する方法</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順｜重複・件数・金額の確認例</a></li>
+      <li><a href="/column/google-sheets-arrayformula-blank-rows">スプレッドシートで同じ計算を全行へ適用する式と空欄の扱い</a></li>
+      <li><a href="/column/former-price-display-sales-records">値下げ前の通常価格を表示に使う前に集めたい販売記録と確認の進め方</a></li>
+      <li><a href="/column/excel-filter-pending-rows-sheet">Excelで対応待ちの行だけを別シートへ自動表示するには</a></li>
+      <li><a href="/column/excel-sheet-view-filter-without-affecting-others">Excelの共有表で他の人の表示を変えずに絞り込む手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
