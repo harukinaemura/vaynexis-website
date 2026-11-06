@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>業務影響分析表には何を書く？停止時の影響と必要資源を整理する欄｜Vaynexis</title>
+  <meta name="description" content="業務影響分析表に入れる、対象業務・担当・停止が続いたときの影響・再開に必要な資源の欄を整理します。欄の目的と書き間違えやすい点を記入例で示し、停止時間の区切り方、資源を確保できるかの照合、復旧目標の承認と更新まで、事務・総務の担当者向けにまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="業務影響分析表には何を書く？停止時の影響と必要資源を整理する欄｜Vaynexis">
+  <meta property="og:description" content="業務影響分析表に入れる、対象業務・担当・停止が続いたときの影響・再開に必要な資源の欄を整理します。欄の目的と書き間違えやすい点を記入例で示し、停止時間の区切り方、資源を確保できるかの照合、復旧目標の承認と更新まで、事務・総務の担当者向けにまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/business-impact-analysis-sheet-fields">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/business-impact-analysis-sheet-fields">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"業務影響分析表には何を書く？停止時の影響と必要資源を整理する欄","description":"業務影響分析表に入れる、対象業務・担当・停止が続いたときの影響・再開に必要な資源の欄を整理します。欄の目的と書き間違えやすい点を記入例で示し、停止時間の区切り方、資源を確保できるかの照合、復旧目標の承認と更新まで、事務・総務の担当者向けにまとめます。","datePublished":"2026-11-06","dateModified":"2026-11-06","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/business-impact-analysis-sheet-fields"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"業務影響分析表には何を書く？停止時の影響と必要資源を整理する","item":"https://vaynexis.jp/column/business-impact-analysis-sheet-fields"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">業務影響分析表には何を書く？停止時の影響と必要資源を整理する</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">業務影響分析表には何を書く？停止時の影響と必要資源を整理する欄</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>業務影響分析表には、対象の業務と担当、停止が続く時間ごとの影響、再開する状態、必要な資源と確保状況、確認・承認の欄を設けます。影響は「困る」で終えず、誰のどの処理が進まなくなるかまで書きます。資源は名前だけでなく、使える状態かを確かめ、復旧の期限と再開水準は責任者が判断できる形に整理します。</p></div>
+    <p class="col-meta">公開：2026年11月6日／情報の確認日：2026年11月6日（出典はこの記事の最後）</p>
+    <p>この記事は、業務が止まったときの影響と再開に必要なものを表にまとめたい小さな会社の担当者が、内閣府の事業継続ガイドラインと業界団体の例を手がかりに、停止時間ごとの影響・必要資源・確保状況・復旧目標の承認を整理する流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月6日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">内閣府の指針と業界団体の資料から押さえる範囲</a></li>
+      <li><a href="#s2">欄は対象・影響・資源・確認状況に分ける</a></li>
+      <li><a href="#s3">停止時間は締切と未処理の増え方から区切る</a></li>
+      <li><a href="#s4">必要資源は使える状態まで具体化する</a></li>
+      <li><a href="#s5">復旧目標の案を承認と更新につなげる</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．内閣府の指針と業界団体の資料から押さえる範囲</h2>
+    <p>内閣府の「事業継続ガイドライン」では、事業停止の原因に関わらず、影響の大きさと変化を時系列で評価するとしています。必要資源は、重要な要素を漏れなく洗い出すのが基本とされています。</p>
+    <p>日本ネットワークセキュリティ協会は、テンプレートの例示を自社に則した内容に変えて活用する考え方を示しています。このテンプレート集は、同協会（NPO）が2019年のセミナーに参加する中小企業のセキュリティ担当者向けに編集したもので、公的機関の様式ではありません。同協会のハンドブックでは、業務とシステムの関連性に加え、担当者、許容できる停止時間、データの重要性をまとめるとしています。同協会の一覧ページに載る業務影響分析表の例（Excel）は、主要業務と担当を行に、メールやファイル共有などのITシステムを列に並べ、許容停止期間（数時間・数日・一週間程度など）とデータクラスの記号を記入する形です。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>欄の設計では、停止の起こりやすさと、停止後に何が起きるかを分けて扱うと整理しやすくなります。原因の候補を増やすだけで終わらず、業務が進まなくなった後の影響と、再開を支えるものを対応させる考え方です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．欄は対象・影響・資源・確認状況に分ける</h2>
+    <p>次の表は、欄の設計案と短い記入例です。同協会の例の欄名を転載したものではなく、出荷指示の発行を題材に、記載する内容の違いを示しています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">欄</th><th scope="col">何を書くか</th><th scope="col">書き間違えやすい点</th><th scope="col">記入例</th></tr></thead><tbody><tr><td data-label="欄">対象業務と担当</td><td data-label="何を書くか">通常どこまで処理する業務か、担当と確認者</td><td data-label="書き間違えやすい点">部署名だけで処理の範囲が分からない</td><td data-label="記入例">出荷指示の発行。物流担当が作成し、現場責任者が確認</td></tr><tr><td data-label="欄">停止直後の影響</td><td data-label="何を書くか">進まなくなる処理と影響を受ける相手</td><td data-label="書き間違えやすい点">「業務停止」の言い換えだけになる</td><td data-label="記入例">出荷対象を照合できず、指示の発行が保留になる</td></tr><tr><td data-label="欄">締切に近づいた時点の影響</td><td data-label="何を書くか">後の工程へ広がる影響</td><td data-label="書き間違えやすい点">停止直後と同じ内容で埋める</td><td data-label="記入例">出荷指示が届かず、現場で対象荷物を確定できない</td></tr><tr><td data-label="欄">締切を過ぎた時点の影響</td><td data-label="何を書くか">持ち越しや再調整が生じる処理</td><td data-label="書き間違えやすい点">根拠のない損失額を書く</td><td data-label="記入例">出荷手配を持ち越し、納品予定の再調整が必要になる</td></tr><tr><td data-label="欄">再開する状態</td><td data-label="何を書くか">再開後に完了できる処理の範囲</td><td data-label="書き間違えやすい点">機器の起動だけを再開とする</td><td data-label="記入例">優先する出荷分の指示を発行できる状態</td></tr><tr><td data-label="欄">必要資源</td><td data-label="何を書くか">処理に欠かせない人・場所・機器・通信・データなど</td><td data-label="書き間違えやすい点">機器名だけを書いて終える</td><td data-label="記入例">操作できる担当者、作業場所、端末、通信、出荷対象データ</td></tr><tr><td data-label="欄">資源の確保状況</td><td data-label="何を書くか">必要な量、利用できる場所、確認先</td><td data-label="書き間違えやすい点">所有していることを利用可能とみなす</td><td data-label="記入例">代替端末からの参照可否を管理担当へ照合中</td></tr><tr><td data-label="欄">確認と承認</td><td data-label="何を書くか">根拠資料、確認者、保留理由、承認状況</td><td data-label="書き間違えやすい点">未確認を「不要」と扱う</td><td data-label="記入例">手順書との照合待ち。復旧目標は承認前</td></tr></tbody></table></div>
+    <p>表を横に広げすぎると読みにくくなるため、資源の詳しい明細は別の一覧で管理し、分析表には対応する明細名を記す方法もあります。影響と必要資源の対応を追えることが中心です。空欄には意味を持たせず、「未確認」「該当なし」「承認前」を使い分けると、後から確認すべき箇所が残ります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．停止時間は締切と未処理の増え方から区切る</h2>
+    <p>時間の欄は、停止してからの経過と、業務上の締切の関係を表せるように設けます。担当者には、通常の処理の流れに沿って、どの段階から後続作業が滞るかを聞き取ります。停止直後の不便と、処理を持ち越す影響を分けると、復旧の期限を検討する材料になります。</p>
+    <p>部署ごとに時間の起点が違う表は比較しづらいため、停止を認識した時点など、記入に使う起点を表の説明欄にそろえます。日付が変わることと、次の営業に移ることも区別して書くと、読み手の解釈がそろいやすくなります。</p>
+    <p>影響欄には、相手、止まる処理、後続作業への広がりを短い文で残します。「重大」「軽微」といった評価だけでは、判断の理由が読み取れません。評価に使った手順書や締切の管理資料の名前も添え、後から担当者に聞き直さずに理由をたどれる形にします。</p>
+    <p>繁忙期と通常期の違いは、表の備考に前提として残すとよいです。未処理がたまる速さや、後の作業に回せる余裕を確認し、最も困る場面だけを根拠なく全期間に当てはめないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．必要資源は使える状態まで具体化する</h2>
+    <p>資源の欄では、普段利用しているものの名前と、再開に欠かせないものを照合します。人については操作や判断ができる役割、データについては保存場所と利用する権限まで書くと、何を確かめるかが見えます。端末や通信が使えることと、対象の情報を開いて処理できることは、分けて確認する考え方です。</p>
+    <p>必要な量は、再開する業務の範囲に合わせて見積もります。全てを通常の状態へ戻す前提だけで書かず、先に動かす処理に必要な人や設備の量を整理すると、確保状況と比べやすくなります。代わりの担当者や設備の候補にも、対応できる範囲と確認先を添えます。</p>
+    <p>確認先は、現場の担当者、設備・情報の管理担当、外部の提供元などに分けます。分析表には、誰への照合が残っているかを記し、確保できると判断した根拠も残すとよいです。回答待ちの資源を確保済みの欄へ移さず、復旧を遅らせる箇所として責任者に伝えます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．復旧目標の案を承認と更新につなげる</h2>
+    <p>内閣府のガイドラインでは、事業影響度分析の段階で決める目標復旧時間と目標復旧レベルは、実現性が未検証のため「案」にとどまり、戦略・対策の実施可能性等の検討を経てから、経営判断で最終決定するとしています。</p>
+    <p>運用上は、担当者が書いた案、管理担当が照合した内容、承認された内容を区別して扱うとよいです。影響が大きくなる時点から求める期限と、資源を確保して再開できる見込みを並べ、食い違いを責任者に示します。期限だけを書き換えて終えるのではなく、追加で確かめる資源や対策の担当も残します。</p>
+    <p>保管先は、通常の作業場所から参照できることに加え、その場所を使えない場面でも確認できる方法を検討します。閲覧する人と編集する人を整理し、古い控えと区別できるよう、更新日と承認状況を表に持たせます。</p>
+    <p>業務の締切、担当、使う設備や保存先の変更は、表を見直すきっかけになります。確認者は変更した欄だけでなく、前後の工程への影響も読み直します。承認待ちの事項を消さずに残すことで、次に誰が何を判断するかを引き継げます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">対象業務の範囲と担当・確認者を記入したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">停止時間の起点と区切り方をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">時間の経過に伴って誰のどの処理が滞るかを記入したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">再開後にできる処理の範囲を明らかにしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">必要資源の量・利用可否・確認先を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">復旧目標の案と承認済みの内容を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">保管先・更新日・未確認事項を確かめたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月6日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.bousai.go.jp/kyoiku/kigyou/pdf/guideline202303.pdf" rel="noopener" target="_blank">事業継続ガイドライン－あらゆる危機的事象を乗り越えるための戦略と対応－（表紙：令和５年３月、内閣府 防災担当）</a>：停止の影響の時系列評価、重要な要素の洗い出し、復旧目標の経営判断による最終決定</li>
+      <li><a href="https://www.jnsa.org/result/2019/act_ciso/index.html" rel="noopener" target="_blank">中小企業向け MY CISO ハンドブック（CISO支援WG）</a>：テンプレートの例示を自社向けに変更して活用する考え方</li>
+      <li><a href="https://www.jnsa.org/result/act_ciso/2019/2019-003.pdf" rel="noopener" target="_blank">JNSA 全国セミナー向け MY CISO ハンドブック・テンプレート（表紙：Ver α00、公開ページの更新表示：2019-10-23）</a>：業務とシステムの関連性、担当者、許容できる停止時間、データの重要性</li>
+      <li><a href="https://www.jnsa.org/result/2019/act_ciso/data/analyse.xlsx" rel="noopener" target="_blank">業務影響分析：業務影響分析表の例（JNSA・Excel）</a>：主要業務・担当とITシステムの対応、許容停止期間とデータクラスの記入</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/handover-document">引き継ぎ書の作り方</a></li>
+      <li><a href="/column/device-software-support-end-ledger">社内の端末とソフトのサポート終了を定期確認する台帳と進め方</a></li>
+      <li><a href="/column/google-backup-codes-storage">認証用スマホが使えない日に備える予備コードの保管と更新の手順</a></li>
+      <li><a href="/column/fire-prevention-plan-filing">確定した消防計画を消防署へ届けるには届出書と何をそろえる？</a></li>
+      <li><a href="/column/meal-work-schedule-flow-diagram">給食の調理工程表と作業動線図は何を対応させる？引継ぎの確認点</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

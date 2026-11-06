@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで会議用の集計表の縦横を入れ替えて貼る手順と確認点｜Vaynexis</title>
+  <meta name="description" content="会議用の集計表を、見出しごと縦横を入れ替えて貼る手順を整理します。使う版に応じた操作と、貼り付け先の上書き、数式の参照先を確かめる点をまとめます。表の向きを変えた後に、見出しと値の対応や合計欄を照合する例、引き継ぎ前の確認表も載せます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで会議用の集計表の縦横を入れ替えて貼る手順と確認点｜Vaynexis">
+  <meta property="og:description" content="会議用の集計表を、見出しごと縦横を入れ替えて貼る手順を整理します。使う版に応じた操作と、貼り付け先の上書き、数式の参照先を確かめる点をまとめます。表の向きを変えた後に、見出しと値の対応や合計欄を照合する例、引き継ぎ前の確認表も載せます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-transpose-meeting-table">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-transpose-meeting-table">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで会議用の集計表の縦横を入れ替えて貼る手順と確認点","description":"会議用の集計表を、見出しごと縦横を入れ替えて貼る手順を整理します。使う版に応じた操作と、貼り付け先の上書き、数式の参照先を確かめる点をまとめます。表の向きを変えた後に、見出しと値の対応や合計欄を照合する例、引き継ぎ前の確認表も載せます。","datePublished":"2026-11-06","dateModified":"2026-11-06","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-transpose-meeting-table"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで会議用の集計表の縦横を入れ替えて貼る手順と確認点","item":"https://vaynexis.jp/column/excel-transpose-meeting-table"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで会議用の集計表の縦横を入れ替えて貼る手順と確認点</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで会議用の集計表の縦横を入れ替えて貼る手順と確認点</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>会議用の集計表の縦横を入れ替えて貼るには、元の範囲をコピーし、行と列を入れ替える貼り付け操作を使います。見出しも含めて向きを変え、貼り付け先に残したい内容がないか、貼り付け後の値と参照先が合うかを確認する流れです。</p></div>
+    <p class="col-meta">公開：2026年11月6日／情報の確認日：2026年11月6日（出典はこの記事の最後）</p>
+    <p>この記事は、会議用の集計表の縦横を入れ替えて貼りたい小さな会社の事務担当者が、版ごとの操作と、貼り付け先の上書き・数式の参照先を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月6日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">貼り付ける場所と使う版を先に確かめる</a></li>
+      <li><a href="#s2">Windows 版では見出しごとコピーして貼る</a></li>
+      <li><a href="#s3">Web 版では［ホーム］から向きを指定する</a></li>
+      <li><a href="#s4">会議用の表は見出しと値の組を照合する</a></li>
+      <li><a href="#s5">使えない表と数式の変化を見落とさない</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．貼り付ける場所と使う版を先に確かめる</h2>
+    <p>公式ヘルプの適用先は Excel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016 で、手順は Windows と Web に分かれています。使っている版に合う手順を選び、会議でどちらの方向に見出しを並べたいかを先に決めておくとよいです。ここでは、すでに集計された表の向きを変えて別の場所へ貼る操作を扱います。集計項目や帳票全体の設計を変える話は含めません。</p>
+    <p>貼り付け先には、縦横を入れ替えた表が収まるスペースを用意します。貼り付けた新しい表は、そこにあるデータと書式設定を完全に上書きします。開始位置だけでなく、表が広がる先まで見ておきます。会議用の注記や別の集計が近くにある場合は、それらと重ならない場所を選ぶ考え方です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．Windows 版では見出しごとコピーして貼る</h2>
+    <h3 class="h3">元の範囲を選ぶ</h3>
+    <p>Windows 版では、行や列の見出しを含めて範囲を選び、Ctrl キーを押しながら C キーを押してコピーします。この操作ではコピーが必要で、切り取りコマンドや Ctrl+X キーでは機能しません。値が並ぶ部分だけでなく、その値の意味が分かる見出しまで選べているかを確認するところが出発点です。</p>
+    <h3 class="h3">貼り付け先でメニューを開く</h3>
+    <p>Windows 版では、［ホーム］を選び、クリップボードアイコン（貼り付け）のメニューから［入れ替え］を選びます。入れ替えの公式ヘルプでは、入れ替えた表を貼り付ける場所の左上のセルを右クリックし、［貼り付けオプション］から［入れ替え (T)］を選ぶ手順も示されています。向きを変えた表ができたら、先頭の見出しだけで完了とせず、末尾の見出しと合計欄まで見ます。元の表を残したまま照合してから、会議に使う範囲を決めるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．Web 版では［ホーム］から向きを指定する</h2>
+    <p>Web 版では、セル範囲をコピーし、入れ替えたデータを貼る空のセルを選びます。［ホーム］タブの［貼り付け］アイコンを選び、［行と列の入れ替え］を選択します。貼り付けのオプションの公式ヘルプでは、Excel for the web の［貼り付け］メニューの項目を［行列を入れ替えて貼り付ける］と書いています。使っている画面に対応した流れで進め、選んだ貼り付け方で向きが変わったかを確認するところまでを作業に含めます。</p>
+    <p>引き継ぎでは、どの版で行った操作かに加えて、コピー元の表と貼り付ける場所を残すとよいです。担当者が変わっても、何をどこへ置く作業なのかが分かる状態を目指します。向きが変わったことと、会議で見たい項目がそろったことは、分けて確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．会議用の表は見出しと値の組を照合する</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>架空の例として、部門別の経費集計で、会議では費目ごとに部門を横に見比べたい場面を考えます。値そのものを入れ直すのではなく、どの見出しが上端へ移り、どの見出しが左端へ移るかを整理した例です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめる場所</th><th scope="col">入れ替え前</th><th scope="col">入れ替え後に照合する内容</th></tr></thead><tbody><tr><td data-label="確かめる場所">上端の見出し</td><td data-label="入れ替え前">交通費・消耗品費</td><td data-label="入れ替え後に照合する内容">営業・総務</td></tr><tr><td data-label="確かめる場所">左端の見出し</td><td data-label="入れ替え前">営業・総務</td><td data-label="入れ替え後に照合する内容">交通費・消耗品費</td></tr><tr><td data-label="確かめる場所">見出しが交わる値</td><td data-label="入れ替え前">営業の交通費</td><td data-label="入れ替え後に照合する内容">交通費の行と営業の列が交わる値</td></tr><tr><td data-label="確かめる場所">合計欄</td><td data-label="入れ替え前">元の表で合計とした範囲</td><td data-label="入れ替え後に照合する内容">同じ対象を合計しているか</td></tr></tbody></table></div>
+    <p>見た目だけでなく、「誰の、何の値か」をたどって照合します。合計欄も、端に並んでいるから合っていると考えず、集計した対象が同じかを見ます。元の表と貼り付け後の表を見比べ、見出しと値の組が保たれているかを確かめる進め方です。</p>
+    <p>会議の資料として渡す段階では、集計対象や単位など、読む人に必要な説明が表のそばにあるかも確認します。向きが整ったことだけを受け渡しの基準にせず、値の意味を読み取れるかまで見るとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．使えない表と数式の変化を見落とさない</h2>
+    <h3 class="h3">通常の範囲かどうかを確かめる</h3>
+    <p>データが Excel テーブル内にある場合は入れ替え機能を使えず、公式ヘルプでは先にテーブルを範囲に変換する方法か、TRANSPOSE 関数を使う方法を示しています。項目が見つからないときは、コピーした表の種類も確認することになります。別の方法へ進む前に、元の表を今後どのように使うかを整理しておくとよいです。</p>
+    <h3 class="h3">計算結果と参照先を確かめる</h3>
+    <p>入れ替えの公式ヘルプでは、データに数式が含まれている場合は Excel が新しい配置に合わせて自動的に更新するとし、数式で絶対参照が使われているかを確かめ、使われていなければ入れ替える前に参照の種類を切り替えられると案内しています。貼り付けのオプションの公式ヘルプでも、数式を貼り付けた後は、新しい場所でセル参照がすべて正しいことを確認する必要があるとしています。相対セル参照を含む数式をコピーすると、数式内の参照が変わります。数式のある表では、表示された合計が近いかどうかだけでなく、意図した元の値を参照しているかを確認することが大切です。</p>
+    <p>セル参照を絶対参照にするには、列と行の前にドル記号（$）を付けます。固定したい参照先と、配置に応じて動かしたい参照先を整理してから扱います。数式をまとめて変更するより、計算の意味を確かめ、必要な箇所を判断する進め方です。見出し、値、計算の参照先まで確認した状態で受け渡すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">コピーする範囲に、行と列の見出しを含めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">貼り付け先で表が広がる場所に、残したい内容がないかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">使っている版に対応する手順を選択したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入れ替え前後で、見出しと値の組を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">合計欄が同じ対象を集計しているかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数式の参照先が意図どおりかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">会議で読む人に必要な対象や単位の説明を確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月6日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/paste-options" rel="noopener" target="_blank">貼り付けのオプション</a>：適用先、Windows 版と Web 版の貼り付けメニュー、入れ替えの働き、貼り付け後のセル参照の確認</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/transpose-rotate-data-from-rows-to-columns-or-vice-versa" rel="noopener" target="_blank">行から列、または列から行にデータを入れ替える (配置の転換)</a>：見出しを含む範囲のコピー、切り取りでは動かない条件、上書き、右クリックとWeb 版の手順、テーブルの制限、数式</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/switch-between-relative-absolute-and-mixed-references" rel="noopener" target="_blank">相対参照、絶対参照、複合参照を切り替える</a>：相対参照を含む数式のコピー、絶対参照の記号</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-report-copy-paste-values">Excelの報告用コピーを数式ではなく確定した値で残すには</a></li>
+      <li><a href="/column/excel-copy-visible-cells-only">Excelで非表示の行を含めず見える部分だけコピーするには</a></li>
+      <li><a href="/column/excel-pivot-department-by-expense">Excelで部門と費目を掛け合わせた経費集計表を作る手順</a></li>
+      <li><a href="/column/gmail-large-file-drive-link">Gmailで容量の大きい資料を取引先へ送るには？添付と共有の確認</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

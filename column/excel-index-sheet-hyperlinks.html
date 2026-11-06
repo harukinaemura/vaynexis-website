@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの目次から目的のシートや記入欄へ移動するには｜Vaynexis</title>
+  <meta name="description" content="シートが増えて記入欄を探しにくいときは、目次に移動用の入口をまとめます。同じブック内のシートとセルを指定する手順に加え、目次に載せる項目の決め方、行き先を取り違えないための確認、引き継ぎ時に残す情報を、短い架空の例と確認表で整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの目次から目的のシートや記入欄へ移動するには｜Vaynexis">
+  <meta property="og:description" content="シートが増えて記入欄を探しにくいときは、目次に移動用の入口をまとめます。同じブック内のシートとセルを指定する手順に加え、目次に載せる項目の決め方、行き先を取り違えないための確認、引き継ぎ時に残す情報を、短い架空の例と確認表で整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-index-sheet-hyperlinks">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-index-sheet-hyperlinks">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの目次から目的のシートや記入欄へ移動するには","description":"シートが増えて記入欄を探しにくいときは、目次に移動用の入口をまとめます。同じブック内のシートとセルを指定する手順に加え、目次に載せる項目の決め方、行き先を取り違えないための確認、引き継ぎ時に残す情報を、短い架空の例と確認表で整理します。","datePublished":"2026-11-06","dateModified":"2026-11-06","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-index-sheet-hyperlinks"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの目次から目的のシートや記入欄へ移動するには","item":"https://vaynexis.jp/column/excel-index-sheet-hyperlinks"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの目次から目的のシートや記入欄へ移動するには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの目次から目的のシートや記入欄へ移動するには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>目次から記入欄へ移動する入口にはハイパーリンクを使い、関数で作る場合は、現在のブック内の別の場所へ移動できるHYPERLINK関数を使えます。目次を整えるときは、項目名だけでなく、到着後に何を記入する場所なのかまで決めておくとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月6日／情報の確認日：2026年11月6日（出典はこの記事の最後）</p>
+    <p>この記事は、シートが増えたExcelのブックに目次を作りたい小さな会社の担当者が、リンクの挿入とHYPERLINK関数で目的のシートや記入欄へ移動する入口を作り、行き先を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月6日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">目次のセルから、同じブック内の移動先を指定する</a></li>
+      <li><a href="#s2">目次には「何をする場所か」を載せる</a></li>
+      <li><a href="#s3">到着したシートだけでなく、欄の用途まで確かめる</a></li>
+      <li><a href="#s4">表示名と行き先を分けて引き継ぐ</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．目次のセルから、同じブック内の移動先を指定する</h2>
+    <p>ここで扱う画面操作は、公式ヘルプ「Excel でリンクを操作する」の適用先として示されている Excel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016 の手順です。Mac 版と Excel for the web の画面は、この記事では扱いません。</p>
+    <h3 class="h3">入口を選び、移動先を設定する</h3>
+    <p>先に、目次に載せる項目と行き先の欄を対応させておきます。表の見出しを読みたいのか、記入を始めたいのかを区別しておくと、指定する場所を決めやすくなります。</p>
+    <ul>
+      <li>目次の入口にするセルを選び、Ctrl＋Kで［ハイパーリンクの挿入］ダイアログを開きます。</li>
+      <li>［リンク先］では、同じブック内へ移るための［このドキュメント内に場所］を選びます。</li>
+      <li>［セル参照］の一覧で移動先のシートを選び、［セル参照を入力してください］に目的のセルの参照を入力して、［OK］で確定します。</li>
+    </ul>
+    <p>設定後は、目次の入口から目的の欄へ到着するかを確かめます。項目を増やす前に、入口と行き先の対応を見直しておくとよいです。</p>
+    <h3 class="h3">関数で入口を作る場合</h3>
+    <p>HYPERLINK 関数の書式は HYPERLINK(リンク先, [別名]) です。公式ヘルプの例では、January がブックの別のワークシートの場合に、リンク先を「[Book1.xlsx]January!A10」のようにブックの名前とワークシートの名前の両方を含めて書き、そのシートのセル A10 へ移動します。別名には、セルに表示する文字列または数値を指定します。</p>
+    <p>目次では、この別名を項目名にすると、表示名と行き先を1つのセルで組にできます。例の Book1.xlsx と January は説明用の名前なので、自分のブックとシートの名前に置き換えたうえで、目次のセルから目的の欄へ移動するかを確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．目次には「何をする場所か」を載せる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>目次を作る際は、すべての表を細かく並べるよりも、読む人が探しそうな作業を先に選びます。閲覧の入口と記入の入口を分けておけば、着いた場所で次に何をするかも伝えられます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">目次に載せる項目の例</th><th scope="col">行き先に選ぶ場所の例</th><th scope="col">到着後に確かめること</th></tr></thead><tbody><tr><td data-label="目次に載せる項目の例">申請内容を記入する</td><td data-label="行き先に選ぶ場所の例">申請用の表の記入開始欄</td><td data-label="到着後に確かめること">説明を読む場所と記入欄を取り違えていないか</td></tr><tr><td data-label="目次に載せる項目の例">費用の内訳を見る</td><td data-label="行き先に選ぶ場所の例">内訳の表の見出し</td><td data-label="到着後に確かめること">対象となる内容が見出しから分かるか</td></tr><tr><td data-label="目次に載せる項目の例">記入上の注意を読む</td><td data-label="行き先に選ぶ場所の例">注意事項の説明の冒頭</td><td data-label="到着後に確かめること">記入前に読む説明へ到着しているか</td></tr></tbody></table></div>
+    <p>「申請」「内訳」「注意」のような短い語だけでは、何をする入口なのかが伝わりにくいことがあります。「記入する」「見る」「読む」のように、行き先で行う作業を添える書き方です。</p>
+    <p>行き先を選ぶ際は、空いている欄だからという理由で決めず、実際に作業を始める場所と照らし合わせます。表を読むための入口なら見出し、記入の入口なら対象の欄というように、用途に合わせて整理するとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．到着したシートだけでなく、欄の用途まで確かめる</h2>
+    <p>移動できたことと、意図した場所に着いたことは分けて確かめます。目的の用紙が開いていても、説明の末尾や、別の作業で使う欄に着いていないかを見るためです。</p>
+    <h3 class="h3">確認は目次の入口から始める</h3>
+    <p>確認の際は、行き先を直接開くだけで終えず、利用する人と同じように目次の入口をたどります。そのうえで、表示された見出し、欄の用途、目次の項目名を突き合わせます。見慣れた用紙であっても、項目名の意味と到着先の説明が対応しているかを確かめるとよいです。</p>
+    <p>引き継ぎ前には、作成者以外の人にも目次を読んでもらう方法があります。どの入口を選ぶか迷った場合は、項目名を見直す手がかりになります。操作を口頭で補わなくても行き先を選べるか、到着後に何をするか分かるかを確認します。</p>
+    <h3 class="h3">表の構成を変えた後にも確認する</h3>
+    <p>用紙の見出しや欄の配置を変えた後は、目次の項目と移動先を再確認する運用にします。以前と同じように移動できるかだけでなく、移動先が今も目的の欄なのかを見るためです。</p>
+    <p>到着先の用途が変わっている場合は、入口の名称と行き先の対応を見直します。目次に載せた項目が今も必要かも含めて整理すると、使わなくなった入口を残すかどうか判断しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．表示名と行き先を分けて引き継ぐ</h2>
+    <p>Microsoft のアクセシビリティの案内では、リンクはリンク先の情報を明確かつ正確に伝える必要があるとしています。</p>
+    <p>引き継ぐ際は、目次で見せる言葉と、その言葉が指す行き先を組にして残すとよいです。目次だけを見れば作業を選べ、修正を担当する人は対応する欄を調べられる形にします。利用する人に必要な案内と、保守する人に必要な情報を意識しておくためです。</p>
+    <p>入口の名称を整えた後も、行き先の確認は別に行います。名称が分かりやすいことと、目的の欄へ到着することの両方を確認できてから、引き継ぎ用として扱うとよいです。</p>
+    <p>関数で入口を作っている場合、HYPERLINK 関数のヘルプでは、リンク先で指定したジャンプが存在しない、または移動できないと、セルをクリックしたときにエラーが表示されるとしています。</p>
+    <p>エラーの有無だけを完了の目印にせず、到着した欄で予定した作業を始められるかを確かめます。移動先を直す場合も、先に意図した行き先を整理し、修正後に入口からたどり直す流れにしておくと、引き継ぐ人と確認する範囲をそろえられます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">目次に載せる作業と、その行き先の欄を対応させたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">閲覧の入口と記入の入口を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">項目名だけで、行き先で行う作業が分かるかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">目次の入口から、意図した用紙と欄へ移動するかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表の構成を変えた後、移動先の用途を再確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">引き継ぐ人と、入口の名称・行き先・確認する範囲を共有したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月6日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/work-with-links-in-excel" rel="noopener" target="_blank">Excel でリンクを操作する</a>：適用先、同じブック内の場所の選択、シートとセル参照の指定</li>
+      <li><a href="https://support.microsoft.com/ja-jp/accessibility/excel/keyboard-shortcuts-in-excel" rel="noopener" target="_blank">Excel のキーボード ショートカット</a>：挿入ダイアログを開くキー操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/hyperlink-function" rel="noopener" target="_blank">HYPERLINK 関数</a>：ブック内を移動する入口の作成、書式と別名、別シートへ移動する例、移動できない場合のエラー</li>
+      <li><a href="https://support.microsoft.com/ja-jp/accessibility/excel/accessibility-best-practices-with-excel-spreadsheets" rel="noopener" target="_blank">Excel スプレッドシートを使用したアクセシビリティのベスト プラクティス</a>：リンクの文字で移動先を明確に伝えること</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/word-table-of-contents-update">Wordの長い手順書に目次を自動作成し、編集後に更新するには？</a></li>
+      <li><a href="/column/excel-lock-cells-input-only">Excelの申請表で入力欄だけ編集できるようにする設定と確認</a></li>
+      <li><a href="/column/excel-filter-pending-rows-sheet">Excelで対応待ちの行だけを別シートへ自動表示するには</a></li>
+      <li><a href="/column/outlook-calendar-color-categories-visit-office">クラシックOutlookの予定を訪問・社内作業の色で分ける手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

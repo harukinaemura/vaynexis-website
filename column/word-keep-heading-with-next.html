@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordで見出しと本文を離さない「次の段落と分離しない」の設定｜Vaynexis</title>
+  <meta name="description" content="Wordで見出しと直後の説明が別々のページに離れないよう、見出し側の段落を設定する手順をまとめます。対応する版、右クリックからの操作、空行による調整との違い、設定後の読み直しと引き継ぎの確認点を、短い架空の例とともに整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Wordで見出しと本文を離さない「次の段落と分離しない」の設定｜Vaynexis">
+  <meta property="og:description" content="Wordで見出しと直後の説明が別々のページに離れないよう、見出し側の段落を設定する手順をまとめます。対応する版、右クリックからの操作、空行による調整との違い、設定後の読み直しと引き継ぎの確認点を、短い架空の例とともに整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/word-keep-heading-with-next">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/word-keep-heading-with-next">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wordで見出しと本文を離さない「次の段落と分離しない」の設定","description":"Wordで見出しと直後の説明が別々のページに離れないよう、見出し側の段落を設定する手順をまとめます。対応する版、右クリックからの操作、空行による調整との違い、設定後の読み直しと引き継ぎの確認点を、短い架空の例とともに整理します。","datePublished":"2026-11-06","dateModified":"2026-11-06","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/word-keep-heading-with-next"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Wordで見出しと本文を離さない「次の段落と分離しない」の設","item":"https://vaynexis.jp/column/word-keep-heading-with-next"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Wordで見出しと本文を離さない「次の段落と分離しない」の設</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Wordで見出しと本文を離さない「次の段落と分離しない」の設定</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>見出しと直後の本文を同じページに保つには、見出し側に［次の段落と分離しない］を設定します。設定する場所は、後ろの本文を伴わせたい見出しです。操作後はページの境目を読み、見出しと説明が続けて読める状態かを確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月6日／情報の確認日：2026年11月6日（出典はこの記事の最後）</p>
+    <p>この記事は、Wordの社内文書で見出しだけがページの最後に取り残されて困っている小さな会社の事務担当者が、見出し側の段落に［次の段落と分離しない］を設定し、読み直して引き継ぐ流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月6日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">設定するのは、本文を伴わせたい見出し</a></li>
+      <li><a href="#s2">右クリックから段落の設定を開く</a></li>
+      <li><a href="#s3">空行による調整と、行をまとめる操作を分ける</a></li>
+      <li><a href="#s4">短い案内文で、読み手の目線から点検する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．設定するのは、本文を伴わせたい見出し</h2>
+    <p>確認日：2026年11月6日。</p>
+    <p>この記事の操作対象は、Word for Microsoft 365、Word 2024、Word 2021、Word 2019、Word 2016です。Mac版・Web版の操作手順は、この記事の対象に含めません。</p>
+    <p>最初に、離れているのが見出しとその説明なのか、本文の途中なのかを見分けます。今回整えるのは、見出しを読んだ直後に、その内容を説明する文章へ進めるようにする配置です。本文全体を同じページへ収めることとは、目的を分けて考えるとよいです。</p>
+    <p>見た目を整える前に、どの見出しとどの説明を続けて読んでほしいかを決めます。隣にある文章というだけでまとめるのではなく、読み手が見出しから何を理解するかを基準にすると、変更する範囲が明確になります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．右クリックから段落の設定を開く</h2>
+    <h3 class="h3">見出し側の段落を選ぶ</h3>
+    <p>本文を続けたい見出しを右クリックし、表示されたメニューから［段落］を選びます。続けたい本文の側から始めるのではなく、本文を伴わせたい見出し側を対象にする操作です。</p>
+    <h3 class="h3">改ページに関する設定へ進む</h3>
+    <p>［段落］ダイアログボックスの［改行と改ページ］タブを開きます。同じ名前の見出しが文書内にあるときは、設定を変えたい箇所を開いているかも見直します。文書名だけでなく、直前の文章や近くの項目を目印にすると、対象を取り違えにくくなります。</p>
+    <h3 class="h3">チェックを入れて文書へ戻る</h3>
+    <p>［改ページ位置］の［次の段落と分離しない］にチェックを入れ、［OK］を選びます。設定後は文書に戻り、対象の見出しと直後の説明を続けて読みます。</p>
+    <p>チェックが付いたことと、文書が読みやすくなったことは、分けて確認するとよいです。見出しだけを眺めて終わらず、説明の書き出しまで目を通します。配置を直したかった箇所を中心に、その前後にも不自然な空きや読みづらい区切りがないかを見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．空行による調整と、行をまとめる操作を分ける</h2>
+    <p>段落の間に改行を追加すると、Wordが新しい段落として扱い、改ページが適切に起こらない可能性があります。空行を足して見出しを押し下げる調整を始める前に、見出しと説明のつながりを設定で扱うかを考えます。</p>
+    <p>段落どうしの縦方向の余白は、段落の前後の間隔で調整できます。文字の間を空けて読みやすくすることと、ページの境目で文章を離さないことは、目的が異なります。余白がほしいだけなのか、説明と見出しが離れて困っているのかを、先に言葉にしておくとよいです。</p>
+    <p>1つの段落の行を同じページにまとめる項目は、公式ヘルプでは［行を分割しない］として別に案内されています。見出しと本文という段落どうしのつながりを整えたいのか、本文の段落内をまとめたいのかを、変更前に区別します。</p>
+    <p>設定の名前だけを見て近そうなものを選ぶと、どこを整えたかったのかが曖昧になります。困っている状態（説明が見出しから離れている、本文の途中で区切られている など）を短く記録してから、操作の対象を決める流れです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．短い案内文で、読み手の目線から点検する</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>社内向けの案内文を見直す場面を考えます。表は文書へ貼り付ける見本ではなく、見出しと説明の組み合わせを点検するための整理です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">文書内の見出し</th><th scope="col">直後に置く説明の内容</th><th scope="col">続けて読んだときに確かめること</th></tr></thead><tbody><tr><td data-label="文書内の見出し">受付場所</td><td data-label="直後に置く説明の内容">到着後に向かう場所の説明</td><td data-label="続けて読んだときに確かめること">場所の案内へ迷わず進めるか</td></tr><tr><td data-label="文書内の見出し">当日の持ち物</td><td data-label="直後に置く説明の内容">持参する物の説明</td><td data-label="続けて読んだときに確かめること">持ち物の説明だと分かるか</td></tr><tr><td data-label="文書内の見出し">変更の連絡</td><td data-label="直後に置く説明の内容">変更を伝える方法の説明</td><td data-label="続けて読んだときに確かめること">連絡方法まで続けて読めるか</td></tr></tbody></table></div>
+    <p>点検の中心は、見出しの文字が目立っていることではなく、そのすぐ後の文章と意味がつながっていることです。見出しから読み始め、説明の途中まで読み進めたときに、何についての案内なのかを追えるかを見ます。</p>
+    <p>文章を直した後も、変更した言葉だけでなく、見出しから説明へ進む順番を読み直します。文面を修正した担当者と、体裁を点検した担当者が違う場合は、どの箇所を見たかが伝わるようにするとよいです。</p>
+    <p>引き継ぎには、文書名、対象の見出し、直したかった状態、確認した結果を短く残します。体裁を直したとだけ書くと、次の担当者が点検場所を探し直すことになります。例えば受付場所の見出しと説明を続けて読めるかを確認したというように、対象と見方が分かる記録にします。確認できなかった点は、済んだ点と分けて残すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">見出しと直後の説明を続けたい箇所を特定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">後ろの本文を伴わせたい見出し側を操作対象にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象の段落にチェックが入ったことを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">空行を足すことだけで配置を合わせていないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見出しと説明を続けて読み、意味のつながりを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">文章を修正した後も、対象箇所の前後を読み直したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">引き継ぐ相手に、対象の見出しと確認結果を残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月6日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/word/keep-text-together-in-word" rel="noopener" target="_blank">Word でテキストをまとめたままにする</a>：適用先、見出しと直後の段落をまとめる設定、右クリックからの操作、空行を追加する際の注意、段落の行をまとめる項目</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/change-the-line-spacing-in-word" rel="noopener" target="_blank">Word で行と段落の間隔を変更する</a>：段落の前後の間隔による縦方向の余白の調整</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-document-demo">AI議事録で提案と決定事項を分ける方法（実演）</a></li>
+      <li><a href="/column/word-remove-trailing-blank-page">Wordの文書末尾に残る空白ページを印刷前に消す手順と確認</a></li>
+      <li><a href="/column/word-page-numbers-skip-cover">Wordで表紙を除いて本文からページ番号を振る手順と確認点</a></li>
+      <li><a href="/column/word-table-of-contents-update">Wordの長い手順書に目次を自動作成し、編集後に更新するには？</a></li>
+      <li><a href="/column/outlook-classic-new-reply-signatures">Outlookで新規メールと返信の署名を別々に設定するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
