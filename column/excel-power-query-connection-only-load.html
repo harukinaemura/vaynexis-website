@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの取込用クエリをシートへ展開せず接続だけ残すには｜Vaynexis</title>
+  <meta name="description" content="取込途中の表をシートに並べず、必要な結果だけを見せたいときの読み込み設定を整理します。新規作成時と作成済みの場合で入口を分け、接続を残す操作、別の保存先との区別、設定後の確認点を説明します。取込元・中間取込・完成表を引き継ぐ項目と、確認表も添えます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの取込用クエリをシートへ展開せず接続だけ残すには｜Vaynexis">
+  <meta property="og:description" content="取込途中の表をシートに並べず、必要な結果だけを見せたいときの読み込み設定を整理します。新規作成時と作成済みの場合で入口を分け、接続を残す操作、別の保存先との区別、設定後の確認点を説明します。取込元・中間取込・完成表を引き継ぐ項目と、確認表も添えます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-power-query-connection-only-load">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-power-query-connection-only-load">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの取込用クエリをシートへ展開せず接続だけ残すには","description":"取込途中の表をシートに並べず、必要な結果だけを見せたいときの読み込み設定を整理します。新規作成時と作成済みの場合で入口を分け、接続を残す操作、別の保存先との区別、設定後の確認点を説明します。取込元・中間取込・完成表を引き継ぐ項目と、確認表も添えます。","datePublished":"2026-11-08","dateModified":"2026-11-08","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-power-query-connection-only-load"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの取込用クエリをシートへ展開せず接続だけ残すには","item":"https://vaynexis.jp/column/excel-power-query-connection-only-load"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの取込用クエリをシートへ展開せず接続だけ残すには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの取込用クエリをシートへ展開せず接続だけ残すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Windows版Excelでは、取込用クエリの読み込み先を指定する画面で［接続の作成のみ］を選びます。Windows版で作成済みなら対象の読み込み先を開き直します。Web版の読み込み先は、ブラウザー版の節に沿って確認します。途中の取込と人が見る完成表を区別し、変更対象と残したい表を先に控えると、引き継ぐ人にも意図が伝わります。</p></div>
+    <p class="col-meta">公開：2026年11月8日／情報の確認日：2026年11月7日（出典はこの記事の最後）</p>
+    <p>小さな会社の事務担当者が、Excelの中間取込を接続だけ残し、シートに載せる完成表を分けて管理する手順です。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月7日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">表を表示する場所と、取込の処理を分けて考える</a></li>
+      <li><a href="#s2">新しく取り込むときは、読み込み先を指定する</a></li>
+      <li><a href="#s3">作成済みなら対象の［読み込み先］を開き直す</a></li>
+      <li><a href="#s4">ブラウザーでは専用の読み込みメニューを使う</a></li>
+      <li><a href="#s5">中間取込と完成表の役割を短い表に残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．表を表示する場所と、取込の処理を分けて考える</h2>
+    <p>確認日：2026年11月7日。</p>
+    <p>デスクトップの手順はWindows版のExcel for Microsoft 365を対象とします。作成・読み込みの公式ヘルプの適用先には、Excel 2024、Excel 2021、Excel 2019、Excel 2016も掲載されています。以下では作成済みの対象を扱う方法と、作成途中で指定する方法を分け、ブラウザーでの操作は別の節にまとめます。</p>
+    <p>クエリを作ると接続情報も作られ、クエリはデータの整形、接続情報は取込元の情報の維持と更新設定に沿った更新を担います。取込途中の状態を毎回配布する必要があるか、完成した一覧だけを見せたいかを先に決めます。</p>
+    <p>作業前には変更対象の名前と、人が確認する完成表の名前を控えておくとよいです。見えている表だけを頼りに片付けるのではなく、どの取込を残し、どの結果を表示したいのかを整理してから設定に進みます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．新しく取り込むときは、読み込み先を指定する</h2>
+    <p>取込を始める入口の例として、［データ］→［データの取得］→［ファイルから］→［テキスト/CSV から］があります。対象のファイルと内容を確認し、必要な加工を終えた段階で、結果の置き方を決めます。</p>
+    <p>Power Query エディターでは、［ホーム］で読み込みのメニューを開き、［読み込み先］を選ぶとインポートのダイアログを開けます。［データのインポート］では［接続の作成のみ］を選び、［OK］で確定します。</p>
+    <p>［このデータをデータ モデルに追加する］は、データモデルへ読み込むための選択項目です。シートにもデータ モデルにも読み込まないときは、［接続の作成のみ］を選び、データ モデルへの追加が選択されていないことを確認します。</p>
+    <p>取込途中のものを整理する作業では、表示する表を増やしたいのか、取込の定義を残したいのかを、確定する直前にも見直します。完成表の置き方まで同じ扱いにせず、それぞれの用途に合わせて指定する進め方です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．作成済みなら対象の［読み込み先］を開き直す</h2>
+    <p>Excelで［データ］から［クエリ &amp; 接続］を開き、［クエリ］タブで対象を探します。対象を右クリックして［読み込み先］を選ぶと、［データのインポート］が開きます。そこで前節の接続を残す選択に進みます。</p>
+    <p>名前の似た対象が並んでいるときは、控えておいた変更対象と照合します。完成表を作っているものと、取込途中に使うものを区別できてから変更するとよいです。現在見えている表をほかの集計や配布に使っている場合は、その利用先も先に控えます。変更前のブックを控え、参照先の動作を変更後に確かめます。</p>
+    <p>初めてクエリを作る際に［読み込み先］が無効になる場合、公式ヘルプでは一度読み込んだ後、一覧で対象を右クリックして［読み込み先］を選ぶ方法を案内しています。</p>
+    <p>設定後の内容を見直す入口は、対象を右クリックしたときの［編集］です。表が見当たらないという理由だけで取込を作り直さず、対象を選べるか、元の内容をたどれるかを確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．ブラウザーでは専用の読み込みメニューを使う</h2>
+    <p>Excel for the webでは、クエリの表示と更新はすべてのMicrosoft 365サブスクライバーが利用でき、追加機能はBusinessプランまたはEnterpriseプランのE3以上が対象です。この節はブラウザー版の操作を扱います。</p>
+    <p>編集後は、MicrosoftのWeb版ヘルプの読み込み先を指定するメニューで、シートへ読み込むか、接続のみのクエリを作るかを選べます。作成したクエリは、クエリと接続のウィンドウで確認できます。</p>
+    <p>MicrosoftのWeb版向けのクエリ管理の説明では、データ モデルへ読み込まれたクエリにも「接続のみ」と表示されます。その表示だけを、どこにもデータを読み込んでいないという意味には受け取らず、設定した保存先と合わせて見るとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．中間取込と完成表の役割を短い表に残す</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>元の内容、途中の加工、人が確認する結果を分けて、引き継ぐ情報を表にまとめます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">対象</th><th scope="col">担当する役割</th><th scope="col">引き継ぐ内容</th></tr></thead><tbody><tr><td data-label="対象">取込元</td><td data-label="担当する役割">取込元データを保管する</td><td data-label="引き継ぐ内容">元データの保管場所</td></tr><tr><td data-label="対象">中間取込</td><td data-label="担当する役割">確認用の結果を作る前の加工を受け持つ</td><td data-label="引き継ぐ内容">接続だけ残すクエリの名前と読み込み先の指定</td></tr><tr><td data-label="対象">完成表</td><td data-label="担当する役割">担当者が内容を照合する</td><td data-label="引き継ぐ内容">表の置き場と照合する項目</td></tr></tbody></table></div>
+    <p>残したい処理と、人に見せる結果を対応させておくことが目的です。変更後は途中の表の有無だけで終えず、完成表に必要な見出しや対象がそろっているかを見ます。取込元と表示結果の内容を照合し、設定の変更とデータの正しさを別々に確かめます。</p>
+    <p>引き継ぎには、変更した対象、残したい結果、照合した内容を短く記録するとよいです。確認が済んだ範囲と利用先の確認を待つ範囲も分けておくと、次の担当者が続きを進められます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">接続を残す対象と、表示する完成表を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更する対象の名前を控え、選んだ対象と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">取込途中の表を表示する必要があるか整理したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">シートへの表示と、別の保存先への追加を分けて確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">現在の表を使っている集計や配布先を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">設定後も取込の内容をたどれるか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">完成表の内容を取込元と照合し、引き継ぐ記録を残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月7日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/create-load-or-edit-a-query-in-excel-power-query" rel="noopener" target="_blank">Excel (Power Query) でクエリを作成、読み込み、または編集する</a>：適用先、読み込み先の指定、作成済みクエリの選択と編集、データモデルへの追加</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/manage-queries-power-query" rel="noopener" target="_blank">クエリの管理 (Power Query)</a>：クエリと接続情報の役割、Web版の「接続のみ」の表示</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/import-data-from-data-sources-power-query" rel="noopener" target="_blank">データ ソースからデータをインポートする (Power Query)</a>：テキスト・CSVファイルから取り込む入口</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/create-a-parameter-query-power-query" rel="noopener" target="_blank">パラメーター クエリを作成する (Power Query)</a>：読み込みダイアログの［接続の作成のみ］と確定操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/use-power-query-in-excel-for-the-web" rel="noopener" target="_blank">Excel for the web で Power Query を使用する</a>：Web版の対象プラン、接続のみの作成、作成後の確認場所</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-power-query-duplicate-test-copy">ExcelのPower Queryを複製して元の処理を残し試し直すには</a></li>
+      <li><a href="/column/excel-power-query-folder-path-parameter">Excelの取込ファイルの場所をパラメーターで切り替えるには</a></li>
+      <li><a href="/column/excel-power-query-refresh-error-check">Excelの取込更新エラーはどこから調べる？表示と処理段階の確認</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

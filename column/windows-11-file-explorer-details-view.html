@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows 11のエクスプローラーで資料を詳細表示にする手順｜Vaynexis</title>
+  <meta name="description" content="保存した資料を探すときは、まず一覧の見え方を整えます。表示メニューからの切り替えとキー操作、長い名前が読みにくいときの対処を整理し、一覧で候補を探す段階と中身を確認する段階を、一覧で見る情報の整理表と引き継ぎに使える確認表で分けて紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Windows 11のエクスプローラーで資料を詳細表示にする手順｜Vaynexis">
+  <meta property="og:description" content="保存した資料を探すときは、まず一覧の見え方を整えます。表示メニューからの切り替えとキー操作、長い名前が読みにくいときの対処を整理し、一覧で候補を探す段階と中身を確認する段階を、一覧で見る情報の整理表と引き継ぎに使える確認表で分けて紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/windows-11-file-explorer-details-view">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/windows-11-file-explorer-details-view">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Windows 11のエクスプローラーで資料を詳細表示にする手順","description":"保存した資料を探すときは、まず一覧の見え方を整えます。表示メニューからの切り替えとキー操作、長い名前が読みにくいときの対処を整理し、一覧で候補を探す段階と中身を確認する段階を、一覧で見る情報の整理表と引き継ぎに使える確認表で分けて紹介します。","datePublished":"2026-11-08","dateModified":"2026-11-08","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/windows-11-file-explorer-details-view"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Windows 11のエクスプローラーで資料を詳細表示にする","item":"https://vaynexis.jp/column/windows-11-file-explorer-details-view"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Windows 11のエクスプローラーで資料を詳細表示にする</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Windows 11のエクスプローラーで資料を詳細表示にする手順</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Windows 11のエクスプローラーで対象フォルダーを開き、［表示］から［詳細］を選ぶと、ファイルが詳細表示に切り替わります。まず保存先の一覧で探す資料の候補を絞り、内容の確認が必要なものを開く流れにするとよいです。操作後は、見ている場所と一覧の見え方を確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月8日／情報の確認日：2026年11月7日（出典はこの記事の最後）</p>
+    <p>Windows 11で資料を探す事務担当者が、詳細表示に切り替えて一覧で候補を絞ります。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月7日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">保存先を開き、表示メニューで切り替える</a></li>
+      <li><a href="#s2">キーで切り替える方法と、長い名前への対処</a></li>
+      <li><a href="#s3">一覧で探す目印と、中身を確認する仕事を分ける</a></li>
+      <li><a href="#s4">詳細ウィンドウを開く操作との違いを確かめる</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．保存先を開き、表示メニューで切り替える</h2>
+    <p>確認日：2026年11月7日</p>
+    <p>この記事では、Microsoftのエクスプローラーの案内のうちWindows 11の手順を扱います。</p>
+    <p>最初に、一覧で見たい資料が保存されているフォルダーを開きます。引き継ぎの連絡や自分の控えと照らし合わせ、対象の保存先にいるかを確かめるところから始めるとよいです。似た名前のフォルダーがある場合も、今回の仕事で使う場所を先に決めておきます。</p>
+    <p>エクスプローラー上部の［表示］を選び、表示方法の候補から［詳細］を選択します。資料の中身を順番に開く前に、一覧の見え方を整える操作です。</p>
+    <p>切り替えた後は、探したい資料の名前を一覧で追えるかを見ます。目当ての資料が見つからない段階で、表示の設定を次々と変えるよりも、開いている保存先が合っているかを確かめるとよいです。表示を選ぶ操作と、資料のある場所を選ぶ操作を分けて進めます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．キーで切り替える方法と、長い名前への対処</h2>
+    <p>エクスプローラーでは、CtrlキーとShiftキーを押しながら数字キーの6を押す方法でも、詳細表示へ切り替えられます。メニューを使う方法と、キーを使う方法のどちらで進めたかを覚えておくと、引き継ぎの説明をそろえやすくなります。</p>
+    <p>文字が途中までしか読めないときは、表示の切り替えができたかと、名前を読み取れるかを別々に確認します。途中までの名前が似ている資料については、読めない部分を想像して選ばず、名前全体を確かめてから候補にするとよいです。</p>
+    <p>テンキーを使える場合は、Ctrlキーとテンキーの正符号（＋）を押すと、テキストに合わせてすべての列のサイズを変更できます。この操作を引き継ぐときは、使うキーの場所も併せて伝えます。</p>
+    <p>キー操作に慣れていない担当者へは、最初に説明したメニューでの進め方を渡すとよいです。引き継ぎ用の手順には、普段使う方法を中心に書き、別の方法を併記する場合も操作を混ぜずに分けておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．一覧で探す目印と、中身を確認する仕事を分ける</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>一覧を見る目的を「必要な資料の候補を探す」と決めておくと、どこで中身の確認へ移るかが明確になります。名前が目的に合っているかを見た後、承認済みか、修正が反映されているかなど、仕事に必要な内容を確認する流れです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確認する段階</th><th scope="col">一覧で見る情報</th><th scope="col">その後に確かめること</th></tr></thead><tbody><tr><td data-label="確認する段階">探す資料の候補を絞る</td><td data-label="一覧で見る情報">ファイル名と更新時期</td><td data-label="その後に確かめること">目的に合う候補の場所と名前</td></tr><tr><td data-label="確認する段階">長い名前を見分ける</td><td data-label="一覧で見る情報">列幅を調整した後のファイル名全体</td><td data-label="その後に確かめること">似た名前のファイルや別の版との違い</td></tr><tr><td data-label="確認する段階">使う資料を確定する</td><td data-label="一覧で見る情報">一覧で確認した候補の場所と名前</td><td data-label="その後に確かめること">開いた資料に修正が反映されているか、使用してよい版か</td></tr></tbody></table></div>
+    <p>ファイル名や更新時期は、資料を探すときの目印です。名前に「確認済み」「最終」と書かれていても、それだけを根拠に送付対象を決めず、担当者の連絡や資料の内容と照らし合わせるとよいです。</p>
+    <p>一覧の確認を終えた時点では「候補を見つけた」と記録し、内容まで確認した資料とは区別します。引き継ぎでも、見つかったことと、使ってよいことを同じ意味で伝えないようにします。本文の情報を書き出して管理表を作る作業まで広げず、ここでは保存資料を探す段階を整えます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．詳細ウィンドウを開く操作との違いを確かめる</h2>
+    <p>Windows 11の公式ヘルプでは、ファイルやフォルダーを表示する中央の領域を「コンテンツ ウィンドウ」と呼んでいます。一方、詳細ウィンドウは、選択した項目に関する追加情報を表示する領域です。</p>
+    <p>Microsoftの案内では、詳細ビューの中央の一覧は、ファイル名や更新時期などの項目で並べ替えられます。選んだ資料の情報だけが別の領域に表示されたときは、一覧そのものが見やすくなったかを見直すとよいです。似た名称の操作をしたことだけで、切り替えが済んだと判断しないようにします。</p>
+    <p>操作の終わりには、対象の保存先、探していた資料の名前、一覧で読み取れる範囲を確かめます。別の担当者に渡すメモにも、押した場所だけでなく、どのフォルダーで何が見える状態にしたかを残すとよいです。</p>
+    <p>引き継ぎを受ける人は、そのメモと手元の一覧を照合します。見え方が違う場合は、まず対象の保存先と使った操作を確かめ、同じ資料を見ている状態にそろえます。資料を探せた後は、その仕事に必要な内容の確認へ進みます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">今回の資料が保存されているフォルダーを開いたことを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">資料の一覧が目的の見え方に切り替わったことを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">名前が途中で切れている資料は、名前全体まで確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">探した資料と、内容まで確認した資料を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">名前の「最終」などの言葉に加え、使ってよい資料か内容も確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">引き継ぎのメモに、保存先と操作後の状態を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月7日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/windows/experience/fileexplorer/file-explorer-in-windows" rel="noopener" target="_blank">Windows のエクスプローラー</a>：適用先と、表示メニューから詳細表示を選ぶ操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/accessibility/windows/keyboard-shortcuts-in-windows" rel="noopener" target="_blank">Windows のキーボード ショートカット</a>：詳細表示へのキー操作、列幅を合わせる操作とテンキーの前提</li>
+      <li><a href="https://support.microsoft.com/ja-jp/accessibility/windows/use-a-screen-reader-to-explore-and-navigate-file-explorer-in-windows" rel="noopener" target="_blank">スクリーン リーダーを使用して Windows のエクスプローラーを探索および移動する</a>：中央の一覧領域と詳細ウィンドウの違い、詳細ビューの並べ替え</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/windows-show-hidden-work-files">Windowsで非表示の業務ファイルを確認する手順と照合のポイント</a></li>
+      <li><a href="/column/onedrive-sync-file-naming-rules">OneDriveの同期で困らないファイル名とフォルダ階層の決め方</a></li>
+      <li><a href="/column/handover-document">引き継ぎ書の作り方｜抜けやすい項目とAI下書きの確認方法</a></li>
+      <li><a href="/column/windows-11-find-work-files-by-partial-name">Windows 11で名前の一部しか分からない業務資料を探す手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

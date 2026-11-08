@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>切替の予行で時間を超えた作業を本番前にどう確認し直すか｜Vaynexis</title>
+  <meta name="description" content="切替の予行で予定時間を超えた作業は、開始・終了の記録から、処理と待ち時間を分けて確認します。見直した手順での再実施結果、本番との違い、後続作業への影響を残し、本番前の判断につなぐ記録のまとめ方を整理します。技術的な速度改善策は扱いません。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="切替の予行で時間を超えた作業を本番前にどう確認し直すか｜Vaynexis">
+  <meta property="og:description" content="切替の予行で予定時間を超えた作業は、開始・終了の記録から、処理と待ち時間を分けて確認します。見直した手順での再実施結果、本番との違い、後続作業への影響を残し、本番前の判断につなぐ記録のまとめ方を整理します。技術的な速度改善策は扱いません。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/migration-rehearsal-time-overrun-recheck">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/migration-rehearsal-time-overrun-recheck">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"切替の予行で時間を超えた作業を本番前にどう確認し直すか","description":"切替の予行で予定時間を超えた作業は、開始・終了の記録から、処理と待ち時間を分けて確認します。見直した手順での再実施結果、本番との違い、後続作業への影響を残し、本番前の判断につなぐ記録のまとめ方を整理します。技術的な速度改善策は扱いません。","datePublished":"2026-11-08","dateModified":"2026-11-08","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/migration-rehearsal-time-overrun-recheck"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"切替の予行で時間を超えた作業を本番前にどう確認し直すか","item":"https://vaynexis.jp/column/migration-rehearsal-time-overrun-recheck"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">切替の予行で時間を超えた作業を本番前にどう確認し直すか</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">切替の予行で時間を超えた作業を本番前にどう確認し直すか</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>予定時間を超えた作業は、開始・終了と途中で止まった理由を残し、見直した手順で再実施した結果まで確認します。その作業の所要時間に加え、後続作業の開始と全体の終了見込みも見直すのが当社の整理です。変更した内容、試した範囲、残る確認事項をそろえ、切替の責任者が本番前に判断できる形にまとめます。</p></div>
+    <p class="col-meta">公開：2026年11月8日／情報の確認日：2026年11月7日（出典はこの記事の最後）</p>
+    <p>この記事は、システム切替の予行で予定時間を超えた作業を、小さな会社の事務担当者が記録し、再実施と本番前の判断につなげる方法を整理したものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月7日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">予行では、手順とスケジュールを一緒に確かめる</a></li>
+      <li><a href="#s2">超過した区間を、開始・終了と待ちの記録で分ける</a></li>
+      <li><a href="#s3">再実施では、変えた内容と試した範囲を残す</a></li>
+      <li><a href="#s4">本番前は、後続作業と残る問いをそろえて判断する</a></li>
+      <li><a href="#s5">AIへの依頼は、記録と確認事項の下書きに絞る</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．予行では、手順とスケジュールを一緒に確かめる</h2>
+    <p>確認日：2026年11月7日</p>
+    <p>デジタル庁は「デジタル・ガバメント推進標準ガイドライン解説書」を、標準ガイドラインの趣旨や目的を理解しやすくするための参考文書と位置付けています。この解説書の対象は政府情報システムです。</p>
+    <p>解説書では、移行のリハーサルは、できる限り本番移行と同等の環境・データを使い、本番と同じ手順・スケジュールで予行して、その適切性などを確かめるものとしています。また、移行リハーサルにかかる作業量・移行所要時間の見積りが適正かを、確認観点に挙げています。結果を確認して手順やツールなどを修正・改善した後、リハーサルで再度検証する流れも示しています。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．超過した区間を、開始・終了と待ちの記録で分ける</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>小さな会社で確認用の記録を作る際は、「切替が遅れた」という全体の感想から、どの作業のどの区間が予定を超えたかへと掘り下げます。処理そのものにかかった時間と、開始前の準備や確認者の返答を待った時間は、別に残す考え方です。</p>
+    <p>処理の終了時刻と後続担当が開始できる時刻は別欄に残します。差がある場合は、完了連絡の時刻や、開始に必要な確認を元の記録から確かめます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">記録する欄</th><th scope="col">元の記録から残す内容</th><th scope="col">本番前に確かめること</th></tr></thead><tbody><tr><td data-label="記録する欄">作業名・手順の位置</td><td data-label="元の記録から残す内容">手順書の該当箇所と前後の作業</td><td data-label="本番前に確かめること">超過した対象を関係者が同じ範囲で捉えているか</td></tr><tr><td data-label="記録する欄">予定の開始・終了</td><td data-label="元の記録から残す内容">予行前に決めた時刻と完了の目印</td><td data-label="本番前に確かめること">記録後に予定を上書きしていないか</td></tr><tr><td data-label="記録する欄">実際の開始・終了</td><td data-label="元の記録から残す内容">作業記録で確認できる時刻と記録の所在</td><td data-label="本番前に確かめること">処理終了と完了確認を取り違えていないか</td></tr><tr><td data-label="記録する欄">中断・待ち</td><td data-label="元の記録から残す内容">止まった区間、待っていたもの、再開の合図</td><td data-label="本番前に確かめること">処理中の時間と待ち時間を分けられるか</td></tr><tr><td data-label="記録する欄">原因の確認状況</td><td data-label="元の記録から残す内容">確認できた事実と、調査中の問い</td><td data-label="本番前に確かめること">推測を原因として確定していないか</td></tr><tr><td data-label="記録する欄">再実施の内容・結果</td><td data-label="元の記録から残す内容">変えた手順、使ったデータや環境、開始・終了</td><td data-label="本番前に確かめること">前回との違いと確認できた範囲を説明できるか</td></tr><tr><td data-label="記録する欄">後続への影響・確認者</td><td data-label="元の記録から残す内容">次の作業の開始見込み、全体の終了見込み、確認する人</td><td data-label="本番前に確かめること">本番前に残る問いを誰が引き受けるか</td></tr></tbody></table></div>
+    <p>予定と実際の時刻には、同じ開始・終了の目印を使います。処理の完了を終点にした予定と、担当者の確認が済んだ時刻をそのまま比べると、異なる区間を比較してしまいます。どこまでを含めた時間かを欄の説明に添えるとよいです。</p>
+    <p>時刻が残っていない区間は、担当者の記憶から埋めた値と、記録で確かめた値を区別します。分からない区間は空欄と確認事項を残し、再実施で記録を取る対象にします。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．再実施では、変えた内容と試した範囲を残す</h2>
+    <p>見直しを担当する人には、超過した区間と、原因について確認済みのことを渡します。「次は早く終える」という依頼だけでは、変更した内容を後から追えません。準備物の受け渡し、完了連絡の相手、後続担当が着手する合図など、変更する箇所を手順に書き戻します。</p>
+    <p>再実施の記録には、使った手順の版と、前回から変更した箇所を結び付けます。元の予行記録を消して新しい結果に置き換えるのではなく、前回の課題から変更内容、再実施の結果へたどれる形です。</p>
+    <h3 class="h3">短く終わった理由まで確かめる</h3>
+    <p>所要時間だけを比べず、使ったデータの量、作業した環境、確認者の参加、前後の準備がどう違ったかも並べます。準備を済ませた状態から始めた再実施では、準備に必要な時間は別に残す扱いです。確認作業を省いた結果を、本番全体の終了見込みへそのまま使わないようにします。</p>
+    <p>部分的に試した作業は、その範囲の結果として残します。後続作業への受け渡しまで試せているかを整理し、つなぎ目を確認する担当を決めます。再び予定を超えた区間は、変更内容と結果を残したまま、次に調べる問いへつなげます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．本番前は、後続作業と残る問いをそろえて判断する</h2>
+    <p>再実施が終わったら、作業担当と取りまとめ役が結果を読み合わせます。確認するのは、予定した範囲を終えたか、完了の目印を満たしたか、未確認の作業が残っていないかです。作業担当の「終了」と、確認者が結果を受け取ったことを分けて残します。</p>
+    <p>続いて、見直した所要時間を全体の予定に戻します。後続担当が着手できる時点と、全体が終了する見込みを更新し、関係者と共有します。個別の作業が予定内に収まったという結果だけで、全体も収まると判断しないための確認です。</p>
+    <h3 class="h3">続行の判断に足りない情報を明らかにする</h3>
+    <p>本番前の確認票には、超過した作業、変更内容、再実施結果、本番との違い、未解決の問いをまとめます。確認事項ごとに、答える人と回答を受け取る時点を置くと、返答待ちのまま扱いが曖昧になるのを避けやすくなります。</p>
+    <p>本番で使う手順と予行後に直した手順が一致しているかも、読み合わせの対象です。連絡の相手や開始の合図が古いまま残っていないかを確かめます。予定の見直し、追加の予行、本番の延期などの判断は、切替の責任者が記録を見て行う運用にします。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．AIへの依頼は、記録と確認事項の下書きに絞る</h2>
+    <p>AIを使う運用では、社内で入力してよい範囲を確認した記録の写しを用意し、超過箇所と確認事項の下書きに担当範囲を絞ります。元の作業記録や本番用の手順を直接書き換える扱いにはしません。</p>
+    <p>依頼文では、記録にない時刻や原因を補わないことを明示します。</p>
+    <pre class="prompt">渡す資料は、入力してよい範囲を確認した予行記録の写しとする。
+予定と実際の開始・終了を、元の記録の所在と対応させて整理する。
+処理中、中断、返答待ちを、記録で分かる範囲で分ける。
+原因が確定していない箇所は、確認する問いとして残す。
+変更した手順と再実施結果を対応させ、未確認の範囲を示す。
+記録にない時刻、担当者、原因は補わない。
+本番を開始できるかの判定は行わない。</pre>
+    <p>下書きを受け取る人は、時刻と作業名を元の記録に照合します。原因らしい説明が加わっていないか、再実施していない範囲まで確認済みになっていないかも点検します。整理された文章の読みやすさと、本番前の判断に必要な確認が済んだことを分けて扱います。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">超過した作業を手順の位置で特定し、予定と実際の開始・終了を同じ目印で記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">処理中の時間、中断、返答待ちを元の記録から確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">確認できた原因と調査中の問いを分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更した手順と再実施した範囲・結果を結び付けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">本番との違いを残し、後続作業と全体の終了見込みを見直したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">残る問いの確認者を決め、切替の責任者へ判断材料を渡したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月7日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.digital.go.jp/resources/standard_guidelines" rel="noopener" target="_blank">デジタル社会推進標準ガイドライン</a>：解説書が逐条的な解説を記載した参考文書であること</li>
+      <li><a href="https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/e2a06143-ed29-4f1d-9c31-0f06fca67afc/50952dae/20260715_resources_standard_guidelines_guideline_03.pdf" rel="noopener" target="_blank">デジタル・ガバメント推進標準ガイドライン解説書（2026年6月12日版、第３編第７章「設計・開発」）</a>：政府情報システムという対象範囲、予行の環境・データ・手順・スケジュール、所要時間の見積り、修正後の再検証</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/migration-exception-data-pending-owner">新システムへ入らなかった例外データは誰の確認待ちで残すか</a></li>
+      <li><a href="/ai/tasks/procedure-document">手順書（1業務・5頁程度）</a></li>
+      <li><a href="/ai/tasks/handover-bcp">引き継ぎ書・事業継続計画の下書き</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

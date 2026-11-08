@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの長い一覧を印刷するとき各ページに見出しを付ける方法｜Vaynexis</title>
+  <meta name="description" content="長い一覧を紙で配るとき、途中のページでも項目名を読めるようにする設定を解説します。見出しとして繰り返す行の選び方、入力する範囲、設定が選べない場合の確認点を整理。見出しと明細を分ける表と確認表を使い、印刷前に後続の紙面まで見直す流れをまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの長い一覧を印刷するとき各ページに見出しを付ける方法｜Vaynexis">
+  <meta property="og:description" content="長い一覧を紙で配るとき、途中のページでも項目名を読めるようにする設定を解説します。見出しとして繰り返す行の選び方、入力する範囲、設定が選べない場合の確認点を整理。見出しと明細を分ける表と確認表を使い、印刷前に後続の紙面まで見直す流れをまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-print-titles-repeat-header-rows">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-print-titles-repeat-header-rows">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの長い一覧を印刷するとき各ページに見出しを付ける方法","description":"長い一覧を紙で配るとき、途中のページでも項目名を読めるようにする設定を解説します。見出しとして繰り返す行の選び方、入力する範囲、設定が選べない場合の確認点を整理。見出しと明細を分ける表と確認表を使い、印刷前に後続の紙面まで見直す流れをまとめます。","datePublished":"2026-11-08","dateModified":"2026-11-08","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-print-titles-repeat-header-rows"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの長い一覧を印刷するとき各ページに見出しを付ける方","item":"https://vaynexis.jp/column/excel-print-titles-repeat-header-rows"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの長い一覧を印刷するとき各ページに見出しを付ける方</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの長い一覧を印刷するとき各ページに見出しを付ける方法</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excel の長い一覧で各ページに項目名を付けるには、［印刷タイトル］で見出しの行を繰り返す設定を使います。どの行を繰り返すかを決めてから指定し、後続の紙面にも項目名と明細が対応して載っているかを確かめる流れです。</p></div>
+    <p class="col-meta">公開：2026年11月8日／情報の確認日：2026年11月6日（出典はこの記事の最後）</p>
+    <p>この記事は、小さな会社の事務担当者に向け、Windowsデスクトップ版Excelで、印刷する各ページに見出し行を繰り返す設定と結果の確認をまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月6日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">操作する版と、繰り返したい項目名を確かめます</a></li>
+      <li><a href="#s2">見出し行の範囲を指定します</a></li>
+      <li><a href="#s3">配付用の一覧では、項目名の並びを目印にします</a></li>
+      <li><a href="#s4">設定を選べないときは、編集状態と選択範囲を見ます</a></li>
+      <li><a href="#s5">後続の紙面でも、項目名と明細を照合します</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．操作する版と、繰り返したい項目名を確かめます</h2>
+    <p>確認日：2026年11月6日</p>
+    <p>ここでは Windows のデスクトップ版の操作を扱い、対象は Excel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016 です。Mac 向けには、公式ヘルプに Excel for Microsoft 365 for Mac の説明もあります。画面の違いを混ぜず、使っている版の説明に合わせます。</p>
+    <p>Excel for the web では、現在、印刷時に列見出しを繰り返せないため、この設定はデスクトップアプリで行います。</p>
+    <p>準備では、途中の紙面だけを受け取った人が、何の欄かを読める状態を考えます。表の名前や説明が上にある場合も、明細を読むための項目名がどこに並ぶかを先に見つけると、繰り返す対象を決めやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．見出し行の範囲を指定します</h2>
+    <p>対象のワークシートで［ページ レイアウト］タブを開き、［ページ設定］の［印刷タイトル］を選びます。</p>
+    <h3 class="h3">先頭の行が見出しの場合</h3>
+    <p>先頭の見出し行だけを繰り返す場合、［一番上の繰り返し行］に「$1:$1」と入力します。先頭から2行が見出しなら「$1:$2」と指定できます。見出しに何が含まれるかを見てから、必要な範囲を選ぶ考え方です。</p>
+    <h3 class="h3">左側にも目印が必要な場合</h3>
+    <p>紙面の左側で繰り返したいラベルがある場合は、［左で繰り返す列］に、その列の参照を入力します。上に項目名を付けたいのか、左に照合の目印を残したいのかを分けて考えると、入力する欄を取り違えにくくなります。</p>
+    <p>ここで大切なのは、明細と見出しの役割を区別することです。記入するたびに変わる内容まで繰り返す対象に含めると、後続の紙面を読む際に紛らわしくなります。欄の名前として共通に読みたい部分を選びます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．配付用の一覧では、項目名の並びを目印にします</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>次の表は、繰り返す範囲を決めるために、一覧の上部を役割ごとに分ける見方です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">一覧の区切り</th><th scope="col">見る内容</th><th scope="col">繰り返す範囲の考え方</th></tr></thead><tbody><tr><td data-label="一覧の区切り">帳票名や説明</td><td data-label="見る内容">対象一覧の名前と補足</td><td data-label="繰り返す範囲の考え方">途中の紙面にも必要かを個別に確認する</td></tr><tr><td data-label="一覧の区切り">項目名の行</td><td data-label="見る内容">各列に何を書くかを示す名前</td><td data-label="繰り返す範囲の考え方">明細を読むための共通の見出しとして選ぶ</td></tr><tr><td data-label="一覧の区切り">明細</td><td data-label="見る内容">記録ごとに変わる内容</td><td data-label="繰り返す範囲の考え方">見出しの範囲に含めない</td></tr></tbody></table></div>
+    <p>繰り返す対象は、明細の意味を示す項目名の行です。個々の明細は、その下で読む内容として扱います。見出しと明細の境目を先に整理しておくと、繰り返す範囲をほかの担当者へ説明するときにも役立ちます。</p>
+    <p>引き継ぎでは、「上にある部分」とだけ伝えるより、「明細の意味を示す項目名の行」と書く方が、選ぶ対象が伝わります。帳票の名前や注意書きを含めるかどうかは、途中の紙面を読む相手に必要かという観点で決めるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．設定を選べないときは、編集状態と選択範囲を見ます</h2>
+    <h3 class="h3">コマンドが淡色になっている</h3>
+    <p>［タイトルの印刷］が淡色になる条件は、セル編集中、同じシートのグラフを選択中、またはプリンターがインストールされていない場合です。行の指定をやり直す前に、現在の状態に当てはまるものがないかを見ます。</p>
+    <h3 class="h3">行や列の指定欄を使えない</h3>
+    <p>複数のワークシートを選択している間は、繰り返す行と列の指定欄を使えません。選択していないシートをクリックすると複数選択を解除でき、表示中のシートをすべて選んでいる場合は、シート見出しを右クリックして［作業グループ解除］を選びます。</p>
+    <h3 class="h3">行番号や列記号が印刷された</h3>
+    <p>［シート オプション］の［見出し］で［印刷］をオンにする操作は、シートの行見出し・列見出しを印刷する設定です。この行見出し・列見出しは、シートの境界にある「1、2、3」や「A、B、C」などを指します。配付する相手が読みたい項目名が出ているか、結果で見分けます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．後続の紙面でも、項目名と明細を照合します</h2>
+    <p>［ファイル］から［印刷］を選ぶと、プレビューと印刷オプションを表示できます。後続のページは、プレビュー下部の［次のページ］［前のページ］の矢印、またはページ番号の入力で表示します。</p>
+    <p>見比べる中心は、項目名の並びと、その下の明細の対応です。最初の紙面だけで確認を終えず、途中や最後の紙面でも、欄の意味を読めるかに目を向けます。見出しの一部が欠けていないか、明細を見出しに含めていないかも点検するとよいです。</p>
+    <p>内容と設定が整ったら、［印刷］ボタンを選んで印刷します。紙を渡す前にも、途中の紙面だけで内容を読めるかを確かめると、設定した範囲と読み手の必要が合っているかを判断できます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">配付する一覧の項目名がどこにあるかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">繰り返す範囲に、不要な明細を含めていないかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">操作対象のシートだけを選んでいるかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">後続の紙面にも必要な項目名が載っているかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">行番号や列記号だけを見出しと思い違いしていないかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">途中と最後の紙面で、項目名と明細の対応を確かめたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月6日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/print-a-worksheet-or-workbook" rel="noopener" target="_blank">ワークシートやブックを印刷する</a>：対象の版と印刷を実行する操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/print-rows-with-column-headers-on-top-of-every-page" rel="noopener" target="_blank">全ページの先頭の列見出しとともに行を印刷する</a>：各ページへの見出しの繰り返し、Web 版の制約、Mac 向け説明、コマンドが淡色になる条件</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/repeat-specific-rows-or-columns-on-every-printed-page" rel="noopener" target="_blank">印刷される各ページで特定の行または列を繰り返す</a>：設定の入口、行と列の指定欄、複数シート選択時の制約と解除</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/print-the-top-row-on-every-page" rel="noopener" target="_blank">一番上の行を各ページに印刷する</a>：先頭行と、先頭の複数行を繰り返す指定</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/print-row-and-column-headings" rel="noopener" target="_blank">行見出しと列見出しを印刷する</a>：行番号・列記号を印刷する設定との区別</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/preview-worksheet-pages-before-you-print" rel="noopener" target="_blank">印刷前にワークシート ページをプレビューする</a>：印刷プレビューの表示と後続ページの確認</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/excel-freeze-header-row-and-id-column">Excelの長い一覧で見出し行と管理番号列を同時に固定する方法</a></li>
+      <li><a href="/column/excel-print-heading-page-break">Excelの印刷で見出しと明細が分かれるときの改ページ調整</a></li>
+      <li><a href="/column/excel-print-fit-columns-one-page-wide">Excelの印刷で右端の列だけ次のページに出るときの直し方</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

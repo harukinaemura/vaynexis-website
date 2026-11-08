@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-Govの入力済みデータを署名担当者へ渡す保存と確認の手順｜Vaynexis</title>
+  <meta name="description" content="入力した申請データを別の署名担当者へ渡すために、署名が必要な場面と保存時の確認を整理します。ファイル名とパスワードの扱い、送る人と受け取る人の分担、読み込めないときの対応まで、公式ガイドに基づく操作と社内の運用案を分けて説明します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="e-Govの入力済みデータを署名担当者へ渡す保存と確認の手順｜Vaynexis">
+  <meta property="og:description" content="入力した申請データを別の署名担当者へ渡すために、署名が必要な場面と保存時の確認を整理します。ファイル名とパスワードの扱い、送る人と受け取る人の分担、読み込めないときの対応まで、公式ガイドに基づく操作と社内の運用案を分けて説明します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/egov-application-data-signature-handover">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/egov-application-data-signature-handover">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"e-Govの入力済みデータを署名担当者へ渡す保存と確認の手順","description":"入力した申請データを別の署名担当者へ渡すために、署名が必要な場面と保存時の確認を整理します。ファイル名とパスワードの扱い、送る人と受け取る人の分担、読み込めないときの対応まで、公式ガイドに基づく操作と社内の運用案を分けて説明します。","datePublished":"2026-11-08","dateModified":"2026-11-08","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/egov-application-data-signature-handover"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"e-Govの入力済みデータを署名担当者へ渡す保存と確認の手順","item":"https://vaynexis.jp/column/egov-application-data-signature-handover"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">e-Govの入力済みデータを署名担当者へ渡す保存と確認の手順</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">e-Govの入力済みデータを署名担当者へ渡す保存と確認の手順</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>別の人に署名を追加してもらうときは、入力済みのデータを保存し、次の担当者に渡します。受け渡す前に、誰がどこまで署名するか、どのファイルを渡すか、受け取った後に誰が確認するかをそろえます。社内の受け渡しでは、ログイン情報や秘密鍵を共有せず、対象データと作業状況を引き継ぐ運用にします。</p></div>
+    <p class="col-meta">公開：2026年11月8日／情報の確認日：2026年11月6日（出典はこの記事の最後）</p>
+    <p>この記事は、小さな会社の事務担当者に向け、e-Govの入力済みデータを署名担当者へ渡す際の、保存・保護・受領確認の手順をまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月6日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">保存する前に、署名する場面を分ける</a></li>
+      <li><a href="#s2">署名する人が認証局と証明書を確かめる</a></li>
+      <li><a href="#s3">保存名と保護の設定を決めてから渡す</a></li>
+      <li><a href="#s4">渡す人と受け取る人の確認を対応させる</a></li>
+      <li><a href="#s5">読み込めないときは加工せず、状態を伝える</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．保存する前に、署名する場面を分ける</h2>
+    <p>確認日：2026年11月6日。</p>
+    <p>公式の受け渡しガイドでは、電子署名が必要な手続の場合、まず自分自身の電子署名を付与します。一方、申請書入力中のデータは、利用者が指定した場所に署名なしで保存できます。入力途中のものを渡すのか、署名を付けたものを次の署名担当者に渡すのかで、引き継ぐ状態を分けて考えるとよいです。</p>
+    <p>［一時保存して中断］で保存した申請データは、マイページの一覧に表示され、［申請データ名］から再開します。ファイルとして受け渡す場合は、相手に送るファイル名と保存場所を別に確認します。引き継ぎメモには、どこに置いた何を渡すのかまで記載します。受け取る人が特定できるファイルを用意したか、送信前に照合する流れです。</p>
+    <p>入力と署名を別の人が担う場合は、入力内容の確認を終える時点と、署名を依頼する時点を決めておきます。署名担当者の予定も共有し、入力が終わってから連絡相手を探すことがないようにすると、作業を引き継ぎやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．署名する人が認証局と証明書を確かめる</h2>
+    <p>「認証局選択」画面が出た場合は、使う電子証明書の発行元を選び、［OK］へ進みます。「署名用電子証明書確認」画面では認証局を確認し、変更するときは「別の認証局発行の証明書を利用する」から選び直します。「証明書の選択」画面では、電子署名に使う証明書を選択して署名します。</p>
+    <p>表示された候補をそのまま選ぶ前に、今回の署名で用意したものと照合します。入力担当者が画面操作を代行するという前提で進めず、署名を受け持つ本人が確認する段取りにするとよいです。</p>
+    <p>ここでは、データの受け渡しに伴う操作を扱います。誰に署名する権限があるか、代理で申請できるかという法律・労務の判断は、対象手続の公式案内を示して専門家に確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．保存名と保護の設定を決めてから渡す</h2>
+    <p>証明書の選択後は「申請データ保存」画面で、保存する申請書名と申請データサイズを確認し、保存先に保存します。保存時には任意のファイル名とパスワードを指定でき、パスワードを設定すると申請データが暗号化されます。公式FAQでは、上書き保存はできず、保存先に存在しないファイル名を指定する扱いです。</p>
+    <p>同じ案件を複数回保存するときは、受け渡す版と、その前に保存した版を取り違えないようにします。送付の直前に、実際に選んだファイル名を引き継ぎメモと照合し、確認後に内容を変えたものが混じっていないかも見直すとよいです。</p>
+    <p>受け渡しのために設定するパスワードは、社内の運用として、データを開くためのものと、署名やログインに使うものを分けて扱います。後者を引き継ぎメモへ書いたり、データと一緒に送ったりしないルールにします。送付先と受け取り方法も、作業前に担当者同士で合意しておくとよいです。</p>
+    <p>ファイルを送った後に修正が必要になったときは、修正前のものと修正後のものを並行して回さない運用にします。どの版から作業を続けるかを相手とそろえ、既に渡したものの扱いも連絡してから進めます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．渡す人と受け取る人の確認を対応させる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>以下は、社内の引き継ぎで使う分担の案です。渡す対象と現在の作業状態を短く書き、受け取った側の返事まで対応させます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">作業の時点</th><th scope="col">担当</th><th scope="col">用意するもの・残すこと</th></tr></thead><tbody><tr><td data-label="作業の時点">入力内容を確認した後</td><td data-label="担当">入力する人</td><td data-label="用意するもの・残すこと">対象の名称、確認した範囲、判断待ちの項目</td></tr><tr><td data-label="作業の時点">署名を依頼する前</td><td data-label="担当">依頼する人と署名する人</td><td data-label="用意するもの・残すこと">署名を受け持つ人、作業を引き継ぐ時点、社内の希望日</td></tr><tr><td data-label="作業の時点">保存して渡すとき</td><td data-label="担当">渡す人</td><td data-label="用意するもの・残すこと">ファイル名、保存場所、署名を行ったかどうか、送付先</td></tr><tr><td data-label="作業の時点">受け取ったとき</td><td data-label="担当">受け取る人</td><td data-label="用意するもの・残すこと">受領したファイル名、依頼された作業、確認を始められるか</td></tr><tr><td data-label="作業の時点">次の作業に進む前</td><td data-label="担当">作業を引き継ぐ人</td><td data-label="用意するもの・残すこと">続ける対象、残っている確認、依頼元への返事</td></tr></tbody></table></div>
+    <p>準備した内容の確認と、引き継ぎ先での作業の開始は別の状態として残します。送付済み、受領済み、確認待ちを同じ意味で使わず、どの作業まで終わったかを記録する運用です。</p>
+    <p>引き継ぎ先がファイルを受け取ったことと、依頼された作業を続けられることも分けて確認します。予定していた対象と違った場合は、手元で似たものに差し替えず、依頼元へ名称と食い違う箇所を返す流れにします。</p>
+    <p>社内で置く希望日は、提出期限そのものと混同しないようにします。途中で担当が変わるときも、未解決の事項と、その回答を待つ相手が分かる記録を残すと、次の人が確認を続けやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．読み込めないときは加工せず、状態を伝える</h2>
+    <p>受け渡しガイドで保存したデータは、次の人が申請データとして利用できます。公式FAQは、保存したZIPファイルを解凍し、XMLファイルを修正して再びZIP化したものを読み込むと、データ破損のエラーが生じる場合があるとしています。その破損メッセージが表示された場合は、該当データを破棄し、新規に申請データを作成するよう案内されています。</p>
+    <p>エラーが出たときは、表示された文章と、直前に行った操作を分けて記録します。送付した側と受け取った側でファイル名を照らし合わせ、異なる版を見ていないかも確認するとよいです。</p>
+    <p>サービスの利用方法に関する問い合わせは、e-Gov利用者サポートデスクで受け付けています。相談する際は、何をしようとして、どの画面で止まったかを短く伝えます。署名する人の権限や手続の適用が分からない場合は、操作の質問と分け、対象手続の公式資料を示して専門家に確認します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">入力内容を確認した範囲と、残っている確認事項を整理したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">署名を受け持つ人と、引き継ぐ時点を共有したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">送るファイル名と、引き継ぎメモに記載した対象が一致したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">受け渡し用の保護方法と送付先を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ログイン情報や秘密鍵を共有しない運用にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">受け取った人が、対象と次の作業を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">確認を依頼する相手と、社内の希望日を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月6日）</h2>
+    <ul class="col-src">
+      <li><a href="https://shinsei.e-gov.go.jp/contents/help/guide/procedure/pass-data.html" rel="noopener" target="_blank">入力したデータを次の人へ渡す</a>：署名が必要な場合の順序、認証局と証明書の確認、保存項目と暗号化、次の人による利用</li>
+      <li><a href="https://shinsei.e-gov.go.jp/contents/help/guide/procedure" rel="noopener" target="_blank">電子申請する</a>：別の人への署名依頼とデータの保存、署名なしでの保存</li>
+      <li><a href="https://shinsei.e-gov.go.jp/contents/help/guide/procedure/interruption.html" rel="noopener" target="_blank">一時保存して中断する</a>：一時保存した申請データの表示場所と再開方法</li>
+      <li><a href="https://shinsei.e-gov.go.jp/contents/help/faq/application.html" rel="noopener" target="_blank">申請書作成・送信</a>：上書き保存の制限、ファイルの加工による破損エラーと発生時の対応</li>
+      <li><a href="https://www.e-gov.go.jp/contact/" rel="noopener" target="_blank">お問合せ</a>：利用方法に関する公式の相談窓口</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/vpn-access-request-fields">VPN利用申請書には何を書く？接続目的と利用期間の確認欄</a></li>
+      <li><a href="/column/ai-email-draft-permissions">AIでメールを下書きするときの接続権限・送信承認・記憶の確認</a></li>
+      <li><a href="/column/email-contract-final-file-records">メールで合意した契約、最終ファイルと送受信記録を結んで残す方法</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>共同編集のスプレッドシートで数式セルだけ編集を防ぐ設定と確認｜Vaynexis</title>
+  <meta name="description" content="共同編集する表で、入力欄を残しながら数式の上書きを防ぐための設定を整理します。保護する範囲の指定、警告と編集制限の違い、修正を許可する相手の選び方を説明し、入力欄と数式欄の整理表、設定後の確認項目、引き継ぎ時に残す内容までまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="共同編集のスプレッドシートで数式セルだけ編集を防ぐ設定と確認｜Vaynexis">
+  <meta property="og:description" content="共同編集する表で、入力欄を残しながら数式の上書きを防ぐための設定を整理します。保護する範囲の指定、警告と編集制限の違い、修正を許可する相手の選び方を説明し、入力欄と数式欄の整理表、設定後の確認項目、引き継ぎ時に残す内容までまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/google-sheets-protect-formula-cell-ranges">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/google-sheets-protect-formula-cell-ranges">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"共同編集のスプレッドシートで数式セルだけ編集を防ぐ設定と確認","description":"共同編集する表で、入力欄を残しながら数式の上書きを防ぐための設定を整理します。保護する範囲の指定、警告と編集制限の違い、修正を許可する相手の選び方を説明し、入力欄と数式欄の整理表、設定後の確認項目、引き継ぎ時に残す内容までまとめます。","datePublished":"2026-11-08","dateModified":"2026-11-08","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-sheets-protect-formula-cell-ranges"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"共同編集のスプレッドシートで数式セルだけ編集を防ぐ設定と確認","item":"https://vaynexis.jp/column/google-sheets-protect-formula-cell-ranges"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">共同編集のスプレッドシートで数式セルだけ編集を防ぐ設定と確認</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">共同編集のスプレッドシートで数式セルだけ編集を防ぐ設定と確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>数式セルだけの編集を防ぐには、Google スプレッドシートで対象を［範囲］として保護し、［この範囲を編集できるユーザーを制限する］を選びます。入力担当者が触る欄を残し、式を直す担当者を決めてから、両方の立場で確認するとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月8日／情報の確認日：2026年11月7日（出典はこの記事の最後）</p>
+    <p>Google スプレッドシートを共同編集する事務担当者が、数式の範囲を指定し、編集を許可する相手を確認します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月7日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">設定前に、ファイル形式と自分の権限を確かめる</a></li>
+      <li><a href="#s2">数式の入った範囲に、編集を許可する相手を設定する</a></li>
+      <li><a href="#s3">入力欄と計算欄を分けて、保護する場所を決める</a></li>
+      <li><a href="#s4">保護しても防げない操作を、共有相手と区別して考える</a></li>
+      <li><a href="#s5">設定した人だけで終えず、入力担当者の立場でも確かめる</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．設定前に、ファイル形式と自分の権限を確かめる</h2>
+    <p>確認日：2026年11月7日。対象：パソコンで使う Google スプレッドシート。</p>
+    <p>オーナーと編集権限のあるユーザーは範囲の編集権限を設定できますが、編集者がオーナーの編集権限を削除することはできません。閲覧権限かコメント書き込み権限だけの場合は、変更できません。</p>
+    <p>［保護されているシートと範囲］が表示されないときは、Microsoft Office ファイルの編集機能を使っている可能性があり、保護機能を使うにはファイルを Google スプレッドシートに変換します。保護されたブックやシートを Excel から Google スプレッドシートへ移行すると、非表示のセルは表示され、ロックされたセルは編集できるようになります。</p>
+    <p>移行前の設定がそのまま残ると考えず、共有して使うファイルの状態を確かめることが出発点です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．数式の入った範囲に、編集を許可する相手を設定する</h2>
+    <h3 class="h3">対象の範囲を指定する</h3>
+    <p>対象ファイルを開き、［データ］→［シートと範囲を保護］から、［シート / 範囲を追加］へ進みます。［範囲］を選び、スプレッドシートのアイコンから保護したいセル範囲を指定します。</p>
+    <p>数式欄と入力欄の境目を確認してから、設定に進むとよいです。計算結果が表示されている場所だけで判断せず、守りたい式がどこに入っているかを見ます。</p>
+    <h3 class="h3">編集を許可する相手を指定する</h3>
+    <p>［権限を設定］または［権限を変更］を開き、編集を制限する方法を選びます。［この範囲を編集するときに警告を表示する］は、確認メッセージを表示するだけで、ほかのユーザーの編集をブロックしません。</p>
+    <p>主な選択肢のうち、［自分のみ］では自分とオーナーが範囲やシートを編集できます。［カスタム］では、範囲やシートを編集できるユーザーを選びます。オーナーには編集権限があります。選択を終えたら、［保存］または［完了］で確定します。</p>
+    <p>式を直す担当者と日常の入力担当者を分けておくと、許可する相手を判断しやすくなります。引き継ぎ時には、設定した人の名前だけでなく、式の修正を頼む相手も伝えておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．入力欄と計算欄を分けて、保護する場所を決める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>数式と手入力が混在する表は、先にどのセルを日常の入力対象にするか整理します。保護を設定する前に、次の区分で対象を確かめます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">セルの役割</th><th scope="col">保護する前に確かめること</th></tr></thead><tbody><tr><td data-label="セルの役割">数式が入っている</td><td data-label="保護する前に確かめること">表示された結果と式のあるセルを区別し、修正を担当する人を決める</td></tr><tr><td data-label="セルの役割">手入力に使う</td><td data-label="保護する前に確かめること">入力担当者が編集する範囲を控える</td></tr><tr><td data-label="セルの役割">数式と手入力の境目</td><td data-label="保護する前に確かめること">数式の先頭と末尾を控え、隣の入力欄が保護範囲に入っていないか確認する</td></tr></tbody></table></div>
+    <p>入力担当者が普段触るセルを確かめてから、数式の範囲を指定します。</p>
+    <p>同じ列の途中に手入力する欄があれば、その境目も控えておくとよいです。列名だけで伝えるより、「どこからどこまでを式の修正担当者が扱うか」を具体的に残す方が、引き継ぎ先で対象を照合しやすくなります。</p>
+    <p>また、値を入れる欄と式を直す欄を分けても、式そのものの計算内容が正しいかは別に確認します。保護対象を選ぶ作業と、計算の点検を分けて進める考え方です。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．保護しても防げない操作を、共有相手と区別して考える</h2>
+    <p>Googleのヘルプでは、範囲の保護とは別にセキュリティ対策を講じるよう案内しています。保護されたスプレッドシートのコピーに対して、印刷、コピー、貼り付け、読み込み、書き出しは可能です。</p>
+    <p>数式の上書きを減らすための設定を済ませたことと、共有してよい内容かを判断したことは分けて扱います。共有する必要のない情報を表に含めていないか、共有相手に渡す内容として適切かも見直すとよいです。</p>
+    <p>同じヘルプが案内するシート全体の保護では、［シート］を選び、［特定のセルを除く］をオンにします。</p>
+    <p>数式の場所を指定する方法と、入力場所を除外する方法を混ぜず、どちらの考え方で対象を決めたかを記録に残します。対象の選び方が曖昧だと、後から欄を追加する担当者も、何を守る設定だったのか判断しにくくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．設定した人だけで終えず、入力担当者の立場でも確かめる</h2>
+    <p>設定後は、変更して差し支えない確認用の表を用意し、式を直す担当者と日常の入力担当者が、それぞれの立場で操作を確かめる進め方です。設定した本人の画面だけを見て終えず、日常の入力に支障がないかまで見ます。</p>
+    <p>入力担当者の確認では、守る予定の式を変更しようとした場合と、日々使う入力欄へ値を入れた場合を分けて記録します。意図しない編集ができたときは、対象の場所と許可する相手を、当初決めた内容と照らし合わせます。</p>
+    <p>守る欄の中央だけでなく、始まりと終わりの位置も確認します。見出しの直下や明細の末尾には、設定対象と入力対象の境目があります。隣の欄まで囲っていないか、守るつもりの箇所が端で抜けていないかを見るためです。</p>
+    <p>逆に入力欄まで使えなくなったときは、守る範囲を広く取りすぎていないかが確認の出発点です。確認に使う値は先に決め、計算結果が想定と合うかも別に見ておくとよいです。</p>
+    <p>表の見出しや明細を増やした後、担当者が替わったときも、変更した場所と当初の設定対象を見比べます。引き継ぎには、対象のファイル、守る欄、式の修正担当者、確認した操作を残しておくと、次の担当者が確認すべき点を追いやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">保護する数式の場所と、日常の入力欄を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">自分が設定を変更できる権限を持つか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">警告の表示だけで終わらず、編集の制限を設定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">式の修正を許可する相手を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力担当者の立場で、守る欄と入力欄の動作を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">移行や表の変更があった箇所を見直したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">設定対象と修正担当者を引き継ぎに残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月7日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/docs/answer/1218656?hl=ja" rel="noopener" target="_blank">シートを保護する、非表示にする、編集する - パソコン - Google ドキュメント エディタ ヘルプ</a>：範囲の指定、編集者の制限、設定できる権限、警告との違い、保護の限界</li>
+      <li><a href="https://support.google.com/docs/answer/6055139?co=GENIE.Platform%3DDesktop&amp;hl=ja" rel="noopener" target="_blank">Office ファイルの使用 - パソコン - Google ドキュメント エディタ ヘルプ</a>：保護されたブックやシートの移行後に、非表示とロックの扱いが変わること</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/google-sheets-arrayformula-blank-rows">スプレッドシートで同じ計算を全行へ適用する式と空欄の扱い</a></li>
+      <li><a href="/column/google-sheets-dropdown-list">スプレッドシートで入力欄をプルダウンにする作り方と確認点</a></li>
+      <li><a href="/column/sheets-restore-deleted-table">共同編集で消した表を戻す｜スプレッドシートの変更履歴と復元前の確認</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
