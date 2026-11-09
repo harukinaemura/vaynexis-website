@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google スプレッドシートで行の対応を保って並べ替えるには？｜Vaynexis</title>
+  <meta name="description" content="Google スプレッドシートで事務台帳の一部を並べ替えるとき、管理番号と担当者などの項目がずれないように範囲を選ぶ手順です。見出しを固定する操作と、並べ替えから見出しを外す指定を分け、作業後に行の対応を確かめる方法もまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Google スプレッドシートで行の対応を保って並べ替えるには？｜Vaynexis">
+  <meta property="og:description" content="Google スプレッドシートで事務台帳の一部を並べ替えるとき、管理番号と担当者などの項目がずれないように範囲を選ぶ手順です。見出しを固定する操作と、並べ替えから見出しを外す指定を分け、作業後に行の対応を確かめる方法もまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/google-sheets-sort-range-keep-rows-aligned">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/google-sheets-sort-range-keep-rows-aligned">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Google スプレッドシートで行の対応を保って並べ替えるには？","description":"Google スプレッドシートで事務台帳の一部を並べ替えるとき、管理番号と担当者などの項目がずれないように範囲を選ぶ手順です。見出しを固定する操作と、並べ替えから見出しを外す指定を分け、作業後に行の対応を確かめる方法もまとめます。","datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-sheets-sort-range-keep-rows-aligned"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Google スプレッドシートで行の対応を保って並べ替えるに","item":"https://vaynexis.jp/column/google-sheets-sort-range-keep-rows-aligned"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Google スプレッドシートで行の対応を保って並べ替えるに</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Google スプレッドシートで行の対応を保って並べ替えるには？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>パソコンのGoogle スプレッドシートで表を並べ替えるときは、基準にする列と、同じ明細に属するほかの列をまとめて選びます。［範囲の並べ替え詳細オプション］を開き、選んだ範囲に見出しが入っていれば［データにヘッダー行が含まれている］を選びます。基準列と順序を指定して並べ替えた後は、管理番号に対応する項目が元の記録と合うか確認します。</p></div>
+    <p class="col-meta">公開：2026年11月9日／情報の確認日：2026年11月7日（出典はこの記事の最後）</p>
+    <p>この記事では、共同で使うGoogle スプレッドシートの台帳を並べ替える担当者が、管理番号と同じ行にある項目を揃えて動かす手順を整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月7日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">並べ替えに使う設定と、見出しを固定する操作</a></li>
+      <li><a href="#s2">同じ明細に属する列を、表の端まで含める</a></li>
+      <li><a href="#s3">共有の台帳で変える順序を先に合わせる</a></li>
+      <li><a href="#s4">並べ替えた後は、行数と項目の対応を別々に確かめる</a></li>
+      <li><a href="#s5">フィルタで並べ替えるときと、数式が同じセルを見続けるとき</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．並べ替えに使う設定と、見出しを固定する操作</h2>
+    <p>確認日：2026-11-07。</p>
+    <p>Googleのパソコン向けヘルプでは、範囲を選んでから並べ替えの設定を開きます。シートに見出し行がある場合は、先頭行を固定する手順が案内されています。</p>
+    <p>行の固定は、画面を下にスクロールしても見出しが見えるようにする操作です。パソコンでは、固定する行を選んで［表示］→［固定］と進み、行数を指定します。 並べ替えの画面の［データにヘッダー行が含まれている］は、列に見出しが含まれている場合に選ぶ項目です。</p>
+    <ol>
+      <li>パソコンで台帳を開き、並べ替えるセルの範囲を選びます。</li>
+      <li>［データ］→［範囲を並べ替え］→［範囲の並べ替え詳細オプション］と進みます。</li>
+      <li>選んだ範囲の先頭に列の見出しがある場合は、［データにヘッダー行が含まれている］を選びます。</li>
+      <li>並べ替えの基準になる列と順序を選びます。もう一つ基準が必要なら［並べ替えの基準となる別の列を追加］を使い、指定を確認して［並べ替え］をクリックします。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．同じ明細に属する列を、表の端まで含める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>まず、どの明細を一緒に動かすかを決めます。管理番号を目印にしている台帳なら、担当者や処理状況、期限など、その番号と対応する項目まで横に見渡します。基準列が表の途中にあっても、選ぶ範囲の左右の端は明細を構成する列で決めます。基準列だけを選ぶと、その列とほかの項目の組み合わせが変わるおそれがあります。</p>
+    <p>縦方向は、対象の明細がどこからどこまで続いているかを確認します。表の下にある合計欄や別の用途の表は、明細と見分けて選択範囲を決めます。途中に空白行があるときは、そこで表が終わると判断する前に、下にも同じ台帳の明細が続いているか見ます。空白行が別の表との区切りなら、空白の手前を範囲の端にします。隣に手入力の備考欄を増やしている場合も、その備考が明細に対応するなら範囲に含めます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確認する箇所</th><th scope="col">範囲を決めるときの見方</th></tr></thead><tbody><tr><td data-label="確認する箇所">左右の端</td><td data-label="範囲を決めるときの見方">管理番号、担当、期限、備考など、同じ明細に付く項目を確認する</td></tr><tr><td data-label="確認する箇所">上端</td><td data-label="範囲を決めるときの見方">選んだ範囲の先頭が列の見出しか、最初の明細かを確かめる</td></tr><tr><td data-label="確認する箇所">下端</td><td data-label="範囲を決めるときの見方">最後の明細を特定し、その後に置いた集計行との境目を見る</td></tr><tr><td data-label="確認する箇所">隣の表</td><td data-label="範囲を決めるときの見方">同じ明細に付く補足欄か、別に管理する表かを確認する</td></tr><tr><td data-label="確認する箇所">基準列</td><td data-label="範囲を決めるときの見方">指定したい列の名前と順序を控え、範囲の端とは別に確認する</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．共有の台帳で変える順序を先に合わせる</h2>
+    <p>共同で使っている台帳を並べ替える前に、元の台帳の順序を変えてよいかを担当者間で合わせます。締めの確認や別の人の入力が同時に進んでいる場合は、どの表をいつ変更するかを伝えます。並べ替えの基準が同じ行が多い場合は、その中で何を基準に順を付けるかも先に決めておくと、操作後の確認がしやすくなります。</p>
+    <p>自分の画面だけで順序を変えて確認したいときは、Googleが案内するフィルタ表示を使う方法があります。同じヘルプでは、パソコンでフィルタ表示を使うと、並べ替えや絞り込みを自分が閲覧しているスプレッドシートにのみ適用できると説明されています。 対象の表だけを並べ替えたいときは範囲を選びます。シート全体の順序を変更する場合には、シート上部の列のアルファベットを右クリックして［昇順でシートを並べ替え］または［降順でシートを並べ替え］を選ぶ手順が別に案内されています。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．並べ替えた後は、行数と項目の対応を別々に確かめる</h2>
+    <p>操作前に、照合する明細の管理番号と、その番号に付く担当者、期限などを元の記録から控えます。管理番号が重複する場合は、元の伝票番号などと組み合わせて一行を特定できるようにします。控えは並べ替えの対象範囲の外に置き、確認する明細が表の一部に偏らないようにします。</p>
+    <p>並べ替え後は、基準列が意図した順序になっていることを確認し、控えた管理番号を探して、その行の項目を照合します。行数が合っていても、管理番号と担当者の組み合わせまで合っているかは別に見る必要があります。見出しと最後の明細、隣の表や下の集計行も見て、選ぶつもりだった範囲で作業できたかを確かめます。順序の確認で基準列が同じ値の明細が並んでいたら、追加した基準列の順序も見ます。</p>
+    <p>対応が崩れていたときは、管理番号、違いが出た項目、選んだ範囲を控えて、いったん追加の並べ替えを止めます。共同利用中なら、他の担当者が操作後に加えた変更も確かめ、元に戻す範囲を相談します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．フィルタで並べ替えるときと、数式が同じセルを見続けるとき</h2>
+    <p>Googleのヘルプでは、フィルタを追加すると、スプレッドシートにアクセスできるすべてのユーザーに同じフィルタが適用され、編集権限があるユーザーは誰でもそのフィルタを変更できると説明されています。フィルタを使ってデータを並べ替えることもできるとされています。</p>
+    <p>同じヘルプでは、スプレッドシートの閲覧権限しかない場合は、自分だけが使用できる一時的なフィルタ表示を作成でき、その場合フィルタ表示は保存されないとされています。</p>
+    <p>同じヘルプには、フィルタされた範囲内のセルを参照する数式がある場合、フィルタされた範囲を並べ替えても数式は変更されないという注意があります。例として、フィルタされた範囲内のB2を参照する「=B2」は、並べ替えの後も「=B2」のままと書かれています。</p>
+    <p>共同の台帳では、［フィルタを作成］で並べ替える操作も、ほかの担当者の画面に関わる変更として扱い、範囲の並べ替えと同じく先に担当者間で合わせます。閲覧権限だけで一時的なフィルタ表示を使った場合は、自分が見た順序が保存されないため、確認した結果を別に控えます。フィルタした範囲のセルを範囲の外の式で使っている場合は、並べ替えの後もその式が同じセル番地を見ているため、そのセルに別の明細が来ていないかを確かめます。前の節で控えた管理番号は、その式の結果とも照らし合わせます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">基準列と、同じ明細に付く項目の列をまとめて選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見出し、最後の明細、下の集計行や隣の表の境目を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見出しの固定と、選択範囲のヘッダー行の指定を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の台帳の順序を変える作業か、自分の表示だけを変える作業かを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">基準列と順序を確認し、作業前後で対象の明細の行数を比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">控えた管理番号を探し、同じ行の担当者や期限を元の記録と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">フィルタで並べ替える場合も、ほかの担当者の画面に関わると分かったうえで進めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">フィルタした範囲を参照する範囲外の式が、並べ替え後に別の明細を見ていないか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月7日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/docs/answer/3540681?hl=ja" rel="noopener" target="_blank">データの並べ替えとフィルタ（Google ドキュメント エディタ ヘルプ、パソコン）</a>：範囲の選択、ヘッダー、基準列と順序、シート全体の並べ替え、フィルタ表示</li>
+      <li><a href="https://support.google.com/docs/answer/9060449?hl=ja" rel="noopener" target="_blank">行と列の固定、グループ化、非表示、結合（Google ドキュメント エディタ ヘルプ、パソコン）</a>：行の固定の役割とメニュー</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/google-sheets-freeze-header-row">スプレッドシートの長い事務台帳で見出し行を固定する手順</a></li>
+      <li><a href="/column/sheets-restore-deleted-table">共同編集で消した表を戻す｜スプレッドシートの変更履歴と復元前の確認</a></li>
+      <li><a href="/column/google-sheets-dropdown-list">スプレッドシートで入力欄をプルダウンにする作り方と確認点</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

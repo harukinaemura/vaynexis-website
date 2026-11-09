@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの長い式で同じ途中計算を繰り返さないには？LET関数の使い方｜Vaynexis</title>
+  <meta name="description" content="Excelの長い数式に同じ途中計算が繰り返し出てくるときは、LET関数でその計算に名前を付けます。元の参照先と判定条件を保って式を書き換え、通常の結果、条件の境界、空欄やエラーの扱いを照合する手順をまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの長い式で同じ途中計算を繰り返さないには？LET関数の使い方｜Vaynexis">
+  <meta property="og:description" content="Excelの長い数式に同じ途中計算が繰り返し出てくるときは、LET関数でその計算に名前を付けます。元の参照先と判定条件を保って式を書き換え、通常の結果、条件の境界、空欄やエラーの扱いを照合する手順をまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-let-repeated-calculation-check">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-let-repeated-calculation-check">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの長い式で同じ途中計算を繰り返さないには？LET関数の使い方","description":"Excelの長い数式に同じ途中計算が繰り返し出てくるときは、LET関数でその計算に名前を付けます。元の参照先と判定条件を保って式を書き換え、通常の結果、条件の境界、空欄やエラーの扱いを照合する手順をまとめます。","datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-let-repeated-calculation-check"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの長い式で同じ途中計算を繰り返さないには？LET関","item":"https://vaynexis.jp/column/excel-let-repeated-calculation-check"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの長い式で同じ途中計算を繰り返さないには？LET関</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの長い式で同じ途中計算を繰り返さないには？LET関数の使い方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Windows版のExcel for Microsoft 365では、LET関数で途中式に名前を付け、最後の計算からその名前を呼び出せます。同じ途中式だけを名前に置き換え、元の参照範囲や条件を維持します。差し替える前に、普段の結果に加え、判定の境界、参照先の空欄やエラーで結果が一致するかを確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月9日／情報の確認日：2026年11月7日（出典はこの記事の最後）</p>
+    <p>Excelの既存式で繰り返す途中計算をLETの名前に置き換え、参照先・境界・空欄で変更前後の結果を比べます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月7日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">1．名前を付けるのは、一つの式の中で繰り返す途中計算</a></li>
+      <li><a href="#s2">2．重なっている途中式を一つ取り出し、名前を決める</a></li>
+      <li><a href="#s3">3．条件と参照先をそのままにして、変更した箇所を追う</a></li>
+      <li><a href="#s4">4．通常の結果と、判定が変わる境界を並べて確かめる</a></li>
+      <li><a href="#s5">5．LETの引数と名前の決まり、ヘルプの書き換え例</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．1．名前を付けるのは、一つの式の中で繰り返す途中計算</h2>
+    <p>確認日：2026年11月7日</p>
+    <p>Microsoftの日本語ヘルプでは、LET関数の適用先にExcel for Microsoft 365、Excel 2024、Excel 2021と、それぞれのMac版が挙げられています。ここではWindows版のExcel for Microsoft 365で使う数式を扱います。</p>
+    <p>LET関数では、途中計算の結果に名前を付けられ、中間計算のほか、値や定義名なども数式内に格納できます。付けた名前は、そのLET関数の範囲内でのみ使えます。</p>
+    <p>同じ途中式を複数回書いている場合、LETでその式に名前を付けると、一つの数式の中でその式を一度計算して参照できます。</p>
+    <p>LETの引数は名前と値の組を先に置き、最後に結果を返す計算を置く構造です。</p>
+    <p>名前には文字で始まるものを使い、セル参照の形式と衝突する名前を避けます。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>書き換える前に、元の式を確認用のコピーに残します。数式を見ながら、同じ途中計算がどこに現れるかを調べます。同じ合計でも範囲の端や固定するセルが違えば、まとめる候補から外します。条件判定より前に丸めているか、最終結果を丸めているかも控えておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．2．重なっている途中式を一つ取り出し、名前を決める</h2>
+    <p>最初は、式を見たときに役割が分かる一つの計算から扱います。合計なら、どの範囲の合計を指すかが読み取れる名前にします。次の式は書き換えの構造を示しています。セル番地は手元の表で使う参照先に合わせます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">式の段階</th><th scope="col">数式の骨組み</th></tr></thead><tbody><tr><td data-label="式の段階">書き換え前</td><td data-label="数式の骨組み">`=IF(SUM($D$2:$D$100)&gt;$F$2,SUM($D$2:$D$100)-$F$2,0)`</td></tr><tr><td data-label="式の段階">書き換え後</td><td data-label="数式の骨組み">`=LET(periodTotal,SUM($D$2:$D$100),IF(periodTotal&gt;$F$2,periodTotal-$F$2,0))`</td></tr></tbody></table></div>
+    <p>この骨組みでは、合計を上限と比べる箇所と、上限を引く箇所で、同じ範囲を集計しています。書き換え後は`periodTotal`を名前として置き、その値に元の`SUM($D$2:$D$100)`を入れます。最後の引数に置くIFでは、その合計が上限を超えたときに超えた分を返し、上限以下ではゼロを返す元の条件を保ちます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．3．条件と参照先をそのままにして、変更した箇所を追う</h2>
+    <p>元の式から移すときは、名前に割り当てた式の参照先と、最後の計算で残した参照先をそれぞれ読みます。上の骨組みでは合計範囲と上限を参照する位置が別です。固定する参照に付いているドル記号を保ったか、範囲の先頭と末尾が元の式と一致するかも確認します。</p>
+    <p>最後の計算で、同じ途中式があった箇所を名前に置き換えます。条件式の比較記号や、条件に合わないときの戻り値は、元の式と照合しておきます。元の式に空欄の判定や丸めがある場合も、どの計算より前に処理していたかを追い、結果を確認するまでは位置を保ちます。</p>
+    <p>元の式で特定の条件のときだけ実行していた途中式を、先頭の名前の定義へ移す場合は、入力が空欄の行やエラーを含む行も確認に加えます。書き換えた後に結果が変わる場合は元の式を残し、名前を付ける範囲を見直します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．4．通常の結果と、判定が変わる境界を並べて確かめる</h2>
+    <p>確認用のコピーで、元の式と変更後の式を同じ入力で計算します。列を追加して比較する場合、式を置いた位置がずれたことで参照先まで動いていないかを先に確認します。数値が一致するかに加え、空欄やエラーが元の式ではどの条件で出るかも見ます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">比べる箇所</th><th scope="col">照合する内容</th></tr></thead><tbody><tr><td data-label="比べる箇所">普段の結果</td><td data-label="照合する内容">元の式と新しい式が同じ参照範囲から同じ結果を返すか</td></tr><tr><td data-label="比べる箇所">判定の境界</td><td data-label="照合する内容">上限の直前・上限と同じ・直後で、同じ側の条件に入るか</td></tr><tr><td data-label="比べる箇所">空欄やエラー</td><td data-label="照合する内容">入力不足や参照先のエラーがあるとき、元の表示と一致するか</td></tr><tr><td data-label="比べる箇所">式をコピーした範囲</td><td data-label="照合する内容">行や列に応じて動く参照と、固定する参照がそろっているか</td></tr></tbody></table></div>
+    <p>結果が合わなければ、名前に割り当てた式の参照先を確認し、その後で最後の計算の条件を照合します。合うことを確認してから、置き換える対象を広げます。引き継ぐ際には、変えた数式の位置、名前に付けた意味、比較した条件を伝え、利用する担当のExcelがLETの適用先に含まれるかも確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．5．LETの引数と名前の決まり、ヘルプの書き換え例</h2>
+    <p>Microsoftのヘルプでは、LET関数では少なくとも 1 つの名前/値のペア（変数）を定義する必要があり、最大 126 組までサポートされます。2つ目の名前を指定した場合は、その値と、次の計算または名前も必須です。最後の引数は、結果を返す計算である必要があります。</p>
+    <p>同じヘルプでは、変数の名前は名前マネージャーで使用できる有効な名前と一致し、たとえば "a" は有効ですが、"c" は R1C1 形式の参照と競合するため有効ではないと説明しています。また、名前を付けることで、自分と式を使う人にとって分かりやすい文脈を割り当てられる点も挙げています。1文字の短い名前を使う場合は、この例のように参照の形式と重ならないかを確かめます。</p>
+    <p>ヘルプの使用例 2 では、IF の中で同じ FILTER の式を2回書いた元の数式を、LET で書き換えています。条件の値に filterCriteria、FILTER の結果に filteredRange という名前を付け、2つ目の名前の値の中で1つ目の名前を使い、最後の IF で filteredRange を呼び出しています。この記事の骨組みと同じく、繰り返していた式を一度だけ名前に割り当て、判定と戻り値の形は元の数式のまま残している点が、書き換えを照合するときの見どころです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">元の数式を残し、同じ途中式と参照範囲を特定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">途中式の役割が分かり、セル参照と衝突しない名前にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">最後の引数で名前を使い、元の条件と戻り値を維持したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">通常値、判定の境界、空欄やエラーで結果を比較したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">他のセルへ展開した後も参照先が意図した範囲か確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">使用する担当のExcelの版を確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月7日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/let-function" rel="noopener" target="_blank">Microsoft LET 関数</a>：適用先、計算結果に付ける名前の範囲、計算の再利用と構文</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-select-formula-cells">Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント</a></li>
+      <li><a href="/column/excel-round-amount-formula">Excelで端数を四捨五入した金額を計算結果として残すには</a></li>
+      <li><a href="/column/excel-blank-denominator-ratio-pending">Excelで分母が未入力の比率を「未計算」と表示する方法</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

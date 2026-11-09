@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExcelのグラフをPowerPointで更新するには？リンク貼り付けと確認｜Vaynexis</title>
+  <meta name="description" content="Windows版のExcelで作ったグラフをPowerPointへリンクして貼り付け、元の数値を修正したあとに表示を更新する手順です。貼り付け先のテーマと元の書式の使い分け、元ブックが移動したときの確認、配布する版で対象期間や数値を見直す流れをまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="ExcelのグラフをPowerPointで更新するには？リンク貼り付けと確認｜Vaynexis">
+  <meta property="og:description" content="Windows版のExcelで作ったグラフをPowerPointへリンクして貼り付け、元の数値を修正したあとに表示を更新する手順です。貼り付け先のテーマと元の書式の使い分け、元ブックが移動したときの確認、配布する版で対象期間や数値を見直す流れをまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/powerpoint-update-linked-excel-chart">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/powerpoint-update-linked-excel-chart">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ExcelのグラフをPowerPointで更新するには？リンク貼り付けと確認","description":"Windows版のExcelで作ったグラフをPowerPointへリンクして貼り付け、元の数値を修正したあとに表示を更新する手順です。貼り付け先のテーマと元の書式の使い分け、元ブックが移動したときの確認、配布する版で対象期間や数値を見直す流れをまとめます。","datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/powerpoint-update-linked-excel-chart"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"ExcelのグラフをPowerPointで更新するには？リン","item":"https://vaynexis.jp/column/powerpoint-update-linked-excel-chart"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">ExcelのグラフをPowerPointで更新するには？リン</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">ExcelのグラフをPowerPointで更新するには？リンク貼り付けと確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Windows版のExcelでグラフをコピーし、PowerPointの貼り付けオプションで元のワークシートにリンクする方式を選びます。元ブックを保存したら、PowerPointの［リンクの更新］が表示される場合はそこから更新し、期間・凡例・数値を見比べます。元ブックを移動してリンクが切れたときは、［ソースの変更］で新しい場所を指定し、［今すぐ更新］を選びます。</p></div>
+    <p class="col-meta">公開：2026年11月9日／情報の確認日：2026年11月7日（出典はこの記事の最後）</p>
+    <p>Windows版Microsoft 365でExcelのグラフをPowerPointへリンクし、更新した値・期間・参照元を確認します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月7日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">1．グラフがあるExcelブックと貼り付けるスライドを確かめる</a></li>
+      <li><a href="#s2">2．書式の選び方を決め、データをリンクして貼り付ける</a></li>
+      <li><a href="#s3">3．PowerPointでリンクを更新し、元の値と見比べる</a></li>
+      <li><a href="#s4">4．元ブックを移動した場合はリンク元を変更する</a></li>
+      <li><a href="#s5">5．配布するファイルを開き、渡す表示を確かめる</a></li>
+      <li><a href="#s6">6．渡すファイルに元のデータを含めるかを決める</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．1．グラフがあるExcelブックと貼り付けるスライドを確かめる</h2>
+    <p>確認日：2026年11月7日</p>
+    <p>対象は、Windowsデスクトップ版のExcelとPowerPoint for Microsoft 365です。Microsoftは、定期的に数値が変わるグラフをExcelからPowerPointへ貼る場合に、元のExcelファイルへのリンクを残す方法を案内しています。PowerPointデスクトップ版ではローカルに保存したExcelファイルにもリンクできます。</p>
+    <p>「プレゼンテーションから Excel グラフへのリンク」のヘルプでは、PowerPoint for the webでは、ExcelグラフがOneDriveなどのクラウド ホスティング サービスやWebサイトに保存されていない限りリンクできないとしています。「Excel から別の Office プログラムにコピーする」のヘルプでは、Office OnlineにはExcelのデータとグラフをコピーするツールが無いとしています。この記事の手順は、どちらもデスクトップ版で行います。</p>
+    <p>貼り付けの前に、元のブックとシートを開き、使うグラフの対象期間と系列を確認します。同じ名前のブックが複数ある場合は、定期的に更新するファイルの保存先を確かめてから作業します。スライド側では、後から同じグラフを見つけられるよう、貼り付けるページと見出しを確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．2．書式の選び方を決め、データをリンクして貼り付ける</h2>
+    <p>Excelで対象のグラフを選んでコピーし、PowerPointで貼り付けるスライドを開いて貼り付けます。グラフのそばの［貼り付けオプション］を開くと、データを元のワークシートにリンクする方式の中から、貼り付け先のテーマに合わせる方式と、Excelのグラフの書式を保つ方式を選べます。</p>
+    <p>見た目が似ていても、貼り付け先のテーマを使う選択肢と、元の書式を保つ選択肢には、ブックを埋め込む方式もあります。元のExcelの変更を反映したいときは、書式だけで選ばず、データをリンクする方式かを読みます。画像として貼った場合は、貼り付けた画像のグラフデータは編集や更新の対象になりません。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．3．PowerPointでリンクを更新し、元の値と見比べる</h2>
+    <p>定期資料を更新するときは、元のExcelブックを開き、グラフに使う値を更新して保存します。PowerPointでは、リンクされたExcelデータの右クリックメニューに［リンクの更新］が表示される場合、その項目から更新します。右クリックで更新項目が見当たらなければ、次節の［リンクの編集］の一覧で参照先のパスを確かめます。この一覧の［今すぐ更新］は、Microsoftのヘルプではリンク切れを直す手順の中で案内されています。外部コンテンツの警告が出たら、信頼できる発行元かを先に確かめます。</p>
+    <p>ここからは当社の整理です。PowerPoint側の見た目が変わったかだけで判断せず、元のグラフとスライドを並べます。スライドに手入力した期間や単位の注記も、グラフの表示と一緒に見直します。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめる項目</th><th scope="col">照合する資料</th><th scope="col">手元に残す情報</th></tr></thead><tbody><tr><td data-label="確かめる項目">参照元</td><td data-label="照合する資料">更新したExcelブックとシート</td><td data-label="手元に残す情報">ファイルの保存先、シート名、対象グラフ</td></tr><tr><td data-label="確かめる項目">反映先</td><td data-label="照合する資料">PowerPointの更新対象のスライド</td><td data-label="手元に残す情報">スライドの見出しと確認したリンク</td></tr><tr><td data-label="確かめる項目">更新した内容</td><td data-label="照合する資料">元のグラフとスライドのグラフ</td><td data-label="手元に残す情報">対象期間、凡例、更新した値の照合結果</td></tr><tr><td data-label="確かめる項目">スライド上の説明</td><td data-label="照合する資料">グラフに添えた見出し・単位・注記</td><td data-label="手元に残す情報">値と併せて直す説明、確認待ちの箇所</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．4．元ブックを移動した場合はリンク元を変更する</h2>
+    <p>元のExcelファイルが移動または削除された場合、リンクされたグラフの編集時にエラーが出ることがあります。保存済みのプレゼンテーションで［ファイル］から［情報］を開き、［関連ドキュメント］の下にある［リンクの編集］を選びます。この欄が見当たらない場合は、先にプレゼンテーションが保存されているかを確認します。</p>
+    <p>元ブックの新しい場所が分かったら、［ソースの変更］でファイルを開き、リンクの一覧で正しいパスを選んで［今すぐ更新］を選びます。参照元をつなぎ直したら、対象のグラフとスライドの値をもう一度照合します。</p>
+    <p>元ブックの所在が分からない場合、Microsoftは［リンク解除］も案内しています。解除するとグラフはスライドに残り、以後の元データの変更は反映されません。更新を続ける資料では、解除を選ぶ前に、元のブックを管理する人へ保存先を確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．5．配布するファイルを開き、渡す表示を確かめる</h2>
+    <p>編集用は次回更新に使う元ブックと結び付けて管理します。配布先でも更新が必要な場合は、相手の環境で元ブックを利用できることを確かめてから、配布するファイルを開いて数値を確認します。</p>
+    <p>配布先では受け取った時点の表示だけが必要な場合、更新済みのグラフを画像として配布用のコピーに貼る方法もあります。保存して開き直し、期間・値と、軸や注記の読みやすさを確認してから渡します。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．6．渡すファイルに元のデータを含めるかを決める</h2>
+    <p>PowerPointのヘルプ「他のアプリケーションから PowerPoint にコンテンツをインポートする」では、埋め込みオブジェクトはソース データがプレゼンテーションに埋め込まれ、プレゼンテーション ファイルの一部になるため、別のコンピューターで表示できるとしています。埋め込みオブジェクトは、通常、リンク オブジェクトよりも多くのディスク領域を必要とします。</p>
+    <p>リンクを外した版の作り方として、「Excel から別の Office プログラムにコピーする」のヘルプは、リンクして貼ったグラフを後でリンク解除する場合は、グラフをコピーして埋め込みグラフまたは画像として貼り付ける必要があるとしています。第4節の［リンク解除］について、「外部ファイルへの壊れたリンクを更新または削除する」のヘルプは、コンテンツはスライドに表示されたまま、リンクではなくプレゼンテーションに埋め込まれるとしています。</p>
+    <p>第2節で触れた貼り付けオプションの［貼り付け先のテーマを使用しブックを埋め込む］［元の書式を保持しブックを埋め込む］は、名前のとおりブックを埋め込む方式です。埋め込みで渡すと、スライドに見えるグラフだけでなく、元のデータもファイルの一部として相手に渡ります。渡す相手に見せない行やシートが元ブックにある場合は、埋め込みを選ぶ前に、元ブックを管理する人と渡してよい範囲を確かめます。相手が表示だけを見ればよいなら第5節の画像、相手の側でも更新を続けるなら第5節のリンクの条件、と渡し方ごとに確かめることを分けておきます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">更新するExcelブックの保存先、シート名、対象グラフを確認したか。</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">テーマまたは書式を選び、データをリンクする方式で貼り付けたか。</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元のExcelを保存し、PowerPointのグラフと対象期間・凡例・値を照合したか。</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元ブックを移動した場合は、新しいパスを指定し、更新後の値を見直したか。</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">グラフに添えた期間・単位・注記が表示と合っているかを確認したか。</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">渡すファイルを開いて、必要な表示とリンクの扱いを確かめたか。</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">渡すファイルをリンク・埋め込み・画像のどれにするかを、ファイルに含まれるデータと合わせて決めたか。</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月7日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/powerpoint/training/use-charts-and-graphs-in-your-presentation" rel="noopener" target="_blank">Microsoft「プレゼンテーションでグラフを使用する」</a>：更新があるグラフをExcelからコピーし、元へのリンクを残す方法</li>
+      <li><a href="https://support.microsoft.com/ja-jp/powerpoint/link-to-an-excel-chart-from-your-presentation" rel="noopener" target="_blank">Microsoft「プレゼンテーションから Excel グラフへのリンク」</a>：PowerPointデスクトップ版のローカルファイルへのリンク、PowerPoint for the webの制限</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/copy-from-excel-to-another-office-program" rel="noopener" target="_blank">Microsoft「Excel から別の Office プログラムにコピーする」</a>：グラフのコピー、貼り付けオプション、リンク２方式と埋め込み・画像、Office Onlineの制限、リンク解除後の貼り直</li>
+      <li><a href="https://support.microsoft.com/ja-jp/powerpoint/insert-and-update-excel-data-in-powerpoint" rel="noopener" target="_blank">Microsoft「PowerPoint に Excel データを挿入および更新する」</a>：リンクされたExcelデータの更新</li>
+      <li><a href="https://support.microsoft.com/ja-jp/powerpoint/update-or-remove-a-broken-link-to-an-external-file" rel="noopener" target="_blank">Microsoft「外部ファイルへの壊れたリンクを更新または削除する」</a>：保存、ソースの変更、更新、解除後のデータ</li>
+      <li><a href="https://support.microsoft.com/ja-jp/office/security-privacy/block-or-unblock-external-content-in-office-documents" rel="noopener" target="_blank">Microsoft「Office ドキュメントで外部コンテンツをブロックまたはブロック解除する」</a>：外部コンテンツの警告と発行元の確認</li>
+      <li><a href="https://support.microsoft.com/ja-jp/powerpoint/import-content-from-other-applications-into-powerpoint" rel="noopener" target="_blank">Microsoft「他のアプリケーションから PowerPoint にコンテンツをインポートする」</a>：リンクしたグラフの元データと利用できる保存先の条件、埋め込みオブジェクトの扱い</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-document-demo">AI議事録で提案と決定事項を分ける方法（実演）</a></li>
+      <li><a href="/column/excel-workbook-links-update-prompt">Excelを開くたび外部リンクの更新確認が出るときの確認手順</a></li>
+      <li><a href="/column/excel-overwrite-restore-previous-version">Excelを誤って上書きしたとき、以前の版を確認して戻す手順</a></li>
+      <li><a href="/column/claude-excel-powerpoint">ClaudeでExcel・PowerPointを作る｜材料と確認</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの #SPILL! で、一覧の展開を妨げるセルをどう見つける？｜Vaynexis</title>
+  <meta name="description" content="Excelの動的配列で一覧が展開されないときに、破線で展開先を確認し、障害になっているセルを探す手順です。入力済みの値、結合セル、テーブル内の数式を見分け、元の記録を残したまま結果を照合する方法を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの #SPILL! で、一覧の展開を妨げるセルをどう見つける？｜Vaynexis">
+  <meta property="og:description" content="Excelの動的配列で一覧が展開されないときに、破線で展開先を確認し、障害になっているセルを探す手順です。入力済みの値、結合セル、テーブル内の数式を見分け、元の記録を残したまま結果を照合する方法を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-spill-error-find-blocking-cells">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-spill-error-find-blocking-cells">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの #SPILL! で、一覧の展開を妨げるセルをどう見つける？","description":"Excelの動的配列で一覧が展開されないときに、破線で展開先を確認し、障害になっているセルを探す手順です。入力済みの値、結合セル、テーブル内の数式を見分け、元の記録を残したまま結果を照合する方法を整理します。","datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-spill-error-find-blocking-cells"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの #SPILL! で、一覧の展開を妨げるセルをど","item":"https://vaynexis.jp/column/excel-spill-error-find-blocking-cells"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの #SPILL! で、一覧の展開を妨げるセルをど</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの #SPILL! で、一覧の展開を妨げるセルをどう見つける？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelで #SPILL! が出たら、エラーのセルを選びます。破線が表示された場合は、一覧が広がる予定だった範囲を確認します。展開先が入力済みの値や結合セルでふさがっていれば、エラー チェック アラートの［障害物セルの選択］で場所を特定します。数式をテーブル内に置いていた場合は、テーブルの外に展開先を用意します。</p></div>
+    <p class="col-meta">公開：2026年11月9日／情報の確認日：2026年11月7日（出典はこの記事の最後）</p>
+    <p>この記事では、Windows版Excelで動的配列の一覧が展開されないとき、障害になっているセルと元の数式を確認する手順を整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月7日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">エラーのセルから展開予定の範囲を読む</a></li>
+      <li><a href="#s2">選ばれたセルの内容を見て、残す場所を決める</a></li>
+      <li><a href="#s3">結合セルとテーブル内の数式を切り分ける</a></li>
+      <li><a href="#s4">展開した結果を、式と元の記録に戻って照合する</a></li>
+      <li><a href="#s5">スピルした範囲のセルと、ふさいでいるセルを見分ける</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．エラーのセルから展開予定の範囲を読む</h2>
+    <p>確認日：2026-11-07。</p>
+    <p>ここで使うのは、Windowsデスクトップ版のExcel for Microsoft 365です。 動的配列の数式が複数の結果を返すときに、その結果が隣接するセルに広がる動きをスピルと呼びます。 数式を置くセルと、結果を表示する範囲があるため、エラーのあるセルの周りまで見ます。</p>
+    <ol>
+      <li>#SPILL! が出ているセルを選びます。破線が表示されたら、その内側が展開予定の範囲です。</li>
+      <li>エラー チェック アラートが表示されたら、そのアラートを選びます。</li>
+      <li>展開先にデータや結合セルがあり、［障害物セルの選択］が表示されたら、その項目を選びます。Excelが選んだセルを確認します。Microsoftの案内では、展開先が空でない場合、障害となっているセルの入力を削除するか移動すると、エラーをクリアできます。</li>
+    </ol>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．選ばれたセルの内容を見て、残す場所を決める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>選ばれたセルは、見た目だけで扱いを決めず、セルの位置と表示内容、数式バーを見て、記録や計算の一部かを確かめます。残す必要がある値や数式なら、移動先を担当者と決めます。内容の用途が分からないときは、元の数式や記録を控えたうえで、一覧を空きのある場所に置けるか確認するとよいです。</p>
+    <p>次の表は、エラーの状態に合わせて、変更前にそろえる情報と見直す場所を整理したものです。展開予定の範囲を確かめた時点と、実際に値や配置を変える時点を分けます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">見つかった状態</th><th scope="col">変更前に控えるもの</th><th scope="col">見直す箇所</th></tr></thead><tbody><tr><td data-label="見つかった状態">展開予定の範囲に値や数式がある</td><td data-label="変更前に控えるもの">対象セルとその内容、必要な記録の保存先</td><td data-label="見直す箇所">障害となった内容の移動先と、新たに確保した展開範囲</td></tr><tr><td data-label="見つかった状態">展開予定の範囲が結合セルに重なる</td><td data-label="変更前に控えるもの">結合している場所と、その見出しが示す範囲</td><td data-label="見直す箇所">結合を維持したまま、一覧を展開できる場所</td></tr><tr><td data-label="見つかった状態">数式をExcelのテーブル内に置いている</td><td data-label="変更前に控えるもの">元の数式、参照するテーブルと項目</td><td data-label="見直す箇所">テーブルの外に置いた数式と、その出力先</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．結合セルとテーブル内の数式を切り分ける</h2>
+    <p>Microsoftの案内では、展開する範囲が結合セルに重なると、動的配列の結果はその範囲に広がりません。対処として、結合したセルと重ならない場所に数式を移す方法や、対象セルの結合を解除する方法が示されています。 見出しや帳票の配置を保つ必要があるときは、結合した部分を残し、一覧の置き場所を調整します。</p>
+    <p>Excelのテーブルについては、同じ案内で、スピルする配列数式はテーブルではサポートされていないとして、数式をテーブルの外に移すか、テーブルを範囲に変換する方法が示されています。 入力用のテーブルを残したまま結果を別の場所に出すなら、数式を置くセルと結果が広がる範囲を、どちらもテーブルの外で確保します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．展開した結果を、式と元の記録に戻って照合する</h2>
+    <p>結果が展開されたら、式を入れた先頭のセルを選び、参照先や条件が元の式と合うかを見ます。Microsoftの動的配列の案内では、スピルした範囲で数式を編集できるのは最初のセルだけです。 数式の置き場所を変えた場合は、参照する元表と対象の列も合わせて確認します。</p>
+    <p>画面で #SPILL! の表示が消えたら、一覧に必要な列が出ているか、条件に合う行がそろっているかを確認します。行数だけで済ませず、先頭と末尾の明細などを元表と照合します。一覧の一部しか出ていないと分かった場合は、式の参照範囲と抽出条件を見直す箇所として控えます。</p>
+    <p>同じエラーが残った場合は、最初のエラー表示、式を置いた場所、移動した内容、確認後の表示をまとめます。原因が先に確認した箇所と異なる可能性もあるため、作業を引き継ぐ人が同じブックの同じセルから確認を始められるようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．スピルした範囲のセルと、ふさいでいるセルを見分ける</h2>
+    <p>Microsoftの動的配列の案内では、スピル範囲内の任意のセルを選ぶと、範囲を囲む強調表示された境界線が表示され、範囲外のセルを選ぶと境界線は消えます。スピル範囲の最初以外のセルを選ぶと、数式は数式バーに表示されますが、文字はゴースト化され、変更できません。数式バーに薄い数式が出るセルはスピルの結果、通常の表示で値や数式が入っているセルは別の入力、という見分けの目安にできます。</p>
+    <p>同じ案内では、出力範囲がブロックされていると #SPILL! エラーが返され、ブロック データを削除するか、別の場所にコピーすると、数式は期待どおりにスピルするとしています。コピーして移す場合は、移した先で値や数式が元と同じかを確かめてから、元の場所を空けます。</p>
+    <p>また、データの一覧を元にする場合は、元の一覧をExcelのテーブルに置き、構造化された参照で参照すると、テーブルの行の追加や削除に応じて参照が自動的に調整されて便利なことがあると案内しています。ただし、スピルする配列数式そのものは、テーブルの外のグリッドに置く必要があります。</p>
+    <p>#SPILL! の案内では、スピル範囲が空でない場合と結合セルのほかに、不確定なサイズ、ワークシートの端を超えて拡大する場合、メモリ不足、認識されない場合（フォールバック）の種類を分けて説明しています。障害物になっているセルが見当たらないときは、数式がこれらの種類に当たらないかを、案内の該当する見出しで確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">#SPILL! のセルを選び、表示された破線とエラー チェック アラートを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">障害物として選ばれたセルの内容と用途を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数式バーで、スピルの結果のセルか別の入力かを見分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">結合した箇所と、数式を置いたテーブルの位置を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の数式と必要な値を残し、移動先の空きを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数式の参照先と条件が意図した内容になっているか確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">展開した行数、列、先頭・末尾の明細を元の記録と照合したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月7日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/how-to-correct-a-spill-error" rel="noopener" target="_blank">#SPILL の修正方法! を修正する</a>：適用先、破線と障害物セルの選択、結合セルとExcelテーブルの条件</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/dynamic-array-formulas-and-spilled-array-behavior" rel="noopener" target="_blank">動的配列数式とスピル配列の動作</a>：スピルの仕組み、数式を編集できるセル</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-filter-pending-rows-sheet">Excelで対応待ちの行だけを別シートへ自動表示するには</a></li>
+      <li><a href="/column/excel-select-formula-cells">Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント</a></li>
+      <li><a href="/column/excel-report-copy-paste-values">Excelの報告用コピーを数式ではなく確定した値で残すには</a></li>
+      <li><a href="/column/excel-overwrite-restore-previous-version">Excelを誤って上書きしたとき、以前の版を確認して戻す手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

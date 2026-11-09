@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの受付日を申請期間内に限るには？開始日と終了日の設定｜Vaynexis</title>
+  <meta name="description" content="Excelで受付日の入力を申請期間内に限るには、日付の入力規則に開始日と終了日を設定します。受付案内と設定を照合し、期間の両端とその前後を確かめる手順、次回の募集に切り替えるときに確認する欄をまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの受付日を申請期間内に限るには？開始日と終了日の設定｜Vaynexis">
+  <meta property="og:description" content="Excelで受付日の入力を申請期間内に限るには、日付の入力規則に開始日と終了日を設定します。受付案内と設定を照合し、期間の両端とその前後を確かめる手順、次回の募集に切り替えるときに確認する欄をまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-application-received-date-validation">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-application-received-date-validation">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの受付日を申請期間内に限るには？開始日と終了日の設定","description":"Excelで受付日の入力を申請期間内に限るには、日付の入力規則に開始日と終了日を設定します。受付案内と設定を照合し、期間の両端とその前後を確かめる手順、次回の募集に切り替えるときに確認する欄をまとめます。","datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-application-received-date-validation"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの受付日を申請期間内に限るには？開始日と終了日の設","item":"https://vaynexis.jp/column/excel-application-received-date-validation"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの受付日を申請期間内に限るには？開始日と終了日の設</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの受付日を申請期間内に限るには？開始日と終了日の設定</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Windows版のExcel for Microsoft 365で受付日欄を選び、［データの入力規則］で入力値の種類を［日付］にし、開始日と終了日の間に限る条件を設定します。エラーメッセージのスタイルは［停止］です。配布前には開始日と終了日、その前後を手入力で確かめ、貼り付けた値やすでに入っている日付は別に点検します。</p></div>
+    <p class="col-meta">公開：2026年11月9日／情報の確認日：2026年11月7日（出典はこの記事の最後）</p>
+    <p>Excelの受付欄に開始日と終了日を設定し、期間内外の手入力と次回の更新を確認します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月7日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">1．受付案内にある開始日と終了日を設定する</a></li>
+      <li><a href="#s2">2．配布する表のうち、どの欄に条件がかかったかを見る</a></li>
+      <li><a href="#s3">3．期間の両端と、そのすぐ外側を確認する</a></li>
+      <li><a href="#s4">4．次回の期間は、前回の申請表を残して切り替える</a></li>
+      <li><a href="#s5">5．条件をかけたセルを探し、次回の期間をまとめて直す</a></li>
+      <li><a href="#s6">6．すでに入っている期間外の日付に印を付けて探す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．1．受付案内にある開始日と終了日を設定する</h2>
+    <p>確認日：2026年11月7日</p>
+    <p>この記事ではWindows版のExcel for Microsoft 365で、日付だけを記入する受付欄を設定します。対象の受付日セルを選び、［データ］＞［データの入力規則］を選びます。</p>
+    <p>［設定］タブの［入力値の種類］で［日付］を選び、［データ］で条件を選んで、選んだ内容に応じた値を設定します。</p>
+    <p>同じヘルプの後半にある表「その他の種類のデータ入力規則の追加」では、日付の期間を設定する例として、［データ］ボックスで［次の値の間］を選び、［開始日］と［終了日］のボックスに入力しています。このヘルプのWindows向けの手順には条件と欄の名前までは書かれていないため、受付期間に限るときは、画面でこの名前の条件と欄を確かめてから受付案内の日付を入力します。</p>
+    <p>［エラー メッセージ］タブでエラーメッセージをカスタマイズし、［スタイル］を選んで［OK］を選びます。</p>
+    <p>「データの入力規則に関する詳細」のヘルプでは、［停止］は無効な値の入力を止める種類で、［注意］は警告、［情報］は通知をしたうえで、無効な値の入力を許可します。期間外の手入力を止めるときは［停止］を選びます。</p>
+    <p>コピーやオートフィルで値を入れた場合は、期間外の値でもメッセージが表示されません。</p>
+    <p>設定時点ですでに入力されている無効な値にも、自動の通知はありません。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>設定に使うのは、今回の受付案内で確定した二つの日付です。案内に申請書の作成日や審査予定日もある場合は、何の日付を受付欄に記入するかを担当者とそろえてから転記します。開始日と終了日を控えるときは、月日だけでなく年も記録します。年度をまたいで使うひな形では、前年の年だけが残っていないかも確認できます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．2．配布する表のうち、どの欄に条件がかかったかを見る</h2>
+    <p>設定する前に、申請者が実際に日付を記入する範囲を控えます。受付日が複数行に並ぶ表では、列全体を対象にする前に、見出し、備考欄、日付以外の入力欄が混ざっていないかを見ます。申請を集約する側だけが使う日付欄と、配布する申請表の受付日欄が両方あるなら、どちらに条件を設けたかを記録します。</p>
+    <p>設定の後は、対象範囲の先頭と末尾を別々に選び、［開始日］と［終了日］を読み直します。元の表に条件が異なる行が含まれていた場合は、その行の扱いを担当者に確認してから適用します。日付の表示形式がそろっていても、入力規則の適用範囲は設定画面で確認する方が、見落とした行を見付けやすくなります。</p>
+    <p>エラーメッセージに日付を載せる運用では、入力できる期間を受付案内と同じ表記で示します。期間を変更する際には、設定の二つの日付とエラーメッセージを一緒に見直すと、説明だけが前回の期間のまま残る事態を見つけられます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．3．期間の両端と、そのすぐ外側を確認する</h2>
+    <p>確認は配布前のコピーで行います。受付案内から実際の開始日と終了日を取り、四つの日付を順に手入力します。期間の中央の日だけでは、開始日や終了日を一日ずらして設定していても見つかりにくいため、境界で確かめます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">手入力する日</th><th scope="col">受付案内との関係</th><th scope="col">確かめる動作</th></tr></thead><tbody><tr><td data-label="手入力する日">開始日の前日</td><td data-label="受付案内との関係">期間の直前</td><td data-label="確かめる動作">入力が止まり、受付日欄に期間外の日付が残らないか</td></tr><tr><td data-label="手入力する日">開始日</td><td data-label="受付案内との関係">期間の初日</td><td data-label="確かめる動作">入力でき、案内にある開始日として表示されるか</td></tr><tr><td data-label="手入力する日">終了日</td><td data-label="受付案内との関係">期間の最終日</td><td data-label="確かめる動作">入力でき、案内にある終了日として表示されるか</td></tr><tr><td data-label="手入力する日">終了日の翌日</td><td data-label="受付案内との関係">期間の直後</td><td data-label="確かめる動作">入力が止まり、受付日欄に期間外の日付が残らないか</td></tr></tbody></table></div>
+    <p>期間内の日付が止まったら、年を含む設定値と、入力したセルに適用されている条件を確認します。期間外の日付が入った場合は、まず手入力で試したかを確認し、そのセルのスタイルが［停止］かを見直します。設定日を直す前に、照合で見つけた原因を区別しておくと、別の欄の規則を誤って変更しにくくなります。</p>
+    <p>既存の行や貼り付けで集約した行は、受け付けた日付を受付案内の範囲と別に照合します。受付日が空欄の行や、別のシステムから時刻付きで取り込んだ値を扱う場合は、そのまま配布用の手入力欄と同じ点検に含めず、管理担当に扱いを確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．4．次回の期間は、前回の申請表を残して切り替える</h2>
+    <p>次の受付期間に切り替えるときは、前回の配布版を残した状態で次回用の表を用意します。新しい受付案内を基に、開始日と終了日を両方見直します。古い日付が残りやすい箇所は、表の見出し、記入案内、エラーメッセージです。入力欄を追加したときは、追加した範囲にも設定を適用したかを確認します。</p>
+    <p>新しい期間でも四つの日付で境界を確かめ、配布先が参照するファイルを決めてから共有します。引継ぎには、受付案内の所在、対象のシートと欄、設定した両端の日付、確認者を残します。問い合わせを受けたときに、申請者が開いている表の期間と担当者の控えの期間を照らし合わせられるようにしておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．5．条件をかけたセルを探し、次回の期間をまとめて直す</h2>
+    <p>Microsoftの「データの入力規則に関する詳細」のヘルプ（適用先はExcel for Microsoft 365、Excel 2024などで、Mac版とWeb版は挙げていません）では、データの入力規則が設定されているセルを探すには、［ホーム］タブの［編集］グループで［検索と選択］をクリックし、［データの入力規則］をクリックします。</p>
+    <p>見つかったセルを、第2節で控えた受付日の範囲と見比べます。控えにない欄が選ばれたときは、前の版で別の欄に付けた規則が残っている可能性があるため、消す前に担当者に扱いを確かめます。</p>
+    <p>同じヘルプでは、あるセルの入力規則を変えたときに、同じ入力規則が設定されたすべてのセルへ同じ変更を自動で適用するには、［設定］タブで［同じ入力規則が設定された他のすべてのセルに変更を適用する］チェック ボックスをオンにします。次回の期間に切り替えるときは、受付日の欄の1つで［開始日］と［終了日］を直し、このチェック ボックスをオンにしてから［OK］を選びます。直した後は、範囲の先頭と末尾の行で第3節の四つの日付を確かめます。</p>
+    <p>同じヘルプでは、ブックが共有または保護されている場合はデータの入力規則の設定を変更できず、先に共有または保護を解除する必要があるとしています。ワークシートやブックを保護するときは、入力規則を設定してから行うとしています。配布用にシートを保護している表では、保護を解除してから期間を直し、境界を確かめた後に保護し直します。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．6．すでに入っている期間外の日付に印を付けて探す</h2>
+    <p>Microsoftの「データの入力規則に関する詳細」のヘルプでは、既にデータが入力されているセルにもデータの入力規則を適用できます。第1節のとおり既存の無効なデータには自動の通知がありませんが、このヘルプでは、その場合にワークシート上の無効なデータを円で囲んで強調表示するようにExcelを設定できるとしています。円を付けるには、評価するセルを選択し、［データ］＞［データ ツール］＞［データの入力規則］＞［無効なデータを円］に進みます。無効な入力を修正すると、円は自動的に消えます。</p>
+    <p>前回の受付分の行を残したまま新しい期間の規則を同じ列にかけると、前回の日付は新しい期間の外にあるため、円の対象になります。円は今の規則の期間外であることを示すだけなので、今回の受付分の行に絞って選んでから確かめ、円が付いた行は受付案内と申請の控えで日付を照らし合わせます。円が消えたかどうかだけで、受付の可否を決めないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">受付案内から開始日と終了日を年まで転記したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">受付日の入力欄に日付と期間の条件を適用したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">期間外の手入力を止めるスタイルに設定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">開始日・終了日と、それぞれの期間外の前後を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">貼り付けた値や既存の日付を別に点検したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［検索と選択］の［データの入力規則］で、条件のあるセルが控えの範囲と合うかを見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">既存の日付を［無効なデータを円］で点検し、今回分と前回分を分けて見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">次回用の表で設定と記入案内の両方を更新したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月7日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/apply-data-validation-to-cells" rel="noopener" target="_blank">Microsoft セルにデータの入力規則を適用する</a>：Windowsの画面、日付の条件、開始日と終了日、エラーメッセージ</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/more-on-data-validation" rel="noopener" target="_blank">Microsoft データの入力規則に関する詳細</a>：停止・注意・情報、直接入力とコピーの違い、既存値、規則のあるセルの検索とまとめての変更、保護との順序、無効なデータを円</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-lock-cells-input-only">Excelの申請表で入力欄だけ編集できるようにする設定と確認</a></li>
+      <li><a href="/column/excel-id-length-input-restriction">Excelで管理番号の文字数が違う入力を止める設定と確認</a></li>
+      <li><a href="/column/excel-input-message-guidance">Excelの記入欄を選んだときに入力方法を案内する設定と確認</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

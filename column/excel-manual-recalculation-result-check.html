@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで入力値を変えても結果が変わらないとき、何を確かめる？｜Vaynexis</title>
+  <meta name="description" content="Windows版Excelで入力値を変えても結果が更新されないとき、結果のセルに数式があるか、入力セルが参照先になっているか、計算が手動になっていないかを順に確認します。再計算の前後を比べ、ほかのブックに影響する設定を変更した場合に残す記録も整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで入力値を変えても結果が変わらないとき、何を確かめる？｜Vaynexis">
+  <meta property="og:description" content="Windows版Excelで入力値を変えても結果が更新されないとき、結果のセルに数式があるか、入力セルが参照先になっているか、計算が手動になっていないかを順に確認します。再計算の前後を比べ、ほかのブックに影響する設定を変更した場合に残す記録も整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-manual-recalculation-result-check">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-manual-recalculation-result-check">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで入力値を変えても結果が変わらないとき、何を確かめる？","description":"Windows版Excelで入力値を変えても結果が更新されないとき、結果のセルに数式があるか、入力セルが参照先になっているか、計算が手動になっていないかを順に確認します。再計算の前後を比べ、ほかのブックに影響する設定を変更した場合に残す記録も整理します。","datePublished":"2026-11-09","dateModified":"2026-11-09","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-manual-recalculation-result-check"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで入力値を変えても結果が変わらないとき、何を確かめ","item":"https://vaynexis.jp/column/excel-manual-recalculation-result-check"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで入力値を変えても結果が変わらないとき、何を確かめ</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで入力値を変えても結果が変わらないとき、何を確かめる？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>入力を変えてもExcelの結果が動かないときは、まず結果のセルに数式があり、変えた入力のセルが参照先になっているか確かめます。式がある場合は、Windows版Excelの［数式］にある［計算オプション］を見て、手動なら再計算前後を比べます。自動へ戻す判断をする場合は、開いているほかのブックにも影響するので、変更前の設定と、作業後に戻す設定を確認します。</p></div>
+    <p class="col-meta">公開：2026年11月9日／情報の確認日：2026年11月7日（出典はこの記事の最後）</p>
+    <p>この記事は、Windows版Excelの入力を変えても結果が動かないときに、数式と参照、計算オプションの順に確かめる手順を整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月7日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">入力したセルと結果の数式を確かめる</a></li>
+      <li><a href="#s2">手動計算かどうかを設定で確認する</a></li>
+      <li><a href="#s3">再計算して前後の結果を比べる</a></li>
+      <li><a href="#s4">他のブックへの影響と変更を引き継ぐ</a></li>
+      <li><a href="#s5">計算方法の選択肢と、再計算のキーごとの範囲</a></li>
+      <li><a href="#s6">Web版で計算方法を変えたときの影響</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．入力したセルと結果の数式を確かめる</h2>
+    <p>確認日：2026-11-07</p>
+    <p>対象はWindowsデスクトップ版のExcel for Microsoft 365です。Microsoftの日本語ヘルプでは、Excelは既定で変更されたセルに依存する数式を自動で再計算する一方、手動計算の設定も選べると説明しています。数式が計算されない場合の案内でも、自動計算が有効になっているかを確認するよう示し、手動計算が有効になっていると数式が計算されないと説明しています。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>結果のセルを選び、数式バーで、数式が入っているか値が入っているかを確かめます。値だけのセルを再計算しても、元の数式に戻す操作にはなりません。数式がある場合も、変更したセルが参照先に含まれているか、別のシートの似た欄を見ていないかを確認します。参照の対応を確かめる前に数式を上書きすると、止まった原因を切り分けにくくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．手動計算かどうかを設定で確認する</h2>
+    <p>［数式］タブの［計算オプション］を開き、選択中の項目を確認します。自動計算を使う運用に戻す場合は、公式ヘルプが案内する［自動］を選ぶ方法があります。同じヘルプは、デスクトップ版ではこれらの計算設定を変えると開いているすべてのブックに影響すると注意しています。</p>
+    <p>手動になっている理由が不明なら、変更する前に設定を控え、ブックを管理する人に確認します。変更する場合は、同時に開いているブックで計算の途中の作業がないかも確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．再計算して前後の結果を比べる</h2>
+    <p>公式ヘルプでは、［数式］タブの［今すぐ計算］を選ぶと、開いているすべてのワークシートを、データテーブルを含めて再計算する手順を案内しています。再計算の前に、照合したい入力値と結果、見ているシート名を控えます。再計算後は、同じ入力と同じ数式に対して結果がどう変わったかを比べます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">見る所</th><th scope="col">残す項目</th><th scope="col">次の作業</th></tr></thead><tbody><tr><td data-label="見る所">数式バー</td><td data-label="残す項目">結果セル、数式の有無、変えた入力セル</td><td data-label="次の作業">値だけなら、元の式があったか管理者へ確認する</td></tr><tr><td data-label="見る所">参照先</td><td data-label="残す項目">数式が参照するシート・セルと、入力した位置</td><td data-label="次の作業">参照が異なる場合は、設定の変更より先に式の意図を確認する</td></tr><tr><td data-label="見る所">計算オプション</td><td data-label="残す項目">変更前の項目、ほかに開いているブック</td><td data-label="次の作業">手動が意図した設定か確認し、必要なら再計算する</td></tr><tr><td data-label="見る所">計算結果</td><td data-label="残す項目">比較した入力と再計算の前後、残る差</td><td data-label="次の作業">意図した入力に対応した結果か確かめる</td></tr><tr><td data-label="見る所">作業後</td><td data-label="残す項目">変更した計算設定、保存前の確認、引継ぎ先</td><td data-label="次の作業">元に戻す設定か、今後も使う設定かを管理者とそろえる</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．他のブックへの影響と変更を引き継ぐ</h2>
+    <p>まず、変わらない結果を一つ選び、結果セルと、直前に変えた入力セルを記録します。再計算後も結果が変わらない場合は、計算設定だけに原因を絞らず、数式が実際に参照するセルと、どの結果を期待したかを管理者に渡します。別ブックや外部データから値を更新する作業は、この計算設定とは分けて確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．計算方法の選択肢と、再計算のキーごとの範囲</h2>
+    <p>Microsoftの再計算のヘルプのWindowsの欄では、［ファイル］タブ→［オプション］→［数式］の［計算オプション］セクションにある［ブックの計算］で計算方法を選べます。［自動］は、値、数式、または名前を変更するたびにすべての依存数式を再計算する既定の設定です。データ テーブルを除くすべての従属数式を再計算する選択肢もあり、Windowsの欄の日本語訳では［部分分画］、Webの欄では［データ テーブルを除く自動］と書かれています。［手動］では、F9 キーを押すなど手動で再計算するときにだけ数式が更新されます。同じ欄では、［手動］を選ぶと［保存する前にブックを再計算する］チェック ボックスが自動的に選択されると注記しています。</p>
+    <p>入力を変えても結果が変わらない所がデータ テーブルの中なら、［自動］ではなくデータ テーブルを除く設定になっていないかも確かめます。</p>
+    <p>同じヘルプでは、キーボードでの再計算の範囲を次のように分けています。</p>
+    <ul>
+      <li>F9：作業中のブックの中で、最後に計算されたとき以降に変更された数式と、その数式を参照する数式を再計算します。ブックに自動再計算が設定されている場合は、F9 キーを押す必要はありません。</li>
+      <li>Shift + F9：作業中のワークシートの中で、最後に計算されたとき以降に変更された数式と、その数式を参照する数式を再計算します。</li>
+      <li>Ctrl + Alt + F9：開いているすべてのブックの数式を、最後に再計算されたとき以降に変更されたかどうかを問わず再計算します。</li>
+      <li>Ctrl + Shift + Alt + F9：依存する数式を確認し、開いているすべてのブックのすべての数式を再計算します。</li>
+    </ul>
+    <p>また、［数式］タブの［計算］グループの［シートの計算］は、作業中のワークシートと、そのワークシートにリンクされているグラフおよびグラフ シートを再計算するボタンとして案内されています。どのキーやボタンで再計算したかで対象が変わるため、前後を比べるときは使った操作も控えます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．Web版で計算方法を変えたときの影響</h2>
+    <p>Microsoftの再計算のヘルプのWebの欄では、Excel for the web でブックの計算オプションを変更すると、現在のブックにのみ影響し、ブラウザーで開いている他のブックには影響しないとしています。同じ欄では、［数式］タブの［計算オプション］に［自動］［データ テーブルを除く自動］［手動］があり、ブック（データ テーブルを含む）を手動で再計算するには［ブックの計算］を選ぶと案内しています。デスクトップ版では開いているすべてのブックに影響するため、作業後に設定を戻すときは、どちらの版で変えたかも記録に残します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">対象の入力セルと結果セルを記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">結果セルに数式が入っていることを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更前の計算オプションを控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ほかに開いているブックへの影響を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">再計算前後を同じ入力と数式で比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">使った再計算のキーやボタンと、その対象の範囲を控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">作業後の設定と残る問題を管理者に伝えたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月7日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/change-formula-recalculation-iteration-or-precision-in-excel" rel="noopener" target="_blank">Microsoft「Excel で数式の再計算、反復計算、または精度を変更する」</a>：Windowsデスクトップ版の計算設定、再計算、影響範囲</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/how-to-avoid-broken-formulas-in-excel" rel="noopener" target="_blank">Microsoft「Excel で壊れた数式のエラーを回避する方法」</a>：数式の計算が進まないときの自動計算の確認</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/excel-select-formula-cells">Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント</a></li>
+      <li><a href="/column/excel-workbook-links-update-prompt">Excelを開くたび外部リンクの更新確認が出るときの確認手順</a></li>
+      <li><a href="/column/excel-overwrite-restore-previous-version">Excelを誤って上書きしたとき、以前の版を確認して戻す手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
