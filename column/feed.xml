@@ -4,8 +4,32 @@
   <link href="https://vaynexis.jp/column/feed.xml" rel="self"/>
   <link href="https://vaynexis.jp/column"/>
   <id>https://vaynexis.jp/column</id>
-  <updated>2026-11-08T00:00:00+09:00</updated>
+  <updated>2026-11-09T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
+  <entry>
+    <title>DX認定を中小企業が申請する前に｜公表するページ・社内の承認・GビズIDの準備</title>
+    <link href="https://vaynexis.jp/column/dx-certification-prep"/>
+    <id>https://vaynexis.jp/column/dx-certification-prep</id>
+    <published>2026-11-09T00:00:00+09:00</published>
+    <updated>2026-11-09T00:00:00+09:00</updated>
+    <summary>DX認定は、DXに取り組む準備が整った事業者を国が認定する制度で、規模を問わず申請や維持の費用はかかりません。IPAの案内とFAQをもとに、申請前に公表しておく内容、社内の承認、GビズIDとDX推進ポータルでの申請、2年ごとの更新までを、中小企業が準備する順に整理します。</summary>
+  </entry>
+  <entry>
+    <title>ホームページにAIチャットボットを置く前に｜答える範囲・表示・入力内容の確認</title>
+    <link href="https://vaynexis.jp/column/website-ai-chatbot-check"/>
+    <id>https://vaynexis.jp/column/website-ai-chatbot-check</id>
+    <published>2026-11-09T00:00:00+09:00</published>
+    <updated>2026-11-09T00:00:00+09:00</updated>
+    <summary>ホームページにAIチャットボットを置くと、AIの答えが人の確認なしでお客様に届きます。AI事業者ガイドライン（第1.2版）、個人情報保護委員会の注意喚起、総務省のAIセキュリティのガイドラインをもとに、答える範囲と人へ回す質問、AIである表示、入力内容の扱い、置いた後の見直しを確認表で整理します。</summary>
+  </entry>
+  <entry>
+    <title>AI法（AI推進法）で中小企業に義務はある？｜社内でAIを使う会社が読む3つの資料</title>
+    <link href="https://vaynexis.jp/column/ai-promotion-act-sme"/>
+    <id>https://vaynexis.jp/column/ai-promotion-act-sme</id>
+    <published>2026-11-09T00:00:00+09:00</published>
+    <updated>2026-11-09T00:00:00+09:00</updated>
+    <summary>2025年9月に全面施行されたAI法（人工知能関連技術の研究開発及び活用の推進に関する法律）は、AIを事業で使う会社に何を求めるのか。法律の本文、国のAI指針、経済産業省・総務省のAI事業者ガイドライン（第1.2版）を読み、小さな会社が自社の立場を決めて、読む所と社内で残す記録を整理します。</summary>
+  </entry>
   <entry>
     <title>取適法の取引先確認、従業員数の回答をどう残して引き継ぐか</title>
     <link href="https://vaynexis.jp/column/toriteki-employee-count-response-record"/>
@@ -381,29 +405,5 @@
     <published>2026-11-08T00:00:00+09:00</published>
     <updated>2026-11-08T00:00:00+09:00</updated>
     <summary>国際郵便の調査を依頼する前に、郵便物番号・差出日・宛先を控えと照合し、不着などの状況をまとめる方法を整理します。公式用紙の記入と社内の準備メモを分け、郵便の種類ごとの持参物と、提出内容・返答を記録する際の確認点を紹介します。</summary>
-  </entry>
-  <entry>
-    <title>撮影届には何を書く？撮影場所・時間・目的・同行者をそろえる確認欄</title>
-    <link href="https://vaynexis.jp/column/photography-notice-form-fields"/>
-    <id>https://vaynexis.jp/column/photography-notice-form-fields</id>
-    <published>2026-11-08T00:00:00+09:00</published>
-    <updated>2026-11-08T00:00:00+09:00</updated>
-    <summary>撮影届のひな形を作る事務・総務担当者に向け、撮影場所、開始・終了、目的、撮影会社や同行者の欄を整理します。施設の公式様式と自社で補う項目を分けて紹介します。写り込みへの配慮、提出前の照合、変更の連絡と控えの保管まで確認できます。</summary>
-  </entry>
-  <entry>
-    <title>切替の予行で時間を超えた作業を本番前にどう確認し直すか</title>
-    <link href="https://vaynexis.jp/column/migration-rehearsal-time-overrun-recheck"/>
-    <id>https://vaynexis.jp/column/migration-rehearsal-time-overrun-recheck</id>
-    <published>2026-11-08T00:00:00+09:00</published>
-    <updated>2026-11-08T00:00:00+09:00</updated>
-    <summary>切替の予行で予定時間を超えた作業は、開始・終了の記録から、処理と待ち時間を分けて確認します。見直した手順での再実施結果、本番との違い、後続作業への影響を残し、本番前の判断につなぐ記録のまとめ方を整理します。技術的な速度改善策は扱いません。</summary>
-  </entry>
-  <entry>
-    <title>出来形数量計算書は設計数量と何を照合する？提出前の確認点</title>
-    <link href="https://vaynexis.jp/column/as-built-quantity-design-quantity-pre-submit-check"/>
-    <id>https://vaynexis.jp/column/as-built-quantity-design-quantity-pre-submit-check</id>
-    <published>2026-11-08T00:00:00+09:00</published>
-    <updated>2026-11-08T00:00:00+09:00</updated>
-    <summary>出来形数量計算書をそろえる事務担当者向けに、測量結果・設計図書・数量表の照合、規格を満たす場合の数量の扱い、提示と提出の違いを整理します。元の記録から計算書と提出控えをつなぐ表、担当技術者への確認事項、引き継ぎ時の確認表をまとめます。</summary>
   </entry>
 </feed>
