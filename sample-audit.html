@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="assets/renewal-brown.css">
   <link rel="stylesheet" href="assets/renewal-evidence.css">
   <link rel="stylesheet" href="assets/inner-navigation.css">
+  <link rel="stylesheet" href="assets/hbar.css">
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
@@ -221,6 +222,37 @@
         </tbody>
       </table>
     </div>
+
+    <h3 class="h3 sub" id="time-money">時間と金額の見取り図（請求書の作成・10月分・架空）</h3>
+    <p>この業務で、誰の時間がどれだけかかったかと、お金の流れを並べます。請求に使う節約時間は、上の表のとおり<b>合意した10分 × 合格28件＝280分</b>です。人がかけた時間は改善の参考として別に記録するもので、請求の数え方には入れません。</p>
+    <figure class="hbar" aria-labelledby="fig-time-cap">
+      <figcaption><p class="hbar__cap" id="fig-time-cap">時間（分・架空）</p></figcaption>
+      <div class="hbar__group">
+        <div class="hbar__row"><span class="hbar__label">人手だけで作った場合（合意基準10分 × 31件・換算）</span><span class="hbar__bar"><span class="hbar__track" aria-hidden="true"><span class="hbar__seg" style="--w:96.88;--c:var(--hb-4)"></span></span><span class="hbar__val">310分</span></span></div>
+        <div class="hbar__row"><span class="hbar__label">AIを使ったこの月に、人がかけた時間（参考記録）</span><span class="hbar__bar"><span class="hbar__track" aria-hidden="true"><span class="hbar__seg" style="--w:12.50;--c:var(--hb-2)"></span><span class="hbar__seg" style="--w:9.38;--c:var(--hb-1)"></span></span><span class="hbar__val">70分</span></span></div>
+        <div class="hbar__row"><span class="hbar__label">請求に使う節約時間（合意した10分 × 合格28件）</span><span class="hbar__bar"><span class="hbar__track" aria-hidden="true"><span class="hbar__seg" style="--w:87.50;--c:var(--hb-3)"></span></span><span class="hbar__val">280分</span></span></div>
+      </div>
+      <ul class="hbar__legend"><li style="--c:var(--hb-4)">人手だけの場合（換算）</li><li style="--c:var(--hb-2)">貴社の時間（参考記録）</li><li style="--c:var(--hb-1)">当社の検査の確認（報酬に含む当社の作業）</li><li style="--c:var(--hb-3)">請求に使う節約時間</li></ul>
+    </figure>
+    <div class="tbl"><table class="stack stack4">
+      <thead><tr><th>人がかけた時間（参考記録）</th><th>分</th><th>誰の時間</th><th>中身</th></tr></thead>
+      <tbody>
+          <tr><td data-label="人がかけた時間（参考記録）">準備</td><td class="mono" data-label="分">10分</td><td data-label="誰の時間">貴社（事務担当）</td><td data-label="中身">工事台帳と見積書をそろえ、手順書どおりにAIへ渡す</td></tr>
+          <tr><td data-label="人がかけた時間（参考記録）">検査の確認</td><td class="mono" data-label="分">30分</td><td data-label="誰の時間">当社（検査担当）</td><td data-label="中身">5項目の検査の結果を確かめ、差し戻しを決め、直した3件を再検査する。報酬に含む当社の作業です</td></tr>
+          <tr><td data-label="人がかけた時間（参考記録）">最終確認</td><td class="mono" data-label="分">15分</td><td data-label="誰の時間">貴社（事務担当）</td><td data-label="中身">合格28件を送付前に1件ずつ開き、宛名と合計を見る</td></tr>
+          <tr><td data-label="人がかけた時間（参考記録）">差し戻しの直し</td><td class="mono" data-label="分">15分</td><td data-label="誰の時間">貴社（事務担当）</td><td data-label="中身">差し戻した3件を、工事台帳を見て直す</td></tr>
+      </tbody>
+    </table></div>
+    <p class="fine">請求は、合意して固定した基準（10分）と検査合格の件数で数え、実測の削減時間では確定しません。上の参考記録を差し引いて節約時間を数え直すこともしません。当社の検査の確認30分は当社の作業で、報酬に含まれます。貴社に残る時間は、準備・最終確認・差し戻しの直しの40分です。</p>
+    <figure class="hbar" aria-labelledby="fig-money-cap">
+      <figcaption><p class="hbar__cap" id="fig-money-cap">お金の流れ（10月・この1業務だけ・税別・架空）</p><p class="hbar__sub">契約の最初の3か月で、最低額がかからない月の例です。</p></figcaption>
+      <div class="hbar__group"><p class="hbar__head"><span>請求書の作成（合格28件）</span><span class="is-plus">差し引き 約3,700円</span></p>
+        <div class="hbar__row"><span class="hbar__label">節約時間を金額に換えた額（4.7時間 × 2,000円）</span><span class="hbar__bar"><span class="hbar__track" aria-hidden="true"><span class="hbar__seg" style="--w:94.00;--c:var(--hb-1)"></span></span><span class="hbar__val">9,400円</span></span></div>
+        <div class="hbar__row"><span class="hbar__label">貴社が払う額（当社の報酬＋AI利用料）</span><span class="hbar__bar"><span class="hbar__track" aria-hidden="true"><span class="hbar__seg" style="--w:47.00;--c:var(--hb-2)"></span><span class="hbar__seg" style="--w:10.00;--c:var(--hb-3)"></span></span><span class="hbar__val">5,700円</span></span></div>
+      </div>
+      <ul class="hbar__legend"><li style="--c:var(--hb-1)">節約時間を金額に換えた額</li><li style="--c:var(--hb-2)">当社の報酬 4,700円（50%）</li><li style="--c:var(--hb-3)">AI利用料（仮・この業務の分）1,000円</li></ul>
+    </figure>
+    <p class="fine">「金額に換えた額」は現金ではありません。現金が動くのは、残業を減らすか、空いた時間を別の仕事に回したときです。AI利用料は、AIのプランを月4,000円（仮）とし、この業務の分を1,000円と置いた仮の額です。4か月目からはプランの最低額（ライトは月50,000円）がかかるため、1業務だけでは差し引きはマイナスになります。5業務まで広げた見込み（月12〜15時間）でも最低額に届かないことは、<a href="/sample-report#s7">棚卸しレポートの見本 第7節</a>に書いています。</p>
 
     <div class="two" style="margin-top:28px">
       <div>

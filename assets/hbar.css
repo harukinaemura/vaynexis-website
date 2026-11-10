@@ -1,0 +1,27 @@
+/* 横棒の図（見本ページ・実績ページ用。2026-11-10 追加）
+   棒の長さは style の --w（0〜100）で指定。斜線の部分は幅（最小〜最大）を表す。 */
+.hbar { --hb-1: #76513b; --hb-2: #c4a074; --hb-3: #5f7f8c; --hb-4: #c9c1b8; --hb-5: #c9762e; margin: 22px 0 0; padding: 16px 16px 12px; border: 1px solid var(--line); background: var(--white); max-width: 880px; }
+.hbar__cap { margin: 0; font-weight: 700; font-size: 14px; color: var(--text); }
+.hbar__sub { margin: 2px 0 0; font-size: 12px; color: var(--muted); line-height: 1.7; }
+.hbar__group { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--line); }
+.hbar__head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; margin: 0 0 4px; font-size: 13px; font-weight: 700; color: var(--copper-hi); }
+.hbar__head .is-plus { color: var(--ice-text); }
+.hbar__head .is-minus { color: var(--warn); }
+.hbar__row { display: grid; grid-template-columns: minmax(10em, 16em) 1fr; gap: 2px 12px; align-items: center; padding: 4px 0; }
+.hbar__label { font-size: 13px; color: var(--text-2); line-height: 1.6; }
+.hbar__bar { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.hbar__track { flex: 1 1 auto; display: flex; height: 14px; min-width: 0; background: var(--void); }
+.hbar__seg { flex: 0 0 auto; height: 100%; width: calc(var(--w) * 1%); background: var(--c, var(--ice)); }
+.hbar__seg--range { background: repeating-linear-gradient(135deg, var(--c, var(--ice)) 0 3px, rgba(255,255,255,.9) 3px 6px); }
+.hbar__val { flex: 0 0 9.4em; font-family: var(--font-mono); font-size: 12.5px; white-space: nowrap; color: var(--text); }
+.hbar__val.is-plus { color: var(--ice-text); }
+.hbar__val.is-minus { color: var(--warn); }
+.hbar__legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 12px 0 0; padding: 0; list-style: none; font-size: 12px; color: var(--muted); }
+.hbar__legend li::before { content: ""; display: inline-block; width: 10px; height: 10px; margin-right: 5px; vertical-align: -1px; background: var(--c); }
+.hbar__legend li.is-range::before { background: repeating-linear-gradient(135deg, var(--c) 0 3px, #fff 3px 6px); }
+.hbar + .fine, .hbar + .notice { margin-top: 10px; }
+@media (max-width: 560px) {
+  .hbar { padding: 12px 12px 10px; }
+  .hbar__row { grid-template-columns: 1fr; gap: 2px; padding: 5px 0; }
+  .hbar__val { font-size: 12px; }
+}
