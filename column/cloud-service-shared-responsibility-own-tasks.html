@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>クラウドの安全対策で、自社が行う作業の抜けをどう見つける？｜Vaynexis</title>
+  <meta name="description" content="クラウドの対策を事業者の担当、自社の担当、確認待ちに分け、契約や設定の記録から抜けを見つけるための手順です。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="クラウドの安全対策で、自社が行う作業の抜けをどう見つける？｜Vaynexis">
+  <meta property="og:description" content="クラウドの対策を事業者の担当、自社の担当、確認待ちに分け、契約や設定の記録から抜けを見つけるための手順です。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/cloud-service-shared-responsibility-own-tasks">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/cloud-service-shared-responsibility-own-tasks">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"クラウドの安全対策で、自社が行う作業の抜けをどう見つける？","description":"クラウドの対策を事業者の担当、自社の担当、確認待ちに分け、契約や設定の記録から抜けを見つけるための手順です。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/cloud-service-shared-responsibility-own-tasks"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"クラウドの安全対策で、自社が行う作業の抜けをどう見つける？","item":"https://vaynexis.jp/column/cloud-service-shared-responsibility-own-tasks"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">クラウドの安全対策で、自社が行う作業の抜けをどう見つける？</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">クラウドの安全対策で、自社が行う作業の抜けをどう見つける？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>利用中のクラウドについて、事業者の公式資料と契約を開きます。対策ごとに事業者、自社、確認待ちを分け、自社で行う設定や運用は実際の記録で確かめます。分担が分からない項目は、資料のどこを確認したかを控えて問い合わせます。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月9日（出典はこの記事の最後）</p>
+    <p>この記事は、利用中のクラウドサービスで自社が受け持つ安全対策の抜けを見つけたい小さな会社の担当者が、IPAの手引きの15項目を使って事業者・自社・確認待ちに分け、記録で確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月9日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">利用している契約と公式の説明をそろえる</a></li>
+      <li><a href="#s2">事業者・自社・確認待ちを分ける</a></li>
+      <li><a href="#s3">自社担当の項目を実際の設定で確かめる</a></li>
+      <li><a href="#s4">分担が変わったら確認記録を更新する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．利用している契約と公式の説明をそろえる</h2>
+    <p>確認日：2026年11月9日。</p>
+    <p>IPAは、中小企業の情報セキュリティ対策ガイドライン第4.0版を公開しています。ページの更新履歴では、第4.0版の公開は2026年3月27日です。</p>
+    <p>同版では、クラウド事業者の対策を把握し、利用者側の役割と責任も把握したうえで自社の対策を実行するよう示しています。</p>
+    <p>同版の「クラウドサービスの情報セキュリティ」は、SaaS の利用を念頭に置いて説明しています。クラウドサービスでは、データ処理・保存は全てサービス提供者が管理するサーバーで実行されるため、サーバーやネットワークのセキュリティ対策は主にサービス提供者が実施し、利用者の役割と責任範囲は、直接対策を講じることができるパソコン・スマートフォンなどの端末やネットワーク機器、それらにインストールされたソフトウェアに限定されると説明されています。一方で、インターネット特有の脅威やリスクを考慮して、運用上のセキュリティ対策を検討する必要があるとしています。</p>
+    <p>同版は、詳しくは付録7「中小企業のためのクラウドサービス安全利用の手引き」のクラウドサービス安全利用チェックシートの15 項目に沿って、自社の目的や運用計画などに適したサービスを利用するよう案内しています。</p>
+    <p>付録7（2026年6月の Version 2.3）は、クラウドサービスのセキュリティは、サービスを提供する事業者と利用者の両者が、それぞれの役割・責任を分担し、必要とされる対策を実施することで維持・向上すると説明しています。事業者に委ねる部分は利用者が直接管理できないため、サービスに付随するセキュリティ対策もきちんと確認したうえで利用する必要があるとし、1つのサービスが複数事業者で構成されると、すべての対策を把握することが難しいことも、クラウドサービス固有のリスクとして挙げています。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>サービス名、契約するプラン、確認する機能を控え、今利用している契約と事業者の説明が対応するかを確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．事業者・自社・確認待ちを分ける</h2>
+    <p>対策の内容ごとに、どこまでを事業者が行うか、自社でどの設定や運用を行うかを分けます。資料で確認できない項目は確認待ちとし、該当する契約や機能名を添えて照会できるようにします。</p>
+    <p>両方に役割がある項目は、一行にまとめて担当が曖昧にならないよう、事業者側の対策と自社側の確認を別の欄に残します。</p>
+    <p>付録7のチェックシートは、15項目を3つの区分に分けています。選択するときのポイントは、機能や情報セキュリティ対策が事業者の対応に依存する部分が多いため確認して選ぶ項目、運用するときのポイントは利用者側の体制やセキュリティ対策を決める項目、セキュリティ管理のポイントはクラウドサービス特有のリスクや関連する法令に対応できているかを確かめる項目とされています。下の表の左の2列は手引きの区分と項目名、右の列は当社の整理です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">手引きの区分</th><th scope="col">項目（番号）</th><th scope="col">自社の記録で見るところ</th></tr></thead><tbody><tr><td data-label="手引きの区分">選択するときのポイント</td><td data-label="項目（番号）">どの業務で利用するか明確にする（1）、クラウドサービスの種類を選ぶ（2）、取扱う情報の重要度を確認する（3）、セキュリティのルールと矛盾しないようにする（4）、クラウド事業者の信頼性を確認する（5）、クラウドサービスの安全・信頼性を確認する（6）</td><td data-label="自社の記録で見るところ">利用を決めたときの記録、扱う情報の一覧、社内ルールとの照合、事業者の公開資料と利用規約のどこを見たか</td></tr><tr><td data-label="手引きの区分">運用するときのポイント</td><td data-label="項目（番号）">管理担当者を決める（7）、利用者の範囲を決める（8）、利用者の認証を厳格に行う（9）、バックアップに責任を持つ（10）</td><td data-label="自社の記録で見るところ">管理担当者の名前、利用者アカウントと権限の一覧、認証の設定、バックアップを取った日と置き場所</td></tr><tr><td data-label="手引きの区分">セキュリティ管理のポイント</td><td data-label="項目（番号）">付帯するセキュリティ対策を確認する（11）、利用者サポートの体制を確認する（12）、利用終了時のデータを確保する（13）、適用法令や契約条件を確認する（14）、データ保存先の地理的所在地を確認する（15）</td><td data-label="自社の記録で見るところ">事業者の公開資料、利用規約や契約条件の該当箇所、問い合わせた日と回答</td></tr></tbody></table></div>
+    <p>手引きの解説では、障害でデータ消失などの被害が発生したときに、どこまでが事業者の責任で、どこからが利用者の責任なのかを利用規約で確認する例が挙がっています。適用法令や契約条件の例には、利用者が入力したデータにサービス事業者がアクセスする場合の条件や責任、設備の保守等を再委託している場合の再委託先の管理監督責任が明記されているかの確認があります。No.6、11、12、13は、スマートSMEサポーター（認定情報処理支援機関）の開示情報で確認できるとされています。</p>
+    <p>利用規約や公開資料で境目が読み取れない項目は確認待ちにし、どの資料のどこまで読んだかを添えて問い合わせます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．自社担当の項目を実際の設定で確かめる</h2>
+    <p>手引きの運用するときのポイントでは、クラウドサービスを利用する人の範囲を決めてどのような権限を与えるか管理すること、パスワードなどの認証機能を適切に設定・管理し、ID・パスワードの共有はしないこと、サービス停止やデータの消失・改ざんなどに備えて重要情報を手元に確保することが挙がっています。バックアップの例として、クラウドサービスの拡張機能にバックアップがある場合は利用することや、複数世代のバックアップの取得も示されています。</p>
+    <p>自社担当の項目では、運用を決めた文書、実際の設定、設定を確認した担当と日付を照合します。アカウントの管理や外部共有などは、担当を置くだけでなく、どの画面や社内の記録で確認したかを控えます。</p>
+    <p>設定が見られない場合は、使っている管理画面、確認できる人、残る確認を分けます。確認した人が後から替わっても同じ箇所を開ける形にします。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．分担が変わったら確認記録を更新する</h2>
+    <p>契約や運用を変えた場合は、変更した機能に関わる分担を見直します。手引きの利用終了時のデータの例には、過年度データを含む全データを返却または社内のパソコンなどにダウンロードできるか、データのフォーマットは他のサービスと互換性があるかの確認が挙がっています。サービスの乗り換えや解約を考えるときは、この項目を確認待ちのまま残していないかも見ます。前回の資料の版と確認日を残し、条件が変わった箇所を担当へ渡します。</p>
+    <p>確認待ちの項目は、回答が来た日と回答の範囲を記録します。自社の作業が新たに必要だと分かったら、担当と確認する期日を決めます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">利用している契約と事業者の資料を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">事業者・自社・確認待ちを区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">手引きの15項目を、選択・運用・セキュリティ管理の区分ごとに見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">自社担当の項目（管理担当者・利用者の範囲・認証・バックアップ）を実際の設定や記録で確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">障害時の責任の境目と、再委託先の扱いを利用規約で確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">分担が不明な箇所の確認先を控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">契約や運用変更後に確認記録を見直したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月9日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.ipa.go.jp/security/guide/sme/about.html" rel="noopener" target="_blank">IPA 中小企業の情報セキュリティ対策ガイドライン</a>：第4.0版の公開日、付録7の掲載</li>
+      <li><a href="https://www.ipa.go.jp/security/guide/sme/ug65p90000019cbk-att/sme_guideline_v4.0.pdf" rel="noopener" target="_blank">IPA 中小企業の情報セキュリティ対策ガイドライン 第4.0版</a>：第2部「4. より強固にするための方策」の（５）クラウドサービスの情報セキュリティ：SaaS が前提、提供者と利用者の役</li>
+      <li><a href="https://www.ipa.go.jp/security/guide/sme/ug65p90000019cbk-att/sme_guideline_v4.0_app_7.pdf" rel="noopener" target="_blank">IPA 中小企業のためのクラウドサービス安全利用の手引き（付録7・Version 2.3）</a>：事業者と利用者の分担、チェックシート15項目と3つの区分、責任の境目を利用規約で確かめる例、再委託先、開示情報、運用の4</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/security-self-assessment-evidence-records">情報セキュリティ自社診断表は何を確かめる？回答根拠の残し方</a></li>
+      <li><a href="/column/workspace-retiree-suspension-access-effects">退職者のGoogle Workspace利用停止で何が変わる？</a></li>
+      <li><a href="/column/google-backup-codes-storage">認証用スマホが使えない日に備える予備コードの保管と更新の手順</a></li>
+      <li><a href="/column/personal-data-documents-move-room-handover">個人データがある書類を別室へ運ぶとき、受け渡しをどう確認する？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

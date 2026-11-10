@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SharePointのアクセス要求で、承認前にどの権限を確認する？｜Vaynexis</title>
+  <meta name="description" content="SharePointで保留中のアクセス要求を開き、要求者と対象を確認してから、付けるアクセス許可レベルを選ぶ手順です。判断の根拠と処理結果を残します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="SharePointのアクセス要求で、承認前にどの権限を確認する？｜Vaynexis">
+  <meta property="og:description" content="SharePointで保留中のアクセス要求を開き、要求者と対象を確認してから、付けるアクセス許可レベルを選ぶ手順です。判断の根拠と処理結果を残します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/sharepoint-access-request-permission-level-check">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/sharepoint-access-request-permission-level-check">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"SharePointのアクセス要求で、承認前にどの権限を確認する？","description":"SharePointで保留中のアクセス要求を開き、要求者と対象を確認してから、付けるアクセス許可レベルを選ぶ手順です。判断の根拠と処理結果を残します。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/sharepoint-access-request-permission-level-check"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"SharePointのアクセス要求で、承認前にどの権限を確認","item":"https://vaynexis.jp/column/sharepoint-access-request-permission-level-check"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">SharePointのアクセス要求で、承認前にどの権限を確認</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">SharePointのアクセス要求で、承認前にどの権限を確認する？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>SharePointサイトのアクセス要求は、要求したアカウント、必要な資料や作業、承認できる範囲を照合します。保留中の要求を開き、必要な作業に合うアクセス許可レベルを確認してから承認・拒否を選びます。判断した日と確認した内容も残します。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月9日（出典はこの記事の最後）</p>
+    <p>この記事は、SharePointサイトに届いたアクセス要求を処理したい小さな会社のサイト担当者が、要求の相手と対象、付けるアクセス許可レベル、処理の記録を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月9日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">保留中のアクセス要求を開く</a></li>
+      <li><a href="#s2">要求した相手と対象を照合する</a></li>
+      <li><a href="#s3">許可する範囲に合う権限を選ぶ</a></li>
+      <li><a href="#s4">承認・拒否と確認した内容を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．保留中のアクセス要求を開く</h2>
+    <p>確認日：2026年11月9日。</p>
+    <p>Microsoftの日本語ヘルプでは、SharePointサイトで［設定］から［サイトのコンテンツ］を開き、［アクセス権の要求］で保留中の要求を確認します。保留中の要求がある場合にボタンが表示されると案内されています。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>通知を受け取ったら、まず管理するサイトを特定します。複数のサイトに似た名前の資料がある場合は、サイトと対象の場所を確かめてから要求を開きます。</p>
+    <p>Microsoftの案内では、既定でアクセス要求のメールを受け取る人はサイトの種類で異なります。グループに接続されたサイト（Microsoft Teams を含む）はグループ管理者、コミュニケーション サイト、グループのないモダン サイトとクラシックのサイトは所有者グループのユーザー、OneDrive とプロジェクト サイトはプライマリ サイト管理者です。また、サイトでメールが有効なセキュリティ グループを使っている場合は、サイト所有者がアクセス要求のメールを受け取らない可能性があるとされています。</p>
+    <p>同じページの［SharePoint］の欄では、サイト所有者が［設定］、［サイトのアクセス許可］の順に進み、［サイト共有］の［メンバーの共有方法を変更］で［アクセス要求の許可］をオンにし、要求を受け取る人としてサイトの所有者か特定のメール（特定のユーザーまたは配布リスト）を選びます。アクセス要求のページで相手に表示するメッセージも追加できます。［SharePoint Server］の欄では、［サイトのアクセス許可］から［詳細アクセス許可の設定］を開く手順になっています。</p>
+    <p>通知が自分に届かない設定のサイトもあるため、通知の有無だけで要求が無いと判断せず、［サイトのコンテンツ］に［アクセス権の要求］が出ていないかも見ます。使っている製品がどちらの欄に当たるかは、サイトの管理担当に確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．要求した相手と対象を照合する</h2>
+    <p>要求したアカウント、対象の場所、必要な作業を照合します。閲覧するだけか、資料を編集する必要があるかを分けて確認します。相手や要求内容が特定できない場合は、担当に照会して回答が得られるまで判断を保留します。</p>
+    <p>Microsoftの案内では、サイトの所有者ではないユーザー（サイトのフル コントロール アクセス許可を持たないユーザー）が［共有］コマンドで他の人を招待すると、サイトの所有者へのアクセス要求が作られます。サイトにだれがアクセスでき、どの権限レベルを割り当てるかの最終的な決定権は、サイト所有者にあるとされています。要求の中には、本人からの要求のほかに、メンバーが同僚や社外の人を招待したことで作られたものもあります。招待した人と、アクセスを得る人の両方を確かめます。</p>
+    <p>社外の利用者が含まれる場合は、共有できる対象と範囲をサイトの管理担当に確かめます。承認の記録には、誰からどの情報を確認したかを残します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．許可する範囲に合う権限を選ぶ</h2>
+    <p>公式ヘルプは、［保留中の要求］で対象の要求の省略記号を開き、承認する場合は［アクセス権］でユーザーに割り当てるアクセス許可レベルを選択する手順を示しています。</p>
+    <p>Microsoft Learn の権限レベルの説明（SharePoint in Microsoft 365）では、既定のアクセス許可レベルのうち、［フル コントロール］は使用可能なすべての SharePoint の権限を含み、既定では所有者グループに付きます。［編集］はリストの追加・編集・削除と、リスト アイテムとドキュメントの表示・追加・更新・削除ができ、既定ではメンバー グループに付きます。［投稿］はリスト アイテムとドキュメントの表示・追加・更新・削除ができます。［読み取り］はページとアイテムの表示とドキュメントのダウンロードができます。［表示のみ］は表示ができますが、サーバー側のファイル ハンドラーを備えたドキュメントは、ブラウザーで表示できてもダウンロードはできません。</p>
+    <p>同じ説明では、チーム サイトには所有者グループ、メンバー グループ、閲覧者グループが自動的に含まれ、閲覧者グループのレベルは［読み取り］です。サイトに既定で含まれるグループとレベルはサイトのテンプレートなどで異なる場合があり、SharePoint 管理者が独自のグループと権限レベルを作ることもできるとされています。</p>
+    <p>要求の理由に照らし、閲覧や編集など必要な操作と選択肢の範囲を見比べます。表示される権限が目的より広い、または必要なものが見つからない場合は、対象を絞って付与できるかをサイトの管理担当へ確認します。資料を読むだけなら［読み取り］か［表示のみ］、資料を直す必要があるなら［投稿］か［編集］のように、まず必要な操作から候補を絞ります。［表示のみ］ではダウンロードできない資料があること、［編集］ではリストの追加や削除もできることを、選ぶ前に確かめます。［フル コントロール］は既定で所有者グループに付くレベルのため、要求の承認で付ける前に管理担当へ相談します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．承認・拒否と確認した内容を残す</h2>
+    <p>Microsoftは、要求画面で承認または拒否を選べることと、過去の要求は［履歴の表示］で見られることを案内しています。同じ手順では、アクセスを要求しているユーザーにメッセージを入力することもでき、決定を記録するのに便利なことがあるとされています。</p>
+    <p>処理した日、対象の要求、承認または拒否、承認時に付けた権限と理由を控えます。メッセージの欄に、承認した範囲や拒否の理由を短く書いておくと、相手にも判断の内容を示せます。</p>
+    <p>Microsoftの案内では、［アクセス要求］のページを使う権限があるのは、サイト コレクション管理者、Microsoft 365 の SharePoint 管理者、サイトの既定の所有者グループのメンバーだけです。所有者グループから外された後にサイトのフル コントロールを付与されたユーザーは、このページへのアクセスを拒否されるとされています。</p>
+    <p>必要な画面を開けない場合は、サイト名と保留中の要求を確認できない状況を管理担当に伝え、権限がある担当へ引き継ぎます。フル コントロールを持っていても開けない場合があるため、所有者グループに入っているかも合わせて伝えます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">管理対象のサイトと保留中の要求を特定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">要求者と必要な作業を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">本人からの要求か、メンバーの招待から作られた要求かを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">サイトや資料を共有できる範囲を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">選択するアクセス許可が必要な作業に合うか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">選ぶ権限レベルでできること（ダウンロード・削除など）を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">自分が所有者グループに入っていて、要求のページを使えるか確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">処理結果と判断の根拠を控えたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月9日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/sharepoint/sharepoint-sharing-and-permissions/set-up-and-manage-access-requests" rel="noopener" target="_blank">Microsoft アクセス要求のセットアップと管理</a>：メールを受け取る人、設定の場所と SharePoint Server の欄、［共有］から作られる要求、保留中の要求、アク</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/sharepoint/understanding-permission-levels" rel="noopener" target="_blank">Microsoft Learn SharePoint の権限レベルについて</a>：既定のアクセス許可レベルとできること、チーム サイトの既定のグループ</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/onedrive-share-option-grayed-out">OneDriveの共有設定が灰色で選べないときの確認と連絡の進め方</a></li>
+      <li><a href="/column/onedrive-external-share-verification-code">OneDriveの社外共有で相手に確認コードが届いたらどうする</a></li>
+      <li><a href="/column/google-drive-limit-subfolder-access">Googleドライブの共有フォルダ内で一部だけ閲覧者を絞る設定と確認</a></li>
+      <li><a href="/column/onedrive-find-files-shared-with-you-by-person">OneDriveで同僚から共有された資料を、共有した人で探すには？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

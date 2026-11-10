@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>システム切替直前の最終入力は何時の記録で区切る？｜Vaynexis</title>
+  <meta name="description" content="システムの切替に備え、旧システムへの入力締切、移行用データの抽出、停止中の依頼受付を別々に記録し、新システムへの反映を照合する手順です。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="システム切替直前の最終入力は何時の記録で区切る？｜Vaynexis">
+  <meta property="og:description" content="システムの切替に備え、旧システムへの入力締切、移行用データの抽出、停止中の依頼受付を別々に記録し、新システムへの反映を照合する手順です。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/system-cutover-final-entry-boundary-records">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/system-cutover-final-entry-boundary-records">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"システム切替直前の最終入力は何時の記録で区切る？","description":"システムの切替に備え、旧システムへの入力締切、移行用データの抽出、停止中の依頼受付を別々に記録し、新システムへの反映を照合する手順です。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/system-cutover-final-entry-boundary-records"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"システム切替直前の最終入力は何時の記録で区切る？","item":"https://vaynexis.jp/column/system-cutover-final-entry-boundary-records"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">システム切替直前の最終入力は何時の記録で区切る？</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">システム切替直前の最終入力は何時の記録で区切る？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>切替時は、旧システムへの入力締切、移行用に抽出した時刻、新システムで入力を再開する時刻を分けます。締切までに反映された最後の処理と、停止中に別の記録で受け付けた依頼を区別し、新システムの記録で未反映や二重入力がないかを確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月9日（出典はこの記事の最後）</p>
+    <p>この記事は、業務システムの切替を控えた小さな会社の担当者が、旧システムへの入力締切・移行用の抽出・停止中の受付・新システムでの再開を分けて記録し、照合する流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月9日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">入力の締切と抽出の時刻を分ける</a></li>
+      <li><a href="#s2">最終入力分を業務側の記録で示す</a></li>
+      <li><a href="#s3">締切後の受付と反映を別に記録する</a></li>
+      <li><a href="#s4">新システムで照合してから再開する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．入力の締切と抽出の時刻を分ける</h2>
+    <p>確認日：2026年11月9日。</p>
+    <p>デジタル庁は「デジタル社会推進標準ガイドライン」に標準ガイドライン解説書を掲載しています。同じページでは、このガイドライン群は、サービス・業務改革並びにこれらに伴う政府情報システムの整備及び管理についての手続・手順や共通ルール、参考ドキュメントをまとめたものと説明され、解説書（DS-110）の位置づけは参考とするドキュメント（Informative）、最終改定日は2026年6月12日です。同解説書の移行の章は、移行計画書の確認観点の例（表7-5）の「移行データ整備」に、移行前データの確認、変換前後の整合性、件数や合計値の確認などを挙げています。</p>
+    <p>同解説書は、移行を業務移行、システム移行、データ移行に大別し、システム移行には、既存の情報システムが存在する場合は、その利用を停止する作業も含むとしています。業務移行の計画では、切替えの時期や期間、拠点、方法等を明確にすることが重要とされています。</p>
+    <p>これらは、政府情報システムの整備と管理に向けた記述で、民間の会社の切替を定めた決まりではありません。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>業務の担当が入力を締める時刻と、システムの担当がデータを抽出する時刻を分けて決めます。受付だけ先に行い、確定に時間がかかる業務では、締切を受付の時点で見るか、旧システムに確定した時点で見るかを、関係する担当で確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．最終入力分を業務側の記録で示す</h2>
+    <p>同解説書の表7-5では、移行データ調査の観点の例に、移行対象となるデータを確定できる手順となっているかと、現行情報システムの不備データを調査しているかが挙がっています。</p>
+    <p>入力締切を過ぎたら、旧システムの対象範囲ごとに、最後に確定した記録の識別情報と確定時刻を控えます。入力中だった依頼や確定されていないものは、処理済みと混ぜず、引き継ぎの対象に分けます。</p>
+    <p>システム担当には、確定した範囲、抽出日時、確認に使う件数や合計値を渡します。時刻で一覧を抽出する場合は、どの日時項目を使い、境目と同じ時刻の記録をどちらに含めたかも記録します。締切後に旧システムで変更があれば、移行用の抽出を取り直すか、変更分を別に反映するかを切替の担当に確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．締切後の受付と反映を別に記録する</h2>
+    <p>同解説書は、移行リスクの例として、移行作業期間中に利用者へのサービス提供が停止する期間が発生することや、データ移行に伴い一部のデータが消失することを挙げています。また、データを変換・移行した後は、移行を行ったデータだけでなく、他の関係者が手作業での投入や変更等を行ったデータについても、整合性や正確性等を確認するとしています。</p>
+    <p>停止中に受けた依頼は、受付日時、受付番号、必要な処理、担当を別の一覧に控えます。移行済みかどうかを調べるまで、既存データと同じ対象を二重に登録しないよう、旧システムの識別情報が分かれば添えます。</p>
+    <p>新システムへの反映後に、対応する新しい番号と反映日を控えます。入力した人が違っても、受け付けた依頼から登録結果までを追えるようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．新システムで照合してから再開する</h2>
+    <p>新システムでは、旧システムの最後の処理まで対象範囲に入っているかと、停止中に受けた依頼の反映状況を分けて確かめます。件数や合計値が合わない場合は、比較した範囲と除外したものを見直します。切替前後で番号の振り方が変わった場合は、対応表などで識別できる状態にします。</p>
+    <p>同解説書の表7-5では、本番切替えの観点の例に、本番切替え実施手順（移行判定、本番切替え、本番切替え判定、切戻し等）が適正か、本番切替え不成功時の切戻し条件及び方法が明確かが挙がっています。特に業務移行については、事業者では最終的な確認が行えないため、職員による稼働判定の実施が不可欠とされています。</p>
+    <p>小さな会社の切替でも、業務の記録と新システムの結果を突き合わせる確認は、切替を請け負う事業者に任せきりにせず、業務の担当が加わって行います。合わなかったときに旧システムへ戻すか、差を残して再開するかの条件も、切替の前に決めておきます。</p>
+    <p>照合が済んだ範囲、残る差、再開の判断をした担当と日時を残します。未反映の依頼がある場合は、誰がいつまでに反映を確認するかを引き継ぎます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">旧システムの入力締切と抽出時刻を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象に含めた最後の確定記録と境目の扱いを控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">停止中に受けた依頼を別の一覧で管理したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">停止中に手で入力したデータも、移行したデータと分けて照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">旧システムからの移行と停止中受付の反映を分けて確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">合わなかったときに戻すか再開するかの条件を、切替の前に決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">差が残る場合の担当と、再開の判断を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月9日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.digital.go.jp/resources/standard_guidelines" rel="noopener" target="_blank">デジタル庁 デジタル社会推進標準ガイドライン</a>：解説書の掲載、ガイドライン群の対象（政府情報システム）、解説書の位置づけ（Informative）と改定日</li>
+      <li><a href="https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/e2a06143-ed29-4f1d-9c31-0f06fca67afc/50952dae/20260715_resources_standard_guidelines_guideline_03.pdf" rel="noopener" target="_blank">デジタル庁 標準ガイドライン解説書</a>：第３編第７章の移行の計画・設計（移行の3区分・移行リスク）と「８. 移行の実施・管理」（表7-5 移行計画書の確認観点の</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/migration-exception-data-pending-owner">新システムへ入らなかった例外データは誰の確認待ちで残すか</a></li>
+      <li><a href="/column/migration-rehearsal-time-overrun-recheck">切替の予行で時間を超えた作業を本番前にどう確認し直すか</a></li>
+      <li><a href="/ai/tasks/forms-redesign">帳票・様式の作り直しをAIに任せる手順。項目の棚卸しと切替前の確認</a></li>
+      <li><a href="/column/misopened-other-company-mail-reception">別の会社宛ての郵便物を開けてしまったら、受付は何を確認する？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

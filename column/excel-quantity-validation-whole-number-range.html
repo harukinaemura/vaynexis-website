@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの数量欄で負数や小数を防ぐ｜入力規則の上下限と貼り付け後の点検｜Vaynexis</title>
+  <meta name="description" content="Excelの数量欄で整数と上下限を設定し、手入力を制限する方法。ゼロや空欄の扱いを決め、貼り付けや入力済みの値を別途確認します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの数量欄で負数や小数を防ぐ｜入力規則の上下限と貼り付け後の点検｜Vaynexis">
+  <meta property="og:description" content="Excelの数量欄で整数と上下限を設定し、手入力を制限する方法。ゼロや空欄の扱いを決め、貼り付けや入力済みの値を別途確認します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-quantity-validation-whole-number-range">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-quantity-validation-whole-number-range">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの数量欄で負数や小数を防ぐ｜入力規則の上下限と貼り付け後の点検","description":"Excelの数量欄で整数と上下限を設定し、手入力を制限する方法。ゼロや空欄の扱いを決め、貼り付けや入力済みの値を別途確認します。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-quantity-validation-whole-number-range"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの数量欄で負数や小数を防ぐ","item":"https://vaynexis.jp/column/excel-quantity-validation-whole-number-range"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの数量欄で負数や小数を防ぐ</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの数量欄で負数や小数を防ぐ｜入力規則の上下限と貼り付け後の点検</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelで数量を入力する列に、整数と上限・下限の入力規則を設定します。業務に合わせてゼロと空欄を区別し、停止のエラーを使って手入力を試します。貼り付けや既存値については、無効なデータを囲む機能で確認します。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月9日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelの数量欄に負数や小数が入るのを防ぎたい小さな会社の担当者が、入力規則の整数と上下限、エラーの種類、貼り付け後と既存値の点検を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月9日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">数量欄ごとに許容する値を決める</a></li>
+      <li><a href="#s2">整数と上下限を入力規則に設定する</a></li>
+      <li><a href="#s3">境界値と入力経路を別々に試す</a></li>
+      <li><a href="#s4">保護する表と、規則が効かないときに見る点</a></li>
+      <li><a href="#s5">既存値と貼り付け後の値を点検する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．数量欄ごとに許容する値を決める</h2>
+    <p>確認日：2026年11月9日。</p>
+    <p>Excelの入力規則には、値を整数に制限し、上下限を設定する方法があります。Microsoftは既に入力されている値に自動通知が出ない場合の点検方法も案内しています。ここではWindowsのデスクトップ版を対象とします。</p>
+    <p>入力規則を適用する手順のページの適用先には、Excel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016 と、Excel for Microsoft 365 for Mac などのMac版が挙がっています。無効なデータを円で囲む機能のページは、この機能はデスクトップ バージョンのExcel用で、Excel for the webで作業している場合は表示されないことがあるとしています。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>最初に数量欄が表す単位を決めます。個数のように整数で扱う列と、重量のように小数を含める列は設定を分けます。数量がないと確認できたゼロと、まだ調べていない空欄は扱いを分けます。返品や調整を負数で記録する運用なら、通常の数量欄と同じ制限をかける前に記録先を確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．整数と上下限を入力規則に設定する</h2>
+    <p>Microsoftの案内では、入力するセルの範囲を選び、［データ］タブの［データ ツール］グループで［データの入力規則］を選びます。［設定］タブの［入力値の種類］で［整数］を選ぶと、整数のみを受け入れるようにセルを制限できます。上限と下限を設定するには［データ］ボックスで［次の値の間］を選び、許可する最小値と最大値を入力します。下限だけの例として［次の値以上］を選ぶ方法も示されており、最小値や最大値には数値を返す数式も入力できます。重量のように小数を含める列は、［入力値の種類］で［小数点数］を選びます。</p>
+    <p>同じページでは、入力規則のコマンドが利用できない場合は、シートが保護されているか、ブックが共有されている可能性があり、その状態では入力規則の設定は変更できないとされています。</p>
+    <p>Microsoftの案内では、エラー アラートは3種類から選べます。［停止］はユーザーがセルに無効なデータを入力できないようにし、メッセージには［再試行］と［キャンセル］の2つの選択肢が出ます。［注意］は入力されたデータが無効であることを警告しますが入力は許可し、［情報］も無効であることを通知しますが入力は許可します。［情報］は最も柔軟性が高いエラー メッセージとされています。手順のページでも、エラーを修正してから続行するようユーザーに求める場合は、［エラー メッセージ］タブの［スタイル］で［停止］を選ぶとされています。</p>
+    <p>数量欄で規則外の値を止めたい場合は［停止］を選び、［注意］や［情報］では規則外の値が入力されたまま残ることを前提に点検を組みます。担当者が修正できるよう、表示する説明には単位と許容する範囲を含めます。</p>
+    <p>対象範囲を指定するときは、列見出し、合計式、備考を入力するセルが含まれていないかを見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．境界値と入力経路を別々に試す</h2>
+    <p>Microsoftは、設定後にセルへ有効なデータと無効なデータの両方を入力し、設定が意図したとおりに機能し、予期したタイミングでメッセージが表示されることを確かめるよう案内しています。</p>
+    <p>確認用の複製で最小値、最大値、その外側の値をそれぞれ直接入力します。整数欄では範囲内の小数も入力し、想定したエラーになるかを見ます。ゼロを認めるかは下限と、空欄を残してよいかは入力規則の設定および提出前の確認と照らします。</p>
+    <p>同じ手順のページでは、ドロップダウン リストを作る手順の中で、空白 (Null) 値の処理方法を［空白を無視する］チェック ボックスのオンとオフで指定すると説明されています。整数の規則で空欄がどう扱われるかはこのページに書かれていないため、空欄のまま確定する操作も複製で試し、結果を記録しておきます。</p>
+    <p>Microsoftの案内では、データの入力規則は、セルに直接データを入力した場合にのみ無効な入力を防ぐよう設計されています。セルにコピーやオートフィルでデータを入力した場合、セルの数式が無効な結果を計算した場合、マクロで無効なデータが入力された場合は、検証メッセージは表示されず、無効なデータが入る可能性があります。ドラッグ アンド ドロップでデータをコピーしたり入力したりできないようにするには、［ファイル］＞［オプション］＞［詳細設定］の編集オプションで［フィル ハンドルとセルのドラッグ アンド ドロップを有効にする］をオフにし、ワークシートを保護する方法が案内されています。</p>
+    <p>手入力で止まったことだけで確認を終えず、実際に使う貼り付け手順も複製で試します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．保護する表と、規則が効かないときに見る点</h2>
+    <p>Microsoftの案内では、ワークシートやブックを保護する場合は、入力規則を設定してから行います。ワークシートを保護する前に、入力規則を設定したすべてのセルのロックを解除し、解除しないとセルにデータを入力できなくなります。ブックが共有または保護されている場合は入力規則の設定を変更できず、先に共有や保護を解除する必要があります。</p>
+    <p>同じページでは、入力規則が正しく機能しないときに確かめる点として、コピーやオートフィルで入力されていないかのほか、次の点が挙がっています。手動再計算がオンになっていると、計算されていないセルによってデータが正しく検証されなくなる可能性があります。入力規則を設定するセルの数式が #REF! や #DIV/0! などのエラーを起こしている場合は、エラーを修正しない限り入力規則は無視されます。参照されているセルが変更されたために数式が無効な結果を返す場合も、そのセルの入力規則のメッセージは表示されません。</p>
+    <p>上限を別のセルの値や数式で決めている数量欄では、計算方法が自動になっているか、上限のセルにエラーが出ていないかを、貼り付けの点検より先に見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．既存値と貼り付け後の値を点検する</h2>
+    <p>Microsoftの案内では、［データ］タブの［データ ツール］グループで［データの入力規則］の横にある矢印を選び、［無効なデータを円で囲む］を選ぶと、無効なデータを含むセルが赤い円で囲まれます。対象には、入力した値のほか、コピーした値、数式で計算された値、マクロで入力された値も含まれます。1つのセルの円は、そのセルに有効なデータを入力すると消え、同じメニューの［検証サークルのクリア］で円を消すこともできます。</p>
+    <p>既にデータが入力されているセルにも入力規則は適用できますが、既存のセルに無効なデータが入力されていても、自動的な通知は行われません。無効な入力を修正すると、円は自動的に消えます。</p>
+    <p>円が出たセルを修正する前に、貼り付け先の列と元資料の単位を照らします。円が出ない場合も、貼り付けをした後は数量列の［データの入力規則］を開き、設定が残っているかを確かめます。</p>
+    <p>Microsoftの案内では、入力規則が設定されているセルは、［ホーム］タブの［編集］グループで［検索と選択］から［データの入力規則］を選ぶと検索でき、見つけた後に設定を変更、コピー、削除できます。あるセルの規則を変えたときに、同じ入力規則が設定された他のすべてのセルにも同じ変更を適用するには、［設定］タブで［同じ入力規則が設定された他のすべてのセルに変更を適用する］をオンにします。</p>
+    <p>差し替えた行を見たあと、入力欄を増やした場合は、この検索で規則のあるセルが末尾まで選ばれるかを確かめます。上限を変えるときは、一部の行だけ古い上限が残らないよう、一括で反映する欄をオンにしてから直します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">数量欄の単位と整数の要否を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ゼロと空欄をどう扱うか決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見出しや合計を除いて入力範囲を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">エラー アラートのスタイルを［停止］にしたか（［注意］［情報］なら入力は残る）</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">境界値と範囲外の値を試したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">貼り付け後に値と規則の両方を点検したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">シートを保護する前に、数量欄のロックを解除したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">上下限に数式を使う場合、計算方法が自動で、数式にエラーが無いか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月9日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/apply-data-validation-to-cells" rel="noopener" target="_blank">Microsoft セルにデータの入力規則を適用する</a>：適用先、開く場所、整数と小数点数、範囲指定と数式、保護・共有中は変更できない、停止の選び方、設定後の試験、空白を無視する</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/more-on-data-validation" rel="noopener" target="_blank">Microsoft データの入力規則に関する詳細</a>：3種類のエラー アラート、ドラッグ アンド ドロップの止め方、保護の順番、正しく機能しないときの確認点、既存のデータ、規</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/display-or-hide-circles-around-invalid-data" rel="noopener" target="_blank">Microsoft 無効なデータを囲む円を表示または非表示にする</a>：直接入力だけを防ぐ設計、貼り付けや計算結果も含めて規則外の値を確認、デスクトップ版の機能、円の消し方</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-id-length-input-restriction">Excelで管理番号の文字数が違う入力を止める設定と確認</a></li>
+      <li><a href="/column/excel-input-message-guidance">Excelの記入欄を選んだときに入力方法を案内する設定と確認</a></li>
+      <li><a href="/column/excel-lock-cells-input-only">Excelの申請表で入力欄だけ編集できるようにする設定と確認</a></li>
+      <li><a href="/column/excel-quantity-unit-price-total">Excelで数量と単価の明細から総額を出す手順と確認のしかた</a></li>
+      <li><a href="/column/word-draft-watermark-circulation-copy">Wordの回覧文書に下書きの透かしを入れるには？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

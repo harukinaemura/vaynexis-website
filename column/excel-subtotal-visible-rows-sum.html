@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelでフィルター後に表示されている行だけを合計するには？｜Vaynexis</title>
+  <meta name="description" content="Excelで絞り込んだ明細をSUBTOTALで合計する手順です。フィルターで除かれた行と手動で非表示にした行の扱いを区別し、集計方法の9と109を選びます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelでフィルター後に表示されている行だけを合計するには？｜Vaynexis">
+  <meta property="og:description" content="Excelで絞り込んだ明細をSUBTOTALで合計する手順です。フィルターで除かれた行と手動で非表示にした行の扱いを区別し、集計方法の9と109を選びます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-subtotal-visible-rows-sum">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-subtotal-visible-rows-sum">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelでフィルター後に表示されている行だけを合計するには？","description":"Excelで絞り込んだ明細をSUBTOTALで合計する手順です。フィルターで除かれた行と手動で非表示にした行の扱いを区別し、集計方法の9と109を選びます。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-subtotal-visible-rows-sum"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelでフィルター後に表示されている行だけを合計するには","item":"https://vaynexis.jp/column/excel-subtotal-visible-rows-sum"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelでフィルター後に表示されている行だけを合計するには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelでフィルター後に表示されている行だけを合計するには？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelでフィルター後に見えている明細だけを足すには、金額列をSUBTOTALの参照範囲に指定し、集計方法を109にします。手動で隠した行は含め、フィルターで除かれた行だけを外す場合は9を使います。合計を共有するときは、絞り込みの条件と対象の列も添えます。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月9日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelでフィルター後に見えている明細だけを合計したい小さな会社の担当者が、SUBTOTALの集計方法9と109の違いと参照範囲を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月9日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">合計を置くセルと明細の列を分ける</a></li>
+      <li><a href="#s2">集計方法の109と9を使い分ける</a></li>
+      <li><a href="#s3">絞り込み後に参照範囲と金額を確かめる</a></li>
+      <li><a href="#s4">集計値を渡すときは絞り込みの条件を添える</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．合計を置くセルと明細の列を分ける</h2>
+    <p>確認日：2026年11月9日。</p>
+    <p>Microsoftの日本語ヘルプでは、SUBTOTALの最初の引数は集計方法で、後続の引数は集計する範囲です。同関数は列に沿った縦方向のデータの集計に使います。関数のページの適用先には、Excel for Microsoft 365（Mac版を含む）と Excel 2016〜2024 が挙がっています。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>明細の上や表の外など、絞り込んでも見える場所を合計の表示先に決めます。金額列は見出しや合計セルを除き、集計する明細行の範囲を指定します。全件の金額を載せる欄が別にある場合は、「表示中の明細合計」といった見出しで区別します。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．集計方法の109と9を使い分ける</h2>
+    <p>公式の集計方法の表では、合計は9または109です。どちらでもフィルターの結果に含まれない行は除かれます。手動で非表示にした行は9では含まれ、109では除かれます。</p>
+    <p>Microsoftの説明では、ここでいう手動の非表示は、Excel デスクトップ アプリケーションで［ホーム］タブの［セル］の［書式］を選び、［非表示/再表示］の［行を表示しない］で隠した行です。同じ表で件数を見るときは、COUNTA に当たる3と103、COUNT に当たる2と102が、同じ区別で使えます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">合計に含めたい範囲</th><th scope="col">集計方法</th></tr></thead><tbody><tr><td data-label="合計に含めたい範囲">フィルターで絞り込んだ範囲のうち、表示されている行</td><td data-label="集計方法">109</td></tr><tr><td data-label="合計に含めたい範囲">フィルター条件を満たす行。手動で非表示にした行も含める</td><td data-label="集計方法">9</td></tr></tbody></table></div>
+    <p>表示中の行だけなら、合計を置くセルで「=SUBTOTAL(109,」と入力し、集計する金額の範囲を選び、閉じ括弧を入れて確定します。表の使い方として手動で非表示にした行も集計する場合は、最初の引数に9を指定します。合計の隣に「=SUBTOTAL(103,」で始まる件数の式も置いておくと、絞り込み後の行数と合計を一緒に見比べられます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．絞り込み後に参照範囲と金額を確かめる</h2>
+    <p>普段の表で使う条件を一つ選び、絞り込み後の行と合計を見比べます。表示中の金額と合計が対応しないときは、式を開いて、参照が目的の金額列の末尾まで含まれているか、集計方法が目的に合っているかを確かめます。金額欄に未入力や文字列で入った値があれば、元の入力も調べます。</p>
+    <p>Microsoftの案内では、SUBTOTALは横方向の範囲を集計するための関数ではなく、SUBTOTAL(109,B2:G2) のように横方向の範囲を指定した場合は、列を非表示にしても結果は変わりません。また、参照先に3-D 参照が含まれている場合は、エラー値 #VALUE! が返されます。月を横に並べた表で非表示の列を除いて合計したい場合や、複数のシートをまとめて合計したい場合は、この関数とは別の方法を検討します。</p>
+    <p>明細に途中の小計がある表では、元の金額行と小計行の配置を確認します。SUBTOTALは参照範囲内にある別のSUBTOTALを二重計算しないよう無視すると案内されています。Microsoftは、リストに集計行を入れるには、通常は［データ］タブの［アウトライン］にある［小計］を使う方が簡単で、作成した集計リストを修正するときは SUBTOTAL 関数を編集すると案内しています。途中の小計が別の方法で作られている場合は、明細と小計を集計範囲で混ぜないように整理します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．集計値を渡すときは絞り込みの条件を添える</h2>
+    <p>集計値を報告するときは、表の版、対象列、絞り込み条件、手動非表示をどう扱ったかを残します。値だけを別資料に転記する場合も、どの時点の、どの明細を合計したかが分かるようにします。</p>
+    <p>明細を追加する運用では、新しい行が集計範囲に入っているかを確かめてから数値を使います。複数人で使う表では、条件を変えた人と集計値を使う人が同じ範囲を見ているか確認します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">合計を置くセルを集計範囲の外にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">目的の金額列と明細の末尾まで指定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">手動非表示を含めるかに応じて109または9を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">横方向の範囲や、複数のシートをまたぐ参照を指定していないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">絞り込んだ明細と表示された合計を、件数の式（103）も並べて見比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">渡す集計値に、使った表と絞り込み条件を添えたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月9日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/subtotal-function" rel="noopener" target="_blank">Microsoft SUBTOTAL 関数</a>：適用先、引数、9と109、手動の非表示の意味、件数の番号、縦方向と横方向、3-D 参照、フィルター、［小計］、入れ子</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-filter-amount-range-category">Excelの明細を金額の範囲と区分で絞り込んで見る手順</a></li>
+      <li><a href="/column/excel-copy-visible-cells-only">Excelで非表示の行を含めず見える部分だけコピーするには</a></li>
+      <li><a href="/column/excel-group-rows-outline-collapse">Excelの明細を必要なときだけ開く、行のグループ化と確認点</a></li>
+      <li><a href="/column/excel-sheet-view-filter-without-affecting-others">Excelの共有表で他の人の表示を変えずに絞り込む手順</a></li>
+      <li><a href="/column/excel-formulatext-show-formula">Excelで計算結果の隣に使っている数式を表示するには？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

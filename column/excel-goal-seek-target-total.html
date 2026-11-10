@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで合計が指定額になる入力値を逆算するには？｜Vaynexis</title>
+  <meta name="description" content="Windows版Excelで、合計などの数式の結果を指定額に近づける入力値を、ゴール シークで求める手順です。数式のセル、目標値、変化させるセルを区別し、計算後に金額の単位や丸め、元の前提を見直します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで合計が指定額になる入力値を逆算するには？｜Vaynexis">
+  <meta property="og:description" content="Windows版Excelで、合計などの数式の結果を指定額に近づける入力値を、ゴール シークで求める手順です。数式のセル、目標値、変化させるセルを区別し、計算後に金額の単位や丸め、元の前提を見直します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-goal-seek-target-total">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-goal-seek-target-total">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで合計が指定額になる入力値を逆算するには？","description":"Windows版Excelで、合計などの数式の結果を指定額に近づける入力値を、ゴール シークで求める手順です。数式のセル、目標値、変化させるセルを区別し、計算後に金額の単位や丸め、元の前提を見直します。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-goal-seek-target-total"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで合計が指定額になる入力値を逆算するには？","item":"https://vaynexis.jp/column/excel-goal-seek-target-total"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで合計が指定額になる入力値を逆算するには？</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで合計が指定額になる入力値を逆算するには？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Windows版のExcel for Microsoft 365では、［データ］の［What-If 分析］から［ゴール シーク］を開きます。［セルの設定］に合計の数式が入ったセルの参照、［目標値］に求める金額、［変化させるセル］に数式が参照する入力セルを指定します。指定できる入力セルは1つです。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月9日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelの合計を指定額に合わせる入力値を求めたい小さな会社の担当者が、ゴール シークの3つの欄と、計算後の端数や前提を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月9日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">数式セルと、変更を許す入力を分ける</a></li>
+      <li><a href="#s2">ゴール シークの3つの欄に入れる情報</a></li>
+      <li><a href="#s3">計算後に、金額と前提を別々に見直す</a></li>
+      <li><a href="#s4">目標に合わなければ、参照先と入力の条件を点検する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．数式セルと、変更を許す入力を分ける</h2>
+    <p>確認日：2026年11月9日。</p>
+    <p>この記事はWindowsデスクトップ版のExcel for Microsoft 365を対象にします。ゴール シークは、数式で得たい結果が決まっていて、そのために必要な入力値が分からないときに使う機能です。Microsoftの案内では、変える入力セルは結果の数式から参照されている必要があります。</p>
+    <p>Microsoftの操作例では、得たい結果は数式の結果として求めるため、分かっていても値としてセルに入力せず、先に数式を入れたセルを用意します。ゴール シークは数式から始める必要があると説明されています。また例では、変化させるセル（例では金利の欄）がまだ空のため0%と見なされた結果が先に表示され、この時点の値は無視して構わないとされています。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>合計のセルを選び、数式バーに計算式が入っているか確かめます。帳票に表示される金額が入力値を変えると動くかを、作業用のコピーで確認しておくと、集計対象外のセルを選ぶ取り違えを防げます。共有中の原本でいきなり試算すると、ほかの担当者が途中の値を使うことがあるため、作業用の版を分けます。</p>
+    <p>変えてよい入力は、担当者から調整を任されている欄だけにします。合計に含まれる確定額や変更できない数量は、計算の前提として控えます。目標が税抜額か税込額か、円単位か千円単位かも、合計の数式と同じ基準にそろえます。目標値だけを別の単位で入力すると、合計が意図した金額と合いません。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．ゴール シークの3つの欄に入れる情報</h2>
+    <p>MicrosoftのWindows向け案内では、［データ］タブの［予測］グループで［What-If 分析］を選び、［ゴール シーク］を開きます。［セルの設定］には数式を含むセルの参照、［目標値］には数式で得たい値、［変化させるセル］には調整するセルの参照を入れ、［OK］を選びます。</p>
+    <p>同じページの適用先には、Excel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016 と、Excel for Microsoft 365 for Mac などのMac版が挙がっています。Mac版（macOS）の欄では［予測］グループの記載がなく、［データ］タブで［What-If 分析］、［ゴール シーク］の順に選びます。3つの欄に入れる内容と［OK］で実行する流れは、Windowsの欄と同じです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">画面の欄</th><th scope="col">入れる情報</th><th scope="col">入れる前に見る箇所</th></tr></thead><tbody><tr><td data-label="画面の欄">セルの設定</td><td data-label="入れる情報">合計の数式があるセル</td><td data-label="入れる前に見る箇所">参照範囲と合計の単位</td></tr><tr><td data-label="画面の欄">目標値</td><td data-label="入れる情報">合計として求める数値</td><td data-label="入れる前に見る箇所">金額の根拠、税や丸めの扱い</td></tr><tr><td data-label="画面の欄">変化させるセル</td><td data-label="入れる情報">調整を許された1つの入力セル</td><td data-label="入れる前に見る箇所">結果の数式から参照されること、変更前の値</td></tr></tbody></table></div>
+    <p>離れた場所にセルがあるときは、セル番地に加えてシート名と欄名も控えます。合計が複数ある表では、帳票で使う合計と、確認用の小計を区別します。あとで追えるように、どのファイルの版で計算したかを入力の控えに添えます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．計算後に、金額と前提を別々に見直す</h2>
+    <p>ゴール シークで結果が出たら、変化した入力の値と、合計の表示をそれぞれ確認します。画面に表示された合計が指定額に見える場合でも、金額が丸められて表示されていることがあります。セルの表示と、計算に使われる値を確認し、帳票で採用する端数処理と一致するかを見ます。Microsoftの操作例でも、ゴール シークで値が入ったセルは、最後に［ホーム］タブで表示形式（例ではパーセンテージ）と小数点以下の表示桁数を設定しています。表示の桁を整えた後も、採用する値は帳票の端数処理の決まりに合わせて別に決めます。</p>
+    <p>求めた値に小数が含まれるときは、その入力欄に小数を採用できるか担当者に確かめます。端数を調整する場合は、調整後の値を入れたときの合計を再計算し、目標額との差を控えます。計算で得た値と、実際に採用する値が異なるときは、差が生じた理由も分けて残します。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">残す情報</th><th scope="col">担当者に渡すときの照合先</th></tr></thead><tbody><tr><td data-label="残す情報">目標額とその単位</td><td data-label="担当者に渡すときの照合先">依頼を受けた文書や金額の管理表</td></tr><tr><td data-label="残す情報">数式セルと入力セル</td><td data-label="担当者に渡すときの照合先">作業用ファイルのシート名と欄名</td></tr><tr><td data-label="残す情報">入力の変更前と計算結果</td><td data-label="担当者に渡すときの照合先">作業用の版と計算後の控え</td></tr><tr><td data-label="残す情報">採用値とそのときの合計</td><td data-label="担当者に渡すときの照合先">丸め方や数量の制限を確認した記録</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．目標に合わなければ、参照先と入力の条件を点検する</h2>
+    <p>目標に近い結果が得られないときは、入力セルを一度変えて合計が動くか、合計の数式が別の集計範囲を指していないかを作業用のコピーで見直します。合計が動いても希望した額に合わない場合は、変化させる数値の取り得る範囲や、途中の数式にある条件と丸めを担当者に確認します。</p>
+    <p>Microsoftの案内では、ゴール シークで扱える変数入力値は1つです。複数の入力値を変える必要がある場合は、ソルバー アドインを使うよう案内されています。複数の入力も動かす必要がある場合は、先に動かしてよい欄と固定する欄を決めます。元の条件のままで目標に合わなかったときは、条件の変更を依頼元へ相談し、結果だけを使って金額を確定しないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">結果のセルに、値ではなく合計の数式が入っていることを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">使っている版（WindowsかMacか）の欄で、ゴール シークを開く場所を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">合計の数式が、変えてよい1つの入力セルを参照することを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">目標値の根拠と、合計に使う単位・税・丸めの条件をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">作業用のファイルと入力の変更前の値を控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">求めた入力値と、表示される合計をそれぞれ確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">採用する値を入れ直したときの合計と、目標額との差を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">目標に合わない場合に見直す数式・前提と相談先を残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月9日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/use-goal-seek-to-find-the-result-you-want-by-adjusting-an-input-value" rel="noopener" target="_blank">Microsoft サポート ゴール シークを使用して入力値を調整し、必要な結果を求める</a>：Windows版とMac版の操作、適用先、設定欄、数式から始めること、数式が参照する入力と変数入力値の数、ソルバーの案内</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-quantity-unit-price-total">Excelで数量と単価の明細から総額を出す手順と確認のしかた</a></li>
+      <li><a href="/column/excel-round-amount-formula">Excelで端数を四捨五入した金額を計算結果として残すには</a></li>
+      <li><a href="/column/excel-select-formula-cells">Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント</a></li>
+      <li><a href="/column/excel-overwrite-restore-previous-version">Excelを誤って上書きしたとき、以前の版を確認して戻す手順</a></li>
+      <li><a href="/column/excel-sparklines-monthly-trend-per-row">Excelの品目別一覧で、各行に月次推移を表示するには？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
