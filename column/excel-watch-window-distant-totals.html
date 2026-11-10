@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで離れた合計セルを見ながら入力する｜ウォッチ ウィンドウ｜Vaynexis</title>
+  <meta name="description" content="Excelのウォッチ ウィンドウで離れた数式セルを登録し、明細入力時の結果を確認します。ブック・シート・セルを取り違えない手順を説明します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで離れた合計セルを見ながら入力する｜ウォッチ ウィンドウ｜Vaynexis">
+  <meta property="og:description" content="Excelのウォッチ ウィンドウで離れた数式セルを登録し、明細入力時の結果を確認します。ブック・シート・セルを取り違えない手順を説明します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-watch-window-distant-totals">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-watch-window-distant-totals">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで離れた合計セルを見ながら入力する｜ウォッチ ウィンドウ","description":"Excelのウォッチ ウィンドウで離れた数式セルを登録し、明細入力時の結果を確認します。ブック・シート・セルを取り違えない手順を説明します。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-watch-window-distant-totals"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで離れた合計セルを見ながら入力する","item":"https://vaynexis.jp/column/excel-watch-window-distant-totals"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで離れた合計セルを見ながら入力する</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで離れた合計セルを見ながら入力する｜ウォッチ ウィンドウ</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Windows版のExcelでは、見たい合計セルを選び、［数式］タブの［ワークシート分析］グループで［ウォッチ ウィンドウ］を選び、［ウォッチの追加］、［追加］の順に選んで登録します。明細へ移動しても、ウィンドウで登録したセルとその数式を確認でき、行をダブルクリックするとそのセルへ移れます。Macでは先に［ウォッチ ウィンドウ］を選んでからセルを選びます。合計が動かないときは、ブックの計算方法が［手動］になっていないかも見ます。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelで明細を入力しながら離れた合計セルの動きを見たい小さな会社の担当者が、ウォッチ ウィンドウの登録・計算方法・外部参照を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">先に確認する合計セルを選ぶ</a></li>
+      <li><a href="#s2">登録してから明細入力へ移る</a></li>
+      <li><a href="#s3">別のブックへの外部参照がある場合を切り分ける</a></li>
+      <li><a href="#s4">入力が終わったら合計を帳票と照合する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．先に確認する合計セルを選ぶ</h2>
+    <p>確認日：2026年11月10日。</p>
+    <p>Microsoftの案内では、ワークシートに表示されていないセルとその数式をウォッチ ウィンドウで確認できます。</p>
+    <p>この案内の適用先は、Excel for Microsoft 365、Excel 2024、Excel 2021と、それぞれのMac版です。Web版のExcelは適用先に挙がっていません。また、1つのセルに付けられるウォッチは1つだけです。</p>
+    <p>どのセルに数式が入っているか分からないときは、［ホーム］タブの［編集］グループで［検索 &amp; 選択］、［選択］、［数式］の順に選ぶと、数式を含むセルをまとめて選べます。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>集計表を開いて、入力中に見る合計と提出用の合計を区別します。名前が似たシートがある場合は、ブック名、シート名、セル番地と表示されている項目名を記録します。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．登録してから明細入力へ移る</h2>
+    <p>MicrosoftのWindows向け手順では、確認するセルを選び、［数式］タブの［ワークシート分析］グループで［ウォッチ ウィンドウ］を選んでから、［ウォッチの追加］、［追加］の順に選びます。Macでは順番が逆で、先に［ウォッチ ウィンドウ］を選び、その後で監視するセルを選びます。</p>
+    <p>同じ案内では、ウォッチ ウィンドウは画面の上・下・左・右のいずれかに寄せて置け、列の幅は列見出しの右の境界をドラッグして変えられます。</p>
+    <p>追加する範囲を確認し、選んだ合計の値が登録されたかを見ます。明細を編集した後、合計が変わらなければ、入力した欄が数式の集計範囲に含まれているかと、ブックの計算方法が［手動］になっていないかを確かめます。</p>
+    <p>Microsoftの案内では、Excelは数式が依存するセルが変更された場合にだけ数式を自動で再計算し、［ブックの計算］の［自動］が既定の設定です。［手動］にしていると、F9キーを押すなどして再計算したときにだけ数式が更新されます。［手動］のまま結果を見たいときは、［数式］タブの［計算］グループで、［今すぐ計算］なら開いているすべてのワークシートを、［シートの計算］なら作業中のワークシートを再計算できます。Windows版では同じ［計算］グループの［計算オプション］から［自動］に戻せます。Excelのデスクトップアプリでは、この設定を変えると開いているすべてのブックに影響します。</p>
+    <p>計算方法を変えたときは、ほかに開いているブックの計算も同じ設定で動くため、作業の終わりに元の設定へ戻したかを確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．別のブックへの外部参照がある場合を切り分ける</h2>
+    <p>Microsoftの案内では、他のブックへの外部参照を持つセルは、そのブックが開いている場合にのみウォッチ ウィンドウに表示されます。</p>
+    <p>登録した行が表示されないときは、別ファイルの参照か、そもそも登録したセルが違うのかを切り分けます。参照先のファイルを開く必要があるときは、変更すべき明細を誤って別ファイルに入力しないよう画面を確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．入力が終わったら合計を帳票と照合する</h2>
+    <p>Microsoftの案内では、ウォッチ ウィンドウ内の項目をダブルクリックすると、監視対象のセルへ移動できます。</p>
+    <p>同じ案内では、登録を外すときは、ウォッチ ウィンドウが表示されていなければ［数式］タブの［ワークシート分析］グループで［ウォッチ ウィンドウ］を選び、削除する行を選んで［ウォッチの削除］を選びます。複数の行を外すときは、Ctrlキーを押しながら選びます。</p>
+    <p>終了時は合計をそのセルで開き、帳票や作業控えの結果と突き合わせます。不要になった登録を消す場合は、登録した行を選んだことを確認し、合計のセルそのものを編集しないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">確認したい合計とセル番地を特定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ウォッチへ追加した値を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">明細入力後に意図した合計が変わるか見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">外部参照があるときは参照先を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ブックの計算方法が［自動］か（［手動］にしたら元に戻したか）</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">提出に使う合計と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">不要になった登録を［ウォッチの削除］で外したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/watch-a-formula-and-its-result-by-using-the-watch-window" rel="noopener" target="_blank">Microsoft サポート ウォッチ ウィンドウを使用して数式と計算結果を確認する</a>：登録、表示する情報、外部参照と削除</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/change-formula-recalculation-iteration-or-precision-in-excel" rel="noopener" target="_blank">Microsoft サポート Excel で数式の再計算、反復計算、または精度を変更する</a>：自動と手動の計算、計算オプションの場所、すべてのブックへの影響</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-manual-recalculation-result-check">Excelで入力値を変えても結果が変わらないとき、何を確かめる？</a></li>
+      <li><a href="/column/excel-select-formula-cells">Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント</a></li>
+      <li><a href="/column/excel-workbook-links-update-prompt">Excelを開くたび外部リンクの更新確認が出るときの確認手順</a></li>
+      <li><a href="/column/excel-freeze-header-row-and-id-column">Excelの長い一覧で見出し行と管理番号列を同時に固定する方法</a></li>
+      <li><a href="/column/excel-pivot-group-dates-year-month">Excelの日別明細を年と月で集計する</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Googleフォームで送信済み回答の訂正を本人に許可する設定と確認｜Vaynexis</title>
+  <meta name="description" content="送信した内容を本人に直してもらうための設定と、案内から訂正結果の照合までを整理します。回答の編集許可、回答回数の制限、フォームの公開状態を確かめる順番に加え、訂正した箇所の受け取り方や、途中で進めないときの確認点をまとめました。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Googleフォームで送信済み回答の訂正を本人に許可する設定と確認｜Vaynexis">
+  <meta property="og:description" content="送信した内容を本人に直してもらうための設定と、案内から訂正結果の照合までを整理します。回答の編集許可、回答回数の制限、フォームの公開状態を確かめる順番に加え、訂正した箇所の受け取り方や、途中で進めないときの確認点をまとめました。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/google-forms-allow-respondents-edit-responses">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/google-forms-allow-respondents-edit-responses">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Googleフォームで送信済み回答の訂正を本人に許可する設定と確認","description":"送信した内容を本人に直してもらうための設定と、案内から訂正結果の照合までを整理します。回答の編集許可、回答回数の制限、フォームの公開状態を確かめる順番に加え、訂正した箇所の受け取り方や、途中で進めないときの確認点をまとめました。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-forms-allow-respondents-edit-responses"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Googleフォームで送信済み回答の訂正を本人に許可する設定","item":"https://vaynexis.jp/column/google-forms-allow-respondents-edit-responses"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Googleフォームで送信済み回答の訂正を本人に許可する設定</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Googleフォームで送信済み回答の訂正を本人に許可する設定と確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Googleフォームで送信済みの回答を本人が訂正できるようにするには、作成者側で [回答の編集を許可する] をオンにします。訂正後の内容を受け手が確認する所までを、受付担当の手順に含めるとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、送信済みのフォームの回答を本人に直してもらいたい小さな会社の担当者が、［回答の編集を許可する］の設定と、回答回数・公開状態との関係、確認メッセージでの案内、訂正後の回答の照合を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">作成者側で回答の編集許可をオンにする</a></li>
+      <li><a href="#s2">回答回数とアクセスの設定を併せて見る</a></li>
+      <li><a href="#s3">送信後の案内に訂正の連絡先を添える</a></li>
+      <li><a href="#s4">訂正前後の内容を受け手側で照合する</a></li>
+      <li><a href="#s5">訂正の途中で進めないときは表示を確認する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．作成者側で回答の編集許可をオンにする</h2>
+    <p>確認日：2026年11月10日。パソコンのブラウザで行う操作を扱います。</p>
+    <p>Googleフォームの対象フォームを開き、上部の [設定] をクリックします。 [回答] の横にある下矢印をクリックし、[回答の編集を許可する] をオンにします。</p>
+    <p>変更する対象は、いま回答を受け付けているものと照合します。似た名前のひな形や過去の受付用を開いていないか、フォームの題名と質問の内容を併せて見るとよいです。訂正依頼を受けた担当者が設定を変える際にも、依頼文に書かれた名称だけで対象を判断せず、案内済みの受付内容と突き合わせます。</p>
+    <p>フォーム本体の編集や回答の分析を他のユーザーと行う用途では、共同編集者とフォームを共有します。</p>
+    <p>回答者本人に訂正してもらうために使うのは、上記の回答の設定です。フォームの回答のヘルプでは、共同編集者とフォームを共有している場合、共同編集者はフォームにリンクされているスプレッドシートにもアクセスできるとしています。回答者を共同編集者に加えると、こうした範囲まで開くことになるため、訂正のための設定とは分けて考えます。受付担当が引き継ぐメモには、設定した対象の名前と、送信済みの内容を本人が直せるようにしたことを記しておくと、次の担当者も意図を読み取れます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．回答回数とアクセスの設定を併せて見る</h2>
+    <p>[回答を 1 回に制限する] をオンにした場合、回答者がフォームにアクセスして入力するには、Googleアカウントへのログインが必要です。</p>
+    <p>既存の受付に訂正を追加する際は、回答回数の方針も確認します。訂正を案内する文面と、同じ人からの追加の回答を受け付けるかどうかの扱いをそろえておくと、受付担当が追加分をどう数えるかで迷いにくくなります。</p>
+    <p>回答者がフォームにアクセスするには公開が必要で、公開を停止すると、リンクを知っている回答者もアクセスできなくなります。</p>
+    <p>訂正の相談が届いたときは、そのフォームが公開中かと、社内で決めた訂正の受付期間内かを確かめます。フォームにアクセスできる状態かどうかだけで、訂正を受け付けるかを決めないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．送信後の案内に訂正の連絡先を添える</h2>
+    <p>Google Workspace のラーニング センターでは、回答の送信後に考えが変わった場合や回答時に書き忘れた事項がある場合に、本人が回答を更新できる使い方として紹介しています。 フォームの送信後に回答者が受け取る確認メッセージは、作成者が変更できます。</p>
+    <p>上部の [設定] で [プレゼンテーション] の横にある下矢印をクリックし、[確認メッセージ] の横にある [編集] をクリックします。 メッセージを入力し、[保存] をクリックします。</p>
+    <p>案内文には、社内で決めた訂正の受付期間と問い合わせ先を記します。訂正に困った人が、受付担当へ何を伝えればよいかも添えるとよいです。たとえば、次のような短い文面を用意できます。</p>
+    <pre class="prompt">回答を受け付けました。
+訂正を受け付ける期間は、事前の案内に記載したとおりです。
+訂正に進めない場合は、受付担当へ対象の申込名と困っている内容を連絡できます。</pre>
+    <p>期限の表現は、最初の依頼文とそろえます。「後で変更できます」とだけ書くと、いつまで受け付けるのかが伝わりにくいため、すでに配布している案内を読み返せる形にします。問い合わせ先の担当名や連絡経路も、引き継ぎ後に通じるものを記すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．訂正前後の内容を受け手側で照合する</h2>
+    <p>受け手側ではユーザーごとに回答を表示でき、[回答] の [個別] から確認できます。フォームを複数回送信できるように設定している場合は、送信した回答ごとに表示することもできます。本人が訂正のつもりで新しく回答を送り直していないかも、ここで見分けます。</p>
+    <p>担当者は訂正を受けたときに、対象者の回答を開き、連絡に書かれた変更箇所を照合します。画面を開けたこと、書き換える内容を決めたこと、受け手が訂正後の内容を確認したことを、それぞれ確認できるように作業を区切るとよいです。確認の終わりは、受け手が最新の内容を読めた所に置きます。</p>
+    <h3 class="h3">受付担当の記録例</h3>
+    <p>ここからは当社の整理です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">記録する項目</th><th scope="col">短い記入例</th><th scope="col">受け手が照合する所</th></tr></thead><tbody><tr><td data-label="記録する項目">対象の申込</td><td data-label="短い記入例">社内勉強会の参加申込</td><td data-label="受け手が照合する所">受付中の催しと一致しているか</td></tr><tr><td data-label="記録する項目">訂正する箇所</td><td data-label="短い記入例">参加方法</td><td data-label="受け手が照合する所">変更対象の質問が合っているか</td></tr><tr><td data-label="記録する項目">訂正前から訂正後</td><td data-label="短い記入例">会場参加からオンライン参加</td><td data-label="受け手が照合する所">受信した内容が連絡と合っているか</td></tr><tr><td data-label="記録する項目">確認の状態</td><td data-label="短い記入例">受付担当が確認済み</td><td data-label="受け手が照合する所">後続の準備へ渡してよいか</td></tr></tbody></table></div>
+    <p>記録は、どの質問の内容が変わったかが分かる粒度にします。「訂正済み」だけでは、準備担当へ何を伝え直すか読み取れません。すでに別の担当へ渡した案内や手配があれば、訂正箇所と関係するものを確かめ、差し替えの要否を担当者が判断します。</p>
+    <p>手元の控えと受信内容が合わないときは、どちらを採用するかをその場で推測せず、本人の意図を確認してから準備を進めます。引き継ぎには、確認が済んだ箇所と回答待ちの箇所を分けて記すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．訂正の途中で進めないときは表示を確認する</h2>
+    <p>Google のヘルプ（フォームに回答する際の一般的なエラー）では、送信できない場合の確認点として、赤でハイライト表示された項目と、必須の項目であることを示す「この質問は必須です」というメッセージを挙げています。 同じヘルプでは、[次へ] を押して進めない場合は、必須項目の記入が不完全であるか、回答の検証エラーが未解決であることを意味します。</p>
+    <p>本人から相談を受ける際は、開けないのか、入力中に止まるのか、送信の操作で止まるのかを聞き取ります。質問の見出しと表示されたメッセージを控えてもらうと、担当者が確認する場所を絞れます。画面の様子を共有する場合も、相談に必要な範囲を伝える形にします。</p>
+    <p>同じヘルプは、フォームについて質問がある場合は、フォームのオーナーまたはフォームを共有したユーザーへ直接問い合わせるよう案内しています。</p>
+    <p>受付担当は、相手から伝わった状況と、自分が確認した設定を分けて残します。「本人は訂正したつもり」と「受け手が訂正後の内容を確認できた」を混同せず、確認が済んだ範囲を連絡します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">設定を変更する対象と、案内中の受付が一致していることを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">本人による訂正ができる状態かを、見本の回答で確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">回答回数の方針と、利用者への案内が合っているかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">社内で決めた訂正の受付期間と問い合わせ先を案内したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">訂正対象の質問と、受け取った内容を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">関係する準備担当へ変更を伝え、確認待ちの箇所を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/docs/answer/2839588?hl=ja" rel="noopener" target="_blank">フォームを公開して回答者と共有する</a>：送信済み回答の編集許可、設定手順、回数制限とログイン、確認メッセージの変更、公開状態</li>
+      <li><a href="https://support.google.com/docs/answer/6281888?hl=ja" rel="noopener" target="_blank">Google フォームの使い方</a>：フォーム本体の共同編集の用途とパソコンでの利用</li>
+      <li><a href="https://support.google.com/docs/answer/139706?hl=ja" rel="noopener" target="_blank">フォームの回答を表示、管理する</a>：ユーザーごとの回答表示、複数回送信した回答の表示、共同編集者とスプレッドシートのアクセス</li>
+      <li><a href="https://support.google.com/a/users/answer/13138098?hl=ja" rel="noopener" target="_blank">フォームをカスタマイズするためのヒント</a>：送信後に本人が回答を更新する使い方（Google Workspace ラーニング センター）</li>
+      <li><a href="https://support.google.com/docs/answer/15473134?hl=ja" rel="noopener" target="_blank">Google フォームに回答する際の一般的なエラーを修正する</a>：必須項目、次へ進めない場合の原因、問い合わせ先</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/google-forms-closing-date-time">Googleフォームの回答受付を締切日時で止める設定と確認手順</a></li>
+      <li><a href="/column/google-forms-prefilled-link">Googleフォームの一部を入力済みで配る事前入力リンクの作り方</a></li>
+      <li><a href="/column/google-forms-add-editor-handover">Googleフォームの担当者を共同編集に加える手順と権限の確認</a></li>
+      <li><a href="/column/google-forms-response-validation-digits">Googleフォームで入力の桁数や形式を制限する設定と確認</a></li>
+      <li><a href="/column/google-calendar-out-of-office-auto-decline">Googleカレンダーで休暇中の会議招待を自動で断る手順と確認点</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

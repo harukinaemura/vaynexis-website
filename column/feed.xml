@@ -7,403 +7,403 @@
   <updated>2026-11-10T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
   <entry>
-    <title>宿日直許可の申請前に何をそろえる？ 勤務表と実際の対応記録の見方</title>
-    <link href="https://vaynexis.jp/column/night-day-duty-permit-application-records"/>
-    <id>https://vaynexis.jp/column/night-day-duty-permit-application-records</id>
+    <title>クリーニングの預かり証には何を示す？引渡し後の苦情連絡先</title>
+    <link href="https://vaynexis.jp/column/cleaning-receipt-complaint-contact-notice"/>
+    <id>https://vaynexis.jp/column/cleaning-receipt-complaint-contact-notice</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>宿日直許可を相談する前に、申請する勤務、勤務中の対応記録、人数、回数、手当、就寝設備を様式第10号と照合する方法を整理します。</summary>
+    <summary>クリーニングの預かり証では、苦情の申出先が利用後も分かるよう、店舗の名称・所在地・電話番号をそろえます。公式資料をもとに、店頭掲示との照合、預かり証を回収する際の別書面、デジタル案内の併用、担当交代や連絡先変更時の点検を整理します。</summary>
   </entry>
   <entry>
-    <title>レンタカーの定期報告を作る｜年度中の貸渡と3月末の車両数を分ける</title>
-    <link href="https://vaynexis.jp/column/rental-car-annual-report-fleet-count"/>
-    <id>https://vaynexis.jp/column/rental-car-annual-report-fleet-count</id>
+    <title>レンタカーの貸渡簿は何とそろえる？免許確認と出発・返却の記録</title>
+    <link href="https://vaynexis.jp/column/rental-car-lending-ledger-records"/>
+    <id>https://vaynexis.jp/column/rental-car-lending-ledger-records</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>レンタカー事業の定期報告で出す、年度中の貸渡しをまとめる報告書（様式1）と3月31日の配置車両数一覧表（様式2）を準備する手順。年度をまたぐ貸渡の集計、延貸渡回数と延貸渡日車数の数え方、2帳票の突き合わせを整理します。</summary>
+    <summary>貸渡簿を引き継ぐ事務担当者向けに、借受人と運転者の区別、免許情報の確認、車両と出発・返却記録の照合を整理します。記載事項の意味に加え、予定と確定情報の分け方、料金や事故の確認、原票のまとめ方と保存、管轄の窓口に確認する点まで扱います。</summary>
   </entry>
   <entry>
-    <title>社内預金の預金管理状況報告を準備する｜年度末残高と保全措置の確認</title>
-    <link href="https://vaynexis.jp/column/in-house-deposit-annual-status-report"/>
-    <id>https://vaynexis.jp/column/in-house-deposit-annual-status-report</id>
+    <title>船積依頼書には何を書く？荷送人・荷受人と輸送情報の確認欄</title>
+    <link href="https://vaynexis.jp/column/shipping-instructions-form-fields"/>
+    <id>https://vaynexis.jp/column/shipping-instructions-form-fields</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>社内預金の預金管理状況報告に向けて、年度当初と年度末の残高、年度中の受入額と払戻額、預金者数、保全措置を台帳や協定と照合します。</summary>
+    <summary>船積依頼書（シッピングインストラクション）の欄を作る担当者向けに、農林水産省近畿農政局の資料の記入例とジェトロの解説、運送会社の案内の一例をもとに、荷送人・荷受人と着荷通知先、予約・船名・港、貨物の個数・重量、運賃の支払条件の確かめ方と、送付後の訂正や保管の順番をまとめます。</summary>
   </entry>
   <entry>
-    <title>Excelの数量欄で負数や小数を防ぐ｜入力規則の上下限と貼り付け後の点検</title>
-    <link href="https://vaynexis.jp/column/excel-quantity-validation-whole-number-range"/>
-    <id>https://vaynexis.jp/column/excel-quantity-validation-whole-number-range</id>
+    <title>贈答品受領報告書には何を書く？相手先・受領日・内容の記録欄</title>
+    <link href="https://vaynexis.jp/column/gift-receipt-report-fields"/>
+    <id>https://vaynexis.jp/column/gift-receipt-report-fields</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>Excelの数量欄で整数と上下限を設定し、手入力を制限する方法。ゼロや空欄の扱いを決め、貼り付けや入力済みの値を別途確認します。</summary>
+    <summary>贈答品受領報告書を新しく作る総務・事務担当者に向け、相手先、受領日、品名、受領のきっかけ、金額の確認方法などの欄を整理します。人事院が公開している国家公務員の贈与等報告書の記載項目を参考に、宛名と受取人の分け方、資料との照合、受領後の扱いを残す方法を、短い記入例と確認表で説明します。</summary>
   </entry>
   <entry>
-    <title>国税の納税の猶予申請書を準備する｜未納額と添付する財産・収支資料の照合</title>
-    <link href="https://vaynexis.jp/column/national-tax-payment-grace-application-documents"/>
-    <id>https://vaynexis.jp/column/national-tax-payment-grace-application-documents</id>
+    <title>データ項目定義書には何を書く？列名・型・入力例をそろえる確認欄</title>
+    <link href="https://vaynexis.jp/column/data-item-definition-sheet-fields"/>
+    <id>https://vaynexis.jp/column/data-item-definition-sheet-fields</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>国税の納税の猶予を相談するとき、未納の税、現在納付可能な資金、猶予を求める額、財産と収支の添付資料をどう照合するかを整理します。</summary>
+    <summary>データ項目定義書の記載項目を、列名・型・意味・単位・入力例・出典から整理します。公式資料の説明と社内で決める入力ルールを分け、空欄の扱い、選択肢の参照先、元資料との照合、変更時の記録まで、短いひな形と架空の記入例で確認できます。</summary>
   </entry>
   <entry>
-    <title>Wordで項目名と番号の間に点線を入れる｜タブ位置とリーダーの設定</title>
-    <link href="https://vaynexis.jp/column/word-tab-leader-dots-right-aligned-numbers"/>
-    <id>https://vaynexis.jp/column/word-tab-leader-dots-right-aligned-numbers</id>
+    <title>高年齢者雇用状況等報告の前に就業規則と人数資料をどう集める？</title>
+    <link href="https://vaynexis.jp/column/older-workers-employment-status-report-prep"/>
+    <id>https://vaynexis.jp/column/older-workers-employment-status-report-prep</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>Wordの手入力の索引で項目名と番号の間に点線を表示する方法。右揃えタブとリーダーの使い方、揃わない行の確認箇所、Web用Wordの制約を整理します。</summary>
+    <summary>報告前の準備は、規程の内容と人数の元資料を対応させるところから始まります。在籍時点と期間中の異動、規程の改定前後、職種ごとの違いを分けて整理し、資料の依頼先から集計後に残す記録まで、担当者が確認する順番をまとめます。</summary>
   </entry>
   <entry>
-    <title>植物等輸出検査申請書に何を添える？ 区分別検査と証明書の申請を分けて整理</title>
-    <link href="https://vaynexis.jp/column/plant-export-inspection-application-attachments"/>
-    <id>https://vaynexis.jp/column/plant-export-inspection-application-attachments</id>
+    <title>EDINETで取引先の有価証券報告書を探す｜提出日と訂正の確かめ方</title>
+    <link href="https://vaynexis.jp/column/edinet-find-client-annual-securities-report"/>
+    <id>https://vaynexis.jp/column/edinet-find-client-annual-securities-report</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>植物を輸出する際の区分別検査と植物検疫証明書の交付申請を分け、検査報告書や相手国が求める資料を出荷までにそろえる順番を説明します。</summary>
+    <summary>取引先の報告書を探す事務担当者に向けて、会社名からの検索、対象書類の絞り込み、提出日時と決算期の区別、原本と訂正書類のたどり方を整理します。見つからないときの検索条件の見直しと、引き継ぎに残す記録の考え方も紹介します。</summary>
   </entry>
   <entry>
-    <title>職業訓練実施計画届の日程と受講者は、何で確かめる？</title>
-    <link href="https://vaynexis.jp/column/training-plan-notice-schedule-trainees"/>
-    <id>https://vaynexis.jp/column/training-plan-notice-schedule-trainees</id>
+    <title>容器包装の再商品化委託申込書は何とそろえる？年度と素材資料</title>
+    <link href="https://vaynexis.jp/column/packaging-recycling-consignment-application"/>
+    <id>https://vaynexis.jp/column/packaging-recycling-consignment-application</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>人材開発支援助成金の人材育成支援コースで、職業訓練実施計画届と対象労働者一覧を、日程や受講予定の記録と照合します。</summary>
+    <summary>容器包装の再商品化委託申込を引き継ぐ事務担当者に向け、対象年度と基準決算、会社の基本情報、素材・用途別の数量資料のそろえ方を整理します。申込用紙への転記、提出後の控え、数量や区分に迷ったときの確認先まで、公式資料に沿ってまとめます。</summary>
   </entry>
   <entry>
-    <title>入札参加辞退届を出すとき、案件と提出者をどう照合する？</title>
-    <link href="https://vaynexis.jp/column/nagasaki-bid-withdrawal-notice-check"/>
-    <id>https://vaynexis.jp/column/nagasaki-bid-withdrawal-notice-check</id>
+    <title>特定建設作業実施届は何を添える？使用機械と工程表のそろえ方</title>
+    <link href="https://vaynexis.jp/column/specified-construction-work-notice-attachments"/>
+    <id>https://vaynexis.jp/column/specified-construction-work-notice-attachments</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>長崎市の物品製造等関係の入札参加辞退届を準備する際に、公告、提出者の登録情報、辞退理由を照合します。</summary>
+    <summary>特定建設作業実施届の準備で迷いやすい、使用機械の情報、工程表、付近見取図のつなぎ方を整理します。届出書の欄に沿った資料の集め方と、休工日・実働時間の照合、自治体の様式や提出方法を確かめる順番を、小さな会社の事務担当者向けに解説します。</summary>
   </entry>
   <entry>
-    <title>OneDriveで同僚から共有された資料を、共有した人で探すには？</title>
-    <link href="https://vaynexis.jp/column/onedrive-find-files-shared-with-you-by-person"/>
-    <id>https://vaynexis.jp/column/onedrive-find-files-shared-with-you-by-person</id>
+    <title>警備契約の契約前書面は何を集める？警備方法と役割の資料</title>
+    <link href="https://vaynexis.jp/column/security-contract-pre-contract-document"/>
+    <id>https://vaynexis.jp/column/security-contract-pre-contract-document</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>職場や学校のOneDriveで、同僚から共有されたファイルを共有者で絞り込み、候補が複数あるときに共有日や内容を照合する手順です。</summary>
+    <summary>警備契約の契約前書面に向けて、対象施設、担当業務、鍵の管理、依頼者への報告などの資料をどう集めるか整理します。未定の事項と契約に含まれない事項の違い、元資料から説明用書面へのつなぎ方、担当者へ確認を戻す順序を示します。</summary>
   </entry>
   <entry>
-    <title>適格返還請求書の元になった販売の日や期間は、何で確かめる？</title>
-    <link href="https://vaynexis.jp/column/invoice-return-original-sale-date-check"/>
-    <id>https://vaynexis.jp/column/invoice-return-original-sale-date-check</id>
+    <title>福祉用具貸与計画書は何とそろえる？選定済み機種と利用資料</title>
+    <link href="https://vaynexis.jp/column/welfare-equipment-rental-plan-records"/>
+    <id>https://vaynexis.jp/column/welfare-equipment-rental-plan-records</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>返品に伴う適格返還請求書を作るときに、返品を受けた日と元の取引の日・期間を区別し、販売記録から照合します。</summary>
+    <summary>福祉用具貸与計画書の準備では、選定済みの機種だけでなく、利用者の希望や生活環境、利用目標、選定理由、説明結果をつなぎます。参考様式の旧例と改訂後の違い、次回確認時期の書き方、説明・同意・交付の記録まで、事務担当者が集める資料と引き継ぐ順番を整理します。</summary>
   </entry>
   <entry>
-    <title>クラウドの安全対策で、自社が行う作業の抜けをどう見つける？</title>
-    <link href="https://vaynexis.jp/column/cloud-service-shared-responsibility-own-tasks"/>
-    <id>https://vaynexis.jp/column/cloud-service-shared-responsibility-own-tasks</id>
+    <title>再生医療等提供状況定期報告書は何の実施資料とそろえる？</title>
+    <link href="https://vaynexis.jp/column/regenerative-medicine-periodic-report-records"/>
+    <id>https://vaynexis.jp/column/regenerative-medicine-periodic-report-records</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>クラウドの対策を事業者の担当、自社の担当、確認待ちに分け、契約や設定の記録から抜けを見つけるための手順です。</summary>
+    <summary>再生医療等提供状況定期報告書を作る前に、提供計画、同意・投与の記録、疾病等や不適合の経過、評価資料、委員会意見をどうそろえるかを整理します。症例数と投与件数の違い、治療と研究で異なる記入範囲、提出前の照合と引き継ぎの順番も扱います。</summary>
   </entry>
   <entry>
-    <title>Excelの試算で、前提を一組ずつ保存して切り替えるには？</title>
-    <link href="https://vaynexis.jp/column/excel-scenario-manager-switch-assumptions"/>
-    <id>https://vaynexis.jp/column/excel-scenario-manager-switch-assumptions</id>
+    <title>調剤済麻薬廃棄届は何とそろえる？返却と廃棄の確認記録</title>
+    <link href="https://vaynexis.jp/column/dispensed-narcotics-disposal-notice"/>
+    <id>https://vaynexis.jp/column/dispensed-narcotics-disposal-notice</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>デスクトップ版のExcelで、複数の入力値をシナリオとして保存し、前提を切り替えて試算結果を確認する手順です。</summary>
+    <summary>患者や家族から返却された麻薬について、返却時の記録、廃棄日と立会者、届出書の控えをどう対応させるかを整理します。届出に必要な情報と提出期限を公式資料で確認し、薬剤師の確認内容を事務担当者へ引き継ぐための一覧と確認項目を示します。</summary>
   </entry>
   <entry>
-    <title>児童使用許可申請を準備するとき、学校と保護者から何をそろえる？</title>
-    <link href="https://vaynexis.jp/column/child-employment-permit-school-parent-documents"/>
-    <id>https://vaynexis.jp/column/child-employment-permit-school-parent-documents</id>
+    <title>動物取扱業の定期報告は何から集める？年度の所有数と月別の増減</title>
+    <link href="https://vaynexis.jp/column/animal-dealer-periodic-report-counts"/>
+    <id>https://vaynexis.jp/column/animal-dealer-periodic-report-counts</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>児童使用許可申請を行うと決まった会社が、学校長の証明書、親権者等の同意書、年齢を証明する書類を申請書に対応させます。</summary>
+    <summary>動物取扱業の定期報告に向け、年度当初の所有数、月ごとに増えた数、販売・引渡し・死亡で減った数、年度末の所有数をどの資料から集めるか整理します。年度途中の登録や出生・店舗間移動の注意点、集計の照合方法と担当者へ引き継ぐ確認表もまとめます。</summary>
   </entry>
   <entry>
-    <title>Wordでタブ区切りの項目一覧を表にするには？</title>
-    <link href="https://vaynexis.jp/column/word-convert-tab-text-to-table"/>
-    <id>https://vaynexis.jp/column/word-convert-tab-text-to-table</id>
+    <title>旅行業務取扱料金表は何を分ける？旅行代金と手数料の資料</title>
+    <link href="https://vaynexis.jp/column/travel-agency-handling-fee-schedule"/>
+    <id>https://vaynexis.jp/column/travel-agency-handling-fee-schedule</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>Wordでタブ区切りの一覧を表に変換し、列と行が意図した位置に入ったかを元の一覧と照合する手順です。</summary>
+    <summary>旅行業務取扱料金表を引き継ぐときは、請求の合計と手配の対価を混ぜず、業務の内容と算定方法を対応させます。公式資料が示す料金の考え方を踏まえ、社内で決めた内容から掲示用資料へ転記する順番、金額以外に照合する項目、迷ったときの確認先を整理します。</summary>
   </entry>
   <entry>
-    <title>個人データがある書類を別室へ運ぶとき、受け渡しをどう確認する？</title>
-    <link href="https://vaynexis.jp/column/personal-data-documents-move-room-handover"/>
-    <id>https://vaynexis.jp/column/personal-data-documents-move-room-handover</id>
+    <title>保安基準適合証は何に使う？車検申請へ渡す証明書と書類の整理</title>
+    <link href="https://vaynexis.jp/column/safety-standard-conformity-certificate-handover"/>
+    <id>https://vaynexis.jp/column/safety-standard-conformity-certificate-handover</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>個人データのある書類を別室へ運ぶとき、受取担当、内容が見えない運び方、到着と返却を確認するための事務の手順です。</summary>
+    <summary>保安基準適合証を申請担当へ渡すときは、対象車両との対応、ほかの申請書類、紙で渡すのか電子登録を確認するのかを整理します。公式資料に沿って証明書の役割を説明し、交付済みの書類を受け取ってから申請の進み具合を引き継ぐまでの確認点をまとめます。</summary>
   </entry>
   <entry>
-    <title>別の会社宛ての郵便物を開けてしまったら、受付は何を確認する？</title>
-    <link href="https://vaynexis.jp/column/misopened-other-company-mail-reception"/>
-    <id>https://vaynexis.jp/column/misopened-other-company-mail-reception</id>
+    <title>公益法人の報酬支給基準は別紙も必要？提出する規程のまとめ方</title>
+    <link href="https://vaynexis.jp/column/public-interest-corp-officer-pay-standard-attachments"/>
+    <id>https://vaynexis.jp/column/public-interest-corp-officer-pay-standard-attachments</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>別の会社宛ての郵便物を誤って開けた場合に、受付が配達した事業者を確認し、案内に沿って連絡・返却するための手順です。</summary>
+    <summary>報酬支給基準が別の給与規程や俸給表を準用しているとき、提出する書類をどこまでそろえるのか。本文と別紙のつながり、算定方法の説明、無報酬の扱い、決定済み文書の整理、変更後の届け出と公表を、公式資料に沿って事務担当者向けにまとめます。</summary>
   </entry>
   <entry>
-    <title>土地の無償返還に関する届出をするとき、契約書と何をそろえる？</title>
-    <link href="https://vaynexis.jp/column/land-free-return-notification-documents"/>
-    <id>https://vaynexis.jp/column/land-free-return-notification-documents</id>
+    <title>測量業の財務報告は何を添える？営業経歴と決算資料のそろえ方</title>
+    <link href="https://vaynexis.jp/column/surveying-business-financial-report-attachments"/>
+    <id>https://vaynexis.jp/column/surveying-business-financial-report-attachments</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>土地の無償返還に関する届出を行う案件で、契約書の写し、連名で確認する当事者、土地の価額に関する資料をそろえる手順です。</summary>
+    <summary>測量業の財務報告に添える書類を、営業経歴と決算資料の整理から説明します。法人の書類簡素化、一覧表の金額単位、人数の書面を添える条件、注文者名への配慮を押さえ、事務・経理・技術の担当者が提出用の資料をそろえて引き継ぐ流れをまとめます。</summary>
   </entry>
   <entry>
-    <title>Wordの回覧文書に下書きの透かしを入れるには？</title>
-    <link href="https://vaynexis.jp/column/word-draft-watermark-circulation-copy"/>
-    <id>https://vaynexis.jp/column/word-draft-watermark-circulation-copy</id>
+    <title>保育の与薬依頼で何を受け取る？福岡市の手引で見る連絡票と投薬情報書</title>
+    <link href="https://vaynexis.jp/column/nursery-medication-request-form-matching"/>
+    <id>https://vaynexis.jp/column/nursery-medication-request-form-matching</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>WindowsのWordで回覧用コピーに下書きの透かしを入れ、各ページと確定版で表示を見直す手順です。</summary>
+    <summary>保育の与薬依頼を受け付けるときに、保護者の依頼と医師の記載をどう対応づけるかを、国の保育所保育指針解説と、福岡市の手引に載る参考様式（福岡市医師会資料）で整理します。子どもの氏名、日付、処方日、薬の情報、受領と投与の記録をたどり、確認済みの内容と照会する内容を次の担当者へ引き継ぐ方法を説明します。</summary>
   </entry>
   <entry>
-    <title>Googleフォームで回答者のメールアドレスはどの方法で集める？</title>
-    <link href="https://vaynexis.jp/column/google-forms-collect-respondent-email"/>
-    <id>https://vaynexis.jp/column/google-forms-collect-respondent-email</id>
+    <title>chemSHERPAの回答前に何を集める？部品と仕入先資料の対応</title>
+    <link href="https://vaynexis.jp/column/chemsherpa-response-parts-supplier-documents"/>
+    <id>https://vaynexis.jp/column/chemsherpa-response-parts-supplier-documents</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>Googleフォームで回答者のメールを集めるときに、［確認済み］と［回答者からの入力］を使い分けます。配布前に表示と保存結果を確認します。</summary>
+    <summary>回答前にそろえたいのは、依頼対象の品番、部品構成、仕入先の回答資料、それぞれの改訂や確認状況です。受け取ったファイルを部品に結びつけ、加工の前後や対象違いを見分ける整理方法と、未回答の照会、承認、提出後の保管までを説明します。</summary>
   </entry>
   <entry>
-    <title>外貨建ての適格請求書で、円換算した税額を何と照合する？</title>
-    <link href="https://vaynexis.jp/column/invoice-foreign-currency-yen-tax-check"/>
-    <id>https://vaynexis.jp/column/invoice-foreign-currency-yen-tax-check</id>
+    <title>GoogleドライブへOffice資料を変換して入れる手順と確認点</title>
+    <link href="https://vaynexis.jp/column/google-drive-convert-office-files-on-upload"/>
+    <id>https://vaynexis.jp/column/google-drive-convert-office-files-on-upload</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>外貨建ての適格請求書を発行する担当向けに、税率ごとの円建ての消費税額等と、外貨明細・換算資料・計算の控えを照合する順序を整理します。</summary>
+    <summary>パソコンから資料をアップロードする前に変換を設定する方法を整理します。形式を変えずに編集する場合との違い、設定前に入れた資料の扱い、変換後に見比べる箇所を確認し、引き継ぎ時に更新先を取り違えないための短い記録例も紹介します。</summary>
   </entry>
   <entry>
-    <title>後納郵便物等差出票の通数と料金は、何と照合する？</title>
-    <link href="https://vaynexis.jp/column/deferred-postage-mail-dispatch-slip-check"/>
-    <id>https://vaynexis.jp/column/deferred-postage-mail-dispatch-slip-check</id>
+    <title>Googleカレンダーで休暇中の会議招待を自動で断る手順と確認点</title>
+    <link href="https://vaynexis.jp/column/google-calendar-out-of-office-auto-decline"/>
+    <id>https://vaynexis.jp/column/google-calendar-out-of-office-auto-decline</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>料金後納の承認を受けて郵便物を差し出す場合に、後納郵便物等差出票の様式4を現物と照合します。種別、通数、単価、合計の確認を扱います。</summary>
+    <summary>休暇中の会議招待を自動で断りたい事務担当者向けに、不在期間の登録から辞退の設定、保存後の確認までを整理します。終日と時間指定の使い分け、繰り返しの設定、辞退メッセージに書く内容、引き継ぐ記録を、公式ヘルプと短い架空の例で紹介します。</summary>
   </entry>
   <entry>
-    <title>Excelブックを以前の版で使う相手に渡す前に、何を確認する？</title>
-    <link href="https://vaynexis.jp/column/excel-compatibility-checker-earlier-versions"/>
-    <id>https://vaynexis.jp/column/excel-compatibility-checker-earlier-versions</id>
+    <title>Googleフォームで送信済み回答の訂正を本人に許可する設定と確認</title>
+    <link href="https://vaynexis.jp/column/google-forms-allow-respondents-edit-responses"/>
+    <id>https://vaynexis.jp/column/google-forms-allow-respondents-edit-responses</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>WindowsのExcelで、以前の版を使う相手にブックを渡す前に、互換性チェックの対象版を指定し、指摘箇所と必要な操作を照合する手順です。</summary>
+    <summary>送信した内容を本人に直してもらうための設定と、案内から訂正結果の照合までを整理します。回答の編集許可、回答回数の制限、フォームの公開状態を確かめる順番に加え、訂正した箇所の受け取り方や、途中で進めないときの確認点をまとめました。</summary>
   </entry>
   <entry>
-    <title>Windows 11で転記元と入力先のウィンドウを左右に並べるには？</title>
-    <link href="https://vaynexis.jp/column/windows-11-snap-source-and-entry-side-by-side"/>
-    <id>https://vaynexis.jp/column/windows-11-snap-source-and-entry-side-by-side</id>
+    <title>スプレッドシートの画像URLからセル内に見本写真を表示するには</title>
+    <link href="https://vaynexis.jp/column/google-sheets-image-url-sample-photos"/>
+    <id>https://vaynexis.jp/column/google-sheets-image-url-sample-photos</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>Windows 11のスナップで、転記元の資料と入力先の画面を左右に並べます。元資料の版や明細と、入力している項目を同時に見られる状態を作ります。</summary>
+    <summary>画像のURLを表に持っているとき、見本写真をセル内に表示する入力方法をまとめます。縦横比を保つ表示と引き伸ばす表示の違い、画像とセルの大きさの調整、使えないURLや形式、写真と品名の照合まで、引き継ぎで迷いやすい点を確認できます。</summary>
   </entry>
   <entry>
-    <title>JSTの特許出願非公開制度報告書は、契約書と通知のどこを確認する？</title>
-    <link href="https://vaynexis.jp/column/jst-patent-nondisclosure-report-form"/>
-    <id>https://vaynexis.jp/column/jst-patent-nondisclosure-report-form</id>
+    <title>PowerPointで社内説明会のスライド別の所要時間を測るには</title>
+    <link href="https://vaynexis.jp/column/powerpoint-rehearse-timings-per-slide"/>
+    <id>https://vaynexis.jp/column/powerpoint-rehearse-timings-per-slide</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>JSTの令和8年度未来社会創造事業で企業等が知財様式Aを使う場合に、研究契約の名称と番号、受け取った通知、出願情報を照合する手順です。</summary>
+    <summary>社内説明会の練習で、どのスライドに時間がかかるかを測る手順を紹介します。現在のスライドと全体の時間の読み分け、中断時の扱い、計測結果を保持して一覧で見る方法、本番で手動進行に戻す設定、担当者へ引き継ぐ際の確認点を整理します。</summary>
   </entry>
   <entry>
-    <title>SharePointのアクセス要求で、承認前にどの権限を確認する？</title>
-    <link href="https://vaynexis.jp/column/sharepoint-access-request-permission-level-check"/>
-    <id>https://vaynexis.jp/column/sharepoint-access-request-permission-level-check</id>
+    <title>Wordで繰り返し使う注意書きを定型句に登録・管理する手順</title>
+    <link href="https://vaynexis.jp/column/word-autotext-register-notice-text"/>
+    <id>https://vaynexis.jp/column/word-autotext-register-notice-text</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>SharePointで保留中のアクセス要求を開き、要求者と対象を確認してから、付けるアクセス許可レベルを選ぶ手順です。判断の根拠と処理結果を残します。</summary>
+    <summary>Wordで既に決まっている注意書きを定型句に登録し、必要な場所へ呼び出す手順を整理します。画面からの登録とキー操作を分け、名前と説明の付け方、登録内容の差し替え、名前変更、削除後に文書へ残る文章の扱いまで、事務担当者が引き継ぐ際の確認点を紹介します。</summary>
   </entry>
   <entry>
-    <title>犬や猫を販売するとき、マイクロチップの登録証明書を何と照合する？</title>
-    <link href="https://vaynexis.jp/column/dog-cat-microchip-certificate-sale-check"/>
-    <id>https://vaynexis.jp/column/dog-cat-microchip-certificate-sale-check</id>
+    <title>Excelで単価を何通りか変えた試算結果を一表に出すには</title>
+    <link href="https://vaynexis.jp/column/excel-data-table-unit-price-scenarios"/>
+    <id>https://vaynexis.jp/column/excel-data-table-unit-price-scenarios</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>犬や猫を販売して引き渡す事業者が、登録証明書、対象の個体、引渡し記録を照合する手順です。装着証明書との違いと引渡し後の確認点を整理します。</summary>
+    <summary>単価の候補を変えたときの金額を、元の数量を保ちながら一覧にする方法を整理します。入力欄と結果式の準備、候補の並べ方、代入セルの指定を短い例で示し、結果が同じになる場合の見直しや、試算の前提を引き継ぐ際の確認点までまとめます。</summary>
   </entry>
   <entry>
-    <title>第二種計画認定を申請するとき、どの雇用措置の資料を添える？</title>
-    <link href="https://vaynexis.jp/column/second-type-plan-certification-attachments"/>
-    <id>https://vaynexis.jp/column/second-type-plan-certification-attachments</id>
+    <title>Excelの作業一覧に指定した件数の連番をまとめて表示するには</title>
+    <link href="https://vaynexis.jp/column/excel-sequence-numbered-task-list"/>
+    <id>https://vaynexis.jp/column/excel-sequence-numbered-task-list</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>定年後の継続雇用に関する第二種計画認定で、申請書に記載する雇用管理の措置と、高年齢者雇用確保措置の資料を照合する手順です。</summary>
+    <summary>作業一覧の番号をまとめて用意したい事務担当者向けに、件数・開始番号・増分の指定を整理します。数式を入力する場所と結果が広がる範囲の違い、縦横の向き、テーブルや結合セルでつまずく点、引き継ぎ前に確かめる順番を紹介します。</summary>
   </entry>
   <entry>
-    <title>Googleドキュメントで確認依頼を特定の担当者に割り当てるには？</title>
-    <link href="https://vaynexis.jp/column/google-docs-assign-comment-action-item"/>
-    <id>https://vaynexis.jp/column/google-docs-assign-comment-action-item</id>
+    <title>Acrobat Readerで届いたPDFの管理番号を探す手順</title>
+    <link href="https://vaynexis.jp/column/acrobat-reader-find-control-number-pdf"/>
+    <id>https://vaynexis.jp/column/acrobat-reader-find-control-number-pdf</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>Googleドキュメントで文書の一部にコメントを付け、職場や学校のアカウントで担当者に確認を割り当てる手順です。返答や担当の変更も同じ箇所で追います。</summary>
+    <summary>届いた文書から管理番号を探す操作を、検索の入口、番号の絞り込み、見つからない場合の切り分けに分けて説明します。文字の選択とコピー制限の違いも押さえ、見つかった番号を欄名や案件名と照合し、引き継ぎに残す内容まで整理します。</summary>
   </entry>
   <entry>
-    <title>GoogleスプレッドシートのQUERYで必要な列だけを別表に出すには？</title>
-    <link href="https://vaynexis.jp/column/google-sheets-query-select-columns"/>
-    <id>https://vaynexis.jp/column/google-sheets-query-select-columns</id>
+    <title>Googleドキュメントで原文を残し、翻訳版を別に作る手順</title>
+    <link href="https://vaynexis.jp/column/google-docs-translate-copy-keep-original"/>
+    <id>https://vaynexis.jp/column/google-docs-translate-copy-keep-original</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>GoogleスプレッドシートのQUERYで元の表から必要な列を別の場所に並べる手順です。列の記号と見出し行数の確認、値が欠けるときの見直しを扱います。</summary>
+    <summary>原文を残したまま翻訳版を作りたい事務担当者に向け、パソコンでの操作と、Word形式から始める場合の注意点を整理します。翻訳先の言語と文書名を選ぶ順番、原本とコピーを取り違えないための命名例、翻訳に使った原文の版を記録する考え方、完成後の照合の進め方を紹介します。</summary>
   </entry>
   <entry>
-    <title>収入印紙の貼り忘れに気づいたら、申出の前に何を確認する？</title>
-    <link href="https://vaynexis.jp/column/revenue-stamp-unpaid-disclosure"/>
-    <id>https://vaynexis.jp/column/revenue-stamp-unpaid-disclosure</id>
+    <title>Windowsで毎日使う業務フォルダーを固定してすぐ開くには</title>
+    <link href="https://vaynexis.jp/column/windows-pin-work-folder-quick-access"/>
+    <id>https://vaynexis.jp/column/windows-pin-work-folder-quick-access</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>作成済みの文書で収入印紙の貼付漏れが疑われる場合に、現物と作成の経緯を確かめ、国税庁の印紙税不納付事実申出手続に用意する書類を確認します。</summary>
+    <summary>毎日使う業務フォルダーを、探し直さずに開くための入口を整えます。固定と解除の手順に加え、左側の一覧が見えないときの戻し方、同名フォルダーの保存場所の確かめ方、担当者への引き継ぎに残す内容を、公式ヘルプと事務での整理の観点から説明します。</summary>
   </entry>
   <entry>
-    <title>納入出版物リストを作るとき、奥付と刊行記録のどこを照合する？</title>
-    <link href="https://vaynexis.jp/column/ndl-deposit-compensation-publication-list"/>
-    <id>https://vaynexis.jp/column/ndl-deposit-compensation-publication-list</id>
+    <title>産廃の取扱範囲を広げる前に変更許可の様式と窓口を探す手順</title>
+    <link href="https://vaynexis.jp/column/industrial-waste-collection-scope-change-permit"/>
+    <id>https://vaynexis.jp/column/industrial-waste-collection-scope-change-permit</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>民間の出版社などが国立国会図書館へ納入出版物代償金の申請を準備するときに、納入出版物リストを現物、奥付、刊行記録と照合する手順です。</summary>
+    <summary>産廃の取扱範囲を広げることについて行政庁への確認を終えた担当者向けに、変更許可の様式と相談窓口を探す順番を整理します。国の案内と自治体の申請案内を読み分け、現在の許可の範囲と確定した変更内容をそろえて、添付書類や提出予定を具体化する進め方を紹介します。</summary>
   </entry>
   <entry>
-    <title>共有するExcel表で、列見出しと配色の読みやすさを点検するには？</title>
-    <link href="https://vaynexis.jp/column/excel-accessibility-headers-color-check"/>
-    <id>https://vaynexis.jp/column/excel-accessibility-headers-color-check</id>
+    <title>最低賃金の減額特例を申請すると決まったら指定資料をどう集める？</title>
+    <link href="https://vaynexis.jp/column/minimum-wage-reduction-permit-records"/>
+    <id>https://vaynexis.jp/column/minimum-wage-reduction-permit-records</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>Excelの共有前に、列見出し、文字と背景のコントラスト、色で示している状態の意味を確かめる手順です。アクセシビリティ チェックの指摘と目視での確認を分けます。</summary>
+    <summary>申請する区分と内容を窓口や専門家に確認したあと、担当者はどの記録を集めればよいのでしょうか。申請書の欄ごとに必要な情報を分け、勤務の内容・作業量・訓練時間・対象者名簿をそろえる順番と、不足資料の確認、提出担当への引き継ぎを整理します。</summary>
   </entry>
   <entry>
-    <title>訪問看護指示書の発行を依頼するとき、何の情報をそろえる？</title>
-    <link href="https://vaynexis.jp/column/visiting-nursing-instruction-request-items"/>
-    <id>https://vaynexis.jp/column/visiting-nursing-instruction-request-items</id>
+    <title>法人の納税管理人を決めた後の届出書・提出方法・提出先の確かめ方</title>
+    <link href="https://vaynexis.jp/column/corporate-tax-administrator-appointment-notice"/>
+    <id>https://vaynexis.jp/column/corporate-tax-administrator-appointment-notice</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>旭川医療センターが公開する訪問看護指示書依頼書の参考様式をもとに、依頼する種別、期間、連絡先と、受領した指示書を照合する手順です。</summary>
+    <summary>法人の納税管理人を選任した後の担当者に向け、届出の時期、書面と電子での提出方法、納税地に応じた提出先の調べ方を公式案内で整理します。似た手続名の見分け方、窓口の受付時間、社内の担当分担、相談前にまとめる事項まで、提出準備の順に確認できます。</summary>
   </entry>
   <entry>
-    <title>出生後休業支援給付金の申請前に、配偶者の資料をどう確認する？</title>
-    <link href="https://vaynexis.jp/column/postbirth-leave-support-benefit-spouse-documents"/>
-    <id>https://vaynexis.jp/column/postbirth-leave-support-benefit-spouse-documents</id>
+    <title>はかりの代検査後、検査証明書を添える届出はどう進める？</title>
+    <link href="https://vaynexis.jp/column/scale-substitute-inspection-certificate-filing"/>
+    <id>https://vaynexis.jp/column/scale-substitute-inspection-certificate-filing</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>出生後休業支援給付金の申請に備え、配偶者の状態の番号ごとの確認書類、2026年8月の手続見直し、配偶者の課税証明書を提出する場合の同意書に関する厚生労働省の案内を確認します。</summary>
+    <summary>はかりの代検査を受けた後に、証明書を受け取り、届出先と期日を確かめ、書類をそろえて提出するまでを整理します。滋賀県と大津市の窓口区分、石川県の記入例で分かる欄の意味を紹介し、担当者が手元の書類と提出記録を照合するための確認点をまとめます。</summary>
   </entry>
   <entry>
-    <title>Excelで計算結果の隣に使っている数式を表示するには？</title>
-    <link href="https://vaynexis.jp/column/excel-formulatext-show-formula"/>
-    <id>https://vaynexis.jp/column/excel-formulatext-show-formula</id>
+    <title>社会保険の適用事業所である証明書を求められたときの申請方法</title>
+    <link href="https://vaynexis.jp/column/social-insurance-covered-office-certificate-application"/>
+    <id>https://vaynexis.jp/column/social-insurance-covered-office-certificate-application</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>ExcelのFORMULATEXTで、元の計算結果を表示したまま隣のセルに式の文字列を出す手順です。表示した式の照合と、エラーになった場合の確認先も整理します。</summary>
+    <summary>社会保険に加入している事業所であることの証明を求められた担当者向けに、申請者と確認事項の選び方、事業所整理記号・番号の記入、保険の表示の注意点、添付書類と提出方法を整理します。依頼を受けてから受領した書類を照合するまでの確認順も示します。</summary>
   </entry>
   <entry>
-    <title>システム切替直前の最終入力は何時の記録で区切る？</title>
-    <link href="https://vaynexis.jp/column/system-cutover-final-entry-boundary-records"/>
-    <id>https://vaynexis.jp/column/system-cutover-final-entry-boundary-records</id>
+    <title>男性育休取得率の公表前に確かめる対象年度・公開場所・掲載記録</title>
+    <link href="https://vaynexis.jp/column/male-childcare-leave-rate-disclosure-check"/>
+    <id>https://vaynexis.jp/column/male-childcare-leave-rate-disclosure-check</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>システムの切替に備え、旧システムへの入力締切、移行用データの抽出、停止中の依頼受付を別々に記録し、新システムへの反映を照合する手順です。</summary>
+    <summary>男性育休取得率の公表を担当する方向けに、対象となる事業年度、公表時期、社外から閲覧できる掲載先の確認点を整理します。確定した割合と集計期間の照合、掲載担当への引継ぎ、公開後に残す記録まで、数値を掲載する前後の事務を具体的にまとめます。</summary>
   </entry>
   <entry>
-    <title>IT重説の前に何を確認する？書面の受領と当日の準備</title>
-    <link href="https://vaynexis.jp/column/it-juusetsu-document-receipt-prep"/>
-    <id>https://vaynexis.jp/column/it-juusetsu-document-receipt-prep</id>
+    <title>通販広告で省略した事業者情報を求められたときに渡す書面と送付控え</title>
+    <link href="https://vaynexis.jp/column/mail-order-omitted-seller-info-request"/>
+    <id>https://vaynexis.jp/column/mail-order-omitted-seller-info-request</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>宅地建物取引の重要事項説明をオンラインで行う前に、相手方が書面を受け取ったことと、当日の接続や書面の準備を確認する手順です。</summary>
+    <summary>通販広告で省略した事業者情報を求められた際に、どの情報を、どの形で渡すのかを整理します。省略の可否を専門家が確認済みの事業者に向けて、名称・住所・連絡先の確認、申込み前の提供時期、請求受付から送付控えまで、担当者が押さえる点を説明します。</summary>
   </entry>
   <entry>
-    <title>備蓄食品の期限が近いとき、点検表に何を残す？</title>
-    <link href="https://vaynexis.jp/column/emergency-food-stock-expiry-check-sheet"/>
-    <id>https://vaynexis.jp/column/emergency-food-stock-expiry-check-sheet</id>
+    <title>役員全員が再任する会社の変更登記に添える書類と確認の順番</title>
+    <link href="https://vaynexis.jp/column/officer-full-reappointment-registration-attachments"/>
+    <id>https://vaynexis.jp/column/officer-full-reappointment-registration-attachments</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>事業所の備蓄食品を点検し、期限と置き場ごとに数量を数え、取り出しと補充を別々に記録する手順です。補充品の受領と点検後の数量まで確認します。</summary>
+    <summary>役員全員の再任後に添付書類を集める担当者向けに、決議と就任承諾を示す書面、株主の情報、押印によって変わる証明書の扱いを整理します。別紙を省く条件や追加書面の確認箇所を押さえ、回収から提出前の照合まで、書類の不足と判断が必要な点を分けて確認できます。</summary>
   </entry>
   <entry>
-    <title>国立健康危機管理研究機構の取材申込書に何を記入する？</title>
-    <link href="https://vaynexis.jp/column/jihs-interview-request-form-fields"/>
-    <id>https://vaynexis.jp/column/jihs-interview-request-form-fields</id>
+    <title>衛生管理者の選任報告前に資格書類と記載事項をどうそろえる？</title>
+    <link href="https://vaynexis.jp/column/health-officer-appointment-report-documents"/>
+    <id>https://vaynexis.jp/column/health-officer-appointment-report-documents</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>国立健康危機管理研究機構へ取材を申し込むときに、申込書の媒体、対象者、企画、希望日時と撮影方法の欄にそろえる情報を整理します。</summary>
+    <summary>選任済みの人の資格書類を集める担当者に向け、添付する証明の考え方と、氏名・生年月日・選任日などの照合項目を整理します。報告方法の変更、専属・専任の記載、前任者の情報にも触れ、回収した資料を提出担当へ渡すまでの確認点をまとめます。</summary>
   </entry>
   <entry>
-    <title>Excelでフィルター後に表示されている行だけを合計するには？</title>
-    <link href="https://vaynexis.jp/column/excel-subtotal-visible-rows-sum"/>
-    <id>https://vaynexis.jp/column/excel-subtotal-visible-rows-sum</id>
+    <title>法人事業税の確定・中間申告の締切と提出先を確認する手順</title>
+    <link href="https://vaynexis.jp/column/corporate-enterprise-tax-filing-deadline-office"/>
+    <id>https://vaynexis.jp/column/corporate-enterprise-tax-filing-deadline-office</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>Excelで絞り込んだ明細をSUBTOTALで合計する手順です。フィルターで除かれた行と手動で非表示にした行の扱いを区別し、集計方法の9と109を選びます。</summary>
+    <summary>法人事業税の申告準備で迷いやすい、締切の起算日と提出窓口の確認手順を整理します。地方税法の規定と、例として滋賀県の公式案内をもとに、確定・中間申告の期限、延長承認の扱い、届いた書類と申告義務の違いを確認し、担当者と専門家が共有する情報や提出後に残す記録までまとめます。</summary>
   </entry>
   <entry>
-    <title>Windows 11でPDFを開くアプリを指定する手順</title>
-    <link href="https://vaynexis.jp/column/windows-11-default-app-for-pdf"/>
-    <id>https://vaynexis.jp/column/windows-11-default-app-for-pdf</id>
+    <title>補助金で取得した設備を処分する前に、事務局へ伝える情報と準備</title>
+    <link href="https://vaynexis.jp/column/subsidy-equipment-disposal-prior-inquiry"/>
+    <id>https://vaynexis.jp/column/subsidy-equipment-disposal-prior-inquiry</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>Windows 11の設定で.pdfに割り当てるアプリを選び、保存済みのPDFを開いて確認する手順です。会社管理の端末で設定を変更できない場合に、管理担当へ渡す情報も整理します。</summary>
+    <summary>補助金で取得した設備の売却・廃棄などを考えたとき、事務局への照会に向けてそろえる情報を整理します。財産の番号、取得価格、現在の使用状況、処分方法・理由、希望時期を結び付け、見積書や写真の準備と、担当者間の引継ぎで確かめる点をまとめます。</summary>
   </entry>
   <entry>
-    <title>植物の輸入検査申請に添える資料は？検査証明書と荷口の照合</title>
-    <link href="https://vaynexis.jp/column/plant-import-inspection-application-documents"/>
-    <id>https://vaynexis.jp/column/plant-import-inspection-application-documents</id>
+    <title>インボイスの制度相談と登録状況の照会はどの窓口へ連絡する？</title>
+    <link href="https://vaynexis.jp/column/invoice-inquiry-contact-by-purpose"/>
+    <id>https://vaynexis.jp/column/invoice-inquiry-contact-by-purpose</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>植物を貨物で輸入するときに、検査申請書と輸出国の検査証明書、コンテナーの一覧表を照合する手順です。添付の要否と、申請までに照会する点を整理します。</summary>
+    <summary>インボイスについて尋ねたいとき、制度の一般相談、申請後の処理状況、個別の税務相談、電子申請の操作では連絡先が異なります。窓口の担当範囲と受付時間、所轄の調べ方、電話前に用意する情報を整理し、問い合わせ先を選ぶ際の混同を防ぎます。</summary>
   </entry>
   <entry>
-    <title>請求書の登録番号は取引時点で有効？公表情報の照合手順</title>
-    <link href="https://vaynexis.jp/column/invoice-registration-number-transaction-date-check"/>
-    <id>https://vaynexis.jp/column/invoice-registration-number-transaction-date-check</id>
+    <title>株主名簿には何を書く？株式数・取得日と基準日の確認欄</title>
+    <link href="https://vaynexis.jp/column/shareholder-register-fields"/>
+    <id>https://vaynexis.jp/column/shareholder-register-fields</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>受領した請求書の登録番号を国税庁の公表サイトで調べ、取引の日と登録・取消・失効年月日を照合します。経理担当が確認日と確認した内容を請求書にひも付ける手順です。</summary>
+    <summary>株主名簿を新しく作る、または古い書式を見直す担当者に向け、会社法が定める記載事項（氏名・住所、株式の種類と保有数、取得日、株券番号）の欄と、基準日・備置きの定めを整理します。名簿が表す時点と編集日を分ける考え方、提出先の指定を読む順番、記入例と更新時の確認表を示します。</summary>
   </entry>
   <entry>
-    <title>通関業務の受理番号を依頼案件のどの記録に結ぶ？</title>
-    <link href="https://vaynexis.jp/column/customs-broker-ledger-receipt-number"/>
-    <id>https://vaynexis.jp/column/customs-broker-ledger-receipt-number</id>
+    <title>総勘定元帳には何を書く？科目・相手科目と残高を確かめる欄</title>
+    <link href="https://vaynexis.jp/column/general-ledger-account-balance-fields"/>
+    <id>https://vaynexis.jp/column/general-ledger-account-balance-fields</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>通関業者が営業所ごとの帳簿を作る際、集計と案件別の明細を区別し、受理番号を提出年月日や依頼者、貨物の元資料と照合する手順です。記録が一致しないときの保留と確認先も整理します。</summary>
+    <summary>総勘定元帳の書式を作る担当者向けに、法人税法施行規則と会社法の定め、公的機関の様式を基に、科目、年月日、摘要、相手科目、伝票番号、借方・貸方金額、差引残高の役割と、元伝票と照合する順番、繰越と更新後の残高の見方を解説します。</summary>
   </entry>
   <entry>
-    <title>水資源機構の使用印鑑届にどの印と情報をそろえる？</title>
-    <link href="https://vaynexis.jp/column/water-resources-agency-seal-notice-form"/>
-    <id>https://vaynexis.jp/column/water-resources-agency-seal-notice-form</id>
+    <title>有価証券台帳には何を書く？銘柄・数量・増減と残高の照合欄</title>
+    <link href="https://vaynexis.jp/column/securities-ledger-holdings-fields"/>
+    <id>https://vaynexis.jp/column/securities-ledger-holdings-fields</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>水資源機構の物品・役務業務等で第3号様式の使用印鑑届を出すとき、宛先、会社情報、印の欄と添付する印鑑証明書を照合する手順です。案件ごとの案内と社内で承認された印を確かめ、提出後の控えを残します。</summary>
+    <summary>有価証券台帳を作る事務担当者向けに、法人税法施行規則が青色申告法人の帳簿に求める有価証券の記載事項と、伊勢市が公表する社会福祉法人向けの様式例の欄を示し、銘柄別の増加・減少・残高と、取引報告書・取引残高報告書との照合、差異の残し方をまとめます。</summary>
   </entry>
   <entry>
-    <title>脆弱性の注意喚起が自社の機器に当たるかどう調べる？</title>
-    <link href="https://vaynexis.jp/column/vulnerability-advisory-asset-ledger-check"/>
-    <id>https://vaynexis.jp/column/vulnerability-advisory-asset-ledger-check</id>
+    <title>調査協力同意書には何を書く？大学の手引きに見る同意範囲と署名日</title>
+    <link href="https://vaynexis.jp/column/research-participation-consent-form-fields"/>
+    <id>https://vaynexis.jp/column/research-participation-consent-form-fields</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>製品に関する脆弱性の注意喚起を受けたとき、提供元が示す対象と、自社の資産管理台帳や現物の版を照合する手順です。該当、対象外、確認待ちを分け、担当へ判断の根拠を渡します。</summary>
+    <summary>調査協力同意書を作る事務担当者向けに、名古屋市立大学の研究倫理の手引きにある記載・保管の扱いと、個人情報保護法の利用目的の明示を示し、研究課題名・説明文書との対応・同意範囲・署名日の整理と、回収後に確かめる順番をまとめます。</summary>
   </entry>
   <entry>
-    <title>認証済みの電子定款を紙で求められたら何を請求する？</title>
-    <link href="https://vaynexis.jp/column/electronic-articles-same-information-request"/>
-    <id>https://vaynexis.jp/column/electronic-articles-same-information-request</id>
+    <title>自己啓発費の補助申請書には何を書く？堺市SCKの様式で見る受講料と修了証</title>
+    <link href="https://vaynexis.jp/column/self-development-subsidy-application-fields"/>
+    <id>https://vaynexis.jp/column/self-development-subsidy-application-fields</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>認証済みの電子定款について、提出先から紙の書類を求められたときに、書類名と公証役場での保存請求の有無を確認する手順です。同一の情報の提供の請求と、書面で受け取る際に確認することを整理します。</summary>
+    <summary>自己啓発費の補助申請書を社内で整えるときは、受講者・講座・支払内容・修了を確認する資料を対応づけます。受講料と補助申請額を分ける考え方、領収書と修了証の照合欄、資料がそろわないときの記録、確認後の引継ぎまで、堺市産業振興センターのSCKサービスセンターの申請書と、雇用保険の教育訓練給付の申請に要る書類を手がかりに整理します。</summary>
   </entry>
   <entry>
-    <title>鍵貸出簿には何を書く？鍵の識別と返却確認の欄</title>
-    <link href="https://vaynexis.jp/column/key-lending-register-return-check"/>
-    <id>https://vaynexis.jp/column/key-lending-register-return-check</id>
+    <title>技術相談申込書には何を書く？静岡大学の様式で見る相談事項と資料の欄</title>
+    <link href="https://vaynexis.jp/column/technical-consultation-request-fields"/>
+    <id>https://vaynexis.jp/column/technical-consultation-request-fields</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>社内の共用鍵を貸し出すときに、鍵の識別、貸出相手、時刻、返却予定と現物確認を一つの行で追うための項目をまとめます。大阪市本庁舎の公開様式の欄と、社内で追加する項目案を分けて説明します。</summary>
+    <summary>技術相談の申込内容を準備する担当者向けに、背景、確かめたい質問、添付資料、連絡窓口の分け方を整理します。静岡大学イノベーション社会連携推進機構の申込書と相談案内を例に、申込書の欄と受け付ける相談の範囲、観察した事実と原因の予想を区別する書き方、開示できる資料を選ぶ記入例、送付前と追加説明時の確認方法をまとめます。</summary>
   </entry>
   <entry>
-    <title>Excelで担当者と対応状況が一致する明細を数えるには？</title>
-    <link href="https://vaynexis.jp/column/excel-countifs-assignee-status"/>
-    <id>https://vaynexis.jp/column/excel-countifs-assignee-status</id>
+    <title>入札書には何を書く？岩見沢市の規則で見る案件・金額・名義の確認</title>
+    <link href="https://vaynexis.jp/column/bid-form-project-amount-bidder-check"/>
+    <id>https://vaynexis.jp/column/bid-form-project-amount-bidder-check</id>
     <published>2026-11-10T00:00:00+09:00</published>
     <updated>2026-11-10T00:00:00+09:00</updated>
-    <summary>担当者と対応状況の両方を指定して、Excelの明細をCOUNTIFSで数える手順です。集計範囲の最初と最後、条件に使うセル、元の明細での件数をそれぞれ確かめます。</summary>
+    <summary>入札書を整える担当者向けに、対象案件、提示金額、提出者を取り違えないための記載項目と確認の順番を整理します。北海道岩見沢市の契約規則と様式の案内、地方自治法施行令をもとに、金額の訂正、代理人の扱い、押印を省略する際の連絡先にも触れ、提出前に照合する書類と控えの残し方をまとめます。</summary>
   </entry>
 </feed>

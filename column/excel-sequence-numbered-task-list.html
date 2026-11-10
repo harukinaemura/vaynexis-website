@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの作業一覧に指定した件数の連番をまとめて表示するには｜Vaynexis</title>
+  <meta name="description" content="作業一覧の番号をまとめて用意したい事務担当者向けに、件数・開始番号・増分の指定を整理します。数式を入力する場所と結果が広がる範囲の違い、縦横の向き、テーブルや結合セルでつまずく点、引き継ぎ前に確かめる順番を紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの作業一覧に指定した件数の連番をまとめて表示するには｜Vaynexis">
+  <meta property="og:description" content="作業一覧の番号をまとめて用意したい事務担当者向けに、件数・開始番号・増分の指定を整理します。数式を入力する場所と結果が広がる範囲の違い、縦横の向き、テーブルや結合セルでつまずく点、引き継ぎ前に確かめる順番を紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-sequence-numbered-task-list">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-sequence-numbered-task-list">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの作業一覧に指定した件数の連番をまとめて表示するには","description":"作業一覧の番号をまとめて用意したい事務担当者向けに、件数・開始番号・増分の指定を整理します。数式を入力する場所と結果が広がる範囲の違い、縦横の向き、テーブルや結合セルでつまずく点、引き継ぎ前に確かめる順番を紹介します。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-sequence-numbered-task-list"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの作業一覧に指定した件数の連番をまとめて表示するに","item":"https://vaynexis.jp/column/excel-sequence-numbered-task-list"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの作業一覧に指定した件数の連番をまとめて表示するに</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの作業一覧に指定した件数の連番をまとめて表示するには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>ExcelのSEQUENCE関数では、指定した行数・列数に合わせて連続する数値を生成できます。作業一覧では、必要な件数と番号の並ぶ向きを先に決め、結果を置く空きを確保してから入力するとよいです。件数を変えた後は、番号の始まりと終わり、作業名との対応を確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、作業一覧の番号を指定した件数だけまとめて用意したい小さな会社の担当者が、SEQUENCE 関数の件数・開始番号・増分の指定と、番号が広がる範囲の確かめ方をまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">使える版と、番号が広がる場所をそろえる</a></li>
+      <li><a href="#s2">件数・開始番号・増分を、式の中で区別する</a></li>
+      <li><a href="#s3">縦方向の短い例で、入力から確定までを見る</a></li>
+      <li><a href="#s4">件数を直すときは、式のある先頭へ戻る</a></li>
+      <li><a href="#s5">展開できないときは、置き場所から切り分ける</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．使える版と、番号が広がる場所をそろえる</h2>
+    <p>確認日：2026年11月10日。</p>
+    <p>Microsoft のヘルプでは、SEQUENCE 関数の適用先として、Excel for Microsoft 365、Excel 2024、Excel 2021（それぞれ Mac 版を含む）と、iPad・iPhone・Android の Excel を挙げています。Excel 2019 以前の版はこの一覧にないので、使う前に手元の版を確かめます。引き継ぎでは、利用する版を操作メモに添えておくと、同じ前提で読み進められます。</p>
+    <p>数式の結果が隣接するセルへ広がる動作を、スピルと呼びます。見出し、番号、作業名の置き場を分け、番号を広げたい方向に別のメモが入り込んでいないかを先に見ます。特に、一覧の下に集計や注記を置いている表では、番号欄の途中だけを見て空きがあると判断せず、予定する末尾まで見渡すことが大切です。</p>
+    <p>スピルする配列数式は、Excelのテーブル内に置けないため、テーブル外の通常のセルに配置する必要があります。作業一覧のどこに番号欄を確保するかは、入力前に決めておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．件数・開始番号・増分を、式の中で区別する</h2>
+    <p>基本の構文は、=SEQUENCE(行,[列],[開始],[目盛り])です。角括弧を含む表記は構文の説明として読み、入力する式には具体的な指定値を当てはめます。</p>
+    <p>「行」は返す行の数で、縦に並ぶ作業一覧では生成したい件数に対応します。「列」は返す列の数です。「開始」は数列の最初の数値です。「目盛り」は、後続の値の増分量です。同じヘルプの使用例では、=SEQUENCE(5,1,1001,1000) を使って、例の GL コード番号の連続した一覧を作っています。5 行・1 列で、1001 から始めて 1000 ずつ増やす指定です。式を見直すときは、件数を変えたいのか、番号の始まりを変えたいのかを区別すると、直す欄を絞れます。最終番号だけを思い浮かべて行数の欄を埋めると、開始位置と件数の意味が混ざってしまいます。</p>
+    <p>省略した任意の引数の既定値は1なので、縦の連番なら行数だけを指定する形も使えます。反対に、行を省略する場合は、少なくとも 1 つの他の引数を指定する必要があります。ただし、引き継ぎ相手が式を読み解く場面では、省略した欄が何を表すかも操作メモに残しておくとよいです。欄の順序を説明しておけば、別の開始番号に変える際にも同じ見方を使えます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．縦方向の短い例で、入力から確定までを見る</h2>
+    <p>公式の縦方向の例にある=SEQUENCE(5)は、下に余地のある空白セルへ入力する形です。この形を、作業名を横に置く一覧の番号欄へ当てはめます。</p>
+    <pre class="prompt">=SEQUENCE(5)</pre>
+    <p>数式をEnterキーで確定すると、出力範囲の大きさが動的に調整され、各セルに結果が入ります。入力欄に表示された式を見直してから確定し、表に戻って番号と作業名の並びを照合する流れです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">番号欄の表示例</th><th scope="col">作業名</th></tr></thead><tbody><tr><td data-label="番号欄の表示例">1</td><td data-label="作業名">共有資料の準備</td></tr><tr><td data-label="番号欄の表示例">2</td><td data-label="作業名">連絡事項の確認</td></tr><tr><td data-label="番号欄の表示例">3</td><td data-label="作業名">配布先の確認</td></tr><tr><td data-label="番号欄の表示例">4</td><td data-label="作業名">資料の配布</td></tr><tr><td data-label="番号欄の表示例">5</td><td data-label="作業名">保管場所の記録</td></tr></tbody></table></div>
+    <p>番号が表示された時点で終えず、作業の漏れや、番号の隣が空欄になっている箇所も見ます。</p>
+    <p>横に並べる場合の公式例は=SEQUENCE(1,5)で、1行×5列の配列を作ります。縦の作業一覧と横の見出しでは、空ける方向が変わります。期待した向きと違う表示になったときは、行と列の指定を読み直す順にするとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．件数を直すときは、式のある先頭へ戻る</h2>
+    <p>スピル領域で編集できるのは最初のセルだけです。下の番号を直接修正しようとして操作を重ねる前に、数式を入れた位置へ戻ります。番号の列が長い表では、式の入力位置も引き継ぎメモに記しておくと、変更先が分かりやすくなります。</p>
+    <p>左上の数式を変更してEnterキーを押すと、残りのスピル領域も自動的に更新されます。変更後は、以前の末尾だけを見ず、広がった範囲全体に目を通します。件数を減らした場合も、作業名の側に確認対象が残っていないかを照合する流れです。</p>
+    <p>出力範囲内のセルを選択すると、範囲を囲む境界線が表示されます。番号の途中だけを見て件数を推測するより、境界の末尾と作業一覧の末尾を対応させて確認すると、見ている範囲をそろえられます。</p>
+    <p>件数を別のブックのセルから読み込む形にしている場合は、ブックを閉じたときの動きにも注意します。SEQUENCE 関数のヘルプでは、ブック間の動的配列のサポートは双方のブックが開いているときに限られ、リンク元ブックを閉じると、リンクされた動的配列数式が更新されたときに #REF! エラーが返されるとしています。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．展開できないときは、置き場所から切り分ける</h2>
+    <p>展開先が空でない場合は、#SPILL!エラーの原因になります。式を書き直す前に、番号を置く予定の範囲に既存の入力がないかを見ます。業務上必要な入力を見つけたときは、内容と退避先を確認してから移す順にするとよいです。</p>
+    <p>Microsoft のヘルプでは、エラー チェック アラートを選び、［障害物セルの選択］を選ぶと、展開を妨げているセルへすぐに移動できると案内しています。どこが障害なのかを特定してから直せば、周辺の入力をまとめて消す操作を避けられます。</p>
+    <p>スピルする配列数式は結合されたセルへ展開できず、結合の解除か、結合セルと交差しない場所への数式の移動が対処方法です。表の見た目を保つ必要があるかを考えて、対処する場所を決めます。周辺を空けても直らないときは、前に述べた配置の制約も見直し、原因を分けて扱うことが大切です。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">利用する版と、操作メモの対象が合っているかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">必要な件数と、番号を並べる向きを決めてから入力したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見出しを除いた番号の始まりと終わりを照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">番号と作業名の対応に、空欄や漏れがないかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">展開先の既存の入力や結合の有無を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">件数の変更先となる数式の入力位置を、引き継ぎ相手と共有したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/sequence-function" rel="noopener" target="_blank">SEQUENCE 関数</a>：連番の生成、適用先、引数、省略時の値、使用例、ブック間の制限</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/dynamic-array-formulas-and-spilled-array-behavior" rel="noopener" target="_blank">動的配列数式とスピル配列の動作</a>：入力と確定、出力範囲、テーブル外への配置、数式の編集</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/guidelines-and-examples-of-array-formulas" rel="noopener" target="_blank">配列数式のガイドラインと例</a>：縦方向・横方向に並べる数式の例</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/how-to-correct-a-spill-error" rel="noopener" target="_blank">#SPILL の修正方法! を修正する（#SPILL! エラーの直し方）</a>：空でない展開先、障害物セルの選択、結合セルへの対処</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-spill-error-find-blocking-cells">Excelの #SPILL! で、一覧の展開を妨げるセルをどう見つける？</a></li>
+      <li><a href="/column/excel-filter-pending-rows-sheet">Excelで対応待ちの行だけを別シートへ自動表示するには</a></li>
+      <li><a href="/column/excel-date-with-weekday-display">Excelの作業予定表で日付と曜日を同じセルに表示する手順</a></li>
+      <li><a href="/column/excel-freeze-header-row-and-id-column">Excelの長い一覧で見出し行と管理番号列を同時に固定する方法</a></li>
+      <li><a href="/column/excel-data-table-unit-price-scenarios">Excelで単価を何通りか変えた試算結果を一表に出すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

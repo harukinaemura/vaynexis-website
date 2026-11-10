@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>総勘定元帳には何を書く？科目・相手科目と残高を確かめる欄｜Vaynexis</title>
+  <meta name="description" content="総勘定元帳の書式を作る担当者向けに、法人税法施行規則と会社法の定め、公的機関の様式を基に、科目、年月日、摘要、相手科目、伝票番号、借方・貸方金額、差引残高の役割と、元伝票と照合する順番、繰越と更新後の残高の見方を解説します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="総勘定元帳には何を書く？科目・相手科目と残高を確かめる欄｜Vaynexis">
+  <meta property="og:description" content="総勘定元帳の書式を作る担当者向けに、法人税法施行規則と会社法の定め、公的機関の様式を基に、科目、年月日、摘要、相手科目、伝票番号、借方・貸方金額、差引残高の役割と、元伝票と照合する順番、繰越と更新後の残高の見方を解説します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/general-ledger-account-balance-fields">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/general-ledger-account-balance-fields">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"総勘定元帳には何を書く？科目・相手科目と残高を確かめる欄","description":"総勘定元帳の書式を作る担当者向けに、法人税法施行規則と会社法の定め、公的機関の様式を基に、科目、年月日、摘要、相手科目、伝票番号、借方・貸方金額、差引残高の役割と、元伝票と照合する順番、繰越と更新後の残高の見方を解説します。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/general-ledger-account-balance-fields"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"総勘定元帳には何を書く？科目・相手科目と残高を確かめる欄","item":"https://vaynexis.jp/column/general-ledger-account-balance-fields"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">総勘定元帳には何を書く？科目・相手科目と残高を確かめる欄</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">総勘定元帳には何を書く？科目・相手科目と残高を確かめる欄</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>法人税法施行規則は、青色申告法人は総勘定元帳に、その勘定ごとに記載の年月日、相手方勘定科目及び金額を記載しなければならないとしています。書式には摘要、元伝票を探す手がかり、残高の確認欄をそろえ、確認済みの記録と照合する流れを設けるとよいです。保存は、会社法と法人税でそれぞれ定めがあります。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、総勘定元帳の書式を作り直したい小さな会社の担当者が、法人税法施行規則と会社法の定めと公的機関の様式を手掛かりに、科目・相手科目・伝票番号・残高の欄と、元伝票との照合や保存の確かめ方をまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">科目別に読む帳簿と、公的な様式の適用範囲</a></li>
+      <li><a href="#s2">日付・相手科目・金額・残高を別々に読める欄にする</a></li>
+      <li><a href="#s3">記入例では、確認済みの内容と照合先を結び付ける</a></li>
+      <li><a href="#s4">残高の違いは、繰越・明細・集計の順にたどる</a></li>
+      <li><a href="#s5">保存の定めを確かめ、更新後も伝票へ戻れる状態を保つ</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．科目別に読む帳簿と、公的な様式の適用範囲</h2>
+    <p>確認日：2026年11月10日。</p>
+    <p>法人税法施行規則第54条は、青色申告法人が備える帳簿として、全ての取引を勘定科目の種類別に分類して整理計算する帳簿（総勘定元帳）を挙げています。取引全体を発生順に眺めることよりも、選んだ科目にどの記録が集まり、残高につながったかを確かめることに、書式の軸を置きます。</p>
+    <p>独立行政法人地域医療機能推進機構の会計規程は、同機構の財務及び会計に関する基準を定める規程です。同規程の様式１（第８条第２項第１号関係）が総勘定元帳の様式です。この記事では、公的機関の様式の一例として、機構の様式を欄の具体例に取り上げます。自社の書式を検討する際は、利用中の帳簿と確認担当者の運用に合わせて整理します。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．日付・相手科目・金額・残高を別々に読める欄にする</h2>
+    <p>機構の様式の主な欄には、年月日、摘要、相手科目名称、伝票番号、税区分（自分・相手）、借方金額、貸方金額があります。様式には「差引残高」の欄も設けられています。様式の上部には、作成日（年月日と時分）と科目の欄もあります。</p>
+    <p>以下の表の「何を書くか」「間違えやすい点」は、確認済みの内容を転記するための当社の整理です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">項目</th><th scope="col">何を書くか</th><th scope="col">間違えやすい点</th></tr></thead><tbody><tr><td data-label="項目">対象の科目</td><td data-label="何を書くか">この帳簿で集める科目の名称</td><td data-label="間違えやすい点">明細に出てくる相手科目との取り違え</td></tr><tr><td data-label="項目">年月日</td><td data-label="何を書くか">元の記録で確認済みの日付</td><td data-label="間違えやすい点">作成日と取引の日付の混同</td></tr><tr><td data-label="項目">摘要・相手科目</td><td data-label="何を書くか">取引内容の短い説明と、対応する科目</td><td data-label="間違えやすい点">取引先名だけで相手科目を置き換えること</td></tr><tr><td data-label="項目">伝票番号</td><td data-label="何を書くか">元の伝票へ戻るための番号</td><td data-label="間違えやすい点">自分で付けた通し番号との混同</td></tr><tr><td data-label="項目">借方金額・貸方金額</td><td data-label="何を書くか">確認済みの記録と同じ側の金額</td><td data-label="間違えやすい点">金額だけが一致し、記載する側が逆になること</td></tr><tr><td data-label="項目">差引残高</td><td data-label="何を書くか">確認済みの繰越・明細に対応する残高</td><td data-label="間違えやすい点">当該取引の金額をそのまま写すこと</td></tr></tbody></table></div>
+    <p>対象の科目は帳簿全体の見出し、相手科目は明細を読むための情報として、見分けられる配置にします。取引先を記す場所も必要なら、相手科目とは欄名を分けるとよいです。「相手」という短い見出しだけでは、会社名なのか科目名なのかが読み手に伝わりにくくなります。</p>
+    <p>作成日を管理する場合も、明細の日付と離して置きます。月日だけの一覧では、年度をまたいで見直す際に対象を見失いやすいため、帳簿の見出しと明細を合わせて対象期間が読めるかを確認します。摘要は番号の代わりではなく、番号も摘要の代わりではありません。内容を読み取る場所と、記録を探す場所を区別するのが整理の要点です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．記入例では、確認済みの内容と照合先を結び付ける</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>書式の説明用として、確認を終えた備品代の振込を、普通預金の元帳に写す場面を考えます。科目と記載する側は既に承認されている想定で、金額は転記元の値をそのまま使います。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">対象科目</th><th scope="col">日付</th><th scope="col">摘要</th><th scope="col">相手科目</th><th scope="col">伝票番号</th><th scope="col">借方金額</th><th scope="col">貸方金額</th><th scope="col">差引残高</th></tr></thead><tbody><tr><td data-label="対象科目">普通預金</td><td data-label="日付">承認済みの取引日</td><td data-label="摘要">備品代の振込</td><td data-label="相手科目">消耗品費</td><td data-label="伝票番号">元伝票の番号</td><td data-label="借方金額">記載なし</td><td data-label="貸方金額">元伝票の支払額</td><td data-label="差引残高">確認済みの残高</td></tr></tbody></table></div>
+    <p>この例は、備品代の科目を消耗品費とする会計判断を示すものではありません。既に承認された記録の転記例です。摘要だけでは、どの支払いかを特定できません。伝票に戻れる手がかりを併せて残し、そこから内容を確かめます。欄を増やす際は、日付や科目を別の場所へ繰り返し入力するより、確認に使う情報の置き場所を先に決めるとよいです。</p>
+    <p>元の記録に不明な点が残っている場合は、摘要を補って整った形に見せる前に、確認待ちとして扱います。推測で科目を埋めることと、承認済みの科目を転記することでは、担当する仕事が変わります。確認待ちの内容は、帳簿の確定した明細と混ざらない場所で管理します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．残高の違いは、繰越・明細・集計の順にたどる</h2>
+    <p>残高が合わないときは、まず帳簿の対象科目と対象期間をそろえ、繰越の出発点を見ます。別の期間の末尾と比較したり、途中までの明細を含む帳簿と締め後の帳簿を並べたりすると、原因を絞りにくくなります。確認した資料の範囲を、先に同じにする手順です。</p>
+    <p>続いて、元の記録から元帳へ進み、転記されていない明細がないかを確かめます。反対に元帳から元の記録へ戻り、同じ内容を重ねて写していないかも見ます。科目別の明細だけを見続けるより、転記元と往復すると、どこで食い違ったかを整理しやすくなります。</p>
+    <p>金額は、値と記載する側を組にして比較します。日付や伝票が同じでも、借方・貸方の位置まで一致しているかは別の確認です。摘要が似ているだけで同じ取引と扱わず、伝票へ戻って照合します。自社で管理している補助的な明細と比べる際も、対象に含めた記録の範囲をそろえます。</p>
+    <p>差引残高の欄を手で上書きして一致させる前に、繰越の値、明細の漏れ・重複、記載位置の違いを分けて記録します。誤りが見つかったら、元の記録を確認する担当者へ渡し、認められた修正を帳簿へ反映します。残高の違いを埋めるために、新しい取引を担当者の推測で付け足す進め方は避けます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．保存の定めを確かめ、更新後も伝票へ戻れる状態を保つ</h2>
+    <p>会社法第432条は、株式会社は、法務省令で定めるところにより、適時に、正確な会計帳簿を作成しなければならないとし、会計帳簿の閉鎖の時から十年間、その会計帳簿及びその事業に関する重要な資料を保存しなければならないとしています。合同会社などの持分会社にも、第615条に同じ内容の定めがあります。</p>
+    <p>国税庁の案内では、法人は、帳簿を備え付けて取引を記録するとともに、帳簿と取引等に関して作成または受領した書類を、その事業年度の確定申告書の提出期限の翌日から7年間保存しなければならないとし、帳簿の例に総勘定元帳や仕訳帳を挙げています。欠損金額が生じた事業年度などは10年間です。</p>
+    <p>同機構の会計規程は、会計伝票に作成年月日、経理科目、取引先、金額、取引内容その他必要な事項を記載するものとし、証拠書類を契約書、納品書、請求書その他これらに類する書類としています。</p>
+    <p>自社の運用を整理する際は、元帳の明細から伝票へ戻り、伝票から内容を示す書類へ進めるかを、実際の保管場所で確かめます。保管場所の名前だけでなく、担当者が変わっても探せる分類になっているかが確認点です。帳簿だけを取り出せても、転記元が見つからなければ、相手科目や摘要の食い違いを確認しにくくなります。</p>
+    <p>修正前後の記録が混在しないよう、確認中のものと確認を終えたものを見分けられる状態にします。更新後は直した行だけでなく、その後に続く残高と、確認に使う集計への反映も見ます。担当者の引き継ぎには、現在使う帳簿、対応する資料の所在、確認待ちの内容をまとめておくとよいです。</p>
+    <p>書式を整える作業と、仕訳・科目・税区分の当否や自社に適用される保存方法を決める作業は分けて扱います。会社法と法人税の保存期間は別々の定めのため、自社でどう管理するかを含め、会計処理や保存義務の判断は、条文と国税庁の案内を示して専門家に確認します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">対象の科目と期間を、照合する記録とそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">相手科目と取引先名を混同していないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">年月日・摘要・金額を、確認済みの元の記録と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">借方・貸方の記載位置まで確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">伝票番号から元伝票と取引内容の書類を探せるか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">繰越と明細の漏れ・重複を調べ、残高のつながりを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">修正後の残高と集計への反映を確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://laws.e-gov.go.jp/law/340M50000040012" rel="noopener" target="_blank">法人税法施行規則（e-Gov 法令検索）</a>：第54条（総勘定元帳の定義）、第55条第2項（総勘定元帳の記載事項）</li>
+      <li><a href="https://www.jcho.go.jp/wp-content/uploads/2026/04/014610JCHO_20260401.pdf" rel="noopener" target="_blank">独立行政法人地域医療機能推進機構会計規程</a>：規程の目的、総勘定元帳の様式（様式１）と主な欄・作成日、会計伝票の記載事項と証拠書類</li>
+      <li><a href="https://laws.e-gov.go.jp/law/417AC0000000086" rel="noopener" target="_blank">会社法（e-Gov 法令検索）</a>：第432条（会計帳簿の作成と10年間の保存）、第615条（持分会社の同じ定め）</li>
+      <li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/hojin/5930.htm" rel="noopener" target="_blank">No.5930 帳簿書類等の保存期間（国税庁）</a>：法人の帳簿書類の保存期間（7年間・欠損金額が生じた事業年度などは10年間）と帳簿の例</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/electronic-books-retention-period-check">電子帳簿の保存期間はどこで確認する？税目と対象年分の調べ方</a></li>
+      <li><a href="/column/bookkeeping-outsourcing-electronic-books">記帳を外注している会社の電子帳簿</a></li>
+      <li><a href="/column/consumption-tax-books-invoices-matching">消費税の帳簿と受け取った請求書はどう対応させて保管を確認する？</a></li>
+      <li><a href="/ai/tasks/receipt-sorting">経費・領収書の仕分けをAIでする手順</a></li>
+      <li><a href="/column/shareholder-register-fields">株主名簿には何を書く？株式数・取得日と基準日の確認欄</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

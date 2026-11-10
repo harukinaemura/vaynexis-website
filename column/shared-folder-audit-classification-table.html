@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>共有フォルダを点検する｜分類表の項目と実際の保存先を照合する方法｜Vaynexis</title>
+  <meta name="description" content="共有フォルダを点検するとき、社内の分類表から実際の保存先を確かめ、フォルダ側からも分類を照合します。場所や権限の修正と再確認を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="共有フォルダを点検する｜分類表の項目と実際の保存先を照合する方法｜Vaynexis">
+  <meta property="og:description" content="共有フォルダを点検するとき、社内の分類表から実際の保存先を確かめ、フォルダ側からも分類を照合します。場所や権限の修正と再確認を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/shared-folder-audit-classification-table">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/shared-folder-audit-classification-table">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"共有フォルダを点検する｜分類表の項目と実際の保存先を照合する方法","description":"共有フォルダを点検するとき、社内の分類表から実際の保存先を確かめ、フォルダ側からも分類を照合します。場所や権限の修正と再確認を整理します。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/shared-folder-audit-classification-table"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"共有フォルダを点検する","item":"https://vaynexis.jp/column/shared-folder-audit-classification-table"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">共有フォルダを点検する</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">共有フォルダを点検する｜分類表の項目と実際の保存先を照合する方法</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>共有フォルダの点検は、分類表から保存先へたどり、現物のフォルダ側からも分類表へ戻って確認します。表にあるのに見つからない場所と、現物にあるのに表にない場所を分け、文書を移す前に担当と利用者を確認します。内閣府が行政機関向けに示すマニュアルでは、記録用フォルダの階層と名称を保存期間表の分類と一致させ、フォルダ構成が正しく保たれているかを定期的に確認するとされており、会社の点検ではこの考え方を参考に使えます。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、共有フォルダの保存先を見直したい小さな会社の担当者が、社内の分類表と実際のフォルダを両方向から照らし、置き間違いや古いフォルダを見つけて直す流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">分類表と点検範囲を先に決める</a></li>
+      <li><a href="#s2">分類表から現物へ順にたどる</a></li>
+      <li><a href="#s3">現物から分類表へ逆に照合する</a></li>
+      <li><a href="#s4">違いを直す場所と担当を分ける</a></li>
+      <li><a href="#s5">変更後に資料へたどり着けるか確かめる</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．分類表と点検範囲を先に決める</h2>
+    <p>確認日：2026年11月10日。</p>
+    <p>内閣府は、行政文書の管理に関する通知の一覧に「共有フォルダにおける行政文書の電子的管理に関するマニュアル」（令和7年2月14日、内閣府大臣官房公文書管理課長）を掲載しています。同マニュアルは、各行政機関が共有フォルダで行政文書の電子的管理を行うに当たっての具体策を示したもので、対象は行政機関です。記録用フォルダは保存期間表に作成された大中小分類に沿って作り、フォルダの階層構造と名称を、保存期間表の大中小分類とその名称に一致させるとされています。</p>
+    <p>同じマニュアルでは、フォルダ名の先頭に保存期間表の順序と整合的に並ぶよう通し番号を付け、名称の前に【大分類】【中分類】【小分類】など区分が分かる記述を付けるとされています。フォルダ名とファイル名を合わせたパスの長さにも留意が必要とされ、どの分類に対応するかが分かる形であれば、フォルダ名を省略して書いても差し支えないとされています。</p>
+    <p>ここからは当社の整理です。</p>
+    <p>会社で点検するときは、自社で使う分類表の版、対象部署、点検する最上位のフォルダを決めます。フォルダのアクセス権を持つ担当と一緒に確認し、許可を得ていない場所は確認待ちとして記録します。内閣府のマニュアルは行政機関に向けたものなので、会社では自社の分類表を基準にし、番号や区分の付け方は自社の決まりに合わせて読み替えます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．分類表から現物へ順にたどる</h2>
+    <p>分類表の行ごとに、想定している保存先を開きます。名称が似ていても、上の階層と利用する部署が合うかを見ます。年や案件によって階層が分かれる場合は、想定している期間が一致するかも確認します。</p>
+    <p>開けない場所は、フォルダが存在しないのか、確認する担当の権限では開けないのかを分けて記録します。保存先がある場合でも、その場所にある文書の種類が分類表の説明と異なれば、該当する行を控えます。</p>
+    <p>内閣府のマニュアルでは、小分類より下のフォルダは業務上の必要に応じて作ってよいとしつつ、不要に深い階層のフォルダは作らない（目安として2段階などの上限を定める）、意思決定の各段階の最終版がどれか判断がつくフォルダ体系にする、といった点に留意するとされています。</p>
+    <p>分類表の行から開いた先で、小分類の下が何段にも深くなっている場所や、どれが最終版か分からない場所も、点検の控えに挙げます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．現物から分類表へ逆に照合する</h2>
+    <p>内閣府のマニュアルでは、行政機関の共有フォルダを、組織的な検討を経た文書の「記録用フォルダ」、組織的な検討を終える前の文書の「検討中フォルダ」、案の下書きや参考資料収集などの「個人用」のフォルダに分け、混同が生じないよう領域を分離して管理するとされています。検討中フォルダには「検討中」という名称を表示し、他者が見た場合に誤解を生じないようにすることとされています。</p>
+    <p>同じマニュアルでは、法令集や定型的な業務連絡のように課室で共通に使う資料は、これらとは分けて「組織参考資料」といったフォルダを作ることも考えられるとされています。</p>
+    <p>現物から照合するときは、部署が実際に使っているフォルダを順に見て、分類表で対応する項目があるかを確かめます。作業途中の資料と確定した記録が混ざっている場所や、担当者個人の場所にしか確定版がない状態を区別します。</p>
+    <p>分類がない場所は、使用している担当と、そこに置かれる文書の用途を確認します。新しく分類表に追加するのか、既存の分類に整理するのかは、用途を確認したうえで決めます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．違いを直す場所と担当を分ける</h2>
+    <p>内閣府のマニュアルでは、過去の文書の整理は一律・即時ではなく、新しいフォルダ体系を作って今後の文書を先に格納し、過去の文書は順次移す「新築・順次引っ越し方式」などが合理的とされています。古いフォルダには、新しい体系と混同しないよう【整理中】などの名称を付けておくことが望ましいとされています。分類とフォルダの階層・名称をすぐに一致させられない場合の当面の措置として、ショートカットの付与などで分類から既存のフォルダへ紐づける方法も挙がっていますが、リンク先のフォルダ名の変更などでショートカットが正しく機能しなくなることに留意が必要とされています。</p>
+    <p>違いを見つけたら、分類表の記載を直すもの、保存先を変えるもの、権限を確認するものに分けます。移動や名称変更が必要なときは、利用者、保存する必要がある記録、その場所を指しているリンクやショートカットの有無を先に確認します。古い場所を一度に片付けられないときは、移し終えるまで古いフォルダの名前に整理中と分かる語を付け、新しい場所と取り違えないようにします。</p>
+    <p>点検時に見つけた重複資料は、どれが正式な記録かを担当に聞きます。名前や更新日だけで判断せず、正式な版を指定する記録や、保存先を決めた経緯も確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．変更後に資料へたどり着けるか確かめる</h2>
+    <p>内閣府のマニュアルでは、個々の職員が自由にフォルダを追加できることから、文書管理者が構築のルールを周知し、大中小分類フォルダが正しく保たれているか、小分類の下に無秩序にフォルダが作られていないか、組織的な検討を経た文書が記録用フォルダに正しく格納されているかなどを定期的に確認するとされています。検討中フォルダの文書についても、漫然と放置されていないか確認するとされています。年度の途中で新しい分類を作るときは、文書管理者の承認を得た上で作るとされています。</p>
+    <p>変更後は、対象業務を担当する利用者が、分類表の記載から実際の資料にたどり着けるかを確かめます。点検結果には、分類名、変更前後の保存先、確認日、対応担当、残っている確認を記録します。会社では、点検する時期と点検する人、新しいフォルダを作るときに誰に断るかを決めておくと、次の点検で同じ違いを見つけやすくなります。</p>
+    <p>新しい業務を始めたり、資料を管理する部署が変わったりした場合は、分類表だけを更新して終わらず、今回と同じ方法で保存先を確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">分類表の版と点検範囲を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">分類表から実際のフォルダをたどったか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">実際のフォルダから分類表に戻って確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">作業途中の資料と確定した記録の置き場を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更前に利用者とリンクを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更後に必要な資料を開けるか確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">小分類の下に深すぎる階層や無秩序なフォルダがないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">検討中の資料が放置されていないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">古いフォルダに整理中と分かる名前を付けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ショートカットのリンク切れがないか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www8.cao.go.jp/chosei/koubun/hourei/hourei.html" rel="noopener" target="_blank">内閣府 公文書管理制度 関係法令・通知等</a>：共有フォルダの電子的管理マニュアルの現行掲載版</li>
+      <li><a href="https://www8.cao.go.jp/chosei/koubun/hourei/tsuchi2-3.pdf" rel="noopener" target="_blank">内閣府 共有フォルダにおける行政文書の電子的管理に関するマニュアル</a>：対象が行政機関であること、保存期間表に合わせた階層と名称、通し番号と区分の表示、パスの長さ、小分類の下の階層、個人用・検</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/onedrive-sync-file-naming-rules">OneDriveの同期で困らないファイル名とフォルダ階層の決め方</a></li>
+      <li><a href="/column/google-drive-limit-subfolder-access">Googleドライブの共有フォルダ内で一部だけ閲覧者を絞る設定と確認</a></li>
+      <li><a href="/column/electronic-records-multiple-storage">電子取引の保存先が複数あるとき、検索できる状態を確かめる方法</a></li>
+      <li><a href="/ai/tasks/ledger-building">台帳の整備をAIに任せる手順</a></li>
+      <li><a href="/column/cycle-count-find-uncounted-items">巡回棚卸の記録を集めたら、現品を数えていない品目をどう探す？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

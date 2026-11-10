@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで単価を何通りか変えた試算結果を一表に出すには｜Vaynexis</title>
+  <meta name="description" content="単価の候補を変えたときの金額を、元の数量を保ちながら一覧にする方法を整理します。入力欄と結果式の準備、候補の並べ方、代入セルの指定を短い例で示し、結果が同じになる場合の見直しや、試算の前提を引き継ぐ際の確認点までまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで単価を何通りか変えた試算結果を一表に出すには｜Vaynexis">
+  <meta property="og:description" content="単価の候補を変えたときの金額を、元の数量を保ちながら一覧にする方法を整理します。入力欄と結果式の準備、候補の並べ方、代入セルの指定を短い例で示し、結果が同じになる場合の見直しや、試算の前提を引き継ぐ際の確認点までまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-data-table-unit-price-scenarios">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-data-table-unit-price-scenarios">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで単価を何通りか変えた試算結果を一表に出すには","description":"単価の候補を変えたときの金額を、元の数量を保ちながら一覧にする方法を整理します。入力欄と結果式の準備、候補の並べ方、代入セルの指定を短い例で示し、結果が同じになる場合の見直しや、試算の前提を引き継ぐ際の確認点までまとめます。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-data-table-unit-price-scenarios"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで単価を何通りか変えた試算結果を一表に出すには","item":"https://vaynexis.jp/column/excel-data-table-unit-price-scenarios"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで単価を何通りか変えた試算結果を一表に出すには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで単価を何通りか変えた試算結果を一表に出すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelで候補単価ごとの試算を一表に出すには、共通の入力値を使う数式の結果をまとめて表示するデータ テーブルを使います。単価だけを変える形に絞り、数量と計算の前提をそろえてから候補を縦に並べると、比較する対象が明確になります。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、単価を何通りか変えたときの金額を一表で見比べたい小さな会社の担当者が、Excel のデータ テーブル（単入力テーブル）の配置と代入セルの指定、結果の照合と前提の残し方を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">試算の範囲と使う版を合わせる</a></li>
+      <li><a href="#s2">元の入力欄と、候補を並べる場所を分ける</a></li>
+      <li><a href="#s3">数式を右上に置き、候補の列から代入する</a></li>
+      <li><a href="#s4">結果が同じときは、設定を直す前に元の式を見る</a></li>
+      <li><a href="#s5">比較表には、固定した前提を添えて渡す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．試算の範囲と使う版を合わせる</h2>
+    <p>確認日：2026-11-10</p>
+    <p>この手順の公式ヘルプの適用先は、Excel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016です。Mac用の公式ヘルプは別にあり、適用先はExcel for Microsoft 365 for Mac、Excel 2024 for Mac、Excel 2021 for Macです。以下では、候補を縦に並べる配置に絞ります。</p>
+    <p>ここで使うデータ テーブルは、表を整える［テーブルとして書式設定］で作る Excel の表とは別の機能です。見出しや色を整えることと、候補を代入して試算結果を出すことは、目的を分けて考えるとよいです。</p>
+    <p>ゴール シークは結果から入力値を求める機能なので、用意した候補単価ごとの結果を比べる今回の問いとは分けて扱います。数量も同時に動かす比較は、ヘルプでは 2 つの変数を扱う複入力テーブルの用途として別に説明されています。この記事では販売価格の決め方や、複入力テーブルには進みません。比較したいのは単価を変えた場合の金額であり、採用する単価は別に判断するものとして扱います。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．元の入力欄と、候補を並べる場所を分ける</h2>
+    <p>ヘルプでは、代入する値の一覧を縦 1 列か横 1 行で入力し、値の両側に空の行と列をいくつか残しておくよう案内しています。また、単入力テーブル（1 変数データ テーブル）の数式は、1 つの代入セルだけを参照する必要があります。今回の配置では、単価を入れる欄を候補の代入先とし、数量の欄は固定する前提で準備します。数式の中へ単価を直接書くのではなく、単価の入力欄を参照する形にすると、どこを変えて試すのかを対応させやすくなります。</p>
+    <p>掛け算には、算術演算子の「*」（アスタリスク）を使います。下表は当社が作った配置例で、単価は円、数量は個として扱います。「作成後の照合値」は計算を確かめる目安であり、その値を結果欄へ手入力する指示ではありません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">場所</th><th scope="col">役割</th><th scope="col">作成前に入れる内容</th><th scope="col">作成後の照合値</th></tr></thead><tbody><tr><td data-label="場所">B3</td><td data-label="役割">元の単価の入力欄</td><td data-label="作成前に入れる内容">1,000</td><td data-label="作成後の照合値">—</td></tr><tr><td data-label="場所">B4</td><td data-label="役割">固定する数量の欄</td><td data-label="作成前に入れる内容">10</td><td data-label="作成後の照合値">—</td></tr><tr><td data-label="場所">C2</td><td data-label="役割">候補一覧の左上</td><td data-label="作成前に入れる内容">空欄</td><td data-label="作成後の照合値">空欄</td></tr><tr><td data-label="場所">D2</td><td data-label="役割">結果を求める数式</td><td data-label="作成前に入れる内容">=B3*B4</td><td data-label="作成後の照合値">10,000</td></tr><tr><td data-label="場所">C3／D3</td><td data-label="役割">候補単価／結果欄</td><td data-label="作成前に入れる内容">C3に800、D3は空欄</td><td data-label="作成後の照合値">D3は8,000</td></tr><tr><td data-label="場所">C4／D4</td><td data-label="役割">候補単価／結果欄</td><td data-label="作成前に入れる内容">C4に1,000、D4は空欄</td><td data-label="作成後の照合値">D4は10,000</td></tr><tr><td data-label="場所">C5／D5</td><td data-label="役割">候補単価／結果欄</td><td data-label="作成前に入れる内容">C5に1,200、D5は空欄</td><td data-label="作成後の照合値">D5は12,000</td></tr><tr><td data-label="場所">C2:D5</td><td data-label="役割">作成時に選択する範囲</td><td data-label="作成前に入れる内容">上の数式と候補値を含める</td><td data-label="作成後の照合値">—</td></tr></tbody></table></div>
+    <p>ここで区別したいのは、元の単価、試す候補、計算結果の置き場です。候補の一覧は比較したい値を並べる場所であり、元の単価の入力欄とは役割が異なります。先にそれぞれの見出しを付けておくと、作成中に選ぶ場所を見失いにくくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．数式を右上に置き、候補の列から代入する</h2>
+    <p>候補値を縦に並べる場合、結果を求める数式は、候補値の列の右上のセルに置きます。候補と数式を同じ高さに並べてしまうと、意図した配置との違いを見落としやすいため、作成前に上下の位置関係を見直します。結果の見出しは、数式を置く場所とぶつからない位置に付けておくとよいです。</p>
+    <p>選択するのは、代入する値と数式を含むセル範囲です。候補の値だけを選ぶのではなく、結果を求める式が範囲に入っているかも確認する流れです。上の配置例では、表の最後に示した選択範囲と、画面上で囲んだ範囲を照合します。</p>
+    <p>続いて、［データ］タブの［What-If 分析］から［データ テーブル］を選びます。候補値を列方向に置いた場合は、［列代入セル］に、候補を代入する元の入力セルの参照を指定します。この指定で見るのは候補一覧の先頭ではなく、元の単価を入力する場所です。役割を取り違えないよう、「どの欄を候補で置き換えて計算するか」と言葉で確かめてから設定を確定するとよいです。</p>
+    <p>Mac用の作成手順でも、［データ］から［What-If 分析］、［データ テーブル］へ進みます。手元の画面とヘルプを照らす際は、使っている版に合う手順を選び、別の版の設定名をつなぎ合わせないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．結果が同じときは、設定を直す前に元の式を見る</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>比較表ができたら、最初に単価と結果の対応を見ます。候補の並び順に対して結果欄がずれていないか、入力した候補を漏れなく読み取れるかを確かめます。結果が埋まったことだけを完了の目印にはしません。</p>
+    <p>候補を変えても結果が同じに見えるときは、まず元の式が参照する入力欄を読み直します。式の参照先が別の単価欄になっていないか、式に価格を直接書き込んでいないか、数量を単価の代入先として指定していないかを順に見ると、直す場所を絞れます。結果欄の値を個別に書き換えて見た目を合わせる前に、元の式と設定の対応を調べる流れです。</p>
+    <p>照合には、候補の単価と固定した数量を使って別途計算した値を使います。比較表の結果を別の欄へ写しただけでは、入力と計算の対応を確認したことにはなりません。</p>
+    <p>数量の入力を後から変えた場合は、前に確かめた結果をそのまま判断に使わず、変更後の前提で照合し直します。</p>
+    <p>入力を変えても結果が変わらないときは、計算の設定も確かめます。Microsoft のヘルプでは、データ テーブルを含むワークシートの計算を速くするために、［計算方法］のオプションでデータ テーブル以外の部分だけを自動で再計算するようにできると説明しています。この設定にした場合、ブック全体で再計算が行われてもデータ テーブルの計算は行われず、手動で再計算するには数式を選択して F9 キーを押すとしています。設定を変えたときは、担当者が分かるように残しておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．比較表には、固定した前提を添えて渡す</h2>
+    <p>試算結果を受け取る人には、動かした項目だけでなく、何を固定したかも伝えます。同じ金額が並んでいても、数量や単価の単位が違えば比較の意味が変わるためです。候補が取引先の提示額なのか、検討用に置いた値なのかも分かるようにしておくと、確定した価格との混同を防ぐ手掛かりになります。</p>
+    <p>例えば、数量は変更していないこと、金額に含める費用の範囲、候補を決めた担当者を短く添えます。送料などを今回の計算に含めていない場合も、その前提を説明に残すとよいです。表が示している範囲を越えて、購入や販売の判断まで済んだような扱いにしないためです。</p>
+    <p>再利用する際は、前の候補を残してよいか、固定した数量を引き継いでよいかを確認します。入力欄の場所と、値を変更してよい項目が分かれば、担当者が替わっても比較の条件を読み直せます。引き渡す前には、確認を終えた表と、説明に書いた前提が一致しているかまで見直します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">変える対象を単価に絞り、数量を固定する前提を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の単価、候補の一覧、結果を置く場所の役割を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の式が参照する単価の入力欄を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">候補と数式を含む選択範囲を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">候補の向きと、代入先として指定した入力欄を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">候補単価と固定した数量から求めた値で結果を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">固定した前提と、金額に含める範囲を受取人と共有したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/calculate-multiple-results-by-using-a-data-table" rel="noopener" target="_blank">データ テーブルを使用して複数の結果を計算する</a>：適用先、値の並べ方、1 つの代入セル、数式の位置、選択範囲、作成メニュー、列方向の代入先、複入力テーブル、計算の設定</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/calculate-multiple-results-by-using-a-data-table-in-excel-for-mac" rel="noopener" target="_blank">Excel for Mac のデータ テーブルを使用して複数の結果を計算する</a>：Mac用ヘルプの適用先と作成メニュー</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/create-and-format-tables" rel="noopener" target="_blank">表を作成し、書式設定する</a>：表の書式設定と試算用のデータ テーブルの区別</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/introduction-to-what-if-analysis" rel="noopener" target="_blank">What-If 分析の概要</a>：共通の入力値を使う数式の結果を一覧にする機能、目標値から入力値を求める機能との違い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/multiply-and-divide-numbers-in-excel" rel="noopener" target="_blank">Excel で数値を乗算および除算する</a>：単価と数量を掛ける式の演算子</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-quantity-unit-price-total">Excelで数量と単価の明細から総額を出す手順と確認のしかた</a></li>
+      <li><a href="/column/excel-manual-recalculation-result-check">Excelで入力値を変えても結果が変わらないとき、何を確かめる？</a></li>
+      <li><a href="/column/excel-tiered-unit-price-lookup">Excelで数量の段階別料金表から適用単価を求める手順と境界の確認</a></li>
+      <li><a href="/column/sales-forecast-sheet-fields">売上想定シートには何を書く？単価・数量・期間と前提資料の照合欄</a></li>
+      <li><a href="/column/word-autotext-register-notice-text">Wordで繰り返し使う注意書きを定型句に登録・管理する手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ログの保存だけで定期レビュー済みにしないための予定と記録の照合｜Vaynexis</title>
+  <meta name="description" content="セキュリティログの定期レビューを済ませたかは、保存先の有無に加え、予定した対象期間・確認担当と、内容を確認した記録を突き合わせて確かめます。未着手、範囲不足、専門担当への引き継ぎ中を分け、次の確認まで追えるようにする事務側の進め方を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="ログの保存だけで定期レビュー済みにしないための予定と記録の照合｜Vaynexis">
+  <meta property="og:description" content="セキュリティログの定期レビューを済ませたかは、保存先の有無に加え、予定した対象期間・確認担当と、内容を確認した記録を突き合わせて確かめます。未着手、範囲不足、専門担当への引き継ぎ中を分け、次の確認まで追えるようにする事務側の進め方を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/log-review-schedule-record-reconciliation">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/log-review-schedule-record-reconciliation">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ログの保存だけで定期レビュー済みにしないための予定と記録の照合","description":"セキュリティログの定期レビューを済ませたかは、保存先の有無に加え、予定した対象期間・確認担当と、内容を確認した記録を突き合わせて確かめます。未着手、範囲不足、専門担当への引き継ぎ中を分け、次の確認まで追えるようにする事務側の進め方を整理します。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/log-review-schedule-record-reconciliation"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"ログの保存だけで定期レビュー済みにしないための予定と記録の照","item":"https://vaynexis.jp/column/log-review-schedule-record-reconciliation"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">ログの保存だけで定期レビュー済みにしないための予定と記録の照</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">ログの保存だけで定期レビュー済みにしないための予定と記録の照合</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>定期レビューの実施状況は、予定した対象と期間に対して、誰が何を確認したかを照合して確かめます。ログの保存記録と内容を見た記録は分け、未着手や確認できなかった範囲を残す運用にします。事務担当は実施の抜けを整理し、不審な記録の意味や対応の判断は専門担当へ引き継ぎます。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、ログを保存しただけで定期レビュー済みと扱っていないかを確かめたい小さな会社の担当者が、確認予定と実施記録の照合、未着手・範囲不足の残し方、専門担当への引き継ぎを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">保存の記録と内容を見た記録を分けて読む</a></li>
+      <li><a href="#s2">実施記録を集める前に、予定との対応をそろえる</a></li>
+      <li><a href="#s3">未着手・範囲不足・確認完了を混ぜない</a></li>
+      <li><a href="#s4">専門担当への引き継ぎと、対応後の確認をつなぐ</a></li>
+      <li><a href="#s5">AIに任せる整理と、人が確かめる結論を区切る</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．保存の記録と内容を見た記録を分けて読む</h2>
+    <p>確認日：2026年11月10日</p>
+    <p>IPAの「中小企業の情報セキュリティ対策ガイドライン」は、通信ログや認証ログを取得・保管するとともに、ログの改ざん防止を行った上で、定期的にレビューするよう示しています。また、同ガイドラインが点検方法の一つに挙げる閲覧（レビュー）は、文書や記録、設定画面など、対策を実行した証拠となるものを確認する方法です。</p>
+    <p>IPAの「プラクティス5-6 アクセスログの取得」は、予兆やインシデントの検知のため、ログ取得の目的や項目、保管や確認方法などを事前に整備する必要があるとしています。</p>
+    <p>事務側の照合では、保存先を記した報告に、内容を見た担当や結果も記録されているかを読み分けます。「保存済み」という記載は、保存の作業を示す欄に置きます。レビューを終えたとする欄には、対象にした範囲と確認の内容を結び付けます。</p>
+    <p>確認予定の管理表と、作業後に残す記録も区別して扱います。担当者の名前が予定表に載っていることと、その担当者が内容を確認したことは、別々に照合する項目です。予定を転記しただけで完了扱いにせず、確認した側の記録から実施状況をたどります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．実施記録を集める前に、予定との対応をそろえる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>照合は、社内で承認した確認予定を起点にします。対象の名称、確認する期間、実施予定、担当を並べ、対応する実施記録があるかを追います。手元に届いた報告だけを順に読む方法に加え、予定側から探すことで、報告自体が届いていない対象も確認できます。</p>
+    <p>対象期間は「どの期間のログを見たか」、実施日時は「いつ内容を見たか」として分けます。報告を提出した日は、さらに別の情報として扱います。提出の時期が予定に合っていても、確認した期間まで合っているとは扱わず、対応する記録を読み合わせます。</p>
+    <p>次の表は、予定と実施状況を並べる例です。記入例は、保存の連絡だけが届き、レビューの実施をまだ確認できていない場面です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">照合する項目</th><th scope="col">予定側で確かめる内容</th><th scope="col">実施側の短い記入例</th><th scope="col">次に確かめること</th></tr></thead><tbody><tr><td data-label="照合する項目">対象</td><td data-label="予定側で確かめる内容">確認するシステムと範囲</td><td data-label="実施側の短い記入例">対象名は予定と一致</td><td data-label="次に確かめること">対象の一部が除外されていないか</td></tr><tr><td data-label="照合する項目">対象期間</td><td data-label="予定側で確かめる内容">確認する記録の開始・終了</td><td data-label="実施側の短い記入例">保存した範囲の記載だけあり</td><td data-label="次に確かめること">実際に内容を見た期間はどこか</td></tr><tr><td data-label="照合する項目">予定と実施</td><td data-label="予定側で確かめる内容">実施予定と担当</td><td data-label="実施側の短い記入例">保存の連絡を受領</td><td data-label="次に確かめること">内容を確認した担当と日時は何か</td></tr><tr><td data-label="照合する項目">確認の内容</td><td data-label="予定側で確かめる内容">予定で定めた確認事項</td><td data-label="実施側の短い記入例">記載なし</td><td data-label="次に確かめること">何をどの記録と照合したか</td></tr><tr><td data-label="照合する項目">状態</td><td data-label="予定側で確かめる内容">照合後に付ける状態</td><td data-label="実施側の短い記入例">実施確認待ち</td><td data-label="次に確かめること">未着手か、記載漏れか</td></tr><tr><td data-label="照合する項目">引き継ぎ</td><td data-label="予定側で確かめる内容">不明点を確かめる担当</td><td data-label="実施側の短い記入例">管理担当へ照会予定</td><td data-label="次に確かめること">回答の受領と再照合を誰が行うか</td></tr></tbody></table></div>
+    <p>表の場面では、未実施と断定する前に、記録の記載漏れかを照会します。回答を受けるまでは「実施確認待ち」として残し、保存完了の連絡をレビュー完了の根拠に置き換えません。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．未着手・範囲不足・確認完了を混ぜない</h2>
+    <p>照合後の状態には、保存済み、確認未着手、範囲不足、確認完了、専門担当へ引き継ぎ中など、自社で意味をそろえた名称を使います。保存とレビューの欄を分けておけば、保存は終わり、内容の確認は未着手という状態も表せます。すべてを「対応済み」にまとめず、次に行う作業が読める名前にします。</p>
+    <p>範囲不足では、予定との差を具体的に残します。確認できた範囲に加え、未確認の対象や期間、追加の記録を用意する担当、再び確認する予定を記入し、一部だけを見た記録から対象全体の完了へ広げません。</p>
+    <p>「異常なし」という記載にも、何を見た結果なのかを添えます。内容を確認した結果なのか、単に連絡や通知が届いていないという意味なのかを担当へ確かめ、記載を整えます。</p>
+    <p>担当の不在や交代で予定どおりに進まなかった作業は、元の予定を残して引き継ぎます。予定を後から書き換えるだけで済ませず、変更理由、引き受けた担当、変更後の予定を並べると、遅れている作業の所在をたどれます。記録が見つからない場合も、照会先と回答待ちの内容を残します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．専門担当への引き継ぎと、対応後の確認をつなぐ</h2>
+    <p>ガイドラインは、点検結果と、その結果を踏まえた対策推進計画を定期報告し、指示を文書化・全社共有した上で、是正完了まで追跡するよう示しています。</p>
+    <p>ログレビューの実施確認でも、内容を見終えたことと、見つかった問題への対応が終わったことは、状態を分けて管理します。専門担当へ照会中の事項には、元の確認記録をひも付けます。レビューの完了欄だけではなく、対応を追う欄も見て、回答の届いていない事項を引き継ぎます。</p>
+    <p>同ガイドラインは、ログファイルをどのように管理するかの方針を組織として定めておくことは重要だとする一方で、ログファイルの内容を十分に理解するには専門的な知識が必要になるとしています。事務担当が整理するのは、予定どおり確認されたか、どこが未確認か、何を専門担当へ渡したかです。不審な記録が攻撃によるものか、業務上の操作かといった技術的な判断は専門担当に確認します。観察した内容と推測を分け、該当記録の参照先、担当が判断を求めたい点を添えます。</p>
+    <p>連絡先には、問い合わせを受ける窓口と、調査や判断を担う担当との関係も残します。連絡を送った記録に加え、受領されたこと、引き受ける担当、回答の予定をたどります。回答後は、指示された対応と再確認の結果を追記し、元の疑問から終了までがつながるようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．AIに任せる整理と、人が確かめる結論を区切る</h2>
+    <p>AIを使う運用案では、社内で利用を認めた範囲の予定表と実施記録を材料に、対応関係と記載の空欄を並べる下書きを作ります。元の記録と下書きを人が照合し、実施状況の確定は確認担当が行います。生のログを広く渡す運用へ広げず、渡す情報の範囲は管理担当と決めます。</p>
+    <p>下書きには、社内で定めた確認方法と、実施記録の該当箇所を対応させます。次の指示文は、人が元の記録と照合するための下書きを作る例です。</p>
+    <pre class="prompt">渡した確認予定と実施記録から、対応する項目を並べる下書きを作ります。
+予定の対象・対象期間・担当に対して、実施記録の該当箇所を示します。
+保存の記録と、内容を確認した記録を分けます。
+実施記録が見つからない項目や、確認範囲の食い違いは確認待ちにします。
+書かれていない担当・結果・完了の判断は補いません。
+不審な記録の原因や対応の要否は判断せず、専門担当への確認事項に残します。</pre>
+    <p>整理後は、元の予定で対象にしていた項目の抜けと、別の対象への取り違えを人が見直します。読みやすい要約だけで確認を終えず、下書きに付けた参照先から、内容を見た担当と確認結果をたどって実施状況を確定します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">保存の記録と、内容を確認した記録を分けて照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">承認された予定から、報告の届いていない対象も確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">予定した対象期間と、実際に内容を見た期間を突き合わせたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">確認した担当・日時・確認事項を実施記録から確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">未着手・範囲不足・確認完了・引き継ぎ中の状態を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">未確認事項に、照会先・引き受ける担当・次の確認予定を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">専門担当への引き継ぎ後も、回答と対応後の再確認まで追跡したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.ipa.go.jp/security/guide/sme/ug65p90000019cbk-att/000055520.pdf" rel="noopener" target="_blank">中小企業の情報セキュリティ対策ガイドライン 第4.0版</a>：冊子34ページのログ取得・保管・改ざん防止と定期レビュー、冊子37ページの点検方法と是正完了までの追跡、ログ管理の方針と</li>
+      <li><a href="https://www.ipa.go.jp/security/economics/practices_navi/practice219.html" rel="noopener" target="_blank">プラクティス5-6 アクセスログの取得</a>：ログの目的・項目・保管や確認方法を事前に整備する必要性</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/operation-log-report-form-fields">操作ログ報告票には何を書く？対象期間・原ログ参照・確認結果の欄</a></li>
+      <li><a href="/column/security-self-assessment-evidence-records">情報セキュリティ自社診断表は何を確かめる？回答根拠の残し方</a></li>
+      <li><a href="/column/security-audit-report-fields">情報セキュリティ監査報告書には何を書く？証拠・指摘・是正の欄</a></li>
+      <li><a href="/column/email-auto-forward-private-check-records">業務メールの私用宛て自動転送を点検し、許可と確認結果を残すには</a></li>
+      <li><a href="/column/data-item-definition-sheet-fields">データ項目定義書には何を書く？列名・型・入力例をそろえる確認欄</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

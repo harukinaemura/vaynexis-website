@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>データ項目定義書には何を書く？列名・型・入力例をそろえる確認欄｜Vaynexis</title>
+  <meta name="description" content="データ項目定義書の記載項目を、列名・型・意味・単位・入力例・出典から整理します。公式資料の説明と社内で決める入力ルールを分け、空欄の扱い、選択肢の参照先、元資料との照合、変更時の記録まで、短いひな形と架空の記入例で確認できます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="データ項目定義書には何を書く？列名・型・入力例をそろえる確認欄｜Vaynexis">
+  <meta property="og:description" content="データ項目定義書の記載項目を、列名・型・意味・単位・入力例・出典から整理します。公式資料の説明と社内で決める入力ルールを分け、空欄の扱い、選択肢の参照先、元資料との照合、変更時の記録まで、短いひな形と架空の記入例で確認できます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/data-item-definition-sheet-fields">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/data-item-definition-sheet-fields">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"データ項目定義書には何を書く？列名・型・入力例をそろえる確認欄","description":"データ項目定義書の記載項目を、列名・型・意味・単位・入力例・出典から整理します。公式資料の説明と社内で決める入力ルールを分け、空欄の扱い、選択肢の参照先、元資料との照合、変更時の記録まで、短いひな形と架空の記入例で確認できます。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/data-item-definition-sheet-fields"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"データ項目定義書には何を書く？列名・型・入力例をそろえる確認","item":"https://vaynexis.jp/column/data-item-definition-sheet-fields"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">データ項目定義書には何を書く？列名・型・入力例をそろえる確認</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">データ項目定義書には何を書く？列名・型・入力例をそろえる確認欄</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>データ項目定義書には、列名だけでなく、その意味、型、単位、入力例、値の出典、入力可否や空欄の扱いを記します。社内で決めた仕様と判断待ちの事項を分け、元の資料と受け取り側の使い方を照合することが、書式を整える出発点です。</p></div>
+    <p class="col-meta">公開：2026年11月10日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、社内の一覧やデータの列の意味をそろえたい小さな会社の担当者が、データ項目定義書に書く列名・型・単位・入力例・出典の欄と、空欄や選択肢の扱い、元資料・受け取り側・変更履歴との照合を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">公式資料で定義書の役割を押さえる</a></li>
+      <li><a href="#s2">型・空欄・選択肢は別々に確認する</a></li>
+      <li><a href="#s3">書式には列の意味と確認先を並べる</a></li>
+      <li><a href="#s4">記入例で定義と入力値の違いを確かめる</a></li>
+      <li><a href="#s5">元資料・受け取り側・変更履歴を照合する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．公式資料で定義書の役割を押さえる</h2>
+    <p>確認日：2026-11-10</p>
+    <p>国土交通省の「オープンデータ化ガイドライン」は、同省の職員向けに基本的な考え方や具体的な処理方法の例を提供する資料です。同資料は、データ項目定義書を、フィールド名、データ型、項目の内容、入力例、秘匿化処理の有無などを整理するものと位置付けています。</p>
+    <p>同資料では、公開するデータファイルごとにデータの定義を整理するよう示されています。同資料のデータ項目定義書の記入イメージ（国土交通省組織管内図データの例）は、番号、フィールド名、データ型、項目、項目の内容、単位、入力例、個人情報の該当性の有無、匿名化処理の有無、法人等の権利利益の有無、備考、出典の欄を並べ、公開するデータセット毎にシートを作成するとしています。その記入例では、備考欄に「附番ルール参照」「コードリスト参照」、出典欄に「新規作成」などと書かれています。</p>
+    <p>定義書を作る目的は、入力担当者と受け取り側が同じ意味で列を扱えるようにすることです。列の見出しを写しただけでは、何を表す値なのか、どの資料から転記するのかが残りません。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．型・空欄・選択肢は別々に確認する</h2>
+    <p>データ仕様書については、更新頻度、文字コード、日付形式などの技術的な仕様に加え、入力可能な値の範囲などの制約条件を明記すると説明されています。欠損情報についても、空欄・未入力やデータの欠損に対し、統一的なルールによる処理が必要とされています。</p>
+    <p>コードリストは、データの階層化や繰り返し入力される選択肢を表すコードを整理する情報として説明されています。</p>
+    <p>これらの説明を踏まえ、社内の書式では「値の形式」「値を入れる範囲」「空欄の意味」「選択肢の参照先」を分けて記録します。型が決まっていても、記入してよい内容まで決まったことにはなりません。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．書式には列の意味と確認先を並べる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>定義書の冒頭には、対象ファイル、対象シート、対象となる業務、適用する版、確認担当を置きます。その下に各列の定義を並べます。似た名前のファイルとの取り違えを避けるため、保存場所だけでなく、何を記録するデータなのかも短く添えます。次の表は、社内用の書式を組み立てる案です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">項目</th><th scope="col">何を書くか</th><th scope="col">書き間違えやすい点</th></tr></thead><tbody><tr><td data-label="項目">列名・フィールド名</td><td data-label="何を書くか">データ本体で使う名称</td><td data-label="書き間違えやすい点">説明用の呼び名だけを記して本体と合わなくなる</td></tr><tr><td data-label="項目">項目の意味</td><td data-label="何を書くか">値が表す対象や状態</td><td data-label="書き間違えやすい点">列名を言い換えただけで定義が伝わらない</td></tr><tr><td data-label="項目">型・表記形式</td><td data-label="何を書くか">文字列、数値、日付などの扱いと表記</td><td data-label="書き間違えやすい点">見た目だけで型を決める</td></tr><tr><td data-label="項目">単位</td><td data-label="何を書くか">値の読み方に必要な単位</td><td data-label="書き間違えやすい点">列名に書いたつもりで定義欄を空ける</td></tr><tr><td data-label="項目">入力例</td><td data-label="何を書くか">定義に合う短い値</td><td data-label="書き間違えやすい点">説明文を実際の入力値と混同する</td></tr><tr><td data-label="項目">入力可否・空欄</td><td data-label="何を書くか">必須・任意、未入力や対象外の扱い</td><td data-label="書き間違えやすい点">空欄を未確認と確定済みで兼用する</td></tr><tr><td data-label="項目">選択肢・参照先</td><td data-label="何を書くか">使用する選択肢一覧と対応する項目</td><td data-label="書き間違えやすい点">呼び名だけを書き、一覧の所在を残さない</td></tr><tr><td data-label="項目">出典</td><td data-label="何を書くか">値の元資料と、その中の欄</td><td data-label="書き間違えやすい点">定義書を作る際に読んだ解説を入れる</td></tr><tr><td data-label="項目">備考・確認担当</td><td data-label="何を書くか">制約、例外、決定内容の確認先</td><td data-label="書き間違えやすい点">未決定の事項を確定した仕様として書く</td></tr></tbody></table></div>
+    <p>列名と項目の意味は分けて記入します。同じ「日付」という見出しでも、受け付けた日と完了した日では意味が異なります。どの出来事を記録するのかを文章にし、入力担当者が判断する境界を明らかにします。識別するための値なのか、集計に使う値なのかも、この説明の中でそろえます。</p>
+    <p>単位の欄には、数量や金額をどう読むかを記します。単位を使わない項目には、その旨を記しておくと、未記入との区別がつきます。表記形式の欄には、日付の年月日の並び、区切り記号、文字の表し方など、受け取り側と合意した書き方を残します。具体的な許容範囲や桁の扱いは、業務担当者と受け取り側が決める仕様です。</p>
+    <p>出典は「その値の出どころ」を示す欄として使います。元の帳票名や資料名に加え、どの欄から転記するかまで記します。定義書の作成に使った参考文献は別に管理し、値の出典との混同を避けます。社内で新しく決めた分類や付番には、その決定内容を記録した文書を参照先として残します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．記入例で定義と入力値の違いを確かめる</h2>
+    <p>説明のための架空の貸出受付データで、一部の列を次のように定義します。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">列名</th><th scope="col">項目の意味</th><th scope="col">型</th><th scope="col">単位</th><th scope="col">入力例</th><th scope="col">入力可否・出典・備考</th></tr></thead><tbody><tr><td data-label="列名">品名</td><td data-label="項目の意味">貸し出す物の名称</td><td data-label="型">文字列</td><td data-label="単位">単位なし</td><td data-label="入力例">案内板</td><td data-label="入力可否・出典・備考">必須。貸出受付票の品名欄から転記</td></tr><tr><td data-label="列名">使用場所区分</td><td data-label="項目の意味">使用する場所の区分</td><td data-label="型">文字列</td><td data-label="単位">単位なし</td><td data-label="入力例">館内</td><td data-label="入力可否・出典・備考">必須。場所区分一覧の名称を使用</td></tr><tr><td data-label="列名">補足</td><td data-label="項目の意味">受付時に伝える補足事項</td><td data-label="型">文字列</td><td data-label="単位">単位なし</td><td data-label="入力例">返却先は受付</td><td data-label="入力可否・出典・備考">任意。貸出受付票の連絡欄から転記。補足なしは空欄</td></tr></tbody></table></div>
+    <p>入力例には、実際にセルへ入れる値を置きます。「場所の区分を入れる」という説明は、項目の意味や入力ルールの欄に記す内容です。また、見本に載せた値だけを入力可能と扱わず、使える選択肢の全体を参照先の一覧で管理します。</p>
+    <p>空欄の扱いも、入力の必要性と意味を切り分けて決めます。任意項目には、記入不要と判断した空欄と、まだ内容を確認していない状態を区別する記録を添えます。必須項目の判断待ちは、入力例を仮置きして埋めるのではなく、確認待ちとして別に管理します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．元資料・受け取り側・変更履歴を照合する</h2>
+    <p>最初に、データ本体の列と定義書の列名を照合します。追加された列が抜けていないか、廃止した列の説明が残っていないか、別の項目を同じ名前で扱っていないかを確認します。並び順だけに頼らず、列名と意味を対応させて読みます。</p>
+    <p>次に、元資料と比べて、転記先の列、単位、入力例、出典の欄を確認します。元資料にない情報を、担当者の推測で補う仕様になっていないかも見ます。入力可否や値の範囲について意見が分かれた事項は、決めた人と理由を残し、入力担当者だけに判断を預けません。</p>
+    <p>受け取り側とは、読み込むデータの形式と使い方を照合します。画面で読みやすい呼び名と受け渡し用の列名を分けて扱い、名称の対応を定義書に記します。日付の書き方、空欄、選択肢の表記を確認し、見た目を整えた後も同じ意味で受け取れるかを、実際に使う担当者同士で確かめます。</p>
+    <p>定義書、対応するデータ、選択肢の一覧は、同じ版をたどれる場所で保管します。改訂時には、変更した列、変更前後の意味、適用開始、過去のデータへの対応、確認担当を記録します。列名が同じまま意味だけ変わる改訂にも、変更理由を残します。以前のデータを読む際に、当時の定義へ戻れることを保管方法の確認点にします。</p>
+    <p>記入イメージにある個人情報の該当性や匿名化処理の有無の欄は、この記事では判断の対象にしません。入力の仕様を決める担当と、公開範囲を判断する担当は書式上でも分けて記録し、公開に関する判断待ちの項目には、担当者へ引き継ぐための状態欄を設けます。入力例が埋まったことをもって、共有や公開の可否まで決定済みとは扱わず、用途ごとの確認結果を残します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">対象ファイル・対象シートと適用する版を記載したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">データ本体の列名と、定義書の列名・意味を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">型・単位・表記形式と入力例の整合を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力可否、空欄、判断待ちの扱いを区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">選択肢の全体と、値の出典となる資料・欄を示したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元資料と受け取り側の仕様を担当者同士で確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更履歴と以前の定義をたどれる保管先を決めたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.mlit.go.jp/links/wp-content/uploads/open-data-guideline-v1.0_1.pdf" rel="noopener" target="_blank">国土交通省「オープンデータ化ガイドライン」2025年5月 v1.0</a>：定義書の役割、ファイルごとの整理、データ項目定義書の記入イメージの欄と記入例、値の制約、欠損情報、コードリストの説明</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/ai/tasks/ledger-building">台帳の整備をAIに任せる手順</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理</a></li>
+      <li><a href="/ai/tasks/csv-excel-script">CSV・Excelの変換・突合スクリプトをAIで作る手順と確認する点</a></li>
+      <li><a href="/ai/tasks/paper-pdf-to-ledger">紙・PDFをAIで台帳にする手順</a></li>
+      <li><a href="/column/self-reported-attendance-explanation-check">自己申告の勤怠を始める前に本人・管理者への説明をどう確認するか</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
