@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windowsで間違えて送った印刷をキューから取り消すには｜Vaynexis</title>
+  <meta name="description" content="間違えた書類を印刷に送ったときは、送信先と取り消す対象を確かめて操作します。設定から待ち一覧を開く手順、対象だけを取り消す方法、画面から消えても本体や紙の確認が残る理由を整理し、取り消せないときに担当者へ渡す情報まで説明します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Windowsで間違えて送った印刷をキューから取り消すには｜Vaynexis">
+  <meta property="og:description" content="間違えた書類を印刷に送ったときは、送信先と取り消す対象を確かめて操作します。設定から待ち一覧を開く手順、対象だけを取り消す方法、画面から消えても本体や紙の確認が残る理由を整理し、取り消せないときに担当者へ渡す情報まで説明します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/windows-cancel-print-job-queue">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/windows-cancel-print-job-queue">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Windowsで間違えて送った印刷をキューから取り消すには","description":"間違えた書類を印刷に送ったときは、送信先と取り消す対象を確かめて操作します。設定から待ち一覧を開く手順、対象だけを取り消す方法、画面から消えても本体や紙の確認が残る理由を整理し、取り消せないときに担当者へ渡す情報まで説明します。","datePublished":"2026-11-11","dateModified":"2026-11-11","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/windows-cancel-print-job-queue"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Windowsで間違えて送った印刷をキューから取り消すには","item":"https://vaynexis.jp/column/windows-cancel-print-job-queue"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Windowsで間違えて送った印刷をキューから取り消すには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Windowsで間違えて送った印刷をキューから取り消すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>送信先の待ち一覧を開き、間違えて送った印刷を選んで取り消します。対象を見分けてから操作し、その後は画面と出力先を別々に確かめる流れです。すでに出た紙は回収し、止まったことを確かめるまでは正しい書類を送り直す作業を保留すると、残った対応を整理しやすくなります。</p></div>
+    <p class="col-meta">公開：2026年11月11日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、間違えた書類を共有のプリンターへ送ってしまった小さな会社の事務担当者が、Windowsの設定から印刷キューを開いて対象のジョブだけを取り消す手順・取り消せる段階の条件・画面から消えた後に残る本体と紙の確認を整理する流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">送信先のプリンターから待ち一覧を開く</a></li>
+      <li><a href="#s2">全体を消す前に、取り消す対象を選ぶ</a></li>
+      <li><a href="#s3">画面から消えても、本体と出た紙の確認は残る</a></li>
+      <li><a href="#s4">事務で迷いやすいのは、残す書類との見分け方</a></li>
+      <li><a href="#s5">消えないときは、状態を残して担当者へ引き継ぐ</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．送信先のプリンターから待ち一覧を開く</h2>
+    <p>確認日：2026年11月10日</p>
+    <p>この記事で扱うのは、公式ヘルプの適用先に含まれる Windows 11 の設定画面です。適用先には Windows 10 も挙がっており、Windows 10 の欄では、［スタート］＞［設定］＞［デバイス］＞［プリンターとスキャナー］でプリンターを選び、［キューを開く］を選ぶ手順です。同じヘルプには、Windows 10 のサポートが 2025 年 10 月 14 日に終了したとの注記もあります。焦って近くの機器を選ぶ前に、印刷時に指定した名前を確認するとよいです。</p>
+    <h3 class="h3">設定画面から開く経路</h3>
+    <p>Windows 11 では、［スタート］→［設定］→［Bluetooth &amp; デバイス］→［プリンター &amp; スキャナー］の順に進みます。送信先のプリンターを選び、［印刷キューを開く］を選択します。</p>
+    <p>印刷キューには、そのプリンターで印刷を待っているジョブが表示されます。名前が似た機器を使い分けている事務所では、設置場所の呼び方だけで判断せず、送信時に選んだ名前と照らし合わせる進め方にします。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．全体を消す前に、取り消す対象を選ぶ</h2>
+    <p>表示している印刷キューの送信先は、ウィンドウ内の［プリンター］の選択欄で確認でき、必要に応じて別のプリンターへ切り替えられます。送信したはずの書類が見つからないときは、まず送信先が合っているかを見直す順番です。</p>
+    <p>設定から開いた一覧では、印刷ジョブを右クリックして［キャンセル］を選ぶと、そのジョブを削除できます。ヘルプはキューに詰まったときに各ジョブをこの操作で消す手順として書いていますが、間違えた1件だけを止めるときは、その1件にだけこの操作を行います。一覧に並んだ書類をまとめて扱う前に、取り消したいものを特定します。残す書類まで同じ扱いにせず、書類名や送信した状況を照らし合わせてから操作する考え方です。</p>
+    <p>目的は、間違えた依頼を止めることです。印刷待ちのものが残っていても、それが別の担当者の必要な書類なら、空にすることを完了の目標にはしません。対象を判断できない場合は、送信した人に書類の呼び名を確かめ、必要なものと取り消すものを分けておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．画面から消えても、本体と出た紙の確認は残る</h2>
+    <p>Excel の印刷のヘルプでは、コンピューターから印刷を取り消せるのは、ジョブがプリンターへ完全に送信されていない場合に限られるとされています。この制約が記載されたヘルプの適用先は、Excel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016です。同じヘルプの Windows 側の手順では、キャンセルする印刷ジョブを選んで［ドキュメント］＞［キャンセル］を選び、［はい］で確定したうえで、ジョブがキューから消えるまで待ってからダイアログを閉じます。タスク バーにプリンターのアイコンが見当たらない場合は、ジョブがすでにプリンターに送られていて、Windows で止めるには手遅れだと説明されています。</p>
+    <p>印刷ジョブがキューに表示されなくなった場合やプリンターへ完全に送信された場合は、プリンター本体での対応が必要になることがあり、プリンターには独自のキャンセル機能が用意されている場合があります。したがって、待ち一覧から見えなくなったことだけで、紙が出ていないと判断しない流れにします。</p>
+    <p>一覧に項目がない状態が示すのは、印刷待ちの保留中のジョブがないということです。画面の状態と、すでに出力された書類の有無は、別々の確認事項として扱います。</p>
+    <p>事務での確認では、出力先に紙が出ていないかを見て、間違えた書類があれば回収します。正しい書類と混ざっているときは、内容を確かめて分け、ほかの人が持ち出す前に扱いを整理するとよいです。本体が動いている場合は、その機器を管理する担当者に停止方法を確認します。回収まで手が回らない場合も、近くの人へ何の書類かを伝え、対応が残っていることを共有する進め方です。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．事務で迷いやすいのは、残す書類との見分け方</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>取り消す前に、送り直す必要がある書類と、そのまま出力してよい書類を分けておきます。似た名前の書類があるときは、先頭の呼び名だけで判断せず、どの内容を送ったのかを送信した人と照合する考え方です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">事務での架空の状況</th><th scope="col">取り消す前に分けること</th><th scope="col">操作後に残る確認</th></tr></thead><tbody><tr><td data-label="事務での架空の状況">修正前の案内文と修正後の案内文を続けて送った</td><td data-label="取り消す前に分けること">取り消すのは修正前の内容か、送信者に確認する</td><td data-label="操作後に残る確認">古い内容の紙が混ざっていないか</td></tr><tr><td data-label="事務での架空の状況">同僚の書類も出力待ちになっている</td><td data-label="取り消す前に分けること">自分が間違えた書類と、同僚が必要な書類を分ける</td><td data-label="操作後に残る確認">同僚に送り直しが必要な状況を作っていないか</td></tr><tr><td data-label="事務での架空の状況">同じ名前で内容の違う書類を送った</td><td data-label="取り消す前に分けること">名前だけでは決めず、送信時の内容を確認する</td><td data-label="操作後に残る確認">不要な内容が出力されていないか</td></tr></tbody></table></div>
+    <p>対象が定まらないまま消すと、何を止めたのかを後から説明しにくくなります。送った人と操作する人が異なる場合は、取り消す書類、残す書類、出力先を対応させて伝えます。画面の操作だけを引き継ぐより、対象を選ぶ理由も共有しておく方が、次の担当者が判断しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．消えないときは、状態を残して担当者へ引き継ぐ</h2>
+    <p>取り消したい対象が残るときや、消えた後も出力が続くときは、状況を区別して伝えます。「取り消せなかった」という言葉だけでは、画面に残っているのか、紙が出続けているのか、回収だけが済んでいないのかが伝わりません。</p>
+    <p>Windows のヘルプは、キューが詰まったときの次の手順として印刷スプーラー サービスの再起動を挙げ、ジョブをキャンセルしてもキューがクリアされない場合には、スプール フォルダー内のすべてのファイルを削除する方法を挙げています。スプール フォルダーの削除はジョブを1件ずつ選ぶ操作ではないため、共有のプリンターでは、パソコンや機器を管理する担当者に任せる範囲として扱います。</p>
+    <p>引き継ぐ情報は、送信先の名前、取り消したい書類、操作後の表示、本体の動き、紙の回収状況です。表示されたメッセージがあれば、文面を変えずに控えます。状況を説明するための画面を共有する際も、別の書類の内容まで必要以上に伝えない扱いにします。</p>
+    <p>正しい書類を送り直す作業は、元の依頼と紙の状態を確認してから進めます。急いで再送する前に、すでに正しいものが出ていないか、不要なものを回収できたかを整理する順番です。引き継ぎを受けた担当者は、対応済みの範囲と残った範囲を分けて把握できます。対象を選ぶ通常の操作で解消しないときは、機器を管理する担当者へ渡すところまでを、事務側の対応範囲として決めておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">送信時に選んだ出力先と、いま見ている送信先が一致したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">取り消したい書類と、そのまま残す書類を見分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">操作後に対象が残っていないかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">本体の動きと、紙が出ていないかを別に確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">すでに出ていた不要な書類を回収したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">解消しない場合に、表示と回収状況を担当者へ伝えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">正しい書類を送り直す前に、元の依頼の状態を確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/windows/hardware/printer/fix-print-job-stuck-in-queue-errors-in-windows" rel="noopener" target="_blank">Windows で印刷ジョブがキューに詰まるエラーを修正する</a>：対応する版、設定から開く経路、ジョブを右クリックして取り消す操作、消えないときの次の手順（スプーラー）</li>
+      <li><a href="https://support.microsoft.com/ja-jp/windows/hardware/printer/view-a-printer-s-print-queue-in-windows" rel="noopener" target="_blank">Windows でプリンターの印刷キューを表示する</a>：送信先の選択、待ち一覧の開き方と表示内容、Windows 10 の欄の手順とサポート終了の注記、送信先の切り替え、一覧が</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/cancel-printing-in-excel" rel="noopener" target="_blank">Excel で印刷をキャンセルする</a>：対象を選ぶ取り消しと消えるまで待つ確認、取り消せる送信段階の条件、アイコンが無いときの意味、完全送信後の本体での対応、ヘ</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/windows11-offline-printer-check-order">Windowsでプリンターがオフラインと出たときに確かめる順番</a></li>
+      <li><a href="/column/excel-print-area-skip-work-notes">Excelの作業メモを出さず提出部分だけ繰り返し印刷するには</a></li>
+      <li><a href="/column/word-remove-trailing-blank-page">Wordの文書末尾に残る空白ページを印刷前に消す手順と確認</a></li>
+      <li><a href="/column/word-bullet-list-hanging-indent">Wordの長い箇条書きで二行目以降の字下げをそろえるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

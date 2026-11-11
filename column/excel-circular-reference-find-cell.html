@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで循環参照の警告が出たとき、原因のセルを探すには｜Vaynexis</title>
+  <meta name="description" content="循環参照の警告が出たときに、原因のセルを見つけ、数式のどこを直すかを整理します。集計範囲に自分自身を含める場合と、別のセルを経由して戻る場合を分け、別シートへの参照や修正後も警告が残るときの確認順、担当者への引き継ぎ方まで説明します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで循環参照の警告が出たとき、原因のセルを探すには｜Vaynexis">
+  <meta property="og:description" content="循環参照の警告が出たときに、原因のセルを見つけ、数式のどこを直すかを整理します。集計範囲に自分自身を含める場合と、別のセルを経由して戻る場合を分け、別シートへの参照や修正後も警告が残るときの確認順、担当者への引き継ぎ方まで説明します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-circular-reference-find-cell">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-circular-reference-find-cell">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで循環参照の警告が出たとき、原因のセルを探すには","description":"循環参照の警告が出たときに、原因のセルを見つけ、数式のどこを直すかを整理します。集計範囲に自分自身を含める場合と、別のセルを経由して戻る場合を分け、別シートへの参照や修正後も警告が残るときの確認順、担当者への引き継ぎ方まで説明します。","datePublished":"2026-11-11","dateModified":"2026-11-11","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-circular-reference-find-cell"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで循環参照の警告が出たとき、原因のセルを探すには","item":"https://vaynexis.jp/column/excel-circular-reference-find-cell"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで循環参照の警告が出たとき、原因のセルを探すには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで循環参照の警告が出たとき、原因のセルを探すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>原因のセルは、［数式］→［エラー チェック］→［循環参照］の一覧から探します。表示されたセルの数式を直し、ステータスバーの循環参照の表示が消えるまで確認を繰り返すのが基本です。</p></div>
+    <p class="col-meta">公開：2026年11月11日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelで循環参照の警告が出て集計の値が信用できなくなった小さな会社の事務担当者が、［エラー チェック］の［循環参照］と参照元のトレースで原因のセルを探し、修正後も表示が残るときの理由を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">警告を閉じる前に、原因と対象の版を整理する</a></li>
+      <li><a href="#s2">一覧のセルを選び、数式が自分に戻っていないか見る</a></li>
+      <li><a href="#s3">集計する範囲に、集計欄自身を含めていないか</a></li>
+      <li><a href="#s4">式の中に自分の番地がなくても、参照元を追う</a></li>
+      <li><a href="#s5">修正後も残る表示と、再び出ない警告を区別する</a></li>
+      <li><a href="#s6">引き継ぐときは、直した理由と残る疑問を分ける</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．警告を閉じる前に、原因と対象の版を整理する</h2>
+    <p>確認日：2026年11月10日</p>
+    <p>公式ヘルプの適用先は、Excel for Microsoft 365、Excel 2024、Excel 2021のWindows版とMac版、およびExcel 2019、Excel 2016です。ヘルプでは、Windows と Mac のデスクトップ版は、どちらも［数式］＞［エラー チェック］＞［循環参照］を使うとされています。以下ではWindowsのデスクトップ版で原因を探し、数式を見直す手順を扱います。参照元をたどるトレースのヘルプは、適用先が Excel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016 で、Mac 用の版は挙がっていません。</p>
+    <p>循環参照は、数式が直接、またはほかのセルを経由して自分自身を参照するときに発生します。警告を閉じたあとでも、セルにはゼロや最後に計算された値が表示されることがあるため、値の見た目だけでは修正できたか判断できません。</p>
+    <p>原因を調べるときは、値が不自然に見える欄だけに注目せず、その値を求める式のつながりを確認するとよいです。入力する欄と結果を表示する欄の役割を分けて見ると、どこに戻りの参照があるかを整理しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．一覧のセルを選び、数式が自分に戻っていないか見る</h2>
+    <p>［数式］タブから［エラー チェック］の［循環参照］を開くと、確認するセルの一覧へ進めます。一覧のセル番地を選び、数式が自分自身を指さない形へ修正します。</p>
+    <p>先に見るのは、数式を置いている場所と、その式が材料として読みに行く場所の関係です。式の記号をやみくもに変えるよりも、どの入力欄から何を集計したいのかを言葉にすると、残す参照と外す参照を判断しやすくなります。</p>
+    <p>コマンドが見当たらない場合は、Excel の検索ボックスで Error Checking または Circular References を検索する方法が案内されています。コマンドが無効になっている場合は、ワークシート内のセルを選択してから操作し直します。Web版やモバイルアプリでは数式監査のコマンドが制限される場合があるため、原因の特定と修正はデスクトップアプリで行う案内になっています。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．集計する範囲に、集計欄自身を含めていないか</h2>
+    <p>たとえばD3に「=D1+D2+D3」が入っていると、結果を置くD3が計算の材料にもなり、計算を完了できません。合計の関数でも同じで、F3 に「=SUM(A3:F3)」が入っていると、F3 が計算中の範囲に含まれます。</p>
+    <p>架空の事務用集計欄に当てはめると、確認する場所は次のように分けられます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">欄の役割</th><th scope="col">場所・式</th><th scope="col">確認する点</th></tr></thead><tbody><tr><td data-label="欄の役割">集計の材料を置く欄</td><td data-label="場所・式">D1、D2</td><td data-label="確認する点">合計に含めたい入力欄か</td></tr><tr><td data-label="欄の役割">集計結果を置く欄</td><td data-label="場所・式">D3</td><td data-label="確認する点">入力欄と結果欄を分けているか</td></tr><tr><td data-label="欄の役割">見直す式</td><td data-label="場所・式">=D1+D2+D3</td><td data-label="確認する点">結果欄自身への参照を含んでいないか</td></tr></tbody></table></div>
+    <p>修正方法には、数式を別のセルへ移す方法と、循環参照が起きないように数式の書き方を変える方法があります。</p>
+    <p>どちらにするかは、表をどう使うかで考えます。結果欄の位置を維持したいなら集計する範囲を見直し、入力欄の並びを維持したいなら結果欄の置き場所を検討するとよいです。警告を消すために材料となる入力値まで削ると、求めたい集計から離れてしまうため、残すべき入力欄を先に整理します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．式の中に自分の番地がなくても、参照元を追う</h2>
+    <p>問題が複数のセルにまたがる場合は、参照関係をたどって原因を探します。</p>
+    <p>選んだセルへ直接データを渡しているセルを見るには、［数式］タブの［数式監査］で［参照元のトレース］を選びます。さらに手前の参照元を調べるときは、［参照元のトレース］をもう一度選びます。青い矢印はエラーのないセル、赤い矢印はエラーの原因となっているセルを示します。</p>
+    <p>トレースの前の準備として、［ファイル］＞［オプション］＞［詳細設定］の［このブックの表示オプション］で、［オブジェクトの場合、表示］が［すべて］になっているかを確かめる手順が挙がっています。</p>
+    <p>目の前の式に同じ番地が見当たらない場合も、途中で使われている式を読み、出発した場所に戻るつながりがないか確かめるとよいです。表示された場所を入口にして、どこで計算の流れが輪になるかを確認していきます。ヘルプには、A1 に「=B1+1」、B1 に「=A1+1」が入っていて、各セルが互いに依存する例が挙がっています。</p>
+    <p>参照元が別のワークシートやブックにある場合は、黒い矢印をダブルクリックして［ジャンプ］を開き、［移動先］の一覧から目的のセルをダブルクリックします。別ブックの参照セルを調べるには、そのブックを開いておく必要があります。</p>
+    <p>数式の変更や行・列の挿入と削除、セルの削除と移動を行うとトレース矢印は消えるため、変更後は表示し直します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．修正後も残る表示と、再び出ない警告を区別する</h2>
+    <p>ステータスバーには、循環参照とセル番地が表示されることがあります。別のワークシートに原因があると、番地のない循環参照の表示だけになる場合があります。</p>
+    <p>修正しても警告が続く場合の主な確認対象には、別のワークシートに残った循環参照があります。別の開いているブックに循環参照が残っている場合もあります。数式のつながりに間接的な自己参照が残っていないかも確認します。ヘルプの理由の一覧には、反復計算が有効になっていて、循環参照が意図的に許可されている場合も挙がっています。</p>
+    <p>一方、警告メッセージは、そのセッションで初めて循環参照が作られたときに表示され、それ以降の循環参照では同じ警告ダイアログが出ない場合があります。修正の区切りは警告の再表示の有無だけで判断せず、ステータスバーに循環参照が表示されなくなるまで確認します。</p>
+    <p>反復計算で循環参照を許可する仕組みは、再計算を意図した特定の財務モデルやエンジニアリングモデル向けで、ほとんどのワークシートでは反復計算をオフのままにする案内です。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．引き継ぐときは、直した理由と残る疑問を分ける</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>引き継ぎには、警告が出たときの状態、修正前後の式、求めたい集計の意味、確認できた範囲を残すとよいです。「警告が消えた」という結果だけでは、入力欄を減らしたのか、結果欄を移したのかが次の担当者に伝わりません。</p>
+    <p>式を読んでも、なぜその欄を参照するのか分からないときは、計算方法を決めた担当者に確認します。確認済みの範囲と、まだ意味を判断できていない範囲を分けて記録すると、途中の状態でも次に調べる場所が明確になります。</p>
+    <p>最後は、修正後の結果が表の目的に合っているかを、元の入力内容と照らして確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">警告の出た場所と、実際に調べた場所を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数式を置く欄と、その材料になる入力欄の役割を整理したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">集計の対象に、結果を置く欄自身を含めていないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">途中の参照を追い、出発した場所へ戻るつながりを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">修正前後の式と、変更した理由を残したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">修正後の結果を、元の入力内容と照合したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/remove-or-allow-a-circular-reference-in-excel" rel="noopener" target="_blank">Excel で循環参照を削除または許可する</a>：循環参照の原因と例（SUM の範囲・セル間の輪）、原因セルの検索、コマンドが見当たらないとき、適用先、警告とステータスバ</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/display-the-relationships-between-formulas-and-cells" rel="noopener" target="_blank">数式とセルの関係を表示する</a>：適用先、表示の準備、参照元のトレース、矢印の色、別シート・別ブックへの移動、編集後の矢印の再表示</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/how-to-avoid-broken-formulas-in-excel" rel="noopener" target="_blank">Excel で壊れた数式のエラーを回避する方法</a>：数式を移す方法と数式の書き方を変える方法</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-manual-recalculation-result-check">Excelで入力値を変えても結果が変わらないとき、何を確かめる？</a></li>
+      <li><a href="/column/excel-spill-error-find-blocking-cells">Excelの #SPILL! で、一覧の展開を妨げるセルをどう見つける？</a></li>
+      <li><a href="/column/excel-select-formula-cells">Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント</a></li>
+      <li><a href="/column/excel-blank-denominator-ratio-pending">Excelで分母が未入力の比率を「未計算」と表示する方法</a></li>
+      <li><a href="/column/excel-consolidate-sheets-by-label">Excelの別シートの集計表を項目名で合算する手順と確認点</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

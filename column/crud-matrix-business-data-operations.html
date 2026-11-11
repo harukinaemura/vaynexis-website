@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD表には何を書く？業務・対象データと作成更新の対応欄｜Vaynexis</title>
+  <meta name="description" content="CRUD表の記載項目を、業務名、対象データ、操作記号、凡例、確認事項に分けて整理します。データ全体を扱う表と個別の項目を追う表の使い分けから、短い記入例、作成元や参照先の照合、空欄の扱い、変更時に点検する交差欄まで、社内用のひな形を作る手順を紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="CRUD表には何を書く？業務・対象データと作成更新の対応欄｜Vaynexis">
+  <meta property="og:description" content="CRUD表の記載項目を、業務名、対象データ、操作記号、凡例、確認事項に分けて整理します。データ全体を扱う表と個別の項目を追う表の使い分けから、短い記入例、作成元や参照先の照合、空欄の扱い、変更時に点検する交差欄まで、社内用のひな形を作る手順を紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/crud-matrix-business-data-operations">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/crud-matrix-business-data-operations">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"CRUD表には何を書く？業務・対象データと作成更新の対応欄","description":"CRUD表の記載項目を、業務名、対象データ、操作記号、凡例、確認事項に分けて整理します。データ全体を扱う表と個別の項目を追う表の使い分けから、短い記入例、作成元や参照先の照合、空欄の扱い、変更時に点検する交差欄まで、社内用のひな形を作る手順を紹介します。","datePublished":"2026-11-11","dateModified":"2026-11-11","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/crud-matrix-business-data-operations"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"CRUD表には何を書く？業務・対象データと作成更新の対応欄","item":"https://vaynexis.jp/column/crud-matrix-business-data-operations"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">CRUD表には何を書く？業務・対象データと作成更新の対応欄</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">CRUD表には何を書く？業務・対象データと作成更新の対応欄</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>情報処理推進機構（IPA）の要件定義の講演資料は、CRUD図を、エンティティやデータ項目がどの機能で作成され、使用され、更新され、削除されるかを表すものとしています。社内用の書式では、業務名と対象データ名を縦横に並べて交差欄に操作を記し、記号の意味、対象範囲、判断待ちの事項と確認先も添えます。記入後は、データがどこで生まれ、使われ、変更されるかを担当者と照合する進め方です。</p></div>
+    <p class="col-meta">公開：2026年11月11日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、業務とデータの関係を一覧にしたい小さな会社の担当者が、情報処理推進機構（IPA）の要件定義の講演資料を手がかりに、業務名・対象データ・操作記号の欄と、作成元・参照先・変更箇所の照合を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">操作記号と、対象をまとめる単位を押さえる</a></li>
+      <li><a href="#s2">ひな形には業務名・対象データ・凡例を置く</a></li>
+      <li><a href="#s3">交差欄の記入例で、登録と訂正を読み分ける</a></li>
+      <li><a href="#s4">作成元・参照先・変更箇所を縦横に照合する</a></li>
+      <li><a href="#s5">改訂時は、増減した行と列から確認を広げる</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．操作記号と、対象をまとめる単位を押さえる</h2>
+    <p>確認日：2026-11-10</p>
+    <p>情報処理推進機構の講演資料「事例3：要件定義ドキュメントの漏れや曖昧性の低減」は、2019年2月26日の資料です。同資料が示すCRUD図の目的は、エンティティやデータ項目がどの機能で作成、更新、消去されるかを確認して、その項目のライフサイクルを把握し、機能面・データ面での抜け漏れを検証することです。</p>
+    <p>操作記号の凡例は、Cが登録、Rが照会、Uが更新、Dが削除です。同資料のエンティティレベルの例は、行に「受注」「出荷」などのエンティティ、列に受注・生産手配・進捗管理・倉庫管理・出荷・売上計上・財務処理・削除処理の機能を並べ、「受注」の行は受注の機能でC、削除処理でDとなる形です。社内の書式でも凡例を表の近くに置き、日常の呼び名との対応をそろえると読みやすくなります。</p>
+    <p>対象データをまとめて扱うエンティティレベルは、大きな機能の抜け漏れや矛盾の発見に適すると示されています。データ項目レベルは、項目が作成されていないのに更新されているといった、データ管理上の矛盾を検証するための使い方です。例の図には、エンティティレベルに「全体を鳥瞰」、データ項目レベルに「部分を詳細」と添えられ、データ項目レベルの例には「特定項目（色など）を追跡」とあります。</p>
+    <p>同資料の役割分担の例では、CRUD図の作成主体（○）はユーザ側のシステム部門で、業務部門・運用部門・ベンダは作成支援（△）とされ、作成支援は情報提供、確認（チェック）、アドバイスと説明されています。2019年の資料なので、自社で使うときは扱う業務とデータに合わせて欄を決めます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．ひな形には業務名・対象データ・凡例を置く</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>表の上部に、対象業務の範囲、現状と変更後のどちらを表すか、対応する業務資料とデータ一覧の所在を記します。次に、行へ業務名、列へ対象データ名を置く構成にします。資料の例は行にデータ、列に機能を置いているので、行列の向きは、手元の資料と照合しやすい形にそろえるとよいです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">欄</th><th scope="col">何を書くか</th><th scope="col">書き間違えやすい点</th></tr></thead><tbody><tr><td data-label="欄">対象範囲・状態</td><td data-label="何を書くか">対象業務と、現状または変更後の区別</td><td data-label="書き間違えやすい点">現在の処理と検討中の処理が同じ表に混ざる</td></tr><tr><td data-label="欄">業務名</td><td data-label="何を書くか">登録、内容確認、訂正などの処理名</td><td data-label="書き間違えやすい点">部署名だけを書き、行う処理を読み取れなくなる</td></tr><tr><td data-label="欄">対象データ名</td><td data-label="何を書くか">受付情報、品目情報など、操作される対象の名称</td><td data-label="書き間違えやすい点">同じデータを画面名と帳票名で重複させる</td></tr><tr><td data-label="欄">交差欄</td><td data-label="何を書くか">その業務で対象データに行う操作</td><td data-label="書き間違えやすい点">画面を開くことと、値を書き換えることを混同する</td></tr><tr><td data-label="欄">凡例</td><td data-label="何を書くか">操作記号、操作なし、確認待ちの表し方</td><td data-label="書き間違えやすい点">空欄の意味を記入者ごとの判断に任せる</td></tr><tr><td data-label="欄">補足・確認先</td><td data-label="何を書くか">操作の理由、例外、判断待ちの内容、確認する相手</td><td data-label="書き間違えやすい点">未決定の操作を決定済みとして埋める</td></tr></tbody></table></div>
+    <p>業務名は、対象データへの働きかけが読み取れる言葉にします。「管理」だけでは含む処理が広いため、登録、確認、訂正など、担当者が作業内容を説明できる単位に分けます。手順書の見出しと名称を対応させると、交差欄に記号を入れた理由をたどれます。</p>
+    <p>対象データ名は、同じ内容を別の画面で見る場面も含めて整理します。画面や帳票の名称をそのまま列に置く前に、その中で扱うデータが共通かを確認する進め方です。呼び名の異なる同じ対象を重ねて数えることや、別々に管理する対象を同じ列へまとめることを避けます。</p>
+    <p>対象データ全体を表す列と、細かな項目を表す列は、別の表に分けて対応を付けます。詳細表には親となる対象データ名を記し、全体表からたどれるようにします。担当者同士で対象の範囲を合わせてから記号を埋めると、同じ列名に違う意味を持たせずに済みます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．交差欄の記入例で、登録と訂正を読み分ける</h2>
+    <p>貸出受付の業務を行に、操作するデータを列に置いた短い例です。記号の意味は前節の凡例に合わせ、ここでは「―」を操作なしとして使います。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">業務</th><th scope="col">受付情報</th><th scope="col">品目情報</th><th scope="col">補足</th></tr></thead><tbody><tr><td data-label="業務">受付登録</td><td data-label="受付情報">C</td><td data-label="品目情報">R</td><td data-label="補足">品目を照会して受付内容を登録する</td></tr><tr><td data-label="業務">受付内容の訂正</td><td data-label="受付情報">U</td><td data-label="品目情報">R</td><td data-label="補足">登録済みの受付内容を書き換える</td></tr><tr><td data-label="業務">受付一覧の確認</td><td data-label="受付情報">R</td><td data-label="品目情報">―</td><td data-label="補足">受付内容を見る</td></tr><tr><td data-label="業務">受付情報の削除</td><td data-label="受付情報">D</td><td data-label="品目情報">―</td><td data-label="補足">削除する処理を記す</td></tr></tbody></table></div>
+    <p>読む際は、受付内容を照会する場面と、登録済みの値を書き換える場面を分けます。担当者が「確認」と呼ぶ作業にも、確認結果の書き込みが含まれていることが考えられます。業務名だけで操作を決めず、作業の前後で何が変わるかまで聞き取るとよいです。</p>
+    <p>補足欄には、操作を選んだ理由を短く添えます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．作成元・参照先・変更箇所を縦横に照合する</h2>
+    <p>記入後は、対象データの列を縦に読みます。最初に、登録する業務から参照や更新を行う業務へとたどり、元になるデータの存在を説明できるかを確認します。参照や更新の記号だけが並ぶ列では、外部から受け取るデータや、利用開始前に用意するデータも照合の対象にします。作成元を、表の中の業務または表の外の受取元と結び付けて残す整理です。</p>
+    <p>次に、業務の行を横に読みます。その処理で見るデータ、追加するデータ、書き換えるデータを担当者の説明と突き合わせます。入力画面へ表示する情報だけに目を向けず、照会して選ぶ情報や、自動で書き込まれる情報も聞き取ると、交差欄を点検しやすくなります。</p>
+    <p>訂正や取消という業務名には、処理前後の状態を添えます。値を書き換える、状態を変えて対象から外す、データ自体を消すなどの説明を担当者から得て、実際の処理と凡例を照合します。判断が分かれた箇所には確認先を付け、合意した意味を補足欄に残すとよいです。</p>
+    <p>登録済みのデータを使う業務が表の中に見当たらない箇所も、確認事項に挙げます。別の業務への受け渡し、帳票への出力、過去情報の照会など、用途を説明できる資料と照らす進め方です。不要という結論を先に置かず、対象範囲から外した利用先の有無も確認します。</p>
+    <p>空欄は、書き忘れと操作なしを区別できる形に整えます。記入途中の欄を確認待ちとして残し、確認済みの操作なしには凡例で定めた印を入れる案です。表を埋める担当者には、分からない交差欄を列挙してもらい、業務を行う担当者とデータを管理する担当者へ分けて照合します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．改訂時は、増減した行と列から確認を広げる</h2>
+    <p>業務の追加や統合では、変更した行と交差する対象データを順に照合します。表面上の業務名が同じまま処理内容が変わる改訂もあるため、名称に加えて、参照先や書き込み先の変更を記録します。</p>
+    <p>データの追加や統合では、変更した列について作成元、利用先、更新箇所、削除の扱いを読み直します。列を消す際も、残っている業務がそのデータを照会・更新に使っていないかを担当者へ確認します。全体表と詳細表の対応も同時に見直し、片方だけ古い状態になることを防ぎます。</p>
+    <p>改訂の記録には、変えた交差欄、変更前後の操作、理由、確認した相手、適用する業務資料を残します。以前の版も残し、どの版に基づく説明かをたどれるようにします。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">対象業務の範囲と、現状・変更後の区別を記載したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">業務名を処理内容が読み取れる単位でそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象データ全体と個別の項目を区別し、表の対応を付けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">操作記号、操作なし、確認待ちの凡例を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">各対象データの作成元と参照・更新する業務を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">訂正・取消・削除の処理前後の状態を担当者と確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更した交差欄の理由と確認先、以前の版の保管先を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.ipa.go.jp/archive/files/000072725.pdf" rel="noopener" target="_blank">情報処理推進機構「事例3：要件定義ドキュメントの漏れや曖昧性の低減」2019年2月26日、掲載ページ73・74</a>：CRUD図の目的と作成のポイント、操作記号の凡例、エンティティレベルとデータ項目レベルの例、役割分担の例</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/task-inventory-gaps">業務棚卸しで抜けやすい項目</a></li>
+      <li><a href="/column/as-is-to-be-flow-status-labels">現状と改善案の業務フローを実施済みと混同せずに共有するには</a></li>
+      <li><a href="/column/migration-exception-data-pending-owner">新システムへ入らなかった例外データは誰の確認待ちで残すか</a></li>
+      <li><a href="/column/market-research-sheet-target-period-source">市場調査シートには何を書く？調査対象・期間と出典を確かめる欄</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

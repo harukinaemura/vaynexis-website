@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordで別ファイルの説明文を今の文書へ取り込む手順と確認点｜Vaynexis</title>
+  <meta name="description" content="別ファイルにある説明文を、編集中の文書の途中や末尾へ取り込む手順を整理します。取り込む位置と元のファイルの確かめ方、ヘッダーやフッターも含める場合の区切り、取り込み後に前後のページを見比べる順番まで、公式ヘルプに沿って説明します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Wordで別ファイルの説明文を今の文書へ取り込む手順と確認点｜Vaynexis">
+  <meta property="og:description" content="別ファイルにある説明文を、編集中の文書の途中や末尾へ取り込む手順を整理します。取り込む位置と元のファイルの確かめ方、ヘッダーやフッターも含める場合の区切り、取り込み後に前後のページを見比べる順番まで、公式ヘルプに沿って説明します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/word-insert-text-from-file">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/word-insert-text-from-file">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wordで別ファイルの説明文を今の文書へ取り込む手順と確認点","description":"別ファイルにある説明文を、編集中の文書の途中や末尾へ取り込む手順を整理します。取り込む位置と元のファイルの確かめ方、ヘッダーやフッターも含める場合の区切り、取り込み後に前後のページを見比べる順番まで、公式ヘルプに沿って説明します。","datePublished":"2026-11-11","dateModified":"2026-11-11","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/word-insert-text-from-file"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Wordで別ファイルの説明文を今の文書へ取り込む手順と確認点","item":"https://vaynexis.jp/column/word-insert-text-from-file"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Wordで別ファイルの説明文を今の文書へ取り込む手順と確認点</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Wordで別ファイルの説明文を今の文書へ取り込む手順と確認点</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>別ファイルの説明文は、取り込み先で挿入位置を決め、［挿入］の［オブジェクト］の横から［ファイルからテキスト］を選んで、ファイルの内容を追加します。本文に加えてページ上部・下部の表示（ヘッダーとフッター）も含める場合は、ファイルからのテキストを新しいセクションに挿入するよう案内されています。作業を始める前に、移したい内容と、取り込み先で維持したい範囲を決めておくとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月11日／情報の確認日：2026年11月10日（出典はこの記事の最後）</p>
+    <p>この記事は、別のWord文書に保管した説明文を今の資料へまとめたい小さな会社の事務担当者が、［ファイルからテキスト］で取り込む手順・ヘッダーとフッターも含めるときのセクション区切り・前後のリンクと区切りを直す前の確認を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月10日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">取り込み先と元の文書を先に決める</a></li>
+      <li><a href="#s2">挿入位置を選び、ファイルの内容を追加する</a></li>
+      <li><a href="#s3">ページ上部・下部も含めるときは区切りを用意する</a></li>
+      <li><a href="#s4">前後で異なる表示にするならリンクも確かめる</a></li>
+      <li><a href="#s5">事務の資料では、残す説明とつながりを整理する</a></li>
+      <li><a href="#s6">内容の境目と、区切りを直す前の確認</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．取り込み先と元の文書を先に決める</h2>
+    <p>確認日：2026年11月10日。</p>
+    <p>「Word で文書を挿入する」の適用先は、Word for Microsoft 365、Word 2024、Word 2021、Word 2019、Word 2016です。 適用先に Mac 用・Web 用の Word は挙がっていないため、この記事の取り込みの手順は、上に挙げた版の Word を前提にします。事務で使う説明資料に別途保管した文章を加える場面では、取り込み先の文書と、内容を取り出す元の文書を先に区別しておきます。</p>
+    <p>作業用の控えを用意し、完成させる資料のどの見出しの下へ入れるかを決めます。選ぶ前には元の内容を読み、残す注意書きと、今回の資料には不要な案内を整理するとよいです。同じ題名の控えが並んでいる場合は、保存場所だけで判断せず、本文の内容も照合します。引き継ぎ用には、採用した元の資料が分かるように名前と保管先を記録しておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．挿入位置を選び、ファイルの内容を追加する</h2>
+    <p>まず、今の文書で説明文を入れたい場所をクリックまたはタップします。 先頭に追加するのか、既存の説明の後へ続けるのかを見ながら位置を選びます。長い文書では、目的の見出しの近くまで移動したうえで、その直前と直後の文章を読むと判断しやすくなります。</p>
+    <p>次に、［挿入］から［オブジェクト］の横の矢印を開きます。 ［ファイルからテキスト］を選び、取り込むファイルを見つけてダブルクリックします。 操作後は追加された文章の最初と最後を見て、選んだ内容が入ったかを確かめます。</p>
+    <p>別の文書の内容も続けて加える場合は、同じ取り込み手順を繰り返します。 追加のたびに次の挿入位置を決めておくと、説明の順番を確認しながら進められます。まとめた資料を読み手の順路に沿って並べるため、元のファイルの保管順とは別に、完成後の説明の順番を考えます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．ページ上部・下部も含めるときは区切りを用意する</h2>
+    <p>ヘッダーとフッターも挿入する場合は、ファイルからのテキストを新しいセクションに挿入するよう案内されています。そうすることで、ヘッダーとフッターが対象のページだけに適用されます。 本文の内容を選ぶ段階で、ページ上部の文書名や下部の注記も取り込みたいかを決めます。</p>
+    <p>セクション区切りは、新しいセクションを始める場所を選び、［レイアウト］＞［Breaks］に移動して、必要な区切りの種類を選んで追加します（ヘルプの Windows 用の欄の表記のまま）。 主な選択肢として、次のページで始める区切りと、同じページで始める連続の区切りがあります。 このほかに、次の偶数ページで新しいセクションを始める区切りと、次の奇数ページで始める区切りも挙がっています。</p>
+    <p>WebのWordでは、改ページは追加できてもセクション区切りはまだ追加できません。デスクトップ アプリを使っている場合は、［Word で開く］で文書を開いてから区切りを追加するよう案内されています。 この準備を伴うときは、取り込みを始める前に使う画面を決めておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．前後で異なる表示にするならリンクも確かめる</h2>
+    <p>セクションは既定でリンクされており、区切りを作成すると、作成済みのヘッダーが引き継がれます。 区切りを作った後は、前後のページで表示を共有したいか、それぞれ別の内容にしたいかを確認します。</p>
+    <p>前のセクションとのリンクを解除する操作は、新しいセクションの最初のページでヘッダーまたはフッターをダブルクリックし、［前へリンク］をオフにする順です。 ヘッダーとフッターは個別にリンクされるため、セクションごとに両方を変える場合は、両方のリンクをオフにします。 作業後は、意図したページとその後に続くページを見比べます。上部だけを確認して終えず、下部に残す案内にも目を向けるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．事務の資料では、残す説明とつながりを整理する</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>別保管の説明を追加するときは、元の資料をそのまま採用できる部分と、今回の文脈に合わせて読み直す部分を分けます。小さな整理表を作ると、取り込み前に決めることと、取り込み後に見ることが対応します。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">加える内容</th><th scope="col">先に決めること</th><th scope="col">追加後の照合箇所</th></tr></thead><tbody><tr><td data-label="加える内容">申し込みの補足説明</td><td data-label="先に決めること">本文のどの案内に続けるか</td><td data-label="追加後の照合箇所">前の文章から自然につながるか</td></tr><tr><td data-label="加える内容">備品返却の注意書き</td><td data-label="先に決めること">旧い案内のうち残す範囲</td><td data-label="追加後の照合箇所">返却先や注意事項の重複がないか</td></tr><tr><td data-label="加える内容">社内研修の別紙説明</td><td data-label="先に決めること">今回の資料に含める範囲</td><td data-label="追加後の照合箇所">別紙を参照する文と実際の内容が合うか</td></tr></tbody></table></div>
+    <p>例えば補足説明を加えた後は、「別紙の案内を参照」などの表現を残すかも検討します。内容が同じ資料の中へ入ったことで、読み手が参照先に迷わないかを確かめるためです。取り込む範囲の冒頭に題名があり、取り込み先にも似た見出しがある場合は、内容のまとまりが伝わる構成に整えます。</p>
+    <p>引き継ぎには、完成した資料と元の資料の対応を残しておきます。何を採用したかに加え、取り込み後にどの文章を調整したかが分かると、次に内容を見直す担当者が照合しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．内容の境目と、区切りを直す前の確認</h2>
+    <p>取り込み後は、追加した説明の最初と最後、その前後の既存の文章を読みます。見出しが重複していないか、必要な注意事項がそろっているか、文章の順番が適切かを照合します。見た目の調整は、内容の過不足を確認してから進めるとよいです。</p>
+    <p>区切りの位置を見るには、［ホーム］の［表示/非表示］（¶）で編集記号を表示するよう、Word のヘルプで案内されています。 ヘルプの Windows 用の欄では、区切りを消すときは、区切りの直前にカーソルを置いて Delete キーを押します。 同じヘルプでは、セクション区切りを削除すると前後が同じセクションにまとまり、区切りの後のセクションの書式設定が使われる、と説明されています。 区切りの前のセクションの書式設定やヘッダー、フッターを使いたい場合は、区切りを削除するのではなく［前へリンク］を使うよう案内されています。 空白や配置が気になる場合も、境目の前後で残したい表示を整理してから直します。</p>
+    <p>最後は元の資料を横に置き、取り込むと決めた範囲と完成した文書を照合します。説明が抜けている場合と、余計な内容が残っている場合は分けて扱います。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">取り込み先と、採用する元の文書を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">説明を入れる見出しと、挿入する位置を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の内容と照合し、必要な範囲が入ったか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ページ上部・下部も含める場合の区切りを用意したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">前後のページで、上部・下部の表示が意図どおりか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">文章の重複、参照先の表現、説明の順番を見直したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">取り込んだ資料と、追加後に調整した内容を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月10日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/word/insert-a-document-in-word" rel="noopener" target="_blank">Word で文書を挿入する</a>：適用先、挿入位置、ファイル選択、繰り返し追加、ヘッダーとフッターも含める条件</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/insert-a-section-break" rel="noopener" target="_blank">セクション区切りを挿入する</a>：区切りを追加する手順、開始位置の違い（次のページ・連続・偶数ページ・奇数ページ）、Web版での制約</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/link-to-previous" rel="noopener" target="_blank">前にリンクする</a>：既定のリンクと編集記号による区切りの表示</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/configure-headers-and-footers-for-different-sections-of-a-word-document" rel="noopener" target="_blank">Word ドキュメントのさまざまなセクションのヘッダーとフッターを構成する</a>：ヘッダーとフッターのリンクを解除する順序と個別の設定</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/delete-a-section-break" rel="noopener" target="_blank">セクション区切りを削除する</a>：区切りを消す手順、削除した場合に使われる書式設定、前の書式を使いたいときの［前へリンク］</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-document-demo">AI議事録で提案と決定事項を分ける方法（実演）</a></li>
+      <li><a href="/column/word-paste-formatting-options">Wordへ文章を貼ると字体が変わるときの書式の選び方と確認手順</a></li>
+      <li><a href="/column/word-page-numbers-skip-cover">Wordで表紙を除いて本文からページ番号を振る手順と確認点</a></li>
+      <li><a href="/column/word-landscape-selected-table-pages">Wordで横長の表があるページだけ横向きにする手順と確認点</a></li>
+      <li><a href="/column/word-compare-document-versions">変更履歴がないWord文書の二つの版を比べるには？</a></li>
+      <li><a href="/column/powerpoint-package-linked-files-usb">PowerPointの資料をリンク先ファイルごと持ち出す手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
