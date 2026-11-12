@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで資料を一定部数ずつ配った後の余りを計算するには｜Vaynexis</title>
+  <meta name="description" content="配布する資料の総部数と、一組にまとめる部数から余りを求める方法を整理します。式に入れる値の順番、入力する欄と結果の欄の分け方、短い表での照合、未入力や負の値があるときの確認、別の行へ式をコピーした後に見直す点までをまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで資料を一定部数ずつ配った後の余りを計算するには｜Vaynexis">
+  <meta property="og:description" content="配布する資料の総部数と、一組にまとめる部数から余りを求める方法を整理します。式に入れる値の順番、入力する欄と結果の欄の分け方、短い表での照合、未入力や負の値があるときの確認、別の行へ式をコピーした後に見直す点までをまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-mod-handout-sets-remainder">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-mod-handout-sets-remainder">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで資料を一定部数ずつ配った後の余りを計算するには","description":"配布する資料の総部数と、一組にまとめる部数から余りを求める方法を整理します。式に入れる値の順番、入力する欄と結果の欄の分け方、短い表での照合、未入力や負の値があるときの確認、別の行へ式をコピーした後に見直す点までをまとめます。","datePublished":"2026-11-12","dateModified":"2026-11-12","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-mod-handout-sets-remainder"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで資料を一定部数ずつ配った後の余りを計算するには","item":"https://vaynexis.jp/column/excel-mod-handout-sets-remainder"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで資料を一定部数ずつ配った後の余りを計算するには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで資料を一定部数ずつ配った後の余りを計算するには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelで資料を一定部数ずつ組み分けた後の余りは、MOD関数で総部数を一組の部数で割って求めます。計算に使う総部数と、一組に入れる部数を別の欄に置き、入力の順番と対象の資料を照合します。配布先を限定せず、作れる組をすべて作った後の余りを求める考え方です。</p></div>
+    <p class="col-meta">公開：2026年11月12日／情報の確認日：2026年11月11日（出典はこの記事の最後）</p>
+    <p>この記事は、資料を同じ部数ずつ組にして配った後に何部余るかをExcelで出したい小さな会社の担当者が、MOD 関数に入れる値の順番と、エラー・負の値・コピー後の参照先を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月11日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">「総部数」と「一組の部数」の意味をそろえる</a></li>
+      <li><a href="#s2">余りの欄には、割られる数を先に置く</a></li>
+      <li><a href="#s3">小さな確認例で、残る部数を照合する</a></li>
+      <li><a href="#s4">エラーと負の値は、入力元から確認する</a></li>
+      <li><a href="#s5">別の行へ広げた後も、参照先を読む</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．「総部数」と「一組の部数」の意味をそろえる</h2>
+    <p>確認日：2026-11-11</p>
+    <p>ここからは当社の整理です。</p>
+    <p>計算を始める前に、総部数が何を数えた値かを決めます。印刷した資料の全部を対象にするのか、配布用として取り分けた資料だけを対象にするのかを、欄の見出しで区別します。予備や差し替え用を別に保管する運用では、配布に使う範囲を先にそろえます。</p>
+    <p>一組の部数は、まとめて渡す資料の量を表す欄です。配布先の数を書く欄とは分けて考えます。配布先が決まっていて、そこへ渡した後の残りを知りたい場合は、実際に渡す総量も整理する必要があります。この記事で求めるのは、同じ部数の組を作れるだけ作った後に、組に入らず残る分です。</p>
+    <p>数える単位も合わせます。資料の部数を知りたい表に、印刷した用紙の枚数や箱の数を混ぜないようにします。表紙や付属資料を含めた完成した資料を数えるのか、といった数え方も、入力する人と確認する人で共有しておきます。</p>
+    <p>元の部数は入力欄に残し、余りを表示する欄を別に用意します。結果で元の値を置き換えない配置なら、部数の数え直しがあったときにも、どの入力を基に計算したかを追えます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．余りの欄には、割られる数を先に置く</h2>
+    <p>MOD関数の公式ヘルプの適用先は、Excel for Microsoft 365、Excel for Microsoft 365 for Mac、Excel 2024、Excel 2024 for Mac、Excel 2021、Excel 2021 for Mac、Excel 2019、Excel 2016です。</p>
+    <p>MOD 関数のページでは、書式は「MOD(数値, 除数)」で、数値には除算の分子、除数には除算の分母となる数値を指定し、どちらも省略できない引数です。配布表では、前半を総部数、後半を一組にまとめる部数と対応させます。式を読むときも、総部数を組の部数で割る、という順番で見直します。</p>
+    <p>余りを表示する空のセルを選び、総部数を置いたA2と、一組の部数を置いたB2を参照する式「=MOD(A2,B2)」を入力します。ここで示した欄の配置は説明用です。自分の表に当てはめる際は、列の位置をそのまま写す前に、見出しと入力値を照らし合わせます。</p>
+    <p>式の入力後は、WindowsではEnterキー、MacではReturnキーを押して確定します。結果が表示されたら、元の部数と組の部数を逆に読んでいないか、隣の資料の行を読んでいないかを確認します。式が受け取る値と、欄が表している意味を対応させるのが中心です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．小さな確認例で、残る部数を照合する</h2>
+    <p>MOD 関数のページの使用例では、3 を 2 で割ったときの余りを求める「=MOD(3, 2)」の結果は 1、-3 を 2 で割ったときの余りを求める「=MOD(-3, 2)」の結果も 1 です。その計算値を資料の組み分けに当てはめると、次の確認用の表になります。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">対象</th><th scope="col">総部数</th><th scope="col">一組の部数</th><th scope="col">余りの欄に入れる式</th><th scope="col">余り</th></tr></thead><tbody><tr><td data-label="対象">確認用の資料</td><td data-label="総部数">3</td><td data-label="一組の部数">2</td><td data-label="余りの欄に入れる式">=MOD(3,2)</td><td data-label="余り">1</td></tr><tr><td data-label="対象">総部数を負で入れた行</td><td data-label="総部数">-3</td><td data-label="一組の部数">2</td><td data-label="余りの欄に入れる式">=MOD(-3,2)</td><td data-label="余り">1</td></tr></tbody></table></div>
+    <p>この表は、式の働きを照合するために、値を直接入れた形です。毎回部数が変わる配布表では、前の節のように入力欄を参照する形と区別しておきます。見本の式を写したまま元の部数を変えても、式に直接書いた値は、入力欄の値とつながっていません。</p>
+    <p>余りの欄には、作れる組の数ではなく、組に入らなかった資料の部数という見出しを付けます。確認する人は、資料を手元で組み分ける考え方と表の結果を照合し、入力の意味が合っているかを見ます。大きな一覧へ式を広げる前に、数え方を追える小さな入力で確認します。</p>
+    <p>同じページは、MOD 関数と INT 関数の関係を「MOD(n, d) = n - d*INT(n/d)」と表しています。総部数を一組の部数で割った整数の部分が作れる組の数にあたり、その組に入る部数を総部数から引いた残りが余り、という読み方です。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．エラーと負の値は、入力元から確認する</h2>
+    <p>除数に0を指定すると、MOD関数はエラー値「#DIV/0!」を返します。また、除算のエラーを確認するときは、除数がゼロや空白のセルになっていないかを見るのが公式ヘルプの案内です。配布表では、一組の部数の入力欄と、式が実際に指している欄を並べて確認します。未入力なのか、別の欄を読んでいるのかを分けて調べる流れです。</p>
+    <p>同じページは、エラー処理を適用する前に、数式が適切に動作することを確認する必要があるとしています。見た目を整えるために結果を置き換える前に、入力元を直す対象がないかを確かめます。部数が未確定の行は、その状態が担当者に伝わる形で扱います。</p>
+    <p>MOD関数の戻り値は、除数と同じ符号になります。前の節の表のとおり、総部数に負の値が入っていても、一組の部数が正なら余りは正の値で表示されるため、結果の符号だけでは誤った入力に気付けません。資料の組み分け表は、配布できる資料を部数で数え、正の整数で組の大きさを記録する運用にそろえます。マイナスの入力が含まれていれば、訂正用の値なのか、配布用の部数なのかを入力元に確認します。計算結果が表示されることだけで、配布表として適切な入力だとは判断しません。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．別の行へ広げた後も、参照先を読む</h2>
+    <p>Microsoft の「相対参照、絶対参照、複合参照を切り替える」は、相対セル参照を含む数式をコピーすると、その数式内の参照が変更されるとしています。資料ごとに総部数と組の部数を同じ行へ置く表では、コピー後も、その行の資料に対応する入力を読んでいるかを見直します。確認対象は、余りの表示に加えて、式が指している総部数と組の部数です。</p>
+    <p>コピーしても同じセルを指し続けたい場合は、列と行の前にドル記号を付ける絶対セル参照を使います。組の部数を共通の欄にまとめる表と、資料ごとに組の部数を書く表では、残したい参照先が異なります。先に表の配置を決め、共通の欄を使うのか、行ごとの欄を使うのかを確認してから式を広げます。</p>
+    <p>引き継ぎには、総部数の対象、組の部数の決め方、入力する欄と余りを表示する欄を残します。部数を直したときは、変更した入力と結果をセットで確認します。配布に使わない資料や未確定の行も、対象へ含めるかどうかを分かる形にしておきます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">総部数に含める資料と、予備として取り分ける資料を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">一組の部数と配布先の数を、別の意味として区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">総部数と一組の部数で、数える単位をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">式が割られる側と割る側を正しい順番で指定しているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">未入力や訂正用の値を、配布用の部数と区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">小さな確認例の結果と、別の行へコピーした後の参照先を照合したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月11日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/mod-function" rel="noopener" target="_blank">MOD 関数</a>：剰余を求める書式、適用先、引数、使用例（負の数の例を含む）、INT 関数との関係、除数がゼロの場合、戻り値の符号</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/create-a-simple-formula-in-excel" rel="noopener" target="_blank">Excel で簡単な数式を作成する</a>：入力した数式を確定するキーの違い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/how-to-correct-a-div-0-error" rel="noopener" target="_blank">エラー値 #DIV/0! を修正する方法</a>：ゼロ・空白の除数の確認、エラー処理を適用する前の動作確認</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/switch-between-relative-absolute-and-mixed-references" rel="noopener" target="_blank">相対参照、絶対参照、複合参照を切り替える</a>：コピー時の相対参照の変化、絶対セル参照の指定</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-quantity-validation-whole-number-range">Excelの数量欄で負数や小数を防ぐ｜入力規則の上下限と貼り付け後の点検</a></li>
+      <li><a href="/column/controlled-paper-document-distribution-recall-log">文書配布管理表には何を書く？紙の配布部数と旧版の回収を追う欄</a></li>
+      <li><a href="/column/excel-round-amount-formula">Excelで端数を四捨五入した金額を計算結果として残すには</a></li>
+      <li><a href="/column/excel-quantity-unit-price-total">Excelで数量と単価の明細から総額を出す手順と確認のしかた</a></li>
+      <li><a href="/column/excel-trace-precedents-arrows">Excelの集計式が使う入力セルを矢印でたどる確認手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

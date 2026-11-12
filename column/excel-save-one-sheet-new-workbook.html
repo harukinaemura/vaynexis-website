@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelのブックから提出する一枚だけを別ファイルにするには｜Vaynexis</title>
+  <meta name="description" content="提出用の表だけを渡したいときは、元のブックにシートを残しながら、別のブックへコピーします。保存までの操作に加え、ブラウザー版との違い、参照先や非表示の情報の確かめ方を整理します。送るファイルを取り違えないための確認表も用意しました。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelのブックから提出する一枚だけを別ファイルにするには｜Vaynexis">
+  <meta property="og:description" content="提出用の表だけを渡したいときは、元のブックにシートを残しながら、別のブックへコピーします。保存までの操作に加え、ブラウザー版との違い、参照先や非表示の情報の確かめ方を整理します。送るファイルを取り違えないための確認表も用意しました。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-save-one-sheet-new-workbook">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-save-one-sheet-new-workbook">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelのブックから提出する一枚だけを別ファイルにするには","description":"提出用の表だけを渡したいときは、元のブックにシートを残しながら、別のブックへコピーします。保存までの操作に加え、ブラウザー版との違い、参照先や非表示の情報の確かめ方を整理します。送るファイルを取り違えないための確認表も用意しました。","datePublished":"2026-11-12","dateModified":"2026-11-12","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-save-one-sheet-new-workbook"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelのブックから提出する一枚だけを別ファイルにするには","item":"https://vaynexis.jp/column/excel-save-one-sheet-new-workbook"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelのブックから提出する一枚だけを別ファイルにするには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelのブックから提出する一枚だけを別ファイルにするには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>提出するシートのタブから［移動またはコピー］を開き、移動先を新しいブックにして［コピーを作成する］を選ぶと、元シートを残して別ファイルにできます。保存後は、参照先と提出不要の情報を確かめ、送付対象を決めます。</p></div>
+    <p class="col-meta">公開：2026年11月12日／情報の確認日：2026年11月11日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelのブックから提出する1枚のシートだけを別のファイルにして渡したい小さな会社の担当者が、元のシートを残すコピーの手順と、リンク・非表示の情報を提出前に確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月11日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">元シートを残して新しいブックへコピーする</a></li>
+      <li><a href="#s2">ブラウザーで開いている場合は手順を分ける</a></li>
+      <li><a href="#s3">表が開けても参照先の点検は残る</a></li>
+      <li><a href="#s4">不要情報はコピー側で検査する</a></li>
+      <li><a href="#s5">提出用と社内用を分けて受け渡す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．元シートを残して新しいブックへコピーする</h2>
+    <p>確認日：2026年11月11日。</p>
+    <p>以下はデスクトップ版の手順です。Microsoft の「ワークシートを保存する」の適用先は Excel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016 で、Mac 版は一覧にありません。作業前に、提出する表の見出しと対象のシート名を照らし合わせます。似た名前の下書きや社内用の集計表があるときは、送付対象を先に決めておくと取り違えを見つけやすくなります。</p>
+    <p>対象のシート名のタブを右クリックし、［移動またはコピー］を選びます。［移動先ブック名］のドロップダウン メニューで、「(新しいブック)」を選びます。移動先は、表をどこへ渡すかを決める欄です。元のファイルと提出用ファイルを分ける目的に合っているかを、確定前に見直します。</p>
+    <p>元シートを残す場合は、［OK］を押す前に［コピーを作成する］にチェックを入れます。コピーを選ばない元の手順では、シートは元のブックから移動します。この選択を、操作途中の確認点にします。</p>
+    <p>［OK］を押すと、対象のシートが新しいブックで開きます。新しいブックで［ファイル］から［保存］を選びます。保存先とファイル名には、送付対象を見分けられる言葉を使います。元のブックにも対象の表が残っていることを確認し、提出用として保存したファイルを開き直して中身を見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．ブラウザーで開いている場合は手順を分ける</h2>
+    <p>Excel for the web では、デスクトップ版のようにタブの右クリックから別ブックへシートを移動またはコピーするオプションは使えません。Web 版では、シート内のすべてのデータをコピーし、別ブックの空白のシートに貼り付ける方法が案内されています。手順は、ワークシート内のすべてのデータを選択して Ctrl + C キーでコピーし、貼り付け先のブックでステータス バーの［+］から新しい空白のワークシートを追加して、その最初のセルを選択して Ctrl + V キーを押す流れです。</p>
+    <p>この方法で他のブックに貼り付けると、セルの条件付き書式が失われます。画面上の色分けを提出内容の判断に使っているときは、貼り付け後にその意味が伝わるかも確認します。元の画面と見比べ、内容だけでなく見え方も点検します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．表が開けても参照先の点検は残る</h2>
+    <p>Microsoft の「ブックのリンクを管理する」は、ブック内のすべてのブックのリンクを自動的に検索する方法はなく、数式、定義された名前、オブジェクト（テキスト ボックスや図形など）、グラフ タイトル、グラフ データ系列を個別に確認する必要があるとしています。提出用の表に計算結果やグラフがある場合は、目に見える結果と、その結果のもとになっている情報を分けて確認します。</p>
+    <p>定義された名前の参照先は、［数式］タブの［名前の管理］を開き、［参照先］列で確認できます。提出先でも更新して使う表なのか、提出時の内容を確認する表なのかは、受け取る側と合わせておきます。判断がつかない参照先は、表を管理している担当者に確認します。</p>
+    <p>［リンクの解除］では、リンク元の値を使う数式が現在の値へ変わります。リンク解除は元に戻せないため、必要に応じて変更前のファイルを保存します。リンクを見つけた後は、提出目的に照らして残すかどうかを判断します。警告が出ることだけを理由に、内容を確認せず解除する進め方は避けます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．不要情報はコピー側で検査する</h2>
+    <p>Excel のドキュメント検査は、ブック内の非表示データや個人情報の確認と削除に役立ちます。同じページは、ドキュメント検査で削除されたデータは復元できるとは限らないため、元のブックのコピーで使うことを強く勧めています。操作は、元ブックのコピーで［ファイル］タブの［情報］を開き、［問題のチェック］から［ドキュメントの検査］へ進みます。送付用に保存したファイルを対象にし、必要な情報まで除いてしまわないよう、検査結果の内容を見てから削除を判断します。</p>
+    <p>ドキュメント検査で非表示の行・列・シートを削除すると、計算や数式の結果が変わることがあり、中身が分からない場合は再表示して内容を確認します。また、ドキュメント検査は、他のオブジェクトに覆われているオブジェクトを検出しません。検査後も、相手へ渡す内容として過不足がないかを目で確かめる工程を残します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．提出用と社内用を分けて受け渡す</h2>
+    <p>ここからは当社の整理です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">元ブックの内容</th><th scope="col">提出先へ渡すか</th><th scope="col">作業後の確認</th></tr></thead><tbody><tr><td data-label="元ブックの内容">提出用の明細表</td><td data-label="提出先へ渡すか">渡す</td><td data-label="作業後の確認">保存した提出用ファイルで内容を照合</td></tr><tr><td data-label="元ブックの内容">社内用の検討表</td><td data-label="提出先へ渡すか">渡さない</td><td data-label="作業後の確認">元ブックに残して業務で使う</td></tr><tr><td data-label="元ブックの内容">下書きのメモ</td><td data-label="提出先へ渡すか">渡さない</td><td data-label="作業後の確認">提出用ファイルへ含めない</td></tr></tbody></table></div>
+    <p>この例では、提出する表を選ぶ段階と、送るファイルを選ぶ段階を別に点検します。作成した表が正しくても、最後に元ブックを添付すると、渡す範囲が変わってしまいます。添付を決めたファイルを開き、表題と内容を照合します。</p>
+    <p>引き継ぎでは、元のファイルの場所、提出用の保存先、確認した人、参照先について残した判断を共有します。次回の担当者が提出用を原本として編集し続けないよう、どちらを日常の作業に使うかも明らかにしておきます。差し替えが必要になったときは、確認済みの提出用ファイルを基準にして、送る対象を選び直します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">提出対象の表題とシート名を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元ブックに対象の表が残っていることを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">提出用のファイルを保存し、開き直して内容を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">計算結果と参照先を確認し、残す情報を判断したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">不要な情報を除いた後も、内容と見え方を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">添付するファイルが確認済みの提出用であるかを確かめたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月11日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/save-a-worksheet" rel="noopener" target="_blank">ワークシートを保存する</a>：対象の版、提出用シートの別ブック化、元シートを残す設定、保存</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/move-or-copy-worksheets-or-worksheet-data" rel="noopener" target="_blank">ワークシートまたはワークシートのデータを移動またはコピーする</a>：Web 版の別ブックへのコピーの方法と手順、条件付き書式の制約</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/manage-workbook-links" rel="noopener" target="_blank">ブックのリンクを管理する</a>：外部参照の確認箇所、リンク解除の影響</li>
+      <li><a href="https://support.microsoft.com/ja-jp/office/collab-files/remove-hidden-data-and-personal-information-by-inspecting-documents-presentations-or-workbooks" rel="noopener" target="_blank">プレゼンテーションを検査して非表示のデータと個人情報を削除する</a>：Excel のドキュメント検査、元のブックのコピーで使う理由、削除による影響と検出の限界</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-report-copy-paste-values">Excelの報告用コピーを数式ではなく確定した値で残すには</a></li>
+      <li><a href="/column/excel-workbook-links-update-prompt">Excelを開くたび外部リンクの更新確認が出るときの確認手順</a></li>
+      <li><a href="/column/excel-print-area-skip-work-notes">Excelの作業メモを出さず提出部分だけ繰り返し印刷するには</a></li>
+      <li><a href="/column/excel-protect-workbook-structure">Excelで共有するブックのシート削除や名前変更を防ぐには</a></li>
+      <li><a href="/column/excel-mod-handout-sets-remainder">Excelで資料を一定部数ずつ配った後の余りを計算するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

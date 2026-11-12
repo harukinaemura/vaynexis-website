@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで点検日から指定した月数後の予定日を出すには｜Vaynexis</title>
+  <meta name="description" content="点検日と次回までの月数を別の欄に入力し、予定日を求める表の作り方を説明します。数式の入力から下の行へのコピー、結果が数字で表示される場合の直し方まで整理し、日付の入力形式、月数の符号、小数の扱い、引き継ぎ前に照合する箇所を確認します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで点検日から指定した月数後の予定日を出すには｜Vaynexis">
+  <meta property="og:description" content="点検日と次回までの月数を別の欄に入力し、予定日を求める表の作り方を説明します。数式の入力から下の行へのコピー、結果が数字で表示される場合の直し方まで整理し、日付の入力形式、月数の符号、小数の扱い、引き継ぎ前に照合する箇所を確認します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-edate-inspection-next-date">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-edate-inspection-next-date">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで点検日から指定した月数後の予定日を出すには","description":"点検日と次回までの月数を別の欄に入力し、予定日を求める表の作り方を説明します。数式の入力から下の行へのコピー、結果が数字で表示される場合の直し方まで整理し、日付の入力形式、月数の符号、小数の扱い、引き継ぎ前に照合する箇所を確認します。","datePublished":"2026-11-12","dateModified":"2026-11-12","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-edate-inspection-next-date"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで点検日から指定した月数後の予定日を出すには","item":"https://vaynexis.jp/column/excel-edate-inspection-next-date"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで点検日から指定した月数後の予定日を出すには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで点検日から指定した月数後の予定日を出すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelでは、点検日を開始日としてEDATE関数に月数を渡すと、指定した月数だけ後の予定日を計算できます。EDATE 関数の説明では、伝票の発行日と同じ日に当たる支払日や満期日の日付を計算できるとしています。点検日・月数・予定日を別の欄に置き、計算の入力と結果を見比べられる形に整えます。</p></div>
+    <p class="col-meta">公開：2026年11月12日／情報の確認日：2026年11月11日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelで点検日から決まった月数後の予定日を出したい小さな会社の担当者が、EDATE 関数の入力と、日付の表示・開始日の入力・月数の符号と小数を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月11日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">点検の記録と予定の欄を分ける</a></li>
+      <li><a href="#s2">点検日と月数を入れて予定日を計算する</a></li>
+      <li><a href="#s3">小さな表で入力を試し、下の行へ広げる</a></li>
+      <li><a href="#s4">結果が数字や記号で表示されたら表示を整える</a></li>
+      <li><a href="#s5">開始日の入力と月数の小数を確かめる</a></li>
+      <li><a href="#s6">引き継ぎでは元の記録と計算結果を照合する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．点検の記録と予定の欄を分ける</h2>
+    <p>確認日：2026年11月11日。</p>
+    <p>ここでは社内で任意に決める点検予定を扱います。担当者が記録する点検日と、担当部署が決めた次回までの間隔を用意し、予定日の欄を計算に使う構成です。予定表を作る前に、起点にする記録が実際に点検した日なのか、前回決めた予定日なのかを、運用する担当者の間でそろえておきます。欄の名前にもその意味を残します。毎月の月末を予定日にしたい場合は、点検日と同じ日に当たる日付を出すこの記事の方法とは別の作り方になります。</p>
+    <p>Microsoft の「EDATE 関数」のページの適用先は、Excel for Microsoft 365、Excel for Microsoft 365 for Mac、Excel 2024、Excel 2024 for Mac、Excel 2021、Excel 2021 for Mac、Excel 2019、Excel 2016 です。この記事の［フィル］や Ctrl+1 の操作の説明は、Windows 版の Excel を対象にします。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．点検日と月数を入れて予定日を計算する</h2>
+    <p>Microsoft の「日付を加算または減算する」の例では、開始日を列 A に、加算または減算する月数を列 B に入力し、セル C2 に「=EDATE(A2,B2)」と入力して、必要に応じてコピーします。点検日を A2、月数を B2 に入れれば、C2 に予定日が出ます。入力用の欄と計算用の欄を分けると、予定日だけを見ていたときにも、元の点検日と間隔へ戻って確かめられます。月数の欄名は単位が分かる言葉にしておくと、引き継いだ担当者も値の意味を判断しやすくなります。</p>
+    <p>EDATEの書式は「EDATE(開始日, 月)」で、開始日と月数をこの順に指定します。先に起点の日付、その後に移動する幅という順序で読むと、式の中でどの入力欄を使っているかを追いやすくなります。</p>
+    <p>月数に正の数を入れると起点より後の日付、負の数を入れると起点より前の日付になります。次回の予定を作る表では、入力した間隔の向きも照合の対象です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．小さな表で入力を試し、下の行へ広げる</h2>
+    <p>表は入力欄と計算欄の配置を示すためのものです。実際の予定表へ広げる前に、空いている場所で式の参照先を読み合わせます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">行</th><th scope="col">A列・点検日</th><th scope="col">B列・次回までの月数</th><th scope="col">C列・予定日の数式</th><th scope="col">予定日の表示</th></tr></thead><tbody><tr><td data-label="行">2</td><td data-label="A列・点検日">2011/1/15</td><td data-label="B列・次回までの月数">1</td><td data-label="C列・予定日の数式">=EDATE(A2,B2)</td><td data-label="予定日の表示">2011/2/15</td></tr></tbody></table></div>
+    <p>この表の予定日は、公式の使用例と同じ開始日と加算する月数を当てはめた計算例です。元の記録に照らして、入力がそろっている行から予定日を作ります。元の記録との照合が済んでいない行は、その状態を担当者が判別できるようにしておきます。</p>
+    <p>数式を下へ広げるときは、式の入ったセルと入力先の隣接セルを選び、［ホーム］の［フィル］から［下］を選びます。コピーする範囲を先に確認してから操作すると、別のメモ欄まで広げる取り違えを避けやすくなります。</p>
+    <p>相対セル参照を含む数式は、コピー先に応じて参照先が変わります。広げた後は、先頭だけでなく途中と末尾の式も開き、その行の点検日と間隔を読んでいるか照合します。別の行のセルを指している式が混じっていないかを見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．結果が数字や記号で表示されたら表示を整える</h2>
+    <p>計算結果は、数式を入力したセルの形式によって、日付に対応するシリアル番号で表示される場合があります。予定日が読みにくいときは、計算に使った入力と、結果の表示を順に見ます。</p>
+    <p>シリアル番号で表示されたセルを選択し、Ctrl+1で［セルの書式設定］を開いて［数値］タブを選びます。続いて［カテゴリ］の［日付］から目的の形式を選び、［OK］で確定すると、結果が日付として表示されます。予定表を読む担当者が年月日を取り違えにくい形式にそろえます。</p>
+    <p>日付の欄に「#####」が見えるときは、列幅が足りない可能性があり、列の右枠線をダブルクリックすると数値に合わせて幅が調整されます。表示を整えた後は、年まで読める状態で元の記録と照合します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．開始日の入力と月数の小数を確かめる</h2>
+    <p>EDATE 関数の説明では、開始日は DATE 関数を使って入力するか、他の数式または他の関数の結果を指定するとしており、日付を文字列として入力した場合、エラーが発生することがあるとしています。転記した日付が原因と思われるときは、元の記録に戻って年月日を読み合わせます。見た目だけで判断せず、日付を入力した方法も確認する流れです。</p>
+    <p>年・月・日を組み合わせて開始日を作る場合は、DATE関数の「DATE(年,月,日)」という書式を使えます。DATE関数の年は、望ましくない結果を防ぐため、4桁の数字で指定します。作り直す日付は、元の点検記録に書かれた年月日に照らして入力することが前提です。</p>
+    <p>開始日が無効な日付の場合、EDATEはエラー値「#VALUE!」を返します。エラーのある行は、そのまま予定の確定に進めず、入力と参照先の照合に戻します。</p>
+    <p>月数に整数以外を指定すると、小数点以下は切り捨てられます。担当者の意図と入力値を読み合わせ、小数を含む間隔をどのように扱うかも、表を運用する側でそろえておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．引き継ぎでは元の記録と計算結果を照合する</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>引き継ぎ時には、点検日の記録元、次回までの間隔を決めた人、計算した予定日の確認者が追える状態にします。記録の訂正と、間隔の変更は、何を直したのかが分かるように残しておくと、予定が変わった理由を後から照合できます。</p>
+    <p>予定日の見た目がそろっていても、起点の記録が違えば、担当者の意図と合っているかは判断できません。予定の一覧と元の点検記録を並べ、起点・間隔・結果の順に読み合わせます。相違があった行は、修正する箇所と、確認を待つ箇所を明らかにしてから引き継ぎます。</p>
+    <p>また、計算した予定と実際に実施する日を区別して記録すると、次の点検の起点を選ぶときにも読み違いを減らせます。変更された予定をそのまま次の起点にする運用か、実施した記録から予定を作り直す運用かを、担当部署の方針と照らし合わせます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">起点に使う点検日の意味を、担当者の間で確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の点検記録と、入力した日付を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">次回までの月数と、その入力値の向きを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">コピーした式が、その行の入力欄を指しているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">予定日が年を含む日付として読めることを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力エラーの行と、担当者の確認を待つ行を判別できるようにしたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月11日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/edate-function" rel="noopener" target="_blank">EDATE 関数</a>：適用先、月数を加減する働き、同じ日に当たる日付、開始日の入力、月数の符号、小数の扱い、無効な日付</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/add-or-subtract-dates" rel="noopener" target="_blank">日付を加算または減算する</a>：入力列と数式、結果を日付表示にする操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/fill-a-formula-down-into-adjacent-cells" rel="noopener" target="_blank">隣り合ったセルに数式をコピーする</a>：数式の下方向へのコピー</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/switch-between-relative-absolute-and-mixed-references" rel="noopener" target="_blank">相対参照、絶対参照、複合参照を切り替える</a>：コピーした数式の参照先の変化</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/format-a-date-the-way-you-want-in-excel" rel="noopener" target="_blank">Excel で日付をお好みの形式に設定する</a>：表示が欠ける場合の列幅調整</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/date-function" rel="noopener" target="_blank">DATE 関数</a>：開始日を年・月・日から作る方法と年の桁数</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-month-end-date-schedule-eomonth">Excelで月ごとに違う月末日を予定表へ自動表示する手順</a></li>
+      <li><a href="/column/excel-workday-business-days">Excelで休日を除いて何営業日後の作業予定日を計算するには</a></li>
+      <li><a href="/column/excel-date-with-weekday-display">Excelの作業予定表で日付と曜日を同じセルに表示する手順</a></li>
+      <li><a href="/column/excel-overdue-incomplete-highlight">Excelで期限を過ぎた未完了の作業にだけ色を付ける設定方法</a></li>
+      <li><a href="/column/excel-chart-data-table-below">Excelの報告グラフの下に元の数値表を付ける手順と確認点</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

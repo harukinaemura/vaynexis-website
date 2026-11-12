@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Googleフォームで複数の確認項目を表にするグリッドの作り方｜Vaynexis</title>
+  <meta name="description" content="Googleフォームで複数の確認項目を表にまとめ、行ごとに状態を選んでもらう作り方を説明します。行と列の決め方、回答を求める設定、同じ状態を選べなくなる原因を整理し、架空の見本から回答後の照合、担当者への引き継ぎまで、確かめる順序を示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Googleフォームで複数の確認項目を表にするグリッドの作り方｜Vaynexis">
+  <meta property="og:description" content="Googleフォームで複数の確認項目を表にまとめ、行ごとに状態を選んでもらう作り方を説明します。行と列の決め方、回答を求める設定、同じ状態を選べなくなる原因を整理し、架空の見本から回答後の照合、担当者への引き継ぎまで、確かめる順序を示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/google-forms-multiple-choice-grid">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/google-forms-multiple-choice-grid">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Googleフォームで複数の確認項目を表にするグリッドの作り方","description":"Googleフォームで複数の確認項目を表にまとめ、行ごとに状態を選んでもらう作り方を説明します。行と列の決め方、回答を求める設定、同じ状態を選べなくなる原因を整理し、架空の見本から回答後の照合、担当者への引き継ぎまで、確かめる順序を示します。","datePublished":"2026-11-12","dateModified":"2026-11-12","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-forms-multiple-choice-grid"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Googleフォームで複数の確認項目を表にするグリッドの作り","item":"https://vaynexis.jp/column/google-forms-multiple-choice-grid"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Googleフォームで複数の確認項目を表にするグリッドの作り</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Googleフォームで複数の確認項目を表にするグリッドの作り方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Googleフォームで確認項目を表にまとめ、行ごとに状態を選んでもらうには、［選択式（グリッド）］を使います。行には確かめたい内容、列には共通の答えを置きます。各行の回答を求めるのは［各行で 1 つの回答を必須にする］で、［1 列につき 1 件の回答に制限］は、1 つの列で複数の行を選ぶとエラーになる別の設定です。複数の項目が同じ状態になってよい確認表では、列の制限はオンにしません。</p></div>
+    <p class="col-meta">公開：2026年11月12日／情報の確認日：2026年11月11日（出典はこの記事の最後）</p>
+    <p>この記事は、Googleフォームで複数の確認項目を表にまとめて回答してもらいたい小さな会社の担当者が、選択式（グリッド）の行と列の決め方、行の必須と列の制限の違い、届いた回答の照合を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月11日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">行に確認項目、列に共通の答えを置く</a></li>
+      <li><a href="#s2">回答を求める設定と列の制限を分ける</a></li>
+      <li><a href="#s3">共通の答えで判断できる項目だけを並べる</a></li>
+      <li><a href="#s4">同じ状態を選ぶ確認と空欄の確認を行う</a></li>
+      <li><a href="#s5">届いた答えを行名と状態の組で照合する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．行に確認項目、列に共通の答えを置く</h2>
+    <p>確認日：2026-11-11</p>
+    <p>対象はGoogleフォームのフォーム編集画面で、質問のタイトルの右側から［選択式（グリッド）］を選びます。ここで扱うのは、各項目について現在の状態を1つ答える確認表です。1つの項目に複数の状態を同時に付けたい場合は、行の分け方や質問の聞き方から見直します。</p>
+    <p>行の回答を追加したあと、列の回答を追加する順で設定します。行には「何を確かめるか」、列には「どう答えるか」を割り当てます。行と列を逆にすると、回答する人が表を読む向きが想定と変わるため、作成前に見本を書いておきます。</p>
+    <p>質問文には、何についての状態を答えるのかを短く書きます。「確認」という題名だけより、対象と答える時点が伝わる文面のほうが、回答者の判断をそろえやすくなります。質問の説明には、答え方に迷いそうな言葉の意味や、判断できないときの扱いを添えます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．回答を求める設定と列の制限を分ける</h2>
+    <p>行ごとの回答を求める設定として、［各行で 1 つの回答を必須にする］が用意されています。答えを求める前に、対象外の項目や、まだ判断できない項目にも無理なく答えられる文面かを確認します。空欄をなくすことだけを優先すると、まだ分からない項目まで完了の列に印が付きやすくなります。</p>
+    <p>列ごとの選択を制限するには、右下のその他アイコンをクリックし、［1 列につき 1 件の回答に制限］のチェックボックスをオンにします。公式の例では、行が A、B、C、列が 1、2、3 のとき、回答者は列ごとに 1 件の行項目を選択でき、1 つの列内で複数の行を選択するとエラー メッセージが表示されます。行ごとに回答を求める設定とは役割が異なります。</p>
+    <p>確認表では、複数の項目が同じ状態になるのが普通です。たとえば3つの項目がすべて準備済みという回答は、列の制限をオンにしているとエラーになります。回答漏れを防ぐ目的なら行の必須の設定だけを使い、列の制限はオフのままにします。業務で起こり得る答えの組み合わせを先に書き出しておくと、どちらの設定が要るかを決めやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．共通の答えで判断できる項目だけを並べる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>書類の提出前に、必要な準備ができているかを尋ねる場面を考えます。行には準備する内容、列には状態を置く設計案です。下の表は完成画面の再現ではなく、行と列の対応を考えるための見本です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確認する内容（行）</th><th scope="col">準備済み（列）</th><th scope="col">対応が必要（列）</th><th scope="col">対象外（列）</th></tr></thead><tbody><tr><td data-label="確認する内容（行）">添付資料の用意</td><td data-label="準備済み（列）">状態の候補</td><td data-label="対応が必要（列）">状態の候補</td><td data-label="対象外（列）">状態の候補</td></tr><tr><td data-label="確認する内容（行）">記入内容の見直し</td><td data-label="準備済み（列）">状態の候補</td><td data-label="対応が必要（列）">状態の候補</td><td data-label="対象外（列）">状態の候補</td></tr><tr><td data-label="確認する内容（行）">提出先の確認</td><td data-label="準備済み（列）">状態の候補</td><td data-label="対応が必要（列）">状態の候補</td><td data-label="対象外（列）">状態の候補</td></tr></tbody></table></div>
+    <p>「準備済み」は必要な作業を終えた状態、「対応が必要」は未完了や修正待ち、「対象外」はその確認が不要な状態、という意味を先にそろえます。判断できていない状態まで「対象外」にまとめると、不要なのか確認待ちなのかが読めなくなります。判断待ちの答えを受け付ける業務では、「判断待ち」の列を加えます。</p>
+    <p>列の答えがどの行にも当てはまるかを、横方向に読み直します。「有無」を聞く内容と「準備の進み具合」を聞く内容が混ざっているなら、同じ表へまとめることより、聞き方をそろえることを先に考えます。対象が広すぎる行は分け、回答を受け取った人が何を確認すればよいか分かる粒度に整えます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．同じ状態を選ぶ確認と空欄の確認を行う</h2>
+    <p>Google のヘルプ「フォームを公開して回答者と共有する」では、回答者がフォームにアクセスできるようにするには、フォームを公開する必要があるとしています。公開されると、右上に［公開済み］と表示されます。配布に使う表示で行名と列名を読み、編集する側が知っている前提を、回答する側も理解できるか確かめます。項目名が長い場合は、何を選んでいるのかを見失わずに読めるかも確認したい点です。</p>
+    <p>確認用の回答では、全項目を完了扱いにする場合、対応待ちが混ざる場合、対象外がある場合を試します。同じ状態が続く組み合わせも含めると、通常の業務で必要な回答を受け付けられるかを見られます。正常な回答を最後まで進める確認と、答えを残したまま進む確認を分けると、どの設定を見直すべきかが明確になります。</p>
+    <p>Google のヘルプ「Google フォームに回答する際の一般的なエラーを修正する」は、［回答を 1 行に 1 つずつ入力してください］というエラーでは、各行で必要な選択肢を選び、回答漏れがないか確認するよう案内しています。同じページは、［1 列で複数の回答を選択することはできません］について、列ごとに選択できる回答は 1 つのみと説明しています。同じ状態を選ぶこと自体が業務上正しいなら、回答者に別の状態を選んでもらう前に、作成者側で［1 列につき 1 件の回答に制限］がオンになっていないかを見直します。</p>
+    <p>フォームの編集のヘルプでは、質問、見出し、説明を編集するには、変更するテキストをクリックするとしています。修正したあとは、先ほど止まった答え方に加え、それまで通っていた答え方も確認します。文面と設定を同時に大きく変えず、原因に対応する箇所から直すと、変更の理由を引き継ぎやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．届いた答えを行名と状態の組で照合する</h2>
+    <p>届いた回答は、フォームを開いて上部の［回答］をクリックすると確認できます。同じヘルプでは、ユーザーごとに回答を表示でき、フォームを複数回送信できるように設定した場合は、送信した回答ごとにも表示できるとしています。確認用に選んだ内容を控え、行名と状態の組が意図したとおりに読めるかを照合します。選択の印が付いたことだけで終えず、受け取った人が次の対応を判断できる答えかまで見る流れです。</p>
+    <p>空欄と、対象外と、対応待ちを別々に読めるかを確かめます。答える人には分かっていても、読む人が状態の違いを理解できなければ、確認表として使う際に聞き直しが必要になります。文面を作る担当と、届いた内容を見る担当が異なる場合は、同じ見本を双方で読み合わせます。</p>
+    <p>引き継ぎには、行に並べる項目、答えの意味、同じ状態が重なってよいか、空欄の扱い、確認した答え方を残します。設定名の控えと、その設定にした理由を合わせておくと、後任者が項目を追加するときの判断材料になります。追加した項目にも既存の答えが当てはまるかを見直し、運用の途中で表の意味が変わらないように整えます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">行には確認対象、列には共通の答えを置いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">どの項目にも同じ意味で答えられる表になったか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象外と、未完了・判断待ちを区別できる答えを用意したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">回答漏れを防ぐ設定と、状態の重複を制限する設定の目的を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">同じ状態が続く答え方と、未回答を残す答え方を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">送った内容と届いた内容を、項目名と状態の組で照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">答えの定義と設定の理由を、後任者に渡せる形にしたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月11日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/docs/answer/7322334?hl=ja" rel="noopener" target="_blank">フォームの質問の形式を選択する</a>：質問形式を選択する位置</li>
+      <li><a href="https://support.google.com/docs/answer/3378864?hl=ja" rel="noopener" target="_blank">フォームのルールを設定する方法</a>：選択式（グリッド）の選択数、行・列の設定、行の回答必須と列の制限</li>
+      <li><a href="https://support.google.com/docs/answer/2839588?hl=ja" rel="noopener" target="_blank">フォームを公開して回答者と共有する</a>：回答者のアクセスに必要な公開、公開後の表示</li>
+      <li><a href="https://support.google.com/docs/answer/15473134?hl=ja" rel="noopener" target="_blank">Google フォームに回答する際の一般的なエラーを修正する</a>：行の回答漏れと列の重複によるエラーの区別</li>
+      <li><a href="https://support.google.com/docs/answer/2839737?hl=ja" rel="noopener" target="_blank">フォームを編集する</a>：質問文・見出し・説明の編集</li>
+      <li><a href="https://support.google.com/docs/answer/139706?hl=ja" rel="noopener" target="_blank">フォームの回答を表示、管理する</a>：回答の開き方、ユーザーごと・送信した回答ごとの表示</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/google-forms-response-validation-digits">Googleフォームで入力の桁数や形式を制限する設定と確認</a></li>
+      <li><a href="/column/google-forms-section-branching">Googleフォームで回答により質問を分けるセクション分岐の設定手順</a></li>
+      <li><a href="/column/google-forms-responses-existing-sheet">Googleフォームの回答を既存の表に保存する手順と確かめ方</a></li>
+      <li><a href="/column/google-forms-add-editor-handover">Googleフォームの担当者を共同編集に加える手順と権限の確認</a></li>
+      <li><a href="/column/google-calendar-change-event-organizer">Googleカレンダーの会議の主催者を後任へ引き継ぐ手順と確認点</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://vaynexis.jp/</loc><lastmod>2026-11-11</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai</loc><lastmod>2026-11-12</lastmod></url>
   <url><loc>https://vaynexis.jp/price</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://vaynexis.jp/record</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://vaynexis.jp/works</loc><lastmod>2026-11-03</lastmod></url>
@@ -10,18 +10,18 @@
   <url><loc>https://vaynexis.jp/contact</loc><lastmod>2026-11-05</lastmod></url>
   <url><loc>https://vaynexis.jp/privacy</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://vaynexis.jp/tokushoho</loc><lastmod>2026-11-03</lastmod></url>
-  <url><loc>https://vaynexis.jp/office-inventory</loc><lastmod>2026-11-11</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai-data-entry-demo</loc><lastmod>2026-11-11</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai-document-demo</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/office-inventory</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai-data-entry-demo</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai-document-demo</loc><lastmod>2026-11-12</lastmod></url>
   <url><loc>https://vaynexis.jp/rates</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://vaynexis.jp/sample-report</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://vaynexis.jp/sample-audit</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://vaynexis.jp/terms</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://vaynexis.jp/case-empty-folders</loc><lastmod>2026-11-03</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai-consulting-guide</loc><lastmod>2026-11-11</lastmod></url>
-  <url><loc>https://vaynexis.jp/business-improvement</loc><lastmod>2026-11-11</lastmod></url>
-  <url><loc>https://vaynexis.jp/ai-manual-guide</loc><lastmod>2026-11-11</lastmod></url>
-  <url><loc>https://vaynexis.jp/column</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai-consulting-guide</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/business-improvement</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/ai-manual-guide</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column</loc><lastmod>2026-11-12</lastmod></url>
   <url><loc>https://vaynexis.jp/column/data-entry-errors</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://vaynexis.jp/column/task-listing</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://vaynexis.jp/column/ai-minutes-transcription</loc><lastmod>2026-10-30</lastmod></url>
@@ -1085,4 +1085,62 @@
   <url><loc>https://vaynexis.jp/column/urgent-payment-request-impersonation-check</loc><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://vaynexis.jp/column/ai-assistant-file-sharing-review</loc><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://vaynexis.jp/column/generative-ai-staff-training</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/bank-records-other-account-check</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/receipt-reissue-previous-issue-record</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/discounted-endorsed-notes-receivable-report-check</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/scrap-paper-reuse-confidential-check-record</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/solo-after-hours-work-approval-check</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/disaster-priority-change-handover</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/transfer-slip-fields-debit-credit-evidence</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/self-funding-plan-sheet-fields</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/bill-of-lading-vessel-port-date-check</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/job-posting-self-declaration-form</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/service-level-agreement-fields-metrics-report</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/screen-transition-diagram-fields</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/whistleblower-corrective-notice-record</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/stress-check-report-headcount</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/disability-life-counselor-appointment-report</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/construction-year-end-report-documents</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/dormitory-change-plan-notice-drawings</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/expropriation-replacement-asset-extension-application</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/etax-difficult-paper-filing-application</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/highly-professional-periodic-report-hours-holidays</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/social-insurance-short-time-category-change</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/health-management-handbook-work-history-certificate</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/disability-workplace-facility-subsidy-before-work</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/company-dissolution-liquidation-schedule</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/tax-office-consultation-appointment-prep</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/tax-special-measures-statement-prep</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/acrobat-reader-bookmarks-jump-to-chapter</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/excel-countblank-required-fields</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/excel-edate-inspection-next-date</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/excel-chart-data-table-below</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/excel-save-one-sheet-new-workbook</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/word-table-merge-cells-shared-column-heading</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/word-odd-even-page-different-headers</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/word-page-border-section-print-check</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/excel-mod-handout-sets-remainder</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/powerpoint-table-equal-row-height</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/powerpoint-reading-order-pane-check</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/excel-trace-precedents-arrows</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/word-remove-unselectable-horizontal-line</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/google-forms-multiple-choice-grid</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/google-calendar-change-event-organizer</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/google-drive-activity-who-moved-renamed</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/nursery-serious-accident-report-documents</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/used-car-recycling-deposit-notice</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/reins-registration-certificate-seller</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/pharmaceutical-trade-counterparty-check-records</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/pse-conformity-certificate-copy-import</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/prtr-notification-site-release-data</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/partial-use-consent-before-handover</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/ata-carnet-item-list-customs-records</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/minpaku-notification-floor-plan-rights</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/japanese-language-school-accreditation-documents</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/drone-flight-permit-route-aircraft</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/temporary-operation-permit-plate-documents</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/customs-sample-takeout-permit-application</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/will-probate-family-register-documents</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/fertilizer-producer-guarantee-label</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/art-indemnity-contract-application-attachments</loc><lastmod>2026-11-12</lastmod></url>
 </urlset>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>画面遷移図には何を書く？画面番号・操作と遷移先を照合する書き方｜Vaynexis</title>
+  <meta name="description" content="画面遷移図を委託先へ渡すとき、何を記載し、どの資料と確かめるかを整理します。画面番号・起点・操作・行先をそろえる欄の案と短い記入例を示し、条件による分岐、戻る操作、画面一覧やレイアウトとの食い違い、変更後の更新漏れを確かめる順番まで扱います。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="画面遷移図には何を書く？画面番号・操作と遷移先を照合する書き方｜Vaynexis">
+  <meta property="og:description" content="画面遷移図を委託先へ渡すとき、何を記載し、どの資料と確かめるかを整理します。画面番号・起点・操作・行先をそろえる欄の案と短い記入例を示し、条件による分岐、戻る操作、画面一覧やレイアウトとの食い違い、変更後の更新漏れを確かめる順番まで扱います。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/screen-transition-diagram-fields">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/screen-transition-diagram-fields">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"画面遷移図には何を書く？画面番号・操作と遷移先を照合する書き方","description":"画面遷移図を委託先へ渡すとき、何を記載し、どの資料と確かめるかを整理します。画面番号・起点・操作・行先をそろえる欄の案と短い記入例を示し、条件による分岐、戻る操作、画面一覧やレイアウトとの食い違い、変更後の更新漏れを確かめる順番まで扱います。","datePublished":"2026-11-12","dateModified":"2026-11-12","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/screen-transition-diagram-fields"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"画面遷移図には何を書く？画面番号・操作と遷移先を照合する書き","item":"https://vaynexis.jp/column/screen-transition-diagram-fields"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">画面遷移図には何を書く？画面番号・操作と遷移先を照合する書き</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">画面遷移図には何を書く？画面番号・操作と遷移先を照合する書き方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>IPA の「機能要件の合意形成ガイド（ver.1.0）分冊３ 画面編」（2010年）は、画面遷移の記述内容を、表示される画面とその順序関係、画面から画面への遷移を起こすきっかけとなるイベント、条件分岐がある場合のその条件と分岐遷移としています。画面には画面レイアウトを一意に識別できる名前を書き、照合では画面レイアウトと画面遷移を突き合わせます。画面番号・起点・操作・行先を並べる確認表は、この図を委託先と照合するための当社の整理です。未決定のつながりは、合意済みの線に混ぜません。</p></div>
+    <p class="col-meta">公開：2026年11月12日／情報の確認日：2026年11月11日（出典はこの記事の最後）</p>
+    <p>この記事は、システムの開発を委託する前に画面遷移図を用意したい小さな会社の担当者が、IPA の画面編が挙げる記述内容（画面・遷移矢線・イベント・条件分岐・開始点と終了点・他の図への接続）と、画面レイアウト・画面一覧との突き合わせを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月11日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">画面の見た目と、画面間のつながりを分ける</a></li>
+      <li><a href="#s2">画面編が挙げる構成要素</a></li>
+      <li><a href="#s3">画面番号・起点・操作・行先を記入欄で対応させる</a></li>
+      <li><a href="#s4">操作のきっかけと、画面が応答する内容を区別する</a></li>
+      <li><a href="#s5">画面一覧とレイアウトから、図の矢印を照合する</a></li>
+      <li><a href="#s6">変更した矢印と、その両端の資料を一緒に更新する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．画面の見た目と、画面間のつながりを分ける</h2>
+    <p>確認日：2026年11月11日。</p>
+    <p>IPA の講演資料（2020年）は、『ユーザのための要件定義ガイド 第2版』でガイドするドキュメントを大幅に追加し、主要な成果物の記載項目・留意点・サンプルを載せたと紹介し、その一覧で画面遷移図と画面／帳票レイアウトを別のドキュメントとして挙げています。IPA の画面編は、画面遷移を、アプリケーションを実現する画面の流れを表す図表とし、発注者が理解する業務の流れやシステムの一連の操作に沿って、画面の位置づけと流れをフロー図形式で表すとしています。画面編の表紙の日付は2010年3月31日で、古い資料に示された考え方として扱います。目的には、画面の流れを明確にすることと、発注者にシステムのおおよその利用イメージを伝えることを挙げています。</p>
+    <p>委託先との打ち合わせでは、入力欄の配置を示す資料と、操作後の行先を示す資料を並べて扱います。画面の見本にボタンが描かれていても、そのボタンからどこへ進む想定かを、別途たどれるようにしておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．画面編が挙げる構成要素</h2>
+    <p>IPA の画面編は、画面遷移の構成要素ごとに書く内容を示しています。画面は遷移元・遷移先の個々の画面を表し、画面レイアウトを一意に識別できる名前を書きます。遷移矢線は、実現される画面の順序関係を矢線で書き、矢線が交錯しないように描きます。イベントは画面の遷移を引き起こすきっかけとなるもので、検索ボタンが押されたときは「検索」というイベントが発生する、という例が示されています。開発都合で必要になる内部イベント等のイベントは書かないとされています。</p>
+    <p>条件により遷移が分岐する場合は条件分岐を書き、分岐した複数の遷移が一つにまとまる所は合流として表します。開始点と終了点は画面遷移の開始画面と終了画面を明示するもので、自明の場合は不要とされています。図を複数に分けるときは、他の画面遷移への接続点を明示し、接続する画面遷移を一意に識別できるように書きます。例外処理等で正常系の処理を実行できない場合の処理方法は異常系として、遷移図だけでは表せない設計情報は注釈として書きます。</p>
+    <p>画面の呼び方は、ほかの資料とそろえます。画面編は、画面の名称や画面ID、識別IDを他の「工程成果物」と一致させることを書き方のコツに挙げ、複数の工程成果物で画面ID等の同一のIDを書くと、資料同士の関連付けができ、認識の食い違いを防げたという補足を載せています。同書の画面一覧も、「No.」「画面名」「画面ID」を別の構成要素にしています。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．画面番号・起点・操作・行先を記入欄で対応させる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>次の表は、自社用のひな形に設ける欄の案です。公式の必須記載事項を写したものではありません。図では画面の枠に画面番号と画面名を添え、矢印にはきっかけとなる操作を書きます。表はその矢印の内容を確認する補助として使う想定です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">項目</th><th scope="col">何を書くか・短い記入例</th><th scope="col">書き間違えやすい点</th></tr></thead><tbody><tr><td data-label="項目">図の対象</td><td data-label="何を書くか・短い記入例">来訪予定の照会、対象となる担当者の操作範囲</td><td data-label="書き間違えやすい点">対象外の管理画面まで含める</td></tr><tr><td data-label="項目">画面番号・画面名</td><td data-label="何を書くか・短い記入例">A：照会条件、B：照会結果</td><td data-label="書き間違えやすい点">行の並べ替えで画面番号まで変える</td></tr><tr><td data-label="項目">起点</td><td data-label="何を書くか・短い記入例">A：照会条件</td><td data-label="書き間違えやすい点">図の入口と、各矢印の遷移元を混同する</td></tr><tr><td data-label="項目">操作</td><td data-label="何を書くか・短い記入例">照会ボタンを押す</td><td data-label="書き間違えやすい点">操作名の代わりに処理結果を書く</td></tr><tr><td data-label="項目">行先</td><td data-label="何を書くか・短い記入例">B：照会結果</td><td data-label="書き間違えやすい点">画面名だけを書き、似た画面と区別できない</td></tr><tr><td data-label="項目">分岐・同じ画面に留まる場合</td><td data-label="何を書くか・短い記入例">入力内容に不足があればAに留まる案</td><td data-label="書き間違えやすい点">行先が未決定なのか、留まる想定なのか分からない</td></tr><tr><td data-label="項目">戻り先</td><td data-label="何を書くか・短い記入例">Bの戻る操作からAへ戻る案</td><td data-label="書き間違えやすい点">往路と復路をまとめ、操作の違いを省く</td></tr><tr><td data-label="項目">確認状況・照合した資料</td><td data-label="何を書くか・短い記入例">入力不足時の表示は未決定、レイアウト案と照合</td><td data-label="書き間違えやすい点">確認待ちを合意済みとして扱う</td></tr><tr><td data-label="項目">更新情報</td><td data-label="何を書くか・短い記入例">更新日、更新者、版、変更の理由</td><td data-label="書き間違えやすい点">図だけを直し、照合先の資料を据え置く</td></tr></tbody></table></div>
+    <p>画面番号は、画面IDのように画面を区別する符号として使い、表示順の番号とは分けます。画面の追加で図の配置を変えても、ほかの資料から指している画面が変わらないようにするためです。画面名を変えるときは、旧名称との対応を変更メモに残しておくと照合を続けやすくなります。</p>
+    <p>入力内容を戻り先へ引き継ぐかは、行先とは別の確認事項にします。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．操作のきっかけと、画面が応答する内容を区別する</h2>
+    <p>IPAの画面編は、遷移のきっかけとなるイベントとは別に、画面遷移に伴って起動される動作をアクションとして書き分けています。遷移矢線に付ける遷移動作には遷移時に起こる動作の名称を書き、内部動作の記述は行わないとしています。</p>
+    <p>操作と応答の書き分けは、当社の提案です。「押す」「選ぶ」など利用者側の動き（イベント）を操作欄へ、「表示する」「保存する」など期待する応答を補足欄へ分けます。行先だけを記入するより、同じ画面に配置された操作のどれに対応する線かを確認しやすい形になります。</p>
+    <p>分岐を設ける案では、判断の対象と、分かれた後の行先を対にして記録します。「正常」「異常」だけでは、何を見て行先を分ける想定かが伝わりません。業務担当者が意味を説明できる言葉で分岐を書き、表示する文言や詳細な判定内容は別の資料へつなぎます。</p>
+    <p>また、往路の矢印があることと、戻る操作が定義されていることは分けて点検します。戻る際の入力内容の扱い、取消し後の行先、処理を終える位置を確認事項にします。委託先へは、画面が変わる要求と、同じ画面の表示だけを変える要求を区別して渡します。未決定の箇所は線を推測で補わず、確認相手と決めたい内容を残します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．画面一覧とレイアウトから、図の矢印を照合する</h2>
+    <p>IPAの画面編は、画面レイアウトと画面遷移を突き合わせる確認を挙げています。手順として、画面レイアウト上のボタンやフィールドの操作で起こる画面の遷移が画面遷移に書かれているかを確かめ、さらに逆方向から見て「余計な遷移」を見つけるとしています。例では、画面レイアウト上にある「登録」ボタンに対する遷移が画面遷移から漏れている場合を挙げています。</p>
+    <p>IPAのレガシーシステム刷新ハンドブックでは、既存のWeb型システムの仕様を復元する際、業務や業務マニュアルから業務画面を洗い出す手順を示しています。続けて、実際の画面のメニューと画面定義からも業務画面を洗い出し、3つの整合性をとって画面一覧を作り、画面間の関係を整理して画面遷移の流れをまとめる順です。</p>
+    <p>以下の照合順は当社の提案です。まず画面一覧を手元に置き、図に登場する画面番号と名称の対応を見ます。一覧にない行先は、追加する画面なのか、既存の画面を別名で書いたのかを確認します。名称が似ているだけで同じ画面とはみなしません。</p>
+    <p>続いてレイアウトを開き、画面編の手順のとおり、図にある操作がレイアウトにない箇所と、レイアウトにある操作の行先を図でたどれない箇所を、両方向から拾います。同じ名称のボタンが並ぶ画面では、画面内の位置や部品を示す符号も合わせて確かめます。</p>
+    <p>最後に、利用者が作業を始めてから終えるまでの想定を声に出してたどります。図の途中で説明が止まる箇所は、開始画面の不足、行先の食い違い、別図への接続漏れなどに分けて確認します。図を分けて保管する場合は、接続先の図名と画面を相互に書き、どこまでが確認済みかをそろえます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．変更した矢印と、その両端の資料を一緒に更新する</h2>
+    <p>更新時は、変更した線の起点、操作、行先をひとまとまりで見直します。行先の画面名だけを修正しても、起点側のボタン名が以前のままでは対応を判断できません。画面を廃止する案では、その画面に入る線と、その画面から出る線を拾い、残す操作の移し先を整理します。</p>
+    <p>保存する資料には、検討中と合意済みの区別を付けます。委託先へ渡した図の版と、照合に使った画面一覧・レイアウトの版を記録する案です。最新版という名前だけに頼らず、後から同じ組み合わせを開けるよう、共有した資料の所在も残しておきます。</p>
+    <p>意見が分かれた箇所には、決めたいこと、判断する担当者、回答を反映する資料を書きます。「確認済み」の印だけで済ませず、採用した行先と見送った案が分かる形にすると、次の変更時にも判断を引き継げます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">図の対象となる業務と利用者の範囲を明記したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">画面番号と画面名を画面一覧・レイアウトと照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">起点の操作から遷移先まで矢印をたどって確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">分岐先、戻り先、同じ画面に留まる想定を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">別図への接続先と、作業を終える位置を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">未決定の箇所について確認相手と決めたい内容を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更した図と照合先の資料を対応する版で共有したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月11日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.ipa.go.jp/publish/qv6pgp000000a6t8-att/000085749.pdf" rel="noopener" target="_blank">ユーザが自ら実践！最新事例で学ぶ要件定義の勘どころ 第一部 全体概要</a>：要件定義ガイド第2版で記載項目・留意点・サンプルを載せたドキュメントの一覧に画面遷移図と画面／帳票レイアウト（資料内の表</li>
+      <li><a href="https://www.ipa.go.jp/archive/files/000004521.pdf" rel="noopener" target="_blank">機能要件の合意形成ガイド（ver.1.0）分冊３ 画面編</a>：画面遷移の定義・目的・記述内容、構成要素（画面・遷移矢線・アクション・イベント・条件分岐/合流・開始点・終了点・他画面遷</li>
+      <li><a href="https://www.ipa.go.jp/digital/dx/hjuojm000000eem6-att/000089583.pdf" rel="noopener" target="_blank">DX実践手引書 ITシステム構築編 レガシーシステム刷新ハンドブック</a>：既存のWeb型システムの仕様復元で業務・業務マニュアル、画面のメニュー、画面定義から画面を洗い出し、画面一覧と画面遷移の</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/ai/tasks/flow-diagram">業務フロー図をAIに任せる手順</a></li>
+      <li><a href="/column/as-is-to-be-flow-status-labels">現状と改善案の業務フローを実施済みと混同せずに共有するには</a></li>
+      <li><a href="/column/proposal-review-conflicting-comments">提案書のレビュー指摘が食い違うとき、採否と理由をどう確定するか</a></li>
+      <li><a href="/column/quotation-request-spec-change-notice">見積依頼の送付後に仕様が変わったら、改訂内容をどう通知するか</a></li>
+      <li><a href="/column/construction-year-end-report-documents">建設業の決算変更届に向けて工事経歴と決算書類を集める順番</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの報告グラフの下に元の数値表を付ける手順と確認点｜Vaynexis</title>
+  <meta name="description" content="報告グラフの形だけでなく、項目ごとの数値もその場で読める資料に整える方法を紹介します。元の表を手作業で写す前に確認したい表示の機能、利用環境に合わせた操作、短い表を使った照合の例、項目の取り違えや文字の読みにくさを防ぐ確認点をまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの報告グラフの下に元の数値表を付ける手順と確認点｜Vaynexis">
+  <meta property="og:description" content="報告グラフの形だけでなく、項目ごとの数値もその場で読める資料に整える方法を紹介します。元の表を手作業で写す前に確認したい表示の機能、利用環境に合わせた操作、短い表を使った照合の例、項目の取り違えや文字の読みにくさを防ぐ確認点をまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-chart-data-table-below">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-chart-data-table-below">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの報告グラフの下に元の数値表を付ける手順と確認点","description":"報告グラフの形だけでなく、項目ごとの数値もその場で読める資料に整える方法を紹介します。元の表を手作業で写す前に確認したい表示の機能、利用環境に合わせた操作、短い表を使った照合の例、項目の取り違えや文字の読みにくさを防ぐ確認点をまとめます。","datePublished":"2026-11-12","dateModified":"2026-11-12","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-chart-data-table-below"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの報告グラフの下に元の数値表を付ける手順と確認点","item":"https://vaynexis.jp/column/excel-chart-data-table-below"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの報告グラフの下に元の数値表を付ける手順と確認点</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの報告グラフの下に元の数値表を付ける手順と確認点</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelの報告グラフに元の数値表を添えるには、グラフの作成に使う数値を格子状に表示する「グラフのデータ テーブル」を使います。表示後は、数値だけでなく期間と項目名も元の集計表と対応させ、図と表を続けて読めるか確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月12日／情報の確認日：2026年11月11日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelの報告用グラフの下に元の数値も並べて見せたい小さな会社の担当者が、グラフのデータ テーブルの表示の手順（デスクトップ版・Web 版）と、元の集計表との照合を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月11日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">表示するのは、グラフの元になった数値です</a></li>
+      <li><a href="#s2">デスクトップ版では、グラフ右上のプラス記号から表示します</a></li>
+      <li><a href="#s3">Web版では、右側の作業ウィンドウから切り替えます</a></li>
+      <li><a href="#s4">短い集計表で、期間と分類を対応させます</a></li>
+      <li><a href="#s5">値が違うときと、文字が読みにくいときを分けて点検します</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．表示するのは、グラフの元になった数値です</h2>
+    <p>確認日：2026-11-11（日本時間）</p>
+    <p>Microsoft の「グラフの凡例やデータ テーブルの表示/非表示を切り替える」の適用先には、Excel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016 が含まれます（同じページに Word・Outlook・PowerPoint の各版も並んでいます）。この記事のデスクトップ版の手順は、同ページの「新しいバージョン」の欄の手順です。まず、すでに報告用の図があり、その下に数値を並べて見せたい場面を出発点にします。集計方法の変更や、新しい図の作成には進みません。</p>
+    <p>グラフのデータ テーブルは、一部のグラフに追加でき、通常は横軸に付いて目盛ラベルに代わる形で表示されます。表示前後を比べる際は、下に表が現れたかに加え、項目の名前をどこで読む構成になったかを見ます。図の下に文字が増えただけで完成とせず、どの項目の値なのかを追えることを仕上がりの基準にします。</p>
+    <p>同じ用語集では、異なる値を数式に代入した結果を並べる「データ テーブル」と、数値を表示する「グラフのデータ テーブル」が別に定義されています。今回の目的は、すでにある集計結果を読み手に示すことです。設定を探す前に、試算をしたいのか、報告に数値を添えたいのかを分けておくと、操作の入口を取り違えにくくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．デスクトップ版では、グラフ右上のプラス記号から表示します</h2>
+    <p>対象のグラフを選び、その右上にあるプラス記号を選択します。報告書に図が並んでいる場合は、数値を添えたい図が対象になっているか、見出しや期間を見てから進めます。近くの別の図を選んでいると、表示できても目的の資料とは違う仕上がりになります。</p>
+    <p>続いて［データ テーブル］にポインターを合わせ、横の矢印を開いて表示オプションを選びます。</p>
+    <p>添えた表を非表示に戻すときは、［データ テーブル］のチェックを外します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．Web版では、右側の作業ウィンドウから切り替えます</h2>
+    <p>Microsoft の「グラフを作成する」は Windows・macOS・Web の欄に分かれており、その Web の欄では、グラフをダブルクリックして、画面右側の［グラフ］作業ウィンドウを開きます。</p>
+    <p>［書式設定］の［データ テーブル］で、オンとオフを切り替えます。</p>
+    <p>さらに［データ テーブル］を展開すると、罫線、凡例、表のフォントを変更できます。値を見分けにくい場合は、装飾を増やす前に文字の読みやすさを見直します。読み手が値の所属を追えるか、隣の値と混同しないかを基準に整えます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．短い集計表で、期間と分類を対応させます</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>社内説明会の申込件数を窓口別にまとめた、次の集計結果を考えます。図の大小から全体の動きをつかみ、下の表で個別の値を読む資料にしたい場面です。ここでは、下表を元にした図がすでにあるものとして扱います。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">受付月</th><th scope="col">社内窓口（件）</th><th scope="col">申込フォーム（件）</th></tr></thead><tbody><tr><td data-label="受付月">春の受付月</td><td data-label="社内窓口（件）">18</td><td data-label="申込フォーム（件）">26</td></tr><tr><td data-label="受付月">夏の受付月</td><td data-label="社内窓口（件）">23</td><td data-label="申込フォーム（件）">31</td></tr><tr><td data-label="受付月">秋の受付月</td><td data-label="社内窓口（件）">20</td><td data-label="申込フォーム（件）">29</td></tr></tbody></table></div>
+    <p>照合は、元の集計表の項目名を読み、表示された表で同じ項目を探し、続いて分類名と値を見る順で行います。表の形が元と違っていても、見出しをたどって対応できるかが確認点です。行や列の位置だけを頼りに、端から値を比べないようにします。</p>
+    <p>件数なのか金額なのか、対象期間はどこまでかも、読む前提としてそろえます。単位の説明が離れた場所にしかないと、数値を読めても意味を取り違えるおそれがあります。表題や近くの説明を含め、資料を初めて見る人にも前提が伝わる構成かを見直します。</p>
+    <p>説明用の表を別に手入力する前に、表示された値と元の集計結果を見比べます。違いがあれば、先に対象期間や分類の対応を点検します。報告に都合のよい値へ合わせるのではなく、どの値を示す資料なのかを明らかにするための照合です。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．値が違うときと、文字が読みにくいときを分けて点検します</h2>
+    <h3 class="h3">数値の違いは、見出しの対応から確認します</h3>
+    <p>数値が合わない場合は、元の集計表と表示した表が同じ対象を指しているかを先に見ます。期間が違う、分類名が似ている、合計と内訳を見間違えている、といった違いを順に点検する流れです。表の見栄えを直す作業に入る前に、内容の食い違いがあるのかを判断します。</p>
+    <p>表に数値が現れたことは、集計内容の確認を終えたこととは別です。読み手が問うのは、その値が何を数えたものかであり、作成者だけが分かる略称が残っていないかも確認します。見出しを読んでも対象が特定できない場合は、報告資料としての説明を補う余地があります。</p>
+    <h3 class="h3">読みにくさは、受け手が使う大きさで確認します</h3>
+    <p>内容が合っているのに読みにくい場合は、見出しの長さ、隣接する値の見分けやすさ、図と表の間の視線の移動を見ます。作成中の拡大した画面だけでなく、受け手が読むときに近い大きさで確認すると、詰まり具合を判断しやすくなります。紙で配る予定なら、出力した状態で項目名と値を追えるかを見る流れです。</p>
+    <p>引き継ぎ時は、元の集計表の場所と対象期間を伝え、見た目を変えた箇所も短く残します。後任が数値を見直す際に、どこを照合すればよいかが分かることが目的です。完成の判断は表が付いたかだけで終えず、図で傾向を読み、表で値を確かめる流れが途切れないかまで含めます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">数値を添える対象の図と、元の集計表を対応させたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">使用する環境に合う手順を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表示された項目名と分類名を、元の集計表と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表示した値が、同じ対象期間の値に対応するか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数量の単位や対象範囲が読み手に伝わるか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">配布時に近い大きさで、見出しと値を続けて読めるか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">引き継ぐ相手に、元の集計表の場所と確認した範囲を伝えたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月11日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/office/excelexp/show-or-hide-a-chart-legend-or-data-table" rel="noopener" target="_blank">グラフの凡例やデータ テーブルの表示/非表示を切り替える</a>：適用先、プラス記号からの表示、チェックを外す非表示操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/excel-glossary" rel="noopener" target="_blank">Excel 用語集</a>：グラフの数値表の意味と位置、試算用の表との定義の違い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/create-a-chart-from-start-to-finish" rel="noopener" target="_blank">グラフを作成する</a>：Windows・macOS・Web の欄、Web版の作業ウィンドウ、表の表示切替、罫線・凡例・フォントの変更</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-pivotchart-monthly-trend">Excelのピボット集計をグラフにして月ごとの推移を見る手順</a></li>
+      <li><a href="/column/powerpoint-update-linked-excel-chart">ExcelのグラフをPowerPointで更新するには？リンク貼り付けと確認</a></li>
+      <li><a href="/column/excel-data-table-unit-price-scenarios">Excelで単価を何通りか変えた試算結果を一表に出すには</a></li>
+      <li><a href="/column/sheets-monthly-count-chart">スプレッドシートの月別件数表から報告用グラフを作る手順と確認点</a></li>
+      <li><a href="/column/excel-save-one-sheet-new-workbook">Excelのブックから提出する一枚だけを別ファイルにするには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

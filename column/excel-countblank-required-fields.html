@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの受付表で未入力の必須欄が何件残るか数えるには｜Vaynexis</title>
+  <meta name="description" content="受付表の必須欄に残った空欄を数える方法を、対象範囲の決め方と数式の入力から整理します。空欄の個数と受付件数の違い、数値のゼロや空文字列を返す数式の扱い、結果が合わないときに見る場所を、短い表で確かめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの受付表で未入力の必須欄が何件残るか数えるには｜Vaynexis">
+  <meta property="og:description" content="受付表の必須欄に残った空欄を数える方法を、対象範囲の決め方と数式の入力から整理します。空欄の個数と受付件数の違い、数値のゼロや空文字列を返す数式の扱い、結果が合わないときに見る場所を、短い表で確かめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-countblank-required-fields">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-countblank-required-fields">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの受付表で未入力の必須欄が何件残るか数えるには","description":"受付表の必須欄に残った空欄を数える方法を、対象範囲の決め方と数式の入力から整理します。空欄の個数と受付件数の違い、数値のゼロや空文字列を返す数式の扱い、結果が合わないときに見る場所を、短い表で確かめます。","datePublished":"2026-11-12","dateModified":"2026-11-12","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-countblank-required-fields"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの受付表で未入力の必須欄が何件残るか数えるには","item":"https://vaynexis.jp/column/excel-countblank-required-fields"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの受付表で未入力の必須欄が何件残るか数えるには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの受付表で未入力の必須欄が何件残るか数えるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>必須欄だけを集計範囲にして、COUNTBLANK 関数で空欄の個数を数えます。受付済みの行に対象を絞り、任意欄や将来の受付用の空行を外すのが当社の整理です。結果は入力漏れのある受付の件数とは区別して扱います。</p></div>
+    <p class="col-meta">公開：2026年11月12日／情報の確認日：2026年11月11日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelの受付表で必須欄の入力漏れが何件残っているかを数えたい小さな会社の担当者が、COUNTBLANK 関数で数える範囲の決め方と、0 や空文字列の扱いを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月11日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">空欄を数える機能と、使う版を確かめる</a></li>
+      <li><a href="#s2">受付済みの行と、必須の列を先に決める</a></li>
+      <li><a href="#s3">小さな受付表で式と結果を対応させる</a></li>
+      <li><a href="#s4">数値のゼロと、数式による空欄を分けて読む</a></li>
+      <li><a href="#s5">合わない結果は、範囲と式の形から確認する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．空欄を数える機能と、使う版を確かめる</h2>
+    <p>確認日：2026年11月11日。</p>
+    <p>Microsoft の「COUNTBLANK 関数」のページの適用先は、Excel for Microsoft 365、Excel for Microsoft 365 for Mac、Excel 2024、Excel 2024 for Mac、Excel 2021、Excel 2021 for Mac、Excel 2019、Excel 2016 です。Web 版とモバイル版はこの一覧に無いため、この記事では扱いません。</p>
+    <p>数える対象を指定する「範囲」は必須の引数で、空白セルの個数を調べるセル範囲を入れます。受付表の全体と、入力を求める欄を分けて考えるのが当社の整理です。見出しや管理用の欄までまとめて選ぶ前に、何を入力待ちとして扱うかを決めます。</p>
+    <p>基本の書き方は「=COUNTBLANK(範囲)」です。かっこの中を、手元の表で数えたい場所に置き換える形です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．受付済みの行と、必須の列を先に決める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>対象は、受付があったことを識別できる行に限定します。表の下に用意した記入用の行は、今回の入力漏れの確認から外す扱いです。担当者が見る範囲と集計範囲をそろえておくと、結果を照合するときに前提がずれにくくなります。</p>
+    <p>次に、受付後に埋める必要がある欄と、記入が任意の欄を分けます。依頼内容や担当の記入を必須にするかは業務側の判断です。自由記入の備考まで対象に加えず、引き継ぎ時に不足を確認する欄を明記します。</p>
+    <p>受付の種類によって記入の要否が違う欄は、全件共通の必須欄とは区別します。対象外の受付に残る空欄を、入力待ちとして担当者へ戻さないためです。今回の集計には、対象の受付で共通して埋める欄を選ぶ方針にします。</p>
+    <p>集計結果の横には、受付日の期間と対象の欄名を短く書き添えます。翌日の担当者も、どの範囲を数えた値かを確かめられます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．小さな受付表で式と結果を対応させる</h2>
+    <p>Microsoft の「Excel の数式の概要」は、組み込み関数を含む数式の入力を、空のセルを選択し、等号を入力してから関数を入力し、左かっこを入力し、セルの範囲を選択してから閉じかっこを入力する順で案内しています。COUNTBLANK の場合は、集計結果を置く空のセルを選び、「=COUNTBLANK(」の後に必須欄の範囲を選んで右かっこを入力します。結果を表示するには Enter キーを押します。</p>
+    <p>関数名を入力すると一致する関数や引数のヒントが表示されるので、COUNTBLANK のつづりと、かっこの中の範囲を確認できます。</p>
+    <p>説明用の表では、依頼内容と担当を必須欄とし、受付識別は集計に含めない扱いです。表の空欄には何も入力していない状態を置いています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">行</th><th scope="col">A列：受付識別</th><th scope="col">B列：依頼内容（必須）</th><th scope="col">C列：担当（必須）</th></tr></thead><tbody><tr><td data-label="行">2</td><td data-label="A列：受付識別">甲</td><td data-label="B列：依頼内容（必須）">変更</td><td data-label="C列：担当（必須）"></td></tr><tr><td data-label="行">3</td><td data-label="A列：受付識別">乙</td><td data-label="B列：依頼内容（必須）"></td><td data-label="C列：担当（必須）"></td></tr><tr><td data-label="行">4</td><td data-label="A列：受付識別">丙</td><td data-label="B列：依頼内容（必須）">相談</td><td data-label="C列：担当（必須）">確認済</td></tr></tbody></table></div>
+    <p>この例で「=COUNTBLANK(B2:C4)」と入力した場合、表の空欄を数えた計算上の結果は 3 です。</p>
+    <p>欄ごとに見る例では、「=COUNTBLANK(B2:B4)」の結果は 1、「=COUNTBLANK(C2:C4)」の結果は 2 となります。全体の不足を知る値と、どの欄の確認が残っているかを知る値を分けておく考え方です。受付識別と不足している欄を照合して、確認先を探します。</p>
+    <p>ここで数えているのは空白セルの個数なので、同じ受付に未入力欄が重なっていても、受付をまとめた件数にはなりません。引き継ぎの報告でも、未対応の受付の数と記入待ちの欄の数を混ぜず、報告する値の意味をそろえます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．数値のゼロと、数式による空欄を分けて読む</h2>
+    <p>COUNTBLANK 関数の解説では、空白文字列（""）を返す数式が入力されているセルも計算の対象となり、数値として 0 を含むセルは計算の対象となりません。入力待ちの意味を確認する際には、見た目だけでなく、その欄へ何を入れる決まりなのかも照合するのが当社の整理です。</p>
+    <p>たとえば、件数を入力する欄で「該当なし」と「まだ確認していない」を区別したい場面があります。担当者が入力すべき内容を確認し、仮の値を入れて空欄だけをなくす運用にしない方が、確認待ちの状態を残せます。空欄を埋めることと、記入内容を確かめることは別の作業として扱います。</p>
+    <p>なお、COUNTA 関数では空の文字列（""）やエラー値を含むセルも計算の対象となるため、こちらの結果をそのまま正しく入力済みの欄の数として扱うのは避けます。</p>
+    <p>対象セルに入力されている数式は、そのセルを選ぶと数式バーで確認できます。空欄の理由を確かめるときは、手入力を待っている欄なのか、計算の結果を表示する欄なのかを分けておくと、問い合わせる相手や直す場所を考えやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．合わない結果は、範囲と式の形から確認する</h2>
+    <p>結果の照合は、当社の整理として、受付済みの範囲、必須欄の選び方、入力内容の順で進めます。新しく受け付けた行を対象へ加えたか、表の途中の任意欄まで数えていないかを見てから、セルの内容を確かめる流れです。</p>
+    <p>Microsoft の「Excel で壊れた数式のエラーを回避する方法」は、循環参照は数式が配置されているセルを参照するときに発生するとしています。集計結果は数える範囲の外に置きます。入力欄の途中に結果の欄を作らず、集計の場所が分かる配置にすると、担当者が表を見直す際にも区別しやすくなります。</p>
+    <p>数式が計算されないときは、先頭が等号になっているか、左かっこと右かっこが対応しているかを確認します。</p>
+    <p>最後に、結果と実際の不足箇所を照合します。残っている欄の担当者が分からないときは、入力の役割分担を決め直します。空欄がなくなった後も、受付に必要な内容がそろっているかは、欄の意味に沿って人が確認します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">対象を受付済みの行に絞り、将来の記入用の行を除外したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">共通の必須欄と任意欄を分け、集計する欄名を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">受付の種類によって記入の要否が違う欄を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">集計結果を置く場所と、数える範囲を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">欄の入力内容と、空欄にしている理由を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">空欄の個数を受付件数と取り違えずに報告したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">結果を実際の不足箇所と照合し、確認先を整理したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月11日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/countblank-function" rel="noopener" target="_blank">COUNTBLANK 関数</a>：適用先、空白セルの集計、範囲の指定、空文字列と数値のゼロの扱い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/overview-of-formulas-in-excel" rel="noopener" target="_blank">Excel の数式の概要</a>：組み込み関数を含む数式の入力の順、Enter キーで結果を表示、数式バーでの確認</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/create-a-formula-by-using-a-function" rel="noopener" target="_blank">関数を使用した数式を作成する</a>：関数名・引数の入力ヒント</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/counta-function" rel="noopener" target="_blank">COUNTA 関数</a>：空文字列とエラー値も計算対象になること</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/how-to-avoid-broken-formulas-in-excel" rel="noopener" target="_blank">Excel で壊れた数式のエラーを回避する方法</a>：循環参照の原因、等号とかっこの確認</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-countifs-assignee-status">Excelで担当者と対応状況が一致する明細を数えるには？</a></li>
+      <li><a href="/column/sheets-highlight-blank-cells">スプレッドシートの未入力セルを色で見つける設定と確認の手順</a></li>
+      <li><a href="/column/excel-input-message-guidance">Excelの記入欄を選んだときに入力方法を案内する設定と確認</a></li>
+      <li><a href="/column/excel-circular-reference-find-cell">Excelで循環参照の警告が出たとき、原因のセルを探すには</a></li>
+      <li><a href="/column/excel-edate-inspection-next-date">Excelで点検日から指定した月数後の予定日を出すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
