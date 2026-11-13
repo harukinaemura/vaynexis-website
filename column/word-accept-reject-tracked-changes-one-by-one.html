@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordで戻った修正履歴を一件ずつ確定する手順と確認の分け方｜Vaynexis</title>
+  <meta name="description" content="修正された文書が戻ってきたとき、提案を採用するか差し戻すかを個別に確かめる進め方をまとめます。先頭から順に処理する方法と、気になる箇所を直接選ぶ方法を分け、判断を保留する場合の扱い、残った履歴の確認、引き継ぎ時に残す情報まで整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Wordで戻った修正履歴を一件ずつ確定する手順と確認の分け方｜Vaynexis">
+  <meta property="og:description" content="修正された文書が戻ってきたとき、提案を採用するか差し戻すかを個別に確かめる進め方をまとめます。先頭から順に処理する方法と、気になる箇所を直接選ぶ方法を分け、判断を保留する場合の扱い、残った履歴の確認、引き継ぎ時に残す情報まで整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/word-accept-reject-tracked-changes-one-by-one">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/word-accept-reject-tracked-changes-one-by-one">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wordで戻った修正履歴を一件ずつ確定する手順と確認の分け方","description":"修正された文書が戻ってきたとき、提案を採用するか差し戻すかを個別に確かめる進め方をまとめます。先頭から順に処理する方法と、気になる箇所を直接選ぶ方法を分け、判断を保留する場合の扱い、残った履歴の確認、引き継ぎ時に残す情報まで整理します。","datePublished":"2026-11-13","dateModified":"2026-11-13","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/word-accept-reject-tracked-changes-one-by-one"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Wordで戻った修正履歴を一件ずつ確定する手順と確認の分け方","item":"https://vaynexis.jp/column/word-accept-reject-tracked-changes-one-by-one"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Wordで戻った修正履歴を一件ずつ確定する手順と確認の分け方</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Wordで戻った修正履歴を一件ずつ確定する手順と確認の分け方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>戻ってきた修正履歴は、内容を読んで［承諾］または［元に戻す］を選び、次の変更へ進みながら個別に確定します。採否を決める前に、どの表現を残すかを人が判断します。判断待ちの箇所と処理を終えた箇所を区別すると、途中で担当が替わる場合にも続きを確認しやすくなります。</p></div>
+    <p class="col-meta">公開：2026年11月13日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、修正履歴つきで戻ってきたWord文書を扱う小さな会社の担当者が、提案を一件ずつ採用するか元に戻すかを確かめ、判断待ちの箇所と残った履歴を引き継ぐ流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">返却された文書で、対象の版と変更の見え方をそろえる</a></li>
+      <li><a href="#s2">先頭から順に読み、採否を決めて次の箇所へ進む</a></li>
+      <li><a href="#s3">気になる修正だけを直接選んで処理する</a></li>
+      <li><a href="#s4">処理後は残った履歴と、読み通した文章を確かめる</a></li>
+      <li><a href="#s5">採用・差し戻し・判断待ちを、引き継ぎで区別する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．返却された文書で、対象の版と変更の見え方をそろえる</h2>
+    <p>確認日：2026年11月13日</p>
+    <p>この記事は、公式ヘルプの適用先のうち Windows 版の Word for Microsoft 365 を対象にします。適用先には Word 2024・Word 2021・Word 2019・Word 2016 や Mac 版も挙がっていますが、版ごとの画面の違いはこの記事では確かめていません。画面名は日本語の公式ヘルプに合わせています。日本語版のヘルプには、タブの名前が［レビュー］と書かれている箇所と、［校閲］と書かれている箇所があり、お使いの画面でどちらの表記かは確かめていません。別の端末で作業する担当者へ渡すときは、使う版も引き継ぎ情報に添えるとよいです。</p>
+    <p>［すべての変更履歴］では、変更履歴が表示され、校閲者ごとに異なる色のテキストと行が表示されます。修正後の文章だけでなく、何が変わったかを読んでから判断する進め方です。</p>
+    <p>［マークアップなし］は変更を一時的に隠す表示であり、履歴を削除するには変更を受け入れるか拒否する必要があります。見た目が整ったことと、内容を確定したことは分けて確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．先頭から順に読み、採否を決めて次の箇所へ進む</h2>
+    <p>作業は文書の先頭をクリックするところから始めます。途中に表示されている箇所から始めると、どこまで読んだのかを別に管理する必要があります。返却後の確認を通して行う場合は、読み始める位置をそろえるとよいです。</p>
+    <p>Windows 欄の手順では、［レビュー］タブから［追跡］へ進みます。そこで［承諾］または［元に戻す］を選ぶと、次の変更へ移動します。押す前には対象の文章を読み、残す表現について判断します。処理後も直前の修正を見ているつもりで同じ判断を繰り返さず、対象箇所を見直します。</p>
+    <h3 class="h3">決められない箇所は、移動と確定を分ける</h3>
+    <p>採否を決めずに別の変更を確認する場合は、［次へ］または［前へ］を選べます。確認先からの回答を待つ箇所については、どの見出しのどの表現なのかと、誰に何を尋ねるかを控えます。「後で確認」とだけ残すより、再開時に必要な情報が伝わります。</p>
+    <p>採用しないと決めた箇所と、まだ決めていない箇所を同じ扱いにしないことも大切です。判断待ちの理由が分かれば、次の担当者は文章を読み直す前に、どの回答が必要なのかを確認できます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．気になる修正だけを直接選んで処理する</h2>
+    <p>文書内の変更履歴を右クリックして、対象の候補を確認する方法もあります。ヘルプには、右クリックの方法ではバナー メニューとドロップダウン メニューのオプションが表示されると書かれています。ここではドロップダウン メニューを扱い、挿入なら［挿入を承諾］か［挿入を元に戻す］、削除なら［削除を承諾］か［削除を元に戻す］を選びます。返答を受け取った箇所へ戻る際など、処理したい位置を特定してから使う方法です。</p>
+    <p>対象の語だけを見ず、前後の文章を合わせて読みます。削られる表現に確認先や例外の説明が含まれていないか、追加される語によって読み手や対応する範囲が変わらないかを検討するとよいです。表記を整える修正と、内容を変える修正は、同じ見た目でも判断に必要な情報が異なります。</p>
+    <p>ここで決めるのは、修正者の意図を想像して全体を直すことではなく、対象としている提案をどう扱うかです。関連する別の文章にも手直しが必要だと分かった場合は、その必要性を別に残すと、今回の採否と追加の修正依頼を区別できます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．処理後は残った履歴と、読み通した文章を確かめる</h2>
+    <p>［校閲］タブで［校閲ウィンドウ］を選ぶと、残った変更を一覧で確認する入口になります。その上部の概要には、文書内に残っている変更履歴とコメントの正確な数が表示されます。未処理の箇所があるときは、判断待ちの控えと照合し、説明のつかない残りがないかを見ます。</p>
+    <p>ヘルプには、コメントは変更の記録機能の一部ではなくなったとの注意書きがあります。そのため、修正の採否とコメントの確認は分けて見ます。やり取りに未回答の質問が残っていないかも、文書を渡す前に確かめるとよいです。</p>
+    <p>内容を決め終えた文章は、修正箇所の周囲を含めて読み通します。主語と述語がつながるか、見出しの説明と本文が一致するか、同じ対象を別の呼び方で残していないかが確認の観点です。採否を終えたという操作上の状態と、読み手に伝わる文章になったかという確認は、別々に記録できます。</p>
+    <p>途中で区切る場合は、文書全体の確認が終わったように伝えず、判断待ちの場所と理由を添えて渡します。相手が続きを始められる状態まで情報をそろえることが、引き継ぎの区切りになります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．採用・差し戻し・判断待ちを、引き継ぎで区別する</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>社内案内文への修正を扱う場面なら、表記を直す提案と、誰が対応するかを変える提案を分けて考えられます。操作をする人が内容の決定権も持っているとは限らないため、採否を決める人と文書へ反映する人の役割をそろえておくとよいです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">戻ってきた提案</th><th scope="col">人が確認すること</th><th scope="col">引き継ぎに残す内容</th></tr></thead><tbody><tr><td data-label="戻ってきた提案">誤字を正しい表記に直す</td><td data-label="人が確認すること">意図した語になっているか</td><td data-label="引き継ぎに残す内容">採用する表記と確認の終了</td></tr><tr><td data-label="戻ってきた提案">問い合わせ先の部署を変える</td><td data-label="人が確認すること">対応する部署と合意しているか</td><td data-label="引き継ぎに残す内容">判断待ちの箇所と回答を求める相手</td></tr><tr><td data-label="戻ってきた提案">注意書きを削る</td><td data-label="人が確認すること">読み手に必要な説明が残るか</td><td data-label="引き継ぎに残す内容">差し戻す理由と残したい表現</td></tr></tbody></table></div>
+    <p>表は判断を整理するためのものであり、採否を自動的に決める規則ではありません。依頼者が何を伝えたい文章なのかを確認し、その目的に照らして修正を扱います。意見が分かれる表現は、担当者が独自に折衷案へ置き換える前に、確認する相手へ論点を返す進め方が考えられます。</p>
+    <p>判断の控えには、対象の見出し、該当する短い表現、判断の状態、確認先を残します。文書全体を再説明する必要はなく、相手が対象を探せて、何を回答すればよいかが分かる情報に絞ります。処理を終えた箇所についても、後から説明が必要な内容の変更であれば、決定理由を残すかを担当者間で決めておくとよいです。</p>
+    <p>事務の手間を洗い出すなら、<a href="/ai">AIを使う作業範囲の考え方</a>に沿って、判断前の情報整理と、人が採否を決める工程を分けて検討できます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">返却された文書と、今回確認する対象を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">操作する端末と使用する版を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見た目の変更と、内容を確定する処理を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">各提案の前後を読み、残す表現を人が判断したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">判断待ちの場所、理由、回答を求める相手を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">残った履歴と未回答のやり取りを別々に確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">処理後の文章を読み通し、引き継ぐ確認状況を明記したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/word/training/track-changes-in-word" rel="noopener" target="_blank">Word で変更履歴を記録する</a>：適用先、変更の表示、Windows版での右クリックによる個別処理、残った履歴の確認、コメントとの区別</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/accept-or-reject-tracked-changes-in-word" rel="noopener" target="_blank">Wordで追跡された変更を承諾または拒否する</a>：Windows版で先頭から個別に確定する手順、判断せずに移動する方法、非表示と削除の違い</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-document-demo">AI議事録で提案と決定事項を分ける方法（実演）</a></li>
+      <li><a href="/column/word-lock-track-changes-password">Wordの変更履歴をロックし、回覧中の記録停止を防ぐには</a></li>
+      <li><a href="/column/word-compare-document-versions">変更履歴がないWord文書の二つの版を比べるには？</a></li>
+      <li><a href="/column/word-print-without-track-changes-markup">Wordの変更履歴を残したまま、印刷には修正記号を出さない方法</a></li>
+      <li><a href="/column/word-line-numbers-review-draft">Wordの回覧原稿で指摘箇所を伝える行番号の付け方</a></li>
+      <li><a href="/column/word-table-sum-amounts-update-result">Wordの報告書の表で金額を合計し、修正後の結果を更新する手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

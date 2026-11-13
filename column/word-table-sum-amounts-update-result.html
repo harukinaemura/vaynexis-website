@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordの報告書の表で金額を合計し、修正後の結果を更新する手順｜Vaynexis</title>
+  <meta name="description" content="報告書の表にある金額を合計する方法を、式を入れる場所、足す方向、更新する範囲に分けて解説します。元の金額を直したのに合計が変わらないときの見方や、空欄の扱い、引き継ぎで残す内容まで、小さな明細の例に沿って確認できます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Wordの報告書の表で金額を合計し、修正後の結果を更新する手順｜Vaynexis">
+  <meta property="og:description" content="報告書の表にある金額を合計する方法を、式を入れる場所、足す方向、更新する範囲に分けて解説します。元の金額を直したのに合計が変わらないときの見方や、空欄の扱い、引き継ぎで残す内容まで、小さな明細の例に沿って確認できます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/word-table-sum-amounts-update-result">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/word-table-sum-amounts-update-result">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wordの報告書の表で金額を合計し、修正後の結果を更新する手順","description":"報告書の表にある金額を合計する方法を、式を入れる場所、足す方向、更新する範囲に分けて解説します。元の金額を直したのに合計が変わらないときの見方や、空欄の扱い、引き継ぎで残す内容まで、小さな明細の例に沿って確認できます。","datePublished":"2026-11-13","dateModified":"2026-11-13","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/word-table-sum-amounts-update-result"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Wordの報告書の表で金額を合計し、修正後の結果を更新する手","item":"https://vaynexis.jp/column/word-table-sum-amounts-update-result"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Wordの報告書の表で金額を合計し、修正後の結果を更新する手</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Wordの報告書の表で金額を合計し、修正後の結果を更新する手順</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Wordの表では［計算式］で合計し、元の金額を直した後は、合計欄を選んで F9 キーを押して結果を更新します。式が足す方向と、今回合計したい明細が一致しているかを見て、入力値・対象範囲・更新後の結果を分けて確かめるとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月13日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、Wordの報告書の表で金額を合計し、元の金額を直した後に結果を更新したい小さな会社の担当者が、式を入れる場所と足す方向、空欄の扱い、更新して照合する流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">合計欄を決めてから、足す方向を指定する</a></li>
+      <li><a href="#s2">小さな明細で、入力欄と照合用の合計を分ける</a></li>
+      <li><a href="#s3">空欄は、未入力なのか金額がないのかを見直す</a></li>
+      <li><a href="#s4">元の金額を直したら、更新する範囲を選ぶ</a></li>
+      <li><a href="#s5">結果が変わらないときは、式の内容と引き継ぎ方を確かめる</a></li>
+      <li><a href="#s6">引き継ぎでは、入力から照合までの順序を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．合計欄を決めてから、足す方向を指定する</h2>
+    <p>確認日：2026-11-13</p>
+    <p>ここでは Windows 版の Word for Microsoft 365・Word 2024・Word 2021 を対象に、合計の挿入と更新を説明します。Web 版は既存の数式を保持しますが、数式を追加する方法はまだ提供されていません。</p>
+    <p>作業前には、明細として入力する欄と、合計を表示する欄を区別します。金額欄の途中に参考値や小計を置いている表なら、何を足したいのかを先に整理するとよいです。見た目が整っていても、明細と参考値の境界が読み取りにくいままでは、式の内容を照合する基準が曖昧になります。</p>
+    <p>まず結果を表示するセルを選び、内容が入っていれば削除します。続いて［テーブル レイアウト］タブから［数式］を選びます。同じページには、このあたりのコマンドの名前が［計算式］と書かれている箇所もあり、お使いの画面での表記は確かめていません。合計欄の上側に並ぶ金額を足す式は「=SUM(ABOVE)」、左側に並ぶ数値を足す式は「=SUM(LEFT)」です。［計算式］ボックスで式を指定した後は、［OK］を選択します。</p>
+    <p>列の一番下に合計欄を置く場合と、行の右端に置く場合では、数値が並ぶ方向が違います。以前の報告書を流用する際も、合計欄だけを見ず、明細がどちら側にあるかを見比べる流れです。操作名を覚えるだけでなく、結果を置く場所と足す対象を対応させます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．小さな明細で、入力欄と照合用の合計を分ける</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>報告書の印刷費用を整理する例として、次の表を考えます。合計欄の値は、入力後に結果を照合するための目安として示したものです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">項目</th><th scope="col">金額（円）</th></tr></thead><tbody><tr><td data-label="項目">資料の印刷</td><td data-label="金額（円）">1,200</td></tr><tr><td data-label="項目">用紙</td><td data-label="金額（円）">800</td></tr><tr><td data-label="項目">合計（照合用）</td><td data-label="金額（円）">2,000</td></tr></tbody></table></div>
+    <p>この配置では、項目名と金額を分け、合計の対象にする明細を上側へまとめています。実際の報告書に置き換えるときは、参考として載せた別の費用や、別期間の金額を同じ対象に混ぜないようにします。何を含めた合計かが説明できることを、結果確認の出発点にするとよいです。</p>
+    <p>合計欄だけを正しい値に書き直して終えると、元の明細に入力の誤りが残っていないかを見落とします。金額が合わない場合は、入力元の明細と照らし合わせ、項目の抜けや重複、合計に含める範囲の判断から順に見直します。結果の値を合わせる作業と、元の内容を確かめる作業は分けて進めます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．空欄は、未入力なのか金額がないのかを見直す</h2>
+    <p>Word の表の計算式のヘルプでは、上側や左側などの場所を指定して合計する場合、エラーを避けるため、計算対象となるすべての空のセルに 0 を入力しておくとしています。</p>
+    <p>空欄を埋める前には、その項目の金額が確定しているかを確認します。金額がないことを確認済みの欄と、担当者への確認が済んでいない欄を、同じ意味で扱わないためです。未確定のまま計算を進める場合も、報告書を確定させる前の確認事項として残します。</p>
+    <p>空欄の意味が分からないときは、計算上の扱いを先に決めず、入力元に戻るとよいです。見直す際は、空欄の位置だけでなく、明細の途中に説明用の行が入っていないかも確認します。報告内容の区切りと、合計に含める範囲を対応させておくと、別の担当者にも判断を引き継ぎやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．元の金額を直したら、更新する範囲を選ぶ</h2>
+    <p>Word の表の計算式のヘルプでは、数式の結果は、数式を挿入したときと、その数式を含む文書を開いたときに計算されるとしています。同じページには、Word の表の数式はフィールド コードの一種であるとも書かれています。編集中の確認では、元の金額を修正する作業に加え、結果を更新して見比べる工程を設けます。</p>
+    <p>同じページでは、同じ表の計算結果をまとめて更新するには、表全体を選択して F9 キーを押すとしています。フィールドを更新するヘルプでは、個別のフィールドは、右クリックして［フィールド更新］を選ぶ方法でも更新できるとしています。Mac 版で元の数値を変えた後は、合計を選択し、fn + F9 キーを押す手順が案内されています。</p>
+    <p>修正した箇所の横に表示されている合計だけを見て済ませず、どの合計がその明細に対応しているかを確認するとよいです。修正前の控えと見比べる場合も、入力欄と結果欄を対にして追います。更新を行ったことと、対象の明細が正しいことは別々の確認事項です。</p>
+    <p>フィールドを更新するヘルプでは、文書全体を更新する手順は Ctrl + A、続いて F9 とされています。同じページは、表については個別に選んで F9 を押す必要がある場合もあるとしています。</p>
+    <p>文書をまとめて処理した後でも、提出する表の結果を元の明細と照合する工程は残します。見出しや本文の修正が終わった時点で計算結果も確定したとみなさず、金額の確認を終えてから報告書全体を確定させる順序にします。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．結果が変わらないときは、式の内容と引き継ぎ方を確かめる</h2>
+    <p>式を調べたいとき、Word のキーボード ショートカットのヘルプでは、Windows 版で Shift + F9 により、選択したフィールドのコードと結果の表示を切り替えられるとしています。Windows 版には、Ctrl + F11 でフィールドをロックし、Ctrl + Shift + F11 でロックを解除する操作もあります。</p>
+    <p>更新しても想定と違う結果なら、合計に含めるつもりだった明細を、式が実際に対象としているか照合します。入力値が正しいか、対象の指定が正しいか、結果の確認を済ませたかを、順に切り分けるとよいです。表示された金額だけを上書きする前に、どの段階に違いがあるのかを確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．引き継ぎでは、入力から照合までの順序を残す</h2>
+    <p>引き継ぎ用には、金額を入力する場所、合計の対象、修正後に更新する場所、結果を照合する資料を残します。報告書の表を後から組み替えた場合は、元の手順をそのまま使えるかも確認対象です。担当者の記憶に頼らず、表を見ながら同じ順序で確かめられる内容にします。</p>
+    <p>事務の手間を洗い出すなら、入力・集計・照合のどこに作業があるかを整理し、<a href="/ai">AIを事務に取り入れる進め方</a>を考える出発点にするとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">入力する明細と合計を表示する欄を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">合計に含める項目と、参考値や小計の扱いを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">式が対象とする方向と明細の配置を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">空欄が未確定を意味するのか、金額がないことを意味するのか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の金額の修正後に、対象の合計を更新して結果を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">使用する版に合う操作と、引き継ぎで残す確認先を整理したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/word/use-a-formula-in-a-word-table" rel="noopener" target="_blank">Word の表で計算式を使用する</a>：適用先、結果セルの準備、空欄への入力、計算される時点、表全体の更新</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/sum-a-column-or-row-of-numbers-in-a-table-in-word" rel="noopener" target="_blank">Wordのテーブル内の列または数値の行を合計する</a>：合計の挿入、足す方向、結果の更新、Mac 版・Web 版の扱い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/update-fields" rel="noopener" target="_blank">フィールドを更新する</a>：右クリックによる更新、文書全体と表の更新の使い分け</li>
+      <li><a href="https://support.microsoft.com/ja-jp/accessibility/word/keyboard-shortcuts-in-word" rel="noopener" target="_blank">Word のキーボード ショートカット</a>：Windows 版のコード表示の切り替えとフィールドのロック・解除</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-document-demo">AI議事録で提案と決定事項を分ける方法（実演）</a></li>
+      <li><a href="/column/word-caption-numbers-update">Wordで図を追加しても図表番号を振り直せるようにするには？</a></li>
+      <li><a href="/column/word-table-of-contents-update">Wordの長い手順書に目次を自動作成し、編集後に更新するには？</a></li>
+      <li><a href="/column/word-table-merge-cells-shared-column-heading">Wordの表で複数の列にまたがる共通見出しを作る手順と確認</a></li>
+      <li><a href="/column/excel-quantity-unit-price-total">Excelで数量と単価の明細から総額を出す手順と確認のしかた</a></li>
+      <li><a href="/column/word-stop-url-auto-hyperlink">Wordで入力したURLが自動でリンクになるのを止めるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

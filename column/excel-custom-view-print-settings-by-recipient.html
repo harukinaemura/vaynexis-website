@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで提出先別の余白や印刷設定を保存して切り替えるには｜Vaynexis</title>
+  <meta name="description" content="提出先によって余白や用紙の向きが異なる表を、毎回設定し直さず使い分けるための手順です。ユーザー設定ビューに名前を付けて保存し、必要な形を呼び出す流れを扱います。ブック内のテーブルによる制約や、別シートへの切り替わり、印刷前の確認も整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで提出先別の余白や印刷設定を保存して切り替えるには｜Vaynexis">
+  <meta property="og:description" content="提出先によって余白や用紙の向きが異なる表を、毎回設定し直さず使い分けるための手順です。ユーザー設定ビューに名前を付けて保存し、必要な形を呼び出す流れを扱います。ブック内のテーブルによる制約や、別シートへの切り替わり、印刷前の確認も整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-custom-view-print-settings-by-recipient">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-custom-view-print-settings-by-recipient">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで提出先別の余白や印刷設定を保存して切り替えるには","description":"提出先によって余白や用紙の向きが異なる表を、毎回設定し直さず使い分けるための手順です。ユーザー設定ビューに名前を付けて保存し、必要な形を呼び出す流れを扱います。ブック内のテーブルによる制約や、別シートへの切り替わり、印刷前の確認も整理します。","datePublished":"2026-11-13","dateModified":"2026-11-13","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-custom-view-print-settings-by-recipient"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで提出先別の余白や印刷設定を保存して切り替えるには","item":"https://vaynexis.jp/column/excel-custom-view-print-settings-by-recipient"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで提出先別の余白や印刷設定を保存して切り替えるには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで提出先別の余白や印刷設定を保存して切り替えるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>提出先ごとの余白や印刷設定は、ユーザー設定ビューに保存して切り替えられます。提出先と対象の表が分かる名前で登録し、呼び出した後に紙に出る形を確かめる流れにします。</p></div>
+    <p class="col-meta">公開：2026年11月13日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、提出先によって余白や用紙の向きが変わるExcelの表を毎回設定し直さずに使い分けたい小さな会社の担当者が、ユーザー設定ビューへの保存と呼び出し、印刷前の表示での照合までをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">保存できる設定と利用条件を先に確認する</a></li>
+      <li><a href="#s2">提出先の形に整えてから名前を付ける</a></li>
+      <li><a href="#s3">登録した名前を選び、対象のシートまで確認する</a></li>
+      <li><a href="#s4">呼び出した結果を印刷前の表示で照合する</a></li>
+      <li><a href="#s5">引き継ぎには提出先と設定の違いを残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．保存できる設定と利用条件を先に確認する</h2>
+    <p>確認日：2026年11月13日</p>
+    <p>ユーザー設定ビューのヘルプの適用先は、Excel for Microsoft 365・2024・2021・2019・2016 です。この記事で詳しい設定まで扱う対象は、Excel for Microsoft 365、Excel 2024、Excel 2021です。［ページ設定］ダイアログのヘルプの適用先がこの3つだからです。ユーザー設定ビューとページ設定のヘルプの適用先に Mac 版・Web 版は挙がっておらず、この手順の対象に含めません。余白のヘルプにも、Excel for the web ではページ余白の設定はサポートされていない、とあります。使う人の環境を引き継ぎメモに残し、別の環境でも同じ入口があると見込んで進めないことが大切です。</p>
+    <p>ブック内のワークシートにExcelの表が含まれている場合、ユーザー設定ビューはブックのどこでも使用できません。ヘルプの日本語版は「Excel の表」と書いており、どの範囲までを指すかは確かめていません。対象の表だけを見て判断せず、ほかのシートにあるものも確認対象にします。使えないからといって元の表をすぐ作り替えず、どこで使っているかを担当者と整理するとよいです。</p>
+    <p>シートビューについて、ヘルプは、他の人に邪魔されることなくワークシートにカスタマイズされたビューを作成できる方法と説明しています。シートビューは、SharePoint または OneDrive の場所に格納されているドキュメントでのみ使用できる、ともあります。この記事では、提出する紙の形を名前で呼び分けることに絞ります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．提出先の形に整えてから名前を付ける</h2>
+    <p>保存の前に、提出先から受け取った指定を読み、変える項目と共通のまま使う項目を分けます。余白だけ違うのか、縦横の向きも違うのかを曖昧にすると、登録名が正しくても中身の取り違えが残ります。</p>
+    <h3 class="h3">余白と紙の配置を整える</h3>
+    <p>対象のワークシートを選び、［ページ レイアウト］タブの［ページ設定］にある［余白］を開きます。定義済みの余白は［標準］［広い］［狭い］から選べ、個別の寸法は［ユーザー設定の余白］の［上］［下］［左］［右］で入力します。</p>
+    <p>ページのレイアウトや印刷の詳しい設定には、［ページ設定］ダイアログを使います。［ページ］タブでは、主な項目として向き、印刷時の拡大・縮小、用紙サイズを設定できます。</p>
+    <p>ヘッダーとフッターの余白は、上と下の余白より小さく、プリンターの最小余白以上にする必要があります。紙の端から本文までの空きと、見出しなどを置く位置を混同せず、本文と重なっていないかを見るとよいです。</p>
+    <h3 class="h3">今の状態を登録する</h3>
+    <p>保存したい表示・印刷設定に整えた後、［表示］の［ブック ビュー］から［カスタム ビュー］、［追加］へ進みます。［名前］ボックスにビューの名前を入力したら、［ビューに含む］で、含める設定のチェック ボックスをオンにします。ヘルプの日本語版は、機能を「ユーザー設定ビュー」、手順の画面名を［カスタム ビュー］と書いており、表記が揺れています。お使いの画面での表記は確かめていません。登録する名前は、提出先と対象の表を見分けられるものにします。登録前の状態を整える工程と、名前を付ける工程を続けて行うと、途中の形を登録する取り違えを避けやすくなります。次の提出先についても、指定に合わせて整えてから別の名前を付ける流れにします。</p>
+    <p>ワークシートで定義した余白は、ブックの保存時にそのシートと共に保存されます。登録作業の区切りではブックも保存し、次の担当者へ渡すファイルをそろえるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．登録した名前を選び、対象のシートまで確認する</h2>
+    <p>呼び出すときは、［ビュー］で目的の名前を選んで［表示］を選択します。</p>
+    <p>ユーザー設定ビューを適用できるのは、ユーザー設定ビューを作成したときにアクティブだったワークシートのみ、とされています。別のワークシートで作成したビューを選ぶと、そのワークシートが自動で表示されます。呼び出した後は、余白の見た目だけでなく、対象の表に切り替わったかも確かめます。名前が似ているものを選び続けると、提出先は合っていても別の表を見ている可能性を見落としがちです。</p>
+    <p>公式ヘルプでは、ビューを識別しやすくするため、名前にアクティブなワークシートの名前を含める方法を挙げています。部署内でも、提出先だけで区別するか、表の名前も加えるかをそろえておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．呼び出した結果を印刷前の表示で照合する</h2>
+    <p>印刷前のプレビューのヘルプは「新しいバージョン」と「Web」の欄に分かれており、ここで挙げるのは「新しいバージョン」の欄の説明です。対象を選んで［ファイル］、［印刷］の順に開くと、プレビューと印刷オプションを表示できます。次のページや前のページを見るには、印刷プレビューの下部にある矢印を使うか、ページ番号を入力します。先頭の見出しだけで終わらず、末尾の注記や合計欄まで含めて照合する流れにします。</p>
+    <p>余白を見分けにくい場合は、印刷プレビューの右下にある［余白の表示］ボタンで境界を表示できます。提出先の指定と比べるときは、見た目の広さだけで済ませず、登録前に決めた項目と突き合わせるとよいです。</p>
+    <p>シートに色が含まれていても、カラー プリンターを使用していない限り、プレビューは白黒で表示されます。色が変わったように見えるときは、元の表を直し始める前に出力先も確認します。文字が小さすぎないか、紙に必要な情報が欠けていないかは、設定名が合っていることとは別に見る項目です。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．引き継ぎには提出先と設定の違いを残す</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>名前の一覧だけを渡すと、どの指定を基にしたものかが後から分かりにくくなります。引き継ぎでは、提出先、対象の表、違いを設けた理由を短くまとめます。例では寸法を仮置きせず、提出先の指定と社内の用途を区別しています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">呼び分ける名前の例</th><th scope="col">用途</th><th scope="col">保存前に決める違い</th></tr></thead><tbody><tr><td data-label="呼び分ける名前の例">提出用_月次表</td><td data-label="用途">外部へ渡す紙</td><td data-label="保存前に決める違い">相手から指定された余白と向き</td></tr><tr><td data-label="呼び分ける名前の例">社内確認用_月次表</td><td data-label="用途">書き込みながら確認する紙</td><td data-label="保存前に決める違い">記入欄の空きと読みやすさ</td></tr></tbody></table></div>
+    <p>同じ表でも、提出用と確認用では残したい空きが違います。余白を広げたい理由が「先方の指定」なのか「社内で書き込むため」なのかをメモに残すと、後任者が見た目だけで直す場面を減らせます。変更の連絡を受けた際も、どの用途の形を見直すかをたどれます。</p>
+    <p>引き継ぎの確認では、渡す側が普段の操作を見せるだけでなく、受け取る側が名前を選び、提出先の指定と照合するところまで進めます。違いが出たら、その場で直した内容と残す課題を分け、古い指定が手元に残っていないかも点検するとよいです。</p>
+    <p>この作業を AI で減らすなら、提出先の指定を読み取る作業と、仕上がりを人が確認する作業を分けて洗い出します。<a href="/ai">事務作業への AI 活用を考える</a>際も、判断を任せる範囲と、提出前に人が照合する項目を先に整理するとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">提出先の指定と、対象にする表を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">利用条件を調べ、ほかのシートも確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">保存前に、余白・向き・用紙の指定を整えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">名前から、提出先と対象の表を見分けられるようにしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">呼び出した後に、意図した表が表示されたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">印刷前の表示で、先頭から末尾まで欠けや重なりを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">引き継ぎ相手が同じ形を呼び出せるか確かめたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/create-apply-or-delete-a-custom-view" rel="noopener" target="_blank">ユーザー設定ビューを作成、適用、または削除する</a>：提出先別設定の保存、テーブルによる制約、作成・適用、対象シートと命名</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/page-setup" rel="noopener" target="_blank">ページ設定</a>：詳細設定の対象バージョン、向き・拡大縮小・用紙サイズ</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/set-page-margins-before-printing-a-worksheet" rel="noopener" target="_blank">ワークシートを印刷する前にページの余白を設定する</a>：余白の選択と寸法入力、ヘッダー・フッターの距離条件、保存</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/create-and-manage-sheet-views-in-excel" rel="noopener" target="_blank">Excel でのシート ビューの作成と管理</a>：共同作業時の表示を分ける機能と、この記事の主題との区別</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/preview-worksheet-pages-before-you-print" rel="noopener" target="_blank">印刷前にワークシート ページをプレビューする</a>：プレビューの入口、ページ移動、余白の表示、カラー表示の条件</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/excel-print-area-skip-work-notes">Excelの作業メモを出さず提出部分だけ繰り返し印刷するには</a></li>
+      <li><a href="/column/excel-print-fit-columns-one-page-wide">Excelの印刷で右端の列だけ次のページに出るときの直し方</a></li>
+      <li><a href="/column/excel-print-titles-repeat-header-rows">Excelの長い一覧を印刷するとき各ページに見出しを付ける方法</a></li>
+      <li><a href="/column/excel-sheet-view-filter-without-affecting-others">Excelの共有表で他の人の表示を変えずに絞り込む手順</a></li>
+      <li><a href="/column/word-embed-reference-pdf-as-icon">Wordの報告書に参考PDFを開けるアイコンで埋め込む手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
