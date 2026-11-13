@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スプレッドシートの数量を計算できるまま単位付きで表示するには｜Vaynexis</title>
+  <meta name="description" content="数量の後ろに単位を見せたいときは、入力する値と表示の設定を分けて考えます。パソコンでの設定手順、書式の記号の意味、短い入力例と合計の確認方法を整理し、文字列が混じった場合の切り分けや、引き継ぎ時に残す情報まで紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="スプレッドシートの数量を計算できるまま単位付きで表示するには｜Vaynexis">
+  <meta property="og:description" content="数量の後ろに単位を見せたいときは、入力する値と表示の設定を分けて考えます。パソコンでの設定手順、書式の記号の意味、短い入力例と合計の確認方法を整理し、文字列が混じった場合の切り分けや、引き継ぎ時に残す情報まで紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/google-sheets-quantity-unit-number-format">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/google-sheets-quantity-unit-number-format">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"スプレッドシートの数量を計算できるまま単位付きで表示するには","description":"数量の後ろに単位を見せたいときは、入力する値と表示の設定を分けて考えます。パソコンでの設定手順、書式の記号の意味、短い入力例と合計の確認方法を整理し、文字列が混じった場合の切り分けや、引き継ぎ時に残す情報まで紹介します。","datePublished":"2026-11-13","dateModified":"2026-11-13","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-sheets-quantity-unit-number-format"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"スプレッドシートの数量を計算できるまま単位付きで表示するには","item":"https://vaynexis.jp/column/google-sheets-quantity-unit-number-format"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">スプレッドシートの数量を計算できるまま単位付きで表示するには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">スプレッドシートの数量を計算できるまま単位付きで表示するには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Google スプレッドシートでは、数量を数値として入力し、カスタム数値形式で二重引用符に囲んだ単位を添えて表示します。単位をセルの値に書き足す前に、見せ方を設定する方法を選び、元の数量と集計結果を分けて確認するとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月13日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、スプレッドシートの数量を計算できるまま単位付きで表示したい小さな会社の担当者が、数値形式の設定と元の値・合計を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">パソコンで数量の範囲を選び、単位の表示を設定する</a></li>
+      <li><a href="#s2">書式の数字と単位文字を区別する</a></li>
+      <li><a href="#s3">小さな表で、数量と合計の表示を確かめる</a></li>
+      <li><a href="#s4">見た目が合っていても、文字列や書式の位置を点検する</a></li>
+      <li><a href="#s5">引き継ぎには、入力の意味と確認する順番を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．パソコンで数量の範囲を選び、単位の表示を設定する</h2>
+    <p>確認日：2026-11-13</p>
+    <p>ここで扱う操作は、パソコンで開く Google スプレッドシートを対象とし、表示を変えるデータの範囲を選択してから進めます。選択後は［表示形式］の［数字］から［カスタム数値形式］を開きます。メニューのテキスト ボックスに使いたい書式を追加し、［適用］で確定する流れです。</p>
+    <p>見出しや備考までまとめて選ばず、数量を扱う範囲を先に見定めるとよいです。合計欄も単位付きで見せたいのか、明細だけでよいのかを決めておくと、設定する場所を追いやすくなります。すでに入力済みの表では、どの欄に何が入っているかを読み取ってから表示の変更に進みます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．書式の数字と単位文字を区別する</h2>
+    <p>数値の表示形式は、値を利用者にどう表示するかを指定するものです。この区別を踏まえ、数量の欄は計算に使う値を保つ設計にし、読み手に見せる単位を表示側で補うとよいです。</p>
+    <p>書式の 「0」 は数値の桁を表し、不要なゼロも表示するため、単位を付けたときにもゼロを見せたい欄の基本になります。これに対し 「#」 は不要なゼロを表示しない記号です。書式のパターンで小数点を表す記号はピリオドです。単位をそのままの文字として表示する部分は、二重引用符で囲みます。</p>
+    <p>たとえば 「0"個"」 や 「0.0"m"」 は、桁を表す記号の後ろに単位文字を添える、当社が組み立てた書式の例です。入力欄には数量だけを入れ、単位文字を含む書式は［カスタム数値形式］のテキスト ボックスへ入れます。入力する場所を取り違えないことが、作業の分かれ目です。見せたい単位だけでなく、小数をどこまで読ませたいかも、扱う数量に合わせて決めるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．小さな表で、数量と合計の表示を確かめる</h2>
+    <p>次の表は、当社が説明用に組み立てた、同じ単位で数える備品の見本です。入力する欄と計算する欄を区別し、見た目だけを確認して終えないための材料にします。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">欄</th><th scope="col">入力する値・式</th><th scope="col">設定する書式</th><th scope="col">想定する表示</th></tr></thead><tbody><tr><td data-label="欄">明細の数量（A2）</td><td data-label="入力する値・式">「12」</td><td data-label="設定する書式">「0"個"」</td><td data-label="想定する表示">12個</td></tr><tr><td data-label="欄">明細の数量（A3）</td><td data-label="入力する値・式">「8」</td><td data-label="設定する書式">「0"個"」</td><td data-label="想定する表示">8個</td></tr><tr><td data-label="欄">合計（A4）</td><td data-label="入力する値・式">「=SUM(A2:A3)」</td><td data-label="設定する書式">「0"個"」</td><td data-label="想定する表示">20個</td></tr></tbody></table></div>
+    <p>合計には、数値やセルの合計を返す SUM 関数を使います。表の数量と想定表示は公式の検証例ではなく、上記の書式と加算の仕組みから組み立てたものです。</p>
+    <p>確認は、入力内容、表示、計算結果の順に進めると整理しやすくなります。元の資料と数量を照らし合わせた後で単位を眺め、最後に合計が期待する数量になっているかを見ます。合計が違っているときは、表示の単位を付け直す前に、対象に入れた明細と入力内容を見直すとよいです。</p>
+    <p>単位が異なる欄をまとめる前には、その合計が業務上何を表すのかも決めておきます。同じ見た目にそろえることと、足し合わせてよい数量かどうかを判断することは、別の確認として扱います。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．見た目が合っていても、文字列や書式の位置を点検する</h2>
+    <p>Google の ISNUMBER 関数は、値が数値であるかを検証するため、数量の欄を確認する補助に使えます。この関数の判定結果は、対象の値が数値なら TRUE、それ以外なら FALSE です。数字に見える文字列も区別され、公式例の 「ISNUMBER("123")」 は FALSE を返すため、画面に数字が見えるだけでは数値の確認になりません。</p>
+    <p>また、CONCATENATE 関数は文字列同士を結合する機能です。単位付きの文字を作る目的と、数量を集計する目的を分け、計算元に使う欄へ文字を結合する方針になっていないかを見直します。既存の値を直す際は、元の資料と照らして単位の意味を確認し、表示設定だけで直そうとしていないかを点検するとよいです。</p>
+    <p>Googleのヘルプでは、カンマは数値を桁区切り付きで表示する記号です。実際に表示される小数点記号は、スプレッドシートの言語と地域の設定によって決まります。別の表の書式を流用する際は、単位文字だけを読み替えず、数値の表示部分も確認するとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．引き継ぎには、入力の意味と確認する順番を残す</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>担当が変わる表では、入力時の約束と、読み取るときの約束を分けて残します。数量の欄には何を入れるのか、どの単位で数えた値なのか、合計に含める明細はどれかを、表の見出しや運用メモで説明する形です。画面の見た目だけを引き継ぐと、単位の付け方は伝わっても、数量の意味が伝わらないことがあります。</p>
+    <p>見直す人が同じ順番で点検できるように、元の資料との照合、表示の読み取り、集計対象の確認を作業の流れとして残すとよいです。表示だけを変更した箇所と、入力そのものを訂正した箇所も区別して記録します。後から差を調べる際に、どちらを見直すべきかが分かる形にしておきます。</p>
+    <p>事務の手間を洗い出すなら、単位を整える作業と、数量を照合する作業を分け、<a href="/ai">AIを事務に取り入れる進め方</a>を考える際の材料にできます。任せたい範囲と、人が最終的に数量を確かめる範囲を言葉にしておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">数量を入力する範囲と、見出し・備考の範囲を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の資料と、入力した数量の値を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">単位を含む文字を入力する欄と、計算元の欄を混同していないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表示に使う単位と、数量を数えた基準が一致しているか確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">明細と合計の両方で、表示と計算結果を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">引き継ぐ人に、入力の約束と確認する順番を残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/docs/answer/56470?hl=ja" rel="noopener" target="_blank">スプレッドシートで数値の表示形式を設定する - パソコン</a>：パソコンでの設定手順、文字の追加、桁区切りの記号</li>
+      <li><a href="https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells?hl=ja" rel="noopener" target="_blank">Cells</a>：数値の値・計算値・書式設定された表示値の区別</li>
+      <li><a href="https://developers.google.com/workspace/sheets/api/guides/formats?hl=ja" rel="noopener" target="_blank">日付と数値の形式</a>：桁の記号、単位文字の表示</li>
+      <li><a href="https://support.google.com/docs/answer/3093669?hl=ja" rel="noopener" target="_blank">SUM</a>：数値やセル範囲の合計</li>
+      <li><a href="https://support.google.com/docs/answer/3093296?hl=ja" rel="noopener" target="_blank">ISNUMBER</a>：数値の検証、文字列との区別</li>
+      <li><a href="https://support.google.com/docs/answer/3094123?hl=ja" rel="noopener" target="_blank">CONCATENATE 関数</a>：文字列の結合と数量の表示設定の使い分け</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/google-sheets-locale-date-currency-format-check">スプレッドシートの日付・通貨が海外表記になるときの確認順</a></li>
+      <li><a href="/column/google-sheets-protect-formula-cell-ranges">共同編集のスプレッドシートで数式セルだけ編集を防ぐ設定と確認</a></li>
+      <li><a href="/column/google-sheets-dropdown-list">スプレッドシートで入力欄をプルダウンにする作り方と確認点</a></li>
+      <li><a href="/column/excel-maxifs-longest-handling-time">Excelの対応履歴から担当別に最も長い処理時間を出すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

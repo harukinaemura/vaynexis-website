@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの対応履歴から担当別に最も長い処理時間を出すには｜Vaynexis</title>
+  <meta name="description" content="対応履歴から担当別の最長処理時間を取り出す方法を、条件に合う最大値を求める数式と小さな表で説明します。担当を切り替える参照の置き方、範囲の行ずれ、該当する記録がない場合の見分け方を整理し、長かった対応の明細へ戻って確認する手順まで扱います。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの対応履歴から担当別に最も長い処理時間を出すには｜Vaynexis">
+  <meta property="og:description" content="対応履歴から担当別の最長処理時間を取り出す方法を、条件に合う最大値を求める数式と小さな表で説明します。担当を切り替える参照の置き方、範囲の行ずれ、該当する記録がない場合の見分け方を整理し、長かった対応の明細へ戻って確認する手順まで扱います。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-maxifs-longest-handling-time">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-maxifs-longest-handling-time">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの対応履歴から担当別に最も長い処理時間を出すには","description":"対応履歴から担当別の最長処理時間を取り出す方法を、条件に合う最大値を求める数式と小さな表で説明します。担当を切り替える参照の置き方、範囲の行ずれ、該当する記録がない場合の見分け方を整理し、長かった対応の明細へ戻って確認する手順まで扱います。","datePublished":"2026-11-13","dateModified":"2026-11-13","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-maxifs-longest-handling-time"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの対応履歴から担当別に最も長い処理時間を出すには","item":"https://vaynexis.jp/column/excel-maxifs-longest-handling-time"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの対応履歴から担当別に最も長い処理時間を出すには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの対応履歴から担当別に最も長い処理時間を出すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>担当別の最長処理時間は、処理時間の列を最大範囲、担当の列を条件範囲にして、条件に合う最大値を返すMAXIFS関数で求めます。担当名を集計用の欄に置き、元の明細と結果を照合します。最大だった時間だけで仕事の速さを評価せず、長かった対応の中身を確認する入口として扱います。</p></div>
+    <p class="col-meta">公開：2026年11月13日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelの対応履歴から担当別の最長処理時間を出したい小さな会社の担当者が、MAXIFSの範囲指定と結果の明細を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">対応履歴を、担当と処理時間の列に分ける</a></li>
+      <li><a href="#s2">最大範囲、担当の範囲、対象の担当を指定する</a></li>
+      <li><a href="#s3">エラーの有無だけでは、範囲の行ずれを見抜けない</a></li>
+      <li><a href="#s4">ゼロが返ったら、該当する担当の記録も確認する</a></li>
+      <li><a href="#s5">最長だった対応の中身を、元の履歴で確かめる</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．対応履歴を、担当と処理時間の列に分ける</h2>
+    <p>確認日：2026年11月13日。</p>
+    <p>この記事は、Microsoftのヘルプが適用先に挙げるExcel for Microsoft 365を対象に、Windows版の操作として説明します。</p>
+    <p>準備については、当社では次のように整理します。元の履歴には担当と処理時間を別々の列に置き、集計対象の担当名と結果は明細から離れた欄にまとめます。対応内容や受付の記録を残しておけば、長かった対応へ戻る手がかりにもなります。集計結果を時間の明細へ書き込まず、元の記録と区別できる配置にするとよいです。</p>
+    <p>時間の意味も先にそろえます。受付から終了までの経過時間なのか、待ち時間を除いた処理時間なのかを共有し、途中で担当が交代した対応をどう記録するかも決めておきます。終了していない対応には、確定した時間と見分けのつく記録方法が必要です。最長という結果は、何を処理時間として記録したかを踏まえて読みます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．最大範囲、担当の範囲、対象の担当を指定する</h2>
+    <p>MAXIFS関数の引数は、最大値を求める範囲、条件を調べる範囲、条件の順に指定します。この順番を、数値の置き場、担当名の置き場、探す担当という対応で読むと、式の役割を追えます。</p>
+    <p>下表は当社が説明用に置いた配置で、右側は同じ明細から求めた計算例です。見出しを先頭の行に置き、間の列は空けて使います。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">行</th><th scope="col">A列：担当</th><th scope="col">B列：処理時間（分）</th><th scope="col">D列：集計対象の担当</th><th scope="col">E列：最長処理時間（分）</th></tr></thead><tbody><tr><td data-label="行">2</td><td data-label="A列：担当">担当あ</td><td data-label="B列：処理時間（分）">18</td><td data-label="D列：集計対象の担当">担当あ</td><td data-label="E列：最長処理時間（分）">35</td></tr><tr><td data-label="行">3</td><td data-label="A列：担当">担当い</td><td data-label="B列：処理時間（分）">52</td><td data-label="D列：集計対象の担当">担当い</td><td data-label="E列：最長処理時間（分）">52</td></tr><tr><td data-label="行">4</td><td data-label="A列：担当">担当あ</td><td data-label="B列：処理時間（分）">35</td><td data-label="D列：集計対象の担当">—</td><td data-label="E列：最長処理時間（分）">—</td></tr><tr><td data-label="行">5</td><td data-label="A列：担当">担当い</td><td data-label="B列：処理時間（分）">24</td><td data-label="D列：集計対象の担当">—</td><td data-label="E列：最長処理時間（分）">—</td></tr><tr><td data-label="行">6</td><td data-label="A列：担当">担当あ</td><td data-label="B列：処理時間（分）">29</td><td data-label="D列：集計対象の担当">—</td><td data-label="E列：最長処理時間（分）">—</td></tr><tr><td data-label="行">7</td><td data-label="A列：担当">担当い</td><td data-label="B列：処理時間（分）">40</td><td data-label="D列：集計対象の担当">—</td><td data-label="E列：最長処理時間（分）">—</td></tr></tbody></table></div>
+    <p>説明用の式では、処理時間を最大範囲、担当を条件範囲、集計対象の担当を入れたセルを条件に対応させます。結果欄のE2セルに入れる式は次のとおりです。</p>
+    <p>「=MAXIFS($B$2:$B$7,$A$2:$A$7,D2)」</p>
+    <p>当社の確認手順としては、対象の担当に印を付けるつもりで明細を目で追い、その中の最も長い時間と結果欄を照合します。表全体で長い時間を探して終えるのではなく、対象の担当に絞った後で比較する順番です。結果と一致する時間があっても、その行の担当が対象と同じかまで確認するとよいです。</p>
+    <p>数式を下へコピーすると相対参照は行に合わせて調整され、絶対参照はコピー先でも調整されません。そのため、ここでは元の明細の範囲を固定する絶対参照と、担当の指定を下へ移す相対参照を使い分けます。Windows版では、式を含むセルと入力先の隣接セルを選び、Ctrl+Dキーで下方向に数式を入力できます。この表ではE2に式を入力した後、E2:E3を選択してCtrl+Dキーを押します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．エラーの有無だけでは、範囲の行ずれを見抜けない</h2>
+    <p>最大範囲と条件範囲のサイズと形状が同じでない場合、MAXIFS関数は#VALUE!エラーを返します。長さや列の広がりが違っていないかを、最初に確認します。</p>
+    <p>一方、Microsoftの使用例では、最大範囲と条件範囲の開始行がずれていても、同じサイズと形状なら計算されます。これは、エラーが出ないことと、同じ対応の担当と時間を組み合わせていることを分けて確かめる理由になります。</p>
+    <p>当社の確認では、式が指す時間の先頭と担当の先頭を見比べ、同じ対応の行かを確認します。その後で末尾も同じように追います。数式の中で列の長さだけをそろえ、開始位置を見落とす修正は避けたいところです。表示された時間がもっともらしく見えても、対応する担当の明細から選ばれたかをたどります。</p>
+    <p>履歴を追記したときにも、時間側と担当側を組にして確認します。新しい履歴が対象に入っているか、途中の合計や見出しが混ざっていないかを点検します。引き継ぎ時には、どこからどこまでが対応の明細で、どこからが集計欄なのかを説明できる状態にしておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．ゼロが返ったら、該当する担当の記録も確認する</h2>
+    <p>Microsoftの公式例では、条件に一致するセルがない場合のMAXIFS関数の結果は0です。したがって、結果だけを見て「処理時間が短かった」と解釈せず、対象になる履歴が存在するかも確認します。</p>
+    <p>補助の確認には、条件を満たすセルの数を数えるCOUNTIF関数を使えます。担当の範囲と、集計対象の担当を入れたセルを指定する確認用の式は次のとおりです。</p>
+    <p>「=COUNTIF($A$2:$A$7,D2)」</p>
+    <p>この確認で見るのは、対象の担当を持つ明細の有無です。処理時間の記入が完了しているかは、別に明細へ戻って確かめます。担当の記録があっても、時間が未確定のままなら、完成した集計として扱うかどうかは記録の担当と相談するところです。</p>
+    <p>当社では、集計対象の担当名を手入力し直す前に、元の履歴と照合する手順にします。担当の表記をそろえる際にも、名前が似ている別の担当や、交代前後の記録をまとめてよいかは人が判断します。数字を出す処理と、誰の対応として扱うかの判断を分けておくと、引き継ぐ人にも確認の理由が伝わります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．最長だった対応の中身を、元の履歴で確かめる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>結果を使うときは、時間が長かった対応の内容、確認待ちの有無、担当の交代、記入誤りの可能性を元の記録で確認します。最大の時間は長かった対応を探す手がかりですが、普段の処理の速さをそのまま表す指標として扱わない整理にします。例外的な対応が含まれるかによっても、数字の受け止め方は変わります。</p>
+    <p>長い時間が同じ値で並んでいたら、結果と一致する明細をそれぞれ読んでおきます。短い作業と複雑な作業が混在している履歴では、担当間の比較を急がず、どんな対応が対象だったかを共有するとよいです。記入誤りが疑われても、結果を小さくするために数値を直さず、元の記録を確かめてから修正する流れにします。</p>
+    <p>事務の手間を洗い出すなら、履歴を整える作業、式の参照を確認する作業、長かった対応を読み返す作業を分けて、<a href="/ai">事務でAIを活用する進め方</a>を考えます。集計の対象と結果の意味は、人が確かめる項目として残します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">処理時間に何を含めるかと、記録の単位を共有したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象の担当の明細から、最も長い時間を取り出しているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">コピー後も、元の明細の範囲と対象の担当の指定が意図どおりか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">時間と担当の参照が、先頭から末尾まで同じ対応の行を指すか照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">結果と併せて、対象になる担当の履歴が存在するか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">長かった対応の内容と、時間の記録の誤りがないか確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/maxifs-function" rel="noopener" target="_blank">MAXIFS 関数</a>：条件に合う最大値、適用先、引数の順、範囲の形状と行ずれ、条件に一致するセルがない場合の結果</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/overview-of-formulas-in-excel" rel="noopener" target="_blank">Excel の数式の概要</a>：コピー時の相対参照と絶対参照の扱い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/fill-a-formula-down-into-adjacent-cells" rel="noopener" target="_blank">隣り合ったセルに数式をコピーする</a>：Windows版で式を含むセルと入力先を選び、下方向へ式をコピーする操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/use-the-countif-function-in-microsoft-excel" rel="noopener" target="_blank">Microsoft Excel で COUNTIF 関数を使用する</a>：対象の担当の明細が存在するかを調べる補助の計算</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-countifs-assignee-status">Excelで担当者と対応状況が一致する明細を数えるには？</a></li>
+      <li><a href="/column/excel-rank-values-ties">Excelで数値に順位を付けるには？同順位と比較範囲の確かめ方</a></li>
+      <li><a href="/column/excel-sort-assignee-then-due-date">Excelで担当順と期限順を組み合わせて作業一覧を並べるには</a></li>
+      <li><a href="/column/google-forms-confirmation-message">Googleフォームで送信完了後に出す確認メッセージを変更するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

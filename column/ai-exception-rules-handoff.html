@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>例外処理が多い仕事はAI化できる？共通化と人へ戻す判断の分け方｜Vaynexis</title>
+  <meta name="description" content="例外処理が多い仕事は、対応の履歴をまとめて渡す前に、共通の手順にできる部分と、人が判断する部分を分けます。すでに見つかっている例外について、分岐の根拠、担当者、保留中に止める作業、確認後の戻り先を整理し、試す範囲を決める考え方を紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="例外処理が多い仕事はAI化できる？共通化と人へ戻す判断の分け方｜Vaynexis">
+  <meta property="og:description" content="例外処理が多い仕事は、対応の履歴をまとめて渡す前に、共通の手順にできる部分と、人が判断する部分を分けます。すでに見つかっている例外について、分岐の根拠、担当者、保留中に止める作業、確認後の戻り先を整理し、試す範囲を決める考え方を紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/ai-exception-rules-handoff">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/ai-exception-rules-handoff">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"例外処理が多い仕事はAI化できる？共通化と人へ戻す判断の分け方","description":"例外処理が多い仕事は、対応の履歴をまとめて渡す前に、共通の手順にできる部分と、人が判断する部分を分けます。すでに見つかっている例外について、分岐の根拠、担当者、保留中に止める作業、確認後の戻り先を整理し、試す範囲を決める考え方を紹介します。","datePublished":"2026-11-13","dateModified":"2026-11-13","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/ai-exception-rules-handoff"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"例外処理が多い仕事はAI化できる？共通化と人へ戻す判断の分け","item":"https://vaynexis.jp/column/ai-exception-rules-handoff"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">例外処理が多い仕事はAI化できる？共通化と人へ戻す判断の分け</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">例外処理が多い仕事はAI化できる？共通化と人へ戻す判断の分け方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>例外処理が多い仕事は、現在の対応をそのままAI化する前に、同じ根拠で処理できる例外と、その都度の判断が必要な例外を分けます。共通化する側には適用範囲と確認箇所を、人へ戻す側には判断する担当者と再開場所を残します。以下は、その境界を決めるための当社の整理です。</p></div>
+    <p class="col-meta">公開：2026年11月13日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、例外処理をAIに任せる範囲を決めたい小さな会社の担当者が、共通化できる条件と人へ戻す手順を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">手順の途中で誰が判断するかを明らかにする</a></li>
+      <li><a href="#s2">共通化は「以前もあった」から「同じ根拠で選べる」へ進める</a></li>
+      <li><a href="#s3">分岐の記録は、処理を決める前と後の担当をつなぐ</a></li>
+      <li><a href="#s4">人へ戻す経路には、止める作業と再開場所を含める</a></li>
+      <li><a href="#s5">過去の例外を当てはめて、任せる範囲を決める</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．手順の途中で誰が判断するかを明らかにする</h2>
+    <p>確認日：2026年11月13日</p>
+    <p>中小企業基盤整備機構のJ-Net21では、作業ミスが起きている業務を対象に、業務フロー図を作る進め方を示しています。同サイトの標準化の説明では、フローチャートに各段階の担当者を明記するとしています。</p>
+    <p>例外を通常手順へ組み込むかどうかも、処理の流れと判断する人を対応させて検討します。普段は決まった処理を行い、異なるものは担当者が調整するという記述から、調整を始める場所、調整の内容を決める人、通常の処理へ戻す場所を具体化する進め方です。過去の対応文を集めるだけで終わらず、どの根拠に従って処理を選んだかまで言葉にします。</p>
+    <p>ここで扱うのは、すでに把握している例外の扱いです。道具を選ぶ前に、通常の流れへ組み込む対応と、保留して判断を求める対応の境界を決めます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．共通化は「以前もあった」から「同じ根拠で選べる」へ進める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>共通化の候補には、対象を見分ける情報、選ぶ処理、適用しない範囲をセットで記します。よくある、担当者なら分かるといった表現は、そのまま判定の文に使いません。何を見れば該当すると分かるかを、元の書類や管理表の項目に結び付けて書き直す案です。</p>
+    <p>見た目が似た対応も、同じ扱いにまとめる前に判断の理由を照らします。過去の特別対応には、担当者の裁量や個別の了承が含まれていないかを確認対象にします。その場限りの了承と、今後も使う社内の手順は記録を分け、継続して使う手順は責任者が内容を決めます。</p>
+    <h3 class="h3">判定に使う情報と、処理を認める判断を分ける</h3>
+    <p>書類の表記を読み替える対応は、対応表と元の記載を照らす対象にします。一方、従来の扱いを変えてよいかという問いは、業務の責任者が決める対象として残す整理です。何が書いてあるかと、その内容で進めてよいかを別々に記述すると、任せたい範囲を説明できます。</p>
+    <p>判断材料の不足も、例外の処理方法を増やす前に区別します。資料の取り寄せで判断できるものは、必要な資料と確認先を記します。社内で方針が決まっていないものは、責任者が方針を決める対象に置きます。未決定の方針を、過去の文章の多数決で埋める扱いにはしません。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．分岐の記録は、処理を決める前と後の担当をつなぐ</h2>
+    <p>例外の記録には、発生理由に加え、誰がどの時点で扱いを決めるかを残します。次の表は、備品申請の品名表記が社内の一覧と異なる場面を使った記入例です。共通化の候補から人への引き渡しまでを、同じ記録で追う案にしています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">決める項目</th><th scope="col">誰が・いつ確かめるか</th><th scope="col">架空の記入例</th></tr></thead><tbody><tr><td data-label="決める項目">共通化する範囲</td><td data-label="誰が・いつ確かめるか">業務の責任者が手順を決めるとき</td><td data-label="架空の記入例">承認済みの品名対応表に載る別名を照合対象とする</td></tr><tr><td data-label="決める項目">分岐の根拠</td><td data-label="誰が・いつ確かめるか">受付担当が申請を受け付けたとき</td><td data-label="架空の記入例">申請の品名と対応表の該当箇所を結び付ける</td></tr><tr><td data-label="決める項目">人へ戻す対象</td><td data-label="誰が・いつ確かめるか">確認担当が照合結果を見るとき</td><td data-label="架空の記入例">対応先の候補が重なるもの、対応表にないものを保留する</td></tr><tr><td data-label="決める項目">判断する担当</td><td data-label="誰が・いつ確かめるか">業務の責任者が保留を引き受けたとき</td><td data-label="架空の記入例">申請者へ内容を確認し、採用する品名を決める</td></tr><tr><td data-label="決める項目">保留中に止める作業</td><td data-label="誰が・いつ確かめるか">受付担当が保留を記録するとき</td><td data-label="架空の記入例">確定品名としての登録と、後続への手配依頼を止める</td></tr><tr><td data-label="決める項目">再開する場所</td><td data-label="誰が・いつ確かめるか">受付担当が判断の返答を受けたとき</td><td data-label="架空の記入例">決定した品名を確認し、登録の直前から再開する</td></tr><tr><td data-label="決める項目">共通手順への追加</td><td data-label="誰が・いつ確かめるか">業務の責任者が対応を振り返るとき</td><td data-label="架空の記入例">今後の扱いを決めた内容だけを対応表へ反映する</td></tr></tbody></table></div>
+    <p>この例で分けたいのは、別名を対応表で照らす作業と、新しい品名の扱いを決める判断です。対応表にない記載を、似ている品名へ寄せる処理として追加する前に、誰の判断を受けるかを記録します。</p>
+    <p>表の各欄は、詳しい経緯をすべて書く場所ではありません。判断に使う記録へ戻れることと、次に引き受ける人が分かることを優先します。通常手順と例外の受け渡しを一緒に眺める際は、<a href="/business-improvement">仕事の流れを見直す考え方</a>も、検討の視点になります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．人へ戻す経路には、止める作業と再開場所を含める</h2>
+    <p>人に渡す手順は、確認が必要と表示するところで終えず、判断を引き受ける役割まで決めます。個人が不在の間は、決めておいた代わりの担当へ引き継ぐ運用にします。問い合わせの取りまとめ役と、扱いを決める責任者は、記録上も区別しておくとよいです。</p>
+    <p>保留中は、どこまで済んだかを残します。読み取りや整理まで済んだものと、内容を確定して後続へ渡したものは、状態を分けます。前の処理が終わったことだけを理由に、判断待ちの内容まで後続へ渡さないための区切りです。</p>
+    <h3 class="h3">返答を受けた後の確認も、手順の中に置く</h3>
+    <p>再開時には、返答した担当、採用する内容、再開する位置を照らします。すでに済んだ作業を繰り返さずに進めるため、処理済みの範囲と未処理の範囲が読み取れる記録にします。途中で内容を変えた箇所は、後から見直せるよう元の記録との関係も残す案です。</p>
+    <p>例外の判断が済むことと、共通手順へ加えることは分けて扱います。今回の対応に限る返答は、その対応の記録にとどめます。今後も使う扱いにする際は、責任者が適用範囲を決め、通常手順と引き渡し先の記述をそろえて更新します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．過去の例外を当てはめて、任せる範囲を決める</h2>
+    <p>試行の前に、共通化する例外と、人に戻す例外を過去の記録から選び、担当者が期待する扱いを決めておきます。元の記録への入力や社外への送付を伴わない形で、決めた分岐が伝わるかを照合する案です。業務側で決めた手順と、試行で得た結果を照らし合わせます。</p>
+    <p>対象には、根拠がそろうものに加え、判断材料の欠けたもの、資料同士が食い違うもの、今の手順では扱いが決まらないものを含めます。進めてよい対象の取り違えだけでなく、判断を求める対象が保留へ回るか、返答後に予定した位置から再開できるかも確認します。</p>
+    <p>結果を見て直す箇所も分けます。説明の曖昧さは手順の文へ、不足する資料は受け取り方へ、未決定の方針は責任者の検討へ戻します。うまく扱えなかった例外をすべて長い指示文へ足す方法に寄せず、原因に応じて修正先を選ぶ考え方です。</p>
+    <p>任せる範囲は、確認を終えた処理単位で決めます。人への引き渡しがまだ決まらない部分は対象から外し、担当の受け渡しまで説明できる範囲を試行の対象に残します。例外を消すことより、共通化する部分と判断を残す部分が読み分けられる手順を目指します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">共通化する例外について、対象を見分ける根拠と適用しない範囲を言葉にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">その場限りの了承と、今後も使う社内の手順を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">情報の不足と、責任者が決める必要のある方針を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">人に戻す対象と、判断を引き受ける担当を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">保留中に止める後続の作業と、返答後の再開場所を明記したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">過去の例外を使い、進める扱いと保留する扱いの両方を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">個別の返答を共通手順へ反映する前に、適用範囲を責任者が確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://j-net21.smrj.go.jp/solution/qa/efficiency/Q0954.html" rel="noopener" target="_blank">事務作業ミスを減らし効率的に行うにはどうしたら良いでしょうか。</a>：ミスの起きている業務を対象に業務フロー図を作る進め方</li>
+      <li><a href="https://j-net21.smrj.go.jp/solution/qa/efficiency/Q1500.html" rel="noopener" target="_blank">業務の標準化はどのように進めたらよいでしょうか。</a>：フローチャートに各段階の担当者を明記する考え方</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/rpa-vs-generative-ai">RPAと生成AIの違い</a></li>
+      <li><a href="/column/task-inventory-gaps">業務棚卸しで抜けやすい項目</a></li>
+      <li><a href="/column/migration-exception-data-pending-owner">新システムへ入らなかった例外データは誰の確認待ちで残すか</a></li>
+      <li><a href="/column/survey-ai-multiple-label-counts">自由記述アンケートをAIで分類する前に決める複数分類と数え方</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

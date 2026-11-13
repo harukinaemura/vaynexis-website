@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの横棒グラフを元の一覧と同じ上からの順にするには｜Vaynexis</title>
+  <meta name="description" content="元の一覧と横棒グラフの項目名が上下逆になっているときに、項目の表示順を反転する手順を紹介します。操作する軸の見分け方、公式ヘルプにある設定名の違い、数値側の反転との区別、小さな表との照合方法を整理し、引き継ぎに残す内容までまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの横棒グラフを元の一覧と同じ上からの順にするには｜Vaynexis">
+  <meta property="og:description" content="元の一覧と横棒グラフの項目名が上下逆になっているときに、項目の表示順を反転する手順を紹介します。操作する軸の見分け方、公式ヘルプにある設定名の違い、数値側の反転との区別、小さな表との照合方法を整理し、引き継ぎに残す内容までまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-bar-chart-category-order">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-bar-chart-category-order">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの横棒グラフを元の一覧と同じ上からの順にするには","description":"元の一覧と横棒グラフの項目名が上下逆になっているときに、項目の表示順を反転する手順を紹介します。操作する軸の見分け方、公式ヘルプにある設定名の違い、数値側の反転との区別、小さな表との照合方法を整理し、引き継ぎに残す内容までまとめます。","datePublished":"2026-11-13","dateModified":"2026-11-13","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-bar-chart-category-order"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの横棒グラフを元の一覧と同じ上からの順にするには","item":"https://vaynexis.jp/column/excel-bar-chart-category-order"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの横棒グラフを元の一覧と同じ上からの順にするには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの横棒グラフを元の一覧と同じ上からの順にするには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>横棒グラフの項目名が元の一覧と上下逆なら、項目側の軸で［逆順のカテゴリ］をオンにして表示順を反転します。先に一覧の読み順を決め、変更後は上端・下端の名前と、それぞれに対応する値を照合するとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月13日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、横棒グラフを元の一覧と同じ順にしたい小さな会社の担当者が、項目軸の反転と名前・値の対応を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">横棒グラフでは、縦に並ぶ項目名を目印にする</a></li>
+      <li><a href="#s2">項目名の軸を開き、カテゴリの順を反転する</a></li>
+      <li><a href="#s3">反転する対象と、ヘルプの表記を取り違えない</a></li>
+      <li><a href="#s4">小さな一覧で、上端・下端と値の対応を照合する</a></li>
+      <li><a href="#s5">引き継ぎには、直した目的と確認結果を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．横棒グラフでは、縦に並ぶ項目名を目印にする</h2>
+    <p>確認日：2026-11-13（日本時間）</p>
+    <p>Microsoftの公式ヘルプの適用先にはExcel for Microsoft 365が含まれます。ここでは同製品を対象に、項目の表示順を整える操作を扱い、Mac版・Web版の画面名や配置は対象に含めません。読み順を直したい資料を手元に置き、一覧の上端と下端にある名前を先に見ておきます。どちらを上にしたいかが曖昧なまま設定を変えると、変更後の姿を判断しにくくなります。</p>
+    <p>Microsoftの説明では、横棒グラフは通常、項目が縦軸、数値が横軸に表示されます。今回の目印は、棒の長さを読むための数値ではなく、上下に並ぶ品名や分類名です。画面上で横に伸びている棒を見て、横の軸を選ぶと思い込まないことが、入口での確認点になります。</p>
+    <p>一覧に載せる順番の意図も整理しておくとよいです。上から処理の順に読ませたい資料と、量の多いものから読ませたい資料では、完成形が異なります。元の一覧を基準にする今回の目的では、その一覧をどの順で読んでほしいかを出発点にします。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．項目名の軸を開き、カテゴリの順を反転する</h2>
+    <h3 class="h3">項目名の位置から設定画面を開く</h3>
+    <p>上下に並ぶ項目名の軸を右クリックし、［軸の書式設定］を開きます。Microsoftのプロット順序の案内では、［軸オプション］で、カテゴリを対象に［逆順のカテゴリ］のチェックをオンにします。変更前後を比べる際は、まず項目名が意図した上下関係になったかを見ます。棒の色や文字の大きさなどを同時に変えず、読み順の確認を終えてから体裁を整える流れです。</p>
+    <h3 class="h3">右クリックする対象を見失ったとき</h3>
+    <p>グラフ上で選ぶ対象が分かりにくいときは、［書式］タブの［現在の選択］にある［グラフ要素］の一覧から目的の軸を選べます。軸を選び直した後も、項目名のある側を対象にしているかを確かめます。Microsoftの同じ案内では、続けて［書式］タブの［現在の選択範囲］グループで［書式設定の選択］を選びます。</p>
+    <p>項目軸の目盛設定は、項目軸を選択している場合にだけ使用できます。設定を探す前に、現在どこを選んでいるかを見直すことが大切です。項目名を直したいのに棒そのものを選んだ状態で探し続ける、といった行き違いを避けるためです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．反転する対象と、ヘルプの表記を取り違えない</h2>
+    <p>カテゴリの反転と値の反転は別の選択肢で、数値側の順序を反転する設定は［逆順の値］です。項目名を上から読む順番と、数値の大小をどちら向きに読むかは、分けて考えます。名前の並びだけを直す目的を、数値側の設定変更に置き換えないようにします。</p>
+    <p>別の日本語公式ヘルプでは、項目を逆順にする操作を［軸のオプション］内の［軸を反転する］と表記しています。この二つの表記がどの更新状態の画面に対応するかは、今回の資料では特定できません。利用中の画面で該当する設定を特定できない場合は、別の軸を変更せず、使用版と表示された設定名を残して確認を止めます。引き継ぎには、項目名が並ぶ軸の順番を反転する目的も添えます。</p>
+    <p>また、別のグラフ要素をクリックすると、作業ウィンドウの内容もその要素に合わせて更新されます。設定中に別の場所を選んでしまったときは、開いたままの画面だから同じ対象だと考えず、選択し直した対象を確認する流れがよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．小さな一覧で、上端・下端と値の対応を照合する</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>配布物の数量を並べた、次のような一覧を考えます。読み順は表の上から下で、量の大小による順位にはしていません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">一覧の上からの並び</th><th scope="col">品名</th><th scope="col">数量</th></tr></thead><tbody><tr><td data-label="一覧の上からの並び">上</td><td data-label="品名">封筒</td><td data-label="数量">8</td></tr><tr><td data-label="一覧の上からの並び">中</td><td data-label="品名">用紙</td><td data-label="数量">3</td></tr><tr><td data-label="一覧の上からの並び">下</td><td data-label="品名">ラベル</td><td data-label="数量">5</td></tr></tbody></table></div>
+    <p>この例で目指す姿は、図でも封筒、用紙、ラベルの順に上から読める状態です。確認するときは一覧と図を横に置き、先頭の名前、末尾の名前、途中の名前を順にたどります。上端だけが合った段階で確認を終えず、全体が同じ読み順になっているかを見ます。</p>
+    <p>続いて、品名と値の対応を確かめます。名前の位置が合っていても、それだけでは数量まで合っていると判断できません。値は一覧に戻って照合し、棒の見た目だけを頼りに確認を終えないようにします。順序が正しいことと、情報の組み合わせが正しいことを、別々の確認として残す考え方です。</p>
+    <p>一部の名前だけが想定と違う場合は、元の一覧との対応を見直すところでいったん区切ります。全体が逆になっている状態か、途中だけが異なる状態かを分けると、何を直したいのかが曖昧になりません。元の表の並びを変えてよいかは、表示の確認とは分けて判断するとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．引き継ぎには、直した目的と確認結果を残す</h2>
+    <p>引き継ぎの記録では、操作した名前だけでなく、基準にした一覧と完成形を短く残します。何の資料の読み順をそろえたかが分かると、次の担当者も同じ観点で照合できます。変更前の姿を残す場合は、元の一覧と図のどちらを変更した記録なのかも区別します。</p>
+    <p>確認の記録は、次のように短くまとめられます。</p>
+    <ul>
+      <li>目的：元の一覧と同じ順に上から読めるようにする</li>
+      <li>対象：項目名が上下に並ぶ側</li>
+      <li>確認：先頭・末尾・途中の名前と、対応する値を照合した</li>
+      <li>残す情報：基準にした一覧、変更した箇所、確認した人</li>
+    </ul>
+    <p>仕上げでは、数値目盛の位置や項目名の読みやすさも見ます。読み順がそろったことだけで体裁の確認を終えず、配布する状態で名前と値を追えるかまで確認するとよいです。追加の調整が必要なら、その箇所を分けて記録し、どの変更で何を確かめたかを残します。</p>
+    <p>この作業をAIで減らすなら、<a href="/ai">事務作業にAIを取り入れる進め方</a>を考える前に、基準にする一覧と人が照合する項目を整理しておくとよいです。表示順を整える作業と、内容を確かめる作業を分けて書き出すことが、手順を見直す出発点になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">元の一覧をどの順で読ませたいか、作業前に整理したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数値が並ぶ側と項目名が並ぶ側を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">項目名のある軸を対象に変更したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">先頭・末尾・途中の名前が、一覧と同じ順になったかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">各項目名と値の組み合わせを、元の一覧と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数値目盛の位置と項目名の読みやすさを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">基準にした一覧と変更箇所、照合した内容を引き継ぎ用に記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/office/format-elements-of-a-chart" rel="noopener" target="_blank">グラフ要素の書式を変更する</a>：対象製品、右クリックによる軸設定、選択対象による画面の更新</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/available-chart-types-in-office" rel="noopener" target="_blank">Office で利用可能なグラフの種類</a>：横棒グラフで項目が縦軸、数値が横軸に表示されること</li>
+      <li><a href="https://support.microsoft.com/ja-jp/powerpoint/change-the-plotting-order-of-categories-values-or-data-series" rel="noopener" target="_blank">項目、値、またはデータ系列のプロット順序を変更する</a>：カテゴリと値の反転設定、グラフ要素の選択</li>
+      <li><a href="https://support.microsoft.com/ja-jp/office/change-the-scale-of-the-horizontal-category-axis-in-a-chart" rel="noopener" target="_blank">グラフの横 (項目) 軸の目盛を変更する</a>：項目軸の選択条件、項目を逆順にする設定の表記</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-chart-data-table-below">Excelの報告グラフの下に元の数値表を付ける手順と確認点</a></li>
+      <li><a href="/column/excel-sort-assignee-then-due-date">Excelで担当順と期限順を組み合わせて作業一覧を並べるには</a></li>
+      <li><a href="/column/powerpoint-update-linked-excel-chart">ExcelのグラフをPowerPointで更新するには？リンク貼り付けと確認</a></li>
+      <li><a href="/column/excel-table-convert-range-keep-format">Excelの表の色を残してテーブル機能だけ解除する手順と確認</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

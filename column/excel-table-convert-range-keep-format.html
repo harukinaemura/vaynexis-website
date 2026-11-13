@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの表の色を残してテーブル機能だけ解除する手順と確認｜Vaynexis</title>
+  <meta name="description" content="表の色や見た目を残したまま、テーブル機能を解除する操作と、変換後に確認する点をまとめます。書式の解除との違い、利用環境に応じた操作、数式の参照や行追加への影響を整理し、事務の表を引き継ぐ前に確かめる順番を短い例で示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの表の色を残してテーブル機能だけ解除する手順と確認｜Vaynexis">
+  <meta property="og:description" content="表の色や見た目を残したまま、テーブル機能を解除する操作と、変換後に確認する点をまとめます。書式の解除との違い、利用環境に応じた操作、数式の参照や行追加への影響を整理し、事務の表を引き継ぐ前に確かめる順番を短い例で示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-table-convert-range-keep-format">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-table-convert-range-keep-format">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの表の色を残してテーブル機能だけ解除する手順と確認","description":"表の色や見た目を残したまま、テーブル機能を解除する操作と、変換後に確認する点をまとめます。書式の解除との違い、利用環境に応じた操作、数式の参照や行追加への影響を整理し、事務の表を引き継ぐ前に確かめる順番を短い例で示します。","datePublished":"2026-11-13","dateModified":"2026-11-13","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-table-convert-range-keep-format"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの表の色を残してテーブル機能だけ解除する手順と確認","item":"https://vaynexis.jp/column/excel-table-convert-range-keep-format"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelの表の色を残してテーブル機能だけ解除する手順と確認</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの表の色を残してテーブル機能だけ解除する手順と確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelの表の色を残してテーブル機能だけを解除するには、テーブルを通常のデータ範囲へ変換します。操作では［ツール］グループの［範囲に変換］を選びます。変換後は見た目だけで終えず、計算の参照先や、その後の更新方法まで確認するとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月13日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、Excelの表の色を残してテーブル機能を解除したい小さな会社の担当者が、範囲への変換と数式・追加行への影響を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">色を消す操作と、表の仕組みを外す操作を分ける</a></li>
+      <li><a href="#s2">Windows版の操作と、Mac・Web版の違い</a></li>
+      <li><a href="#s3">変換後は、矢印・数式・追加行を別々に確かめる</a></li>
+      <li><a href="#s4">小さな事務表で、残す場所と点検する場所を決める</a></li>
+      <li><a href="#s5">引き継ぎには、変換の目的と更新時の確認を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．色を消す操作と、表の仕組みを外す操作を分ける</h2>
+    <p>確認日：2026-11-13。</p>
+    <p>Microsoftの書式ヘルプの適用先には、Excel for Microsoft 365、Excel 2024、Excel 2021と、それぞれのMac版が含まれます。以下はWindows版の操作を中心に、Mac版・Web版で案内が異なる部分を分けて示します。色を残したいのか、色そのものを変えたいのかを、作業前に分けておくと操作を選びやすくなります。</p>
+    <p>テーブルスタイルを削除しても、テーブルそのものは削除されません。「解除」という言葉だけで引き継ぐと、どちらを変える作業なのかが伝わりにくくなります。見た目を残して表の仕組みを外す、という目的を先に共有するとよいです。</p>
+    <p>また、定義済みのテーブルスタイルを適用すると、Excelは選択したデータに対してテーブルを自動的に作成します。仕上げの段階で見た目を整え直す場合にも、操作の名前だけで判断せず、最終的に残したい状態と照らし合わせます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．Windows版の操作と、Mac・Web版の違い</h2>
+    <h3 class="h3">リボンから変換する</h3>
+    <p>Windows版では、対象テーブル内の任意の場所をクリックし、リボンの［テーブル デザイン］を開きます。続いて［ツール］グループの［範囲に変換］を選びます。</p>
+    <p>表の近くの空白部分を選んだまま探すより、変更対象の表の中を選んでから進むと、別の表を扱う取り違えを防ぎやすくなります。複数の表が並んでいる書類では、見出しや末尾を見比べ、今回処理する場所を確かめます。</p>
+    <h3 class="h3">右クリックから変換する</h3>
+    <p>別の方法として、テーブルを右クリックし、［テーブル］から［範囲に変換］へ進む操作もあります。入口が違っても、目的は同じです。引き継ぎ文に操作を並べるときは、続けて行う手順と、どちらかを選ぶ手順とを区別しておきます。</p>
+    <h3 class="h3">利用環境に合う案内を使う</h3>
+    <p>Mac版では、変換操作に入る際のタブ名が［表］と案内されています。表内を選んでこのタブを開き、［範囲に変換］、［はい］の順で確定する案内です。Web版の変換手順は、テーブルを右クリックし、ショートカットメニューの［テーブル］から［範囲に変換］を選ぶ流れです。画面名が違うときは、利用環境の案内に合わせて見直します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．変換後は、矢印・数式・追加行を別々に確かめる</h2>
+    <p>変換すると、テーブルの見出しにあった並べ替え・フィルターの矢印はなくなり、数式の構造化参照は通常のセル参照に変わります。操作直後は、変わるはずの部分と残したい部分を分けて見ると、確認の漏れを減らせます。</p>
+    <p>Microsoftの構造化参照のヘルプでは、テーブルを範囲へ変換した際の参照は、同等の絶対A1スタイルの参照になると説明されています。表示されている計算結果を比べるだけでなく、式がどこを見ているかも確認の対象にします。今後書き足す場所が計算に含まれるかは、更新時に改めて点検するとよいです。</p>
+    <p>Microsoftの案内では、範囲へ戻すと、直接隣の行や列へデータを追加した際にテーブルと書式設定が自動的に広がる性質が失われます。色が残っていることと、これから加える部分にも同じ扱いが続くことを分けて考える必要があります。</p>
+    <p>通常の範囲を再びテーブルにしても、その範囲のセル参照が同等の構造化参照へ自動的に変わるわけではありません。Windows版でテーブルを作成する際は、［テーブルを作成］ダイアログボックスでセル範囲を設定します。やり直す際も、見た目を整えることと計算の参照先の確認を別の作業として扱うとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．小さな事務表で、残す場所と点検する場所を決める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>提出用の備品一覧を整える例なら、変更前の控えを残し、何を維持したいかを書き出します。対象の表以外に手を広げず、項目名、並び、表示内容を見比べられる状態にしてから操作に入る流れです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">見る場所</th><th scope="col">残したい状態</th><th scope="col">作業後に見比べる内容</th></tr></thead><tbody><tr><td data-label="見る場所">見出し</td><td data-label="残したい状態">分類が分かる色分け</td><td data-label="作業後に見比べる内容">色と文字の組み合わせ</td></tr><tr><td data-label="見る場所">明細</td><td data-label="残したい状態">読みやすい並び</td><td data-label="作業後に見比べる内容">品名と内容の対応</td></tr><tr><td data-label="見る場所">計算欄</td><td data-label="残したい状態">計算の意味が分かる配置</td><td data-label="作業後に見比べる内容">表示結果と式の参照先</td></tr><tr><td data-label="見る場所">表の末尾</td><td data-label="残したい状態">更新する場所が分かること</td><td data-label="作業後に見比べる内容">書き足す場所と点検の担当</td></tr></tbody></table></div>
+    <p>作業後は上から眺めるだけでなく、見出し、明細、計算欄、末尾へと視線を移します。色の確認を済ませた段階と、内容や計算を確認した段階を分けて記録すると、引き継ぐ側にも確認範囲が伝わります。差が見つかったときは、その場で項目の追加や並べ替えまで進めず、元の控えと比較して違う場所を絞ります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．引き継ぎには、変換の目的と更新時の確認を残す</h2>
+    <p>引き継ぎには、変更した表の場所、残したい見た目、今後書き足す場所、計算を見直す担当を記します。「色を残して解除済み」とだけ書くより、後から使う人がどこを点検するかまで分かる内容にするとよいです。操作の終了と、配布して使える状態になったことを分けて扱います。</p>
+    <p>元の控えと配布用を見比べた後は、どちらを次の更新に使うのかを決めます。書類を受け取る人がその都度操作をやり直すのか、整えた状態をそのまま使うのかも共有事項です。目的が提出用なのか継続更新用なのかを残しておくと、次の担当者が以前の見た目だけを頼りに判断することを避けやすくなります。</p>
+    <p>この作業をAIで減らすなら、繰り返している準備と、人が確かめる点を書き出したうえで、<a href="/ai">事務でのAI活用の進め方</a>につなげて考えるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">残す見た目と、変更する表の場所を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">利用している環境に合う操作の案内を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">作業前の控えと、見出しや明細の色を見比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表示内容や計算結果を変更前と比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">式の参照先と、今後書き足す場所を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">次の更新で使うファイルと、点検の担当を共有したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/format-an-excel-table" rel="noopener" target="_blank">Excel のテーブルの書式を設定する</a>：適用先、スタイル削除とテーブル削除の違い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/apply-a-table-style-without-inserting-an-excel-table" rel="noopener" target="_blank">Excel のテーブルを挿入せずにテーブル スタイルを適用する</a>：スタイル適用時の自動作成、右クリックの操作、Mac版のタブ名、追加時の自動展開の変化</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/convert-an-excel-table-to-a-range-of-data" rel="noopener" target="_blank">Excel のテーブルをデータ範囲に変換する</a>：書式の維持、変換の操作、矢印と構造化参照の変化</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/using-structured-references-with-excel-tables" rel="noopener" target="_blank">Excel テーブルでの構造化参照の使い方</a>：変換後の参照の形式、再テーブル化しても参照が自動変換されないこと</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/create-and-format-tables" rel="noopener" target="_blank">表を作成し、書式設定する</a>：テーブル作成時に範囲を指定する操作</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-select-formula-cells">Excelで計算欄だけをまとめて選ぶ手順と色分け後の確認ポイント</a></li>
+      <li><a href="/column/excel-report-copy-paste-values">Excelの報告用コピーを数式ではなく確定した値で残すには</a></li>
+      <li><a href="/column/excel-lock-cells-input-only">Excelの申請表で入力欄だけ編集できるようにする設定と確認</a></li>
+      <li><a href="/column/word-stop-automatic-numbered-lists">Wordの番号が勝手に箇条書きになるのを止める設定と確認手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
