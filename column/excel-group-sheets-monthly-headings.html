@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelのシートグループ化で月別の見出しをまとめて入力するには｜Vaynexis</title>
+  <meta name="description" content="月別の表へ同じ見出しを入れる際の、シートの選び方から入力、解除後の確認までを整理します。離れた月と連続する月の選択方法を分け、同じ位置への反映や既存データの置換に注意しながら、共通の見出しと月ごとの情報を分けて扱う手順を紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelのシートグループ化で月別の見出しをまとめて入力するには｜Vaynexis">
+  <meta property="og:description" content="月別の表へ同じ見出しを入れる際の、シートの選び方から入力、解除後の確認までを整理します。離れた月と連続する月の選択方法を分け、同じ位置への反映や既存データの置換に注意しながら、共通の見出しと月ごとの情報を分けて扱う手順を紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-group-sheets-monthly-headings">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-group-sheets-monthly-headings">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelのシートグループ化で月別の見出しをまとめて入力するには","description":"月別の表へ同じ見出しを入れる際の、シートの選び方から入力、解除後の確認までを整理します。離れた月と連続する月の選択方法を分け、同じ位置への反映や既存データの置換に注意しながら、共通の見出しと月ごとの情報を分けて扱う手順を紹介します。","datePublished":"2026-11-14","dateModified":"2026-11-14","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-group-sheets-monthly-headings"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelのシートグループ化で月別の見出しをまとめて入力する","item":"https://vaynexis.jp/column/excel-group-sheets-monthly-headings"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelのシートグループ化で月別の見出しをまとめて入力する</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelのシートグループ化で月別の見出しをまとめて入力するには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelで月別シートへ同じ見出しをまとめて入力するには、対象シートをグループ化し、共通の位置に入力します。入力前には月ごとの配置を見比べ、作業後は選択を解除してから個別の内容を確かめる流れにするとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月14日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、月別シートに同じ見出しを入力したい小さな会社の担当者が、シートグループ化の対象選択と共通入力、解除後の内容を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">見出しの言葉より先に、入力位置をそろえる</a></li>
+      <li><a href="#s2">離れた月、連続する月、全体で選び方を変える</a></li>
+      <li><a href="#s3">共通の見出しだけを入力し、月固有の内容は残す</a></li>
+      <li><a href="#s4">入力を終えたら解除方法を選び、個別編集へ戻る</a></li>
+      <li><a href="#s5">完了の確認は対象、対象外、月固有の内容の順に進める</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．見出しの言葉より先に、入力位置をそろえる</h2>
+    <p>確認日：2026年11月13日（日本時間）</p>
+    <p>Microsoftの「ワークシートをグループ化する」の適用先は、Excel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016です。入力を確定する操作を扱う「ワークシートのセルにデータを手動で入力する」の適用先は、Excel for Microsoft 365、Excel 2024、Excel 2021です。以下はWindows版の操作とし、両方の適用先に含まれるExcel for Microsoft 365、Excel 2024、Excel 2021を対象とします。</p>
+    <p>シートのグループ化は、すでに同一のデータ構造を持つ表で使う場合に最も適しています。そのため、入力前に確認したいのは、見出しの文言だけでなく、見出しを置く行と列です。月の名前だけを見て対象に含めず、表の開始位置や項目の並びまで見比べます。</p>
+    <p>共通化する範囲も先に決めておくと、途中で判断が揺れにくくなります。項目名は共通にするのか、表題まで共通にするのかを整理し、月名や担当者など個別に残す内容は別に扱います。位置がずれた表を見つけた場合は、その表をいったん対象から外し、配置をそろえる作業と見出しを入れる作業を分けるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．離れた月、連続する月、全体で選び方を変える</h2>
+    <h3 class="h3">必要な月だけを選ぶ</h3>
+    <p>対象が離れている場合は、Ctrlキーを押しながら、グループ化するワークシートのタブを選びます。月別の表の間に集計用や説明用の表がある場合は、月別のタブ名を照合しながら選択対象を絞るとよいです。入力する表の数だけでなく、含めない表の名前も作業前のメモに残しておくと、選び直す際の手がかりになります。</p>
+    <p>対象が連続している場合は、範囲の最初のタブを選び、Shiftキーを押しながら最後のタブを選びます。先頭と末尾の月だけで判断せず、間に別の用途の表が挟まっていないかも見ます。</p>
+    <h3 class="h3">ブック内をすべて対象にする</h3>
+    <p>ブック内のすべてのシートを対象にする場合は、任意のシートのタブを右クリックして［すべてのシートを選択］を選びます。これは、説明用や集計用の表も含めて変更する意図がある場面で選ぶ方法です。対象月だけの入力なのか、ブック全体の共通項目を直すのかを、選択前に切り分けます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．共通の見出しだけを入力し、月固有の内容は残す</h2>
+    <p>選択後は、作業中のシートで入力または編集するセルや範囲を選びます。アクティブセルで入力や編集を行い、EnterキーまたはTabキーを押して次のセルへ移動します。入力する言葉は、選択前に決めた共通の項目名に限定すると、月ごとの内容との区別がつきやすくなります。</p>
+    <p>たとえば、備品の記録表でそろえる項目を、次のように整理します。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">対象の表</th><th scope="col">左端の見出し</th><th scope="col">隣の見出し</th><th scope="col">さらに隣の見出し</th><th scope="col">個別に残す内容</th></tr></thead><tbody><tr><td data-label="対象の表">対象月</td><td data-label="左端の見出し">品名</td><td data-label="隣の見出し">数量</td><td data-label="さらに隣の見出し">備考</td><td data-label="個別に残す内容">月名・担当者</td></tr><tr><td data-label="対象の表">翌月</td><td data-label="左端の見出し">品名</td><td data-label="隣の見出し">数量</td><td data-label="さらに隣の見出し">備考</td><td data-label="個別に残す内容">月名・担当者</td></tr><tr><td data-label="対象の表">翌々月</td><td data-label="左端の見出し">品名</td><td data-label="隣の見出し">数量</td><td data-label="さらに隣の見出し">備考</td><td data-label="個別に残す内容">月名・担当者</td></tr></tbody></table></div>
+    <p>この表は、共通にしたい言葉と、個別に残す内容を分けた入力計画です。見出しの位置まで一致しているかを、実際の表と突き合わせてから進めます。</p>
+    <p>複数シートを選択した状態での入力や編集は、変更不要だったデータを誤って置き換えることがあります。見出しを直すつもりでも、月によって同じ場所に別の内容が入っていないかが確認点です。既存の記録がある表では、空欄に見える部分だけで判断せず、入力先の内容を読み比べるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．入力を終えたら解除方法を選び、個別編集へ戻る</h2>
+    <h3 class="h3">選択の一部を外す場合と、全体を解除する場合</h3>
+    <p>選択したシートの一部をグループから外す場合は、Ctrlキーを押しながら、外したいシートのタブを選びます。グループ全体を解除する方法には、グループの外にあるシートのタブを選ぶ方法があります。対象の追加や除外を続けたい場面と、共通入力を終えたい場面で、操作の目的を分けます。</p>
+    <p>選択していないシートが表示されない場合は、選択中のシートの見出しを右クリックし、［作業グループ解除］を選びます。「ワークシートをグループ化する」の本文では、グループ内のタブを右クリックした後の項目が［シートのグループ解除］と案内されています。引き継ぎ用の操作メモは、使う画面の表記と照合しておくとよいです。</p>
+    <h3 class="h3">タブを見たことだけで解除と判断しない</h3>
+    <p>すべてのシートをグループ化した場合は、複数のシートを閲覧すると解除されますが、一部のシートだけをグループ化した場合は、解除せずに閲覧できます。途中で表を見比べたかどうかと、共通入力の状態を終えたかどうかは、区別して確認する必要があります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．完了の確認は対象、対象外、月固有の内容の順に進める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>点検は、入力結果を見るところから始めます。対象にした月の表をそれぞれ開き、見出しの文言と配置を照合します。末尾の文字まで合っているか、隣の項目と入れ替わっていないか、空欄が残っていないかを見ます。似た名前の表がある場合は、タブ名も照合すると、確認対象の取り違えを避けやすくなります。</p>
+    <p>続いて、対象から外した表を見ます。集計用や説明用など、変更する予定のなかった表の該当箇所を確認します。対象月の結果だけで完了とせず、変えないと決めた箇所も確認範囲に含める考え方です。</p>
+    <p>最後に、月名や担当者、すでに入力されていた記録など、個別に残すと決めた内容を照合します。違いが見つかった場合は、いったん通常の入力を止め、予定した変更内容と照らして直す範囲を決めます。原因が分からないまま別の月へ入力を続けず、対象の選び方と位置の確認に戻るとよいです。</p>
+    <p>引き継ぎには、共通にした項目、個別に残した項目、対象外にした表、確認を終えた箇所を残します。操作名だけのメモよりも、どこまでを共通入力の範囲にしたかが分かる記録にすると、次回の変更時にも判断しやすくなります。</p>
+    <p>この作業をAIで減らす範囲を考える際も、共通の項目名を整理する作業と、月ごとの内容を人が確認する作業を分けておくとよいです。<a href="/ai">事務でAIを活用する進め方</a>を考える出発点として、繰り返す入力と確認の役割を書き出します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">対象の月と、対象外にする表を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見出しを置く行と列の位置を見比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力先に残すべき内容がないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">共通にする項目名と、個別に残す内容を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">共通入力を終え、個別入力へ戻る操作を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象にした表と、対象外の表の内容をそれぞれ照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">月固有の内容の確認結果を引き継ぎに残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/group-worksheets" rel="noopener" target="_blank">ワークシートをグループ化する</a>：適用先、同じ位置への変更の反映、対象シートの選択、選択の一部の解除と全体の解除、閲覧時の挙動</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/enter-data-manually-in-worksheet-cells" rel="noopener" target="_blank">ワークシートのセルにデータを手動で入力する</a>：入力手順の適用先、複数シートへの入力と確定、既存データの誤置換、選択していないシートが見えない場合の解除</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/excel-protect-workbook-structure">Excelで共有するブックのシート削除や名前変更を防ぐには</a></li>
+      <li><a href="/column/excel-consolidate-sheets-by-label">Excelの別シートの集計表を項目名で合算する手順と確認点</a></li>
+      <li><a href="/column/excel-index-sheet-hyperlinks">Excelの目次から目的のシートや記入欄へ移動するには</a></li>
+      <li><a href="/column/excel-median-work-time">ExcelのMEDIAN関数で作業時間の中央値を求めるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

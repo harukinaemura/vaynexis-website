@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExcelのMEDIAN関数で作業時間の中央値を求めるには｜Vaynexis</title>
+  <meta name="description" content="作業時間の一覧から中央に当たる時間を求める手順を、短い表で整理します。分数と時刻の差の扱い、データの個数による結果の違い、空白・ゼロ・文字列が混じる場合の確認点まで取り上げ、別の担当者へ引き継ぐときに残す情報もまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="ExcelのMEDIAN関数で作業時間の中央値を求めるには｜Vaynexis">
+  <meta property="og:description" content="作業時間の一覧から中央に当たる時間を求める手順を、短い表で整理します。分数と時刻の差の扱い、データの個数による結果の違い、空白・ゼロ・文字列が混じる場合の確認点まで取り上げ、別の担当者へ引き継ぐときに残す情報もまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-median-work-time">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-median-work-time">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ExcelのMEDIAN関数で作業時間の中央値を求めるには","description":"作業時間の一覧から中央に当たる時間を求める手順を、短い表で整理します。分数と時刻の差の扱い、データの個数による結果の違い、空白・ゼロ・文字列が混じる場合の確認点まで取り上げ、別の担当者へ引き継ぐときに残す情報もまとめます。","datePublished":"2026-11-14","dateModified":"2026-11-14","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-median-work-time"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"ExcelのMEDIAN関数で作業時間の中央値を求めるには","item":"https://vaynexis.jp/column/excel-median-work-time"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">ExcelのMEDIAN関数で作業時間の中央値を求めるには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">ExcelのMEDIAN関数で作業時間の中央値を求めるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>作業時間を分単位の数値でそろえた一覧から中央に当たる値を求めるには、MEDIAN関数に対象範囲を指定します。計算の前に、対象に含める記録と時間の単位をそろえ、計算後は対象件数と入力の抜けを確かめるとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月14日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、作業時間の中央値を求めたい小さな会社の担当者が、MEDIAN関数の範囲と時間の単位、空白やエラーを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">中央値と平均値のどちらを求めたいか</a></li>
+      <li><a href="#s2">開始・終了の時刻と所要時間を分ける</a></li>
+      <li><a href="#s3">小さな一覧で範囲と結果を確かめる</a></li>
+      <li><a href="#s4">空白・ゼロ・エラーで計算対象を取り違えない</a></li>
+      <li><a href="#s5">数字に見える文字列は元の記録と照合する</a></li>
+      <li><a href="#s6">集計範囲の意味を引き継ぐ</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．中央値と平均値のどちらを求めたいか</h2>
+    <p>確認日：2026年11月13日。</p>
+    <p>Microsoftの説明では、MEDIAN関数は数値の集まりの中央に来る値を返します。この説明の対象は、公式ヘルプの適用先に含まれるExcel 2024です。</p>
+    <p>一方、AVERAGE関数が返すのは算術平均で、数値を足し合わせ、数値の個数で割って求めます。報告欄に「平均時間」と書いているなら、中央に当たる時間を載せる欄とは区別しておくとよいです。値を出してから名前を選ぶのではなく、何を知りたい欄なのかを先に決めます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．開始・終了の時刻と所要時間を分ける</h2>
+    <p>時間の列を見つけたら、その内容が開始時刻なのか、終了時刻なのか、すでに求めた所要時間なのかを確かめます。計算用の列には、作業にかかった長さをそろえて置く方針にします。分数で記録した列と時刻の差をそのまま並べず、単位を記した見出しを付けると、後から読み返すときにも意味が分かります。</p>
+    <p>Microsoftの時刻差のヘルプでは、開始時刻をA2、終了時刻をB2に置いた場合、合計分数を求める式として 「=(B2-A2)*1440」 を示しています。この式で所要時間を分数にそろえてから、中央値を計算する対象列を選びます。元の時刻を残しておけば、転記した値だけを見て判断することを避けられます。</p>
+    <p>時刻差のヘルプもExcel 2024を適用先に含み、MINUTE関数による差の分部分は合計分数と別に示されています。合計の長さが知りたい場面では、「分」という言葉だけで式を選ばず、何を返す式かを確認することが大切です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．小さな一覧で範囲と結果を確かめる</h2>
+    <p>下の表は、数値を分単位の作業時間と見立てた説明用の入力欄です。計算の仕組みを追えるように、短い値だけを並べています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">入力セル</th><th scope="col">作業時間（分）</th></tr></thead><tbody><tr><td data-label="入力セル">A2</td><td data-label="作業時間（分）">1</td></tr><tr><td data-label="入力セル">A3</td><td data-label="作業時間（分）">2</td></tr><tr><td data-label="入力セル">A4</td><td data-label="作業時間（分）">3</td></tr><tr><td data-label="入力セル">A5</td><td data-label="作業時間（分）">4</td></tr><tr><td data-label="入力セル">A6</td><td data-label="作業時間（分）">5</td></tr><tr><td data-label="入力セル">A7</td><td data-label="作業時間（分）">6</td></tr></tbody></table></div>
+    <p>入力値と範囲はMicrosoftの使用例に合わせており、A2からA6を対象に 「=MEDIAN(A2:A6)」 と入力すると、数値が5個ある場合の中央値は3になります。対象をA7まで含めた 「=MEDIAN(A2:A7)」 では数値が6個になり、中央の値の平均に当たる3.5が返ります。出力先には計算結果の名前と単位を添え、数値だけが独り歩きしないようにします。</p>
+    <p>一覧に同じ値が見当たらない結果でも、すぐに誤りとは扱わず、対象範囲と個数を先に見直すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．空白・ゼロ・エラーで計算対象を取り違えない</h2>
+    <p>セル範囲を指定したMEDIAN関数では、文字列・論理値・空白セルは無視されますが、数値の0を含むセルは対象になります。未記入と、時間がかからなかったという記録は、意味を分けて管理したい内容です。未記入を埋めるためだけの値を置く前に、元の記録を確かめます。</p>
+    <p>数値として扱われるセルの個数を調べるには、COUNT関数に同じ対象範囲を指定できます。予定した記録の件数と比べ、差があれば空欄や入力形式を点検するための手がかりにします。件数が合うだけで正しさが決まるわけではないため、対象外の作業や集計済みの行が混ざっていないかも確認したい点です。</p>
+    <p>ただし、セル範囲を参照するCOUNT関数では、範囲内のエラー値も数える対象から外れます。MEDIAN関数はエラー値を指定するとエラーになるため、件数の確認とは別に、入力列のエラー表示も確かめます。結果の欄だけ直すのではなく、元データと計算用の列のどちらで問題が生じたかを切り分けるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．数字に見える文字列は元の記録と照合する</h2>
+    <p>Microsoftは、文字列として格納された数値が予期しない結果を引き起こす可能性を案内しています。見た目が数字でも、集計に使える入力かは別に確かめたいところです。外から受け取った一覧では、集計前に計算対象の欄を点検し、変換前の記録も残す運用にします。</p>
+    <p>文字列変換のヘルプもExcel 2024を適用先に含み、本文ではWindowsの手順に沿って説明します。</p>
+    <p>Windowsの手順では、警告が表示されたセルを選び、左上のエラーインジケーターを開いて、メニューの［数値に変換］を選びます。別の方法として、VALUE関数で文字列の数値を返す手順もあり、隣の新しい列で変換できます。警告のメニューを使う方法と、変換用の列を作る方法は、別の手順として扱います。修正後は元の記録と照合し、計算対象の件数と結果を見直します。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．集計範囲の意味を引き継ぐ</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>所要時間には、作業そのものの長さと、確認待ちを含む長さのように異なる記録があり得ます。比較する一覧では、どちらを記録するかを担当者間でそろえておくとよいです。単位が同じでも、測り始めと測り終わりが違う記録をまとめれば、結果の意味を説明しにくくなります。</p>
+    <p>引き継ぎには、対象の作業、集計に含める期間、入力列、時間の単位、未記入の扱いを残します。範囲を変更した理由も添えておくと、次の担当者が同じ基準で集計し直せます。時間の長さだけで作業の良し悪しや担当者の評価を決めず、条件や中断理由は別に読む運用がよいです。</p>
+    <p>この集計作業の手間をAIで減らすなら、元の一覧を整える作業と、結果を点検する作業に分けて、<a href="/ai">事務作業へのAI活用の進め方</a>を考えるとよいです。対象範囲や単位の決定、元の記録との照合は、人が確認する箇所として残します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">求めたい値が、一覧の中央に当たる時間であると確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">集計する作業と、測り始め・測り終わりの基準をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">所要時間の単位をそろえ、見出しに書いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">計算範囲に対象外の記録や集計済みの行が入っていないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">未記入と、時間がかからなかった記録を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数値として扱われる件数と、文字列・エラーの混入を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">結果の名前・単位と、対象範囲を変えた理由を引き継いだか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/median-function" rel="noopener" target="_blank">MEDIAN 関数</a>：中央値の定義、対象範囲の指定、使用例、空白・ゼロ・エラーの扱い、対象の版</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/average-function" rel="noopener" target="_blank">AVERAGE 関数</a>：算術平均の求め方と中央値との読み分け</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/calculate-the-difference-between-two-times-in-excel" rel="noopener" target="_blank">Excel で 2 つの時刻の差を計算する</a>：開始・終了時刻から合計分数を求める式と、差の分部分との区別</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/count-function" rel="noopener" target="_blank">COUNT 関数</a>：数値を含むセルの件数と、セル範囲内のエラー値を数えない扱い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/convert-numbers-stored-as-text-to-numbers-in-excel" rel="noopener" target="_blank">Excel で文字列として保存されている数値を数値に変換する</a>：数値が文字列として格納された場合の問題、警告からの変換と別列での変換</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-averageifs-assignee-status-work-time">Excelで担当と完了状況を指定して平均作業時間を出すには</a></li>
+      <li><a href="/column/excel-maxifs-longest-handling-time">Excelの対応履歴から担当別に最も長い処理時間を出すには</a></li>
+      <li><a href="/column/improvement-candidates-monthly-workload-compare">改善候補の作業時間をどう比べる？処理の長さと月の回数をそろえる</a></li>
+      <li><a href="/column/excel-isoweeknum-daily-report">Excel日報の日付にISOWEEKNUMで週番号を付けるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

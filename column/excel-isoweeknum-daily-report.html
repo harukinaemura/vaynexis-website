@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel日報の日付にISOWEEKNUMで週番号を付けるには｜Vaynexis</title>
+  <meta name="description" content="日報の日付を週単位で整理したい事務担当者向けに、週番号の列へ入れる式と、下の行へコピーする手順を紹介します。月曜始まりだけでは数え方がそろわない理由、文字列の日付やエラーの確認、年末年始の報告と社内の集計基準を照合する順番までまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excel日報の日付にISOWEEKNUMで週番号を付けるには｜Vaynexis">
+  <meta property="og:description" content="日報の日付を週単位で整理したい事務担当者向けに、週番号の列へ入れる式と、下の行へコピーする手順を紹介します。月曜始まりだけでは数え方がそろわない理由、文字列の日付やエラーの確認、年末年始の報告と社内の集計基準を照合する順番までまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-isoweeknum-daily-report">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-isoweeknum-daily-report">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excel日報の日付にISOWEEKNUMで週番号を付けるには","description":"日報の日付を週単位で整理したい事務担当者向けに、週番号の列へ入れる式と、下の行へコピーする手順を紹介します。月曜始まりだけでは数え方がそろわない理由、文字列の日付やエラーの確認、年末年始の報告と社内の集計基準を照合する順番までまとめます。","datePublished":"2026-11-14","dateModified":"2026-11-14","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-isoweeknum-daily-report"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excel日報の日付にISOWEEKNUMで週番号を付けるに","item":"https://vaynexis.jp/column/excel-isoweeknum-daily-report"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excel日報の日付にISOWEEKNUMで週番号を付けるに</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excel日報の日付にISOWEEKNUMで週番号を付けるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelの日報には、日付のセルを参照するISOWEEKNUM関数でISO週番号を付けられます。日付と週番号の欄を分け、週の数え方を引き継ぎ先とそろえます。年末年始は、日付の年だけで報告を区切らず、週としてまとめる範囲も確かめるとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月14日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、日報をISO週番号で整理したい小さな会社の担当者が、ISOWEEKNUM関数の入力とコピー、日付の型や年末年始の扱いを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">日付を残し、隣の欄へ週番号の式を入れます</a></li>
+      <li><a href="#s2">日報の明細へコピーし、参照する行を確かめます</a></li>
+      <li><a href="#s3">月曜始まりと、年の最初の週の決め方を分けます</a></li>
+      <li><a href="#s4">エラーは、元の日付の型から切り分けます</a></li>
+      <li><a href="#s5">年末年始の報告と、引き継ぐ基準をそろえます</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．日付を残し、隣の欄へ週番号の式を入れます</h2>
+    <p>確認日：2026-11-13。</p>
+    <p>ここで扱うコピー操作はWindows版を対象とし、公式ヘルプの適用先はExcel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016です。 ISOWEEKNUM関数の書式は、週番号を調べる日付を括弧の中に指定する形です。</p>
+    <p>日付の欄を週番号で置き換えると、後から元の記録へ戻って照合しにくくなります。日報の明細に日付を残し、隣に週番号の見出しを置く形なら、どの記録から計算したかを並べて読めます。集計用の欄と、担当者が日々入力する欄も区別しておくとよいです。</p>
+    <p>日付がA2にある場合、週番号の欄へ入力する式は「=ISOWEEKNUM(A2)」です。 式を入れる位置は日付と同じ行にそろえます。まずは入力済みの日付に対応する欄で結果を読み、日付の欄を参照できているかを確認してから、ほかの明細へ広げる順です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．日報の明細へコピーし、参照する行を確かめます</h2>
+    <p>式を含むセルと入力先の隣接範囲を選び、［ホーム］の［フィル］から［下］を選択すると、数式を下方向へ入力できます。 相対参照の数式は、絶対参照や複合参照を含めない限り、下方向への入力に合わせて行ごとに調整されます。</p>
+    <p>コピーした後は、先頭の結果だけでなく、途中と末尾の明細も見ます。すべての式が同じ日付のセルを指していないか、日付と週番号の対応が途中からずれていないかを、式の参照先で確認するためです。週番号が続けて同じ値になっていても、それだけで誤りとは判断せず、元の日付と並べて読みます。</p>
+    <p>同じ範囲の選択後、Ctrl+Dキーを押して数式を下方向へ入力する方法もあります。 日付を変更しても結果が変わらないときは、自動計算が無効だと数式が再計算されない点も確認箇所です。 選択した範囲へ入力する方法は同じなので、使う操作を引き継ぎメモにそろえて書きます。同じ式を入れ直す前に、参照先の誤りと、計算が更新されていない状態を切り分けるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．月曜始まりと、年の最初の週の決め方を分けます</h2>
+    <p>MicrosoftのWEEKNUM関数の説明では、年の最初の木曜日を含む週を第1週とする方式が、ISO 8601に規定された方式です。 一方、同じヘルプには、1月1日を含む週を第1週とする別の方式も示されています。</p>
+    <p>週の始まりをそろえることと、年の最初の週をそろえることは、分けて照合するのがよいです。引き継いだ表に「月曜始まり」とだけ書いてある場合は、その言葉だけで数え方を判断せず、年の境界でどの期間を同じ週として扱うのかも担当者に尋ねます。</p>
+    <p>ISOWEEKNUM関数の公式使用例では、日付「2012/3/9」に対する週番号は10です。 日付と式の対応を、小さな日報の形にすると次のようになります。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">日付の入力欄</th><th scope="col">週番号の欄へ入れる式</th><th scope="col">週番号</th></tr></thead><tbody><tr><td data-label="日付の入力欄">A2：2012/3/9</td><td data-label="週番号の欄へ入れる式">=ISOWEEKNUM(A2)</td><td data-label="週番号">10</td></tr></tbody></table></div>
+    <p>作業内容や担当者の欄は省いています。式の確認と、実際の日報の記載内容の確認を分け、計算結果だけを見て日報全体の確認を終えない流れにします。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．エラーは、元の日付の型から切り分けます</h2>
+    <p>ISOWEEKNUM関数では、日付の引数が無効な数値なら#NUM!、無効な日付型なら#VALUE!が返されます。 番号の欄へ直接別の値を入力して見た目を整える前に、参照先の日付を確かめます。記録の誤りを直すのか、日付の読み取り方を直すのかを分けるためです。</p>
+    <p>文字列として保存された日付は、DATEVALUE関数で、日付として認識できるシリアル値へ変換できます。 別の資料から受け取った日付であれば、元の記録を残したまま、変換後の年月日が意図したものか照合する形がよいです。変換できたことと、記録として正しいことは分けて確認します。</p>
+    <p>DATEVALUE関数は、年の部分を省略した日付文字列に対して、コンピューターの組み込みクロックから現在の年を使います。 また、システムの日付設定によって、DATEVALUE関数の結果が公式使用例と異なることがあります。 過去の記録を処理するときは、元の資料にある年も含めて照合し、変換された値を無条件に採用しない流れにします。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．年末年始の報告と、引き継ぐ基準をそろえます</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>年末と年始の日報は、週の途中で報告を分断してよいかを先に決めます。日付の年で書類を分ける場合でも、週としてまとめたい範囲がどこからどこまでかを併記すると、確認の基準を共有しやすくなります。週番号の表示だけを頼りに、年の異なる明細をまとめないようにします。</p>
+    <p>社内で使っている週番号と結果が異なった場合は、どちらの番号を提出用に使うのかを担当者と合わせます。業務の締め日や年度の区切りを基準にした表なら、その運用も引き継ぎの対象です。計算式を変更する前に、報告先が求めている区切りを明らかにしておくとよいです。</p>
+    <p>引き継ぐメモには、日付の入力欄、計算式を置く欄、週の数え方、年をまたぐ報告のまとめ方を残します。新しい明細を追加する担当者と、集計した報告を読む担当者の双方が、同じ基準で元の日報をたどれる形を目指します。番号が合わないときに照合する相手も書き添えると、計算式だけでは判断できない運用を確認しやすくなります。</p>
+    <p>日報の転記や集計の手間を洗い出し、この作業をAIで減らす進め方を考えるなら、<a href="/ai">事務作業へのAI活用を整理する</a>ときも、入力する欄と人が照合する範囲を先に書き出すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">日付を残し、週番号を別の欄に置いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">式が同じ行の日付のセルを指していることを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">コピーした範囲の途中と末尾も照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">エラーがある日付を、元の記録と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">週の始まりと、年の最初の週の決め方を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">年末年始にまとめる期間を、報告先と確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">日付の入力欄と計算欄、番号が合わないときの確認先を引き継ぎメモに記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/fill-a-formula-down-into-adjacent-cells" rel="noopener" target="_blank">隣り合ったセルに数式をコピーする</a>：操作対象、下方向へのコピー、相対参照、自動計算</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/isoweeknum-function" rel="noopener" target="_blank">ISOWEEKNUM 関数</a>：ISO週番号の機能、書式、入力例、引数のエラー</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/weeknum-function" rel="noopener" target="_blank">WEEKNUM 関数</a>：年の最初の週を決める方式の違い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/datevalue-function" rel="noopener" target="_blank">DATEVALUE 関数</a>：日付文字列の変換、年省略時の扱い、日付設定による違い</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-date-with-weekday-display">Excelの作業予定表で日付と曜日を同じセルに表示する手順</a></li>
+      <li><a href="/column/excel-running-total-expenses">Excelで日付順の支出明細に累計額を付ける手順と確認点</a></li>
+      <li><a href="/column/daily-report-ai">日報をAIでまとめる手順</a></li>
+      <li><a href="/column/excel-switch-code-message">ExcelのSWITCH関数で区分コード別の案内文を表示するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

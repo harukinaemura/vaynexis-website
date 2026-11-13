@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExcelのSWITCH関数で区分コード別の案内文を表示するには｜Vaynexis</title>
+  <meta name="description" content="区分コードに応じて決まった案内文を表示したい事務担当者へ、比較するセルとコード・文面の組み合わせ方を整理します。短い数式と対応表をもとに、未登録コードの表示、文字列の引用符、コピー後の参照先、変更時の点検を確認し、引き継ぎに残す項目までまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="ExcelのSWITCH関数で区分コード別の案内文を表示するには｜Vaynexis">
+  <meta property="og:description" content="区分コードに応じて決まった案内文を表示したい事務担当者へ、比較するセルとコード・文面の組み合わせ方を整理します。短い数式と対応表をもとに、未登録コードの表示、文字列の引用符、コピー後の参照先、変更時の点検を確認し、引き継ぎに残す項目までまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-switch-code-message">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-switch-code-message">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ExcelのSWITCH関数で区分コード別の案内文を表示するには","description":"区分コードに応じて決まった案内文を表示したい事務担当者へ、比較するセルとコード・文面の組み合わせ方を整理します。短い数式と対応表をもとに、未登録コードの表示、文字列の引用符、コピー後の参照先、変更時の点検を確認し、引き継ぎに残す項目までまとめます。","datePublished":"2026-11-14","dateModified":"2026-11-14","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-switch-code-message"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"ExcelのSWITCH関数で区分コード別の案内文を表示する","item":"https://vaynexis.jp/column/excel-switch-code-message"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">ExcelのSWITCH関数で区分コード別の案内文を表示する</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">ExcelのSWITCH関数で区分コード別の案内文を表示するには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelで区分コード別の案内文を表示するには、SWITCH関数で入力値とコードを比較し、最初に一致したコードに対応する文面を返します。未登録コードの表示も先に決め、入力欄と案内文の欄を分けて管理するとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月14日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、区分コード別の案内文を表示したい小さな会社の担当者が、SWITCH関数の入力順と既定値、コピー後の対応を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">固定コードの対応を決め、使う版を確かめる</a></li>
+      <li><a href="#s2">コードと案内文を交互に並べて入力する</a></li>
+      <li><a href="#s3">下へコピーした後は、入力セルとの対応を見る</a></li>
+      <li><a href="#s4">未一致の表示と入力時のエラーを切り分ける</a></li>
+      <li><a href="#s5">文面の変更と引き継ぎで残すこと</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．固定コードの対応を決め、使う版を確かめる</h2>
+    <p>確認日：2026-11-13。</p>
+    <p>Microsoftの公式ヘルプに掲載された適用先は、Excel for Microsoft 365、Excel for Microsoft 365 for Mac、Excel 2024、Excel 2024 for Mac、Excel 2021、Excel 2021 for Mac、Excel 2019です。以下の入力手順は、このうちWindows版を対象にします。</p>
+    <p>最初に決めるのは、どのコードにどの案内文を対応させるかです。表示する文面が担当者ごとに異なるまま数式を作ると、計算結果の正誤と、案内内容の妥当性が混ざってしまいます。コードの意味、表示したい文面、対応するコードがないときの文面を、入力前に書き出すとよいです。</p>
+    <p>比較する値には、数値、日付、テキストなどを指定できます。ここでは少数の固定コードと定型文の対応に絞ります。案内文を決める担当者と、数式を直す担当者も分けておくと、文面の変更を計算の修正だけで済ませずに確認できます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．コードと案内文を交互に並べて入力する</h2>
+    <p>SWITCH関数は、比較する値の後ろに、照合するコードと返す結果を組にして並べる構文です。一致しないときに返す既定値は、数式の最後の引数に置きます。コードだけを先に全部並べるのではなく、対応する案内文と隣り合わせで読むと、組み合わせを点検しやすくなります。</p>
+    <p>数式に直接書く文字列は、二重引用符で囲みます。資料手配の区分を題材に、入力コードと表示文面を次のように決めたとします。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">入力コード</th><th scope="col">区分の意味</th><th scope="col">表示する案内文</th></tr></thead><tbody><tr><td data-label="入力コード">D</td><td data-label="区分の意味">資料送付</td><td data-label="表示する案内文">資料を送付します</td></tr><tr><td data-label="入力コード">S</td><td data-label="区分の意味">日程調整</td><td data-label="表示する案内文">日程を調整します</td></tr><tr><td data-label="入力コード">X（登録外の例）</td><td data-label="区分の意味">対応する区分なし</td><td data-label="表示する案内文">コードを確認</td></tr></tbody></table></div>
+    <p>入力コードのセルをA2、案内文のセルをB2とした場合の数式例です。</p>
+    <p>「=SWITCH(A2,"D","資料を送付します","S","日程を調整します","コードを確認")」</p>
+    <p>数式例は、先頭に入力セルを置き、コードと案内文の組、その後に未一致時の文面を並べたものです。表の文面は説明用の対応であり、社内で用いる案内内容は担当者が決めます。</p>
+    <p>数式を入力した後は、WindowsではEnterキーで確定します。まず登録済みのコードを入れ、対応表の文面と照合します。登録のないコードも試す順番に含めると、通常の案内と確認が必要な表示を区別できます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．下へコピーした後は、入力セルとの対応を見る</h2>
+    <p>数式を含むセルと入力先の隣接セルを選び、［ホーム］の［フィル］から［下］を選ぶと、下方向へ入力できます。下方向へのコピーでは、絶対参照や複合参照を含めない限り、相対参照が行ごとに調整されます。表示された案内文だけでなく、同じ行の入力欄を指しているかも点検するとよいです。</p>
+    <p>例のA2を固定しない相対参照で下へコピーする場合は、参照する行も移る仕組みです。コピー先が元の入力欄を見続けていないか、途中の行だけ異なる式になっていないかを見比べます。コードと文面の組を読む作業と、入力セルの位置を見る作業を分けると、どこを直すべきか整理できます。</p>
+    <p>コピー前に確認した対応表は、コピー後の照合にも使います。各コードが現れる行を選び、コードの意味と表示文面を対で読み合わせるとよいです。同じ文面が連続している部分だけを見るより、切り替わる位置を含めて確認するほうが、対応の取り違えを見つける助けになります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．未一致の表示と入力時のエラーを切り分ける</h2>
+    <h3 class="h3">未登録コードと重複コード</h3>
+    <p>一致する値がなく、既定値も指定していない場合、SWITCH関数は#N/Aエラーを返します。既定値を指定した場合は、一致するコードが見つからないときにその値を返します。運用では、未一致時の表示を通常の案内と混同しない文面にしておくとよいです。案内欄を見た人が入力内容を見直せるよう、確認する担当者も決めておきます。</p>
+    <p>同じコードを重ねて指定した場合も、返るのは最初に一致した値に対応する結果です。同じ区分なのに文面が違って見えるときは、対応の重複も点検対象に含めます。文面を追記するだけで済ませず、元の対応を置き換えるのか、別の区分を設けるのかを先に整理するとよいです。</p>
+    <h3 class="h3">数式を受け付けないとき</h3>
+    <p>引数を区切る記号はOSのロケールとExcelの設定によって異なる場合があります。入力を受け付けない状態では、案内文の内容を直す前に、記号や引用符の入力を確認するとよいです。別の環境から受け取った数式も、文面の誤りと入力形式の違いを切り分けて見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．文面の変更と引き継ぎで残すこと</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>引き継ぎでは、コードの一覧だけでなく、各案内文をどの場面で使うかも残します。文字列が正しく表示されても、案内する内容が現在の運用に合っているとは限りません。文面を変更できる担当者と、変更後に読み合わせる担当者を決めておくとよいです。</p>
+    <p>未登録コードが見つかったときは、入力の誤りなのか、新たな区分が必要なのかを担当者が判断します。確認用の表示を、業務上の承認や却下の判断として扱わないことも、引き継ぎに含めます。数式へ組み込むのは、すでに決まっている対応です。新しい案内内容を決める作業とは分けて管理します。</p>
+    <p>引き継ぎ用のメモには、入力する欄、案内を表示する欄、文面の決定者、未登録コードが出たときの確認先、変更後に照合する項目を残します。修正の際は、変更した文面に対応する区分に加え、従来の区分と未登録の入力も照合対象にするとよいです。確認を終えた式をどの範囲へ反映するかまで決めると、担当者間で作業の区切りを共有できます。</p>
+    <p>事務の手間を洗い出すなら、コードを整える作業、文面を決める作業、結果を照合する作業を分けて、<a href="/ai">AIを使う前の業務整理</a>につなげるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">入力する区分コードと、対応する案内文を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力欄と表示欄を分け、参照先を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">コードと案内文の組み合わせに抜けや重複がないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">未登録コードで表示する確認用の文面を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">下へコピーした後も、同じ行の入力欄との対応を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">文面の変更担当者と、変更後の照合範囲を決めたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/switch-function" rel="noopener" target="_blank">SWITCH 関数</a>：対応コードの評価、適用先、構文、既定値、未一致時のエラー</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/how-to-avoid-broken-formulas-in-excel" rel="noopener" target="_blank">Excel で壊れた数式のエラーを回避する方法</a>：文字列の二重引用符、区切り記号の環境差</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/create-a-simple-formula-in-excel" rel="noopener" target="_blank">Excel で簡単な数式を作成する</a>：数式の入力確定キー</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/fill-a-formula-down-into-adjacent-cells" rel="noopener" target="_blank">隣り合ったセルに数式をコピーする</a>：隣接セルへの数式入力と相対参照の調整</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-input-message-guidance">Excelの記入欄を選んだときに入力方法を案内する設定と確認</a></li>
+      <li><a href="/column/excel-countifs-assignee-status">Excelで担当者と対応状況が一致する明細を数えるには？</a></li>
+      <li><a href="/column/word-mail-merge-conditional-text-check">相手の条件で案内文が変わる差し込み印刷、分かれ目からの検品方法</a></li>
+      <li><a href="/column/excel-print-comments-sheet-end">Excelの確認コメントを表の末尾にまとめて印刷するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

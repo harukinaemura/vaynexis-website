@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelのグラフタイトルを報告月のセルと連動させる設定と確認点｜Vaynexis</title>
+  <meta name="description" content="報告月を直すたびにグラフの題名も書き換えている場合に、題名をセル参照で連動させる設定を整理します。利用する版と対応しないグラフの種類、数式バーでの操作、題名用の文字列の用意、直接編集で連動が外れた際の対処、引き継ぎ時の確認点を扱います。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelのグラフタイトルを報告月のセルと連動させる設定と確認点｜Vaynexis">
+  <meta property="og:description" content="報告月を直すたびにグラフの題名も書き換えている場合に、題名をセル参照で連動させる設定を整理します。利用する版と対応しないグラフの種類、数式バーでの操作、題名用の文字列の用意、直接編集で連動が外れた際の対処、引き継ぎ時の確認点を扱います。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-chart-title-cell-link">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-chart-title-cell-link">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelのグラフタイトルを報告月のセルと連動させる設定と確認点","description":"報告月を直すたびにグラフの題名も書き換えている場合に、題名をセル参照で連動させる設定を整理します。利用する版と対応しないグラフの種類、数式バーでの操作、題名用の文字列の用意、直接編集で連動が外れた際の対処、引き継ぎ時の確認点を扱います。","datePublished":"2026-11-14","dateModified":"2026-11-14","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-chart-title-cell-link"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelのグラフタイトルを報告月のセルと連動させる設定と確","item":"https://vaynexis.jp/column/excel-chart-title-cell-link"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelのグラフタイトルを報告月のセルと連動させる設定と確</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelのグラフタイトルを報告月のセルと連動させる設定と確認点</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelのグラフタイトルを、報告月を題名用の文字列に整えたセルにリンクすると、参照元の内容を変えたときに題名へ自動反映できます。更新する場所を参照元にそろえ、報告対象と題名の月が合っているかを共有前に確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月14日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、報告月に合わせてグラフタイトルを更新したい小さな会社の担当者が、セルへのリンク設定と対応する種類、更新する場所を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">利用する版と、リンクの対象になるグラフを確認する</a></li>
+      <li><a href="#s2">タイトルを選び、数式バーから参照先を指定する</a></li>
+      <li><a href="#s3">報告月だけか、題名全体かを用意する段階で決める</a></li>
+      <li><a href="#s4">連動しなくなったときは、文面の編集場所を見直す</a></li>
+      <li><a href="#s5">引き継ぎには、更新する場所と確認する範囲を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．利用する版と、リンクの対象になるグラフを確認する</h2>
+    <p>確認日：2026-11-13（日本時間）</p>
+    <p>Microsoftのリンク設定のヘルプが適用先として挙げているのは、Excel for Microsoft 365、Excel 2024、Excel 2021です。ここでは、Windows版の操作として、すでにある報告用の図の題名を連動させる手順に絞ります。集計の作り方や、別の資料へ図を貼り付ける操作は扱いません。</p>
+    <p>グラフタイトルそのものは任意の種類のグラフに追加できます。リンク設定の日本語ヘルプは、非対応のグラフの種類として、マップ、ツリーマップ、サンバースト、ヒストグラム、パレート、ボックス &amp; ひげ、ウォーターフォール、フィルターを列挙しています。英語版の同じページでは、この最後の項目は Funnel と書かれています。日本語版の「フィルター」が画面上のグラフの種類名と同じとは限らないため、使うグラフがリンクの対象かどうかは、お使いの Excel のグラフの種類の一覧と照らして確かめます。題名が表示できることと、その題名をセルへリンクできることを分けて考えるのが出発点です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．タイトルを選び、数式バーから参照先を指定する</h2>
+    <h3 class="h3">先に、設定する対象を選ぶ</h3>
+    <p>リンク操作では、すでにグラフにあるタイトルを選択してから設定を始めます。グラフ全体の見た目を整える前に、題名の部分が操作対象になっているかを見ます。図が並んだ報告資料では、どの図の題名を変えるのかも先に決めておくとよいです。</p>
+    <p>タイトルを直接選びにくい場合は、グラフを選択し、［書式］タブの［現在の選択］グループにある［グラフ要素］ボックスから対象を選択する方法もあります。グラフツール内のタブ名は、利用しているExcelのバージョンによって異なります。手順を引き継ぐ際は、画面の見た目だけでなく「題名を選ぶ」という目的も添えると、受け手が操作対象を追いやすくなります。</p>
+    <h3 class="h3">等号を入れてから、表示したい内容のセルを選ぶ</h3>
+    <p>タイトルを選択した状態で、数式バーに等号（=）を入力します。続いて、題名に表示したい内容が入っているワークシートのセルを選択します。題名へ表示したい内容の置き場所を確認しておくと、この段階で選び直す手間を避けやすくなります。</p>
+    <p>参照を手入力する場合は、シート名の後に感嘆符を置く形を使い、公式の入力例は「=Sheet1!F2」です。最後にEnterキーを押して確定します。参照先の入力と確定を続けて行い、操作を終えた状態で題名を読み直します。参照の文字列を覚えて入力することより、表示させたい内容の場所を取り違えないことを優先するとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．報告月だけか、題名全体かを用意する段階で決める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>参照元には、読み手に見せたい題名の完成した文面を置く形で考えます。報告月だけを見せたい資料と、月に加えて何の報告かも題名に含めたい資料では、用意する文面が違います。期間だけで意味が通じるか、対象名も必要かを先に決めます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">題名に含めたい範囲</th><th scope="col">参照元に用意する文字列の考え方</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="題名に含めたい範囲">報告月だけ</td><td data-label="参照元に用意する文字列の考え方">報告対象の年・月</td><td data-label="確かめること">年をまたいでも対象を読み取れるか</td></tr><tr><td data-label="題名に含めたい範囲">報告月と対象名</td><td data-label="参照元に用意する文字列の考え方">報告対象の年・月に「備品点検」を添えた文面</td><td data-label="確かめること">何の報告かを題名から読み取れるか</td></tr><tr><td data-label="題名に含めたい範囲">集計期間を含む対象名</td><td data-label="参照元に用意する文字列の考え方">集計の始まりと終わりに対象名を添えた文面</td><td data-label="確かめること">単月と期間累計を混同しないか</td></tr></tbody></table></div>
+    <p>用意する文面は、報告書の表紙や集計表の見出しとも見比べます。「報告を作成した月」と「報告の対象になった月」を区別しておくことが大切です。題名をどちらの意味で付けたのかが曖昧なままでは、文字が連動していても読み手の理解がそろいません。</p>
+    <p>また、題名が示す月と、数値を集めた期間は別々に照合します。題名が期待どおり変わったことだけを、報告内容全体の確認済みの印にはしません。完成した題名、集計対象の期間、配布する資料の名前を読み合わせるところまでを仕上げの流れに含めます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．連動しなくなったときは、文面の編集場所を見直す</h2>
+    <h3 class="h3">普段の月次更新は、参照元で行う</h3>
+    <p>Microsoftの編集ヘルプでは、設定後の文面を参照元のセルで編集し、Enterキーを押すと変更がグラフに自動表示されると案内しています。題名の誤字に気づいたときも、まず更新する場所を確認する流れにします。見た目をすぐ直すことと、次の報告でも同じ流れで更新できることの両方を考えるとよいです。</p>
+    <p>同じ編集ヘルプでは、グラフ上でタイトルの内容を直接編集すると、対応するワークシートのセルとのリンクは失われると案内しています。同ヘルプによると、自動反映を戻すには、タイトルと対応するセルとのリンクを設定し直す必要があります。表示された文字が正しくても、連動する状態が保たれているかは別に確認する必要があります。引き継いだ後に月が変わらなくなった場合は、最後にどこで文面を直したかを振り返る手掛かりになります。</p>
+    <h3 class="h3">文面の変更と、見た目の調整を分ける</h3>
+    <p>Microsoftの編集ヘルプでは、タイトル全体の書式を変える場合は、タイトルを右クリックし、［グラフ タイトルの書式設定］から目的の設定を選べると案内しています。同ヘルプによると、タイトルの文字が最大サイズ内に収まらない場合は、切り捨てられることがあります。月の部分だけでなく、題名の末尾まで読めるかを見ます。対象名や期間の補足が欠けていると、資料の意味を読み違えるおそれがあるためです。</p>
+    <p>文字を短くする判断では、装飾よりも、期間と対象を識別できることを先に考えます。作成者が知っている略称に置き換えるだけでは、受け手に意味が伝わるかの確認が残ります。共有する形に近い大きさで題名全体を読み、報告対象を説明できる文面かを見直すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．引き継ぎには、更新する場所と確認する範囲を残す</h2>
+    <p>引き継ぎメモには、題名の参照元がある場所、その内容を更新する担当、題名に含める期間の意味を残します。操作の順番だけでなく、どの内容を正しいものとして照合するのかまで伝えるのが目的です。題名と報告内容が食い違った場合に、受け手が確認先へ戻れる形を目指します。</p>
+    <p>月次の作業では、文面を直す担当と配布前に照合する担当が同じとは限りません。受け渡す際は、今回の対象期間を伝え、確認を終えた範囲を短く添えます。未確認の数値が残っているのに、題名の更新をもって資料全体の確認が終わったように扱わないことも大切です。</p>
+    <p>事務の手間を洗い出すなら、月の入力、題名との照合、配布前の確認に分けて、<a href="/ai">AIで扱う作業の範囲</a>を整理するとよいです。人が判断する対象期間と、確認を終える担当も併せて決めます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">利用する版と、対象の図がリンクを使える種類かを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">題名を設定する図と、表示したい内容の置き場所を対応させたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">題名を選ぶ操作から参照先の指定、確定までを終えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">参照元の文面と表示された題名を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">題名の月と、数値を集計した対象期間を別々に確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">文面を更新する場所と、連動が外れた際の戻し方を共有したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">題名の末尾まで読めるかを確認し、照合した範囲を引き継いだか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/link-a-chart-title-label-or-text-box-to-a-worksheet-cell" rel="noopener" target="_blank">グラフのタイトル、ラベル、またはテキスト ボックスをワークシートのセルにリンクする</a>：適用先、非対応のグラフ、タイトル選択、数式バーからのリンク、内容の自動反映</li>
+      <li><a href="https://support.microsoft.com/ja-jp/office/excelexp/add-or-remove-titles-in-a-chart" rel="noopener" target="_blank">グラフのタイトルを追加または削除する</a>：グラフへの題名の追加とセル連動の可否を区別する前提</li>
+      <li><a href="https://support.microsoft.com/en-us/excel/link-a-chart-title-label-or-text-box-to-a-worksheet-cell" rel="noopener" target="_blank">Link a chart title, label, or text box to a worksheet cell（Microsoft・英</a>：日本語版の「フィルター」に当たる英語版の項目</li>
+      <li><a href="https://support.microsoft.com/ja-jp/office/edit-titles-or-data-labels-in-a-chart" rel="noopener" target="_blank">グラフのタイトルまたはデータ ラベルを編集する</a>：セル参照の入力例、更新する場所、直接編集によるリンクの消失と再設定、書式設定、文字の切り捨て</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-chart-data-table-below">Excelの報告グラフの下に元の数値表を付ける手順と確認点</a></li>
+      <li><a href="/column/excel-chart-moving-average-line-monthly">Excelの月次グラフに移動平均線を加え、期間を調整するには</a></li>
+      <li><a href="/column/powerpoint-update-linked-excel-chart">ExcelのグラフをPowerPointで更新するには？リンク貼り付けと確認</a></li>
+      <li><a href="/column/excel-group-sheets-monthly-headings">Excelのシートグループ化で月別の見出しをまとめて入力するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

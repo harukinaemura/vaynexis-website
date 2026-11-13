@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI転記作業で確認工数が増えたら？手直しを含む効果の測り方｜Vaynexis</title>
+  <meta name="description" content="AI転記作業の効果は、入力の速さだけでは測れません。準備、出力との照合、差し戻し、修正後の再確認まで含め、導入前後を同じ範囲で比べる方法を整理します。担当者別の手間、完了件数、確認待ちの滞留を残し、確認工数が増えた原因から次に直す工程を考えます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="AI転記作業で確認工数が増えたら？手直しを含む効果の測り方｜Vaynexis">
+  <meta property="og:description" content="AI転記作業の効果は、入力の速さだけでは測れません。準備、出力との照合、差し戻し、修正後の再確認まで含め、導入前後を同じ範囲で比べる方法を整理します。担当者別の手間、完了件数、確認待ちの滞留を残し、確認工数が増えた原因から次に直す工程を考えます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/ai-transcription-review-workload">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/ai-transcription-review-workload">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AI転記作業で確認工数が増えたら？手直しを含む効果の測り方","description":"AI転記作業の効果は、入力の速さだけでは測れません。準備、出力との照合、差し戻し、修正後の再確認まで含め、導入前後を同じ範囲で比べる方法を整理します。担当者別の手間、完了件数、確認待ちの滞留を残し、確認工数が増えた原因から次に直す工程を考えます。","datePublished":"2026-11-14","dateModified":"2026-11-14","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/ai-transcription-review-workload"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"AI転記作業で確認工数が増えたら？手直しを含む効果の測り方","item":"https://vaynexis.jp/column/ai-transcription-review-workload"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">AI転記作業で確認工数が増えたら？手直しを含む効果の測り方</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">AI転記作業で確認工数が増えたら？手直しを含む効果の測り方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>入力が速くなっても確認の負担が増えたときは、準備から確認済みの成果物を渡すまでの手間を、担当者ごとに記録して比べます。修正を繰り返した案件や途中で従来の方法へ戻した案件も含め、処理を終えた件数と残る誤りを併せて見ます。増えた手間の場所を特定し、渡し方や対象範囲を見直すのが当社の考え方です。</p></div>
+    <p class="col-meta">公開：2026年11月14日／情報の確認日：2026年11月13日（出典はこの記事の最後）</p>
+    <p>この記事は、AI転記作業で増えた確認の負担を測り直したい小さな会社の担当者が、準備から手直し・再確認までの工数と完了件数を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月13日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">評価の対象を、出力が届いた後まで広げる</a></li>
+      <li><a href="#s2">作業を終える基準と、記録する担当をそろえる</a></li>
+      <li><a href="#s3">人が使った時間と、待っていた時間を分ける</a></li>
+      <li><a href="#s4">完了件数と案件の難しさを合わせて比べる</a></li>
+      <li><a href="#s5">増えた工程から、次に直す箇所を決める</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．評価の対象を、出力が届いた後まで広げる</h2>
+    <p>確認日：2026-11-13</p>
+    <p>厚生労働省の2023年3月の介護分野の調査報告書では、あらかじめ定めた成果指標を用いて、取組前後の変化を見える化する方法が示されています。</p>
+    <p>情報処理推進機構の中核人材育成プログラムの成果物である手引書（2026年7月・第1版）は、AIシステムの提供開始後も導入時点のセキュリティ対策とリスク評価が有効かを確かめ、必要に応じて見直す段階を「運用」と位置づけています。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．作業を終える基準と、記録する担当をそろえる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>まず、何を受け取った時点で測り始め、どんな状態を完了とするかを決めます。元の資料を受け取り、入力に使う部分を選ぶところから、照合と修正を終えて次の担当へ渡すところまでを対象にする考え方です。導入前も同じ入口と出口で記録します。</p>
+    <p>完成の基準には、必要な項目がそろっていることに加え、元の資料との対応をたどれること、判断待ちの項目が担当者へ引き継がれていることを含めます。下書きが届いた時点と、業務で使える状態になった時点を分けて記録するとよいです。</p>
+    <p>次の表は、発注書の内容を管理表へ移す場面を想定した記録の例です。時間や効果の数値を置かず、作業の区切りと記録する人を示しています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">工程</th><th scope="col">誰が・いつ記録するか</th><th scope="col">残す内容</th></tr></thead><tbody><tr><td data-label="工程">準備</td><td data-label="誰が・いつ記録するか">入力担当が資料を受け取り、入力用に整え終えた時</td><td data-label="残す内容">資料を探す、必要部分を選ぶ、読みやすく整えるための手間</td></tr><tr><td data-label="工程">入力・生成</td><td data-label="誰が・いつ記録するか">入力担当が下書きを受け取り終えた時</td><td data-label="残す内容">指示の作成、投入、やり直しに使った手間</td></tr><tr><td data-label="工程">照合</td><td data-label="誰が・いつ記録するか">確認担当が元の資料との照合を終えた時</td><td data-label="残す内容">対応箇所の探索、内容の突合、不明点の問い合わせ</td></tr><tr><td data-label="工程">手直し・再確認</td><td data-label="誰が・いつ記録するか">修正担当と確認担当が修正内容を確定した時</td><td data-label="残す内容">差し戻し、修正、修正箇所と関連箇所の再確認</td></tr><tr><td data-label="工程">完了・保留</td><td data-label="誰が・いつ記録するか">受け取る担当が利用可能か判断した時</td><td data-label="残す内容">完了した案件、残った確認、従来の方法へ戻した理由</td></tr></tbody></table></div>
+    <p>表の工程は記録の置き場所です。準備の途中で照合に戻った手間も、実際に行った工程へ加えます。担当を兼ねるときも、入力と確認の欄を分けると、どこが増えたかを後からたどれます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．人が使った時間と、待っていた時間を分ける</h2>
+    <p>確認工数の記録には、人が実際に資料を見たり修正したりした時間を使います。別の担当へ引き継いだ後の照合も加え、入力担当だけの負担で終えない形にします。担当別の内訳を残すことで、入力側から確認側へ作業が移った部分も見えるようにします。</p>
+    <p>待ち時間は別の欄に置きます。処理を待つ間にほかの仕事をしていた時間と、画面を見ながら結果を待っていた時間を区別する記録です。人の手間を知るための合計と、依頼から受け渡しまでの経過時間をそれぞれ残し、同時進行した作業を重ねて足さないようにします。</p>
+    <p>問い合わせの返事待ちや承認待ちも、発生した理由とともに記録します。入力の負担が軽くなった一方、確認待ちの案件が積み上がっていないかを、完了件数と併せて見るためです。作業中の時間だけを集計して、未完了の案件を記録から落とさない扱いにします。</p>
+    <p>初期の手順づくりや操作を覚えるための時間は、日々の処理とは分けて残します。ただし、毎回繰り返している指示の修正や入力資料の整形は、日常の工程に含めます。最初だけの準備と、使い続けるために発生する手間を区別する考え方です。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．完了件数と案件の難しさを合わせて比べる</h2>
+    <p>比較する記録には、受け付けた件数、確認まで終えた件数、保留件数を添えます。出力された件数を、そのまま完了件数として数えない方法です。やり直しで出力が増えた案件も、元の依頼との対応を保って記録します。</p>
+    <p>確認を終えた案件について、準備から手直しまでに費やした人の時間を合計し、その案件数で割って、完了した案件あたりの手間を比べます。集計の区切りをまたいで未完了になった案件は、投入済みの時間と残った件数を別に示します。完了した案件だけの軽さと、残った仕事の重さを併せて読むためです。</p>
+    <p>導入前後の資料は、読みやすさ、項目の多さ、不足情報の有無などで分けて比べます。扱いやすい資料へ対象を絞った記録には、その範囲を添えます。担当者の交代や繁忙期の違い、途中の手順変更も比較の注記に残すとよいです。</p>
+    <p>修正の中身も分けます。表記を整える手直し、内容の誤りを直す手直し、元の資料の不足を埋める問い合わせを区別する整理です。確認後に見つかった誤りは、後日の修正と再確認にかかった手間まで元の案件へ結びつけます。</p>
+    <p>確認の項目を減らした記録は、同じ確認を行った記録と分けます。速く終わった理由を、作業方法の変化と確認範囲の変更に分けて読み取れるようにします。必要な確認を保った状態で負担がどう変わったかを、判断の中心に置きます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．増えた工程から、次に直す箇所を決める</h2>
+    <p>入力担当の時間だけが減り、確認担当の照合や問い合わせが増えている記録では、出力と元の資料の対応を探す手間を見ます。指示の言い回しを直す前に、受け渡す資料の並び、元の資料の所在、修正した箇所の伝え方を点検するとよいです。</p>
+    <p>照合後の差し戻しと再確認が重なっている記録では、誰がどこを直し、どの状態で確認担当へ戻すかを見直します。修正のたびに全体を読み直している箇所と、関連部分まで確認が必要な箇所を区別し、変更内容が受け手へ伝わる形を考えます。</p>
+    <p>難しい資料だけに手直しが集中する記録では、通常の処理と、判断を要する処理の入口を分ける案を検討します。対象を狭めて続ける判断も、従来の方法へ戻す判断も、負担が集中した工程と理由を添えて残します。確認する余力を確保できない範囲まで、利用を広げない方針です。</p>
+    <p>次の比較では、何を変えたかを記録に添えます。資料の渡し方と確認手順を同時に変えるより、変更箇所を絞って比べると、どの見直しを続けるか話し合いやすくなります。計測そのものの負担も振り返り、使わない欄は整理します。</p>
+    <p>入力、確認、受け渡しの関係を見直すときは、<a href="/business-improvement">業務の流れを整理する観点</a>も合わせて考えられます。記録から次に直す工程を選び、担当者と受け渡す状態を具体的にすることが、再測定の出発点になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">導入前後で、測り始める時点と完了の状態をそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">準備・入力・生成・照合・手直し・再確認を記録に含めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">別の担当へ移った手間と、待ち時間を分けて残したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">完了・保留・従来の方法へ戻した案件を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">資料の難しさや担当者、確認範囲の違いを記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">確認後に見つかった誤りと、その修正の手間を結びつけたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">次に変える工程と、比べ直す際の完了基準を決めたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月13日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.mhlw.go.jp/content/12300000/R4_seisansei_itaku.pdf" rel="noopener" target="_blank">介護現場における持続的な生産性向上の取組を支援・拡大する調査研究事業 成果報告書（令和５年３月）</a>：介護分野における、あらかじめ定めた成果指標による取組前後の比較</li>
+      <li><a href="https://www.ipa.go.jp/jinzai/ics/core_human_resource/final_project/2026/rcu1hd0000018kkn-att/rcu1hd0000019kwj.pdf" rel="noopener" target="_blank">生成AIおよびAIエージェントを安全に活用するための手引書（2026年7月・第１版）</a>：提供開始後も、対策とリスク評価の有効性を確認して見直す運用の位置づけ。中核人材育成プログラムの成果物</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/ai-prototype-demo-evaluation">AIの試作品・デモはどう評価する？試す入力と使えるかを決める基準</a></li>
+      <li><a href="/column/excel-averageifs-assignee-status-work-time">Excelで担当と完了状況を指定して平均作業時間を出すには</a></li>
+      <li><a href="/column/task-inventory-gaps">業務棚卸しで抜けやすい項目</a></li>
+      <li><a href="/column/improvement-start-readiness">業務棚卸のやり方</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
