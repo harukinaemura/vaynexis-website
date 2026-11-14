@@ -24,15 +24,25 @@ const FIELDS = {
 };
 const EMAIL_RE = /^[^\s@<>()[\]\\,;:"]+@[^\s@<>()[\]\\,;:"]+\.[^\s@<>()[\]\\,;:"]+$/;
 const MIN_MS = 3000; // 頁を開いてから3秒未満の送信は機械とみなして捨てる
+const SLOW_MS = 10000; // 3〜10秒は届けるが、件名に【確認】を付ける（人が書けば10秒は超える。人を落とさないよう捨てはしない）
 const MAX_BYTES = 20000;
+// 2026-11-14：ボット（自動送信の道具）だけを止める。人の営業は止めない（本人の方針）。
+// Turnstile（Cloudflare の、人か機械かの確認）。鍵 TURNSTILE_SECRET が Worker に登録されていなければ確かめない
+// ＝鍵の登録前に公開しても今までどおり動く。送るのは確認の札（トークン）と鍵だけで、入力の中身と IP は送らない。
+const VERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
 
 // 入力を確かめる。{ drop } は機械の送信（黙って「受け付けました」を返す）、{ ok: false } は入力の誤り
+// notes は「機械かもしれない」印の理由。1つでもあれば件名に【確認】を付けて届ける（捨てない）
 export function check(form, now) {
   if (String(form.get("website") || "") !== "") return { drop: true, why: "見えない欄" };
   const t = Number(form.get("t") || "");
-  let flag = "";
-  if (!t) flag = "【確認】"; // 頁の読み込み時刻がない（スクリプトが動かない環境）＝人の可能性もあるので送るが、件名で分かるようにする
+  const notes = [];
+  if (!t) notes.push("頁の読み込み時刻がない送信です（スクリプトが動かない環境か、機械の送信）。");
   else if (now - t < MIN_MS) return { drop: true, why: "早すぎる送信" };
+  else if (now - t < SLOW_MS) notes.push(`頁を開いてから${Math.round((now - t) / 1000)}秒で送られました（人が書くと、ふつうは10秒を超えます）。`);
+  // h＝キー入力・貼り付け・音声入力など、ブラウザが本物と認める入力の回数（contact-form.js が数える）。
+  // 道具が欄に文字を直接書き込むと 0 になる。古い頁（h の欄がない）からの送信は印を付けない
+  if (t && String(form.get("h") ?? "") === "0") notes.push("キー入力や貼り付けの跡がない送信です（道具が欄に直接書き込んだ可能性）。");
   const data = {};
   for (const [k, [label, required, max]] of Object.entries(FIELDS)) {
     let v = String(form.get(k) || "").replace(/\r\n?/g, "\n").trim();
@@ -45,17 +55,36 @@ export function check(form, now) {
   if (data.style && !STYLES.includes(data.style)) return { ok: false, why: "形式が一覧にない" };
   if (!EMAIL_RE.test(data.email)) return { ok: false, why: "メールアドレスの形" };
   if (String(form.get("agree") || "") !== "1") return { ok: false, why: "同意なし" };
-  return { ok: true, data, flag };
+  return { ok: true, data, notes };
+}
+
+// Turnstile の札を Cloudflare に確かめる。"skip"＝鍵が未登録、"ok"、"fail"＝札がない・通らない、"error"＝確かめられない
+export async function verifyTurnstile(token, secret, fetchFn = fetch) {
+  if (!secret) return "skip";
+  if (!token) return "fail";
+  try {
+    const res = await fetchFn(VERIFY_URL, { method: "POST", body: new URLSearchParams({ secret, response: token }) });
+    const j = await res.json();
+    if (j && j.success === true) return "ok";
+    console.error("お問い合わせ：Turnstile を通らない", (j && j["error-codes"] || []).join(","));
+    // 鍵の誤り・形の誤りは当社側の問題＝お客様を止めない
+    if (j && (j["error-codes"] || []).some((c) => /secret|bad-request|internal-error/.test(c))) return "error";
+    return "fail";
+  } catch (e) {
+    console.error("お問い合わせ：Turnstile を確かめられない", e && e.message);
+    return "error";
+  }
 }
 
 // 件名と本文。Gmail で「返信」を押すとお客様に届くよう、返信先は呼び出し側で入れる
-export function compose(data, flag, at) {
+export function compose(data, notes, at) {
+  const flag = notes.length ? "【確認】" : "";
   const subject = `【サイトのお問い合わせ】${data.kind}／${data.company.slice(0, 40)}${flag}`;
   const row = (k) => `${FIELDS[k][0]}：${data[k] || "（未記入）"}`;
   const text = [
     "vaynexis.jp のお問い合わせフォームから届きました。",
     `受付：${at.toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })}`,
-    flag ? "※頁の読み込み時刻がない送信です（スクリプトが動かない環境か、機械の送信）。中身を見て判断してください。" : "",
+    ...notes.map((n) => `※${n}中身を見て判断してください。`),
     "",
     row("kind"), row("company"), row("name"), row("email"), row("tel"), row("style"), row("when"), row("source"),
     "",
@@ -65,7 +94,7 @@ export function compose(data, flag, at) {
     "――",
     "このメールに返信すると、お客様（上のメールアドレス）に届きます。",
     "お問い合わせだけで終わった場合は、最後のやり取りから1年で削除します（プライバシーポリシー 7.）。",
-  ].filter((l, i) => !(i === 2 && l === "")).join("\n");
+  ].join("\n");
   return { subject, text };
 }
 
@@ -120,8 +149,13 @@ export async function handleContact(request, env, EmailMessage) {
     return back("/contact-error");
   }
 
+  // 通らない送信はエラーの頁へ（黙って捨てない＝人だった場合も、メール・電話の案内が見える）
+  const ts = await verifyTurnstile(String(form.get("cf-turnstile-response") || ""), env.TURNSTILE_SECRET);
+  if (ts === "fail") return back("/contact-error");
+  if (ts === "error") r.notes.push("Cloudflare の確認（Turnstile）ができなかった送信です（Cloudflare 側の障害か鍵の誤りの可能性）。");
+
   const at = new Date();
-  const { subject, text } = compose(r.data, r.flag, at);
+  const { subject, text } = compose(r.data, r.notes, at);
   try {
     await env.EMAIL.send({ to: TO, from: FROM, replyTo: { email: r.data.email, name: r.data.name }, subject, text });
   } catch (e) {

@@ -178,8 +178,11 @@
       <label for="f-source">知ったきっかけ<span class="opt">任意</span><input id="f-source" name="source" maxlength="100"></label>
       <div class="cform__hp" aria-hidden="true"><label for="f-website">この欄は空のままにしてください<input id="f-website" name="website" tabindex="-1" autocomplete="off"></label></div>
       <input type="hidden" name="t" value="">
+      <input type="hidden" name="h" value="">
       <p class="cform__purpose">ご入力の情報は、お問い合わせへの返信と、無料相談の日程調整・実施にだけ使います。営業のメールはお送りしません。くわしくは<a href="/privacy#form">プライバシーポリシー</a>をご覧ください。</p>
       <label class="cform__agree" for="f-agree"><input id="f-agree" type="checkbox" name="agree" value="1" required>プライバシーポリシーを読み、同意します<span class="req">必須</span></label>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAGAaiYqHFigmpt88" data-language="ja" data-theme="light" data-appearance="interaction-only"></div>
+      <p class="fine">自動送信を防ぐため、送信の前に Cloudflare の確認（Turnstile）を行います。まれに「確認」の欄が出たら、押してから送信してください。</p>
       <button class="btn btn--fill" type="submit">送信する</button>
     </form>
   </div>
@@ -320,5 +323,6 @@
 <script src="assets/site.js" defer></script>
 <script src="assets/inner-navigation.js" defer></script>
 <script src="assets/contact-form.js" defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>
