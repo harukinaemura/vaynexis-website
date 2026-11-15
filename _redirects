@@ -1,6 +1,7 @@
 # Permanent (301) redirects from old .html URLs to extensionless URLs (2026-10-29).
 # Purpose: consolidate Google signals on one URL per page. 404.html is excluded.
 /ai-consulting-guide.html /ai-consulting-guide 301
+/ai-komon.html /ai-komon 301
 /ai-data-entry-demo.html /ai-data-entry-demo 301
 /ai-document-demo.html /ai-document-demo 301
 /ai-manual-guide.html /ai-manual-guide 301
@@ -25,6 +26,7 @@
 
 # Trailing-slash variants (2026-10-29): /xxx/ -> /xxx 301 (was 307).
 /ai-consulting-guide/ /ai-consulting-guide 301
+/ai-komon/ /ai-komon 301
 /ai-data-entry-demo/ /ai-data-entry-demo 301
 /ai-document-demo/ /ai-document-demo 301
 /ai-manual-guide/ /ai-manual-guide 301
