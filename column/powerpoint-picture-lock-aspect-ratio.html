@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerPointの「縦横比を固定する」で画像の変形を防ぐには｜Vaynexis</title>
+  <meta name="description" content="資料に載せる画像の形を保ったまま、大きさを変える手順を整理します。倍率を指定する方法と、角をドラッグする方法の使い分け、設定欄が見えないときの確認点、掲載枠との合わせ方を紹介します。変更後の見た目を確かめ、担当者に引き継ぐ際にも使える内容です。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="PowerPointの「縦横比を固定する」で画像の変形を防ぐには｜Vaynexis">
+  <meta property="og:description" content="資料に載せる画像の形を保ったまま、大きさを変える手順を整理します。倍率を指定する方法と、角をドラッグする方法の使い分け、設定欄が見えないときの確認点、掲載枠との合わせ方を紹介します。変更後の見た目を確かめ、担当者に引き継ぐ際にも使える内容です。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/powerpoint-picture-lock-aspect-ratio">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/powerpoint-picture-lock-aspect-ratio">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"PowerPointの「縦横比を固定する」で画像の変形を防ぐには","description":"資料に載せる画像の形を保ったまま、大きさを変える手順を整理します。倍率を指定する方法と、角をドラッグする方法の使い分け、設定欄が見えないときの確認点、掲載枠との合わせ方を紹介します。変更後の見た目を確かめ、担当者に引き継ぐ際にも使える内容です。","datePublished":"2026-11-15","dateModified":"2026-11-15","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/powerpoint-picture-lock-aspect-ratio"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"PowerPointの「縦横比を固定する」で画像の変形を防ぐ","item":"https://vaynexis.jp/column/powerpoint-picture-lock-aspect-ratio"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">PowerPointの「縦横比を固定する」で画像の変形を防ぐ</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">PowerPointの「縦横比を固定する」で画像の変形を防ぐには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>画像の形を保って拡大・縮小するには、縦横比を固定したうえで、高さか幅の倍率を指定します。掲載場所に合わせる際は、横幅と高さのどちらを基準にするかを先に決め、変更後に画像の輪郭と周囲の余白を確かめるとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月15日／情報の確認日：2026年11月15日（出典はこの記事の最後）</p>
+    <p>この記事は、PowerPointで画像の形を保って大きさを変えたい小さな会社の担当者が、縦横比の固定と倍率の入力を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月15日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">最初に、画像の形と掲載場所の条件を分ける</a></li>
+      <li><a href="#s2">倍率を指定するときは、固定のチェック欄から確認する</a></li>
+      <li><a href="#s3">画面で大きさを調整するときは、角とキーを組み合わせる</a></li>
+      <li><a href="#s4">事務で使う例は、何をそろえるかを先に決める</a></li>
+      <li><a href="#s5">形・収まり・引き継ぎの順に仕上がりを見る</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．最初に、画像の形と掲載場所の条件を分ける</h2>
+    <p>確認日：2026年11月15日。</p>
+    <p>ここでは、Microsoft の公式ヘルプの適用先にある PowerPoint 2024 を対象に、「新しい Windows バージョン」の操作を扱います。対象は資料に配置した画像の大きさです。スライド全体の縦横比変更、画像の圧縮、トリミング、背景除去、画像の差し替えは扱いません。</p>
+    <p>作業前には、画像の形を崩したくないのか、指定された枠の縦と横を埋めたいのかを分けて考えます。余白が残っても形を優先する資料と、掲載場所の寸法が厳密に決まっている資料では、仕上がりの判断が違うためです。依頼が「この枠に合わせる」だけなら、どちらを優先するかを確認しておくとよいです。</p>
+    <p>この手順は拡大・縮小時の比率の保持を扱い、すでに変形した画像を元に戻す操作は扱いません。見比べるための元画像も残します。写真の輪郭や、画像に含まれる文字の形を比較できる状態にしてから編集を始める流れです。横に伸びて見えるなど、作業前から気になる点がある画像は、その状態も控えておきます。変更後の確認では、今回の操作による変化と、もともとの見え方を混同しないことが大切です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．倍率を指定するときは、固定のチェック欄から確認する</h2>
+    <h3 class="h3">画像を選んで設定を開く</h3>
+    <p>サイズを変える画像をクリックして選び、［図の書式設定］タブの［サイズ］グループからダイアログ ボックス起動ツールを開きます。画面が小さい場合は、［サイズ］グループの下向き矢印を開かないと、起動ツールが表示されないことがあります。</p>
+    <h3 class="h3">高さか幅の倍率を入力する</h3>
+    <p>表示された［書式］ウィンドウまたはダイアログ ボックスでは、［縦横比を固定］をオンにし、［スケール］の高さか幅にパーセンテージを入力します。横の余白を基準にするなら横方向、上下の余白を基準にするなら縦方向から考えると、入力の目的を整理できます。入力を終えたら、掲載場所への収まりを見直します。</p>
+    <p>公式ヘルプは、元の比率を保つ操作を［縦横比を固定］、比率を変える操作を［縦横比を固定する］と表記し、後者ではチェックをオフにして高さと幅の倍率を入力する手順を案内しています。探す際は表記だけでなく、チェックの状態と、これから変える欄を合わせて見るとよいです。</p>
+    <h3 class="h3">寸法の入力欄と倍率の入力欄を混同しない</h3>
+    <p>画像の高さと幅を寸法で指定する別の手順では、［図の書式設定］タブの［サイズ］グループにある［高さ］と［幅］のボックスへ測定値を入力します。倍率を引き継ぐのか、掲載する寸法を引き継ぐのかを区別し、記録にも入力欄の種類を添えます。見た目が似た欄でも、何を指定した値かが分かる書き方が必要です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．画面で大きさを調整するときは、角とキーを組み合わせる</h2>
+    <p>ドラッグで縦横比を保つ方法は、Shift キーを押しながら、画像の角にあるサイズ変更ハンドルを動かす操作です。画像の中心位置も保ちながら大きさを変えたい場合は、Ctrl キーと Shift キーを押しながら角のハンドルを動かします。</p>
+    <p>倍率を入力する操作と、画面を見ながら動かす操作では、引き継ぐ内容が違います。大きさを再現したい資料では指定する値を残し、周囲との見た目を調整する資料では、基準にした余白や配置を残すとよいです。操作名だけを書いた記録では、次の担当者が完成形を判断しにくくなります。</p>
+    <p>ドラッグを終えた後は、画像の形と位置を別々に見ます。形が自然でも、見出しに近づきすぎたり、隣の説明文との間隔が狭くなったりしていないかを確認する流れです。画像だけを大きく表示した状態と、資料全体を見渡した状態の両方で見ると、調整の目的に沿っているかを判断しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．事務で使う例は、何をそろえるかを先に決める</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>説明資料の画像を整えるときは、全部を同じ大きさにするだけでなく、どの辺をそろえるのかを言葉にします。画像の内容によって重視する点が違うため、完成形の基準を短く残しておくと引き継ぎに使えます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">資料に載せる画像</th><th scope="col">先に決める基準</th><th scope="col">仕上がりで見る点</th></tr></thead><tbody><tr><td data-label="資料に載せる画像">備品の写真</td><td data-label="先に決める基準">説明欄の横幅に収まる大きさ</td><td data-label="仕上がりで見る点">輪郭が自然で、説明文に重ならないか</td></tr><tr><td data-label="資料に載せる画像">操作画面の画像</td><td data-label="先に決める基準">読み手が文字を読める大きさ</td><td data-label="仕上がりで見る点">表示の形を崩さず、細部を追えるか</td></tr><tr><td data-label="資料に載せる画像">案内用の絵</td><td data-label="先に決める基準">周囲の文章との間隔</td><td data-label="仕上がりで見る点">絵が強調されすぎず、余白を残せているか</td></tr></tbody></table></div>
+    <p>枠に余白が残ったときも、空白を埋めることだけを理由に画像を引き伸ばさず、掲載位置や枠の使い方を見直します。指定寸法と自然な見え方の両立が難しい場合は、どちらの条件を変えられるかを資料の作成者と相談する流れです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．形・収まり・引き継ぎの順に仕上がりを見る</h2>
+    <p>まず元画像と見比べ、人物や物の輪郭、画像内の文字の形に違和感がないかを見ます。空いた場所へ収めることを優先した結果、形の不自然さを見落としていないかを確かめるためです。設定を操作したという記録だけで、仕上がりを承認しないことが大切です。</p>
+    <p>次に、周囲の文章と重ならず、説明に必要な部分を読み取れるかを確認します。画像の中に細かな表示がある場合は、資料の読み手がその内容まで見る必要があるかも考えます。必要な表示が小さすぎるなら、画像を置く面積や文章との配分を改めて検討するとよいです。</p>
+    <p>最後に、何を基準に調整し、どの画像と比較したかを残します。保留があれば、「形は確認済みだが、掲載場所は作成者に確認中」のように、済んだ確認と残った判断を分ける書き方が役立ちます。次の担当者には、操作の経緯よりも、採用した状態と確認が必要な箇所が伝わる記録を渡します。</p>
+    <p>事務の手間を洗い出すなら、画像の調整に伴う確認や引き継ぎも含め、<a href="/ai">AIを活用する業務の整理</a>につなげて考えるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">調整する画像と、比較に使う元画像を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">横幅と高さのどちらを基準にするかを決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">倍率を指定したのか、寸法を指定したのかを区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更後の輪郭や文字の形を元画像と見比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">周囲の文章との重なりや、余白の偏りを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">読み手に必要な細部を読み取れるかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">採用した状態と、作成者への確認が残る点を分けて記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月15日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/office/graphics-visuals/change-the-size-of-a-picture-shape-text-box-or-wordart" rel="noopener" target="_blank">図、図形、テキスト ボックス、またはワードアートのサイズを変更する</a>：適用先、画像の倍率・寸法指定、縦横比の固定、サイズ変更ハンドルとキーの組み合わせ</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/powerpoint-reduce-file-size-images">画像が多いPowerPointの容量を小さくする手順と確認点</a></li>
+      <li><a href="/column/powerpoint-slide-size-aspect-ratio">PowerPointの資料を指定の縦横比に直す手順と確認点</a></li>
+      <li><a href="/column/powerpoint-align-distribute-shapes">PowerPointで複数の図形の位置と間隔をそろえるには？</a></li>
+      <li><a href="/column/social-insurance-payment-slip-not-received">社会保険料の納入告知書（納付書）が届かないときの確認先</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

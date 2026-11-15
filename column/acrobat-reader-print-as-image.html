@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acrobat Readerの「画像として印刷」で文字化けを避けるには｜Vaynexis</title>
+  <meta name="description" content="画面では読めるのに、紙に出すと文字が欠けたり別の記号になったりする場合の対処を説明します。印刷画面で設定を切り替える順番、試し刷りの範囲、文字と罫線の照合、改善しないときの切り分けを整理し、担当者が変わっても確認を引き継げる形にまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Acrobat Readerの「画像として印刷」で文字化けを避けるには｜Vaynexis">
+  <meta property="og:description" content="画面では読めるのに、紙に出すと文字が欠けたり別の記号になったりする場合の対処を説明します。印刷画面で設定を切り替える順番、試し刷りの範囲、文字と罫線の照合、改善しないときの切り分けを整理し、担当者が変わっても確認を引き継げる形にまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/acrobat-reader-print-as-image">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/acrobat-reader-print-as-image">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Acrobat Readerの「画像として印刷」で文字化けを避けるには","description":"画面では読めるのに、紙に出すと文字が欠けたり別の記号になったりする場合の対処を説明します。印刷画面で設定を切り替える順番、試し刷りの範囲、文字と罫線の照合、改善しないときの切り分けを整理し、担当者が変わっても確認を引き継げる形にまとめます。","datePublished":"2026-11-15","dateModified":"2026-11-15","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/acrobat-reader-print-as-image"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Acrobat Readerの「画像として印刷」で文字化けを","item":"https://vaynexis.jp/column/acrobat-reader-print-as-image"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Acrobat Readerの「画像として印刷」で文字化けを</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Acrobat Readerの「画像として印刷」で文字化けを避けるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Acrobat Readerで画面表示が正常なのに印刷で文字が崩れる場合は、「画像として印刷」を試せます。まず問題箇所だけを試し刷りし、元の画面と紙を照合してから配布分へ進む、という順で確かめるとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月15日／情報の確認日：2026年11月15日（出典はこの記事の最後）</p>
+    <p>この記事は、PDFの画面表示は正常なのに印刷で文字が崩れる問題に対処したい小さな会社の担当者が、設定の切り替えから試し刷りの照合までを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月15日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">画面は正常か、印刷した紙だけが崩れるか</a></li>
+      <li><a href="#s2">印刷画面から「画像として印刷」を選ぶ</a></li>
+      <li><a href="#s3">対象ページと部数を決めてから出力する</a></li>
+      <li><a href="#s4">試し刷りは文字、罫線、行の対応で比べる</a></li>
+      <li><a href="#s5">改善しないときは出力先を切り分ける</a></li>
+      <li><a href="#s6">引き継ぎでは配布前の判定を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．画面は正常か、印刷した紙だけが崩れるか</h2>
+    <p>確認日：2026年11月15日</p>
+    <p>対象はWindows・macOSのデスクトップ版Acrobat Readerです。以下は日本語の公式資料に基づく操作案内で、実機での動作確認はしていません。 Adobeの技術文書が扱うのは、画面では正常に表示されているPDFが、印刷すると文字化けする症状です。「画像として印刷」はPDFの内容を画像として出力する方法です。ただし、画面に表示された時点で文字化けしている場合には、この方法では解消できません。</p>
+    <p>操作に入る前に、画面の文字と印刷した文字を見比べます。「字形が別の記号になった」「文字の一部が抜けた」「行の端が紙からはみ出した」といった違いを、見たままに分けておくとよいです。文字そのものの違いと、紙面に収まっているかの違いを別々に見ると、後の試し刷りでも比較する場所が定まります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．印刷画面から「画像として印刷」を選ぶ</h2>
+    <p>Acrobat Readerでは、「ファイル（メニュー）」から「プリント」を開き、「詳細設定」を選択します。続いて「画像として印刷」にチェックを入れます。解像度を選べる場合は必要に応じて設定し、「OK」を押してから、戻った画面で「印刷」を選びます。</p>
+    <p>Adobeのデスクトップ版Acrobatのヘルプでは、Windowsの「印刷」ダイアログボックス、macOSの「プリント」ダイアログボックスのどちらも、「詳細設定」から「画像として印刷」へ進む手順です。同社のReader向けの操作案内には、アプリケーションのバージョンにより画面や機能が異なる場合があると記されています。</p>
+    <p>引き継ぎ用の手順には、ボタンの位置だけでなく、開いた画面と選んだ項目の名前を残します。画面写真だけでは選択状態を読み取りにくいこともあるため、何を変更したかが文章でも分かる形にしておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．対象ページと部数を決めてから出力する</h2>
+    <p>Readerの印刷画面では、プリンターと印刷する部数を選びます。印刷範囲の主な選択肢に「現在のページ」と「ページ指定」があり、前者は表示中のページ、後者は個別のページ番号やページ範囲、その組み合わせを指定できます。</p>
+    <p>設定を変えると印刷プレビューが表示され、下部の矢印ボタンでほかのページも確認できます。一方、「プロパティ」はプリンタープロパティを開く項目で、詳細はプリンターのマニュアルを参照する案内になっています。</p>
+    <p>用紙サイズ、給紙方法、印刷の向きは、必要に応じて「ページ設定」から変更できます。</p>
+    <p>ページ端が切れている状態は、文字の形が崩れる状態と区別して記録します。文字が読めるようになったかと、紙面に必要な範囲が収まったかを別々に確かめるためです。</p>
+    <p>問題のある箇所を含むページを対象にし、比較する前後で出力先をそろえるのが確認の進め方です。プレビューでは対象範囲や配置を、出力した紙では文字の形や欠けを確かめます。設定を選べたことだけで終了せず、紙の結果まで見ることが大切です。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．試し刷りは文字、罫線、行の対応で比べる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>配布前の備品一覧を印刷する場面を考えます。文字が読めたかだけでなく、隣の欄との対応や細い線も見ます。確認用の紙には問題が出た箇所に印を付け、変更前と変更後を並べると、直った場所と残った場所を見分けやすくなります。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">照合する場所</th><th scope="col">画面と紙の見比べ方</th><th scope="col">残す内容</th></tr></thead><tbody><tr><td data-label="照合する場所">品名・備考</td><td data-label="画面と紙の見比べ方">文字の欠けや別の記号への置換がないか</td><td data-label="残す内容">崩れた語とその位置</td></tr><tr><td data-label="照合する場所">品名と数量の欄</td><td data-label="画面と紙の見比べ方">同じ行の情報として読めるか</td><td data-label="残す内容">行の取り違えにつながる箇所</td></tr><tr><td data-label="照合する場所">表の罫線</td><td data-label="画面と紙の見比べ方">細い線や欄の境界まで見えるか</td><td data-label="残す内容">切れた線の場所</td></tr><tr><td data-label="照合する場所">小さい注記・欄外</td><td data-label="画面と紙の見比べ方">文字の輪郭とページ端の欠けを比べる</td><td data-label="残す内容">配布前に再確認する箇所</td></tr></tbody></table></div>
+    <p>用紙の余白や文字の大きさまで同時に変えると、どの変更が結果に関係したのかを追いにくくなります。比較中は変更内容を絞り、別の変更を加えた紙は区別しておくとよいです。文字化けが消えたことと、配布資料として読めることを分けて判定します。たとえば、品名が読めても備考の末尾が欠けていれば、その紙を見ただけでは伝わらない情報が残ります。大きな見出しだけで判断せず、業務で読み取る欄を照合の対象に含めます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．改善しないときは出力先を切り分ける</h2>
+    <p>Adobeの印刷エラーの案内では、別のプリンターで試し、問題が現在の機器にあるかを確認する方法が示されています。</p>
+    <p>切り分けの記録には、出力に使った文書、問題箇所、変更した設定、出力先、紙の状態を組み合わせて残します。「印刷できない」という言葉だけで伝えるよりも、「画面では読めるが紙では備考欄の文字が欠ける」のように、比較できる状態が役立ちます。</p>
+    <p>改善しなかった紙も、設定を変えた順番が分かるように区別します。次の担当者へ渡すときは、変更を重ねた後の状態だけでなく、最初の症状と試した内容が対応する記録を添えるとよいです。結果がそろわないまま配布を進めず、どの箇所が未解決かを共有します。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．引き継ぎでは配布前の判定を残す</h2>
+    <p>引き継ぎの終点は、「操作した」ではなく「配布する紙の何を見て判断したか」です。直った箇所、残った不具合、再確認する担当を短く残し、元の画面と比較できるようにしておきます。試し刷りに使った範囲と、本番で出力する範囲も区別して記録するとよいです。</p>
+    <p>事務の手間を洗い出すなら、印刷の操作と、紙を見て配布の可否を判断する作業を分け、<a href="/ai">AI活用を考えるための作業整理</a>につなげます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">画面の表示と紙の文字を見比べ、どこで崩れたかを区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">開いた画面と変更した設定を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">問題箇所を含む範囲と、出力先・部数を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">試し刷りで文字の形、罫線、小さい注記まで照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">改善した箇所と残った不具合を分けて記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">配布前の判定と、次に確認する担当を共有したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月15日）</h2>
+    <ul class="col-src">
+      <li><a href="https://helpx.adobe.com/jp/acrobat/kb/223969.html" rel="noopener" target="_blank">画面表示は正常な PDF ファイルを印刷すると一部の文字が欠けたり文字化けが発生する場合の対処方法（Acrobat/Acrobat Read</a>：画面では正常で印刷時に崩れる症状、画像として印刷する対処</li>
+      <li><a href="https://www.adobe.com/jp/acrobat/roc/blog/fix-pdf-print-garbled-text.html" rel="noopener" target="_blank">PDF印刷時の文字化けを直す方法！原因と再発防止策も紹介</a>：Reader での操作順、解像度の設定、画面自体が文字化けする場合の限界</li>
+      <li><a href="https://helpx.adobe.com/jp/acrobat/desktop/troubleshoot/print-scan-issues/printing-errors.html" rel="noopener" target="_blank">Adobe Acrobat での PDF 印刷中のエラー</a>：Windows・macOS の設定名、別のプリンターでの切り分け</li>
+      <li><a href="https://helpx.adobe.com/jp/reader/desktop/print-pdfs.html" rel="noopener" target="_blank">PDF の印刷</a>：Reader の印刷範囲、部数、プレビュー、プリンタープロパティ</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/acrobat-reader-highlight-text-color">Acrobat ReaderでPDFの確認したい文に色を付けるには</a></li>
+      <li><a href="/column/acrobat-reader-save-annotated-pdf-as-copy">Acrobat Readerで注釈を付けたPDFを別名で残すには</a></li>
+      <li><a href="/column/windows-cancel-print-job-queue">Windowsで間違えて送った印刷をキューから取り消すには</a></li>
+      <li><a href="/column/acrobat-reader-remember-tools-pane">Acrobat Readerのツールパネルが毎回開くのを止めるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

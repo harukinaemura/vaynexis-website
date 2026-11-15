@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acrobat Readerの論理ページ番号と通し番号が違うときは｜Vaynexis</title>
+  <meta name="description" content="文書の紙面にある番号と、画面に出る番号が違うときは、論理ページ番号の設定と先頭からの位置を分けて確かめます。表示方式を確認する入口、番号を指定した後の照合、表示と編集の違いを説明し、相手へ読む場所を伝えるときに残す項目まで整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Acrobat Readerの論理ページ番号と通し番号が違うときは｜Vaynexis">
+  <meta property="og:description" content="文書の紙面にある番号と、画面に出る番号が違うときは、論理ページ番号の設定と先頭からの位置を分けて確かめます。表示方式を確認する入口、番号を指定した後の照合、表示と編集の違いを説明し、相手へ読む場所を伝えるときに残す項目まで整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/acrobat-reader-logical-page-numbers">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/acrobat-reader-logical-page-numbers">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Acrobat Readerの論理ページ番号と通し番号が違うときは","description":"文書の紙面にある番号と、画面に出る番号が違うときは、論理ページ番号の設定と先頭からの位置を分けて確かめます。表示方式を確認する入口、番号を指定した後の照合、表示と編集の違いを説明し、相手へ読む場所を伝えるときに残す項目まで整理します。","datePublished":"2026-11-15","dateModified":"2026-11-15","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/acrobat-reader-logical-page-numbers"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Acrobat Readerの論理ページ番号と通し番号が違う","item":"https://vaynexis.jp/column/acrobat-reader-logical-page-numbers"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Acrobat Readerの論理ページ番号と通し番号が違う</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Acrobat Readerの論理ページ番号と通し番号が違うときは</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>「論理ページ番号を使用」が有効な表示では、ページ番号の後ろにある括弧で、文書内の通し番号を確認できます。紙面に書かれた番号と先頭からの位置を区別し、移動後は見出しまで照合します。相手に読む場所を伝えるときも、どちらの番号かを添えるとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月15日／情報の確認日：2026年11月15日（出典はこの記事の最後）</p>
+    <p>この記事は、PDFの紙面と画面で番号が異なる理由を確かめたい小さな会社の担当者が、論理ページ番号の設定と先頭からの位置を区別し、読む場所を照合する流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月15日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">紙面の番号と、文書の先頭からの位置を分ける</a></li>
+      <li><a href="#s2">環境設定で、表示する番号の基準を確かめる</a></li>
+      <li><a href="#s3">番号を入力した後は、見出しで到着先を照合する</a></li>
+      <li><a href="#s4">表示の切替と、番号の付け直しを混同しない</a></li>
+      <li><a href="#s5">引き継ぎには、番号の呼び方と読む場所を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．紙面の番号と、文書の先頭からの位置を分ける</h2>
+    <p>確認日：2026年11月15日</p>
+    <p>対象はWindows・macOSのデスクトップ版Acrobat Readerです。以下は日本語の公式資料に基づく説明で、手元の端末での実操作や個別資料の番号の対応は確認していません。画面の表記や配置は版によって異なる場合があります。</p>
+    <p>Adobeの案内では、サムネールやナビゲーションツールバーの番号と、文書に印刷された番号が一致しない場合があります。ページ番号はデフォルトでは先頭から1で始まる連番ですが、文書には表紙や目次などの前付けが含まれることがあります。画面に出る番号が紙面の番号と対応しているかも、別に読み合わせます。ここではパソコンのアプリで、受け取った文書を読むときの表示とページ指定を扱います。紙面の番号を振り直す編集は対象にしません。</p>
+    <p>相手から見る場所を伝えられたら、まず「紙面に書いてある番号」なのか、「ファイルの先頭から数えた位置」なのかを確認します。番号だけの連絡を、そのまま手元の入力欄へ転記すると、違う箇所を開いたまま話が進むおそれがあります。読むべき見出しも聞いておくと、到着先を内容で照合できます。</p>
+    <p>確認の順序は、対象の資料、番号の意味、開いた先の内容です。版が違う資料を見ている場合は、番号の表示を合わせる前に、同じ資料を共有しているかをそろえます。番号の差だけを手がかりに、文書の欠落や並びの誤りまで判断しないことが大切です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．環境設定で、表示する番号の基準を確かめる</h2>
+    <h3 class="h3">画面の入口と選択状態を見る</h3>
+    <p>Windowsではハンバーガーメニューから「環境設定」、macOSでは「Acrobat / Adobe Acrobat Reader」メニューから「環境設定」を開きます。「ページ表示」の「論理ページ番号を使用」が、ページ番号の表示方式を確認する項目です。入口の位置だけで探し続けず、開いた設定画面の分類と項目名を照合します。変更する前の選択状態も控えておくと、確認後に戻す際の手がかりになります。</p>
+    <p>この項目が選択されていない場合、ページは1から始まるアラビア数字で番号付けされます。先頭からの位置を基準に読みたいときは、この選択を外した表示で確かめる進め方です。設定を変えた直後は、番号欄だけを見て確認を終えず、本文の見出しも読み合わせます。相手が伝えた番号の意味を決めてから、表示をそろえる順序にします。</p>
+    <h3 class="h3">表示を合わせる目的を先に決める</h3>
+    <p>紙面を手元に置いて読み合わせるのか、受け取ったファイルの中の位置を伝えるのかで、連絡に必要な書き方は変わります。前者なら紙面の表記をそのまま記録し、後者なら先頭から数えた位置であることを明記する整理です。自分の画面で読みやすくすることと、相手が同じ内容へ到着できることを、分けて確認するとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．番号を入力した後は、見出しで到着先を照合する</h2>
+    <p>Readerでは、移動先のページ番号を指定してEnterキーを押すと、そのページへ移動できます。移動した後は、依頼された項目の見出しと、その下の説明を読みます。同じ言葉が目次と本文にある資料では、開いたのが説明の掲載箇所なのか、目次の案内なのかも区別します。</p>
+    <p>公式の表示例では、最初のページに印刷される番号が「i」の場合、「i （1/1）」と表示されます。この表示を読むときは、紙面側の呼び名と、文書内の位置を別々の情報として扱います。引き継ぎでも、表示された文字列を控えるだけでなく、どの部分を読む場所の目印にしたのかを書き添えるとよいです。</p>
+    <p>ページ番号には、前書きのローマ数字、本文の普通の数字、章ごとのプレフィックスを用いる方式があります。番号を連絡する際は、数字の部分だけを抜き出さず、英字や区切りを含む表記全体を残します。入力後に目的の見出しが出なければ、まず連絡文の表記と手元の表示を照合し直します。見込みで差を足し引きしながら探し続けるより、対象の資料と番号の基準に戻る進め方です。</p>
+    <p>前後の説明も読み、目的の項目が始まる場所かを確かめます。番号欄が期待した表示になったことと、読みたかった内容が見つかったことは、別の確認として残します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．表示の切替と、番号の付け直しを混同しない</h2>
+    <p>環境設定はアプリケーションの動作を制御するもので、特定のPDF文書の設定ではありません。そのため、切り替えた状態をこの資料だけの扱いと考えず、続けてほかの資料を読む際にも、どの表示基準になっているかを確かめるとよいです。</p>
+    <p>Acrobatのページラベルツールが変更するのはサムネールとページナビゲーションのラベルで、紙面に見えるページ番号を追加するものではありません。表示の番号と紙面の番号は別の情報です。今回の目的が読む場所の確認であれば、元の文書の番号を変更する操作へ進まず、相手と照合できる位置の伝え方を整えます。</p>
+    <p>設定の選択状態を変えたことと、受け渡す資料の内容を変更したことも分けて記録します。問い合わせるときは、資料名、紙面の表記、画面の表示、探している見出しをまとめます。番号だけを伝えて原因の判断を求めるより、見えている内容まで示すほうが、確認対象を絞りやすくなります。</p>
+    <p>表示を切り替えても紙面との対応を判断できないときは、受領元に読む箇所の見出しを確認します。推測した対応関係を社内の確定情報として広げず、確認が済んだ範囲と、返答を待つ範囲を分けることが大切です。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．引き継ぎには、番号の呼び方と読む場所を残す</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>引き継ぎでは、操作の説明を長く残すより、同じ資料の同じ内容に着ける情報をそろえます。資料の読む場所を伝える記録には、次の項目を短くまとめます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">残す項目</th><th scope="col">記載する内容</th></tr></thead><tbody><tr><td data-label="残す項目">対象の資料</td><td data-label="記載する内容">手元の案内資料の表題と版</td></tr><tr><td data-label="残す項目">紙面側の目印</td><td data-label="記載する内容">紙面に書かれたページ表記と項目名</td></tr><tr><td data-label="残す項目">ファイル内の目印</td><td data-label="記載する内容">先頭から数えた位置と、開いた先の見出し</td></tr><tr><td data-label="残す項目">確認の状態</td><td data-label="記載する内容">本文まで照合済みか、受領元への確認待ちか</td></tr></tbody></table></div>
+    <p>番号の欄には、その値だけでなく、何を数えたものかを添えます。見出しの欄には、自分だけに通じる略称より、相手が資料の中で探せる表記を使うとよいです。受け手は記録をもとに開き、同じ見出しと説明があるかを読み合わせます。</p>
+    <p>番号の意味を説明する連絡が繰り返されるなら、まず社内の案内文や引き継ぎ欄で、記載する項目がそろっているかを見直します。資料の所在を探す手間と、場所を伝える手間を分けると、整理すべき作業が見えてきます。</p>
+    <p>この作業をAIで減らすなら、番号の転記、見出しの記録、到着先の照合のどこに手間があるかを洗い出し、<a href="/ai">事務でAIを使う進め方</a>と照らし合わせます。照合を終えた箇所と確認待ちの箇所を分けて渡す形から考えるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">相手と同じ表題・版の資料を開いているかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">伝えられた番号が紙面の表記か、先頭からの位置かを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表示の切替前の状態と、切替後の番号の読み方を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">移動後の見出しと、その下の説明まで照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">番号の英字や区切りを省略せず記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">相手へ渡す案内に、番号の意味と読む項目を併記したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月15日）</h2>
+    <ul class="col-src">
+      <li><a href="https://helpx.adobe.com/jp/acrobat/desktop/edit-documents/organize-pages/renumber-pages.html" rel="noopener" target="_blank">PDF のページ番号を付け直す</a>：紙面と表示番号が違う場合、前付けや章ごとの番号の形式、ページラベルと紙面の番号の区別</li>
+      <li><a href="https://helpx.adobe.com/jp/acrobat/using/viewing-pdfs-viewing-preferences.html" rel="noopener" target="_blank">PDF の表示と表示に関する環境設定</a>：論理ページ番号の表示、未選択時の連番、環境設定の入口と適用範囲</li>
+      <li><a href="https://helpx.adobe.com/jp/reader/desktop/save-view-search-pdfs.html" rel="noopener" target="_blank">PDF での作業</a>：Readerでページ番号を指定し、Enterキーで移動する操作</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/acrobat-reader-bookmarks-jump-to-chapter">Acrobat Readerで長いPDFの目的の章へすぐ移るには</a></li>
+      <li><a href="/column/acrobat-reader-find-control-number-pdf">Acrobat Readerで届いたPDFの管理番号を探す手順</a></li>
+      <li><a href="/column/acrobat-reader-save-annotated-pdf-as-copy">Acrobat Readerで注釈を付けたPDFを別名で残すには</a></li>
+      <li><a href="/column/acrobat-reader-poster-tile-print">Acrobat Readerのポスターで大きなPDFを分割印刷するには</a></li>
+      <li><a href="/column/reader-document-colors">Acrobat Readerの文書の色の変更で背景を見やすくするには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
