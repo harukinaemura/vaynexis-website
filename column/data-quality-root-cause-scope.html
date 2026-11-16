@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>データ品質マネジメントガイドブックで転記ミスの原因をどこまで遡るか｜Vaynexis</title>
+  <meta name="description" content="転記ミスを直しても繰り返すとき、原因をどこまで遡ればよいのでしょうか。データ品質マネジメントガイドブックをもとに、元の情報・入力欄・変換工程の見方、修正と再発防止の違い、原因の仮説を確かめて調査を区切る判断を、事務の責任者向けに整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="データ品質マネジメントガイドブックで転記ミスの原因をどこまで遡るか｜Vaynexis">
+  <meta property="og:description" content="転記ミスを直しても繰り返すとき、原因をどこまで遡ればよいのでしょうか。データ品質マネジメントガイドブックをもとに、元の情報・入力欄・変換工程の見方、修正と再発防止の違い、原因の仮説を確かめて調査を区切る判断を、事務の責任者向けに整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/data-quality-root-cause-scope">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/data-quality-root-cause-scope">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"データ品質マネジメントガイドブックで転記ミスの原因をどこまで遡るか","description":"転記ミスを直しても繰り返すとき、原因をどこまで遡ればよいのでしょうか。データ品質マネジメントガイドブックをもとに、元の情報・入力欄・変換工程の見方、修正と再発防止の違い、原因の仮説を確かめて調査を区切る判断を、事務の責任者向けに整理します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/data-quality-root-cause-scope"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"データ品質マネジメントガイドブックで転記ミスの原因をどこまで","item":"https://vaynexis.jp/column/data-quality-root-cause-scope"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">データ品質マネジメントガイドブックで転記ミスの原因をどこまで</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">データ品質マネジメントガイドブックで転記ミスの原因をどこまで遡るか</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>当社では、転記ミスは誤った値が最初に生まれた工程と、その値を通してしまった仕組みまで遡って考えます。元の情報、入力欄、転記・変換の順に、誤りの前後を比べるのが当社の整理です。遡る範囲は、原因に対応する変更を決め、同じ経路で再発を確かめられるところを目安にします。担当者への注意だけで調査を終えないことが大切です。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月16日（出典はこの記事の最後）</p>
+    <p>この記事は、転記ミスの再発を防ぎたい小さな会社の担当者が、元の情報・入力欄・変換工程を比べて調査の区切りを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月16日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">値を直す作業と、原因を取り除く作業を分ける</a></li>
+      <li><a href="#s2">誤った値が生まれた境目まで、元の情報に戻る</a></li>
+      <li><a href="#s3">確かめる担当と、変更を決める担当を結び付ける</a></li>
+      <li><a href="#s4">入力時の検証から、変更後の監視まで戻す</a></li>
+      <li><a href="#s5">調査の区切りは、原因に対応する変更を試せるところ</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．値を直す作業と、原因を取り除く作業を分ける</h2>
+    <p>確認日：2026-11-16</p>
+    <p>AISIが公開する「データ品質マネジメントガイドブック」は、英語版が正式版で、日本語版は参考訳です。 同ガイドは、持続的な改善にはデータの修正だけでなく、入力の難しさやプロセス自体の非効率といった根本原因への対処が重要だとしています。</p>
+    <p>「根本原因の分析とソリューション開発」では、主な問題源として誤入力、システムエラー、古いデータなどを挙げ、根本原因を調査することを示しています。 同じ項目で示す主な是正策は、作業の流れの更新、検証ルールの改善、データ入力の自動化など、特定した原因に対応する変更です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．誤った値が生まれた境目まで、元の情報に戻る</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>調査の出発点は、間違えた人の名前よりも、どの項目の意味がどう変わったかです。修正後の値だけで話を進めず、修正前の記録、転記元、その間に受け渡した情報を並べます。後から差し替えられた資料を当時の転記元と取り違えないよう、使った資料の版や更新の記録も手がかりにします。</p>
+    <p>まず、転記先だけが間違っているのか、元の情報から既に違っていたのかを分けます。元の情報が正しかったことを確かめてから、入力欄の説明、選択肢、転記時の判断へ進みます。入力直後には合っていた値が後の取り込みで変わったのかも見ます。最終画面だけを見て入力操作を原因にするのではなく、誤りの前後にある記録を探す順番です。</p>
+    <p>項目の意味も比較の対象です。表記が一致していても、単位や対象範囲の解釈が違えば、何を正しい値とするかが揃いません。調査中に意味を補ってしまわず、当時の記入案内と入力欄の説明を別々に読みます。判断に迷う箇所は、入力者の推測で埋める欄として残さず、項目を管理する担当に確認する扱いにします。</p>
+    <p>ここで区別したいのは、確かめられた事実と原因の仮説です。「値が変わった工程を確認した」と「その工程の設計が原因だった」は同じではありません。原因の候補には、比較した記録と、まだ説明できていない点を添えます。元の記録が残っていない箇所は断定を避け、記録を残す運用も変更の候補に含めます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．確かめる担当と、変更を決める担当を結び付ける</h2>
+    <p>架空の短い例として、備品の数量を別の台帳へ写す際、元の票では箱単位、転記先では個単位と解釈してしまった場面を考えます。数字を書き直して終えるか、欄の説明を変えるかは、誤りの手前に何があったかで分かれます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">見つかった手がかり</th><th scope="col">誰が・いつ確かめるか</th><th scope="col">変更を決める対象</th></tr></thead><tbody><tr><td data-label="見つかった手がかり">元の票に単位の説明がない</td><td data-label="誰が・いつ確かめるか">票の管理担当が、記入案内を見直すとき</td><td data-label="変更を決める対象">記入欄の名称と単位の示し方</td></tr><tr><td data-label="見つかった手がかり">元の票には単位があるが、転記先では読み取れない</td><td data-label="誰が・いつ確かめるか">台帳の管理担当が、入力欄を改める前</td><td data-label="変更を決める対象">入力欄の説明と単位の持たせ方</td></tr><tr><td data-label="見つかった手がかり">入力直後は合うが、取り込み後に単位の意味が変わる</td><td data-label="誰が・いつ確かめるか">取り込みを管理する担当が、変換前後を比較するとき</td><td data-label="変更を決める対象">対応する項目と変換のルール</td></tr><tr><td data-label="見つかった手がかり">どこで意味が変わったか記録から追えない</td><td data-label="誰が・いつ確かめるか">事務の責任者が、次の調査方法を決めるとき</td><td data-label="変更を決める対象">修正前の値と受け渡し経路を残す運用</td></tr></tbody></table></div>
+    <p>担当者は、確認に使った記録を管理する役割と、欄や変換を変更できる役割で決めます。同じ人が兼ねる場合も、値を訂正した判断と、仕組みを変更した判断は分けて残します。自社で直せる範囲を超える項目は、確認事項を整理して管理元へ渡す扱いです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．入力時の検証から、変更後の監視まで戻す</h2>
+    <p>AISIの同ガイドの「データクレンジング」では、日付形式、単位、命名規則などの一貫性を確保することが示されています。 また、不正確な入力の修正、欠損値の補完、不要または古いデータの除去を、データの完全性を維持するための処理として挙げています。 これらは、既にある記録を整える側の対応です。</p>
+    <p>一方、「データのルール非準拠を防止するためのプロセス改善」では、入力時または取り込み時に、必要に応じたリアルタイム検証を含む検証チェックを実装し、不適合を早期に特定することを示しています。 ここでの検証は、入力された内容を決めた基準と照らす仕組みです。</p>
+    <p>同じ節には、従業員やデータ取扱者に対して、データ品質を維持するための方法や基準遵守の重要性を教育することも含まれます。 また、データの作業の流れを定期的に評価して、潜在的な不適合要因を検出し、既定方針への適合を確認する監視・監査を示しています。</p>
+    <p>さらに「根本原因の分析とソリューション開発」は、実装した解決策の有効性を継続的に評価し、問題の解消と再発の有無を確認するところまで含めています。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．調査の区切りは、原因に対応する変更を試せるところ</h2>
+    <p>原因を遡る範囲は、組織の成り立ちまで際限なく広げるよりも、現物の記録から説明でき、変更の担当を決められるところを目安にします。「確認不足」という言葉だけでは、何を変えて試すのかが曖昧です。どの欄の説明、どの受け渡し、どの変換を変えるかまで具体化できた段階で、仮説を確かめる作業へ進みます。</p>
+    <p>試す内容は、見つかった誤りが変更後の流れでどう扱われるかです。既に訂正された記録を開くだけで済ませず、問題が生じたときの入力内容を変更後の経路に通す考え方にします。誤った内容を止められたかに加え、正しい内容まで差し戻されていないかも見ます。変更した箇所、試した内容、判断の理由を対応させて残すと、仮説が外れたときに戻る先が明らかになります。</p>
+    <p>調査の区切りと、その後の観察も分けて扱います。変更を試せたことを区切りとし、通常の作業で同じ種類の誤りが現れないかは、担当を置いて見続けます。別の項目で同じ意味の取り違えが見つかった場合は、調べる対象を広げる判断になります。発見がないことだけで原因の仮説を確定させず、同じ経路を使う作業が続いたかも併せて見ます。</p>
+    <p>直す場所が入力欄から受け渡し全体に広がるときは、<a href="/business-improvement">事務の流れを見直す視点</a>と結び付けて、関係する担当間で変更の順番を揃えるとよいです。原因の仮説と、変更後に見る箇所が揃っていることを、調査を次の行動へ移す目印にします。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">誤りを直す前の値と、当時使った元の情報を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">誤りが生まれた工程と、見逃した工程を分けて記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">項目の意味や単位が、入力元と転記先で揃っているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">原因の仮説を、比較できた記録と結び付けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">値の訂正と、入力欄や変換の変更を分けて担当を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更後の経路で、誤った内容と正しい内容の扱いを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">通常の作業で再発を見て、調査を再開する担当を決めたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月16日）</h2>
+    <ul class="col-src">
+      <li><a href="https://aisi.go.jp/output/output_framework/data_quality_management_guidebook/" rel="noopener" target="_blank">データ品質マネジメントガイドブック Data Quality Management Guidebook</a>：英語版が正式版、日本語版が参考訳であること</li>
+      <li><a href="https://aisi.go.jp/assets/pdf/260514_Data_quality_management_guidebook_jp.pdf" rel="noopener" target="_blank">データ品質マネジメントガイドブック（日本語参考訳・第1.02版、表紙2026-05-14）</a>：根本原因への対処、原因に応じた是正策、データ修正、検証、教育、監視と継続評価</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策。件数・合計・重複の3つで照合する</a></li>
+      <li><a href="/column/data-item-definition-sheet-fields">データ項目定義書には何を書く？列名・型・入力例をそろえる確認欄</a></li>
+      <li><a href="/column/ai-prototype-demo-evaluation">AIの試作品・デモはどう評価する？試す入力と使えるかを決める基準</a></li>
+      <li><a href="/column/ai-handbook-minutes-summary-detail">生成AIの導入・活用に向けた実践ハンドブック</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

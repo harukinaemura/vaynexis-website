@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelのシステム区切り記号で小数点の表示を直す手順と戻し方｜Vaynexis</title>
+  <meta name="description" content="小数点のピリオドとカンマが意図した表示と違うときに、標準の区切りへ戻すか、独自の記号を指定するかを選ぶ手順をまとめます。Windows版を対象に、設定欄の違い、表示桁数との切り分け、変更前後の照合、事務担当者の引き継ぎに残す内容を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelのシステム区切り記号で小数点の表示を直す手順と戻し方｜Vaynexis">
+  <meta property="og:description" content="小数点のピリオドとカンマが意図した表示と違うときに、標準の区切りへ戻すか、独自の記号を指定するかを選ぶ手順をまとめます。Windows版を対象に、設定欄の違い、表示桁数との切り分け、変更前後の照合、事務担当者の引き継ぎに残す内容を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-system-decimal-separators">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-system-decimal-separators">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelのシステム区切り記号で小数点の表示を直す手順と戻し方","description":"小数点のピリオドとカンマが意図した表示と違うときに、標準の区切りへ戻すか、独自の記号を指定するかを選ぶ手順をまとめます。Windows版を対象に、設定欄の違い、表示桁数との切り分け、変更前後の照合、事務担当者の引き継ぎに残す内容を整理します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-system-decimal-separators"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelのシステム区切り記号で小数点の表示を直す手順と戻し","item":"https://vaynexis.jp/column/excel-system-decimal-separators"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelのシステム区切り記号で小数点の表示を直す手順と戻し</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelのシステム区切り記号で小数点の表示を直す手順と戻し方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Windows版Excelで小数点の記号を独自に指定するには、［システム区切り記号を使用する］をオフにして記号を入力します。標準へ戻したい場合と、今回だけ別の記号を使いたい場合を分け、変更前後で同じ箇所を照合するとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月16日（出典はこの記事の最後）</p>
+    <p>この記事は、小数点や桁区切りの記号を直したい小さな会社の担当者が、Windows版Excelの設定と元へ戻す手順を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月16日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">標準へ戻すのか、別の記号を使うのかを決める</a></li>
+      <li><a href="#s2">編集オプションで、小数点と桁区切りを分けて指定する</a></li>
+      <li><a href="#s3">記号の違いと、表示する桁数の違いを切り分ける</a></li>
+      <li><a href="#s4">照合用の小さな表で、希望する表記を共有する</a></li>
+      <li><a href="#s5">引き継ぎには、記号の組合せと戻し先を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．標準へ戻すのか、別の記号を使うのかを決める</h2>
+    <p>確認日：2026-11-16</p>
+    <p>この記事はExcel for Microsoft 365、Excel 2024、Excel 2021を対象にしています。ここではWindows版の操作を扱います。</p>
+    <p>既定では、Excelはコントロール パネルの地域設定で定義されたシステム区切り記号を使います。［システム区切り記号を使用する］は、既定の小数点と桁区切りを使うときはオン、別の記号を入力するときはオフにする項目です。チェックを外すこと自体を目的にせず、社内で使う表記に戻すのか、受け渡し先の表記に合わせるのかを先に決めます。</p>
+    <p>システム側の記号へ戻す操作は、［システム区切り記号を使用する］をオンにすることです。標準へ戻したい場面では、独自の記号を入力する作業と混同しないことが大切です。変更前のチェックの状態と、表示が気になった箇所を控えると、戻した後に比較する対象が分かります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．編集オプションで、小数点と桁区切りを分けて指定する</h2>
+    <p>Windows版では、［ファイル］→［オプション］→［詳細設定］の順に開きます。［編集オプション］の［システム区切り記号を使用する］をオフにします。先に変更前の記号を控え、入力欄を見比べながら進めるとよいです。</p>
+    <p>「詳細オプション」の案内では、小数点の記号を変える欄は［小数点の記号］、桁区切りを変える欄は［桁区切り記号］と分けられています。小数部分との境目に使う記号と、大きな数を読みやすく区切る記号を、別々の役割として扱います。手元の資料にカンマがあるというだけで、どちらの欄を直すかを決めないことが大切です。</p>
+    <p>区切り記号の変更手順では、［小数点区切り記号］と［桁 区切り記号］へ新しい記号を入力し、［OK］を選んで確定します。案内ごとに欄の表記に違いがあるため、画面では小数点用か桁区切り用かを読み分けます。小数点だけを直す目的でも、もう片方へ何が指定されているかを記録しておくと、意図しない組合せに気づきやすくなります。</p>
+    <p>この独自指定は、システムの区切り記号を一時的に置き換える方法として案内されています。作業のために一時変更する場合は、終えた後に元へ戻すか、担当者へ判断を引き継ぐかを、変更時のメモへ添えるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．記号の違いと、表示する桁数の違いを切り分ける</h2>
+    <p>小数点の記号を変える前に、困っている箇所を「境目の記号が違う」「端数が見えない」「桁区切りが見えない」のように言葉にします。同じ「小数点がおかしい」という相談でも、確認する項目をそろえるためです。</p>
+    <p>［数値］の表示形式では、小数点以下の桁数、桁区切りの有無、負の数の表示形式を指定できます。境目の文字が意図と違う話と、小数部分をどこまで見せるかという話を分けて確認するとよいです。表示形式の変更は数値の見せ方だけを変え、値には影響しません。表示が整ったことだけを理由に、入力元との照合まで済んだ扱いにはしないようにします。</p>
+    <p>桁区切りの表示・非表示を切り替える項目は、［1000 桁区切り記号 (,) を使用する］のチェックです。使う文字を決める設定と、桁区切りを表示するかどうかの設定を分けて見ることが、確認の手がかりになります。見た目を合わせるために複数の項目を続けて変えるより、変更した箇所と結果を対応させて記録するとよいです。</p>
+    <p>Microsoftは、永続的な対応にはコントロール パネルの地域設定を変更する必要があると案内しています。一時変更と標準の見直しでは、作業後にどの状態へそろえるかも変わります。標準そのものの変更を検討する場合は、担当者だけで決めず、社内の管理担当と戻し先を合わせておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．照合用の小さな表で、希望する表記を共有する</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>受け取った見積表の記号が社内の表記と違った場面を考えます。表全体を直し始める前に、元の資料で小数部分のある箇所と、大きな値を扱う箇所を選び、どの記号にそろえたいかを記録します。次の表は確認の観点を並べたメモで、操作結果を示したものではありません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">記録すること</th><th scope="col">架空の確認メモ</th></tr></thead><tbody><tr><td data-label="記録すること">小数点として使いたい記号</td><td data-label="架空の確認メモ">ピリオドにそろえる</td></tr><tr><td data-label="記録すること">桁区切りとして使いたい記号</td><td data-label="架空の確認メモ">カンマにそろえる</td></tr><tr><td data-label="記録すること">比較する箇所</td><td data-label="架空の確認メモ">元の資料で小数部分のある値と、桁区切りを確認できる値</td></tr><tr><td data-label="記録すること">照合結果</td><td data-label="架空の確認メモ">希望した記号か、元の資料と値が合っているかを記録する</td></tr><tr><td data-label="記録すること">作業後の扱い</td><td data-label="架空の確認メモ">元へ戻すか、管理担当へ確認するかを残す</td></tr></tbody></table></div>
+    <p>確認は、記号が希望どおりかを見る段階と、元の資料と値を突き合わせる段階に分けます。特に、境目の位置を取り違えて読んでいないかを意識するとよいです。相手先と社内で表記の前提が異なる場合は、表記をそろえる担当と、値を確認する担当を記録に残します。</p>
+    <p>判断がつかない箇所は、見た目から補正せず、入力元の担当者へ確認する対象にします。希望する表記と、実際に確かめた内容を別欄にすれば、まだ確認していない部分を完了と取り違えにくくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．引き継ぎには、記号の組合せと戻し先を残す</h2>
+    <p>引き継ぎの記録では、変更したチェックの状態、小数点用と桁区切り用に選んだ記号、照合した資料、作業後の戻し先をまとめます。「小数点を修正済み」だけでは、標準へ戻したのか、独自の表記に合わせたのかが分かりません。相手が同じ判断をたどれる粒度で書くとよいです。</p>
+    <p>再び別の表記が必要になったときも、前回の変更内容をそのまま採用する前に、今回の受け渡し先が求める表記を確認します。記録には希望する状態と確認できた状態を分け、確認した担当者と、判断を引き継ぐ相手も添えます。数値を扱う資料では、記号の見た目と値の一致を別々に確かめる役割を残しておくことが大切です。</p>
+    <p>事務の手間を洗い出すなら、表記の確認、元資料との照合、引き継ぎメモの作成を分けて、<a href="/ai">事務作業へのAI活用を考える</a>対象を整理するとよいです。値と表記が業務上の意図に合うかは、担当者が確認する流れにします。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">標準へ戻すのか、独自の記号へ合わせるのかを決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更前のチェックの状態と記号を控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">小数点用と桁区切り用の欄を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">記号の違いと、表示する桁数の違いを切り分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更前後で同じ箇所を見比べ、元の資料と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">作業後の戻し先と、判断を引き継ぐ相手を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月16日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/show-or-hide-the-thousands-separator" rel="noopener" target="_blank">桁区切り記号の表示/非表示を切り替える</a>：対象の版、桁区切りの文字指定と表示・非表示の違い</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/change-the-character-used-to-separate-thousands-or-decimals" rel="noopener" target="_blank">桁または小数点以下を区切るために使用する文字を変更する</a>：独自の記号を指定する手順、標準へ戻す方法、一時変更と地域設定の区別</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/advanced-options" rel="noopener" target="_blank">詳細オプション</a>：Windows版の設定への経路、チェックの役割、小数点用と桁区切り用の欄</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/available-number-formats-in-excel" rel="noopener" target="_blank">Excel で利用可能な表示形式</a>：小数点以下の表示桁数と桁区切りの有無、表示形式と値の違い</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/excel-fixed-decimal-off">Excelの「小数点位置を自動的に挿入する」を止めるには</a></li>
+      <li><a href="/column/excel-quantity-validation-whole-number-range">Excelの数量欄で負数や小数を防ぐ</a></li>
+      <li><a href="/column/excel-report-copy-paste-values">Excelの報告用コピーを数式ではなく確定した値で残すには</a></li>
+      <li><a href="/column/excel-show-formulas-off">Excelの数式表示を戻すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

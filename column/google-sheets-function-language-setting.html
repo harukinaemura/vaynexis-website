@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スプレッドシートの「常に英語の関数名を使用する」を切るには｜Vaynexis</title>
+  <meta name="description" content="関数名を英語以外で表示したいときの設定手順を、パソコン版の公式ヘルプに沿って整理します。アカウント側の言語という前提、地域設定との違い、対応言語の確認先、共有して使う表での確認と引き継ぎまでを扱います。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="スプレッドシートの「常に英語の関数名を使用する」を切るには｜Vaynexis">
+  <meta property="og:description" content="関数名を英語以外で表示したいときの設定手順を、パソコン版の公式ヘルプに沿って整理します。アカウント側の言語という前提、地域設定との違い、対応言語の確認先、共有して使う表での確認と引き継ぎまでを扱います。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/google-sheets-function-language-setting">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/google-sheets-function-language-setting">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"スプレッドシートの「常に英語の関数名を使用する」を切るには","description":"関数名を英語以外で表示したいときの設定手順を、パソコン版の公式ヘルプに沿って整理します。アカウント側の言語という前提、地域設定との違い、対応言語の確認先、共有して使う表での確認と引き継ぎまでを扱います。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-sheets-function-language-setting"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"スプレッドシートの「常に英語の関数名を使用する」を切るには","item":"https://vaynexis.jp/column/google-sheets-function-language-setting"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">スプレッドシートの「常に英語の関数名を使用する」を切るには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">スプレッドシートの「常に英語の関数名を使用する」を切るには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>［常に英語の関数名を使用する］を切るには、設定画面の［表示言語］でチェックを外します。 前提は、Google アカウントの言語が英語以外になっていることです。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月16日（出典はこの記事の最後）</p>
+    <p>この記事は、英語以外の関数名を表示したい小さな会社の担当者が、スプレッドシートの設定手順とアカウントの言語・対応言語を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月16日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">チェックを外す場所と保存までの流れ</a></li>
+      <li><a href="#s2">表示言語の前提はアカウント側で確かめる</a></li>
+      <li><a href="#s3">対応言語と地域の設定を取り違えない</a></li>
+      <li><a href="#s4">共有する表では変更の範囲を先に伝える</a></li>
+      <li><a href="#s5">小さな確認用の表で表示と計算を分けて点検する</a></li>
+      <li><a href="#s6">引き継ぎには目的・変更箇所・確認結果を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．チェックを外す場所と保存までの流れ</h2>
+    <p>確認日：2026年11月16日</p>
+    <p>ここで扱うのは、Google の公式ヘルプにあるパソコンでの操作です。 変更する前に、関数名をどの言語で読みたいかを決め、対象のファイルを開いているか確かめます。別の表の設定を見ていた、という取り違えを避けるため、画面の名前と作業対象を照合しておくとよいです。</p>
+    <p>対象の表を開いたら、［ファイル］から［設定］へ進みます。 要点に挙げたチェック欄を外した後は、画面を閉じる前に保存まで進めます。Googleの手順の最後は、［設定を保存］のクリックです。 作業の記録も、チェックを外したところで終えず、保存したかどうかまで残す形にすると、後で経過をたどりやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．表示言語の前提はアカウント側で確かめる</h2>
+    <p>Google アカウントのウェブの言語設定では、使用する言語を検索して選びます。 変更の必要があるかを見るときは、現在の表示を先に読み取ります。希望する言語になっているのか、これから変えるのかを分けて記録しておくと、表側の操作との混同を避けられます。</p>
+    <p>アカウントの言語設定を変更した後は、ブラウザを閉じて開き直す手順が案内されています。 この言語変更の案内はウェブ上の Google サービスが対象で、モバイルアプリの言語はデバイス側の言語設定で変更します。 アカウントで表示される言語が選んだ言語と異なる場合は、ブラウザのキャッシュと Cookie を削除してから、言語を設定し直す手順が案内されています。ただし、Cookie の削除では、ほかのサイトで保存した設定も削除されます。表示の切り替わりだけを急がず、保存している設定も考慮して対応を選ぶとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．対応言語と地域の設定を取り違えない</h2>
+    <p>Google スプレッドシートの関数の言語は、英語以外の21言語に変更できます。 希望する言語を選ぶ前に、公式ヘルプの言語オプションの一覧と照合するとよいです。読みたい言語を決めることと、変更後に個々の式がどう表示されたかを点検することを、作業の中で分けておきます。</p>
+    <p>［言語と地域］を変えても、Google スプレッドシートの言語設定は変更されません。 一方、スプレッドシートの言語と地域やタイムゾーンの変更は、既定の通貨、日付、番号の書式にも関わります。 関数名を読みやすくする目的の作業では、変更する欄を絞って記録する方が、目的と操作の対応を追いやすくなります。日付や金額の見え方まで変えたいのかを、関数名の話に混ぜずに整理しておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．共有する表では変更の範囲を先に伝える</h2>
+    <p>Google の案内では、変更は使用中のスプレッドシート全体に適用され、共同編集者の地域に関係なく、作業中の全員にも反映されます。 共同で使う表では、変更の目的と対象を先に共有しておくと、ほかの担当者も確認に参加しやすくなります。読み方を合わせたい担当者と、普段その表を使っている担当者が同じとは限らないためです。</p>
+    <p>確認を頼む際は、「見やすくなったか」という感想だけで終えず、普段使う式を読めるか、引き継ぎ文書の表記と照合できるかを尋ねるとよいです。見え方に違いがあったときは、その場で式を書き直す前に、どの画面で何が違ったのかを記録しておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．小さな確認用の表で表示と計算を分けて点検する</h2>
+    <p>合計の点検に使う SUM 関数は、一連の数値またはセルの合計を返す関数です。</p>
+    <h3 class="h3">事務で使う確認記録の例</h3>
+    <p>ここからは当社の整理です。</p>
+    <p>集計用の表を見直す場面を考え、次のような記録を添えます。これは変更後の表示を予測した表ではなく、担当者が実際に見た内容を書き込むための枠です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確認対象</th><th scope="col">変更前に残すこと</th><th scope="col">変更後に見ること</th></tr></thead><tbody><tr><td data-label="確認対象">関数名</td><td data-label="変更前に残すこと">対象の式で見えている表記</td><td data-label="変更後に見ること">希望する言語で読めるか</td></tr><tr><td data-label="確認対象">計算対象</td><td data-label="変更前に残すこと">集計に含める範囲</td><td data-label="変更後に見ること">意図した範囲と一致するか</td></tr><tr><td data-label="確認対象">結果</td><td data-label="変更前に残すこと">手元で確かめた合計</td><td data-label="変更後に見ること">記録した合計と一致するか</td></tr><tr><td data-label="確認対象">周囲の表示</td><td data-label="変更前に残すこと">日付や金額の見え方</td><td data-label="変更後に見ること">意図しない違いがないか</td></tr></tbody></table></div>
+    <p>確認では、名前が変わったように見えることと、式の意味を理解できることを別々に扱います。表示の点検に合わせて計算対象まで変えてしまうと、結果に差が出た理由を追いにくくなります。まず変更前の内容と見比べ、差があれば、表示、参照先、値のどこにあるのかを書き分けるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．引き継ぎには目的・変更箇所・確認結果を残す</h2>
+    <p>引き継ぎの記録は、操作名だけの一覧にせず、なぜ変更したか、どの表のどこを変えたか、何を見て完了としたかがつながる形にします。画面の言葉だけを写した手順より、次の担当者が作業の意図と確認の範囲をたどりやすくなります。</p>
+    <p>読みづらい式が残った場合も、「変更に失敗」とひとまとめにせず、どの表記が読めないのか、計算結果にも違いがあるのかを分けて残すとよいです。表示を整える作業と、式自体の見直しを同時に進めないことが、経過を説明する助けになります。</p>
+    <p>この作業を AI で減らすなら、手順書の整理や確認記録の下書きなど、任せたい作業と人が照合する内容を洗い出します。<a href="/ai">事務での AI 活用の進め方</a>と合わせて考える際も、変更する設定と最後に確かめる人を具体的にしておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">対象のファイルと、変更の目的を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">アカウント側で希望する言語になっているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">希望する言語を公式の対応一覧と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">関数名に関するチェック欄を外し、保存まで進めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">地域や日付・金額の表示に意図しない違いがないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象の式と計算結果を変更前の記録と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">共同で使う担当者に変更の目的と確認結果を伝えたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月16日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/docs/answer/58515?hl=ja" rel="noopener" target="_blank">スプレッドシートの地域と計算の設定を変更する - パソコン</a>：関数の言語変更の前提、操作と保存、対応言語、地域設定との違い、共有時の適用範囲</li>
+      <li><a href="https://support.google.com/accounts/answer/32047?hl=ja" rel="noopener" target="_blank">ウェブの言語を変更する - パソコン</a>：アカウント側の言語変更、ブラウザの開き直し、ウェブとモバイルアプリの対象の違い</li>
+      <li><a href="https://support.google.com/docs/answer/3093669?hl=ja" rel="noopener" target="_blank">SUM</a>：合計を点検する際に使う関数の意味</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/google-sheets-locale-date-currency-format-check">スプレッドシートの日付・通貨が海外表記になるときの確認順</a></li>
+      <li><a href="/column/google-sheets-named-functions-shared-calc">スプレッドシートの共通計算を名前付き関数に登録して使うには</a></li>
+      <li><a href="/column/google-sheets-protect-formula-cell-ranges">共同編集のスプレッドシートで数式セルだけ編集を防ぐ設定と確認</a></li>
+      <li><a href="/column/acrobat-reader-multiple-pages-per-sheet">Acrobat Readerの「複数」で数ページを一枚に印刷するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
