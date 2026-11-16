@@ -23,6 +23,8 @@
 /terms.html /terms 301
 /tokushoho.html /tokushoho 301
 /works.html /works 301
+# Old feed URL (2026-11-16): /feed.xml is 404 now; Google still keeps it as crawled-not-indexed. Send it to the current feed.
+/feed.xml /column/feed.xml 301
 
 # Trailing-slash variants (2026-10-29): /xxx/ -> /xxx 301 (was 307).
 /ai-consulting-guide/ /ai-consulting-guide 301
