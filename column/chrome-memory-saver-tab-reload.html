@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chromeのメモリセーバーで戻ったタブが再読み込みされるときは｜Vaynexis</title>
+  <meta name="description" content="別のタブから戻るたびに画面を読み直すとき、最初に確認したい設定と、作業中のサイトを除外する方法をまとめます。開いているサイトからの追加、手動入力で変わる対象範囲、休止の強さと例外を区別し、事務担当者が設定後の動きを確かめる順番まで整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Chromeのメモリセーバーで戻ったタブが再読み込みされるときは｜Vaynexis">
+  <meta property="og:description" content="別のタブから戻るたびに画面を読み直すとき、最初に確認したい設定と、作業中のサイトを除外する方法をまとめます。開いているサイトからの追加、手動入力で変わる対象範囲、休止の強さと例外を区別し、事務担当者が設定後の動きを確かめる順番まで整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/chrome-memory-saver-tab-reload">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/chrome-memory-saver-tab-reload">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Chromeのメモリセーバーで戻ったタブが再読み込みされるときは","description":"別のタブから戻るたびに画面を読み直すとき、最初に確認したい設定と、作業中のサイトを除外する方法をまとめます。開いているサイトからの追加、手動入力で変わる対象範囲、休止の強さと例外を区別し、事務担当者が設定後の動きを確かめる順番まで整理します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/chrome-memory-saver-tab-reload"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Chromeのメモリセーバーで戻ったタブが再読み込みされると","item":"https://vaynexis.jp/column/chrome-memory-saver-tab-reload"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Chromeのメモリセーバーで戻ったタブが再読み込みされると</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Chromeのメモリセーバーで戻ったタブが再読み込みされるときは</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>メモリセーバーで使っていないタブが無効になると、戻ったときに自動で再読み込みされます。作業を続けたい画面については、除外する対象を絞って設定を見直すとよいです。再読み込みの有無だけでなく、途中の作業を保存してから比較することも大切です。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月16日（出典はこの記事の最後）</p>
+    <p>戻ったChromeのタブが再読み込みされる場面で、メモリセーバーの設定とサイトの除外範囲を確かめる順番を整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月16日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">戻ったときの読み直しと、休止の表示を確かめる</a></li>
+      <li><a href="#s2">作業中のサイトを除外する操作</a></li>
+      <li><a href="#s3">手動入力は、ドメインとサブドメインを分けて考える</a></li>
+      <li><a href="#s4">全体の強さと、休止しない場合の条件を分ける</a></li>
+      <li><a href="#s5">事務の画面で確認して、引き継ぎに残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．戻ったときの読み直しと、休止の表示を確かめる</h2>
+    <p>確認日：2026年11月16日。対象：Windows版Chrome（パソコン向け）。</p>
+    <p>別の画面を見てから戻った瞬間に読み込みが始まると、開いておいたはずのページに何が起きたのか戸惑います。Googleのヘルプでは、メモリセーバーは使用していないタブを無効にしてメモリを節約し、そのタブへのアクセス時に自動で再読み込みすると案内しています。ただし、再読み込みが起きた理由を、表示だけでメモリセーバーと決めつけず、設定と操作した場面を照らし合わせます。</p>
+    <p>［アクティブでないタブのデザイン］をオンにすると、タブバーで非アクティブのタブを見分けやすく表示できます。当社では、この表示を再読み込みの理由を調べる手がかりにし、表示の変化と戻った際の読み込みを分けて記録するとよいと考えます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．作業中のサイトを除外する操作</h2>
+    <p>特定のサイトを非アクティブにしない設定は、［常にアクティブにするサイト］の除外リストへの追加です。すべての画面で同じ扱いが必要かを考える前に、どの作業で読み直しが困るのかを明らかにすると、変更する対象を選びやすくなります。</p>
+    <p>パソコンでChromeを開き、右上のその他アイコンから［設定］へ進んで、左側の［パフォーマンス］を選びます。［常にアクティブにするサイト］の右側にある［追加］を選びます。</p>
+    <h3 class="h3">開いているサイトから選ぶ場合</h3>
+    <p>［現在のサイトを追加］では、現在タブで開いているサイトから選び、対象の左側のチェックボックスをオンにして［追加］をクリックします。</p>
+    <p>当社では、困っている画面を先に開き、画面の用途と追加する対象を照合しておく進め方が分かりやすいと考えます。</p>
+    <h3 class="h3">アドレスを入力する場合</h3>
+    <p>［サイトを手動で追加］ではウェブアドレスを入力し、［追加］を選択します。入力する文字列の範囲は次の節で確認します。設定欄に入れた内容を、普段アクセスする画面のアドレスと見比べることが大切です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．手動入力は、ドメインとサブドメインを分けて考える</h2>
+    <p>手動追加で「google.com」と指定すると、「drive.google.com」「calendar.google.com」などのサブドメインも除外対象となり、常にアクティブになります。一方、先頭にドットを付けた「.google.com」では、「www.google.com」「drive.google.com」「calendar.google.com」などのサブドメインは除外対象になりません。見た目が似ていても対象が異なるため、入力内容の記録では先頭の記号も省かないようにします。</p>
+    <p>特定の場所だけを対象にする例として、「www.google.com/finance」はその配下のページを除外しますが、「www.google.com」のメインページは常にアクティブにはしません。また、「*oogle.com」や「google.com/*」は、何も除外対象とならない例として示されています。見慣れた記号の使い方を推測で当てはめず、除外したい範囲に合わせて入力する方が迷いにくくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．全体の強さと、休止しない場合の条件を分ける</h2>
+    <p>メモリセーバー全体のオン・オフは、同じ設定画面で切り替えられます。非アクティブ化のレベルで［適度］を選ぶと、タブは長時間経過してから非アクティブになります。［バランス重視（推奨）］は最適な時間が経過した後、［最大］は短時間経過した後にタブが非アクティブになります。対象を除外する話と、休止させる強さを変える話を混ぜず、どちらを変更したのかを残します。比較するときは変更点を増やしすぎないと、元の設定へ戻す判断もしやすくなります。</p>
+    <p>パソコンの設定や活動状況によっては、タブを非アクティブにできない場合があります。公式ヘルプは、アクティブな音声や動画（再生または通話）、画面共有、ページ通知、アクティブなダウンロード、一部記入済みのフォーム、固定タブ、接続済みのデバイス（USBまたはBluetooth）を挙げています。条件の異なる画面同士で比べると、設定変更による違いが分かりにくくなります。比較用の作業では、通話や入力の途中だったかも記録しておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．事務の画面で確認して、引き継ぎに残す</h2>
+    <p>当社では、画面の用途と読み直しによる困りごとを先に書き出し、必要な対象を選ぶ進め方を考えます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">作業の場面</th><th scope="col">設定を考える前に整理すること</th><th scope="col">変更後に見る点</th></tr></thead><tbody><tr><td data-label="作業の場面">照合のために何度も戻る画面</td><td data-label="設定を考える前に整理すること">続けて見たいページの範囲</td><td data-label="変更後に見る点">戻ったときの表示と作業の続けやすさ</td></tr><tr><td data-label="作業の場面">入力を中断して見直す画面</td><td data-label="設定を考える前に整理すること">保存した内容と未保存の内容</td><td data-label="変更後に見る点">保存した内容を開き直せるか</td></tr><tr><td data-label="作業の場面">閲覧を終えた参考ページ</td><td data-label="設定を考える前に整理すること">開いたまま残す理由</td><td data-label="変更後に見る点">参照が済んでいるか</td></tr></tbody></table></div>
+    <p>設定後の確認は、途中の内容を保存し、問題が出たときと同じ画面の切り替え方で行うと比較しやすくなります。「読み込みが起きたか」と「続きから作業できたか」を分けてメモに残すと、設定の結果と保存の状態を混同しにくくなります。画面を開いたままにする判断と、作業内容を保存する確認も別々に扱うとよいです。</p>
+    <p>引き継ぐときは、対象のアドレス、追加した範囲、変更前の設定、変更後の動きを残します。変化が見られない場合は、設定を重ねる前に、追加した対象と実際に開いていた画面が一致しているかを確認します。除外する範囲を広げるかどうかは、残しておきたい作業の用途に沿って考えます。</p>
+    <p>事務の手間を洗い出すなら、画面を探し直す手間と、転記や照合そのものの手間を分けておくと整理しやすくなります。当社では、その整理を<a href="/ai">事務でのAI活用を考える出発点</a>にすると、対象にしたい作業を言葉にしやすいと考えます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">戻ったときの読み込みと、休止した表示を見比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">非アクティブにしたくない画面の用途を整理したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">開いているサイトから選ぶ方法と、手動で入力する方法を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">先頭の記号も含めて、対象のアドレスと追加した範囲を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">設定前後で、通話や入力などの活動状況をそろえて比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">途中の内容を保存し、続きから作業できるかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更前の設定と、変更後の動きを引き継ぎ用に残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月16日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/chrome/answer/12929150?hl=ja" rel="noopener" target="_blank">Chrome のパフォーマンスをカスタマイズする - Google Chrome ヘルプ</a>：非アクティブなタブの再読み込み、休止の表示、サイトの除外と追加方法、アドレスによる対象範囲、非アクティブ化のレベルと例外</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/chrome-update-open-browser">開きっぱなしの業務ブラウザー、Chromeの更新を終える手順</a></li>
+      <li><a href="/column/chrome-profiles-work-personal">仕事と私用のブラウザー情報をChromeで分ける手順と確認点</a></li>
+      <li><a href="/column/chrome-extension-site-access-limit">Chrome拡張機能が読める会社のサイトを必要な範囲に絞るには</a></li>
+      <li><a href="/column/chrome-stop-always-open-file-type">Chromeの「この種類のファイルは常に開く」を解除するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

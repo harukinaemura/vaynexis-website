@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Googleフォームで「回答をダウンロード（.csv）」するには｜Vaynexis</title>
+  <meta name="description" content="回答を手元のファイルに保存したい事務担当者向けに、ダウンロードの操作と保存後の確認を整理します。対象の取り違え、時刻順の思い込み、表計算ソフトでの値の変化を分けて確認し、保存したままの控えと加工用のデータを引き継ぐまでの進め方を紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Googleフォームで「回答をダウンロード（.csv）」するには｜Vaynexis">
+  <meta property="og:description" content="回答を手元のファイルに保存したい事務担当者向けに、ダウンロードの操作と保存後の確認を整理します。対象の取り違え、時刻順の思い込み、表計算ソフトでの値の変化を分けて確認し、保存したままの控えと加工用のデータを引き継ぐまでの進め方を紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/google-forms-download-responses-csv">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/google-forms-download-responses-csv">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Googleフォームで「回答をダウンロード（.csv）」するには","description":"回答を手元のファイルに保存したい事務担当者向けに、ダウンロードの操作と保存後の確認を整理します。対象の取り違え、時刻順の思い込み、表計算ソフトでの値の変化を分けて確認し、保存したままの控えと加工用のデータを引き継ぐまでの進め方を紹介します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-forms-download-responses-csv"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Googleフォームで「回答をダウンロード（.csv）」する","item":"https://vaynexis.jp/column/google-forms-download-responses-csv"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Googleフォームで「回答をダウンロード（.csv）」する</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Googleフォームで「回答をダウンロード（.csv）」するには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Googleフォームの回答は、上部の［回答］からその他アイコンを開き、［回答をダウンロード（.csv）］を選んで保存します。保存したあとは、対象の内容、並び順、文字や番号の読み取りを確かめ、元の控えを残してから加工に進むとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月16日（出典はこの記事の最後）</p>
+    <p>集計用にGoogle フォームの回答を手元へ保存するなら、上部の［回答］から［回答をダウンロード（.csv）］へ進み、保存後に対象範囲・日時・番号の表記を照合します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月16日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">対象のフォームを開き、回答のメニューへ進む</a></li>
+      <li><a href="#s2">保存する範囲と時刻の並びを取り違えない</a></li>
+      <li><a href="#s3">開いたときの値の変化を、保存失敗と分ける</a></li>
+      <li><a href="#s4">保存したままの控えと、加工用の写しを分ける</a></li>
+      <li><a href="#s5">引き継ぐ前に、内容と作業の状態を確かめる</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．対象のフォームを開き、回答のメニューへ進む</h2>
+    <p>確認日：2026-11-16</p>
+    <p>Googleのパソコン向け案内では、作成したGoogleフォームはGoogleドライブに保存されます。</p>
+    <p>似た名前のものがある場合は、質問の内容まで見て、保存したい対象と一致しているかを照合します。回答を集める目的や集計対象が違う控えを、取り違えないためです。</p>
+    <p>対象のフォームを開いたら、フォーム上部の［回答］をクリックします。続いてその他アイコンから［回答をダウンロード（.csv）］を選びます。</p>
+    <p>操作を終えたら、保存した場所でファイルを見つけ、内容を開くところまでを確認の区切りにします。</p>
+    <p>メニューを選べたことと、後から使える控えが手元にあることは分けて確かめます。画面の切り替わりだけで終了とせず、目的の回答が読めるかを確認しておくと、引き継ぎ時に保存先を探し直す手間を抑えられます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．保存する範囲と時刻の並びを取り違えない</h2>
+    <p>Googleのヘルプでは、この操作はすべての回答をCSV形式でダウンロードする手順として案内されています。</p>
+    <p>対象期間を絞った資料が必要なときは、保存したままの控えを残し、加工用の写しで対象を選ぶ運用にするとよいです。切り出した結果だけを控えにすると、後で除外した内容を調べる際に、どこまでが元の状態か分かりにくくなります。</p>
+    <p>Googleの回答数の上限に関する案内では、CSVでダウンロードした回答が送信時のタイムスタンプ順に並んでいない場合、回答数が1万件を超えていることが原因として考えられると説明しています。</p>
+    <p>そのため、先頭と末尾だけを見て集計期間を判断するより、日時の値を確かめてから対象を決める扱いが適しています。見た目の順序を受付順と読み替えず、何を基準に並べた資料かを明らかにします。</p>
+    <p>時刻で整理する資料では、担当者の判断を付け加えた列と、受け取った内容との対応も保ちます。並べ直す前後で、記述内容と判断が同じ回答に対応しているかを見比べるとよいです。集計対象を外した理由も別に控えておくと、対象範囲を説明しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．開いたときの値の変化を、保存失敗と分ける</h2>
+    <p>Microsoftの読み込みヘルプは、適用先としてExcel for Microsoft 365、Excel 2024、Excel 2021、Excel 2019、Excel 2016を挙げています。ここでは、このヘルプが挙げる版でCSVを開く場合を扱います。この案内では、Excelで.csvファイルを開く際は、現在の既定のデータの書式設定によって各列の読み込み方が解釈されます。</p>
+    <p>見た目に違いがある場合は、保存した内容と、開く際の解釈を切り分けて確認します。</p>
+    <p>Microsoftは、書式設定より前に削除された先頭のゼロは復元されないと説明しています。</p>
+    <p>番号の桁や表記を後から推測して補うより、保存したままの控えに戻って値を照合する進め方が適しています。電話や管理用の番号は、計算のための値か、表記をそのまま使う値かも区別するとよいです。</p>
+    <p>UTF-8でエンコードされたCSVファイルをExcelで開く場合については、Microsoftが、BOM（バイト オーダー マーク）付きなら通常どおり開けると案内しています。それ以外の開き方として［テキストからデータを取得］も挙げています。</p>
+    <p>読み込み方法を変えるときも、元の控えを上書きせず、同じ内容がどう表示されるかを比較します。見えた文字を手作業で直す前に、開き方の違いであるかを整理する順序です。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．保存したままの控えと、加工用の写しを分ける</h2>
+    <p>社内の研修希望を集めた後、担当者が希望区分別に整理する場面を考えます。保存の目的が控えを残すことなのか、集計資料を作ることなのかによって、作業の終わりを分ける考え方です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">残すもの</th><th scope="col">短い例</th><th scope="col">用途</th></tr></thead><tbody><tr><td data-label="残すもの">保存したままの控え</td><td data-label="短い例">研修希望_取得時の控え</td><td data-label="用途">回答内容を後から照合する</td></tr><tr><td data-label="残すもの">加工用の写し</td><td data-label="短い例">研修希望_区分別の整理</td><td data-label="用途">集計対象の選択や整理を行う</td></tr><tr><td data-label="残すもの">引き継ぎのメモ</td><td data-label="短い例">対象・取得時点・除外の理由</td><td data-label="用途">受け取る人が対象範囲を理解する</td></tr></tbody></table></div>
+    <p>受け取った内容まで戻れる状態を残すことが、控えを分ける狙いです。加工用の写しに説明を書き足す際も、回答者が書いた内容と、事務担当者が判断した内容が混ざらないように扱います。</p>
+    <p>保存先の名前だけで対象が伝わらない場合は、何の回答をどの時点で取り出したものかをメモに添えます。加工の途中で保留になった内容も残しておくと、後任者が完成済みの集計と途中の資料を取り違えにくくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．引き継ぐ前に、内容と作業の状態を確かめる</h2>
+    <p>照合は、質問の見出しと回答の内容の対応、日時の範囲、番号の表記という順に進めると整理しやすくなります。似た質問が並んでいる場合は、列の位置だけで内容を決めず、見出しを読んで確かめる扱いが適しています。件数を比べるときは、見出しを回答に含めていないかも確認の対象です。</p>
+    <p>作業をやり直した場合は、先に取得した控えと取り直した控えを区別します。どちらを集計の元にするかが曖昧なまま加工すると、修正が必要になったときに、どの内容へ戻るかを判断しにくくなります。渡す資料には、採用した控えと、加工済みの部分が分かる短いメモを添えるとよいです。</p>
+    <p>保存できない、内容が欠けて見えるといった場合も、元の回答を消す作業や、設定を変える作業へ直ちに進めず、止まった操作と画面の文言を控えます。保存までの問題か、開いた後の表示の問題かを分けて管理担当者へ伝えると、確認すべき場所を共有できます。</p>
+    <p>事務の手間を洗い出すなら、取得後の照合と加工のどちらに手作業が残るかを分けて、<a href="/ai">AIを業務に取り入れる進め方</a>を考えるとよいです。元の控えを保つ範囲と、人が確認する箇所を先に決めておくと、任せたい作業の内容を整理できます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">保存したい対象と、開いた質問の内容を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">保存先でファイルを見つけ、内容まで開いて確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">日時の値を見て、集計する範囲を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">質問の見出しと回答内容、番号の表記が対応しているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">保存したままの控えを、加工用の写しと区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">採用した控えと加工の状態を、引き継ぎのメモに残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月16日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/docs/answer/6281888?hl=ja" rel="noopener" target="_blank">Google フォームの使い方 - パソコン</a>：作成したフォームの保存場所</li>
+      <li><a href="https://support.google.com/docs/answer/139706?hl=ja" rel="noopener" target="_blank">フォームの回答を表示、管理する</a>：回答のダウンロード操作、全回答の対象、並び順の注意</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/import-or-export-text-txt-or-csv-files" rel="noopener" target="_blank">テキスト (.txt または .csv) ファイルのインポートまたはエクスポート</a>：読み込みの適用先と、既定の書式による列の解釈</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/keeping-leading-zeros-and-large-numbers" rel="noopener" target="_blank">先頭のゼロおよび大きい数値の保持</a>：表示形式の変更では削除済みの先頭のゼロが戻らないこと</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/opening-csv-utf-8-files-correctly-in-excel" rel="noopener" target="_blank">Excel で CSV UTF-8 ファイルを正しく開くには</a>：テキストとして取得する別の開き方</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/google-forms-responses-existing-sheet">Googleフォームの回答を既存の表に保存する手順と確かめ方</a></li>
+      <li><a href="/column/google-forms-delete-test-responses">Googleフォームの試験回答を本番受付前に削除する手順と確認点</a></li>
+      <li><a href="/column/google-forms-allow-respondents-edit-responses">Googleフォームで送信済み回答の訂正を本人に許可する設定と確認</a></li>
+      <li><a href="/column/google-forms-quiz-manual-grade-release">Googleフォームの「成績の発表」を確認後に手動へ変えるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
