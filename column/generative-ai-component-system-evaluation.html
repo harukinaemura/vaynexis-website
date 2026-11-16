@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生成AI品質マネジメントガイドライン｜部品の検査だけで終えない記録｜Vaynexis</title>
+  <meta name="description" content="部品ごとの検査が終わっても、組み合わせたシステムが業務の要求を満たしたかは別に確かめます。生成AI品質マネジメントガイドラインの単体テストと全体評価の違いを踏まえ、要求と検査結果の対応、評価していない範囲、引き渡し前の判断を残す方法を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="生成AI品質マネジメントガイドライン｜部品の検査だけで終えない記録｜Vaynexis">
+  <meta property="og:description" content="部品ごとの検査が終わっても、組み合わせたシステムが業務の要求を満たしたかは別に確かめます。生成AI品質マネジメントガイドラインの単体テストと全体評価の違いを踏まえ、要求と検査結果の対応、評価していない範囲、引き渡し前の判断を残す方法を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/generative-ai-component-system-evaluation">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/generative-ai-component-system-evaluation">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"生成AI品質マネジメントガイドライン｜部品の検査だけで終えない記録","description":"部品ごとの検査が終わっても、組み合わせたシステムが業務の要求を満たしたかは別に確かめます。生成AI品質マネジメントガイドラインの単体テストと全体評価の違いを踏まえ、要求と検査結果の対応、評価していない範囲、引き渡し前の判断を残す方法を整理します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/generative-ai-component-system-evaluation"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"生成AI品質マネジメントガイドライン","item":"https://vaynexis.jp/column/generative-ai-component-system-evaluation"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">生成AI品質マネジメントガイドライン</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">生成AI品質マネジメントガイドライン｜部品の検査だけで終えない記録</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>生成AI品質マネジメントガイドラインでは、部品ごとの管理策で要求を満たす品質が実現したかを、システム全体で確認します。当社が提案する記録は、要求と部品の検査結果を結び、全体評価の結果と未評価の範囲を別に残す形です。部品の合格を全体の完了へ読み替えないことが中心になります。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月16日（出典はこの記事の最後）</p>
+    <p>部品の検査報告がそろっても、業務で求める動きをシステム全体で評価したかは別に確かめます。生成AI品質マネジメントガイドラインの区別に沿って、要求・検査結果・未評価の範囲を結ぶ記録を整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月16日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">社内案内を検索する場面は説明用の架空例です。要求と評価を結ぶ対応表は当社の提案で、産総研が指定する記録様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">ガイドラインが分けている部品とシステム全体</a></li>
+      <li><a href="#s2">単体テストと全体評価で照らす仕様を変える</a></li>
+      <li><a href="#s3">当社が提案する、要求から結果をたどる対応表</a></li>
+      <li><a href="#s4">当社の例で見る「回答は出たが、要求は未評価」</a></li>
+      <li><a href="#s5">当社が完了判断に添える評価範囲の説明</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．ガイドラインが分けている部品とシステム全体</h2>
+    <p>確認日：2026-11-16</p>
+    <p>産業技術総合研究所の「生成AI品質マネジメントガイドライン」は、公式の公開案内で第1版、2025年5月の文書として掲載されています。主に他社製の基盤モデルを用いたシステムの開発・提供に携わる人を想定した資料です。採用は開発を主導する企業等が主体的に選ぶもので、法令・公的指針等との関係では非拘束的です。規範的な規定は、同ガイドラインを任意に採用した場合に限り、規範的な意味を持ちます。</p>
+    <p>同ガイドラインの品質の考え方は、利用者が使うシステムとしての品質と、内部構造に沿って評価する品質を分けています。システム全体で行うことには、部品間の連携の設計、システム外の要素への対処の設計、全体としての利用時品質の評価が含まれます。</p>
+    <p>部品を作った担当から受け取る検査報告と、利用する側が仕事を任せられるか判断する記録では、答える問いが異なります。報告書の「合格」という言葉に、どの範囲を調べた結果なのかを添えて読むことが出発点です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．単体テストと全体評価で照らす仕様を変える</h2>
+    <p>6.2.1「信頼性」の成熟性の項目は、各部品が設計の結果として得られた機能仕様を適切に実現しているかを検査する考え方です。対象はシステムを構成するすべての部品で、単体テストに相当します。この項目では、ブラックボックステスティングによる確認を実施しなければならず、必要に応じてホワイトボックステスティングによる確認を実施します。</p>
+    <p>一方、6.1.1の機能要求満足性は、明示されたシステムの要求仕様を基準に、システムへの入出力から評価します。6.1.2「信頼性」の成熟性の項目では、結合テストに相当する検査で所与の機能仕様を適切に実現していることを調べ、仕様を満たす入力による正テスティングでの確認を実施しなければなりません。</p>
+    <p>6.1.6では、時間効率性と資源効率性も、システムテストに相当する検査で評価する対象です。部品が仕様どおり動いた記録だけでなく、つないだ状態での動きや、システムとして受け付けた入力に対する最終出力の評価を区別して読みます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．当社が提案する、要求から結果をたどる対応表</h2>
+    <p>当社の提案は、業務で求めることを起点に、部品の検査と全体評価の記録を結び付ける整理です。次の表は公式の様式ではなく、担当間で評価対象の食い違いを見つけるための記入枠になります。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">記録するまとまり</th><th scope="col">誰が・いつ記入するか</th><th scope="col">記入する内容</th><th scope="col">対応させる相手</th></tr></thead><tbody><tr><td data-label="記録するまとまり">業務の要求</td><td data-label="誰が・いつ記入するか">業務責任者が、検査計画を決める前</td><td data-label="記入する内容">利用者へ返す内容、受け入れる状態、扱わない範囲</td><td data-label="対応させる相手">要求を担う部品と全体評価</td></tr><tr><td data-label="記録するまとまり">部品の検査</td><td data-label="誰が・いつ記入するか">開発担当が、部品を組み合わせる前</td><td data-label="記入する内容">部品名、照合した仕様、入力と出力の控え、判定理由</td><td data-label="対応させる相手">関係する要求と組み合わせ後の評価</td></tr><tr><td data-label="記録するまとまり">組み合わせた状態の評価</td><td data-label="誰が・いつ記入するか">開発担当が、接続後に</td><td data-label="記入する内容">受け渡しの対応、処理の順序、最終出力、判定理由</td><td data-label="対応させる相手">使用した部品の構成と業務の要求</td></tr><tr><td data-label="記録するまとまり">利用する側の評価</td><td data-label="誰が・いつ記入するか">業務責任者が、利用範囲を決める前</td><td data-label="記入する内容">要求を満たした範囲、未評価の範囲、判断の理由</td><td data-label="対応させる相手">全体評価の記録と残る課題</td></tr><tr><td data-label="記録するまとまり">修正後の追跡</td><td data-label="誰が・いつ記入するか">修正担当と業務責任者が、再判定時に</td><td data-label="記入する内容">変えた箇所、影響する要求、再評価した対象</td><td data-label="対応させる相手">修正前の結果と新しい判定</td></tr></tbody></table></div>
+    <p>記録を読み始める場所は、検査の一覧よりも業務の要求に置くと整理しやすくなります。要求から関係する部品の記録へ進み、その部品を含む全体評価へ戻れる形です。検査に合格した部品の数を数えるだけでは、まだ評価のない要求が残っているか分かりません。</p>
+    <p>要求と部品の関係は、単純な対応に押し込めない方が扱いやすいです。同じ要求を複数の部品が支えることも、同じ部品が別の要求に関係することも、記入時に表せる形にします。担当には、自分が検査した範囲と、その記録では判断していない範囲を併記してもらいます。</p>
+    <p>判定欄では、未評価と不合格を分けます。未評価は判断材料がまだなく、不合格は照合した基準を満たさなかった状態として扱う案です。記録の保存先だけを貼るより、どの要求をどの結果が支えるかまで示すと、業務責任者が残る判断を探しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．当社の例で見る「回答は出たが、要求は未評価」</h2>
+    <p>当社の整理を短い場面に当てはめると、部品から回答が返ったことと、利用者へ必要な内容が届いたことの間に、評価の空白が見つかります。</p>
+    <p>ここでは架空の例として、社内の案内文を検索して回答する仕組みを考えます。検索する部品は関連する文書を返し、文章を組み立てる部品は、渡された文書から回答を作れたとします。しかし、利用者の画面では根拠の文書を開けず、回答と元の記載を照合できない状態でした。</p>
+    <p>この例では、業務の要求を「回答と根拠を利用者が照合できること」と置きます。部品の検査で確認した「文書を返せる」「渡された文書から文章を作れる」という範囲と、要求の範囲を対応表で比べます。利用者側の表示まで調べた記録がなければ、その要求の評価はまだ残っているという扱いです。</p>
+    <p>開発担当へ渡す問いも、「回答が間違っているか」だけにせず、「根拠を利用者へ渡す役割はどこにあり、接続後のどの検査がその要求を確認するか」にします。部品の検査結果を書き直して全体の合格にするより、足りない評価対象を明らかにする方が、次の作業を定めやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．当社が完了判断に添える評価範囲の説明</h2>
+    <p>当社の考える完了記録には、判定の結論だけでなく、評価した構成と、利用を認める範囲の説明を添えます。部品名が同じでも、接続の順序や渡す情報が変わった状態を、以前の結果と混同しないためです。</p>
+    <p>記録には、使った要求の文書、部品の構成、検査に用いた入力、得られた最終出力を対応させます。変更した箇所を示したうえで、以前の結果をそのまま参照できる要求と、評価をやり直す要求を並べて検討します。再評価の範囲は、修正した部品の担当だけに任せず、業務の要求を説明できる人と揃える考え方です。</p>
+    <p>全体評価の記録がない要求は、完了の説明から外さず、残件として明示します。試していない使い方、判定できなかった点、修正を待つ点を区別し、それぞれに確認する担当と次に必要な材料を添えます。利用する側は、その範囲を理解したうえで、利用範囲を限定するか、追加評価を待つかを判断する形になります。</p>
+    <p>開発担当が作った「検査終了」と、業務責任者の「利用範囲を認める判断」は、別の欄で残すとよいです。担当者を増やす趣旨ではなく、何を確認した立場で結論を出したかを読み取れるようにするためです。報告を受け取った時点を、自動的に全体の完了として扱わない運用につながります。</p>
+    <p>検査の記録を業務ごとの計画と結び付ける際は、<a href="/sample-report">検査の設計を計画へまとめる視点</a>も手がかりに、要求・評価結果・残件のつながりを説明できる形に整えます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">部品の検査が照合した仕様と、業務全体の要求を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">要求から関係する部品と全体評価をたどれるようにしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">組み合わせた状態の入力と最終出力を評価したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">部品の合否を、そのまま全体の合否へ移していないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">未評価・不合格・修正待ちを区別して担当を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">修正後に再評価する要求と、判断に使う構成を揃えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">利用範囲を認めた理由と、残っている評価を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月16日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.digiarc.aist.go.jp/publication/aiqm/genaiqm-guidelines-v1.html" rel="noopener" target="_blank">生成AI品質マネジメントガイドライン - 成果公開</a>：公表されている文書名、版、刊行年月</li>
+      <li><a href="https://qai.pj.aist.go.jp/guidelines/generative-ai/index.html" rel="noopener" target="_blank">生成AI品質マネジメントガイドライン 第1版｜AIセーフティ・品質マネジメント</a>：想定読者である、他社製基盤モデルを使うシステムの開発・提供者</li>
+      <li><a href="https://www.digiarc.aist.go.jp/publication/aiqm/GenAIQuality-requirements-rev1.0.0.0019.pdf" rel="noopener" target="_blank">生成AI品質マネジメントガイドライン 第1版（産業技術総合研究所、Revision 1.0.0、2025年5月26日）</a>：採用の位置付け、部品と利用時品質の区別、単体テスト、要求に基づく全体評価、結合テスト、効率性の評価</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/ai-quality-decline-maintenance-scope">納品後にAIの回答品質が下がったら</a></li>
+      <li><a href="/column/ai-provider-incident-cooperation">AIコンサルの情報事故、何を報告してもらう？契約で決める協力事項</a></li>
+      <li><a href="/column/third-party-software-contract-support">AI顧問サービスが別会社のソフトを使うときの契約と不具合窓口</a></li>
+      <li><a href="/column/nonfunctional-grade-operation-hours">非機能要求グレード2018で業務を止められる時間帯を聞くには？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

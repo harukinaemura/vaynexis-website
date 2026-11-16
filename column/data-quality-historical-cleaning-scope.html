@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>データ品質マネジメントガイドブック｜過去データは全部清掃すべき？｜Vaynexis</title>
+  <meta name="description" content="使わない過去データまで清掃するか迷ったときは、利用目的と必要な品質から対象を絞ります。データ品質マネジメントガイドブックの原則をもとに、利用範囲の調べ方、品質と費用の比べ方、保留する履歴に残す情報、清掃を区切る判断を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="データ品質マネジメントガイドブック｜過去データは全部清掃すべき？｜Vaynexis">
+  <meta property="og:description" content="使わない過去データまで清掃するか迷ったときは、利用目的と必要な品質から対象を絞ります。データ品質マネジメントガイドブックの原則をもとに、利用範囲の調べ方、品質と費用の比べ方、保留する履歴に残す情報、清掃を区切る判断を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/data-quality-historical-cleaning-scope">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/data-quality-historical-cleaning-scope">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"データ品質マネジメントガイドブック｜過去データは全部清掃すべき？","description":"使わない過去データまで清掃するか迷ったときは、利用目的と必要な品質から対象を絞ります。データ品質マネジメントガイドブックの原則をもとに、利用範囲の調べ方、品質と費用の比べ方、保留する履歴に残す情報、清掃を区切る判断を整理します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/data-quality-historical-cleaning-scope"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"データ品質マネジメントガイドブック","item":"https://vaynexis.jp/column/data-quality-historical-cleaning-scope"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">データ品質マネジメントガイドブック</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">データ品質マネジメントガイドブック｜過去データは全部清掃すべき？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>過去データは、保管分を一律に最高の品質へ整えるのではなく、利用目的と誤りの影響から、今回整える範囲を決めます。使い道が決まらない履歴は理由を付けて保留し、利用を始める前に必要な品質を見直します。古いというだけで対象外にせず、別の処理から参照されていないかも確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月16日（出典はこの記事の最後）</p>
+    <p>保管している履歴を全部直す前に、今回の用途で使う項目と照合先を確かめます。必要な品質、修正と維持の費用、保留を見直す条件から清掃範囲を決めます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月16日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">備品貸出の場面は架空の想定です。清掃範囲を決める表と終了時の確認項目は当社の整理です。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">品質の目標は、保管量より使い道から考える</a></li>
+      <li><a href="#s2">入力する履歴だけでなく、参照先も対象に入れる</a></li>
+      <li><a href="#s3">当社が清掃範囲を決めるときの記録欄</a></li>
+      <li><a href="#s4">同じ履歴でも、使う項目と保留する項目を分ける</a></li>
+      <li><a href="#s5">清掃の終了は、必要な品質と残る課題で判断する</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．品質の目標は、保管量より使い道から考える</h2>
+    <p>確認日：2026年11月16日。</p>
+    <p>AISIの「データ品質マネジメントガイドブック」は、英語版が正式版で、日本語版は参考訳です。日本語参考訳の表紙には、第1.02版、2026年5月14日と記載されています。当社はこの原則から、清掃する履歴と項目を利用目的に合わせて区切ると考えます。</p>
+    <p>同ガイドの原則では、求める品質の水準は、そのデータが目的に適合しているかどうかに依存するとしています。また、品質とコストの釣り合いを考えること、誤りが生じる前提で完全性を追い求めすぎないことを挙げています。</p>
+    <p>品質を計画する際にはコストを考慮しなければならないとしています。また、目標を上回る品質まで引き上げると、その分コストが増えるとしています。同じ原則には、初期費用だけでなく運用コストも考慮することが含まれています。さらに、高リスクな用途では、来歴、代表性、バイアス、個人データ、出力評価、監査可能性などを特に注意して確認する必要があるとしています。</p>
+    <p>この考え方を事務に当てはめる際は、「保管してあるから全部直す」という着手の仕方を見直します。今の処理で使う情報と、保管されているだけの情報を分けることが出発点です。品質を抑える結論を先に出すのではなく、誰のどの判断を支える情報かを確かめてから、清掃の深さを考えます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．入力する履歴だけでなく、参照先も対象に入れる</h2>
+    <p>同ガイドの「データ要件」は、関連するデータを定義することから始まります。続いて、データ仕様を明確にします。そのうえで、必要な品質水準を定義する手順です。関連するデータとして挙げるのは、入力データ、出力データ、参照データ、制約条件、インターフェース、統計データです。</p>
+    <p>確認項目には、事業上必要なデータが列挙されているかという問いがあります。さらに、各データの品質管理項目を定義しているかを問います。各データについて、品質要件のレベルを定義しているかも確認項目です。同ガイドは構想立案の段階でも、意思決定者が必要以上に高い品質を求めるコストと、有効性とコストの均衡の重要性を理解しているかを問います。</p>
+    <p>ここで事務側が答えたいのは、ファイル名の一覧ではなく、処理とデータのつながりです。利用対象に選んだ履歴の範囲だけを見て終えず、そこから照合する情報や、判定に使う一覧まで追う見方ができます。「現在は画面で開いていない」という説明だけで、利用の有無を確定させないことが大切です。</p>
+    <p>また、品質水準を「きれいにする」とだけ書くと、完了を判断できません。値の正しさを照合するのか、項目の抜けを調べるのか、表記をそろえるのかを分けて記すと、必要な確認と見栄えの調整を混同しにくくなります。清掃を依頼する側と引き受ける側が、同じ終了点を持つための整理です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．当社が清掃範囲を決めるときの記録欄</h2>
+    <p>次の表は、清掃を依頼する側と使う側の判断をそろえるために当社が整理した欄で、公式の様式ではありません。</p>
+    <p>清掃範囲は、データを保管する担当だけで決めず、使う側の判断と結び付けます。保管担当は所在や受け渡し経路を確かめ、利用担当は誤りによって困る処理を示し、事務の責任者が費用と残る課題を見て着手範囲を決めます。同じ人が役割を兼ねる職場でも、どの立場で確認した内容かを分けて残すと読み返せます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">決める欄</th><th scope="col">誰が・いつ確かめるか</th><th scope="col">記録する内容</th></tr></thead><tbody><tr><td data-label="決める欄">使い道</td><td data-label="誰が・いつ確かめるか">利用担当が、清掃を依頼する前</td><td data-label="記録する内容">支える判断、使う場面、必要な項目</td></tr><tr><td data-label="決める欄">利用範囲</td><td data-label="誰が・いつ確かめるか">保管担当と利用担当が、対象を選ぶとき</td><td data-label="記録する内容">対象の履歴、照合先、処理からの参照の有無</td></tr><tr><td data-label="決める欄">誤りの影響</td><td data-label="誰が・いつ確かめるか">利用担当が、品質目標を決める前</td><td data-label="記録する内容">誤判定、確認漏れ、問い合わせへの影響</td></tr><tr><td data-label="決める欄">完了の目安</td><td data-label="誰が・いつ確かめるか">利用担当と清掃担当が、着手前</td><td data-label="記録する内容">確認する項目、照合先、保留の扱い</td></tr><tr><td data-label="決める欄">手間と費用</td><td data-label="誰が・いつ確かめるか">清掃担当が見積もり、責任者が着手前に判断</td><td data-label="記録する内容">修正、照合、例外確認、更新後の維持にかかる負担</td></tr><tr><td data-label="決める欄">保留と再検討</td><td data-label="誰が・いつ確かめるか">責任者が、対象範囲を決めるとき</td><td data-label="記録する内容">保留理由、確認担当、利用目的が変わる際の再検討</td></tr></tbody></table></div>
+    <p>「使うかもしれない」という回答は、利用予定を確かめる課題として残します。利用する人や判断の場面が定まらないまま、全履歴の修正を清掃担当へ渡さない進め方です。反対に、参照されていることが分かった履歴は、古さだけで保留にせず、どの項目を照合に使うのかまで確認します。</p>
+    <p>データの所在より先に、使い道の説明で止まることもあります。その段階では、<a href="/office-inventory">事務作業の棚卸し</a>から、資料を作る作業と使う作業のつながりを整理するとよいです。清掃の対象を決める材料として、利用者と受け渡し先をそろえます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．同じ履歴でも、使う項目と保留する項目を分ける</h2>
+    <p>当社が範囲を区切る際は、同じファイルの中でも、使う項目と保留する項目を分けて考えます。</p>
+    <p>架空の例として、備品の貸出状況を確認するために履歴を整える場面を考えます。現在貸し出している物の識別情報と返却状況は、確認に使う項目です。一方、返却済みの履歴にある補足文の表記までそろえるかは、今回の利用目的と分けて検討します。</p>
+    <p>ただし、過去の貸出記録に当たり、識別情報の変更前後を照合する運用も考えられます。この例では、古い記録の一部が現在の確認を支えるため、「返却済みは使わない」とまとめると対象を狭めすぎます。補足文の表記と、物を取り違えないための対応情報を、別の項目として扱う判断になります。</p>
+    <p>清掃の単位をファイル全体に固定せず、用途に必要な項目まで下げて考えることが、この例の分かれ目です。使わない項目を保留にしても、必要な照合先まで外していないかを確かめます。なお、清掃を保留する範囲を決めることと、保管中の原本を削除することは、別の判断として扱います。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．清掃の終了は、必要な品質と残る課題で判断する</h2>
+    <p>当社では、修正が終わったかに加え、使えると判断する人と、未解決の値を引き受ける人まで決めて区切ります。</p>
+    <p>着手前には、清掃後に誰が何を見て使えると判断するかを決めておきます。清掃担当が表記をそろえたことと、利用担当が目的に沿って判断できることを区別するためです。合意した確認項目に加え、確認できずに残った項目と、その利用を止めている範囲を渡します。</p>
+    <p>照合元がなく真偽を判定できない値は、形を整えただけで確認済みにしません。元の記載、分からない点、照会する担当を残し、責任者が利用の可否を判断できる状態にします。清掃の完了と、曖昧な情報を正しいと認定することを混同しないための区切りです。</p>
+    <p>費用を比べる際には、修正の作業だけでなく、元資料の探索、担当者への照会、修正後の確認、その後の更新にかかる負担を並べます。「今回直す費用」と「直さずに使うことで生じる確認の負担」を比べる整理です。外部へ依頼する範囲も、清掃の量だけでなく、照合と例外確認をどちらが受け持つかまで定めます。</p>
+    <p>保留した履歴には、対象外とした利用目的を残します。「不要」という短い印だけでは、別の担当者が使おうとした際に、その判断の前提が分かりません。利用目的や参照の仕方が変わるときに、清掃範囲と品質目標を再検討する担当を結び付けておきます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">過去データを使う人と、支える判断を明らかにしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力する履歴に加え、照合先や参照先も確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">誤りの影響を踏まえ、必要な項目と品質の目安を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">修正だけでなく、照合・例外確認・更新の負担も並べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">保留する履歴に、理由と再検討する担当を残したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">清掃の完了と、確認できない値の扱いを分けて合意したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月16日）</h2>
+    <ul class="col-src">
+      <li><a href="https://aisi.go.jp/output/output_framework/data_quality_management_guidebook/" rel="noopener" target="_blank">データ品質マネジメントガイドブック Data Quality Management Guidebook</a>：英語版が正式版、日本語版が参考訳であること</li>
+      <li><a href="https://aisi.go.jp/assets/pdf/260514_Data_quality_management_guidebook_jp.pdf" rel="noopener" target="_blank">データ品質マネジメントガイドブック（日本語参考訳・第1.02版、表紙2026-05-14）</a>：目的に応じた品質水準、品質と費用、運用費用、高リスク用途の注意、関連データと品質要件の定義</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/crud-matrix-business-data-operations">CRUD表には何を書く？業務・対象データと作成更新の対応欄</a></li>
+      <li><a href="/column/data-item-definition-sheet-fields">データ項目定義書には何を書く？列名・型・入力例をそろえる確認欄</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理</a></li>
+      <li><a href="/column/digital-governance-review-management-meeting">デジタルガバナンス・コード3.0で改善結果を経営会議へ戻すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

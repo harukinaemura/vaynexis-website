@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>データ品質マネジメントガイドブック｜入力時と処理後の検査の配分｜Vaynexis</title>
+  <meta name="description" content="入力時の検査を増やすだけでは、結合や集計の後に生じる不整合を見落とすおそれがあります。データ品質マネジメントガイドブックをもとに、範囲・形式の検査と処理段階の検査の役割を分け、異常を止める場所、通知を受ける担当、修正後に通す範囲の決め方を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="データ品質マネジメントガイドブック｜入力時と処理後の検査の配分｜Vaynexis">
+  <meta property="og:description" content="入力時の検査を増やすだけでは、結合や集計の後に生じる不整合を見落とすおそれがあります。データ品質マネジメントガイドブックをもとに、範囲・形式の検査と処理段階の検査の役割を分け、異常を止める場所、通知を受ける担当、修正後に通す範囲の決め方を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/data-quality-input-processing-checks">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/data-quality-input-processing-checks">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"データ品質マネジメントガイドブック｜入力時と処理後の検査の配分","description":"入力時の検査を増やすだけでは、結合や集計の後に生じる不整合を見落とすおそれがあります。データ品質マネジメントガイドブックをもとに、範囲・形式の検査と処理段階の検査の役割を分け、異常を止める場所、通知を受ける担当、修正後に通す範囲の決め方を整理します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/data-quality-input-processing-checks"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"データ品質マネジメントガイドブック","item":"https://vaynexis.jp/column/data-quality-input-processing-checks"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">データ品質マネジメントガイドブック</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">データ品質マネジメントガイドブック｜入力時と処理後の検査の配分</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>データ品質マネジメントガイドブックは、収集時の範囲外入力の防止と、処理段階のエラー通知を確認項目に挙げています。 配分は、異常を判定できる地点で決めるのが当社の整理です。入口で分かる範囲・形式の誤りは入力時に、結合や集計による不整合は処理の区切りに検査を置き、通知先と再開の判断も組み合わせます。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月16日（出典はこの記事の最後）</p>
+    <p>入口の検査を通っても、結合や集計の結果まで確認できたとは限りません。入力時に判定する範囲・形式と処理後の整合性を分け、異常の通知先、保留する対象、修正後の再開条件を決めます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月16日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">品目と明細を結合する場面は架空の設計例で、検査の配置表と保留・再開の確認項目は当社独自の整理です。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">入力を受け付けたことと、処理結果が正しいことを分ける</a></li>
+      <li><a href="#s2">処理の区切りには、不整合を戻す仕組みを置く</a></li>
+      <li><a href="#s3">当社が検査場所と異常後の扱いを並べる表</a></li>
+      <li><a href="#s4">入力の差し戻しと、処理結果の保留を混ぜない</a></li>
+      <li><a href="#s5">重なる検査を減らす前に、失う検出範囲を確かめる</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．入力を受け付けたことと、処理結果が正しいことを分ける</h2>
+    <p>確認日：2026-11-16</p>
+    <p>AISIの「データ品質マネジメントガイドブック」は、英語版が正式版で、日本語版は参考訳です。 同ガイドは、法的拘束力を持つ標準ではなく、データ品質に関する実践知を共有するための資料です。 対象は日本語参考訳の第1.02版で、表紙の日付は2026年5月14日です。</p>
+    <p>「データ収集」の主な確認項目には、範囲外の入力を防ぐことと、データの一貫性を確かめることがあります。 「データ仕様や作業の規定」では、形式・構造・許容値範囲を含む明確なデータ要件を定義することを挙げています。 入力の受け付けを設計する際は、何を許容するのかという基準と、その基準をどこで確かめるのかを結び付けて考えます。</p>
+    <p>欄に入る値として適切かという問いと、別のデータと組み合わせた結果が整っているかという問いは、分けて扱うと整理しやすくなります。入力を通ったという状態に、処理結果まで確認済みという意味を持たせないことが、検査の配置を考える出発点です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．処理の区切りには、不整合を戻す仕組みを置く</h2>
+    <p>同ガイドは、処理中にデータ不整合が発生する可能性があるため、フィードバック機構が必要だと説明しています。 「データ処理」では、主な対応として処理エラーを報告する手順を置いています。 同じ節の確認項目は、データ異常がある場合のエラー通知と、検証のためのデータ処理の可視化です。</p>
+    <p>処理後の確認を考える際にも、最後に出来上がった表の見た目だけで済ませず、どの処理の前後を比べるかを決めておくとよいです。「入力は受け付けた」「処理は終わった」「結果を利用してよい」を別の状態として扱い、確認した範囲を対応させます。</p>
+    <p>たとえば、入力欄の形式を調べる検査と、集計へ含める対象の対応を調べる検査には、別々の役割を持たせます。形式の検査を通ったことだけを理由に、後段の確認を省く設計にはしません。逆に、入口で判断できる誤りをすべて後段へ送る運用も、差し戻す場所を分かりにくくします。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．当社が検査場所と異常後の扱いを並べる表</h2>
+    <p>次の表は、異常を判定できる場所と、止める範囲を結び付けるために当社が作った整理例です。公式の検査様式ではありません。</p>
+    <p>検査の候補は、入力、取り込み、結合、集計、引き渡しの流れに沿って並べます。各候補には、判定に使う情報、その情報が揃う工程、異常を見つけた後の扱いを添えます。検査の担当を置く前に、そこで正誤を判断できるだけの材料があるかを見る順番です。</p>
+    <p>架空の例として、品目情報を明細に結び付け、区分別に集計する場面を考えます。範囲や形式の不一致は受け付け時に確認し、品目情報との対応や集計対象の漏れは、それを判定できる処理の境目で確かめる設計です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">検査を置く場所</th><th scope="col">誰が・いつ確かめるか</th><th scope="col">確かめる対象</th><th scope="col">異常を見つけた後の扱い</th></tr></thead><tbody><tr><td data-label="検査を置く場所">入力の受け付け</td><td data-label="誰が・いつ確かめるか">入力担当が、登録を確定する前</td><td data-label="確かめる対象">数量の許容範囲、記入形式、入力欄の意味</td><td data-label="異常を見つけた後の扱い">対象欄を示し、訂正か保留へ分ける</td></tr><tr><td data-label="検査を置く場所">取り込みの直後</td><td data-label="誰が・いつ確かめるか">取り込み担当が、結合へ渡す前</td><td data-label="確かめる対象">項目の対応、取り込みから外れた明細</td><td data-label="異常を見つけた後の扱い">対象を分け、受け付け済みと区別する</td></tr><tr><td data-label="検査を置く場所">結合の直後</td><td data-label="誰が・いつ確かめるか">処理担当が、集計へ渡す前</td><td data-label="確かめる対象">品目情報との対応漏れ、結合による明細の増減</td><td data-label="異常を見つけた後の扱い">関連する明細と後続処理を保留する</td></tr><tr><td data-label="検査を置く場所">集計の直後</td><td data-label="誰が・いつ確かめるか">確認担当が、利用を認める前</td><td data-label="確かめる対象">明細と集計の対応、対象の漏れや重複</td><td data-label="異常を見つけた後の扱い">集計結果を確定せず、対象範囲を確認する</td></tr></tbody></table></div>
+    <p>表の担当は、別々の人を増やす指定ではありません。兼務でも、入力者として直す場面と、処理結果を確認する場面を分けて記録する考え方です。確認欄には担当名だけでなく、どの段階のデータを見たかも残す形にします。</p>
+    <p>検査ごとに「止める対象」を決める点も大切です。対象欄だけを訂正するのか、関連する明細を保留するのか、引き渡し全体を止めるのかを区別します。影響範囲の分からない異常を、入力担当だけの判断で完了にしない扱いも含めておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．入力の差し戻しと、処理結果の保留を混ぜない</h2>
+    <p>当社の検査設計では、入力を直す担当と、処理結果の利用再開を判断する担当を分けて記録します。</p>
+    <p>入力時の差し戻しには、どの欄がどの基準に合わないかを示す形が考えられます。単に「エラー」とだけ知らせる運用ではなく、値を直す担当が次の行動を選べる内容にします。基準そのものが曖昧な項目は、入力者に推測させず、項目を管理する担当の判断に戻す扱いです。</p>
+    <p>処理段階で見つけた異常には、処理の区切り、関係する対象、処理前後の状態、後続へ渡した範囲を残します。入口の誤入力と決め付けず、処理結果の利用を保留したことを明示する形です。入力値の訂正と、結果を使ってよいかの判断は別の作業として受け渡します。</p>
+    <p>処理が途中まで進んだ状態も、完了の欄へまとめない方が扱いを揃えやすくなります。受け付けた対象、処理を終えた対象、保留中の対象を区別し、引き渡す範囲を明らかにします。処理から外れた対象を記録に残し、見た目の整った結果だけを確認する流れを避けます。</p>
+    <p>修正後の再開では、修正した対象と、その対象を使って作った結果を結び付けます。元の値を直しただけで終了とせず、やり直す処理と、再確認する出力を担当間で揃える設計です。前の結果を残す扱いも決め、修正前の結果と修正後の結果の取り違えを防ぐための表示を考えます。</p>
+    <p>通知を受ける担当と、再開を認める担当も書き分けます。通知への対応が終わったことと、後続の利用を認めたことを同じ記録に押し込まず、それぞれの判断が追える形にしておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．重なる検査を減らす前に、失う検出範囲を確かめる</h2>
+    <p>当社が検査の移動や削除を検討する際には、残す検査で拾える異常を先に確かめます。</p>
+    <p>入口と後段に似た検査があることだけでは、重複かどうかは決まりません。同じ項目を見ていても、入口では記入形式、後段では変換後の意味を見ている可能性があります。検査名ではなく、対象、比較相手、見つけたい異常を並べて、役割を比べます。</p>
+    <p>検査を後段へ移す案は、入口で訂正できていた異常がどこまで進むかを確かめます。入口へ移す案では、その時点で判断材料が揃うかを見ます。後から加わる情報との対応を、入口の検査だけで確かめた扱いにしないことが判断の分かれ目です。</p>
+    <p>検査の配置を変える前には、通常のデータだけでなく、止めたい異常を含む見本で試す流れを用意します。予定した地点で止まるか、担当へ伝わるか、保留中の結果が利用へ回らないかまでを確認対象にします。異常を検出できたことと、その後の扱いが決まっていることを併せて見る方法です。</p>
+    <p>試した記録には、異常を見つけた工程と、見つからず通った工程を残します。入口と後段の役割が同じだったのか、別の異常を拾っていたのかを判断する材料にします。検査の削除を先に決めず、残す検査が担う範囲を説明できる形に整えるとよいです。</p>
+    <p>検査を置く場所の見直しは、入力から引き渡しまでの流れと一緒に考えます。<a href="/business-improvement">業務改善で見直す作業の流れ</a>にもつなげながら、待ちや差し戻しを含めて、誰がどの状態で次へ渡すかを明らかにしていきます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">入力時に判定する範囲・形式と、後段で判定する整合性を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">各検査で必要な判断材料が、置いた工程で揃うことを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">結合や集計の前後で、何を比較するかを明確にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">異常の通知先と、止める対象・後続処理の範囲を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">受け付け済み・処理済み・利用可能・保留を区別する記録を用意したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">修正後にやり直す処理と、再開を判断する担当を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">検査を移す・減らす案を、止めたい異常を含む見本で確認したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月16日）</h2>
+    <ul class="col-src">
+      <li><a href="https://aisi.go.jp/output/output_framework/data_quality_management_guidebook/" rel="noopener" target="_blank">データ品質マネジメントガイドブック Data Quality Management Guidebook - Japan AISI</a>：英語版が正式版、日本語版が参考訳であること</li>
+      <li><a href="https://aisi.go.jp/assets/pdf/260514_Data_quality_management_guidebook_jp.pdf" rel="noopener" target="_blank">データ品質マネジメントガイドブック（日本語参考訳・第1.02版、2026-05-14）</a>：ガイドの位置付け、データ収集時の範囲・一貫性の確認、データ要件、処理中の不整合とフィードバック、処理エラーの報告・通知・</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/data-entry-errors">転記ミスの原因と防止策。件数・合計・重複の3つで照合する</a></li>
+      <li><a href="/column/data-item-definition-sheet-fields">データ項目定義書には何を書く？列名・型・入力例をそろえる確認欄</a></li>
+      <li><a href="/column/double-check-design">ダブルチェックのやり方</a></li>
+      <li><a href="/column/requirements-guide-client-interviews">ユーザのための要件定義ガイドで取引先も聞き取り対象に含める？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
