@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outlookの閲覧ウィンドウで勝手に既読になるのを止めるには｜Vaynexis</title>
+  <meta name="description" content="従来のOutlookで、メールを選んだだけで既読になる動作を止めたいときの設定を整理します。閲覧中と選択変更時の設定、待ち時間を延ばす方法との違い、手動で未読へ戻す操作を、日本語の公式ヘルプに沿って説明し、変更後の確認と引き継ぎの進め方も示します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Outlookの閲覧ウィンドウで勝手に既読になるのを止めるには｜Vaynexis">
+  <meta property="og:description" content="従来のOutlookで、メールを選んだだけで既読になる動作を止めたいときの設定を整理します。閲覧中と選択変更時の設定、待ち時間を延ばす方法との違い、手動で未読へ戻す操作を、日本語の公式ヘルプに沿って説明し、変更後の確認と引き継ぎの進め方も示します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/outlook-reading-pane-stop-marking-read">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/outlook-reading-pane-stop-marking-read">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Outlookの閲覧ウィンドウで勝手に既読になるのを止めるには","description":"従来のOutlookで、メールを選んだだけで既読になる動作を止めたいときの設定を整理します。閲覧中と選択変更時の設定、待ち時間を延ばす方法との違い、手動で未読へ戻す操作を、日本語の公式ヘルプに沿って説明し、変更後の確認と引き継ぎの進め方も示します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/outlook-reading-pane-stop-marking-read"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Outlookの閲覧ウィンドウで勝手に既読になるのを止めるに","item":"https://vaynexis.jp/column/outlook-reading-pane-stop-marking-read"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Outlookの閲覧ウィンドウで勝手に既読になるのを止めるに</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Outlookの閲覧ウィンドウで勝手に既読になるのを止めるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>従来のOutlookでは、閲覧ウィンドウでの閲覧時と、選択内容が変わったときに開封済みにするチェックを両方外すと、選択による自動の既読化を止められます。閲覧ウィンドウで本文を見ても、手動で既読にするまでは未読の表示を残したいときに使う設定です。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月15日（出典はこの記事の最後）</p>
+    <p>この記事は、閲覧ウィンドウで自動的に既読になる動作を止めたい小さな会社の担当者が、クラシック版の設定と変更後の状態を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月15日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">対象の版と設定の入口を先に確かめる</a></li>
+      <li><a href="#s2">閲覧時と選択変更時のチェックを外す</a></li>
+      <li><a href="#s3">待ち時間の変更と自動既読化の停止を分ける</a></li>
+      <li><a href="#s4">必要なときは手動で状態を変える</a></li>
+      <li><a href="#s5">変更後は表示中と移動後を分けて確かめる</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．対象の版と設定の入口を先に確かめる</h2>
+    <p>確認日：2026年11月15日。</p>
+    <p>以下はWindowsで使う従来のOutlookを対象とし、既読設定のMicrosoft公式ヘルプの適用先はOutlook for Microsoft 365、Outlook 2024、Outlook 2021です。従来のOutlookでは、［ファイル］タブから、利用中のアカウントや製品バージョンの情報、［オプション］の領域へ進めます。</p>
+    <p>版を調べる場合は［ファイル］から［Office アカウント］へ進み、表示されない場合は［ヘルプ］を選ぶと、ページの右側で製品のバージョンを確認できます。Outlookのバージョンとビルド番号は［製品情報］の下にあります。引き継ぎに使う説明は、操作の入口だけでなく、対象の版も添えておくと照合しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．閲覧時と選択変更時のチェックを外す</h2>
+    <p>設定は［ファイル］→［オプション］→［詳細設定］の順に開きます。続いて［Outlook ウィンドウ］の中にある［閲覧ウィンドウ］を選びます。</p>
+    <p>そこで［閲覧ウィンドウで閲覧時にアイテムを開封済みとしてマークする］と［選択内容が変更されたときにアイテムを開封済みとしてマークする］のチェックを両方外します。最後に［OK］を2回選んでOutlookへ戻ります。</p>
+    <p>Microsoftの停止手順は、閲覧時の項目だけでなく、選択変更時の項目も解除する構成です。片方だけ見直して終えると、変更した内容と止めたい動作の対応を見失いやすくなります。操作前の状態を手元に控え、閉じる前に外した項目を読み返すと、あとから説明しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．待ち時間の変更と自動既読化の停止を分ける</h2>
+    <p>閲覧ウィンドウの別の入口として、従来のOutlookでは［表示］タブの［レイアウト］から［閲覧ウィンドウ］→［オプション］へ進む方法もあります。この入口から設定するときも、どの動作を変えたいかを先に整理しておくとよいです。</p>
+    <p>一定時間表示した後に開封済みにする場合は、［次の時間閲覧ウィンドウで表示するとアイテムを開封済みにする］をオンにし、［アイテムを開封済みにするまでの時間 (秒)］へ数字を入力します。この時間経過による機能を無効にする操作は、同じチェックボックスをオフにすることです。待ち時間を調整する目的と、自動で変わる動作を止める目的を分けて選ぶと、あとで設定の意図を説明できます。</p>
+    <p>また、従来のOutlookで［表示］→［レイアウト］→［閲覧ウィンドウ］→［オフ］を選ぶ操作は、閲覧ウィンドウ自体を閉じる設定です。この［オフ］で閉じるのは、使用中のフォルダーの閲覧ウィンドウのみです。本文を見られる状態を残したいのか、表示そのものを閉じたいのかを分けて考えると、目的に合う項目を探しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．必要なときは手動で状態を変える</h2>
+    <p>メッセージの状態を手動で変えるときは、対象を右クリックして［開封済みにする］または［未開封にする］を選びます。キーボードでは、Ctrl+Qで開封済みに、Ctrl+Uで未読にできます。見直したいメールについては、対象の件名を確かめてから操作するとよいです。</p>
+    <p>複数のメッセージをまとめて既読または未読へ変える場合は、最初のメッセージを選び、Ctrlキーを押しながらほかのメッセージを選択して、目的の操作を選びます。まだ内容を確かめていない対象までまとめて扱わないよう、選択した範囲も見直すとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．変更後は表示中と移動後を分けて確かめる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>確認の進め方として、業務に影響のないメールを使い、表示を続けている間と、別のメールへ選択を移した後を分けて観察するとよいです。確認する前に対象の状態を控え、途中で手動の変更を重ねないようにすると、どの操作の前後で変わったかを整理できます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめる場面</th><th scope="col">見ること</th><th scope="col">引き継ぎに残す内容</th></tr></thead><tbody><tr><td data-label="確かめる場面">本文を表示したまま待つ</td><td data-label="見ること">意図せず状態が変わらないか</td><td data-label="引き継ぎに残す内容">表示中の変化</td></tr><tr><td data-label="確かめる場面">別のメールへ選択を移す</td><td data-label="見ること">元のメールの状態が変わらないか</td><td data-label="引き継ぎに残す内容">選択を移した後の変化</td></tr><tr><td data-label="確かめる場面">内容の確認を終える</td><td data-label="見ること">自分の判断で状態を変えたか</td><td data-label="引き継ぎに残す内容">確認済みとするタイミング</td></tr></tbody></table></div>
+    <p>結果が意図と合わないときは、再び設定を変える前に、直前に何をしたかを書き出します。表示して待ったのか、別のメールへ移ったのか、自分で状態を変えたのかを分けて伝えると、見直す場所を絞りやすくなります。確認用に選んだ対象を途中で変えず、操作前後を比べられる形にすることも大切です。</p>
+    <p>運用上は、内容を見たことと、依頼への対応を終えたことを分けて扱うとよいです。状態を変えるタイミングについて、内容を確認した時点にするのか、担当者が引き受けた時点にするのかを部署でそろえておけば、引き継ぎ文の意味も読み取りやすくなります。対応の完了は別の記録に残し、画面の表示だけで判断しない形も考えられます。</p>
+    <p>事務の手間を洗い出すなら、メールを選別する作業と、内容を判断する作業を分けて整理するとよいです。その先の検討には、<a href="/ai">事務でAIを活用する進め方</a>という視点も役立ちます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">使用中の版と、参照する手順の対象を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">閲覧している間の自動変更を止める項目を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">選択を移したときの自動変更を止める項目も確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">待ち時間の変更と、自動変更の停止を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">設定を確定した後、表示中と選択を移した後を分けて確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">手動で状態を変えるタイミングを引き継ぎ用に整理したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月15日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/outlook/mark-a-message-as-read-or-unread-in-outlook" rel="noopener" target="_blank">Outlook でメッセージを開封済みまたは未読としてマークする</a>：対象製品、閲覧時と選択変更時の自動既読化の停止、設定の確定、手動変更</li>
+      <li><a href="https://support.microsoft.com/ja-jp/outlook/getstarted/what-version-of-outlook-do-i-have" rel="noopener" target="_blank">所有している Outlook のバージョンが不明な場合</a>：従来の版の設定入口、製品バージョンとビルド番号の確認場所</li>
+      <li><a href="https://support.microsoft.com/ja-jp/outlook/use-and-configure-the-reading-pane-to-preview-messages-in-outlook" rel="noopener" target="_blank">Outlook でメッセージをプレビューするために閲覧ウィンドウを使用して構成する</a>：従来の版の別の設定入口、時間経過による既読化、閲覧ウィンドウを閉じる操作と範囲</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/outlook-classic-new-reply-signatures">Outlookで新規メールと返信の署名を別々に設定するには</a></li>
+      <li><a href="/column/outlook-classic-shared-mailbox-from-address">クラシックOutlookで部署の共有アドレスを差出人にするには？</a></li>
+      <li><a href="/column/outlook-classic-signature-logo-image-size">Outlookの署名に会社のロゴ画像を入れ、サイズを整える手順</a></li>
+      <li><a href="/column/outlook-disable-attachment-preview">Outlookの添付ファイルプレビューを無効にする手順と確認点</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

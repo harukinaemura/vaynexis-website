@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CopilotのWeb検索でBingへ送るデータとDPAの範囲｜Vaynexis</title>
+  <meta name="description" content="業務で使う前に、検索へ送る情報と質問・応答の保護を分けて確認します。全文を送らなくても文書内の語が検索に使われる条件、短い質問の例外、検索語の表示と設定の違いを整理し、社内で誰が何を確かめるかを考えます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="CopilotのWeb検索でBingへ送るデータとDPAの範囲｜Vaynexis">
+  <meta property="og:description" content="業務で使う前に、検索へ送る情報と質問・応答の保護を分けて確認します。全文を送らなくても文書内の語が検索に使われる条件、短い質問の例外、検索語の表示と設定の違いを整理し、社内で誰が何を確かめるかを考えます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/copilot-web-search-bing-dpa">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/copilot-web-search-bing-dpa">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"CopilotのWeb検索でBingへ送るデータとDPAの範囲","description":"業務で使う前に、検索へ送る情報と質問・応答の保護を分けて確認します。全文を送らなくても文書内の語が検索に使われる条件、短い質問の例外、検索語の表示と設定の違いを整理し、社内で誰が何を確かめるかを考えます。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/copilot-web-search-bing-dpa"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"CopilotのWeb検索でBingへ送るデータとDPAの範","item":"https://vaynexis.jp/column/copilot-web-search-bing-dpa"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">CopilotのWeb検索でBingへ送るデータとDPAの範</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">CopilotのWeb検索でBingへ送るデータとDPAの範囲</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>組織で使うCopilotは、Web検索を行うときに、質問から生成した検索語をBingへ送ります。Microsoft製品およびサービスのデータ保護に関する補遺（DPA）は、その検索語の使用には適用されません。元の質問・応答にはDPAが適用されるため、対象を分けて確認します。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月15日（出典はこの記事の最後）</p>
+    <p>この記事は、業務でCopilotのWeb検索を使いたい小さな会社の担当者が、Bingへ送る情報とDPAの対象を分けて確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月15日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">送信されるのは質問から作る検索語</a></li>
+      <li><a href="#s2">全文を送らなくても文書内の語は使われる</a></li>
+      <li><a href="#s3">DPAの対象と検索語の扱いを分ける</a></li>
+      <li><a href="#s4">検索語の表示と検索を止める設定</a></li>
+      <li><a href="#s5">公開情報の調査と社内文書の要約を分ける</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．送信されるのは質問から作る検索語</h2>
+    <p>確認日：2026年11月15日。</p>
+    <p>対象は、組織で使うMicrosoft CopilotとMicrosoft Copilot Chatです。Microsoftの案内では、Web検索を有効にすると、Copilotは質問を解析して回答に役立つ用語を識別します。生成する検索クエリは、通常は元の質問とは異なる、質問に由来するいくつかの単語です。 入力した文章と、検索先へ渡す言葉を分けて読むと、どの情報の扱いを確認しているのかが明確になります。回答に使われた記事だけでなく、記事を探すために使われた言葉にも目を向ける考え方です。</p>
+    <p>質問全体は原則として検索クエリに含まれませんが、質問が非常に短い場合には例外があります。検索要求をBingへ送るときには、利用者のクライアントIPアドレスも送信され、近隣の天気や催しなどの結果の地域調整に使われます。 質問が短いほど、送られる内容も抽象的になるとは限りません。社外に出したくない固有の言葉を含めるかどうかは、文章の長さとは別に考えるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．全文を送らなくても文書内の語は使われる</h2>
+    <p>Bingへ送る検索クエリには、メールや文書などのMicrosoft 365ファイル全体や、アップロードしたファイル全体は含まれません。一方、Microsoft Copilotでは、関連文書を開いたアプリ内で質問するとき、または質問で特定の文書を明示的に参照するときに、文書内のデータが検索クエリに反映されることがあります。</p>
+    <p>Copilot Chatでも、質問の理解に必要な場合には、アップロードしたファイルやEdgeで表示中の内容に由来する追加の語が、Bingへ送られることがあります。 全文が送られないという説明を、文書から言葉が出ていかないという意味に広げないことが大切です。入力欄に書いた内容だけを確認して終わらず、添付した資料や参照させた内容も同じ確認の対象にします。</p>
+    <p>Microsoftの説明では、検索クエリからMicrosoft Entra IDに基づく識別情報（ユーザー名・ドメイン・テナントIDなど）を除いて送信します。 ただし、識別情報の除去と、業務上知られたくない話題を質問に入れない運用とは、確認する対象が異なります。未公表の名称や交渉の目的など、内容そのものから事情が伝わる語にも注意を向けます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．DPAの対象と検索語の扱いを分ける</h2>
+    <p>Microsoftは、元の質問と応答をMicrosoft 365内に格納し、顧客の指示なしにサービスの境界を離れないと説明しています。エンタープライズデータ保護は、DPAと製品条件に基づいて顧客データに適用されるコントロールと約束を指します。</p>
+    <p>一方、Bingへ送る検索クエリにはMicrosoftサービス契約とMicrosoftプライバシーに関する声明が適用され、Webクエリの扱いには製品条項による追加の約束があります。Microsoftは、生成されたWeb検索クエリの使用にはDPAが適用されないと明記しています。 適用対象外という語だけで、組織の入力内容すべてが同じ扱いだと捉えると、確認の範囲がずれます。反対に、入力内容への保護の説明だけで検索に送る語まで確認済みにすると、別の取り扱いを見落とします。</p>
+    <p>Microsoftの案内には、生成された検索クエリをBingの改善、広告プロファイルの作成、行動追跡、基礎モデルの学習に使わず、広告主とも共有しないという主な約束があり、全体は同ページの追加のコミットメントの一覧に示されています。 契約上の利用可否は、扱う情報や自社の契約も関わるため、公式資料を示して専門家に確認します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．検索語の表示と検索を止める設定</h2>
+    <p>Web検索クエリの引用では、回答のリンクされた引用セクションに、Bingへ送った正確な検索語が表示されます。Microsoftの案内では、この引用はMicrosoft Copilot Chatでのみ利用でき、WordやPowerPointなどのMicrosoft 365アプリ内のCopilotウィンドウでは利用できず、チャットスレッド内での表示は24時間です。 確認の記録では、入力した言葉、参照させた資料、検索へ渡った言葉を混ぜずに残すと、後で何を見直すべきかが分かります。社内で記録を共有するときも、不要な機密の転載を増やさない範囲を決めます。</p>
+    <p>管理者の主な制御方法は、Microsoft 365のクラウドポリシーサービスにある「CopilotでのWeb検索を許可する」ポリシーです。管理者がWeb検索を無効にすると、利用者側の「Webコンテンツ」の切り替えはオフで淡色表示になり、利用者はオンにできません。</p>
+    <p>利用者側の切り替えが使える場合は、Microsoft Copilotアプリの「設定」から「個人用設定」を選び、「詳細設定」を展開して「Web検索」をオフにする手順が案内されています。利用者がMicrosoft 365アプリのオプションの接続エクスペリエンスをオフにする操作は、Web検索の可用性には影響しません。 似た名前の設定を代わりに確認せず、検索を管理する設定そのものと、組織の管理方針を照らし合わせる必要があります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．公開情報の調査と社内文書の要約を分ける</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>取引先との交渉を含む内部資料を要約したい場面と、一般公開された製品情報を調べたい場面では、必要な情報を分けて扱うとよいです。内部資料に含まれる名称や方針を、そのまま公開情報の調査に持ち込む必要があるかを検討します。公開情報の調査では一般的な分類語へ置き換えられても、交渉相手との比較では固有の名称が必要になる場合があるためです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">架空の場面</th><th scope="col">使う情報</th><th scope="col">責任者が利用前に決めること</th></tr></thead><tbody><tr><td data-label="架空の場面">公開された製品の仕様を調べる</td><td data-label="使う情報">公開済みの製品名と仕様項目</td><td data-label="責任者が利用前に決めること">調査に不要な取引条件を付け加えない</td></tr><tr><td data-label="架空の場面">社内の打合せ資料を要約する</td><td data-label="使う情報">内部の記載内容</td><td data-label="責任者が利用前に決めること">公開情報の調査を同時に求める必要があるか</td></tr><tr><td data-label="架空の場面">未公表の企画と外部の動向を比べる</td><td data-label="使う情報">内部の方針と公開情報</td><td data-label="責任者が利用前に決めること">それぞれを別の作業にできるか、判断を誰に確認するか</td></tr></tbody></table></div>
+    <p>たとえば、未公表の企画書を添えて外部の動向との比較を求める前に、まず内部の要約と公開情報の調査に分けられるかを考えます。文章の言い換えだけで済ませず、外部の情報を必要とする作業なのかを先に整理する方法です。</p>
+    <p>責任者は利用開始前に情報の分類と確認先を決め、担当者は入力の直前に参照資料を見直し、管理担当者は設定変更の際に運用とのずれを点検します。特定の担当者が不在なら、誰に相談してから使うかまで決めておくと、迷ったまま入力する場面を減らせます。こうした入力と参照の境界は、<a href="/ai">業務でAIを使う際に決めること</a>にもつながる論点です。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">入力した文章と、検索へ送る語を分けて捉えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">短い質問の例外も含め、入力内容を見直したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">添付資料や参照中の内容に、外へ出したくない語がないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の質問・応答と、検索語の契約上の扱いを分けて確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">利用する画面で検索語を確認できる範囲を調べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">組織側の制御と利用者側の設定を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">利用可否に迷う情報の相談先を決めたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月15日）</h2>
+    <ul class="col-src">
+      <li><a href="https://learn.microsoft.com/ja-jp/copilot/plan/enterprise-data-protection" rel="noopener" target="_blank">Microsoft Copilot および Microsoft Copilot Chat におけるエンタープライズ データ保護</a>：組織で使用する製品の範囲と、適用される契約の説明</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/copilot/plan/manage-public-web-access" rel="noopener" target="_blank">Microsoft Copilot と Microsoft Copilot Chat での Web 検索のデータ、プライバシー、セキュリティ</a>：検索語の生成、送る情報と例外、DPAの適用範囲、検索語の表示、管理者と利用者の制御</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/copilot/plan/privacy-and-protections" rel="noopener" target="_blank">Microsoft Copilot Chat プライバシーと保護</a>：添付資料や表示中の内容からの追加用語と、エンタープライズデータ保護の意味</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/ai-assistant-file-sharing-review">CopilotやGeminiに社内ファイルを使わせる前に</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方。最初に決める6項目と、参考にできる公的な資料</a></li>
+      <li><a href="/column/shadow-ai-switch-approved-service">社員が私用の生成AIを仕事で使っていたら</a></li>
+      <li><a href="/column/gemini-public-link-uploaded-images">Geminiの公開リンクはアップロード画像まで相手に見える？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

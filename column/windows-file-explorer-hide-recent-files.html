@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windowsのエクスプローラーで最近使ったファイルを出さないには｜Vaynexis</title>
+  <meta name="description" content="最近使ったファイルの名前を画面に出したくないときは、表示の設定を見直します。公式ヘルプで確認できる操作と影響する範囲、ほかの項目が残る場合の見分け方、元の資料を消さずに結果を確かめる流れを整理し、事務の引き継ぎに残す項目まで説明します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Windowsのエクスプローラーで最近使ったファイルを出さないには｜Vaynexis">
+  <meta property="og:description" content="最近使ったファイルの名前を画面に出したくないときは、表示の設定を見直します。公式ヘルプで確認できる操作と影響する範囲、ほかの項目が残る場合の見分け方、元の資料を消さずに結果を確かめる流れを整理し、事務の引き継ぎに残す項目まで説明します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/windows-file-explorer-hide-recent-files">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/windows-file-explorer-hide-recent-files">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Windowsのエクスプローラーで最近使ったファイルを出さないには","description":"最近使ったファイルの名前を画面に出したくないときは、表示の設定を見直します。公式ヘルプで確認できる操作と影響する範囲、ほかの項目が残る場合の見分け方、元の資料を消さずに結果を確かめる流れを整理し、事務の引き継ぎに残す項目まで説明します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/windows-file-explorer-hide-recent-files"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Windowsのエクスプローラーで最近使ったファイルを出さな","item":"https://vaynexis.jp/column/windows-file-explorer-hide-recent-files"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Windowsのエクスプローラーで最近使ったファイルを出さな</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Windowsのエクスプローラーで最近使ったファイルを出さないには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>最近使ったファイルを出さないには、最近開いた項目の表示をオフにし、ほかの場所の履歴への影響も確認します。操作後は、一覧の見え方と元の資料を開けることを別々に確かめるとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月15日（出典はこの記事の最後）</p>
+    <p>この記事は、エクスプローラーに最近使ったファイルを出さないようにしたい小さな会社の担当者が、Windows の表示設定とスタートなどへの影響を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月15日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">最初に、名前が出ている場所を確かめる</a></li>
+      <li><a href="#s2">最近開いた項目の表示を設定からオフにする</a></li>
+      <li><a href="#s3">別の表示やクラウドの項目が残ったとき</a></li>
+      <li><a href="#s4">表示の確認と、資料の保管を分ける</a></li>
+      <li><a href="#s5">事務で使う場面と、引き継ぎに残すこと</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．最初に、名前が出ている場所を確かめる</h2>
+    <p>確認日：2026年11月15日</p>
+    <p>この記事の操作は Windows 11 を対象とし、Microsoft の日本語ヘルプの適用先は Windows 11 と Windows 10 です。画面の表記は Windows の版や更新状況によって異なることがあります。まず、困っているのが保存先の一覧なのか、最近開いた資料を呼び出す一覧なのかを整理します。画面の名前と、表示を控えたい項目をメモしておくと、変更後に同じ場所で比べられます。</p>
+    <p>エクスプローラーでは、Windows 11 バージョン 22H2で、従来のクイック アクセスという開始画面の名前がエクスプローラー ホームに変わっています。手順書と目の前の呼び方が違うときは、呼び方だけで別の機能だと判断せず、どの領域の一覧を指しているかを合わせます。</p>
+    <p>スタート メニューの推奨事項には、最近追加したアプリ、頻繁に使用するアプリ、最近開いたファイルが含まれます。資料名が見える場所をまとめて「履歴」と呼ぶより、表示された場所と内容を分けておく方が、変更する範囲を説明しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．最近開いた項目の表示を設定からオフにする</h2>
+    <h3 class="h3">設定の場所まで進む</h3>
+    <p>［スタート］→［設定］→［個人用設定］→［スタート］の順に開きます。今回探すのは、最近開いた資料の表示を切り替える項目です。画面全体をすっきりさせようとして、周辺の設定もまとめて変更する進め方は避け、目的の項目と変更前の状態を対応させます。</p>
+    <h3 class="h3">対象と範囲を読んで切り替える</h3>
+    <p>［スタート］、［ジャンプ リスト］、［エクスプローラー］で最近開いたアイテムを表示するトグルをオフにします。項目名を読む際は、「最近追加した」「よく使用する」など、似た表現との違いに注意します。操作を終えたら、切り替えた設定名と、オフになっている状態を控えます。</p>
+    <p>この表示切り替えは、エクスプローラーに加え、スタートとジャンプ リストの最近開いた項目も対象としています。日頃の資料の呼び出し方に合わせて、変更後に困る入口がないかも確かめます。対象外の欄まで変わったと判断しないよう、確認する場所を変更前のメモとそろえるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．別の表示やクラウドの項目が残ったとき</h2>
+    <p>Windows 11のエクスプローラーには、クイック アクセスへフォルダーをピン留めして表示する機能があります。残った名前が資料なのか保管先なのか、自分で置いた入口なのかを確認します。名前が残っているという理由だけで、履歴の設定が反映されなかったと結論づけないことが大切です。</p>
+    <p>エクスプローラー ホームからは、Microsoft365.comのファイルを検索することもできます。手元で開いた資料の一覧と、アカウントに関係する表示を混ぜず、どの欄にどの項目が残るかを記録します。</p>
+    <p>クラウドのファイル検索には、アカウントに基づく情報や最近のファイルなどを含める設定もあります。対象に含まれる情報の範囲を読み、履歴だけを扱うつもりで周辺の表示まで変更してよいかを考えます。意図した範囲と合わないときは、追加の変更を重ねず、管理担当者へ残った欄の名前を伝えるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．表示の確認と、資料の保管を分ける</h2>
+    <p>表示設定を変えた後は、最初に名前が出ていた画面へ戻り、控えていた対象と見比べます。続いて、元の保存先から必要な資料を開き、仕事を続けられるかを確認します。「名前が見えない」と「資料を利用できない」を混同せず、表示を変える目的が満たされたかを見る流れです。</p>
+    <p>エクスプローラーで選択した項目を削除してごみ箱に移動する操作には、Ctrl+D（または Del）があります。表示を控えるための作業では、元の資料を削除する操作に進まず、設定を切り替えた結果を確認します。資料を処分するかどうかは、今回の表示変更とは別に扱います。</p>
+    <p>必要な資料を探し直す際は、エクスプローラーで保存先のフォルダーから検索できます。表示を変える前に保管先を控えておくと、履歴を使わない開き方を引き継ぐ際にも役立ちます。たどり着いた資料が、同名の控えではなく普段更新しているものかも照合します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．事務で使う場面と、引き継ぎに残すこと</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>画面をほかの人に見せる作業では、見せる資料を先に選び、関係のない名前が見える場所を整理しておくとよいです。表示の変更と合わせて、必要な資料へ戻る経路を用意しておけば、説明の途中で探し直す場面にも対応できます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">想定する場面</th><th scope="col">表示を控えたいもの</th><th scope="col">操作後に確かめること</th></tr></thead><tbody><tr><td data-label="想定する場面">画面を使って書類の説明をする</td><td data-label="表示を控えたいもの">説明と関係のない資料名</td><td data-label="操作後に確かめること">説明する資料を保存先から開けるか</td></tr><tr><td data-label="想定する場面">担当を引き継ぐ</td><td data-label="表示を控えたいもの">前任者が開いた資料への依存</td><td data-label="操作後に確かめること">保管先と日常の開き方が伝わるか</td></tr><tr><td data-label="想定する場面">端末の使い方をそろえる</td><td data-label="表示を控えたいもの">利用者ごとに異なる履歴の見え方</td><td data-label="操作後に確かめること">変更した範囲と残った表示を説明できるか</td></tr></tbody></table></div>
+    <p>引き継ぎには、変更した設定名、変更前後の状態、確認した画面、資料の保管先を残します。うまく合わなかった場合も、「消えなかった」だけで済ませず、残った欄と項目の種類が分かる記録にすると、次の担当者が調べる対象を絞れます。</p>
+    <p>事務の手間を洗い出すなら、資料を探す、開く、画面で説明する流れを分け、繰り返している箇所を整理します。<a href="/ai">AIで減らす作業を考える入口</a>としても、まず人が扱う資料と判断する場面を明らかにするとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">表示を控えたい名前が出る画面と欄を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更する設定名と変更前の状態を控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表示が変わる対象の範囲を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">切り替え後に元の画面へ戻って見比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">残った項目が資料か保管先かを見分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の保存先から必要な資料を開けるか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">設定の変更内容と確認結果を引き継げる形にしたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月15日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/accessibility/windows/make-it-easier-to-focus-on-tasks" rel="noopener" target="_blank">タスクにフォーカスしやすくする</a>：適用先、最近開いた項目を非表示にする設定の場所と対象範囲</li>
+      <li><a href="https://support.microsoft.com/ja-jp/windows/experience/fileexplorer/file-explorer-in-windows" rel="noopener" target="_blank">Windows のエクスプローラー</a>：ホームの名称変更、フォルダーを固定して表示する機能</li>
+      <li><a href="https://support.microsoft.com/ja-jp/windows/experience/personalization/customize-the-windows-start-menu" rel="noopener" target="_blank">Windows スタート メニューをカスタマイズする</a>：推奨事項に含まれる項目の種類</li>
+      <li><a href="https://support.microsoft.com/ja-jp/windows/experience/storage-filemanagement/find-your-files-and-apps-in-windows" rel="noopener" target="_blank">Windows でファイルとアプリを見つける</a>：クラウドのファイル検索に関する設定、保存先のフォルダーからの検索</li>
+      <li><a href="https://support.microsoft.com/ja-jp/accessibility/windows/keyboard-shortcuts-in-windows" rel="noopener" target="_blank">Windows のキーボード ショートカット</a>：表示を変える操作と資料を削除する操作の違い</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/windows-pin-work-folder-quick-access">Windowsで毎日使う業務フォルダーを固定してすぐ開くには</a></li>
+      <li><a href="/column/windows-11-find-work-files-by-partial-name">Windows 11で名前の一部しか分からない業務資料を探す手順</a></li>
+      <li><a href="/column/windows-show-hidden-work-files">Windowsで非表示の業務ファイルを確認する手順と照合のポイント</a></li>
+      <li><a href="/column/windows-sleep-time-power-battery">Windows 11の電源設定でスリープまでの時間を変更するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

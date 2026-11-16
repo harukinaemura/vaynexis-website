@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gmailの画像設定で外部画像の自動表示を止め、必要なときだけ開く｜Vaynexis</title>
+  <meta name="description" content="受信メールの画像を自動表示させたくない事務担当者向けに、パソコン版の設定変更から保存、必要な画像だけ表示する操作までを整理します。画像が出ない理由の切り分け、安全性についての注意点、担当者が交代するときに残す記録も説明します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Gmailの画像設定で外部画像の自動表示を止め、必要なときだけ開く｜Vaynexis">
+  <meta property="og:description" content="受信メールの画像を自動表示させたくない事務担当者向けに、パソコン版の設定変更から保存、必要な画像だけ表示する操作までを整理します。画像が出ない理由の切り分け、安全性についての注意点、担当者が交代するときに残す記録も説明します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/gmail-external-image-setting">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/gmail-external-image-setting">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Gmailの画像設定で外部画像の自動表示を止め、必要なときだけ開く","description":"受信メールの画像を自動表示させたくない事務担当者向けに、パソコン版の設定変更から保存、必要な画像だけ表示する操作までを整理します。画像が出ない理由の切り分け、安全性についての注意点、担当者が交代するときに残す記録も説明します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/gmail-external-image-setting"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Gmailの画像設定で外部画像の自動表示を止め、必要なときだ","item":"https://vaynexis.jp/column/gmail-external-image-setting"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Gmailの画像設定で外部画像の自動表示を止め、必要なときだ</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Gmailの画像設定で外部画像の自動表示を止め、必要なときだけ開く</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Google の日本語ヘルプに従い、パソコン版 Gmail の［画像］で［外部画像を表示する前に確認する］を選び、［変更を保存］を押すと、自動表示を止める設定にできます。 必要な画像はメールを読んでから表示する運用にし、設定を変えた記録と、受信時に確かめた結果を分けて残すと引き継ぎやすくなります。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月15日（出典はこの記事の最後）</p>
+    <p>この記事は、受信メールの画像を自動表示させたくない小さな会社の担当者が、Gmailの設定変更と保存、必要な画像の表示方法を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月15日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">自動表示を止める設定と保存の場所</a></li>
+      <li><a href="#s2">必要な画像を読む操作と、自動表示へ戻す操作</a></li>
+      <li><a href="#s3">画像が出ない理由と、安全性の説明を混同しない</a></li>
+      <li><a href="#s4">事務では、表示の判断を用件と結び付ける</a></li>
+      <li><a href="#s5">引き継ぎには、変更した理由と確認結果を残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．自動表示を止める設定と保存の場所</h2>
+    <p>確認日：2026年11月15日。</p>
+    <p>この記事の対象は、Google がパソコン向けに案内している Gmail の受信画像の表示設定です。 初期設定では、画像付きのメールを受信すると画像が自動表示されます。 いつも画像が出る状態から、内容を見て表示するか判断する状態へ変えることが、ここでの操作の目的です。</p>
+    <p>パソコンで Gmail を開き、右上の設定アイコンから［すべての設定を表示］へ進みます。 続いて［画像］まで下へスクロールし、［外部画像を表示する前に確認する］を選び、ページ下部の［変更を保存］を押します。</p>
+    <p>操作を引き継ぐ際は、設定を開くところだけで説明を終えず、選択する項目と保存するところまでをひと続きの手順として残すとよいです。画面を開けた状態、選択を変えた状態、保存を終えた状態を混同すると、後からどこまで進めたのか分からなくなります。担当者用の記録には、変更する理由に加えて、保存まで終えたことを書き添えます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．必要な画像を読む操作と、自動表示へ戻す操作</h2>
+    <p>確認してから表示する設定では、画像付きのメールにある［下記の画像を表示］をクリックして画像を表示できます。 自動表示に戻す場合は、同じ［画像］で［外部画像を常に表示する］を選び、ページ下部の［変更を保存］を押す手順です。</p>
+    <p>目の前のメールの画像を読むときは［下記の画像を表示］を使い、今後の受信時の扱いを変えるときは設定画面で選択し直します。どちらを行ったかを記録すれば、画像を一度表示しただけなのか、普段の設定まで戻したのかを後任に伝えられます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．画像が出ない理由と、安全性の説明を混同しない</h2>
+    <p>Google は、送信者またはメールが疑わしいと Gmail が判断した場合、画像を自動表示せず、表示するかどうかを利用者に確認すると案内しています。 このため、画像が出なかったという結果だけを、設定変更が終わった証拠にするのは避けた方がよいです。選択内容を確かめる作業と、受信したメールの見え方を確かめる作業を分けると、理由を追いやすくなります。</p>
+    <p>Google は、利用者が受信する前にメール内の画像をスキャンし、疑わしい兆候があるかを確認しています。 一方、Google の説明では、画像を含むメールを開いたかどうかを送信者が知ることができる場合があります。</p>
+    <p>こうした説明から、画像が表示されたかどうかだけで、送信者を信用してよいかを判断しない運用が考えられます。受信側の設定を変える目的は明確にし、送信元や用件を確かめる判断は別に残します。「画像が見えるから内容も正しい」「画像を止めたから安心」という説明にまとめると、担当者に誤った判断基準を渡してしまいます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．事務では、表示の判断を用件と結び付ける</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>画像を見るか迷う場面では、メールの見た目よりも、担当する仕事に何が必要かを起点にすると整理できます。文章で用件が分かる場合と、写真や図を読まないと内容を判断できない場合を分けておくと、画像の有無に引っ張られずに作業できます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">受信した内容</th><th scope="col">先に確かめる点</th><th scope="col">担当者が残す判断</th></tr></thead><tbody><tr><td data-label="受信した内容">文章で用件が分かる案内</td><td data-label="先に確かめる点">本文だけで対応が決まるか</td><td data-label="担当者が残す判断">画像を見ずに扱える用件か</td></tr><tr><td data-label="受信した内容">図や写真の確認を求める連絡</td><td data-label="先に確かめる点">差出人と依頼内容に心当たりがあるか</td><td data-label="担当者が残す判断">内容の確認に画像が必要か</td></tr><tr><td data-label="受信した内容">心当たりのない依頼</td><td data-label="先に確かめる点">社内で受け取る予定があったか</td><td data-label="担当者が残す判断">表示の判断を保留して確認するか</td></tr></tbody></table></div>
+    <p>表は、すべての受信メールに共通する安全判定の基準ではありません。担当者が「何を確かめてから扱うか」を話し合うための整理です。用件が曖昧なまま画像の表示だけを進めるのではなく、不足している情報と、その確認先を明らかにします。</p>
+    <p>判断に迷ったときの相談先も、手順書に添えるとよいです。依頼を知っている担当者に聞くのか、社内の管理担当者へ確認するのかを決めておくと、次の人が同じ場面で立ち止まったときに状況を渡せます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．引き継ぎには、変更した理由と確認結果を残す</h2>
+    <p>引き継ぎ用のメモには、変更の目的、操作した対象、保存を終えたこと、受信時に見えた内容、迷ったときの確認先をまとめます。画面の操作だけを残すより、なぜその扱いにしたのかが分かる形にすると、後任が設定を見直す際の判断材料になります。</p>
+    <p>特に、設定を変えた担当者とメールを扱う担当者が違う場合は、期待する状態を言葉にして共有することが大切です。「設定済み」という記録だけでは、画像を見たいときにどこまで自己判断で進めてよいかが伝わりません。表示を保留する場面と、用件の確認先も合わせておくとよいです。</p>
+    <p>確認結果を書くときは、実際に見えたものと、そこから考えた理由を区別します。画像が見えなかったことは観察した結果ですが、その原因まで確かめていなければ、原因は未判断として扱います。後から調べる人が、記録のどこを事実として受け取れるか分かるようにするためです。</p>
+    <p>事務の手間を洗い出すなら、画像を読む判断と、確認結果を記録して引き継ぐ作業を分け、<a href="/ai">AIを活用する業務の整理</a>につなげて考えるとよいです。自動化を検討する際にも、人が判断する箇所と、整理を補助できる箇所を先に明らかにします。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">操作する対象を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">自動で表示させず、内容を見て判断する目的を共有したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">選択内容を変えた後、保存まで終えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">必要な画像を読む場面と、普段の扱いを戻す場面を分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">画像の有無だけで操作の完了や安全性を判断していないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更の理由、確かめた結果、迷ったときの確認先を残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月15日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/mail/answer/145919?co=GENIE.Platform%3DDesktop&amp;hl=ja" rel="noopener" target="_blank">Gmail で画像を表示または非表示にする - パソコン - Gmail ヘルプ</a>：パソコン版の画像表示設定と保存、個別メールでの表示、自動表示へ戻す操作、疑わしいメールの例外、画像のスキャンと開封情報の</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/vacation-suspicious-attachment-report">休暇明けの不審メールは添付を開かず何を記録して報告するか</a></li>
+      <li><a href="/column/gmail-calendar-stop-automatic-events">Gmailの予約メールから予定が自動登録される設定を止めるには</a></li>
+      <li><a href="/column/email-auto-forward-private-check-records">業務メールの私用宛て自動転送を点検し、許可と確認結果を残すには</a></li>
+      <li><a href="/column/gmail-reading-pane-position">Gmailの閲覧ウィンドウで一覧の横にメール本文を出すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

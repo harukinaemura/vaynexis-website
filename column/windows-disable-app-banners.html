@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windowsの通知で特定アプリのバナーだけ止める手順と確認点｜Vaynexis</title>
+  <meta name="description" content="画面に出る通知だけを減らし、後で連絡を確認できる状態を残したい事務担当者向けに、アプリ別の設定手順を整理します。通知全体の停止とバナーの非表示の違い、音を残すかどうかの選択、応答不可との切り分け、変更後の確認と引き継ぎの記録までを解説します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Windowsの通知で特定アプリのバナーだけ止める手順と確認点｜Vaynexis">
+  <meta property="og:description" content="画面に出る通知だけを減らし、後で連絡を確認できる状態を残したい事務担当者向けに、アプリ別の設定手順を整理します。通知全体の停止とバナーの非表示の違い、音を残すかどうかの選択、応答不可との切り分け、変更後の確認と引き継ぎの記録までを解説します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/windows-disable-app-banners">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/windows-disable-app-banners">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Windowsの通知で特定アプリのバナーだけ止める手順と確認点","description":"画面に出る通知だけを減らし、後で連絡を確認できる状態を残したい事務担当者向けに、アプリ別の設定手順を整理します。通知全体の停止とバナーの非表示の違い、音を残すかどうかの選択、応答不可との切り分け、変更後の確認と引き継ぎの記録までを解説します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/windows-disable-app-banners"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Windowsの通知で特定アプリのバナーだけ止める手順と確認","item":"https://vaynexis.jp/column/windows-disable-app-banners"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Windowsの通知で特定アプリのバナーだけ止める手順と確認</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Windowsの通知で特定アプリのバナーだけ止める手順と確認点</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>特定アプリのバナーだけを止めるには、そのアプリの通知設定で［通知バナーの表示］をオフにします。後で確認する場所や音の扱いを先に決め、変更後に意図した受け取り方になったかを確かめるとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月15日（出典はこの記事の最後）</p>
+    <p>この記事は、特定アプリの通知バナーだけを止めたい小さな会社の担当者が、Windows の表示・通知センター・音の設定を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月15日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">通知を止める範囲と対象の版をそろえる</a></li>
+      <li><a href="#s2">対象アプリを開き、バナーの項目を変更する</a></li>
+      <li><a href="#s3">後で読む場所と音の扱いを別々に選ぶ</a></li>
+      <li><a href="#s4">表示されない理由を応答不可と混同しない</a></li>
+      <li><a href="#s5">事務での希望を受け取り方の表にする</a></li>
+      <li><a href="#s6">変更後の確認は表示と受け取りを分ける</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．通知を止める範囲と対象の版をそろえる</h2>
+    <p>確認日：2026年11月15日</p>
+    <p>Microsoft の日本語ヘルプの適用先は Windows 11 と Windows 10 で、この記事は Windows 11 の手順を対象にします。画面の表記は Windows の版や更新状況によって異なることがあります。通知には画面上のバナーと、後から開ける通知センターという表示先があります。</p>
+    <p>変更前には、「画面に出て作業を遮ること」と「連絡自体を受け取ること」のどちらを変えたいのかを分けます。連絡の内容は必要でも、資料を照合している途中に表示されると困る、といった希望を言葉にしておくと、操作する項目を選びやすくなります。</p>
+    <p>Microsoft の案内では、通知が表示される場所をアプリごとに変更できます。「通知を減らしたい」という依頼を受けた側は、希望する状態を確かめてから変更します。単に表示がなくなったことだけを終了の目印にすると、後で確認したかった連絡まで見えなくなった場合に気づきにくいためです。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．対象アプリを開き、バナーの項目を変更する</h2>
+    <p>［スタート］から［設定］、［システム］、［通知］の順に開きます。［アプリやその他の送信者からの通知］で、変更するアプリを選択します。一覧で対象を選ぶところまでと、開いた先で表示方法を変えるところを分けて進めるとよいです。名前が似た項目を取り違えないよう、変更したい連絡に表示されていた名前と見比べます。</p>
+    <p>対象アプリの設定で［通知バナーの表示］をオフにすると、ポップアップのバナーを無効にできます。画面の表示を見ながら、変更前の状態も控えておきます。依頼者と操作する人が違う場合には、どの連絡について困っているかを先に共有しておくと、対象の食い違いを減らせます。</p>
+    <p>アプリの通知自体を無効にする項目もあります。今回の目的は表示方法の調整なので、受信も止めたいという合意がないまま、停止する範囲を広げないことが大切です。表示が多いという理由だけで、用途の違う連絡までまとめて変更することは避けます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．後で読む場所と音の扱いを別々に選ぶ</h2>
+    <p>後で通知を読みたい場合は、対象アプリの［通知センターに通知を表示する］をオンにします。音の有無は［サウンドの再生］で別に切り替えられます。画面への割り込みだけを止めるのか、音も抑えるのかは、担当する業務に合わせて選びます。見た目を静かにしたい人と、音も含めて集中を妨げないようにしたい人では、希望する状態が異なります。</p>
+    <p>通知センターは、タスク バーの時計または通知ベルのアイコンを選択して開けます。後で読む運用にするなら、担当者自身が確認する場面を決めておくとよいです。手が空いたら見る、という曖昧な取り決めだけでは、読んだつもりの人と、まだ読まれていない連絡との間に行き違いが残ります。</p>
+    <p>すぐ返答が必要な連絡については、画面に出ない状態でも対応を始められるかを担当者と相談します。後で確認できることと、その仕事に間に合うことは分けて考えます。表示を変える際に、連絡を受けた後の行動まで整理しておくことが、引き継ぎにも役立ちます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．表示されない理由を応答不可と混同しない</h2>
+    <p>［応答不可］は、特定の時間や活動中に通知をミュートにするための機能です。［応答不可］がオンの間も、［優先通知の設定］で特定アプリの通知を許可できます。バナーを止める作業と、作業中の受信方法をまとめて切り替える作業を混ぜると、どの変更が結果につながったのか追いにくくなります。</p>
+    <p>Microsoft の案内では、［応答不可］を自動的にオンにする条件の例として、ディスプレイの複製やアプリの全画面表示などが挙げられています。思ったとおりに表示されない場合は、変更した箇所だけで結論を出さず、確認したときの使い方も記録します。通常の作業中と、画面を共有して説明しているときとを区別しておくと、問い合わせる相手にも状況を伝えやすくなります。</p>
+    <p>今回扱うのは端末側の表示方法です。アプリ内で通知する時刻を予約したり、予定に対する連絡の時刻を変えたりする操作は、この記事の範囲に含めません。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．事務での希望を受け取り方の表にする</h2>
+    <p>ここからは当社の整理です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">困っている場面の例</th><th scope="col">残したい受け取り方</th><th scope="col">変更後に確かめること</th></tr></thead><tbody><tr><td data-label="困っている場面の例">資料の照合中に連絡が目に入る</td><td data-label="残したい受け取り方">後でまとめて読む</td><td data-label="変更後に確かめること">内容を読み返す場所が分かるか</td></tr><tr><td data-label="困っている場面の例">読み上げながら入力すると音が気になる</td><td data-label="残したい受け取り方">静かな状態で後から読む</td><td data-label="変更後に確かめること">見た目と音の両方が希望に合うか</td></tr><tr><td data-label="困っている場面の例">急ぎの確認依頼を受ける</td><td data-label="残したい受け取り方">気づいたら対応を始める</td><td data-label="変更後に確かめること">担当者が必要な時に連絡を確認できるか</td></tr></tbody></table></div>
+    <p>同じ道具を使っていても、連絡を受けて始める仕事によって希望する扱いは変わります。表の内容をそのまま共通設定にするのではなく、連絡の緊急性と確認する人を照らし合わせて決めるとよいです。</p>
+    <p>依頼の記録には、「邪魔なので消す」ではなく、「照合を終えた後に読むため、作業中の表示を抑える」といった目的を残します。目的が分かれば、担当が変わったときも、元の扱いを続けるか見直すかを判断しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．変更後の確認は表示と受け取りを分ける</h2>
+    <p>設定を変えた後は、業務に影響しない連絡を使い、通常の作業中に希望する状態になったかを確かめます。画面に出なかったという結果だけで終えず、後から内容を読めるか、音の扱いが意図に合うか、返答が必要な連絡を確認できるかまで見ます。試すために外部の相手へ連絡する必要がある場合は、相手と目的を共有してから進める運用にします。</p>
+    <p>引き継ぎには、変更した対象、元の状態、変更した項目、確認した場面、確認結果を残します。操作は終わったものの連絡がまだ来ていない場合は、動作の確認も済んだとは記録せず、誰が結果を見届けるかを決めておくとよいです。</p>
+    <p>期待と異なる場合は、続けて別の設定を変える前に、直前の変更と観察結果を整理します。対象が分からないときは、似た名前の項目を代わりに操作せず、実際に見えた文字と困っている場面を管理担当者に伝えます。</p>
+    <p>事務の手間を洗い出すなら、通知を受けて行う確認や転記も並べ、<a href="/ai">AI 活用を考える前の作業整理</a>につなげるとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">画面への表示を減らしたいのか、受信自体を止めたいのか整理したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更する対象の名前を、困っている連絡と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">希望した表示方法だけを変更したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">後から内容を確認できる状態か確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">音の有無が希望どおりか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">使っていた場面も含めて変更後の動作を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の状態と、確認済みの範囲を引き継ぎに残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月15日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/windows/experience/notifications-and-do-not-disturb-in-windows" rel="noopener" target="_blank">Windows の通知と応答不可</a>：適用先、設定への経路、バナー・通知センター・音の個別設定、応答不可と自動切り替え</li>
+      <li><a href="https://support.microsoft.com/ja-jp/accessibility/windows/make-it-easier-to-focus-on-tasks" rel="noopener" target="_blank">タスクにフォーカスしやすくする</a>：アプリごとの表示場所の変更、応答不可の優先通知</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/outlook-visit-reminder-timing">Outlookで重要な訪問予定の通知時刻を変える手順と確認点</a></li>
+      <li><a href="/column/google-calendar-browser-event-notifications-check">Googleカレンダーの予定通知が出ないときの設定と確認順</a></li>
+      <li><a href="/column/snipping-tool-mark-check-area">Windowsの画面画像に書き込み、確認してほしい場所を示すには</a></li>
+      <li><a href="/column/windows-enlarge-text-only">Windowsのテキストサイズで画面の文字だけ大きくする手順</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
