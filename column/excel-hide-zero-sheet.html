@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelのゼロ値を非表示にする設定と対象シートの確かめ方｜Vaynexis</title>
+  <meta name="description" content="集計表のゼロを画面に出したくないときは、値を消す前に表示の設定を確かめます。Windows版Excelで対象シートを選ぶ手順、元に戻す方法、入力待ちとの取り違えを防ぐ見方を整理します。短い例と確認表で、変更する範囲や引き継ぎに残す内容も確認できます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelのゼロ値を非表示にする設定と対象シートの確かめ方｜Vaynexis">
+  <meta property="og:description" content="集計表のゼロを画面に出したくないときは、値を消す前に表示の設定を確かめます。Windows版Excelで対象シートを選ぶ手順、元に戻す方法、入力待ちとの取り違えを防ぐ見方を整理します。短い例と確認表で、変更する範囲や引き継ぎに残す内容も確認できます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-hide-zero-sheet">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-hide-zero-sheet">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelのゼロ値を非表示にする設定と対象シートの確かめ方","description":"集計表のゼロを画面に出したくないときは、値を消す前に表示の設定を確かめます。Windows版Excelで対象シートを選ぶ手順、元に戻す方法、入力待ちとの取り違えを防ぐ見方を整理します。短い例と確認表で、変更する範囲や引き継ぎに残す内容も確認できます。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-hide-zero-sheet"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelのゼロ値を非表示にする設定と対象シートの確かめ方","item":"https://vaynexis.jp/column/excel-hide-zero-sheet"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelのゼロ値を非表示にする設定と対象シートの確かめ方</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelのゼロ値を非表示にする設定と対象シートの確かめ方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelでは、対象のワークシートを選び、［ゼロ値のセルにゼロを表示する］をオフにすると、数値の0が入ったセルを空白に見せられます。値の削除や空白文字への置き換えをせず、表示を整える方針です。変更前に、その表で入力が済んだと判断する手掛かりも決めておくとよいです。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月15日（出典はこの記事の最後）</p>
+    <p>この記事は、ゼロ値を表示せず表を整えたい小さな会社の担当者が、Windows版Excelの設定と対象シートを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月15日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">対象はWindows版のシート全体の表示です</a></li>
+      <li><a href="#s2">表示設定で対象を選び、チェックを外します</a></li>
+      <li><a href="#s3">空白に見える欄を入力待ちと取り違えないようにします</a></li>
+      <li><a href="#s4">想定と違うときは、対象と変更方法を分けて見ます</a></li>
+      <li><a href="#s5">引き継ぎには変更対象と戻す判断を残します</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．対象はWindows版のシート全体の表示です</h2>
+    <p>確認日：2026-11-15</p>
+    <p>この記事では、Windows版のExcel for Microsoft 365、Excel 2024、Excel 2021を対象にします。ここでは、数値の0を残したまま、シートの表示を整える設定を扱います。</p>
+    <p>Windows版では、［ファイル］から［オプション］、［詳細設定］へ進みます。変更対象は、［次のシートで作業するときの表示設定］のリストで選ぶシートです。設定を開く前に、変更したい表の名前と、残しておきたい表示を手元に控えておくと、対象を照らし合わせやすくなります。</p>
+    <p>この操作はシート全体のゼロを対象にするため、表示を残したい欄がある表では、適用範囲を先に検討します。したがって、見やすくしたい場所だけでなく、確認のために表示を残したい場所も含めて判断することが出発点です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．表示設定で対象を選び、チェックを外します</h2>
+    <p>操作の流れは、設定画面を開く、対象のシートを選ぶ、表示のチェックを外す、表へ戻って確認する、という順です。対象を選ぶ操作を省かず、変更する前のチェック状態も控えます。</p>
+    <h3 class="h3">似た名前の設定欄を区別します</h3>
+    <p>［詳細設定］には、ブックを対象に選ぶ［次のブックで作業するときの表示設定］と、シートを対象に選ぶ［次のシートで作業するときの表示設定］があります。設定欄を探す際は、「表示設定」の語だけで選ばず、「ブック」と「シート」の違いまで読むことが大切です。スクロールして見つけた欄が、目的の設定欄なのかを確かめます。</p>
+    <h3 class="h3">オフにする項目を確かめます</h3>
+    <p>シートを選んだ後、［ゼロ値のセルにゼロを表示する］のチェックを外すと、ゼロ値のセルが空白の表示になります。変更後は表へ戻り、見せ方が意図に合っているかを確かめます。明細だけでなく、合計欄や差額の欄も確認対象に含めます。表示を省いてよい欄と、結果を明示しておきたい欄が混在している場合は、表全体への適用が目的に合うかを見直す余地があります。</p>
+    <p>再びゼロを表示したいときは、同じ項目のチェックをオンにします。変更の目的が一時的な見せ方の調整であれば、どの時点で表示を戻すのかも、表を使う人とそろえておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．空白に見える欄を入力待ちと取り違えないようにします</h2>
+    <p>受付件数を数値の0で入力した欄は、対象シートのゼロ表示をオフにすると空白に見えるため、入力済みかどうかを別に確かめる運用にします。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">説明用の欄</th><th scope="col">保持する入力内容</th><th scope="col">設定をオフにした後の見た目</th><th scope="col">業務上の確認</th></tr></thead><tbody><tr><td data-label="説明用の欄">受付件数</td><td data-label="保持する入力内容">数値の0</td><td data-label="設定をオフにした後の見た目">空白として表示</td><td data-label="業務上の確認">入力済みの記録と元の受付資料を照合</td></tr></tbody></table></div>
+    <p>この例で表示を整える目的は、表の見せ方をそろえることです。入力が済んでいると判断する根拠は、担当者の確認記録や元の資料に残します。見た目が簡潔になったことだけで、確認作業まで終えたとは扱わない方針です。</p>
+    <p>空欄を見つけた人が、その場の推測で入力を補わず、担当へ確かめられる運用にします。記入する人と読む人が異なる表では、どこを見て入力状況を判断するのかも引き継ぎます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．想定と違うときは、対象と変更方法を分けて見ます</h2>
+    <p>［ゼロ値のセルにゼロを表示する］は、ゼロの値を含むセルの表示を扱う項目です。そのため、単に空白に見えるという理由だけで、入力内容まで同じ状態と判断せず、元の記入内容も確かめます。</p>
+    <h3 class="h3">違う表の表示を見ていないか</h3>
+    <p>表示を変えたはずの表と合わないときは、［次のシートで作業するときの表示設定］で選ばれたシートを確かめ直します。似た名前の表がある場合は、対象期間や用途も併せて照合すると、取り違えを探しやすくなります。別の担当者が確認するときにも、表の名前を省かずに伝える方針です。</p>
+    <h3 class="h3">別の方法による変更が混ざっていないか</h3>
+    <p>Microsoftの案内では、選んだセルだけのゼロを非表示にする方法には、表示形式を使います。今回はシートを対象にした設定に絞り、途中で別の方法を重ねない進め方にします。以前の担当者による変更があるときは、変更履歴や引き継ぎメモを先に確認するとよいです。</p>
+    <h3 class="h3">近くにある別の設定を変更しないようにします</h3>
+    <p>［計算結果の代わりに数式をセルに表示する］は、数式が生成する値の代わりに数式を見せる項目であり、ゼロの表示を切り替える項目とは別です。見た目が変わった理由を探す際にも、今回触れた項目を先に確認します。</p>
+    <p>［表示桁数で計算する］は、セルに保存する値を表示形式に合わせて変更する項目なので、表示を整える目的だけで一緒に変更しないようにします。名前が似ていても、説明の対象が表示なのか、保存する値なのかを区別することが大切です。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．引き継ぎには変更対象と戻す判断を残します</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>引き継ぎメモには、対象の表、表示を変えた理由、変更した項目、元に戻す際の判断を残します。操作手順だけでなく、その表で表示を省く理由が分かる形にすると、用途が変わった際にも見直しやすくなります。入力の完了を確認する担当も併せて記録します。</p>
+    <p>渡す前の確認では、変更した人が説明するだけでなく、受け取る人にも読み方を確かめてもらいます。未処理と考える場所、内容の照合に使う資料、判断に迷った際の確認先がそろえば、表示の好みと作業上のルールを混同しにくくなります。</p>
+    <p>事務の手間を洗い出すなら、表示を整える作業と内容を照合する作業を分け、どの判断を人が担うかから整理するとよいです。その進め方は、<a href="/ai">事務でAIを活用する前の整理</a>にもつながります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">表示を整える目的と、変更する表の範囲を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">設定で選んだ対象が、意図した表と一致しているか確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">見やすくする場所だけでなく、見出しや合計欄も見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力済みと入力待ちを判断する手掛かりを残したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">表示を戻す判断と、変更内容を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">受け取る人と、欄の読み方や確認先を共有したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月15日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/display-or-hide-zero-values" rel="noopener" target="_blank">ゼロ値を表示する、または非表示にする</a>：適用先、シートのゼロ表示のオン・オフ、選んだセルだけに適用する方法との区別</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/advanced-options" rel="noopener" target="_blank">詳細オプション</a>：Windows版の設定画面、ブックとシートの対象の違い、ゼロ表示と近くの設定の違い</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/excel-blank-denominator-ratio-pending">Excelで分母が未入力の比率を「未計算」と表示する方法</a></li>
+      <li><a href="/column/excel-report-copy-paste-values">Excelの報告用コピーを数式ではなく確定した値で残すには</a></li>
+      <li><a href="/column/excel-manual-recalculation-result-check">Excelで入力値を変えても結果が変わらないとき、何を確かめる？</a></li>
+      <li><a href="/column/excel-fixed-decimal-off">Excelの「小数点位置を自動的に挿入する」を止めるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

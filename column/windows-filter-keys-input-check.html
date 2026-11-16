@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windowsのフィルターキーで短い入力が抜けるときの解除と確認｜Vaynexis</title>
+  <meta name="description" content="文字を短く押すと入力が抜けるときに、入力補助の状態を確かめて解除する流れをまとめます。右側のキーを使う切り替えと設定画面での確認を分け、変更前後で比べる入力の種類、業務データを使わない試し方、症状が残る場合に引き継ぐ内容を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Windowsのフィルターキーで短い入力が抜けるときの解除と確認｜Vaynexis">
+  <meta property="og:description" content="文字を短く押すと入力が抜けるときに、入力補助の状態を確かめて解除する流れをまとめます。右側のキーを使う切り替えと設定画面での確認を分け、変更前後で比べる入力の種類、業務データを使わない試し方、症状が残る場合に引き継ぐ内容を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/windows-filter-keys-input-check">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/windows-filter-keys-input-check">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Windowsのフィルターキーで短い入力が抜けるときの解除と確認","description":"文字を短く押すと入力が抜けるときに、入力補助の状態を確かめて解除する流れをまとめます。右側のキーを使う切り替えと設定画面での確認を分け、変更前後で比べる入力の種類、業務データを使わない試し方、症状が残る場合に引き継ぐ内容を整理します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/windows-filter-keys-input-check"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Windowsのフィルターキーで短い入力が抜けるときの解除と","item":"https://vaynexis.jp/column/windows-filter-keys-input-check"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Windowsのフィルターキーで短い入力が抜けるときの解除と</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Windowsのフィルターキーで短い入力が抜けるときの解除と確認</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>短い入力が抜けるときは、フィルター キーの有効状態を確認し、意図せずオンになっていればオフに切り替えます。操作後は表示と実際の入力を確かめます。文字が入らないという印象だけで原因を決めず、短く押した場合と繰り返した場合の違いを控えると、次の確認につながります。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月15日（出典はこの記事の最後）</p>
+    <p>この記事は、短いキー入力の抜けを確認したい小さな会社の担当者が、フィルターキーのオン・オフと変更前後の入力を確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月15日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">短い入力を無視する補助が必要かを確かめる</a></li>
+      <li><a href="#s2">右側のキーを押し続け、切り替え後の表示を見る</a></li>
+      <li><a href="#s3">設定で項目名とオン・オフを照らし合わせる</a></li>
+      <li><a href="#s4">業務書類を使わず、抜ける入力を比べる</a></li>
+      <li><a href="#s5">改善しない場合は、操作と観察結果を分けて渡す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．短い入力を無視する補助が必要かを確かめる</h2>
+    <p>確認日：2026年11月15日。</p>
+    <p>画面の表示は更新によって変わることがあります。［フィルター キー］をオンにして感度を設定すると、短い押し方や続けて押した入力を無視できる、とMicrosoftは説明しています。</p>
+    <p>この説明に照らすと、「短く触れた文字が抜ける」のか、「続けて押した同じ文字が抜ける」のかを分けて観察することが大切です。ただし、似た症状があるというだけで、原因をその補助に決めることは避けます。</p>
+    <p>解除に進む前に、使う人が意図して補助を利用しているかを確かめます。共用の端末なら、直前の利用者が使いやすくするために変えていないかも確認したい点です。自分には入力しづらくても、別の利用者には必要な状態かもしれません。引き継ぎの相手と、どの状態で使うかを合わせてから変更します。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．右側のキーを押し続け、切り替え後の表示を見る</h2>
+    <p>右 Shift キーを8秒間押し続けると、フィルター キーのオンとオフが切り替わります。</p>
+    <p>操作の前に、後で状態を見比べられるよう準備します。編集中の業務書類から離れ、変更前の表示を控えておくとよいです。キーは左右の位置を見て選び、押したままにする操作と、何度も押して離す操作を混同しないようにします。短く押すことを繰り返しても、長押しと同じ操作として記録しません。</p>
+    <p>このショートカットは解除専用ではなく、オンとオフを切り替えるものです。そのため、最初の状態を見ずに解除できたと判断しないことが大切です。反応が分かりにくいときも、すぐ同じ操作を重ねる前に表示を見直します。操作した順番が追えなくなると、変更前後の比較が難しくなります。</p>
+    <p>画面に確認を求める表示が出た場合は、表示文と選んだ項目を控えます。音がしたかどうかだけで終了とせず、最終的に望んだ状態になったかを見ます。表示が変わらなかった場合は、行った操作と、その後も表示が同じだったことを分けて残します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．設定で項目名とオン・オフを照らし合わせる</h2>
+    <p>Windows 11のアクセシビリティ設定は、［スタート］から［設定］→［アクセシビリティ］と進むか、Windows ロゴ キー + Uで開けます。その中の［キーボード］の項目を開きます。</p>
+    <p>ここでは、目的の項目の名前と、現在のオン・オフの表示を組にして確認します。項目を開けたことと、状態を変更できたことは分けて扱います。変更前の表示、行った操作、変更後の表示という順で記録すると、操作の途中で止まった場合も引き継ぎやすくなります。</p>
+    <p>入力が不安定でキー操作を進めにくいときは、マウスから開く経路で表示を確かめるとよいです。手元の画面で案内と異なる名前が見えたときは、似た項目をまとめて変更せず、表示されている名前をそのまま控えます。調整する項目を広げず、今回変更した対象が分かる形で止めておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．業務書類を使わず、抜ける入力を比べる</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>入力の確認には、送信されず、取引や集計にも使わない試し書きの場所を用意します。普段の速さで短い語句を入力し、押したつもりの文字と画面に残った文字を比べます。続いて、同じ文字を続けて押した場合を確かめると、困っている操作を具体的に表せます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">比べる入力</th><th scope="col">架空の試し方</th><th scope="col">控える内容</th></tr></thead><tbody><tr><td data-label="比べる入力">異なる文字を短く押す</td><td data-label="架空の試し方">英字の「abc」を入力する</td><td data-label="控える内容">どの文字が抜けたか</td></tr><tr><td data-label="比べる入力">同じ文字を続けて押す</td><td data-label="架空の試し方">英字の「aa」を入力する</td><td data-label="控える内容">押した回数と表示された文字が合うか</td></tr><tr><td data-label="比べる入力">押す長さを変える</td><td data-label="架空の試し方">同じ英字を、短く押す場合と少し長く押す場合で比べる</td><td data-label="控える内容">押し方によって入り方が違うか</td></tr></tbody></table></div>
+    <p>表は入力の観察例で、特定の結果になることを示すものではありません。変更前後で同じ文字列を使い、入力先もそろえると比較しやすくなります。押す長さも入力する場所も同時に変えてしまうと、何を変えた後に入力が通ったかを整理しにくくなります。</p>
+    <p>特に、文字の抜けを補うために追加入力した場合は、最初の入力結果と補った後の結果を分けます。最終的な文字列だけが合っていても、普段の押し方で入力できたかは別に確かめたい点です。業務へ戻る際は、入力済みの内容も原本と照らし、抜けた文字を残さないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．改善しない場合は、操作と観察結果を分けて渡す</h2>
+    <p>表示が希望どおりになっても文字が抜ける場合は、同じ切り替えを繰り返すところで止まらず、管理担当者に渡す材料をまとめます。記録には、短く押したときの抜け、連続して押したときの抜け、変更前後の表示、試した入力先を含めるとよいです。「キーを押したのに何も起きなかった」という場合も、画面に変化がなかったのか、文字が入らなかったのかを分けます。</p>
+    <p>引き継ぎでは、観察したことと推測した原因を混ぜないようにします。普段の入力に戻った場面と、まだ困っている場面を並べれば、解消した部分までやり直すことを避けやすくなります。相手に伝える際は、業務上の文面や個人情報を含まない試し書きの結果を使うとよいです。</p>
+    <p>事務の手間を洗い出すなら、端末の入力状態の確認と、日々の転記や照合を分けて整理します。そのうえで、<a href="/ai">事務作業へのAI活用を考える</a>際には、繰り返す入力と、人が判断する箇所を書き出すところから始められます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">使う人が意図して必要な補助を利用していないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">短く押した場合と、同じ文字を続けて押した場合を分けて観察したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">左右の位置と、押し続ける操作を取り違えていないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更前と変更後の項目名・オンとオフの表示を控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">業務に影響しない場所で、同じ文字列を使って入力を比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">補う前の入力結果と、症状が残った場面を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月15日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/accessibility/windows/windows-keyboard-shortcuts-for-accessibility" rel="noopener" target="_blank">アクセシビリティのための Windows のキーボード ショートカット</a>：右 Shiftを8秒間押してオン・オフを切り替える操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/accessibility/windows/make-your-mouse-keyboard-and-other-input-devices-easier-to-use" rel="noopener" target="_blank">マウス、キーボード、およびその他の入力デバイスを使いやすくする</a>：Windows 11での設定への経路、キーボード項目、短時間・繰り返し入力を無視する機能</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/windows-sticky-keys-turn-off">Windowsの固定キー機能を解除するには？意図しない切替の確認</a></li>
+      <li><a href="/column/microsoft-ime-kana-to-romaji">Microsoft IMEでかな入力をローマ字入力へ戻すには</a></li>
+      <li><a href="/column/input-work-chair-desk-handover">入力作業の担当交代で椅子と机を調整したら何を確認し記録に残すか</a></li>
+      <li><a href="/column/windows-explorer-item-checkboxes">Windowsのエクスプローラーで選択用チェックボックスを出すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

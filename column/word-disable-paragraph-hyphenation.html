@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordのハイフネーションを段落ごとに解除し、英単語の分割を止めるには｜Vaynexis</title>
+  <meta name="description" content="英単語が行末で途中に分かれるとき、選択した段落だけを対象外にする手順を整理します。対象となる版、段落を選ぶ範囲、設定後に見る箇所を示し、文書全体の見た目を変える前に確認できるようにします。引き継ぎに残す内容も紹介します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Wordのハイフネーションを段落ごとに解除し、英単語の分割を止めるには｜Vaynexis">
+  <meta property="og:description" content="英単語が行末で途中に分かれるとき、選択した段落だけを対象外にする手順を整理します。対象となる版、段落を選ぶ範囲、設定後に見る箇所を示し、文書全体の見た目を変える前に確認できるようにします。引き継ぎに残す内容も紹介します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/word-disable-paragraph-hyphenation">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/word-disable-paragraph-hyphenation">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wordのハイフネーションを段落ごとに解除し、英単語の分割を止めるには","description":"英単語が行末で途中に分かれるとき、選択した段落だけを対象外にする手順を整理します。対象となる版、段落を選ぶ範囲、設定後に見る箇所を示し、文書全体の見た目を変える前に確認できるようにします。引き継ぎに残す内容も紹介します。","datePublished":"2026-11-16","dateModified":"2026-11-16","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/word-disable-paragraph-hyphenation"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Wordのハイフネーションを段落ごとに解除し、英単語の分割を","item":"https://vaynexis.jp/column/word-disable-paragraph-hyphenation"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Wordのハイフネーションを段落ごとに解除し、英単語の分割を</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Wordのハイフネーションを段落ごとに解除し、英単語の分割を止めるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>選択した本文の英単語の分割を止めるには、対象の段落を選び、［段落］の設定で［ハイフネーションしない］を選びます。まず直したい本文の範囲を決め、変更後は英単語のつながりと前後の行の収まりを見比べます。</p></div>
+    <p class="col-meta">公開：2026年11月16日／情報の確認日：2026年11月15日（出典はこの記事の最後）</p>
+    <p>この記事は、Wordで英単語の分割を止めたい小さな会社の担当者が、対象の段落とハイフネーションを解除した後の行の収まりを確かめる流れをまとめたものです。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月15日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">対象の版と、設定する本文を決める</a></li>
+      <li><a href="#s2">段落を選んで、分割しない設定にする</a></li>
+      <li><a href="#s3">変更前後は、単語と行の収まりを分けて見る</a></li>
+      <li><a href="#s4">直り方が意図と違うときの確認順</a></li>
+      <li><a href="#s5">引き継ぎには、対象と仕上がりを残す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．対象の版と、設定する本文を決める</h2>
+    <p>確認日：2026年11月15日。</p>
+    <p>この記事で扱う操作は、Microsoft の日本語ヘルプが Windows 版向けに示している手順で、適用先は Word for Microsoft 365、Word 2024、Word 2021 です。同ヘルプは、Mac 版と Web 版では手順とオプションが異なる場合があるとしています。</p>
+    <p>Microsoft の「ハイフネーションを調整する」でも、選んだテキストをハイフネーションの対象外にする操作が案内されています。文書を開いたら、変更したい箇所と、そのまま残したい箇所を先に見分けます。全文をまとめて直すかどうかは別に考え、今回は英単語の分割を止めたい本文に対象を絞ります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．段落を選んで、分割しない設定にする</h2>
+    <p>操作は次の順です。</p>
+    <ul>
+      <li>分割を止めたい本文を含む段落を選択し、必要な範囲に応じて複数の段落を選びます。</li>
+      <li>Microsoftの案内に沿って、［ホーム］タブの［段落］ダイアログボックス起動ツールを選びます。</li>
+      <li>［改ページと改行］タブを開きます。</li>
+      <li>［書式設定］の［ハイフネーションしない］を選びます。</li>
+      <li>［OK］を選んで設定を確定します。</li>
+    </ul>
+    <p>手順を追うときは、目立つ英単語だけに気を取られず、直したい本文のまとまりを確認するとよいです。長い説明の途中だけを見ていると、前後にも同じような分割があるのかを見落としがちです。設定前に対象の先頭と末尾を見ておくと、あとで見比べる範囲がはっきりします。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．変更前後は、単語と行の収まりを分けて見る</h2>
+    <p>ここからは当社の整理です。</p>
+    <p>仕上がりの確認は、英単語が途中で分かれていないかを見ることから始めます。その後で、行末の空き、前後の行の読みやすさ、本文と見出しの位置関係を見ます。単語がつながったことと、文書の見た目が整ったことを、同じ確認で済ませないのがポイントです。</p>
+    <p>特に、行末の空きだけを見て文字を足したり、英単語そのものを書き換えたりすると、内容の確認と見た目の調整が混ざってしまいます。綴りや文章の意味は元の記載と照合し、表示を整えるためだけに内容を変えない方針にするとよいです。読みやすいかどうかは、行の右端だけでなく、文を続けて読んで判断します。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確認する場面</th><th scope="col">対象の決め方</th><th scope="col">仕上がりの見方</th></tr></thead><tbody><tr><td data-label="確認する場面">英文の案内文が行末で分かれる</td><td data-label="対象の決め方">分割を止めたい本文の段落を対象にする</td><td data-label="仕上がりの見方">元の綴りと、行末から次の行へのつながりを見比べる</td></tr><tr><td data-label="確認する場面">説明の段落が続いている</td><td data-label="対象の決め方">変更したいまとまりの先頭と末尾を決める</td><td data-label="仕上がりの見方">対象内を通して読み、見落とした分割がないか見る</td></tr><tr><td data-label="確認する場面">日本語の本文に英語の用語が混ざる</td><td data-label="対象の決め方">英語を含む本文のうち、直す範囲を決める</td><td data-label="仕上がりの見方">英語のつながりと周囲の文章の読みやすさを見る</td></tr></tbody></table></div>
+    <p>表は確認箇所を整理するための例です。特定の語がどの位置で折り返されるかを示す見本ではありません。変更した場所に加えて、変更対象のすぐ外側も見比べ、直す必要のなかった本文まで選んでいなかったかを確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．直り方が意図と違うときの確認順</h2>
+    <p>仕上がりが意図と違ったときは、すぐに別の設定へ進まず、最初に選んだ本文と、いま見ている本文が同じかを照合します。似た説明が続く文書では、変更箇所を取り違えることも考えられます。見出しや段落の書き出しを目印にしておくと、確認する場所を共有しやすくなります。</p>
+    <p>次に、操作の途中で別の項目を選んでいないか、確定するところまで進めたかを振り返ります。見た目が変わらなかったことだけを理由に、文書全体の設定をまとめて変更するのは避けたいところです。どの本文に、何を設定したかを確かめてから、残っている症状を分けて考えます。</p>
+    <p>行末に記号が残っている場面でも、見た目だけで不要と判断せず、元の表記を見ます。必要な記号を削除することと、行の途中で語を分けないようにすることは、目的が異なります。残っている箇所の位置と表示を記録しておけば、内容を確認する担当者にも状況を伝えやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．引き継ぎには、対象と仕上がりを残す</h2>
+    <p>引き継ぎでは「英語を直した」だけで済ませず、どの本文を対象にしたのか、何を見て完了と判断したのかを残します。たとえば、該当する見出し、対象の段落の書き出し、分割が気になっていた語を記録する形です。文書の場所を示す情報と、仕上がりを判断する情報を組み合わせると、引き継いだ人も同じ箇所を確認できます。</p>
+    <p>本文の追記や差し替えがあったときには、修正した箇所の周辺を読み直し、途中で分かれている語がないかを見ます。見た目の好みを引き継ぐだけでなく、「英単語の綴りを変えずに、対象の本文を読みやすくする」という目的まで伝えておくとよいです。確認が済んだ箇所と、判断が残っている箇所も分けておきます。</p>
+    <p>事務の手間を洗い出すなら、文書を直す操作と、仕上がりを確かめる作業を分けて整理するところから考えられます。<a href="/ai">AI を業務に取り入れる進め方</a>を考える際も、対象箇所を伝える情報と、人が最後に確かめる点を先にまとめておくとよいです。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">使用している版と、手順の対象となる版を照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更したい本文の先頭と末尾を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象の段落を選んでから設定したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">分割を止める項目を選び、確定まで進めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">英単語の綴りと、前後の行の収まりを見比べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象外の本文まで変更していないかを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">引き継ぎに対象箇所と確認結果を残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月15日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/word/line-and-page-breaks" rel="noopener" target="_blank">Word の改行と改ページの設定を使用する</a>：Windows 版の適用先、対象段落の選択、設定項目と確定操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/control-hyphenation" rel="noopener" target="_blank">ハイフネーションを調整する</a>：選択したテキストを対象外にする操作と、段落設定の開き方</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/word-keep-heading-with-next">Wordで見出しと本文を離さない「次の段落と分離しない」の設定</a></li>
+      <li><a href="/column/word-proofing-language-english-selected-text">Wordの日本語文書で英文だけ校正言語を英語にするには？</a></li>
+      <li><a href="/column/word-bullet-list-hanging-indent">Wordの長い箇条書きで二行目以降の字下げをそろえるには</a></li>
+      <li><a href="/column/word-stop-print-hidden-text">Wordの「非表示のテキストを印刷する」を止める設定と確認</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
