@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chromeの「音声」でサイトから勝手に音が出るのを止めるには｜Vaynexis</title>
+  <meta name="description" content="事務所で調べものをしていたら、開いたページの動画がいきなり音を出した。そんなときに、パソコン版 Chrome で鳴っている音をその場で止める方法と、特定のサイトだけ、またはすべてのサイトの既定で［音声］を変える手順を、Google の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Chromeの「音声」でサイトから勝手に音が出るのを止めるには｜Vaynexis">
+  <meta property="og:description" content="事務所で調べものをしていたら、開いたページの動画がいきなり音を出した。そんなときに、パソコン版 Chrome で鳴っている音をその場で止める方法と、特定のサイトだけ、またはすべてのサイトの既定で［音声］を変える手順を、Google の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/chrome-site-sound-mute">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/chrome-site-sound-mute">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Chromeの「音声」でサイトから勝手に音が出るのを止めるには","description":"事務所で調べものをしていたら、開いたページの動画がいきなり音を出した。そんなときに、パソコン版 Chrome で鳴っている音をその場で止める方法と、特定のサイトだけ、またはすべてのサイトの既定で［音声］を変える手順を、Google の公式ヘルプに沿って整理します。","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/chrome-site-sound-mute"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Windows・パソコンの設定","item":"https://vaynexis.jp/column/topics/windows"},{"@type":"ListItem","position":4,"name":"Chromeの「音声」でサイトから勝手に音が出るのを止めるに","item":"https://vaynexis.jp/column/chrome-site-sound-mute"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/windows">Windows・パソコンの設定</a></li><li aria-current="page">Chromeの「音声」でサイトから勝手に音が出るのを止めるに</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Chromeの「音声」でサイトから勝手に音が出るのを止めるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>鳴っている音をすぐ止めたいときは、Chrome の右上のメディア コントロールから一時停止できます。 同じサイトで何度も鳴るなら、ウェブアドレスの左側のサイト情報から［サイトの設定］を開き、そのサイトだけ許可の設定を変えます。 すべてのサイトの既定を変えるときは、［設定］の［プライバシーとセキュリティ］、［サイトの設定］から、［コンテンツ］の［その他のコンテンツの設定］にある［音声］を選びます。</p></div>
+    <p class="col-meta">公開：2026年11月17日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>事務所で調べものをしていたら、開いたページの動画がいきなり音を出した。そんなときに、パソコン版 Chrome で鳴っている音をその場で止める方法と、特定のサイトだけ、またはすべてのサイトの既定で［音声］を変える手順を、Google の公式ヘルプに沿って整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">止め方は3段階ある</a></li>
+      <li><a href="#s2">今鳴っている音を止める</a></li>
+      <li><a href="#s3">決まったサイトだけ鳴らさない</a></li>
+      <li><a href="#s4">すべてのサイトの既定を変える</a></li>
+      <li><a href="#s5">会議の最中に鳴ったときの順番（架空の例）</a></li>
+      <li><a href="#s6">小さな困りごとを、まとめて見直す</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．止め方は3段階ある</h2>
+    <p>確認日：2026年11月16日。</p>
+    <p>対象は、パソコンで使う Google Chrome です。マイク（声を拾う側）の設定と、Windows 全体の音量の設定は扱いません。</p>
+    <p>静かな事務所で急に音が鳴ると、まずは止めることで頭がいっぱいになります。ただ、止め方には段階があります。今鳴っている音だけを止めるのか、そのサイトでは今後も鳴らさないのか、どのサイトでも既定では鳴らさないのか。どこまで止めるかで、触る場所が変わります。いきなり既定を変えると、あとで音が要る場面で困ることがあるので、狭い範囲から試すのが基本です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">止めたい範囲</th><th scope="col">触る場所</th><th scope="col">向いている場面</th></tr></thead><tbody><tr><td data-label="止めたい範囲">今鳴っている音だけ</td><td data-label="触る場所">メディア コントロール</td><td data-label="向いている場面">たまたま開いたページで一度だけ鳴った</td></tr><tr><td data-label="止めたい範囲">決まったサイトだけ</td><td data-label="触る場所">サイト情報の［サイトの設定］</td><td data-label="向いている場面">毎日見るニュースのサイトで毎回鳴る</td></tr><tr><td data-label="止めたい範囲">すべてのサイトの既定</td><td data-label="触る場所">［設定］の［音声］</td><td data-label="向いている場面">共用のパソコンで、音を出す用事がほとんどない</td></tr></tbody></table></div>
+    <p></p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．今鳴っている音を止める</h2>
+    <p>どのタブから鳴っているか分からないときに便利なのが、メディア コントロールです。ヘルプでは、音声を操作するには右上のメディア コントロールを選び、一時停止したり、次の曲や動画にスキップしたりできると説明されています。 選ぶと、再生しているタブに戻れます。</p>
+    <p>気を付けたいのは、別のタブに移っても、元のタブではメディアが引き続き再生されることです。 見えないタブで鳴り続けている、という状態はこれで起きます。タブをたくさん開いているときほど、メディア コントロールから探すほうが早く済みます。</p>
+    <p>いくつものタブをまとめて黙らせたいときは、タブを複数選んでから右クリックする一括操作もあります。ヘルプでは、Ctrl キーを押しながらタブを選び、ハイライトされたタブのどれかを右クリックして操作を選ぶ流れで、その操作の一つにミュートまたはミュートを解除が挙がっています。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．決まったサイトだけ鳴らさない</h2>
+    <p>毎日見るサイトで毎回鳴るなら、そのサイトの設定を変えます。ヘルプの「サイトの権限設定を変更する」には、権限の一つとして［音声］があり、音楽や動画などのメディアの音声を再生するサイトもあると説明されています。</p>
+    <ol>
+      <li>鳴るサイトを開きます。</li>
+      <li>ウェブアドレスの左側で、サイト情報を表示するアイコンを選びます。</li>
+      <li>［サイトの設定］を選びます。</li>
+      <li>［音声］の許可の設定を変更します。</li>
+    </ol>
+    <p></p>
+    <p>このやり方で決めた設定は、デフォルトの設定の代わりに、そのサイトにだけ使われます。 研修の動画のように音が要るサイトには影響しないので、まずはこちらから試すのが無難です。変更は自動的に保存されます。</p>
+    <p>あとでそのサイトの音が必要になったら、同じ画面で設定を戻します。［権限をリセット］ボタンを使える場合は、そのボタンを選んで、変更した設定をリセットすることもできます。 誰がいつ変えたかが分からないと、しばらくして「このサイトだけ動画の音が出ない」と別の人が困ることになります。共用のパソコンで変えたときは、変えた人と日付を一言残しておくと、戻すときに迷いません。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．すべてのサイトの既定を変える</h2>
+    <p>共用のパソコンで、音を出す用事がほとんどない場合は、既定そのものを変える手もあります。</p>
+    <ol>
+      <li>パソコンで Chrome を開きます。</li>
+      <li>右上のその他アイコンから［設定］を選びます。</li>
+      <li>［プライバシーとセキュリティ］、［サイトの設定］の順に選びます。</li>
+      <li>［コンテンツ］で、［その他のコンテンツの設定］、［音声］の順に選びます。</li>
+      <li>デフォルト設定として使うオプションを選びます。</li>
+    </ol>
+    <p></p>
+    <p>既定で鳴らさない形にすると、Web 会議の録画や研修の動画など、音が要るサイトまで静かになるおそれがあります。その場合は、上の「決まったサイトだけ」の手順で、音が要るサイトだけを鳴らす形に戻します。どのサイトを例外にしたかは、あとで誰かが見ても分かるように控えておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．会議の最中に鳴ったときの順番（架空の例）</h2>
+    <p>Web 会議の最中に別のタブの動画が鳴ると、相手にも音が届いてしまうことがあります。慌てて会議の画面を閉じないよう、手順を決めておくと落ち着いて対応できます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">架空の場面での動き</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="架空の場面での動き">右上のメディア コントロールから、鳴っている動画を一時停止する</td></tr><tr><td data-label="順番">2</td><td data-label="架空の場面での動き">会議が終わってから、鳴ったサイトを開き直す</td></tr><tr><td data-label="順番">3</td><td data-label="架空の場面での動き">サイト情報の［サイトの設定］で、そのサイトの［音声］を変える</td></tr><tr><td data-label="順番">4</td><td data-label="架空の場面での動き">例外にしたサイトの名前を、共用のパソコンのメモに書く</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．小さな困りごとを、まとめて見直す</h2>
+    <p>「急に音が出る」「通知がうるさい」といったパソコンの小さな困りごとは、一つひとつは数分でも、何人もが毎日出会うと時間になります。社内の作業と一緒に書き出してみると、どこから手を付けるかを決めやすくなります。書き出すときの型として、<a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）</a>を用意しています。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">今鳴っている音だけなら、メディア コントロールから一時停止したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">別のタブで鳴り続けていないかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">決まったサイトだけなら、サイト情報の［サイトの設定］で［音声］を変えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">既定を変えるときは、［コンテンツ］の［その他のコンテンツの設定］の［音声］から選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">既定で鳴らさない形にしたなら、音が要るサイトを例外にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">例外にしたサイトを、共用のパソコンのメモに残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/chrome/answer/9692215?hl=ja&amp;co=GENIE.Platform%3DDesktop" rel="noopener" target="_blank">音楽、動画、その他のメディアを操作する - パソコン - Google Chrome ヘルプ</a>：メディア コントロール、別のタブでの再生の継続、音声に関するデフォルトの権限を変更する手順</li>
+      <li><a href="https://support.google.com/chrome/answer/114662?co=GENIE.Platform%3DDesktop&amp;hl=ja" rel="noopener" target="_blank">サイトの権限設定を変更する - パソコン - Google Chrome ヘルプ</a>：［音声］の説明、特定のサイトの設定を変更する手順、自動保存、［権限をリセット］</li>
+      <li><a href="https://support.google.com/chrome/answer/2391819?co=GENIE.Platform%3DDesktop&amp;hl=ja" rel="noopener" target="_blank">Chrome でタブを管理する - パソコン - Google Chrome ヘルプ</a>：複数のタブを選択して一括操作を行う（ミュートまたはミュートを解除）</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/chrome-download-pdf-instead-of-opening">Chromeの「PDF をダウンロードする」でブラウザ表示を止めるには</a></li>
+      <li><a href="/column/chrome-extension-site-access-limit">Chrome拡張機能が読める会社のサイトを必要な範囲に絞るには</a></li>
+      <li><a href="/column/chrome-remove-site-zoom-level">Chromeの「ズームレベル」で一つのサイトだけ元に戻すには</a></li>
+      <li><a href="/column/chrome-tab-groups-by-project">Chromeの「タブをグループに追加」で資料を案件別に分けるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

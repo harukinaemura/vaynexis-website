@@ -14,6 +14,7 @@
 .col-list a { font-weight: 700; }
 .col-list p { margin-top: 4px; font-size: 13.5px; color: var(--text-2); }
 .col-src, .col-rel { margin: 10px 0 0; padding-left: 1.3em; font-size: 13.5px; }
+.col-src a { overflow-wrap: anywhere; }
 .col-foot .h3 + ul { margin-top: 8px; }
 .col-foot .h3 { margin-top: 26px; }
 .col-foot .h3:first-child { margin-top: 0; }

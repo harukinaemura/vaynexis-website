@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edgeの「通知」で閉じた後も出るサイト通知を止めるには｜Vaynexis</title>
+  <meta name="description" content="Microsoft Edge を閉じているのに、以前に許可したサイトの通知が画面の隅に出続けるときの止め方です。通知を出しているサイトを特定し、そのサイトの［通知］を［ブロック］に変える2つの道順と、必要になったときに戻す方法を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Edgeの「通知」で閉じた後も出るサイト通知を止めるには｜Vaynexis">
+  <meta property="og:description" content="Microsoft Edge を閉じているのに、以前に許可したサイトの通知が画面の隅に出続けるときの止め方です。通知を出しているサイトを特定し、そのサイトの［通知］を［ブロック］に変える2つの道順と、必要になったときに戻す方法を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/edge-site-notifications-block">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/edge-site-notifications-block">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Edgeの「通知」で閉じた後も出るサイト通知を止めるには","description":"Microsoft Edge を閉じているのに、以前に許可したサイトの通知が画面の隅に出続けるときの止め方です。通知を出しているサイトを特定し、そのサイトの［通知］を［ブロック］に変える2つの道順と、必要になったときに戻す方法を、Microsoft の公式ヘルプに沿って整理します。","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/edge-site-notifications-block"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"ほかの業務ソフトの設定","item":"https://vaynexis.jp/column/topics/tools-other"},{"@type":"ListItem","position":4,"name":"Edgeの「通知」で閉じた後も出るサイト通知を止めるには","item":"https://vaynexis.jp/column/edge-site-notifications-block"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/tools-other">ほかの業務ソフトの設定</a></li><li aria-current="page">Edgeの「通知」で閉じた後も出るサイト通知を止めるには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Edgeの「通知」で閉じた後も出るサイト通知を止めるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Edge を閉じた後にも出てくる通知は、以前にそのサイトの通知を許可したことによるものと考えられます。Microsoft のヘルプには、Web サイトの通知をオンにすると、Microsoft Edge が閉じていても表示されると書かれています。 止めるには、そのサイトの［通知］の設定をドロップダウン メニューから［ブロック］に変えます。</p></div>
+    <p class="col-meta">公開：2026年11月17日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>Microsoft Edge を閉じているのに、以前に許可したサイトの通知が画面の隅に出続けるときの止め方です。通知を出しているサイトを特定し、そのサイトの［通知］を［ブロック］に変える2つの道順と、必要になったときに戻す方法を、Microsoft の公式ヘルプに沿って整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">まず、どのサイトの通知かを書き留める</a></li>
+      <li><a href="#s2">画面の中に出る広告は、通知ではなくポップアップ</a></li>
+      <li><a href="#s3">道順1：そのサイトを開いて、アドレス バーから止める</a></li>
+      <li><a href="#s4">道順2：設定の一覧から、サイトを選んで止める</a></li>
+      <li><a href="#s5">止めた後で、また必要になったら</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．まず、どのサイトの通知かを書き留める</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、Windows のパソコンで使う Microsoft Edge です。</p>
+    <p>業務中に、ニュースサイトや通販サイトのお知らせが急に出ると、集中が途切れるうえ、取引先との画面共有の最中に映り込むこともあります。止める前に、通知に表示されているサイトの名前やアドレスをメモしておきます。複数のサイトから届いている場合は、1つずつ止めていくので、一覧にしておくと抜けに気づきやすくなります。</p>
+    <p>ヘルプには、Web サイトの通知は画面の右下隅に表示され、通知センターにも表示されると書かれています。 出た瞬間にサイト名を読み取れなかったときは、通知センターに残っている通知を開いて、どのサイトから来たものかを確かめます。</p>
+    <p>Edge を閉じていても届くため、「ブラウザーを閉じたのに出る＝ブラウザーとは関係ない」と考えて、パソコン全体の通知を切ってしまう人がいます。そうすると、予定のお知らせなど要る通知まで止まりかねません。止めたいのが特定のサイトのお知らせなら、まず Edge の側でそのサイトだけを止めます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．画面の中に出る広告は、通知ではなくポップアップ</h2>
+    <p>止める前に、困っているものが本当に「通知」かを見分けます。ヘルプの注には、Web サイトの通知と同じではない不要なポップアップを受信している場合は、ポップアップをブロックするページを見るよう書かれています。 ポップアップは、現在のブラウザー ウィンドウ、新しいウィンドウ、または別のタブで開く、広告、通知、オファー、およびアラートと説明されています。</p>
+    <p>見分けの目安は、出てくる場所です。Edge を閉じていても画面の右下に出て、通知センターにも残るなら、サイトごとの［通知］の設定で止める対象です。サイトを見ている最中に、ブラウザーの中や新しいタブに広告が開くなら、ポップアップの設定の側を見直します。どちらか分からないときは、出てきた画面を写真に撮っておくと、社内で相談するときに話が早く進みます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．道順1：そのサイトを開いて、アドレス バーから止める</h2>
+    <p>通知を出しているサイトを Edge で開ける場合は、アドレス バーの左側から、このサイトのアクセス許可を開き、通知の項目でドロップダウン メニューから［ブロック］を選ぶ方法があります。 ヘルプの手順では、アドレス バーの左側にある［サイト情報の表示］を選び、［このサイトのアクセス許可］の中の通知の項目（ヘルプの表記は Notifications）で［ブロック］を選びます。 この道順は、既にサブスクライブしている Web サイトにアクセスしているときに使う方法として書かれています。 いま見ているサイトに対してだけ変えるので、ほかのサイトの設定に触れずに済みます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．道順2：設定の一覧から、サイトを選んで止める</h2>
+    <p>ヘルプの見出しは「Edge 設定で通知を削除またはブロックする」で、個々の Web サイトの通知を削除またはブロックできると書かれています。 サイトごとに切り替える設定なので、業務で使うサイトの通知は残したまま、困っているサイトだけを止められます。</p>
+    <p>サイトのアドレスが分からないときや、いくつかのサイトをまとめて見直したいときは、Edge の［設定］からサイトの一覧を開き、通知をブロックする Web サイトを選んで、［通知］の設定をドロップダウン メニューから［ブロック］にします。 一覧で知らないサイトが通知を許可されていたら、その場で止めておきます。</p>
+    <p>ヘルプの手順では、ブラウザー ウィンドウの右上隅にある［設定など］から［設定］に進み、［すべてのサイト］［サイトのアクセス許可］［Privacy、検索、およびサービス］という項目名が並んでいます。 英語の混じった表記で、画面の並びと一致しないこともあるため、迷ったら［設定］の中の検索欄に「通知」と入れて探すと近道です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">場面（架空の例）</th><th scope="col">使う道順</th><th scope="col">選ぶもの</th></tr></thead><tbody><tr><td data-label="場面（架空の例）">通販サイトのお知らせが毎朝出る。サイトは分かる</td><td data-label="使う道順">道順1（アドレス バー）</td><td data-label="選ぶもの">［通知］→［ブロック］</td></tr><tr><td data-label="場面（架空の例）">見覚えのない名前の通知が出る</td><td data-label="使う道順">道順2（設定の一覧）</td><td data-label="選ぶもの">該当のサイトを選び、［通知］→［ブロック］</td></tr><tr><td data-label="場面（架空の例）">業務で使う予約サイトの通知は残したい</td><td data-label="使う道順">どちらでも</td><td data-label="選ぶもの">残すサイトは変えない</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．止めた後で、また必要になったら</h2>
+    <p>業務で使うサイトを誤って止めてしまった場合も、元に戻せます。ヘルプには、このメニューに戻って［許可］を選ぶと、今後 Web サイトの通知を再サブスクライブできると書かれています。 どのサイトを止め、どれを残したかを短く書いておくと、戻すときに迷いません。</p>
+    <p>社内で「通知が止まらない」という相談が続くなら、パソコンごとの設定のばらつきを一度洗い出しておくと、次の相談のときに同じ順番で確かめられます。端末と設定の困りごとを並べて見るときは、<a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）</a>の考え方も参考になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">通知に表示されているサイトの名前やアドレスを書き留めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">パソコン全体の通知ではなく、Edge のサイトの設定から止めようとしているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">止めたいサイトの［通知］を［ブロック］に変えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">業務で使うサイトの通知を、誤って止めていないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">止めたサイトと残したサイトを記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/edge/manage-website-notifications-in-microsoft-edge" rel="noopener" target="_blank">Microsoft Edge で Web サイトの通知を管理する（Microsoft サポート）</a>：閉じていても表示される通知、［ブロック］の選び方（設定・アドレス バー）、［許可］で戻す方法</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/windows-disable-app-banners">Windowsの通知で特定アプリのバナーだけ止める手順と確認点</a></li>
+      <li><a href="/column/chrome-extension-site-access-limit">Chrome拡張機能が読める会社のサイトを必要な範囲に絞るには</a></li>
+      <li><a href="/column/chrome-remove-site-zoom-level">Chromeの「ズームレベル」で一つのサイトだけ元に戻すには</a></li>
+      <li><a href="/column/edge-internet-explorer-mode">Edgeの「Internet Explorer モード」で古い社内画面を開くには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

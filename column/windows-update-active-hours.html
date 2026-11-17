@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows Updateの「アクティブ時間」を勤務に合わせるには｜Vaynexis</title>
+  <meta name="description" content="更新のための再起動が仕事中に重ならないよう、Windows 11 の［アクティブ時間］を事務所の勤務時間に合わせる手順です。［自動］と［手動］の違い、既定の時間帯、再起動のスケジュールや更新の一時停止との使い分けを、Microsoft の日本語の公式ページに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Windows Updateの「アクティブ時間」を勤務に合わせるには｜Vaynexis">
+  <meta property="og:description" content="更新のための再起動が仕事中に重ならないよう、Windows 11 の［アクティブ時間］を事務所の勤務時間に合わせる手順です。［自動］と［手動］の違い、既定の時間帯、再起動のスケジュールや更新の一時停止との使い分けを、Microsoft の日本語の公式ページに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/windows-update-active-hours">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/windows-update-active-hours">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Windows Updateの「アクティブ時間」を勤務に合わせるには","description":"更新のための再起動が仕事中に重ならないよう、Windows 11 の［アクティブ時間］を事務所の勤務時間に合わせる手順です。［自動］と［手動］の違い、既定の時間帯、再起動のスケジュールや更新の一時停止との使い分けを、Microsoft の日本語の公式ページに沿って整理します。","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/windows-update-active-hours"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Windows・パソコンの設定","item":"https://vaynexis.jp/column/topics/windows"},{"@type":"ListItem","position":4,"name":"Windows Updateの「アクティブ時間」を勤務に合わ","item":"https://vaynexis.jp/column/windows-update-active-hours"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/windows">Windows・パソコンの設定</a></li><li aria-current="page">Windows Updateの「アクティブ時間」を勤務に合わ</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Windows Updateの「アクティブ時間」を勤務に合わせるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>アクティブ時間は、ふだん PC を使っている時間帯を Windows に伝えて、都合の悪いときに更新のための再起動が行われるのを防ぐ設定です。 Windows 11 では、［スタート］＞［設定］＞［Windows Update］＞［詳細オプション］の順に選び、［アクティブ時間］の［アクティブ時間の調整］で［自動］か［手動］を選びます。 更新そのものを止める設定ではありません。Microsoft の FAQ にも、更新を完全に停止することはできないと書かれています。</p></div>
+    <p class="col-meta">公開：2026年11月17日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>更新のための再起動が仕事中に重ならないよう、Windows 11 の［アクティブ時間］を事務所の勤務時間に合わせる手順です。［自動］と［手動］の違い、既定の時間帯、再起動のスケジュールや更新の一時停止との使い分けを、Microsoft の日本語の公式ページに沿って整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">何を決める設定か</a></li>
+      <li><a href="#s2">既定の8時〜17時は勤務に合っているか</a></li>
+      <li><a href="#s3">［自動］か［手動］かを選ぶ</a></li>
+      <li><a href="#s4">再起動の時刻は自分でも決められる</a></li>
+      <li><a href="#s5">待ってほしい期間は「更新の一時停止」</a></li>
+      <li><a href="#s6">会社が管理しているパソコンでは</a></li>
+      <li><a href="#s7">社内に配る設定メモ（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．何を決める設定か</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は Windows 11 のパソコンです。Windows 10 は、2025年10月14日にサポートが終了しています。</p>
+    <p>Windows 11 では、更新プログラムが自動的にダウンロードおよびインストールされます。 ただ、場合によっては、インストールを完了するために PC の再起動が必要になります。 アクティブ時間は、この再起動にかかわる設定です。FAQ には、アクティブ時間を設定することで、更新プログラムのための自動的な再起動がデバイスを使用しない時間帯にのみ行われるようにできる、と書かれています。</p>
+    <p>つまり、ここで決めるのは「この時間帯は自動で再起動しないでほしい」という範囲です。入力の途中で再起動の案内が出て手が止まる、昼休み明けに PC が再起動していて開いていた画面を探し直す、といった困りごとを減らすための設定です。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．既定の8時〜17時は勤務に合っているか</h2>
+    <p>Microsoft の管理者向けの資料には、既定では PC のアクティブ時間は午前8時から午後5時で、ユーザーはアクティブ時間を手動で変更できると書かれています。 同じ資料には、アクティブ時間外に更新が行われると自動再起動される、とも書かれています。</p>
+    <p>9時から18時まで働く事務所なら、夕方の1時間が既定のアクティブ時間から外れます。月末の締めの作業が夕方に集まる経理の担当者にとっては、ちょうど困る時間帯です。一度、自分の PC の値が既定のままかどうかを見ておく価値があります。</p>
+    <p>時間帯の長さには上限があります。資料には、Windows 10 バージョン1607 より後の版では、最大アクティブ時間の長さが18時間までサポートされると書かれています。 早朝から夜まで使う PC でも、1日すべてをアクティブ時間にすることはできません。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．［自動］か［手動］かを選ぶ</h2>
+    <p>Windows 11 の手順は次のとおりです。</p>
+    <ol>
+      <li>［スタート］＞［設定］＞［Windows Update］＞［詳細オプション］の順に選びます。</li>
+      <li>［アクティブ時間］を選びます。</li>
+      <li>［アクティブ時間の調整］のドロップダウンから、［自動］か［手動］を選びます。</li>
+    </ol>
+    <p></p>
+    <p>［自動］は、Windows がデバイスのアクティビティに基づいてアクティブ時間を自動的に調整する選び方で、［手動］は、独自のアクティブ時間を選ぶ選び方です。</p>
+    <p>勤務時間が決まっている事務所なら、手動で勤務時間に合わせるほうが、社内で説明しやすくなります。たとえば「始業の少し前から、残業が多い日の終わりまで」のように広めに取っておくと、夕方の再起動にあたりにくくなります。シフトによって使う時間が日ごとに変わる共用の PC なら、自動に任せる選び方もあります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．再起動の時刻は自分でも決められる</h2>
+    <p>アクティブ時間を決めても、再起動そのものが要らなくなるわけではありません。FAQ には、Windows はデバイスが使用されていないときに再起動を行おうとし、再起動できない場合は、都合のよい時間帯に再起動のスケジュールを設定するよう求められる、と書かれています。 自分から決めるときは、［スタート］＞［設定］＞［Windows Update］で［再起動のスケジュール］を選び、都合のよい日時を指定します。</p>
+    <p>退勤の前に済ませる道もあります。Microsoft の別のページには、早く再起動するには、［スタート］＞［電源］で［更新して再起動］または［更新してシャットダウン］を選ぶ方法が挙げられています。 帰る時に更新を済ませる、と決めておけば、仕事中の再起動の心配を一つ減らせます。</p>
+    <p>ノートパソコンは、使わない時間も電源につないでおきます。FAQ では、ノート PC やタブレットなどは使っていないときにも電源に接続しておくことが勧められていて、更新プログラムがアクティブ時間以外にインストールされても、インストールの完了に必要な電力を確保できると説明されています。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．待ってほしい期間は「更新の一時停止」</h2>
+    <p>決算の直前や大事な発表の前など、しばらく更新を待ってほしい期間があるなら、アクティブ時間ではなく［更新の一時停止］を使います。Windows 11 では、［スタート］＞［設定］＞［Windows Update］を選び、［更新の一時停止］で［日付を選択］を選びます。 一時停止できるのは、現在の日付から最長で35日間です。 一時停止が終わるまで、デバイスは自動的に再起動して更新プログラムのインストールを完了しません。</p>
+    <p>ただし、一時停止も自動更新を完全に無効にするものではなく、何もしなければ、期限が切れると更新プログラムが自動的に再開されます。 FAQ には、一時停止の最大日数に達した場合は、もう一度一時停止する前に、いったん最新の更新プログラムをインストールする必要があるとも書かれています。 アクティブ時間も一時停止も、更新を先送りし続ける道具ではなく、仕事の邪魔にならない時間に更新を済ませるための道具です。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．会社が管理しているパソコンでは</h2>
+    <p>管理者向けの資料には、グループ ポリシー設定や MDM などを使って、更新プログラムのインストール後にデバイスを再起動するタイミングを構成できると書かれています。 ポリシーでアクティブ時間の開始時間と終了時間を決めたり、ユーザーが設定できる最大の範囲を決めたりすることもできます。 会社の PC で思ったとおりに変えられないときは、自分で何度も試すより、パソコンを管理している人に勤務時間を伝えて相談します。</p>
+    <p>もう一つ、新しい動きがあります。2026年7月28日以降にリリースされた更新プログラムからは、再起動が必要な更新をまとめて、月に1回の再起動で済ませる仕組みが始まっています。 この仕組みでも、可能な限りアクティブ時間外に再起動されると説明されています。 ただし、今は IT 部門が管理していないデバイスだけが対象で、段階的に提供されているため、まだすべての PC で使えるわけではありません。</p>
+  </div></section>
+
+  <section class="sec" id="s7" aria-labelledby="s7-title"><div class="wrap">
+    <h2 class="h2" id="s7-title">7．社内に配る設定メモ（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">項目</th><th scope="col">架空の記入例</th></tr></thead><tbody><tr><td data-label="項目">勤務時間</td><td data-label="架空の記入例">9:00〜18:00（残業は20:00まで）</td></tr><tr><td data-label="項目">アクティブ時間</td><td data-label="架空の記入例">手動・8:30〜20:00</td></tr><tr><td data-label="項目">ノートパソコン</td><td data-label="架空の記入例">退勤時は電源につないでおく</td></tr><tr><td data-label="項目">決算前の2週間</td><td data-label="架空の記入例">管理担当が一時停止を判断する</td></tr></tbody></table></div>
+    <p>更新の再起動で作業が止まった、という小さな困りごとは、記録に残らないまま繰り返されがちです。どの作業がどんな理由で止まっているかを書き出すところから始めるなら、<a href="/business-improvement">業務効率化・業務改善は何から始める？</a>の整理が使えます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">8．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">［Windows Update］＞［詳細オプション］＞［アクティブ時間］を開いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">既定の8時〜17時のままか、勤務時間に合わせたかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［自動］と［手動］のどちらにするかを決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">再起動の日時を決めたいときに［再起動のスケジュール］を使ったか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ノートパソコンを、使わない時間も電源につないでいるか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">待ってほしい期間には［更新の一時停止］を使い、最長35日であることを知っているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">会社が管理する PC では、管理している人に相談したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">9．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/windows/deployment/updates-lifecycle/keep-your-pc-up-to-date-with-active-hours" rel="noopener" target="_blank">アクティブ時間で PC を最新の状態に保つ（Microsoft サポート）</a>：アクティブ時間の目的、Windows 11 の手順（自動・手動）、Windows 10 のサポート終了</li>
+      <li><a href="https://support.microsoft.com/ja-jp/windows/deployment/updates-lifecycle/windows-update-faq" rel="noopener" target="_blank">Windows Update: よくあるご質問（Microsoft サポート）</a>：自動のダウンロードとインストール、更新は完全には止められないこと、再起動のスケジュール、電源への接続</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/windows/deployment/update/waas-restart" rel="noopener" target="_blank">更新後のデバイスの再起動の管理（Microsoft Learn）</a>：既定の午前8時〜午後5時、アクティブ時間外の自動再起動、最大18時間、管理者による構成</li>
+      <li><a href="https://support.microsoft.com/ja-jp/servicing/os/windows/docs/2026/07/kb5121772-one-restart-a-month-for-windows-updates" rel="noopener" target="_blank">Windows 更新プログラムで月に 1 回の再起動（KB5121772・Microsoft サポート）</a>：更新して再起動・更新してシャットダウン、月に1回の再起動、アクティブ時間外の再起動、対象の範囲</li>
+      <li><a href="https://support.microsoft.com/ja-jp/windows/deployment/updates-lifecycle/pause-updates-in-windows" rel="noopener" target="_blank">Windows で更新を一時停止する（Microsoft サポート）</a>：一時停止の手順、最長35日、一時停止中は自動で再起動しないこと、自動での再開</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/windows-do-not-disturb-hours">Windowsの応答不可を勤務時間帯に合わせ自動で切り替えるには</a></li>
+      <li><a href="/column/windows-sleep-time-power-battery">Windows 11の電源設定でスリープまでの時間を変更するには</a></li>
+      <li><a href="/column/windows-11-set-default-printer-manually">Windows 11で通常使うプリンターを固定するには？</a></li>
+      <li><a href="/column/windows-delivery-optimization-other-devices-off">Windowsの「他のデバイスからのダウンロードを許可」を止めるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

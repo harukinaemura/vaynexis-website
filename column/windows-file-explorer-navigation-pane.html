@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エクスプローラーの「ナビゲーション ウィンドウ」が消えたときは｜Vaynexis</title>
+  <meta name="description" content="エクスプローラーを開いたら、左側にあったフォルダーやドライブの一覧が見当たらない。そんなときに、Windows 11 のエクスプローラーで［ナビゲーション ウィンドウ］をもう一度表示する手順と、戻った後にどこに何があるかを、Microsoft の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="エクスプローラーの「ナビゲーション ウィンドウ」が消えたときは｜Vaynexis">
+  <meta property="og:description" content="エクスプローラーを開いたら、左側にあったフォルダーやドライブの一覧が見当たらない。そんなときに、Windows 11 のエクスプローラーで［ナビゲーション ウィンドウ］をもう一度表示する手順と、戻った後にどこに何があるかを、Microsoft の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/windows-file-explorer-navigation-pane">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/windows-file-explorer-navigation-pane">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"エクスプローラーの「ナビゲーション ウィンドウ」が消えたときは","description":"エクスプローラーを開いたら、左側にあったフォルダーやドライブの一覧が見当たらない。そんなときに、Windows 11 のエクスプローラーで［ナビゲーション ウィンドウ］をもう一度表示する手順と、戻った後にどこに何があるかを、Microsoft の公式ヘルプに沿って整理します。","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/windows-file-explorer-navigation-pane"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Windows・パソコンの設定","item":"https://vaynexis.jp/column/topics/windows"},{"@type":"ListItem","position":4,"name":"エクスプローラーの「ナビゲーション ウィンドウ」が消えたとき","item":"https://vaynexis.jp/column/windows-file-explorer-navigation-pane"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/windows">Windows・パソコンの設定</a></li><li aria-current="page">エクスプローラーの「ナビゲーション ウィンドウ」が消えたとき</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">エクスプローラーの「ナビゲーション ウィンドウ」が消えたときは</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>エクスプローラーの左側の一覧は「ナビゲーション ウィンドウ」と呼ばれ、フォルダー、ドライブ、ライブラリ、ピン留めされたファイルまたはフォルダー、OneDrive などの場所にここからアクセスします。 非表示になっているときは、エクスプローラーを開き、コマンド バーの［表示］を選んでから、［表示］、［ナビゲーション ウィンドウ］の順に選ぶと、もう一度表示されます。</p></div>
+    <p class="col-meta">公開：2026年11月17日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>エクスプローラーを開いたら、左側にあったフォルダーやドライブの一覧が見当たらない。そんなときに、Windows 11 のエクスプローラーで［ナビゲーション ウィンドウ］をもう一度表示する手順と、戻った後にどこに何があるかを、Microsoft の公式ヘルプに沿って整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">左側の欄の名前と役目</a></li>
+      <li><a href="#s2">もう一度表示する手順</a></li>
+      <li><a href="#s3">戻ったら、どこに何があるか</a></li>
+      <li><a href="#s4">マウスを使わずに左の欄へ移る</a></li>
+      <li><a href="#s5">共用のパソコンで起きたとき</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．左側の欄の名前と役目</h2>
+    <p>確認日：2026年11月16日。</p>
+    <p>対象は、Windows 11 のエクスプローラーです。クイック アクセスにフォルダーをピン留めしたり外したりする操作は扱いません。</p>
+    <p>「左のところが消えた」と言われても、どこのことか伝わりにくいものです。Microsoft のヘルプでは、エクスプローラーの画面をいくつかの領域に分けて説明しています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">領域</th><th scope="col">場所</th><th scope="col">ヘルプの説明（要約）</th></tr></thead><tbody><tr><td data-label="領域">タブ</td><td data-label="場所">ウィンドウの上部</td><td data-label="ヘルプの説明（要約）">開いているタブが並び、新しいタブを足せる</td></tr><tr><td data-label="領域">ナビゲーション ウィンドウ</td><td data-label="場所">ウィンドウの左側</td><td data-label="ヘルプの説明（要約）">フォルダー、ドライブ、ライブラリにアクセスする</td></tr><tr><td data-label="領域">コンテンツ ウィンドウ</td><td data-label="場所">中央</td><td data-label="ヘルプの説明（要約）">ファイルやフォルダーが表示される</td></tr><tr><td data-label="領域">詳細ウィンドウ</td><td data-label="場所">表示されている場合だけ</td><td data-label="ヘルプの説明（要約）">選んだ項目の追加の情報。既定ではオフ</td></tr><tr><td data-label="領域">ステータス バー</td><td data-label="場所">右下</td><td data-label="ヘルプの説明（要約）">表示やレイアウトを変えるボタンがある</td></tr></tbody></table></div>
+    <p></p>
+    <p>今回消えたのは、この表の2行目です。ナビゲーション ウィンドウがないと、ほかのフォルダーやドライブに移るたびに、アドレス バーや［戻る］のボタンを頼りにすることになり、いつもの移動に手間がかかります。共有のフォルダーや OneDrive のように、ふだん左の一覧から開いている場所ほど、どこから入ればよいか分からなくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．もう一度表示する手順</h2>
+    <p>ヘルプには、左側のナビゲーション ウィンドウを非表示にしていた場合に、もう一度表示する手順が載っています。</p>
+    <ol>
+      <li>［スタート］からエクスプローラーを選ぶか、タスク バーのエクスプローラーのアイコンを選びます。</li>
+      <li>コマンド バーから［表示］を選びます。</li>
+      <li>［表示］を選んでから、［ナビゲーション ウィンドウ］を選びます。</li>
+    </ol>
+    <p></p>
+    <p>これで、エクスプローラーのウィンドウにナビゲーション ウィンドウが表示されます。 ヘルプの手順では［表示］が2回出てきます。最初の［表示］はコマンド バーのメニューで、その中にもう一段［表示］の項目があり、そこに［ナビゲーション ウィンドウ］が入る形と思われます。1回目の［表示］だけで見つからないときは、2段目まで開いてみます。戻した後は、いったんエクスプローラーを閉じて開き直し、左側の一覧が出たままになっているかも確かめておくと安心です。</p>
+    <p>同じ［表示］の中には、ファイル名拡張子や隠しアイテム、項目のチェック ボックスといった、表示の切り替えが並んでいます。 近くの項目を触ったときに、ナビゲーション ウィンドウまで一緒に切り替えてしまったのかもしれません。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．戻ったら、どこに何があるか</h2>
+    <p>ナビゲーション ウィンドウが戻っても、「前と並びが違う」と感じることがあります。とくに、デスクトップやドキュメントのフォルダーの場所です。</p>
+    <p>ヘルプによると、Windows 11 バージョン 22H2 以降では、デスクトップ、ドキュメント、ダウンロード、写真、ミュージック、ビデオの既知の Windows フォルダーは、エクスプローラーのホームと左側のナビゲーション ウィンドウの両方のクイック アクセスに、ピン留めされたフォルダーとして既定で表示されます。 これらの既定のフォルダーは、［この PC］の下には表示されなくなります。</p>
+    <p>つまり、「この PC の下にドキュメントがない」のは、ナビゲーション ウィンドウが壊れたのではなく、置き場所がクイック アクセスに移ったためと考えられます。古い手順書に「この PC → ドキュメント」と書いてある職場では、手順書の書き方を見直しておくと、新しい人が迷いません。ヘルプではこの扱いがバージョン 22H2 以降の話として書かれているため、手順書には使っている Windows 11 のバージョンも添えておくと、画面と見比べやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．マウスを使わずに左の欄へ移る</h2>
+    <p>ナビゲーション ウィンドウが表示されていれば、キーボードでも移れます。エクスプローラーそのものは、Windows ロゴ キー＋E キーで開けます。ヘルプでは、F6 キーで前へ、Shift+F6 キーで後ろへ、エクスプローラーの主要な要素の間を移動すると説明されています。 ナビゲーション ウィンドウに移ったら、↑キーと↓キーでフォルダーとドライブを選び、Enter キーを押すと、選んだフォルダーやドライブがコンテンツ ウィンドウに開きます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．共用のパソコンで起きたとき</h2>
+    <p>共用のパソコンでは、前に使った人が表示を変えたまま、ということが起きます。直した人が、何をどう戻したかを一言残しておくと、同じことが起きたときに次の人がすぐ直せます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">残す内容</th><th scope="col">架空の記入例</th></tr></thead><tbody><tr><td data-label="残す内容">起きたこと</td><td data-label="架空の記入例">エクスプローラーの左側の一覧が消えていた</td></tr><tr><td data-label="残す内容">戻し方</td><td data-label="架空の記入例">［表示］→［表示］→［ナビゲーション ウィンドウ］</td></tr><tr><td data-label="残す内容">気付いたこと</td><td data-label="架空の記入例">ドキュメントは［この PC］ではなくクイック アクセスにある</td></tr></tbody></table></div>
+    <p>こうしたパソコンの小さな直しは、誰がどれだけ時間を使っているかが見えにくい作業です。社内の作業を一度書き出してみるときは、<a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）</a>を使うと、1行ずつ整理できます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">消えたのが、左側のナビゲーション ウィンドウかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">コマンド バーの［表示］から、もう一段の［表示］を開いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［ナビゲーション ウィンドウ］を選んで、左側の一覧が戻ったか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">デスクトップやドキュメントがクイック アクセスにあることを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">古い手順書の「この PC → ドキュメント」の書き方を見直したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">共用のパソコンなら、戻し方を一言残したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/accessibility/windows/use-a-screen-reader-to-explore-and-navigate-file-explorer-in-windows" rel="noopener" target="_blank">スクリーン リーダーを使用して Windows のエクスプローラーを探索および移動する（Microsoft サポート）</a>：エクスプローラーの領域の説明、ナビゲーション ウィンドウの説明、F6 キーでの移動</li>
+      <li><a href="https://support.microsoft.com/ja-jp/windows/experience/fileexplorer/file-explorer-in-windows" rel="noopener" target="_blank">Windows のエクスプローラー（Microsoft サポート）</a>：左側のナビゲーション ウィンドウを復元する手順、［表示］の中の項目、既知の Windows フォルダーとクイック アクセ</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/windows-explorer-item-checkboxes">Windowsのエクスプローラーで選択用チェックボックスを出すには</a></li>
+      <li><a href="/column/windows-11-file-explorer-details-view">Windows 11のエクスプローラーで資料を詳細表示にする手順</a></li>
+      <li><a href="/column/windows-file-explorer-hide-recent-files">Windowsのエクスプローラーで最近使ったファイルを出さないには</a></li>
+      <li><a href="/column/windows-notification-sound-only-off">Windowsの通知の「サウンドの再生」だけを止めるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Googleカレンダーの「非公開」で一件だけ予定名を隠すには｜Vaynexis</title>
+  <meta name="description" content="社内でカレンダーを共有していて、通院や面談など一件だけ予定の中身を見せたくないときに、その予定の公開設定を「非公開」にする手順です。3つの公開設定の違い、非公開でも詳細が見える人、ゲストや会議室を入れたときに見える情報、定期的な予定の扱いを、Google の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Googleカレンダーの「非公開」で一件だけ予定名を隠すには｜Vaynexis">
+  <meta property="og:description" content="社内でカレンダーを共有していて、通院や面談など一件だけ予定の中身を見せたくないときに、その予定の公開設定を「非公開」にする手順です。3つの公開設定の違い、非公開でも詳細が見える人、ゲストや会議室を入れたときに見える情報、定期的な予定の扱いを、Google の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/google-calendar-private-single-event">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/google-calendar-private-single-event">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Googleカレンダーの「非公開」で一件だけ予定名を隠すには","description":"社内でカレンダーを共有していて、通院や面談など一件だけ予定の中身を見せたくないときに、その予定の公開設定を「非公開」にする手順です。3つの公開設定の違い、非公開でも詳細が見える人、ゲストや会議室を入れたときに見える情報、定期的な予定の扱いを、Google の公式ヘルプに沿って整理します。","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-calendar-private-single-event"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Googleカレンダーの設定","item":"https://vaynexis.jp/column/topics/google-calendar"},{"@type":"ListItem","position":4,"name":"Googleカレンダーの「非公開」で一件だけ予定名を隠すには","item":"https://vaynexis.jp/column/google-calendar-private-single-event"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/google-calendar">Googleカレンダーの設定</a></li><li aria-current="page">Googleカレンダーの「非公開」で一件だけ予定名を隠すには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Googleカレンダーの「非公開」で一件だけ予定名を隠すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>一件だけ予定の中身を隠したいときは、その予定を開いて［予定を編集］から［デフォルトの公開設定］をクリックし、「非公開」を選んで［保存］をクリックします。 非公開にすると、カレンダーを見たほかの人には「予定あり」というラベルの付いたブロックが表示されます。 ただし、自分と「予定の変更と予定の詳細の表示」以上のアクセス権限を付けた人には、詳細が見えます。</p></div>
+    <p class="col-meta">公開：2026年11月17日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>社内でカレンダーを共有していて、通院や面談など一件だけ予定の中身を見せたくないときに、その予定の公開設定を「非公開」にする手順です。3つの公開設定の違い、非公開でも詳細が見える人、ゲストや会議室を入れたときに見える情報、定期的な予定の扱いを、Google の公式ヘルプに沿って整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">カレンダー全体ではなく、一件だけを隠す</a></li>
+      <li><a href="#s2">公開設定は3つある</a></li>
+      <li><a href="#s3">一件を「非公開」にする手順</a></li>
+      <li><a href="#s4">非公開でも、詳細や一部の情報が見える場合</a></li>
+      <li><a href="#s5">定期的な予定は、まとめて変わる</a></li>
+      <li><a href="#s6">設定した後に残すメモ（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．カレンダー全体ではなく、一件だけを隠す</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、パソコンのブラウザで使う Google カレンダーです。カレンダー全体の共有設定（誰にどの権限で見せるか）は変えません。</p>
+    <p>社内で予定を共有していると、空き時間を合わせやすくなる一方、通院や個別の面談のように、予定名まで見せたくない一件も出てきます。カレンダー全体を「予定の有無」だけの共有に変える方法もありますが、それではほかの予定の見え方まで変わってしまいます。一件だけを隠したいなら、その予定の公開設定だけを変えます。</p>
+    <p>ヘルプでも、Google カレンダーでは、個々の予定とタスクの公開設定を変更して、他のユーザーに表示される内容をコントロールできると説明されています。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．公開設定は3つある</h2>
+    <p>ヘルプによると、公開範囲の設定には「デフォルトの公開設定」「公開」「非公開」の3つがあります。</p>
+    <ul>
+      <li><strong>デフォルトの公開設定</strong>：カレンダーのメインの共有設定に従います。 何も変えていない予定は、カレンダー全体の共有のしかたどおりに見えます。</li>
+      <li><strong>公開</strong>：カレンダー全体が予定の有無のみの表示に制限されている場合でも、カレンダーの閲覧権限を持つユーザーであれば誰でも、この予定の詳細をすべて確認できます。</li>
+      <li><strong>非公開</strong>：自分と「予定の変更と予定の詳細の表示」以上の権限の人以外には、すべての詳細が非表示になります。ヘルプは使い方の例として、個人の予約、パフォーマンス レビュー、機密性の高いプロジェクト会議を挙げています。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．一件を「非公開」にする手順</h2>
+    <p>ヘルプの手順は次のとおりです。</p>
+    <ol>
+      <li>パソコンで Google カレンダーにアクセスします。</li>
+      <li>カレンダーで予定を開きます。</li>
+      <li>［予定を編集］から［デフォルトの公開設定］をクリックします。</li>
+      <li>公開設定の一覧から「非公開」を選択します。</li>
+      <li>［保存］をクリックします。</li>
+    </ol>
+    <p>手順3で押す欄の名前が［デフォルトの公開設定］なのは、まだ何も変えていない予定の今の設定が表示されているためと読めます。すでに「公開」などにした予定では、表示が違う場合があります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．非公開でも、詳細や一部の情報が見える場合</h2>
+    <p>非公開は「誰にも何も見せない」設定ではありません。ヘルプから読み取れる例外は次の3つです。</p>
+    <ul>
+      <li><strong>編集の権限を渡した人</strong>：自分と「予定の変更と予定の詳細の表示」以上のアクセス権限を付けたユーザーには、詳細が見えます。 秘書役の人や、予定の調整を任せている人に編集の権限を渡している場合は、その人には見える前提で使います。</li>
+      <li><strong>ゲストや会議室</strong>：予定を非公開に設定していても、ゲストを招待したり会議室を予約したりすると、一部の情報が他のユーザーに公開される場合があり、例として予定の開始時間、終了時間、作成者が挙がっています。 また、予定に招待されたユーザーは、自分のカレンダーでその予定をどのように表示するかを管理できます。</li>
+      <li><strong>「変更可能（非公開の予定を、予定の有無としてのみ表示）」の権限</strong>：この権限を付けた相手には、相手のステータスに応じて非公開のエントリの表示が変わり、［予定なし］としてマークされた予定は、カレンダー グリッドで他のユーザーに対して非表示になります。</li>
+    </ul>
+    <p>社外の人を招く面談や、会議室を押さえる打ち合わせを非公開にしても、時間と作成者までは伝わりうる、と覚えておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．定期的な予定は、まとめて変わる</h2>
+    <p>毎月の通院のように繰り返す予定を非公開にするときは、もう一つ注意があります。ヘルプには、定期的な予定に設定できる公開範囲の設定は1つのみで、1つのインスタンスの公開設定を変更しようとすると、定期的な予定全体にそれが適用されると書かれています。 「この回だけ非公開」はできないので、繰り返しのうち一回だけ隠したいときは、その回を別の予定として作るかどうかを考えます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．設定した後に残すメモ（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">残す内容</th><th scope="col">架空の記入例</th></tr></thead><tbody><tr><td data-label="残す内容">予定</td><td data-label="架空の記入例">月一回の通院（定期的な予定）</td></tr><tr><td data-label="残す内容">設定</td><td data-label="架空の記入例">非公開（繰り返しの全回に適用）</td></tr><tr><td data-label="残す内容">見える人</td><td data-label="架空の記入例">編集の権限を渡している総務の担当者</td></tr><tr><td data-label="残す内容">ゲスト・会議室</td><td data-label="架空の記入例">なし（時間と作成者が伝わる場面はない）</td></tr></tbody></table></div>
+    <p>どんな予定を非公開にするか、誰に編集の権限を渡すかは、人によって判断がばらばらになりがちです。社内の決まりとして手順書にまとめておくなら、<a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a>も参考になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">隠したいのが一件の予定か（カレンダー全体ではないか）</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">その予定を開き、［デフォルトの公開設定］から「非公開」を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［保存］をクリックしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">編集の権限を渡している人には中身が見えることを分かっているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ゲストや会議室を入れた予定では、時間と作成者が伝わりうることを分かっているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">定期的な予定では、全回に同じ設定が付くことを分かっているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">カレンダー全体の共有設定を変えていないか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/calendar/answer/34580?hl=ja&amp;co=GENIE.Platform%3DDesktop" rel="noopener" target="_blank">カレンダーで予定とタスクの公開設定を変更する（Google カレンダー ヘルプ）</a>：3つの公開設定、予定の公開設定を変更する手順、非公開にしたときの「予定あり」の表示と詳細が見える範囲、ゲスト・会議室で公</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/google-calendar-offline-settings">Google カレンダーの「オフライン設定」で予定を見るには</a></li>
+      <li><a href="/column/google-calendar-move-event-between-calendars">Googleカレンダーで登録先を間違えた予定を別のカレンダーへ移すには</a></li>
+      <li><a href="/column/google-calendar-disable-auto-meet">Googleカレンダーの予定の設定でMeetの自動追加を止めるには</a></li>
+      <li><a href="/column/google-docs-page-margins-narrow">Googleドキュメントの「余白」で左右の空きを狭めるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

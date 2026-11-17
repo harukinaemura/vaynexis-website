@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windowsの「検索」でタスクバーの検索ボックスを隠すには｜Vaynexis</title>
+  <meta name="description" content="Windows 11 のタスク バーにある横長の検索ボックスが場所を取って、開いているアプリのアイコンが並びきらないときの変え方です。タスク バーの設定の［タスク バー項目］にあるドロップダウンの4つの選択肢（検索ボックス・検索アイコンとラベル・検索アイコンのみ・非表示）の違いと、検索ボックスを使わずに検索を始める入口を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Windowsの「検索」でタスクバーの検索ボックスを隠すには｜Vaynexis">
+  <meta property="og:description" content="Windows 11 のタスク バーにある横長の検索ボックスが場所を取って、開いているアプリのアイコンが並びきらないときの変え方です。タスク バーの設定の［タスク バー項目］にあるドロップダウンの4つの選択肢（検索ボックス・検索アイコンとラベル・検索アイコンのみ・非表示）の違いと、検索ボックスを使わずに検索を始める入口を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/windows-11-hide-taskbar-search-box">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/windows-11-hide-taskbar-search-box">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Windowsの「検索」でタスクバーの検索ボックスを隠すには","description":"Windows 11 のタスク バーにある横長の検索ボックスが場所を取って、開いているアプリのアイコンが並びきらないときの変え方です。タスク バーの設定の［タスク バー項目］にあるドロップダウンの4つの選択肢（検索ボックス・検索アイコンとラベル・検索アイコンのみ・非表示）の違いと、検索ボックスを使わずに検索を始める入口を、Microsoft の公式ヘルプに沿って整理します。","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/windows-11-hide-taskbar-search-box"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Windows・パソコンの設定","item":"https://vaynexis.jp/column/topics/windows"},{"@type":"ListItem","position":4,"name":"Windowsの「検索」でタスクバーの検索ボックスを隠すには","item":"https://vaynexis.jp/column/windows-11-hide-taskbar-search-box"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/windows">Windows・パソコンの設定</a></li><li aria-current="page">Windowsの「検索」でタスクバーの検索ボックスを隠すには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Windowsの「検索」でタスクバーの検索ボックスを隠すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>タスク バーの検索ボックスを小さくしたり隠したりするには、タスク バーを右クリックして［タスク バーの設定］を選び、［タスク バー項目］のドロップダウン メニューで検索領域の表示を選びます。 場所だけを空けたいなら［検索］アイコンのみ、タスク バーから検索を外したいなら［非表示］です。</p></div>
+    <p class="col-meta">公開：2026年11月17日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>Windows 11 のタスク バーにある横長の検索ボックスが場所を取って、開いているアプリのアイコンが並びきらないときの変え方です。タスク バーの設定の［タスク バー項目］にあるドロップダウンの4つの選択肢（検索ボックス・検索アイコンとラベル・検索アイコンのみ・非表示）の違いと、検索ボックスを使わずに検索を始める入口を、Microsoft の公式ヘルプに沿って整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">隠したいのは「表示」で、検索の働きそのものではない</a></li>
+      <li><a href="#s2">4つの選択肢の違い</a></li>
+      <li><a href="#s3">ボックスを使わずに検索を始める入口</a></li>
+      <li><a href="#s4">もう少し場所を空けたいとき</a></li>
+      <li><a href="#s5">［非表示］を選ぶ前に考えること</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．隠したいのは「表示」で、検索の働きそのものではない</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は Windows 11 のパソコンです。</p>
+    <p>ノートパソコンの小さな画面では、横長の検索ボックスがタスク バーの多くを占め、開いている表計算や会議のアプリのアイコンが窮屈に並ぶことがあります。ここで変えるのは、タスク バーの上で検索の入口をどう見せるかという表示だけです。パソコンの中のファイルを検索する仕組みや、検索の対象の設定は扱いません。</p>
+    <p>ヘルプによると、Windows Search は、ファイル、アプリケーション、設定、さらには Web の結果までデスクトップから直接見つけられる機能で、タスク バーにある検索ボックスはこの機能にアクセスする方法の一つです。 入口の見せ方を変えても、検索そのものの役割は変わらない、という前提で選びます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．4つの選択肢の違い</h2>
+    <p>タスク バーを右クリックし、［タスク バーの設定］を選んだら、［タスク バー項目］で、ドロップダウン メニューを使って検索領域を構成します。ヘルプに挙がっている選択肢は次の4つです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">選択肢</th><th scope="col">ヘルプの説明</th><th scope="col">向いている場面（架空の例）</th></tr></thead><tbody><tr><td data-label="選択肢">検索ボックス</td><td data-label="ヘルプの説明">検索を入力するためのフル テキスト ボックスを表示する</td><td data-label="向いている場面（架空の例）">画面が広く、よく検索する</td></tr><tr><td data-label="選択肢">［検索］アイコンとラベル</td><td data-label="ヘルプの説明">［検索］というラベルに検索アイコンを表示する</td><td data-label="向いている場面（架空の例）">場所を少し空けたいが、検索の場所は分かりやすくしたい</td></tr><tr><td data-label="選択肢">［検索］アイコンのみ</td><td data-label="ヘルプの説明">検索アイコンのみを表示する</td><td data-label="向いている場面（架空の例）">場所を空けたい。検索もときどき使う</td></tr><tr><td data-label="選択肢">非表示</td><td data-label="ヘルプの説明">タスク バーから検索機能を削除する</td><td data-label="向いている場面（架空の例）">タスク バーから検索の入口を外したい</td></tr></tbody></table></div>
+    <p></p>
+    <p>迷ったら、まず［検索］アイコンのみにしてみるのが手堅い選び方です。アイコンは残るので、検索を使いたいときに入口を探し回らずに済みます。パソコンに慣れていない人が使う席では、［検索］アイコンとラベルにしておくと、「検索」という文字が見えるぶん、どこを押せばよいかが伝わりやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．ボックスを使わずに検索を始める入口</h2>
+    <p>検索ボックスを小さくしても、検索の始め方はほかにもあります。ヘルプには、タスク バーの検索ボックスを選ぶ方法のほかに、Windows キー + S を押して検索ボックスを開く方法と、スタート メニューを開いてクエリを直接入力して検索を始める方法が載っています。 キーボードで作業することが多い人なら、タスク バーの見た目を小さくしたうえで Windows キー + S を覚えておくと、入口を探す手間がかかりません。</p>
+    <p>ほかのアプリをタスク バーに並べる方法も、検索ボックスを使う手順が一つの例として紹介されています。タスク バーの［検索］ボックスにアプリの名前を入力し、アプリを右クリックして［タスク バーにピン留めする］を選ぶ、というものです。 アプリが既に開いている場合は、タスク バーのアイコンを右クリックして［タスク バーにピン留めする］を選ぶ方法もあります。 検索の入口を小さくしても、よく使うアプリを並べる手段は残っています。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．もう少し場所を空けたいとき</h2>
+    <p>検索の表示を小さくしてもまだ窮屈なら、同じ［タスク バー項目］にあるほかのボタンも見直せます。ヘルプによると、［タスク バー項目］では［ウィジェット］と［タスク ビュー］のスイッチをそれぞれオンまたはオフに切り替えられます。 どちらもキーボードでの開き方が載っていて、ウィジェット ボードは Windows キー + W、タスク ビューは Windows キー + Tab です。 天気やニュースのボタンをふだん使わない人なら、検索を残したまま、こちらを外すほうが場所を空けやすいこともあります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．［非表示］を選ぶ前に考えること</h2>
+    <p>［非表示］は、ヘルプの言葉ではタスク バーから検索機能を削除する選択肢です。 普段タスク バーの検索からアプリや設定を開いている人が選ぶと、いつもの入口がなくなります。ほかの人のパソコンを代わりに設定するときは、どれを選んだかを本人に伝え、先に挙げたキーボードやスタート メニューからの入口も合わせて伝えておきます。［非表示］にしたあともそれらが使えるかは、ヘルプに書かれていないので、設定した後に実際に試して確かめます。</p>
+    <p>古い手順書を見ながら設定する人もいます。同じページの Windows 10 の欄では、タスク バーを右クリックして［検索］を選ぶ手順で、選択肢も「検索ボックスを表示する」「検索ハイライトを表示する」など Windows 11 とは違う名前が並んでいます。 Windows 11 では［タスク バーの設定］の［タスク バー項目］から選ぶ、と手順書を書き直しておくと迷いません。</p>
+    <p>共用のパソコンでは、使う人によって好みが分かれます。誰がどれを選んだかが分からないと、「検索が消えた」という相談が後から来ることもあります。端末ごとの設定を記録しておく手順をマニュアルにするときは、<a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a>も参考になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">変えたいのが、検索の働きではなく、タスク バー上の表示だと確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">タスク バーを右クリックして［タスク バーの設定］を開き、［タスク バー項目］を見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">4つの選択肢から、使い方に合うものを選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">まだ窮屈なら、［ウィジェット］や［タスク ビュー］のスイッチも見直したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［非表示］を選ぶ場合、普段タスク バーの検索を使っていないかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">Windows キー + S やスタート メニューからの入口を、使う人に伝えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ほかの人のパソコンを設定したとき、選んだ内容を本人に伝えたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/windows/experience/personalization/customize-the-taskbar-in-windows" rel="noopener" target="_blank">Windows でタスク バーをカスタマイズする（Microsoft サポート）</a>：Windows Search の説明、［タスク バー項目］のドロップダウンと4つの選択肢、Windows キー + S </li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/windows-explorer-item-checkboxes">Windowsのエクスプローラーで選択用チェックボックスを出すには</a></li>
+      <li><a href="/column/windows-11-disable-taskbar-auto-hide">Windows 11の「タスク バーを自動的に非表示にする」を戻すには</a></li>
+      <li><a href="/column/windows-sound-output-device">Windowsのサウンドで音が出る出力デバイスを替えるには</a></li>
+      <li><a href="/column/windows-update-active-hours">Windows Updateの「アクティブ時間」を勤務に合わせるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

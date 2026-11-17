@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edgeの「Internet Explorer モード」で古い社内画面を開くには｜Vaynexis</title>
+  <meta name="description" content="Internet Explorer 向けに作られた古い社内の画面が Microsoft Edge で正しく動かないとき、Edge の Internet Explorer モード（IE モード）で開く手順です。会社が管理していない PC で Edge 141 以上を使う場合と、会社が管理している PC の場合とで手順が分かれる点、30日の期限、戻り方を、Microsoft の日本語の公式ページに沿っ">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Edgeの「Internet Explorer モード」で古い社内画面を開くには｜Vaynexis">
+  <meta property="og:description" content="Internet Explorer 向けに作られた古い社内の画面が Microsoft Edge で正しく動かないとき、Edge の Internet Explorer モード（IE モード）で開く手順です。会社が管理していない PC で Edge 141 以上を使う場合と、会社が管理している PC の場合とで手順が分かれる点、30日の期限、戻り方を、Microsoft の日本語の公式ページに沿っ">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/edge-internet-explorer-mode">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/edge-internet-explorer-mode">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Edgeの「Internet Explorer モード」で古い社内画面を開くには","description":"Internet Explorer 向けに作られた古い社内の画面が Microsoft Edge で正しく動かないとき、Edge の Internet Explorer モード（IE モード）で開く手順です。会社が管理していない PC で Edge 141 以上を使う場合と、会社が管理している PC の場合とで手順が分かれる点、30日の期限、戻り方を、Microsoft の日本語の公式ページに沿っ","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/edge-internet-explorer-mode"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"ほかの業務ソフトの設定","item":"https://vaynexis.jp/column/topics/tools-other"},{"@type":"ListItem","position":4,"name":"Edgeの「Internet Explorer モード」で古","item":"https://vaynexis.jp/column/edge-internet-explorer-mode"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/tools-other">ほかの業務ソフトの設定</a></li><li aria-current="page">Edgeの「Internet Explorer モード」で古</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Edgeの「Internet Explorer モード」で古い社内画面を開くには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Internet Explorer で動作するように作られたサイトを見る必要があるときは、Microsoft Edge で Internet Explorer モードを使えます。 会社が管理していない PC で Edge 141 以上なら、［設定など］＞［設定］＞［既定のブラウザー］の［Internet エクスプローラー モードのページ］で［ページの追加］を選び、サイトを足してから再読み込みします。 会社が管理している PC では、サイトを開いて［設定など］から［Internet Explorer モードの再読み込み］を選びます。設定が灰色で変えられない場合もあります。</p></div>
+    <p class="col-meta">公開：2026年11月17日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>Internet Explorer 向けに作られた古い社内の画面が Microsoft Edge で正しく動かないとき、Edge の Internet Explorer モード（IE モード）で開く手順です。会社が管理していない PC で Edge 141 以上を使う場合と、会社が管理している PC の場合とで手順が分かれる点、30日の期限、戻り方を、Microsoft の日本語の公式ページに沿って整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">IE モードが要る画面か</a></li>
+      <li><a href="#s2">自分の PC がどちらの手順かを先に確かめる</a></li>
+      <li><a href="#s3">共通の最初の手順：IE モードを許可する</a></li>
+      <li><a href="#s4">会社が管理していない PC（Edge 141 以上）</a></li>
+      <li><a href="#s5">会社が管理している PC</a></li>
+      <li><a href="#s6">開いた後の見分け方と戻り方</a></li>
+      <li><a href="#s7">30日たつと IE モードで開かなくなることがある</a></li>
+      <li><a href="#s8">古い社内画面の控え（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．IE モードが要る画面か</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、Windows のパソコンで使う Microsoft Edge です。特定の業務システムの設定や動作は扱いません。</p>
+    <p>Microsoft のヘルプには、一部のサイトは Internet Explorer で動作するように作られていて、Edge のような最新のブラウザーでサポートされていない機能がある、と書かれています。 Internet Explorer のサポートは、2022年6月15日に終了しています。</p>
+    <p>管理者向けの資料によると、IE モードは、最新のサイトには Edge に組み込まれた Chromium エンジンを、従来のサイトには Internet Explorer 11 の Trident MSHTML エンジンを使う仕組みです。 何年も前に作った勤怠や受発注の社内画面で、ボタンを押しても反応しない、表示が崩れる、といった症状が出たときに、試す価値があります。反対に、普通に動いている画面まで IE モードに切り替える必要はありません。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．自分の PC がどちらの手順かを先に確かめる</h2>
+    <p>ヘルプの手順は、PC が会社に管理されているかと、Edge の版によって分かれています。先に二つを確かめます。</p>
+    <p>Edge の版は、ウィンドウの上部にある［設定など］から［設定］を選び、下にスクロールして［Microsoft Edge について］を選ぶと確かめられます。 会社が管理しているかどうかは、パソコンを配った人やパソコンを管理している人に聞くのが確実です。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．共通の最初の手順：IE モードを許可する</h2>
+    <p>ヘルプでは、IE モードを有効にする手順が最初に書かれています。</p>
+    <ol>
+      <li>Edge のアドレス バーに「edge://settings/defaultBrowser」と入力して Enter キーを押します。</li>
+      <li>［Internet エクスプローラーの互換性］で、［Internet エクスプローラー モード (IE モード) でのサイトの再読み込みを許可する］のドロップダウンから［許可］を選びます。</li>
+      <li>Edge を再起動します。</li>
+    </ol>
+    <p></p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．会社が管理していない PC（Edge 141 以上）</h2>
+    <p>ヘルプには「Enterprise 以外のデバイスで Edge バージョン 141 以上を使用している場合」として、次の手順が書かれています。</p>
+    <ol>
+      <li>［設定など］（...）＞［設定］＞［既定のブラウザー］に進みます。</li>
+      <li>［Internet エクスプローラー モードのページ］のところで［ページの追加］を選び、IE 互換が必要なサイトを追加します。</li>
+      <li>サイトの詳細を入力して［追加］を選びます。</li>
+      <li>サイトを再読み込みします。</li>
+    </ol>
+    <p></p>
+    <p>追加するのは、困っている画面のアドレスだけにします。社内のどの画面を足したかを控えておくと、別の人の PC で同じ設定をするときにも迷いません。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．会社が管理している PC</h2>
+    <p>「エンタープライズ デバイスを使用している場合、またはグループ ポリシーを使用して」IE モードを有効にしている場合の手順は、次のとおりです。</p>
+    <ol>
+      <li>IE モードで表示したいサイトに移動します。</li>
+      <li>ブラウザー ウィンドウの右上隅にある［設定など］を選びます。</li>
+      <li>［Internet Explorer モードの再読み込み］を選びます。</li>
+    </ol>
+    <p>Edge のバージョン92 以前なら、［その他のツール］＞［インターネット エクスプローラー モードで再読み込み］を選びます。</p>
+    <p>会社が管理している PC では、最初の手順の［再読み込みを許可する］の項目が表示されても、設定が灰色で変えられない場合があります。 ヘルプには、組織はエンタープライズ サイト一覧を使ってユーザーの IE モードを構成できるとも書かれています。 管理者向けの資料も、組織の従来のサイトはエンタープライズ モード サイト一覧で構成することを勧めています。 灰色で選べないときは、自分で回り道を探すより、困っている画面のアドレスを添えて、管理している人に一覧への追加を頼むのが早道です。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．開いた後の見分け方と戻り方</h2>
+    <p>IE モードで読み込まれると、ナビゲーション バーの左側に IE のロゴが表示されます。 画面の中のリンクやフォームで進む操作は IE モードのままですが、アドレス バーや戻るボタン、お気に入りのリンクで移動すると、Edge は IE モードから自動的に抜けます。</p>
+    <p>自分で戻るときは、画面の上部にある情報バーで［退出］を選ぶか、今のタブを閉じて新しいタブを開きます。 社内の古い画面を見終えたら、ほかの作業は普通のタブに戻ってから続けます。</p>
+  </div></section>
+
+  <section class="sec" id="s7" aria-labelledby="s7-title"><div class="wrap">
+    <h2 class="h2" id="s7-title">7．30日たつと IE モードで開かなくなることがある</h2>
+    <p>管理者向けの資料（Edge 92 以降の仕組みの説明）では、利用者が IE モードで開くように足したページは、既定の期間である30日間、ローカル サイト一覧に残ると書かれています。 31日目にそのサイトを開くと、IE モードで読み込まれなくなることを知らせるバナーが出て、希望すればもう一度一覧に追加できます。 日数は管理者がポリシーで変えられ、既定は30日、決めるときの値は0日から90日までです。</p>
+    <p>また、ローカル サイト一覧は、今のところデバイス間で同期されません。 月に一度しか開かない締めの画面なら、前回の追加から30日を過ぎて、また普通の表示に戻っていることもありえます。PC を入れ替えたときも、足し直しが要ると考えておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s8" aria-labelledby="s8-title"><div class="wrap">
+    <h2 class="h2" id="s8-title">8．古い社内画面の控え（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">画面</th><th scope="col">架空の記入例</th></tr></thead><tbody><tr><td data-label="画面">画面の名前</td><td data-label="架空の記入例">旧受発注システムの月次集計</td></tr><tr><td data-label="画面">開く頻度</td><td data-label="架空の記入例">月末に1回</td></tr><tr><td data-label="画面">使う PC</td><td data-label="架空の記入例">経理の2台（どちらも会社の管理なし）</td></tr><tr><td data-label="画面">IE モードの追加日</td><td data-label="架空の記入例">毎月の締めの前に確かめる</td></tr></tbody></table></div>
+    <p>IE モードは、古い画面を使い続けるためのつなぎです。社内に残っている古い画面や、それに頼っている作業を一度書き出してみると、置き換えの順番も考えやすくなります。書き出しには<a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）</a>が使えます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">9．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">困っている画面が、Internet Explorer 向けに作られた古い画面かを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">Edge の版を［Microsoft Edge について］で確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">PC が会社に管理されているかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［Internet エクスプローラー モード (IE モード) でのサイトの再読み込みを許可する］を［許可］にして再起動したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">管理されていない PC（141 以上）では、［既定のブラウザー］の［ページの追加］で足したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">管理されている PC では、［設定など］の［Internet Explorer モードの再読み込み］を使ったか、灰色なら管理者に頼んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">30日で切れることがあると知っているか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">10．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/edge/internet-explorer-mode-in-microsoft-edge" rel="noopener" target="_blank">Microsoft Edge の Internet Explorer モード（Microsoft サポート）</a>：IE モードを使う場面、IE のサポート終了、有効にする手順、141 以上の非管理端末の手順、管理端末の手順、92 以前</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/deployedge/edge-ie-mode" rel="noopener" target="_blank">Internet Explorer (IE) モードとは（Microsoft Learn）</a>：使うエンジン、IE のロゴの表示</li>
+      <li><a href="https://support.microsoft.com/ja-jp/microsoft-edge/find-out-which-version-of-microsoft-edge-you-have-c726bee8-c42e-e472-e954-4cf5123497eb" rel="noopener" target="_blank">使用している Microsoft Edge のバージョンを確認する（Microsoft サポート）</a>：版の確かめ方</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/deployedge/edge-ie-mode-local-site-list" rel="noopener" target="_blank">Internet Explorer（IE）モードのローカルサイト リストを構成する（Microsoft Learn）</a>：30日の期間と31日目のバナー、ページ内の移動と自動で抜ける場合、同期されないこと、エンタープライズ モード サイト一覧</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-browser-policies/internetexplorerintegrationlocalsitelistexpirationdays" rel="noopener" target="_blank">InternetExplorerIntegrationLocalSiteListExpirationDays（Microsoft Learn）</a>：既定の30日、0日から90日</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/chrome-remove-site-zoom-level">Chromeの「ズームレベル」で一つのサイトだけ元に戻すには</a></li>
+      <li><a href="/column/chrome-update-open-browser">開きっぱなしの業務ブラウザー、Chromeの更新を終える手順</a></li>
+      <li><a href="/column/chrome-download-pdf-instead-of-opening">Chromeの「PDF をダウンロードする」でブラウザ表示を止めるには</a></li>
+      <li><a href="/column/edge-clear-cached-images-files">Edgeの「キャッシュされた画像とファイル」だけ消すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

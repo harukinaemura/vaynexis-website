@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edgeの「拡張機能の管理」で勝手にオフになった機能を見るには｜Vaynexis</title>
+  <meta name="description" content="入れたはずの拡張機能が、Microsoft Edge でいつの間にかオフになっていたときの見方です。Edge が拡張機能を自動でオフにする理由、［拡張機能の管理］で確かめる道順、オンに戻す前に考えることを、Microsoft の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Edgeの「拡張機能の管理」で勝手にオフになった機能を見るには｜Vaynexis">
+  <meta property="og:description" content="入れたはずの拡張機能が、Microsoft Edge でいつの間にかオフになっていたときの見方です。Edge が拡張機能を自動でオフにする理由、［拡張機能の管理］で確かめる道順、オンに戻す前に考えることを、Microsoft の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/edge-extensions-turned-off">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/edge-extensions-turned-off">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Edgeの「拡張機能の管理」で勝手にオフになった機能を見るには","description":"入れたはずの拡張機能が、Microsoft Edge でいつの間にかオフになっていたときの見方です。Edge が拡張機能を自動でオフにする理由、［拡張機能の管理］で確かめる道順、オンに戻す前に考えることを、Microsoft の公式ヘルプに沿って整理します。","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/edge-extensions-turned-off"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"ほかの業務ソフトの設定","item":"https://vaynexis.jp/column/topics/tools-other"},{"@type":"ListItem","position":4,"name":"Edgeの「拡張機能の管理」で勝手にオフになった機能を見るに","item":"https://vaynexis.jp/column/edge-extensions-turned-off"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/tools-other">ほかの業務ソフトの設定</a></li><li aria-current="page">Edgeの「拡張機能の管理」で勝手にオフになった機能を見るに</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Edgeの「拡張機能の管理」で勝手にオフになった機能を見るには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Edge は、許可なく既定の設定を変えようとする拡張機能を自動的に無効にします。 オフになった拡張機能は、［設定など］から［拡張機能］、［拡張機能の管理］と進んで確かめ、必要ならトグルでオンに戻せます。 ただ、オフにされたのには理由があるので、戻す前に、その拡張機能が何を変えるものかを確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月17日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>入れたはずの拡張機能が、Microsoft Edge でいつの間にかオフになっていたときの見方です。Edge が拡張機能を自動でオフにする理由、［拡張機能の管理］で確かめる道順、オンに戻す前に考えることを、Microsoft の公式ヘルプに沿って整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">なぜ勝手にオフになるのか</a></li>
+      <li><a href="#s2">拡張機能の管理を開く道順</a></li>
+      <li><a href="#s3">オンに戻す前に考えること</a></li>
+      <li><a href="#s4">使わないと決めたら、オンに戻さず削除する</a></li>
+      <li><a href="#s5">会社が管理しているパソコンの場合</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．なぜ勝手にオフになるのか</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、Windows のパソコンで使う Microsoft Edge です。</p>
+    <p>ヘルプによると、Edge の一部の拡張機能は、既定の検索エンジン、新しいタブ ページ、サイトの基本設定などの重要なブラウザー設定を変更できます。 ブラウザーの設定やセキュリティ、プライバシーを守るため、Edge はそうした変更を許可なく行おうとする拡張機能を自動的に無効にする、という説明です。</p>
+    <p>ある日、検索の結果がいつもと違うサイトで出るようになった、新しいタブの画面が変わった、といった出来事のあとに拡張機能がオフになっていたなら、この仕組みが働いた可能性があります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．拡張機能の管理を開く道順</h2>
+    <p>ブラウザーの右上隅の［設定など］を選び、［拡張機能］を選んでから、［拡張機能の管理］を選びます。 一覧で、オフになっている拡張機能の名前を書き留めます。</p>
+    <p>拡張機能の追加・オフ・削除のヘルプには、アドレス バーの右側にある［拡張機能］を選び、［拡張機能の管理］を選ぶ道順も書かれています。 アドレス バーの右側に［拡張機能］が表示されない場合は、［設定など］から［拡張機能］を選ぶよう案内されています。 どちらの道順でも、同じ管理の画面にたどり着きます。</p>
+    <p>入れた経路を思い出すときは、Chrome 用の拡張機能も候補に入れます。ヘルプには、Google Chrome 用に設計された拡張機能は、Microsoft Edge でも使用できると書かれています。 Chrome ウェブストアから入れたものがないか、Edge のストア以外から入れた覚えがないかも思い出します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．オンに戻す前に考えること</h2>
+    <p>オンに戻すときは、オンにする拡張機能を探して、トグルを選びます。 操作はそれだけですが、オフにされた理由を考えずに戻すと、また検索先や新しいタブが変わってしまうかもしれません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること（架空の例）</th><th scope="col">戻してよさそうな場合</th><th scope="col">戻すのを待つ場合</th></tr></thead><tbody><tr><td data-label="確かめること（架空の例）">誰が入れたか</td><td data-label="戻してよさそうな場合">自分や社内の担当者が業務のために入れた</td><td data-label="戻すのを待つ場合">入れた覚えがない</td></tr><tr><td data-label="確かめること（架空の例）">何に使っているか</td><td data-label="戻してよさそうな場合">毎日の業務で使っている</td><td data-label="戻すのを待つ場合">何に使うものか分からない</td></tr><tr><td data-label="確かめること（架空の例）">オフになる前に変化があったか</td><td data-label="戻してよさそうな場合">特に気づいた変化はない</td><td data-label="戻すのを待つ場合">検索先や新しいタブが勝手に変わっていた</td></tr></tbody></table></div>
+    <p>入れた覚えがない、何に使うか分からない、という拡張機能は、戻さずに社内のパソコンの担当者に相談します。</p>
+    <p>入れ直すことになった場合、ヘルプは、拡張機能に必要なアクセス許可を示すプロンプトで、アクセス許可を慎重に確認するよう案内しています。 管理者向けの Microsoft の文書では、拡張機能のアクセス許可には、拡張機能が表示または変更できる Web ページに関わるホスト アクセス許可と、拡張機能が実行されているデバイスで必要なデバイスのアクセス許可がある、と説明されています。 この2つの区分があることを頭に置いて、プロンプトの文面を読みます。業務で必要なものだと分かっていても、戻した後に検索先や新しいタブが変わっていないかを見ておきます。</p>
+    <p>パソコンに入っている拡張機能は、担当者ごとに違っていて、全体を誰も把握していないことがよくあります。どのパソコンに何が入っているかを一覧にしておくと、今回のような場面で判断しやすくなります。端末と道具を並べて見直すときは、<a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）</a>の考え方も参考になります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．使わないと決めたら、オンに戻さず削除する</h2>
+    <p>社内で確かめて、業務に使っていないと分かった拡張機能は、オフのまま置いておくより、削除したほうが一覧が見やすくなります。ヘルプには、削除する拡張機能のアイコンを長押し（または右クリック）し、［Microsoft Edge から削除］、［削除］と選ぶ方法が書かれています。 アドレス バーの右側の［拡張機能］から、削除する拡張機能の横にある［その他のアクション］を選ぶ方法もあります。 削除した後に業務で必要だと分かったときは、入れ直しになります。消す前に、名前と使っていた人を記録に残しておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．会社が管理しているパソコンの場合</h2>
+    <p>管理者向けの Microsoft の文書では、組織はデータ保護ポリシーに基づいてユーザーのコンピューターの拡張機能をブロックまたは許可したり、拡張機能を強制的にインストールしたりできると説明されています。 職場のパソコンで、拡張機能のオンとオフが思うように切り替えられないときは、こうした会社の設定が関わっていることがあります。自分で何度も切り替えようとせず、パソコンを管理している人に、拡張機能の名前と、オフになっていた日を伝えて相談します。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">オフになる前に、検索先や新しいタブが変わっていなかったかを思い出したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［設定など］→［拡張機能］→［拡張機能の管理］で、オフの拡張機能の名前を書き留めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">誰が、何のために入れた拡張機能かを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入れた覚えのないものは、戻さずに社内で相談したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">戻した後に、検索先や新しいタブが変わっていないかを見たか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/edge/why-does-microsoft-edge-turn-off-extensions-i-ve-installed" rel="noopener" target="_blank">インストールした拡張機能を Microsoft Edge でオフにするのはなぜですか?（Microsoft サポート）</a>：拡張機能が自動で無効になる理由、拡張機能の管理の道順、オンに戻す操作</li>
+      <li><a href="https://support.microsoft.com/ja-jp/edge/add-turn-off-or-remove-extensions-in-microsoft-edge" rel="noopener" target="_blank">Microsoft Edge で拡張機能を追加、オフ、削除する（Microsoft サポート）</a>：拡張機能の管理へのもう一つの道順、Chrome 用の拡張機能、追加時のアクセス許可の確認、削除の手順</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/deployedge/microsoft-edge-manage-extensions" rel="noopener" target="_blank">企業で Microsoft Edge 拡張機能を管理する（Microsoft Learn・管理者向け）</a>：拡張機能のアクセス許可の2つの種類、組織による拡張機能のブロック・許可・強制インストール</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/chrome-extension-site-access-limit">Chrome拡張機能が読める会社のサイトを必要な範囲に絞るには</a></li>
+      <li><a href="/column/chrome-profiles-work-personal">仕事と私用のブラウザー情報をChromeで分ける手順と確認点</a></li>
+      <li><a href="/column/chrome-update-open-browser">開きっぱなしの業務ブラウザー、Chromeの更新を終える手順</a></li>
+      <li><a href="/column/edge-startup-boost">Edgeの「スタートアップ ブースト」で閉じても動くのはなぜ？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

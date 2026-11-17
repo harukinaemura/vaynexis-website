@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chromeの「ブックマーク バーを表示」で消えた一覧を戻すには｜Vaynexis</title>
+  <meta name="description" content="Chrome のアドレス バーの下から業務のリンクの列が消えたとき、その他アイコンの［ブックマークとリスト］から［ブックマーク バーを表示］を選んで戻す手順です。Ctrl+Shift+B での切り替え、バーが戻るまでブックマークを開く3つの道、戻した後の並べ直しと削除の注意までを、Google の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Chromeの「ブックマーク バーを表示」で消えた一覧を戻すには｜Vaynexis">
+  <meta property="og:description" content="Chrome のアドレス バーの下から業務のリンクの列が消えたとき、その他アイコンの［ブックマークとリスト］から［ブックマーク バーを表示］を選んで戻す手順です。Ctrl+Shift+B での切り替え、バーが戻るまでブックマークを開く3つの道、戻した後の並べ直しと削除の注意までを、Google の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/chrome-show-bookmarks-bar">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/chrome-show-bookmarks-bar">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Chromeの「ブックマーク バーを表示」で消えた一覧を戻すには","description":"Chrome のアドレス バーの下から業務のリンクの列が消えたとき、その他アイコンの［ブックマークとリスト］から［ブックマーク バーを表示］を選んで戻す手順です。Ctrl+Shift+B での切り替え、バーが戻るまでブックマークを開く3つの道、戻した後の並べ直しと削除の注意までを、Google の公式ヘルプに沿って整理します。","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/chrome-show-bookmarks-bar"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Windows・パソコンの設定","item":"https://vaynexis.jp/column/topics/windows"},{"@type":"ListItem","position":4,"name":"Chromeの「ブックマーク バーを表示」で消えた一覧を戻す","item":"https://vaynexis.jp/column/chrome-show-bookmarks-bar"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/windows">Windows・パソコンの設定</a></li><li aria-current="page">Chromeの「ブックマーク バーを表示」で消えた一覧を戻す</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Chromeの「ブックマーク バーを表示」で消えた一覧を戻すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>消えたブックマーク バーは、Chrome の右上のその他アイコンから［ブックマークとリスト］、［ブックマーク バーを表示］の順に選ぶと表示に戻せます。この項目はバーのオンとオフを切り替えるものです。 キーボードでは Ctrl+Shift+B で、ブックマーク バーの表示と非表示が切り替わります。</p></div>
+    <p class="col-meta">公開：2026年11月17日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>Chrome のアドレス バーの下から業務のリンクの列が消えたとき、その他アイコンの［ブックマークとリスト］から［ブックマーク バーを表示］を選んで戻す手順です。Ctrl+Shift+B での切り替え、バーが戻るまでブックマークを開く3つの道、戻した後の並べ直しと削除の注意までを、Google の公式ヘルプに沿って整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">先に1回だけ試す操作</a></li>
+      <li><a href="#s2">キーの押し間違いで消えることもある</a></li>
+      <li><a href="#s3">バーが戻るまでの間にリンクを開く3つの道</a></li>
+      <li><a href="#s4">戻ったバーを、毎日使う順に並べ直す</a></li>
+      <li><a href="#s5">消す前に一呼吸おく</a></li>
+      <li><a href="#s6">社内で同じ相談が来たら</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．先に1回だけ試す操作</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、Windows のパソコンで使う Chrome です。消したブックマークの復元や、別のパソコンとの同期の不具合は扱いません。</p>
+    <p>バーが見えないと分かったら、設定の画面を探し回る前に、次の順に操作します。</p>
+    <ol>
+      <li>パソコンで Chrome を開きます。</li>
+      <li>右上のその他アイコンを選びます。</li>
+      <li>［ブックマークとリスト］、［ブックマーク バーを表示］の順に選びます。</li>
+    </ol>
+    <p></p>
+    <p>ヘルプでは、ブックマークを簡単に開くには、ブックマーク バーでブックマークを選択すると案内されています。 そのバーの表示は、この1つの項目でオンとオフが入れ替わります。もともと表示されていたのに誤って選ぶと、今度はバーが消えます。1回選んだら、アドレス バーの下にリンクの列が戻ったかを目で確かめ、戻っていれば続けて選ばないようにします。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．キーの押し間違いで消えることもある</h2>
+    <p>Chrome のキーボード ショートカットの一覧には、ブックマーク バーの表示と非表示を切り替えるキーとして Ctrl+Shift+B が載っています。 同じ一覧では、Ctrl+Shift+O がブックマーク マネージャーを開くキー、Ctrl+D が現在のウェブページをブックマークとして保存するキーです。 Ctrl と Shift を押したまま近くのキーを打とうとして B に触れると、気づかないうちにバーが消えることも考えられます。思い当たる操作がなくても、Ctrl+Shift+B をもう一度押せば、メニューを開かずに表示へ戻せます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．バーが戻るまでの間にリンクを開く3つの道</h2>
+    <p>ヘルプには、ブックマーク バーがオンになっていない、またはブックマークが見当たらない場合は、3つの方法でブックマークを探せると書かれています。 朝いちばんに勤怠のサイトを開きたいときなど、バーを直す前にリンクだけ使いたい場面で役に立ちます。</p>
+    <ul>
+      <li><strong>アドレスバーから</strong>：アドレスバーに「@bookmarks」と入力し、Tab キーまたは Space キーを押します。探しているブックマークのキーワードを入力し、リストから選びます。 「経費」「勤怠」のように、名前の一部を覚えているリンクならこれが早道です。</li>
+      <li><strong>ブックマーク マネージャから</strong>：右上のその他アイコンから［ブックマークとリスト］、［ブックマーク マネージャ］の順に選び、ブックマークを選びます。 フォルダに分けて登録している人は、一覧を順に見ていけます。</li>
+      <li><strong>ナビゲーション パネルから</strong>：右上のその他アイコンから［ブックマークとリスト］、［すべてのブックマークを表示］の順に選びます。</li>
+    </ul>
+    <p>どの道で開いても、ここに目的のリンクがあれば、ブックマークそのものは残っていて、見えなくなっていたのはバーの表示だけだと分かります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．戻ったバーを、毎日使う順に並べ直す</h2>
+    <p>バーが戻ったら、ついでに並びを見直しておくと、次に誰かのバーが消えたときにも説明しやすくなります。ヘルプにある操作は次のとおりです。</p>
+    <ul>
+      <li>今開いているサイトを加えるときは、アドレスバーの右にあるブックマークのアイコンを選びます。</li>
+      <li>ブックマーク バーを使用している場合は、ブックマークを希望の位置にドラッグして並べ替えられます。</li>
+      <li>数が増えたら、ブックマーク バーを右クリックして［フォルダを追加］を選び、取引先別や手続き別にまとめます。</li>
+    </ul>
+    <p>左から、毎朝開くもの、週に一度のもの、月末だけのもの、と使う回数の順に並べておくと、バーの幅に収まらないときにも大事なリンクが先頭に残ります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．消す前に一呼吸おく</h2>
+    <p>並べ直しの途中で、使わなくなったリンクを消したくなることもあります。ただし、ヘルプには、削除したブックマークを元に戻すことはできないという注意書きがあります。 迷うリンクは消さずに、別のフォルダへ移しておき、しばらく使わないことを確かめてから整理する順番にすると、取り返しのつかない失敗を防げます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．社内で同じ相談が来たら</h2>
+    <p>朝、パソコンを立ち上げた担当者から「上のリンクが全部消えた」と声がかかる場面は、どの職場でも起こりえます。こうした小さな困りごとは、聞かれた人が口頭で直して終わりになりがちです。誰が、どの道具の、どんな操作で手を止めたのかを書き出しておくと、短い手順メモにまとめる候補が見えてきます。書き出すときの表の形は、<a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）</a>が参考になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">その他アイコンから［ブックマークとリスト］、［ブックマーク バーを表示］の順に選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">選んだ後、アドレス バーの下にリンクの列が戻ったかを見たか（続けて選ぶと再び消える）</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">Ctrl+Shift+B でも表示と非表示が切り替わることを知っているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">急ぐときは、@bookmarks、ブックマーク マネージャ、すべてのブックマークの表示から開けるか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">並べ直しはドラッグ、まとめるときはバーの右クリックから［フォルダを追加］を使ったか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">削除は元に戻せないことを踏まえ、迷うリンクは消さずに移したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/chrome/answer/188842?hl=ja&amp;co=GENIE.Platform%3DDesktop" rel="noopener" target="_blank">Chrome でブックマークを作成、表示、編集する - パソコン - Google Chrome ヘルプ</a>：［ブックマーク バーを表示］の道順、バーが出ていないときにブックマークを探す3つの方法、追加・ドラッグでの並べ替え・フォ</li>
+      <li><a href="https://support.google.com/chrome/answer/157179?hl=ja&amp;co=GENIE.Platform%3DDesktop" rel="noopener" target="_blank">Chrome のキーボード ショートカット - パソコン - Google Chrome ヘルプ</a>：Ctrl+Shift+B（バーの表示と非表示）、Ctrl+Shift+O（ブックマーク マネージャー）、Ctrl+D（ブ</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/chrome-startup-restore-previous-pages">Chromeの「前回開いていたページを開く」でタブを戻すには</a></li>
+      <li><a href="/column/chrome-remove-site-zoom-level">Chromeの「ズームレベル」で一つのサイトだけ元に戻すには</a></li>
+      <li><a href="/column/chrome-download-pdf-instead-of-opening">Chromeの「PDF をダウンロードする」でブラウザ表示を止めるには</a></li>
+      <li><a href="/column/chrome-camera-allow-blocked-site">Chromeの「カメラ」で一度拒否した会議サイトを許可するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

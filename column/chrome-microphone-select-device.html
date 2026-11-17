@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chromeの「マイク」で会議に使う入力機器を変えるには｜Vaynexis</title>
+  <meta name="description" content="ヘッドセットをつないだのに、相手には内蔵マイクの声が届いている。そんなときに、パソコン版 Chrome の［サイトの設定］の［マイク］で既定のマイクを選ぶ手順と、Windows 11 の［サウンド］の［入力］で録音に使う機器を確かめる手順を、Google と Microsoft の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Chromeの「マイク」で会議に使う入力機器を変えるには｜Vaynexis">
+  <meta property="og:description" content="ヘッドセットをつないだのに、相手には内蔵マイクの声が届いている。そんなときに、パソコン版 Chrome の［サイトの設定］の［マイク］で既定のマイクを選ぶ手順と、Windows 11 の［サウンド］の［入力］で録音に使う機器を確かめる手順を、Google と Microsoft の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/chrome-microphone-select-device">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/chrome-microphone-select-device">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Chromeの「マイク」で会議に使う入力機器を変えるには","description":"ヘッドセットをつないだのに、相手には内蔵マイクの声が届いている。そんなときに、パソコン版 Chrome の［サイトの設定］の［マイク］で既定のマイクを選ぶ手順と、Windows 11 の［サウンド］の［入力］で録音に使う機器を確かめる手順を、Google と Microsoft の公式ヘルプに沿って整理します。","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/chrome-microphone-select-device"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Windows・パソコンの設定","item":"https://vaynexis.jp/column/topics/windows"},{"@type":"ListItem","position":4,"name":"Chromeの「マイク」で会議に使う入力機器を変えるには","item":"https://vaynexis.jp/column/chrome-microphone-select-device"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/windows">Windows・パソコンの設定</a></li><li aria-current="page">Chromeの「マイク」で会議に使う入力機器を変えるには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Chromeの「マイク」で会議に使う入力機器を変えるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Chrome では、サイトで使うデフォルトのマイクを選べます。［設定］から［プライバシーとセキュリティ］、［サイトの設定］と進み、［権限］で［マイク］を選んだら、下矢印から使うマイクを選びます。 パソコン全体の側では、Windows 11 の［サウンド］の［入力］で、話す・録音するために使う機器を選びます。 職場の Chrome では、カメラとマイクの設定を変えられるのがネットワーク管理者だけのこともあります。</p></div>
+    <p class="col-meta">公開：2026年11月17日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>ヘッドセットをつないだのに、相手には内蔵マイクの声が届いている。そんなときに、パソコン版 Chrome の［サイトの設定］の［マイク］で既定のマイクを選ぶ手順と、Windows 11 の［サウンド］の［入力］で録音に使う機器を確かめる手順を、Google と Microsoft の公式ヘルプに沿って整理します。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">マイクを選ぶ場所は一つではない</a></li>
+      <li><a href="#s2">Chrome で既定のマイクを選ぶ</a></li>
+      <li><a href="#s3">Windows の［サウンド］の［入力］で、録音に使う機器を確かめる</a></li>
+      <li><a href="#s4">声が届かないときに見る順番</a></li>
+      <li><a href="#s5">職場の Chrome で選べないとき</a></li>
+      <li><a href="#s6">機器の記録を残しておく（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．マイクを選ぶ場所は一つではない</h2>
+    <p>確認日：2026年11月16日。</p>
+    <p>対象は、Windows 11 のパソコンで、Chrome から Web 会議に入る場面です。会議サービスの画面の中にある音声の設定と、Windows のスピーカー（音を出す側）の設定は扱いません。</p>
+    <p>ノートパソコンには、たいてい内蔵のマイクがあります。そこへ USB のヘッドセットや Web カメラをつなぐと、マイクが2つ、3つと増えます。会議の相手から「声が遠い」「周りの電話の音まで入っている」と言われたら、思っていたのとは別のマイクが使われているのかもしれません。</p>
+    <p>声を拾うマイクを選ぶ場所は、少なくとも2か所あります。一つは Chrome の［サイトの設定］、もう一つは Windows の［サウンド］の設定です。どちらか一方だけを見て「選んであるはず」と思い込むと、原因にたどり着くまで時間がかかります。まず Chrome の中の選び方を見て、次に Windows の側へ進みます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．Chrome で既定のマイクを選ぶ</h2>
+    <p>Chrome のヘルプには、サイトで使用するデフォルトのマイクを選択できると書かれています。</p>
+    <ol>
+      <li>パソコンで Chrome を開きます。</li>
+      <li>右上のその他アイコンから［設定］を選びます。</li>
+      <li>［プライバシーとセキュリティ］、［サイトの設定］の順に選びます。</li>
+      <li>［権限］で［マイク］を選びます。</li>
+      <li>下矢印を選び、使うマイクを選びます。</li>
+    </ol>
+    <p></p>
+    <p>一覧に並ぶ名前は、機器の製品名や「既定」などの表示になっていることが多く、どれがヘッドセットか迷うことがあります。いったんヘッドセットのケーブルを抜き、一覧から消えた名前を見ると見分けやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．Windows の［サウンド］の［入力］で、録音に使う機器を確かめる</h2>
+    <p>Chrome で選んでも声が届かないときは、Windows の側も見ます。Microsoft のヘルプでは、マイクまたはヘッドセットが、システムの既定の録音デバイスになっていることを確かめるよう案内されています。</p>
+    <ol>
+      <li>［スタート］から［設定］、［システム］、［サウンド］の順に選びます。</li>
+      <li>［入力］で、［話す/録音するためのデバイスを選択する］に移動し、使うデバイスを選びます。</li>
+      <li>声の拾い方を試すには、デバイスの右側にある［&gt;］を選び、プロパティのページの［マイク テスト］で［テストの開始］を選んでマイクに向かって話します。</li>
+    </ol>
+    <p></p>
+    <p>会議の前にこのテストを一度しておくと、当日「聞こえますか」のやり取りで数分を使わずに済みます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．声が届かないときに見る順番</h2>
+    <p>マイクを選び直しても声が届かないときは、次の順で見ていきます。Google と Microsoft のヘルプにある手順を、手元で確かめやすい順に並べました。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">見る所</th><th scope="col">ヘルプにある内容</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="見る所">ヘッドセットのミュート</td><td data-label="ヘルプにある内容">ヘッドセットにミュート ボタンがある場合、アクティブでないことを確かめる</td></tr><tr><td data-label="順番">2</td><td data-label="見る所">会議の画面のミュート</td><td data-label="ヘルプにある内容">ウェブサイトやビデオ会議サービスでミュートになっていないか</td></tr><tr><td data-label="順番">3</td><td data-label="見る所">Chrome のサイトの権限</td><td data-label="ヘルプにある内容">マイクを使うサイトに、マイクへのアクセスを許可しているか</td></tr><tr><td data-label="順番">4</td><td data-label="見る所">Windows の既定の録音デバイス</td><td data-label="ヘルプにある内容">正しいマイクが選ばれ、録音レベルが適切か</td></tr><tr><td data-label="順番">5</td><td data-label="見る所">入り直す・再起動</td><td data-label="ヘルプにある内容">ビデオ通話を終了して再参加し、Chrome とパソコンを再起動する</td></tr></tbody></table></div>
+    <p></p>
+    <p>1と2は、機器や画面を見るだけで済みます。コードの途中に付いているミュートスイッチは、机の下で何かに当たって入ってしまうこともあります。3は、会議のサイトでマイクを［許可しない］にしていると起きます。4は、ヘッドセットを替えた後に見落としやすい所です。</p>
+    <p>さらに、Windows 11 の更新の後にマイクが検出されないときは、［プライバシーとセキュリティ］の［マイク］で［マイクへのアクセス］がオンになっているかを確かめるよう、Microsoft のヘルプに書かれています。 デスクトップ アプリには、［デスクトップ アプリからマイクにアクセスできるようにする］という別の項目があります。</p>
+    <p>最後まで試してもだめなら、Chrome のヘルプでは、マイクの製造元に問い合わせて、追加のトラブルシューティングや互換性について相談するよう案内されています。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．職場の Chrome で選べないとき</h2>
+    <p>ヒントとして、職場や学校で Chrome を使っている場合、カメラとマイクの設定を変更できるのはネットワーク管理者のみと書かれています。 下矢印が押せない、選んでも元に戻る、というときは、社内でパソコンを管理している人に、使いたいヘッドセットの名前を伝えて相談します。</p>
+    <p>共用の会議室のパソコンなら、使い終わった人がマイクを選び直したままにしていることもあります。会議室に「このパソコンで使うマイク」を貼っておくと、次の人が迷いません。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．機器の記録を残しておく（架空の例）</h2>
+    <p>ヘッドセットの貸し出しや入れ替えがある職場では、どのパソコンでどのマイクを使うかを一覧にしておくと、毎回の確かめが短くなります。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">残す内容</th><th scope="col">架空の記入例</th></tr></thead><tbody><tr><td data-label="残す内容">パソコン</td><td data-label="架空の記入例">会議室Aのノートパソコン</td></tr><tr><td data-label="残す内容">使うマイク</td><td data-label="架空の記入例">USB ヘッドセット（総務の貸し出し品）</td></tr><tr><td data-label="残す内容">Chrome の［マイク］</td><td data-label="架空の記入例">ヘッドセットを選択</td></tr><tr><td data-label="残す内容">Windows の［入力］</td><td data-label="架空の記入例">ヘッドセットを選択・テスト済み</td></tr></tbody></table></div>
+    <p>パソコンや会議の機器に関わる細かな作業は、表に出にくい時間です。社内の作業を一度洗い出してみるときは、<a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）</a>を使うと、こうした作業も1行ずつ書き出せます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">Chrome の［サイトの設定］の［マイク］で、下矢印から使うマイクを選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">Windows の［サウンド］の［入力］で、同じマイクを選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">マイク テストで声が拾われるかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ヘッドセットと会議の画面のミュートを見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">更新の後なら、［マイクへのアクセス］と［デスクトップ アプリからマイクにアクセスできるようにする］を見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">職場の Chrome で選べないときは、管理している人に相談したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/chrome/answer/2693767?hl=ja&amp;co=GENIE.Platform%3DDesktop" rel="noopener" target="_blank">Chrome でカメラとマイクを使用する - パソコン - Google Chrome ヘルプ</a>：既定のマイクを選択する手順、管理対象のヒント、マイクに関する問題を解決する手順</li>
+      <li><a href="https://support.microsoft.com/ja-jp/windows/hardware/drivers/fix-microphone-problems" rel="noopener" target="_blank">マイクの問題を解決する（Microsoft サポート）</a>：既定の録音デバイスの選び方、マイク テスト、ミュート ボタン、マイクへのアクセスとデスクトップ アプリの項目</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/chrome-stop-always-open-file-type">Chromeの「この種類のファイルは常に開く」を解除するには</a></li>
+      <li><a href="/column/chrome-download-pdf-instead-of-opening">Chromeの「PDF をダウンロードする」でブラウザ表示を止めるには</a></li>
+      <li><a href="/column/chrome-startup-restore-previous-pages">Chromeの「前回開いていたページを開く」でタブを戻すには</a></li>
+      <li><a href="/column/chrome-site-sound-mute">Chromeの「音声」でサイトから勝手に音が出るのを止めるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
