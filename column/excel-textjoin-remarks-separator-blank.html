@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="/assets/inner-navigation.css">
   <link rel="stylesheet" href="/assets/column.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで別々の説明を一つの備考欄にまとめる｜区切りと空欄を確認","description":"Excelで複数セルの文字列を備考欄に結合し、区切り、空欄、元データの更新を確認します。","datePublished":"2026-11-10","dateModified":"2026-11-10","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-textjoin-remarks-separator-blank"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelで別々の説明を一つの備考欄にまとめる","item":"https://vaynexis.jp/column/excel-textjoin-remarks-separator-blank"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの設定","item":"https://vaynexis.jp/column/topics/excel"},{"@type":"ListItem","position":4,"name":"Excelで別々の説明を一つの備考欄にまとめる","item":"https://vaynexis.jp/column/excel-textjoin-remarks-separator-blank"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
@@ -65,7 +65,7 @@
 </nav>
 <main id="main">
 <article lang="ja" aria-labelledby="col-title">
-  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">Excelで別々の説明を一つの備考欄にまとめる</li></ol></div></nav>
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/excel">Excelの設定</a></li><li aria-current="page">Excelで別々の説明を一つの備考欄にまとめる</li></ol></div></nav>
   <header class="sec"><div class="wrap">
     <h1 class="h1" id="col-title">Excelで別々の説明を一つの備考欄にまとめる｜区切りと空欄を確認</h1>
     <div class="col-key"><p class="col-key__label">要点</p><p>Excelで別々のセルにある説明を一つの備考欄へまとめるには、出力先のセルにアンパサンド記号（&amp;）でつなぐ式か、CONCAT関数の式を入力します。区切りの文字は引用符で囲んで式に入れます。CONCATには区切り記号や空のセルを無視する引数がないため、空欄の行で区切りだけが残るのを避けたいときは、TEXTJOIN関数のignore_emptyをTRUEにします。元の欄は残し、空欄がある行で表示を確かめます。</p></div>

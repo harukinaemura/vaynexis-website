@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="/assets/inner-navigation.css">
   <link rel="stylesheet" href="/assets/column.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"エクセルで会社名・住所の表記ゆれを統一する。関数でそろえる部分と、AIに候補を出させる部分","description":"取引先名簿の会社名・住所の表記ゆれを、エクセルの関数（CLEAN・TRIM・SUBSTITUTE・ASC・VLOOKUP）でそろえる手順をまとめました。照合用の列の作り方、法人格の対応表、AIに頼んでよいこと、法人番号での最終確認、直したあとの件数の確認表つきです。","datePublished":"2026-11-02","dateModified":"2026-11-02","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/name-variants-excel"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"エクセルで表記ゆれを統一する方法","item":"https://vaynexis.jp/column/name-variants-excel"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"事務作業の進め方と確認","item":"https://vaynexis.jp/column/topics/office-work"},{"@type":"ListItem","position":4,"name":"エクセルで表記ゆれを統一する方法","item":"https://vaynexis.jp/column/name-variants-excel"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
@@ -65,7 +65,7 @@
 </nav>
 <main id="main">
 <article lang="ja" aria-labelledby="col-title">
-  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li aria-current="page">エクセルで表記ゆれを統一する方法</li></ol></div></nav>
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/office-work">事務作業の進め方と確認</a></li><li aria-current="page">エクセルで表記ゆれを統一する方法</li></ol></div></nav>
   <header class="sec"><div class="wrap">
     <h1 class="h1" id="col-title">エクセルで会社名・住所の表記ゆれを統一する。関数でそろえる部分と、AIに候補を出させる部分</h1>
     <div class="col-key"><p class="col-key__label">要点</p><p>表記ゆれは、元のデータを書き換えずに<strong>照合用の列</strong>を作ってそろえます。見えない文字は CLEAN、半角スペースは TRIM、全角スペースと改行しないスペースは SUBSTITUTE で半角スペースに替えてから TRIM、全角と半角は ASC で、「（株）」「㈱」などの法人格は対応表と VLOOKUP でそろえます。同じ会社かどうか迷う違いは、AIに「同じと考えた理由つきの候補」を出させ、人が決めます。決めた対応表を式に反映し、直す前と後の件数を比べて確かめます。</p></div>
