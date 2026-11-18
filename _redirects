@@ -1146,6 +1146,11 @@
 /column/rental-car-lending-ledger-records.html /column/rental-car-lending-ledger-records 301
 /column/cleaning-receipt-complaint-contact-notice.html /column/cleaning-receipt-complaint-contact-notice 301
 
+# Column topics trailing slash (2026-11-18): /column/topics/<kind>/ and /column/topics/<kind>/<n>/ -> 301 (were 307). Must come before the :slug rule.
+/column/topics/ /column 301
+/column/topics/:kind/ /column/topics/:kind 301
+/column/topics/:kind/:n/ /column/topics/:kind/:n 301
+
 # Column trailing slash (2026-11-10): one placeholder rule instead of one line per article (Cloudflare allows 2,000 static rules).
 /column/:slug/ /column/:slug 301
 /column/year-end-stocktake-damaged-slow-moving-report.html /column/year-end-stocktake-damaged-slow-moving-report 301
