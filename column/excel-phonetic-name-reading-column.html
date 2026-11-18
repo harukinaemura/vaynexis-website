@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelの名簿の漢字に保存されたふりがなを別列へ出すには｜Vaynexis</title>
+  <meta name="description" content="社員や取引先の名簿で、漢字の氏名の横に読みの列を作りたいときに使えるのが PHONETIC 関数です。Microsoft の公式ヘルプに沿って、関数の書き方、読みが出ないセルの見分け方、入力したときの読みがそのまま残る点と、社内での確かめ方を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelの名簿の漢字に保存されたふりがなを別列へ出すには｜Vaynexis">
+  <meta property="og:description" content="社員や取引先の名簿で、漢字の氏名の横に読みの列を作りたいときに使えるのが PHONETIC 関数です。Microsoft の公式ヘルプに沿って、関数の書き方、読みが出ないセルの見分け方、入力したときの読みがそのまま残る点と、社内での確かめ方を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-phonetic-name-reading-column">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-phonetic-name-reading-column">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelの名簿の漢字に保存されたふりがなを別列へ出すには","description":"社員や取引先の名簿で、漢字の氏名の横に読みの列を作りたいときに使えるのが PHONETIC 関数です。Microsoft の公式ヘルプに沿って、関数の書き方、読みが出ないセルの見分け方、入力したときの読みがそのまま残る点と、社内での確かめ方を整理します。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-phonetic-name-reading-column"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの設定","item":"https://vaynexis.jp/column/topics/excel"},{"@type":"ListItem","position":4,"name":"Excelの名簿の漢字に保存されたふりがなを別列へ出すには","item":"https://vaynexis.jp/column/excel-phonetic-name-reading-column"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/excel">Excelの設定</a></li><li aria-current="page">Excelの名簿の漢字に保存されたふりがなを別列へ出すには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelの名簿の漢字に保存されたふりがなを別列へ出すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>PHONETIC 関数は、文字列からふりがなを取り出す関数で、書式は PHONETIC(参照) です。 取り出せるのは、セルに保存されているふりがなだけです。Excel がふりがなを自動で付けるのは日本語版の Excel に入力された新しいデータだけで、ほかのプログラムで作ったファイルを開いた場合は自動では作られません。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>名簿の漢字の氏名から読みの列を作ったら、一部の行だけ読みが出ない。関数が返すのは入力のときに保存された読みだけ、という前提で、確かめる行の分け方を整理しました。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">漢字の氏名の右に、読みの列を足す</a></li>
+      <li><a href="#s2">読みが出てこないセルは、どこから来たか</a></li>
+      <li><a href="#s3">入力したときの読みが、そのまま残る</a></li>
+      <li><a href="#s4">架空の名簿で試す</a></li>
+      <li><a href="#s5">誰が、いつ読みを確かめるか</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．漢字の氏名の右に、読みの列を足す</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は Windows 版の Excel（Microsoft 365・2024・2021 など）です。関数を使うには、地域設定が日本語・中国語・韓国語のいずれかである必要があります。 名簿を開く人が複数いるときは、事務所のパソコンだけでなく、在宅で使う端末でも同じ設定かを先に確かめておくと、人によって関数が使えない、という食い違いを防げます。</p>
+    <p>氏名が B 列の2行目から入っている名簿なら、C2 に =PHONETIC(B2) と入れ、下の行へコピーします。参照に複数のセルを指定すると左上のセルのふりがなが返り、離れた複数のセルを指定するとエラー値 #N/A が返ります。 1つの式で見るのは1人分のセル、と決めておくと迷いません。</p>
+    <p>式を入れるときは、元の氏名の列には手を入れず、読みの列を右に新しく足します。ヘルプの Web 版の節には、色や太字のような小さな変更ならふりがなは消えないが、それ以外の文字の変更ではふりがなが削除される場合がある、と書かれています。 氏名の表記を直す作業と、読みを取り出す作業は、日を分けて行うと、どちらで読みが変わったかを追いやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．読みが出てこないセルは、どこから来たか</h2>
+    <p>名簿は、担当者が手で打った行と、勤怠や販売の仕組みから書き出したデータを貼った行が混ざりがちです。関数を入れたら、まず読みの列を上から眺め、ほかの行と様子の違う行に印を付けます。</p>
+    <p>ヘルプの Web 版の節には、セルにふりがなの情報が無い場合は［表示/非表示］のコマンドが使えなくなる、と書かれています。 印を付けた行がどこから来たデータかを確かめ、外から取り込んだ行は、読みを別に集める対象として分けておきます。同じ Web 版の節には、ふりがなを編集するには Windows 版の Excel を使う必要があるとも書かれています。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．入力したときの読みが、そのまま残る</h2>
+    <p>ふりがなには、日本語を入力するときに使った読みの文字列が使われます。 珍しい名字を、別の読みで変換して出した場合は、その変換に使った読みが残ります。関数は保存された読みをそのまま返すだけなので、本人の正しい読みかどうかまでは分かりません。</p>
+    <p>ふりがなが正しく入っていない場合は、必要な修正をするよう案内されています。また、並べ替えでは、日本語のデータは既定でふりがなの順に並びます。 正しいふりがなが付いていれば、国語辞書と同じ順に並ぶとも説明されています。 裏を返すと、読みの誤りは、名簿を五十音順に並べたときの位置にも響きます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．架空の名簿で試す</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">行</th><th scope="col">氏名（架空）</th><th scope="col">どう入ったか</th><th scope="col">読みの列で起きること</th></tr></thead><tbody><tr><td data-label="行">2</td><td data-label="氏名（架空）">山田 花子</td><td data-label="どう入ったか">担当者が入力</td><td data-label="読みの列で起きること">入力に使った読みが出る</td></tr><tr><td data-label="行">3</td><td data-label="氏名（架空）">東海林 一郎</td><td data-label="どう入ったか">「ひがし」「うみ」「はやし」で変換して入力</td><td data-label="読みの列で起きること">本人の読みと違う読みが出る</td></tr><tr><td data-label="行">4</td><td data-label="氏名（架空）">佐藤 次郎</td><td data-label="どう入ったか">別の仕組みの書き出しを貼り付け</td><td data-label="読みの列で起きること">ふりがなの情報が無い行として扱う</td></tr></tbody></table></div>
+    <p>2行目は、担当者が普段どおりに入力した行で、入力に使った読みがそのまま出ます。3行目は、変換で漢字を出すために、本人の読みとは違う読みで入力した行です。関数は入力のときの読みを返すので、結果の文字そのものには誤りが見えません。4行目は、ほかの仕組みから書き出したデータを貼った行で、ふりがなは自動では作られません。</p>
+    <p>3行目のように、関数の結果が正しく見えても、本人の読みと合っているとは限りません。読みの列は、使う前に人の目で確かめる前提で作ります。</p>
+    <p>ふりがなの種類は、全角カタカナ・半角カタカナ・ひらがなの3種類から選べます。 名簿の使い道に合わせて、どれで出すかを社内で決めておきます。担当者ごとに種類が違うと、同じ名簿の中にひらがなとカタカナの読みが混ざり、見比べるときの手間が増えます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．誰が、いつ読みを確かめるか</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">いつ</th><th scope="col">誰が</th><th scope="col">何と照らすか</th></tr></thead><tbody><tr><td data-label="いつ">名簿に人を足したとき</td><td data-label="誰が">入力した担当者</td><td data-label="何と照らすか">本人に書いてもらった読み</td></tr><tr><td data-label="いつ">読みの列を使う前</td><td data-label="誰が">名簿の管理者</td><td data-label="何と照らすか">印を付けた行（外からの行・読みの怪しい行）</td></tr><tr><td data-label="いつ">年に1回</td><td data-label="誰が">名簿の管理者</td><td data-label="何と照らすか">退職・社名変更などで変わった行</td></tr></tbody></table></div>
+    <p>人を足すときは、入力した担当者が、本人に書いてもらった読みと読みの列を照らします。読みの列をほかの用途に使う前には、名簿の管理者が、印を付けた行だけをまとめて見直します。年に1回は、退職や社名の変更で変わった行を拾い、読みも一緒に見直します。確かめる人と時期を分けておくと、入力した人が自分の誤りに気づけなかった行も拾えます。</p>
+    <p>名簿をクラウドに置き、ブラウザーの Excel で開く担当者がいる場合は、直す人を決めておく意味が大きくなります。Web 版の Excel でふりがなを編集しようとすると、メッセージが表示されると書かれています。 読みを直すのは、Windows 版の Excel を使う管理者にまとめておくと、直したのに反映されていない、という行き違いを防げます。</p>
+    <p>読みの列を、ほかの表や送付の宛名づくりに渡すときは、関数の列のまま渡すのか、確かめが済んだ時点の文字として貼って渡すのかも決めておきます。確かめが済んだ時点の文字として渡すと、渡した先でも、いつ誰が確かめた読みかを名簿の記録と照らせます。</p>
+    <p>名簿の列ごとに、誰がいつ直すかを書き出しておくと、<a href="/office-inventory">業務棚卸表のテンプレート</a>で事務の作業を洗い出すときにも使えます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">地域設定が日本語になっているパソコンで関数を使っているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">=PHONETIC(B2) のように、1つの式で1つのセルを指しているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">外から取り込んだ行を、読みが無い行として分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変換のために別の読みで入れた氏名が無いか、本人の読みと照らしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ふりがなの種類（全角カタカナ・半角カタカナ・ひらがな）を社内で決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">読みを直したら、名簿の並び順も確かめたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/functions/phonetic-function" rel="noopener" target="_blank">PHONETIC 関数（Microsoft サポート）</a>：関数の説明と書式、地域設定の条件、複数のセル・離れたセルを指定したときの結果</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/use-furigana-phonetic-guides-with-japanese-text" rel="noopener" target="_blank">日本語の文字列にふりがな (ルビ) を使用する（Microsoft サポート）</a>：入力の読みが使われる、自動で付くのは新しいデータだけ、並べ替え、ふりがなの種類、編集は Windows 版、ふりがな情報</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/customer-list-excel">顧客名簿をExcelで整理｜行の単位・重複基準・更新日の決め方</a></li>
+      <li><a href="/column/name-variants-excel">エクセルで会社名・住所の表記ゆれを統一する。関数でそろえる部分と、AIに候補を出させる部分</a></li>
+      <li><a href="/column/excel-sort-assignee-then-due-date">Excelで担当順と期限順を組み合わせて作業一覧を並べるには</a></li>
+      <li><a href="/column/word-mail-merge-excel-list-letters">WordでExcelの宛先一覧から同じ案内状をまとめて作るには</a></li>
+      <li><a href="/column/excel-chart-data-labels-show-values">Excelのグラフに実際の数値をラベルで表示するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

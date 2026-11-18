@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>賃金台帳の時間外・休日・深夜の時間を、勤怠の確定値と照合するには｜Vaynexis</title>
+  <meta name="description" content="給与ソフトの賃金台帳に載った時間外・休日・深夜の労働時間数が、労務担当が締めて確定した勤怠の値と合っているかを、毎月確かめる手順です。厚生労働省の労働時間の適正な把握のためのガイドラインと労働基準法施行規則に沿って、照らす時点、並べ方、差が出たときの記録を整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="賃金台帳の時間外・休日・深夜の時間を、勤怠の確定値と照合するには｜Vaynexis">
+  <meta property="og:description" content="給与ソフトの賃金台帳に載った時間外・休日・深夜の労働時間数が、労務担当が締めて確定した勤怠の値と合っているかを、毎月確かめる手順です。厚生労働省の労働時間の適正な把握のためのガイドラインと労働基準法施行規則に沿って、照らす時点、並べ方、差が出たときの記録を整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/wage-ledger-overtime-attendance-reconcile">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/wage-ledger-overtime-attendance-reconcile">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"賃金台帳の時間外・休日・深夜の時間を、勤怠の確定値と照合するには","description":"給与ソフトの賃金台帳に載った時間外・休日・深夜の労働時間数が、労務担当が締めて確定した勤怠の値と合っているかを、毎月確かめる手順です。厚生労働省の労働時間の適正な把握のためのガイドラインと労働基準法施行規則に沿って、照らす時点、並べ方、差が出たときの記録を整理します。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/wage-ledger-overtime-attendance-reconcile"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"事務作業の進め方と確認","item":"https://vaynexis.jp/column/topics/office-work"},{"@type":"ListItem","position":4,"name":"賃金台帳の時間外・休日・深夜の時間を、勤怠の確定値と照合する","item":"https://vaynexis.jp/column/wage-ledger-overtime-attendance-reconcile"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/office-work">事務作業の進め方と確認</a></li><li aria-current="page">賃金台帳の時間外・休日・深夜の時間を、勤怠の確定値と照合する</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">賃金台帳の時間外・休日・深夜の時間を、勤怠の確定値と照合するには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>労働時間の適正な把握のためのガイドラインには、「賃金台帳の適正な調製」という項目があり、使用者は労働者ごとに、労働日数、労働時間数、休日労働時間数、時間外労働時間数、深夜労働時間数といった事項を適正に記入しなければならないとしています。 同じ項目には、これらを記入していない場合や、故意に虚偽の労働時間数を記入した場合は、30万円以下の罰金に処されるとも書かれています。 勤怠で確定した時間と台帳の時間を区分ごとに並べることが、この記入を毎月確かめる手立てになります。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>給与を払う前に、賃金台帳の残業や深夜の時間が、締めた勤怠の数字と合っているか見ておきたい。区分ごとに並べる段取りと、差が出たときに残す記録を確かめます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">照らす前に、区分の確定を済ませておく</a></li>
+      <li><a href="#s2">勤怠の確定値は、何をもとにした数字か</a></li>
+      <li><a href="#s3">照合の一覧に載せる人を先に決める</a></li>
+      <li><a href="#s4">毎月の照合の段取り</a></li>
+      <li><a href="#s5">差が出たときの記録（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．照らす前に、区分の確定を済ませておく</h2>
+    <p>照合の場で「この時間は時間外か」を決め始めると、作業が止まります。どの時間を時間外・休日・深夜に分けるかは、労務担当が勤怠の締めで確定させ、その確定値を照合の起点にします。割増賃金の対象かどうかの判定は、ここでは扱いません。</p>
+    <p>台帳に載せる時間数の数え方には、施行規則に定めがあります。第54条第2項は、就業規則で法の規定と異なる所定労働時間や休日を定めた場合、時間外・休日・深夜の時間数を、その就業規則に基づいて算定する時間数で代えることができるとしています。 自社の台帳がどちらの数え方で載せているかを、労務担当に一度書き出してもらい、勤怠の側も同じ数え方で確定しているかを見ておきます。数え方がずれていると、毎月同じ差が出続けます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．勤怠の確定値は、何をもとにした数字か</h2>
+    <p>ガイドラインは、使用者が労働日ごとの始業・終業時刻を確認し、記録することを求めています。 確認と記録の原則的な方法には、使用者が自ら現認する方法と、タイムカード、ICカード、パソコンの使用時間の記録等の客観的な記録を基礎とする方法が挙げられています。 打刻と申請の突き合わせは勤怠の締めの段階で終わっている前提とし、ここでは締めた後の合計だけを使います。</p>
+    <p>自己申告で時間を記録している職場では、もう一つ確かめることがあります。ガイドラインは、自己申告により把握した労働時間が実際の労働時間と合致しているかについて、必要に応じて実態調査を実施し、所要の労働時間の補正をすることを求めています。 補正をした月は、補正の後の値を確定値とし、補正前の一覧で台帳と照らさないようにします。勤怠の一覧に「補正済み」の印と補正した日を付けておくと、照合する人が取り違えずに済みます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．照合の一覧に載せる人を先に決める</h2>
+    <p>ガイドラインが労働時間の適正な把握の対象とする労働者は、労働基準法第41条に定める者と、みなし労働時間制が適用される労働者（事業場外労働を行う者は、みなし労働時間制が適用される時間に限る。）を除く全ての者とされています。 施行規則も、法第41条各号のいずれかに当たる労働者などについては、労働時間数と時間外・休日・深夜の時間数を記入することを要しないとしています。 誰がこれに当たるかは労務の責任者が判断した名簿で決め、照合する人がその場の見た目で一覧から外すことはしません。名簿に載せた人の深夜の時間を照合に含めるかどうかも、労務の責任者に決めてもらいます。名簿に無いのに台帳の時間の欄が空いている人がいれば、それも差として記録します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．毎月の照合の段取り</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順</th><th scope="col">すること</th><th scope="col">誰が</th><th scope="col">いつ</th></tr></thead><tbody><tr><td data-label="順">1</td><td data-label="すること">勤怠の確定値を、人ごと・区分ごとの合計で出す</td><td data-label="誰が">労務担当</td><td data-label="いつ">勤怠の締めの後</td></tr><tr><td data-label="順">2</td><td data-label="すること">賃金台帳の同じ月の時間数を出す</td><td data-label="誰が">給与担当</td><td data-label="いつ">給与計算の後、支給の前</td></tr><tr><td data-label="順">3</td><td data-label="すること">2つを並べ、時間外・休日・深夜ごとに差を見る</td><td data-label="誰が">給与担当とは別の人</td><td data-label="いつ">2の当日</td></tr><tr><td data-label="順">4</td><td data-label="すること">差の原因と直し方を記録し、責任者に上げる</td><td data-label="誰が">照合した人</td><td data-label="いつ">差が出たとき</td></tr></tbody></table></div>
+    <p>長野労働局の資料は、賃金台帳を作成し、賃金の支払いの都度、記入する必要があると説明しています。 照合も、支払いのたびに同じ段取りで回します。</p>
+    <p>1の段階では、労務担当が勤怠の画面で締めと承認を終えた後の合計を出し、出した日時を一覧に書きます。締めの後に申請の取り消しや修正が入ると数字が変わるため、いつの時点の数字かを残しておくためです。2では、給与担当が台帳の時間数を、勤怠の一覧と同じ並び（社員番号の順など）で出します。並びがそろっていれば、3で横に並べたときに行のずれによる見誤りが起きにくくなります。照合する人を給与計算をした人と分けておくと、同じ思い込みで見落とすことを減らせます。区分は3つまとめてではなく、1つずつ合わせます。合計が一致していても、深夜の時間が時間外の列に入っている、といったずれは区分ごとに見ないと分かりません。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．差が出たときの記録（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">従業員</th><th scope="col">区分</th><th scope="col">勤怠の確定値</th><th scope="col">台帳</th><th scope="col">確かめた結果</th></tr></thead><tbody><tr><td data-label="従業員">架空のAさん</td><td data-label="区分">深夜</td><td data-label="勤怠の確定値">3.0時間</td><td data-label="台帳">0.0時間</td><td data-label="確かめた結果">深夜の時間が時間外の列に合算されていた</td></tr><tr><td data-label="従業員">架空のBさん</td><td data-label="区分">時間外</td><td data-label="勤怠の確定値">10.0時間</td><td data-label="台帳">8.0時間</td><td data-label="確かめた結果">勤怠の確定後に申請の修正があり、給与の側に取り込む前だった</td></tr><tr><td data-label="従業員">架空のCさん</td><td data-label="区分">休日</td><td data-label="勤怠の確定値">8.0時間</td><td data-label="台帳">8.0時間</td><td data-label="確かめた結果">一致</td></tr></tbody></table></div>
+    <p>Aさんのように帳票の列の設定が原因の差は、同じ設定を使うほかの人にも出ていることがあるので、その月の全員分を見直します。Bさんのように確定の後の修正が原因の差は、修正を給与の側に取り込む締め切りを決めておかないと、毎月くり返します。</p>
+    <p>差の原因が分かったら、どちらの数字を正しいとするかは労務担当が決め、直した日と直した人を残します。ガイドラインは、労務管理を行う部署の責任者が、労働時間の適正な把握等に関する事項を管理し、問題点の把握とその解消を図ることとしています。 同じ原因の差が続くときは、その記録をまとめて責任者に見せます。締めから支給までの流れのどこに照合を置くかを見直すなら、<a href="/business-improvement">事務の業務改善</a>の考え方も使えます。</p>
+    <p>確認日：2026年11月17日。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">時間外・休日・深夜の区分は、労務担当が勤怠の締めで確定させたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">台帳の時間数が、法の定めと就業規則のどちらの数え方かを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">自己申告の補正があった月は、補正後の値を確定値にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">照合の一覧に載せる人を、責任者の判断した名簿で決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">勤怠と台帳を、人ごと・区分ごとに同じ並びで並べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">照合する人を、給与計算をした人と分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">差の原因、直した日、直した人を記録したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">同じ原因の差が続くとき、責任者に記録を見せたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.mhlw.go.jp/web/t_doc?dataId=73023000&amp;dataType=0&amp;pageNo=2" rel="noopener" target="_blank">労働基準法施行規則（厚生労働省 法令等データベース）</a>：第54条第2項（就業規則に基づいて算定する労働時間数）、第5項（記入を要しない労働者）</li>
+      <li><a href="https://jsite.mhlw.go.jp/osaka-roudoukyoku/hourei_seido_tetsuzuki/roudoukijun_keiyaku/hourei_seido/jikan2/kokuji/kokuji2.html" rel="noopener" target="_blank">労働時間の適正な把握のために使用者が講ずべき措置に関するガイドライン（大阪労働局）</a>：2 適用の範囲、4（1）始業・終業時刻の確認及び記録、（2）原則的な方法、（3）ウ 実態調査と補正、（4）賃金台帳の適正</li>
+      <li><a href="https://jsite.mhlw.go.jp/nagano-roudoukyoku/content/contents/roudoujyouken_handbook202602-3.pdf" rel="noopener" target="_blank">労働条件ハンドブック 3 労働者名簿・賃金台帳（長野労働局）</a>：賃金の支払いの都度の記入</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/self-reported-attendance-explanation-check">自己申告の勤怠を始める前に本人・管理者への説明をどう確認するか</a></li>
+      <li><a href="/column/attendance-register-start-end-break-fields">出勤簿の記載事項は？始業・終業と休憩を残す欄の作り方</a></li>
+      <li><a href="/column/solo-after-hours-work-approval-check">一人で行った時間外作業を事前承認と照合するときの記録と確認の進め方</a></li>
+      <li><a href="/column/annual-leave-register-items-retention">年次有給休暇管理簿には何を記録し、何年保存するか</a></li>
+      <li><a href="/column/wage-ledger-required-items-check">賃金台帳を整えるとき、法定の記載事項はどこで確かめるか</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

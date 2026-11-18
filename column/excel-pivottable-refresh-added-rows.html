@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excelで明細を追加してもピボットテーブルの数字が変わらないときは｜Vaynexis</title>
+  <meta name="description" content="売上や経費の明細に行を足したのに、ピボットテーブルの合計が前のままになることがあります。Microsoft の公式ヘルプに沿って、［更新］の操作、追加した行が元の範囲から外れていないかの確かめ方、開いたときの更新と自動更新の扱いを、月次の集計を回す担当者の目線で整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Excelで明細を追加してもピボットテーブルの数字が変わらないときは｜Vaynexis">
+  <meta property="og:description" content="売上や経費の明細に行を足したのに、ピボットテーブルの合計が前のままになることがあります。Microsoft の公式ヘルプに沿って、［更新］の操作、追加した行が元の範囲から外れていないかの確かめ方、開いたときの更新と自動更新の扱いを、月次の集計を回す担当者の目線で整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/excel-pivottable-refresh-added-rows">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/excel-pivottable-refresh-added-rows">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで明細を追加してもピボットテーブルの数字が変わらないときは","description":"売上や経費の明細に行を足したのに、ピボットテーブルの合計が前のままになることがあります。Microsoft の公式ヘルプに沿って、［更新］の操作、追加した行が元の範囲から外れていないかの確かめ方、開いたときの更新と自動更新の扱いを、月次の集計を回す担当者の目線で整理します。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-pivottable-refresh-added-rows"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの設定","item":"https://vaynexis.jp/column/topics/excel"},{"@type":"ListItem","position":4,"name":"Excelで明細を追加してもピボットテーブルの数字が変わらな","item":"https://vaynexis.jp/column/excel-pivottable-refresh-added-rows"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/excel">Excelの設定</a></li><li aria-current="page">Excelで明細を追加してもピボットテーブルの数字が変わらな</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Excelで明細を追加してもピボットテーブルの数字が変わらないときは</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>ピボットテーブルは、キャッシュと呼ばれるデータのスナップショットで動いています。明細に行を足したら、そのデータ ソースで作ったピボットテーブルは更新が必要です。 更新しても変わらないときは、追加した行が元の範囲の外にないかを［データ ソースの変更］で確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>明細シートに今月分を書き足したのに、ピボットテーブルの総計が先月のまま。［更新］で直るときと、元の範囲を広げないと直らないときの見分け方をまとめました。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">「合計が合わない」と言われたら</a></li>
+      <li><a href="#s2">1つだけ更新する・全部まとめて更新する</a></li>
+      <li><a href="#s3">追加した行が、元の範囲の外にあるとき</a></li>
+      <li><a href="#s4">次の月から範囲の外に出ないようにする</a></li>
+      <li><a href="#s5">開いたときの更新と、自動更新の扱い</a></li>
+      <li><a href="#s6">月次の締めでの確かめ方（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．「合計が合わない」と言われたら</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は Windows 版の Excel です。Web 版・Mac 版はメニューの名前や場所が違う所があります。</p>
+    <p>月末に明細シートへ数行を書き足し、別シートのピボットテーブルを報告に貼る流れでは、「明細の合計とピボットの総計が合わない」という声が出やすくなります。原因はおおむね2つに分かれます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">状態</th><th scope="col">起きていること</th><th scope="col">打つ手</th></tr></thead><tbody><tr><td data-label="状態">更新していない</td><td data-label="起きていること">前のスナップショットのまま</td><td data-label="打つ手">［更新］を選ぶ</td></tr><tr><td data-label="状態">更新しても変わらない</td><td data-label="起きていること">追加した行が元の範囲に入っていない</td><td data-label="打つ手">［データ ソースの変更］で範囲を確かめる</td></tr></tbody></table></div>
+    <p>1つ目は、明細を書き足しただけで、ピボットテーブルの側では何もしていない状態です。ピボットテーブルは前に読み込んだ時点の写しで集計しているので、明細を足しても自動では追いつきません。2つ目は、更新はしたのに、ピボットテーブルが見に行く範囲の外に新しい行がある状態です。先に1つ目を試し、それでも総計が変わらなければ2つ目を疑う、という順にすると、確かめる所が少なくて済みます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．1つだけ更新する・全部まとめて更新する</h2>
+    <p>ピボットテーブルを選ぶと［ピボットテーブルの分析］タブが出ます。［データ］グループの［更新］を選ぶか、Alt＋F5 キーを押します。右クリックして［更新］を選ぶこともできます。部門別・月別など複数のピボットテーブルがあるときは、［更新］の矢印から［すべて更新］を選ぶと、ブックの中を一度に更新できます。時間がかかるときは［更新状態］で様子を見て、［更新のキャンセル］で止められます。</p>
+    <p>1つだけ直して報告に貼り、ほかのシートは古いまま、ということを防ぐため、月次の締めでは［すべて更新］を決まりにしておくと迷いません。</p>
+    <p>明細が同じブックのシートではなく、Power Query で取り込んだデータベースなどのデータでも、ピボットテーブルのデータは同じように更新できます。 取り込み元のデータがいつ時点のものかは、取り込みを作った担当者に確かめておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．追加した行が、元の範囲の外にあるとき</h2>
+    <p>明細をただのセル範囲のまま使い、ピボットテーブルを作ったときに「A1 から F200 まで」と範囲を決めていると、201行目より下に足した明細は、更新しても集計に入りません。</p>
+    <p>ピボットテーブルは、作った後でもソース データの範囲を変えられ、範囲を広げて対象のデータを増やせます。手順は、ピボットテーブルを選び、［分析］タブの［データ］グループで［データ ソースの変更］を選ぶと、［ピボットテーブルのデータ ソースの変更］ダイアログ ボックスが出ます。［テーブルまたは範囲の選択］を選び、［テーブル/範囲］のボックスで範囲を確かめます。列が増えたり減ったりするなど、ソース データが大きく変わる場合は、新しいピボットテーブルを作ることを考えるよう書かれています。</p>
+    <p>タブの名前は、更新のヘルプでは［ピボットテーブルの分析］と書かれています。</p>
+    <p>なお、ピボットテーブルがブックのデータ モデルに基づく場合は、データ ソースを変えられないと書かれています。 範囲を広げたら、もう一度［更新］を選び、明細の金額の合計とピボットテーブルの総計が合うかを確かめてから報告に使います。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．次の月から範囲の外に出ないようにする</h2>
+    <p>毎月、範囲を広げ直すのは手間で、忘れる人も出ます。ヘルプでは、Excel の表（テーブル）はピボットテーブルのよいデータ ソースで、データの更新時に、テーブルに追加された行は自動的にピボットテーブルに含まれると説明されています。データは1つのヘッダー行がある列にまとめ、空の行や列がないようにし、同じ列に日付とテキストを混ぜないことも求められています。</p>
+    <p>途中に空の行を入れて月の区切りにしている明細は、テーブルにする前に直しておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．開いたときの更新と、自動更新の扱い</h2>
+    <p>［オプション］の［データ］タブで［ファイルを開くときにデータを更新する］をオンにすると、ブックを開いたときに更新されます。</p>
+    <p>新しいバージョンの Excel では、ローカルのブックのデータにつながったピボットテーブルが自動的に更新されます。ただし、この自動更新は現在、Microsoft 365 Insider プログラムの参加者が使える機能と書かれています。また、自動更新はデータ ソースごとに設定され、切り替えると、そのデータ ソースにつながるすべてのピボットテーブルに影響します。</p>
+    <p>また、ブックに自動更新がオフの既存のピボットテーブルがあると、同じソース データを使う新しいピボットテーブルでも自動更新はオフになります。 社内のパソコンで同じ動きになるとは限らないので、手順書には［更新］を押す手順を残しておきます。</p>
+    <p>更新のたびに列幅や書式が変わって困るときは、［オプション］の［レイアウトと書式］タブにある［更新時に列幅を自動調整する］と［更新時にセル書式を保持する］の欄を確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．月次の締めでの確かめ方（架空の例）</h2>
+    <p>集計を作る人と報告を受け取る人が別のときは、次のように役割を分けておくと、どこで数字がずれたかを後から追えます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">いつ</th><th scope="col">誰が</th><th scope="col">何と照らすか</th></tr></thead><tbody><tr><td data-label="いつ">明細を足した直後</td><td data-label="誰が">入力した担当者</td><td data-label="何と照らすか">明細の行数と、追加した件数</td></tr><tr><td data-label="いつ">更新した後</td><td data-label="誰が">集計を作る担当者</td><td data-label="何と照らすか">明細の金額の合計と、ピボットテーブルの総計</td></tr><tr><td data-label="いつ">報告に貼る前</td><td data-label="誰が">確認者</td><td data-label="何と照らすか">前の月の総計からの増え方が、追加分と合うか</td></tr></tbody></table></div>
+    <p>入力した担当者は、何件足したかを集計の担当者に伝えます。集計の担当者は［すべて更新］の後、明細の金額の合計とピボットテーブルの総計を並べて見ます。確認者は、前の月からの増え方が、足した明細の金額と合うかだけを見ます。3人が同じ数字を別の方向から見ることで、更新の漏れと範囲の外の行のどちらも見つけやすくなります。</p>
+    <p>月次の報告をどんな形で残すかを考えるときは、<a href="/sample-report">棚卸しとAI化プランのレポートの見本</a>の並べ方も手がかりになります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">明細に行を足した後、［更新］または［すべて更新］を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変わらないとき、［データ ソースの変更］で［テーブル/範囲］を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">明細をテーブルにして、足した行が自動で含まれるようにしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">空の行・空の列や、日付と文字の混ざった列がないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">自動更新の切り替えが、同じデータ ソースのほかの集計にも及ぶと知っているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">明細の合計とピボットテーブルの総計を照らしてから報告に貼ったか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/excel/refresh-pivottable-data" rel="noopener" target="_blank">ピボットテーブルのデータを更新する（Microsoft サポート）</a>：手動の更新、すべて更新、更新状態と取り消し、開いたときの更新、自動更新の対象と影響、列幅と書式の欄</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/change-the-source-data-for-a-pivottable" rel="noopener" target="_blank">ピボットテーブルのソース データを変更する（Microsoft サポート）</a>：ソース データの範囲の変更、［データ ソースの変更］の手順、大きく変わるときは作り直す</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/get-started/create-a-pivottable-to-analyze-worksheet-data" rel="noopener" target="_blank">ピボットテーブルを作成してワークシート データを分析する（Microsoft サポート）</a>：キャッシュ、追加後は更新が必要、テーブルの行が自動で含まれる、ヘッダー行・空の行や列・データ型</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-data-entry-demo">AIで転記作業・集計を進める手順（重複・件数・金額の確認例）</a></li>
+      <li><a href="/column/excel-pivot-amount-shows-count-fix">Excelのピボットで金額が件数になるとき合計に直すには</a></li>
+      <li><a href="/column/excel-pivot-group-dates-year-month">Excelの日別明細を年と月で集計する｜ピボットテーブルの期間設定</a></li>
+      <li><a href="/column/excel-power-query-refresh-error-check">Excelの取込更新エラーはどこから調べる？表示と処理段階の確認</a></li>
+      <li><a href="/column/excel-power-query-unpivot-month-columns">Excelで月が横に並ぶ表を月と金額の縦長データにするには</a></li>
+      <li><a href="/column/excel-frequency-handling-time-ranges">Excelの処理時間の記録を指定した区間別の件数にまとめるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

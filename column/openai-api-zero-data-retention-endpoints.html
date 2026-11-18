@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenAI APIのZero Data Retentionだけで十分？機能ごとに残るデータの確かめ方｜Vaynexis</title>
+  <meta name="description" content="社内の仕組みや委託先のツールに OpenAI API を組み込むとき、「学習に使われない」「Zero Data Retention を申し込んだ」だけで、送った文書が残らないと言えるかを確かめるための整理です。OpenAI の Data controls のページに沿って、残るデータの2種類、機能ごとの保存条件、委託先に聞く項目をまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="OpenAI APIのZero Data Retentionだけで十分？機能ごとに残るデータの確かめ方｜Vaynexis">
+  <meta property="og:description" content="社内の仕組みや委託先のツールに OpenAI API を組み込むとき、「学習に使われない」「Zero Data Retention を申し込んだ」だけで、送った文書が残らないと言えるかを確かめるための整理です。OpenAI の Data controls のページに沿って、残るデータの2種類、機能ごとの保存条件、委託先に聞く項目をまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/openai-api-zero-data-retention-endpoints">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/openai-api-zero-data-retention-endpoints">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"OpenAI APIのZero Data Retentionだけで十分？機能ごとに残るデータの確かめ方","description":"社内の仕組みや委託先のツールに OpenAI API を組み込むとき、「学習に使われない」「Zero Data Retention を申し込んだ」だけで、送った文書が残らないと言えるかを確かめるための整理です。OpenAI の Data controls のページに沿って、残るデータの2種類、機能ごとの保存条件、委託先に聞く項目をまとめます。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/openai-api-zero-data-retention-endpoints"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"生成AIの使い方と情報管理","item":"https://vaynexis.jp/column/topics/ai-use"},{"@type":"ListItem","position":4,"name":"OpenAI APIのZero Data Retention","item":"https://vaynexis.jp/column/openai-api-zero-data-retention-endpoints"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/ai-use">生成AIの使い方と情報管理</a></li><li aria-current="page">OpenAI APIのZero Data Retention</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">OpenAI APIのZero Data Retentionだけで十分？機能ごとに残るデータの確かめ方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>API に送ったデータは、明示的にオプトインしない限り OpenAI のモデルの学習には使われないとされています。ただし、残るデータは［Abuse monitoring logs］（不正利用の監視ログ）と［Application state］（機能の動作のために残るデータ）の2種類に分けて説明されています。 Zero Data Retention は監視ログからお客様の内容を外す管理で、OpenAI の事前の承認が条件です。有効にしても、表で対象外とされた機能は Application state を保存することがあります。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>OpenAI API を使う社内ツールの見積もりで「学習には使われません」と説明されても、ファイルや検索用のデータがどこに何日残るかは、機能の名前ごとに別に確かめる必要があります。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">「学習しない」と「残らない」を分けて聞く</a></li>
+      <li><a href="#s2">2つの管理の違いと、選ぶ人</a></li>
+      <li><a href="#s3">機能の名前で表を引く</a></li>
+      <li><a href="#s4">対象の機能でも残る場面</a></li>
+      <li><a href="#s5">委託先に聞く項目（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．「学習しない」と「残らない」を分けて聞く</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、OpenAI の API を自社の仕組みに組み込む場合で、ChatGPT のアプリの設定は扱いません。</p>
+    <p>「API なら学習に使われない」という説明だけで、見積書や問い合わせ文を流してよいと決めると、どこに何日残るかの確認が抜けます。監視ログは、プロンプトや応答などの内容を含むことがあり、既定では API のすべての利用で作られ、最大30日保持されるとされています（法律で長い保持が必要な場合などを除く）。 もう一方の Application state は、一部の機能が、頼まれた処理を果たすために残すデータです。こちらは機能ごとに条件が違うため、後の表で引きます。</p>
+    <p>社内の決まりとしては、「学習に使われるか」「監視ログに何日残るか」「機能の動作のために何が残るか」の3つを分けて、送ってよい情報の範囲を決めます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．2つの管理の違いと、選ぶ人</h2>
+    <p>ページには、Modified Abuse Monitoring と Zero Data Retention の2つが並んでいます。Modified Abuse Monitoring は、まれな場合の画像とファイルの入力を除いて、すべてのエンドポイントで監視ログからお客様の内容を外し、プラットフォームの機能はすべて使える、と説明されています。Zero Data Retention は、監視ログから外す点は同じで、加えて一部のエンドポイントの動きを変えます。 会話の履歴を OpenAI 側に残して使う作りかどうかで向き不向きが変わるため、選ぶ前に、作る仕組みが何を OpenAI 側に残す前提かを開発した人に確かめます。</p>
+    <p>どちらも OpenAI の事前の承認と追加の要件の受け入れが必要で、承認後は API の組織またはプロジェクトの単位で選べます。承認されると［Settings → Organization → Data controls］に［Data Retention］のタブが表示され、プロジェクトごとに［default］で組織の設定を引き継ぐか、明示的に選ぶか、［None］で外すかを決めます。</p>
+    <p>料金や契約の条件はこのページには書かれていません。申し込む前に窓口の回答を文書で受け取り、条件は変わりうる前提で控えを残します。組織で Zero Data Retention を選んでいても、社内ツールの API キーがあるプロジェクトが［None］なら意図した状態になりません。設定を変えられる人を決め、変えたら日付と理由を記録します。</p>
+    <p>また、これらを有効にした顧客は、自社の利用者が OpenAI の方針に従うことと、適用される法律の上での報告などの要件を守ることに責任を負うとされています。 監視ログから内容が外れる分、社員がどう使うかの決まりは会社の側で持つことになります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．機能の名前で表を引く</h2>
+    <p>ページには、エンドポイント（機能の入口）ごとの保存の条件が表で示されています。事務の仕組みで出てきそうなものを抜き出します。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">エンドポイント</th><th scope="col">監視ログ</th><th scope="col">Application state</th><th scope="col">ZDRの対象</th></tr></thead><tbody><tr><td data-label="エンドポイント">/v1/responses</td><td data-label="監視ログ">30 days</td><td data-label="Application state">None（例外あり）</td><td data-label="ZDRの対象">Yes（制限あり）</td></tr><tr><td data-label="エンドポイント">/v1/embeddings</td><td data-label="監視ログ">30 days</td><td data-label="Application state">None</td><td data-label="ZDRの対象">Yes</td></tr><tr><td data-label="エンドポイント">/v1/audio/transcriptions</td><td data-label="監視ログ">None</td><td data-label="Application state">None</td><td data-label="ZDRの対象">Yes</td></tr><tr><td data-label="エンドポイント">/v1/files</td><td data-label="監視ログ">30 days</td><td data-label="Application state">Until deleted*</td><td data-label="ZDRの対象">No</td></tr><tr><td data-label="エンドポイント">/v1/vector_stores</td><td data-label="監視ログ">30 days</td><td data-label="Application state">Until deleted</td><td data-label="ZDRの対象">No</td></tr><tr><td data-label="エンドポイント">/v1/batches</td><td data-label="監視ログ">30 days</td><td data-label="Application state">Until deleted</td><td data-label="ZDRの対象">No</td></tr></tbody></table></div>
+    <p></p>
+    <p>読み方の要点は2つです。1つ目は、文字起こしの /v1/audio/transcriptions のように監視ログの保持そのものが None とされている機能もあれば、多くの機能は30日とされていること。2つ目は、ファイルを上げる /v1/files、検索用に文書をためる /v1/vector_stores、まとめて処理する /v1/batches は、Application state が削除されるまで残り、Zero Data Retention の対象外とされていることです。 社内の規程集を上げて検索させる作りなら、これらを使っていないかを、作った人に機能の名前で確かめ、使うなら消す時期と担当を決めておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．対象の機能でも残る場面</h2>
+    <ul>
+      <li>Responses API は既定で Application state を少なくとも30日保持しますが、組織で Zero Data Retention を有効にすると、［store］は true を指定しても常に false として扱われます。</li>
+      <li>バックグラウンドのモードでは、ポーリングのために応答のデータをおよそ10分ディスクに保存すると書かれています。Prompt caching で GPU のローカルの記憶域に置かれるデータは、24時間の期限の後は保持されないとされています。</li>
+      <li>画像やファイルの入力は受け付けたときに CSAM の検査がされ、疑いが検出されると Zero Data Retention でも人による確認のために保持されます。remote MCP server へ送ったデータは、その第三者の保持の方針に従います。</li>
+      <li>Assistants API に関わるデータは削除してから30日後に消され、削除しないものは無期限に保持されます。ファイルは手動で削除するか、［expires_after］で自動で消す設定ができます。</li>
+    </ul>
+    <p>承認を受けた顧客でも、書面で事前に知らせたうえで、特定のモデルを Zero Data Retention の対象から外すことがあると書かれています。 通知を受け取る担当を決め、届いたら使うモデルと設定を見直します。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．委託先に聞く項目（架空の例）</h2>
+    <p>架空の例として、問い合わせの返信案を作る社内ツールを外部の開発会社に作ってもらう場面です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">聞く項目</th><th scope="col">架空の回答の例</th><th scope="col">社内で照らすもの</th></tr></thead><tbody><tr><td data-label="聞く項目">組織とプロジェクトの設定</td><td data-label="架空の回答の例">組織は Zero Data Retention、ツールは default</td><td data-label="社内で照らすもの">承認の通知、設定画面の写し</td></tr><tr><td data-label="聞く項目">使う機能の名前</td><td data-label="架空の回答の例">/v1/responses のみ</td><td data-label="社内で照らすもの">仕様書の機能の一覧</td></tr><tr><td data-label="聞く項目">ファイル・検索用の保存</td><td data-label="架空の回答の例">使わない</td><td data-label="社内で照らすもの">削除の記録</td></tr><tr><td data-label="聞く項目">外部のサービスへの送信</td><td data-label="架空の回答の例">なし</td><td data-label="社内で照らすもの">構成の図</td></tr></tbody></table></div>
+    <p>導入の前と機能を足すたびに、社内の担当が回答とページの表を照らし、照らした日付を残します。外へ頼むか社内で進めるかを決める段階なら、<a href="/ai-consulting-guide">中小企業のAI導入の相談先の選び方</a>で相談先ごとの役割も比べられます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">「学習に使われない」と「保存されない」を分けて確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">承認の有無を窓口の回答で確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">API キーのあるプロジェクトごとに［Data Retention］の設定を見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">使う機能の名前を表の Zero Data Retention の列と照らしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ファイルや検索用の保存を消す時期と担当を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象から外す通知を受け取る担当を決めたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://developers.openai.com/api/docs/guides/your-data" rel="noopener" target="_blank">Data controls in the OpenAI platform（OpenAI API のドキュメント）</a>：学習に使わない旨、保存されるデータの2種類、監視ログの保持、Modified Abuse Monitoring と ZD</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-consulting-guide">中小企業向けAIコンサルの選び方（相談先を目的別に比較）</a></li>
+      <li><a href="/column/ai-training-retention-check">ChatGPT・Claudeの学習設定と保存｜会社情報を入れる前の確認</a></li>
+      <li><a href="/column/ai-outsourcing-data-handover">AI導入を外部に頼む前に｜データの扱いと終了時の引き継ぎ確認</a></li>
+      <li><a href="/column/cloud-service-shared-responsibility-own-tasks">クラウドの安全対策で、自社が行う作業の抜けをどう見つける？</a></li>
+      <li><a href="/column/offshore-transfer-ai-vendor-disclosure-items">外国にある第三者への提供編の6-2</a></li>
+      <li><a href="/column/gemini-workspace-to-personal-app-data-policy">WorkspaceのGeminiから個人向けのGeminiアプリへ資料を渡してよい？適用されるデータ方針の境目</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

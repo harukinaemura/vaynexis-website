@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NotebookLMの［ソース］で未確定メモを改善案の比較から外すには｜Vaynexis</title>
+  <meta name="description" content="業務の改善案を NotebookLM（ヘルプの本文では Gemini Notebook と表記）で比べるとき、聞き取りの途中の走り書きや裏付けのない数字のメモまで材料に混ざらないよう、［ソース］パネルのチェックで外す操作と、社内で確定と未確定を分ける決まりを、Google の公式ヘルプに沿ってまとめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="NotebookLMの［ソース］で未確定メモを改善案の比較から外すには｜Vaynexis">
+  <meta property="og:description" content="業務の改善案を NotebookLM（ヘルプの本文では Gemini Notebook と表記）で比べるとき、聞き取りの途中の走り書きや裏付けのない数字のメモまで材料に混ざらないよう、［ソース］パネルのチェックで外す操作と、社内で確定と未確定を分ける決まりを、Google の公式ヘルプに沿ってまとめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/notebooklm-uncheck-draft-memo-sources">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/notebooklm-uncheck-draft-memo-sources">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"NotebookLMの［ソース］で未確定メモを改善案の比較から外すには","description":"業務の改善案を NotebookLM（ヘルプの本文では Gemini Notebook と表記）で比べるとき、聞き取りの途中の走り書きや裏付けのない数字のメモまで材料に混ざらないよう、［ソース］パネルのチェックで外す操作と、社内で確定と未確定を分ける決まりを、Google の公式ヘルプに沿ってまとめます。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/notebooklm-uncheck-draft-memo-sources"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"AI導入・相談先・補助金","item":"https://vaynexis.jp/column/topics/ai-adoption"},{"@type":"ListItem","position":4,"name":"NotebookLMの［ソース］で未確定メモを改善案の比較か","item":"https://vaynexis.jp/column/notebooklm-uncheck-draft-memo-sources"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/ai-adoption">AI導入・相談先・補助金</a></li><li aria-current="page">NotebookLMの［ソース］で未確定メモを改善案の比較か</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">NotebookLMの［ソース］で未確定メモを改善案の比較から外すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>NotebookLM で作ったメモは、アップロードした資料と一緒に［ソース］パネルに表示され、チャットの答えや Studio の生成物の材料になります。 メモの横のチェックボックスをオフにすると、そのメモは Q&amp;A や生成物の作成に使われません。 外すのはチェックで、メモを消す操作ではありません。比べる前に誰がどのチェックを外すかを決め、比べた後は引用で材料を確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>聞き取りの途中のメモや裏付けのない数字が、改善案Aと案Bを比べる答えに混ざっていませんか。NotebookLM の［ソース］パネルのチェックで材料から外す操作と、確定・未確定の分け方です。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">メモがいつの間にか材料になっている</a></li>
+      <li><a href="#s2">チェックを外すと変わること、変わらないこと</a></li>
+      <li><a href="#s3">確定と未確定を分ける社内の決まり</a></li>
+      <li><a href="#s4">比べた答えは、引用で材料を確かめる</a></li>
+      <li><a href="#s5">確定した資料が後で変わる場合</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．メモがいつの間にか材料になっている</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、パソコンのウェブ版です。モバイルアプリは現在メモの編集に対応していないと書かれています。 ヘルプのサイトの名前は「NotebookLM ヘルプ」ですが、本文では「Gemini Notebook」と表記されています。</p>
+    <p>改善案を比べるノートブックには、業務量を集計した表や確定した手順書のほかに、ヒアリングの途中で書いたメモが入りがちです。メモは、［ソース］パネルの［メモを作成］で書いたものだけではありません。チャットで得た答えを［メモに保存］で残したもの、［ソースを追加］の［コピーしたテキスト］で貼ったものも、メモとして保存されます。</p>
+    <p>作ったメモは［ソース］パネルに自動で表示され、Q&amp;A に使われ、チャットの答えで引用され、生成物にも含まれうる、と説明されています。 つまり「まだ確かめていない数字」を書いたメモがあると、改善案Aと案Bを比べる答えの中に、その数字が根拠のように出てくることがあります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．チェックを外すと変わること、変わらないこと</h2>
+    <p>［ソース］パネルで、各メモの横のチェックボックスを使い、チャットの文脈に含めるか外すかを指定します。オフにしたメモは、Q&amp;A や生成物の作成に使われません。 メモに限らず、特定のソースの組み合わせでチャットをするときは、［ソース］パネルでソースを1つずつ選ぶよう案内されています。</p>
+    <p>ヘルプのチェックの説明は、チャットの文脈に含めるか外すかの指定で、メモの削除や共有の設定には触れていません。外したメモは消えたものと扱わず、確定した後にチェックを入れ直して使う、という運用にします。</p>
+    <p>なお、［Studio］パネルで作ったメモは、ソースに変換するまではソースとして扱われず、Q&amp;A などで使うには［変換］でメモソースにする必要があります。 未確定のメモを Studio 側に置いたまま変換しない、という分け方もできます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．確定と未確定を分ける社内の決まり</h2>
+    <p>画面の操作だけでは、どのメモが未確定かは分かりません。メモの名前の頭に「未確定」と付ける、確定と決めるのはその業務の担当の責任者、と決めておくと、比べる前に外すメモを一目で選べます。テキストを貼り付けて新しいソースを作るときは、作る時点でタイトルを付けたり直したりできるとされています。 貼った時点で名前に印を付けておけば、後から探して付け直す手間が減ります。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">ソースの名前（架空の例）</th><th scope="col">状態</th><th scope="col">比べるとき</th></tr></thead><tbody><tr><td data-label="ソースの名前（架空の例）">受注入力の件数の集計（10月）</td><td data-label="状態">確定</td><td data-label="比べるとき">チェックを入れる</td></tr><tr><td data-label="ソースの名前（架空の例）">受注入力の現行の手順書</td><td data-label="状態">確定</td><td data-label="比べるとき">チェックを入れる</td></tr><tr><td data-label="ソースの名前（架空の例）">未確定_営業担当の聞き取りメモ</td><td data-label="状態">未確定</td><td data-label="比べるとき">チェックを外す</td></tr><tr><td data-label="ソースの名前（架空の例）">未確定_入力時間の見込み</td><td data-label="状態">未確定</td><td data-label="比べるとき">チェックを外す</td></tr></tbody></table></div>
+    <p>比べる担当は、チャットで比べる前にこの表とパネルのチェックを照らし、外したメモの名前を比べた結果と一緒に残します。</p>
+    <p>もう1つ気をつけたいのが、チャットの答えから作ったメモです。答えを［メモに保存］で残すと、表やインラインの引用も含めて元の形のまま保存されます。 未確定のメモのチェックを外す前に比べた答えを保存していると、未確定の数字が新しいメモに写って残ります。こうしたメモも表に書き足し、比べる前に外す対象に入れます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．比べた答えは、引用で材料を確かめる</h2>
+    <p>チャットの答えでは、ソースから直接引いた文や画像が引用として使われ、答えの正確さを確かめる助けになるとされています。引用を選ぶと、ソースの中の引用の箇所へ移り、前後の文脈を確かめられます。 比べた答えの引用を1つずつ開き、未確定のメモが引かれていないか、確定の資料のどの箇所が根拠かを見ます。</p>
+    <p>また、チャットの答えには、ソースに含まれているデータだけが使われるとされています。 未確定のメモを外した後に答えが出てこない項目は、確定の資料の側に足りない情報がある、という合図として扱えます。その項目は、担当者に確かめて資料を足すまで、比べる表の空欄のままにしておきます。</p>
+    <p>複数のソースを選んでいるときは、質問にソースの名前を入れて、探す範囲を絞るよう勧められています。 「受注入力の件数の集計（10月）をもとに、案Aと案Bの作業時間を比べて」のように名前で指すと、どの資料に基づく答えかが読み取りやすくなります（架空の例）。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．確定した資料が後で変わる場合</h2>
+    <p>Google ドライブから取り込んだソースは自動で更新され、数分ごとに同期されるとされています。 確定の資料をドライブのファイルで入れているなら、比べた日と、その時点のファイルの版を控えておかないと、後で同じ答えを再現できません。</p>
+    <p>比べた結果のメモを Google ドキュメントへ書き出したときは、書き出した先での変更は元のメモと同期されず、共有権限も引き継がれません。 社内の会議に回すときは、書き出したドキュメントの共有先を改めて設定します。改善案の比べ方から業務改善の進め方全体を見直すときは、<a href="/business-improvement">業務改善の進め方と事務の7例</a>も手がかりになります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">未確定のメモの名前に、見て分かる印を付けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">確定と決める人を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">比べる前に、未確定のメモのチェックを外したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">比べた答えの引用を開き、未確定のメモが引かれていないかを見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">外したメモの名前と比べた日、資料の版を残したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">書き出したドキュメントの共有先を設定し直したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.google.com/gemininotebook/answer/16262519?hl=ja" rel="noopener" target="_blank">Gemini Notebook でメモを作成、追加する（NotebookLM ヘルプ）</a>：メモの作り方、メモが［ソース］パネルに表示されること、チェックボックスでの除外、Studio のメモの変換、Google</li>
+      <li><a href="https://support.google.com/gemininotebook/answer/16215270?hl=ja" rel="noopener" target="_blank">ノートブックの新しいソースを追加または検索する（NotebookLM ヘルプ）</a>：ソースを個別に選ぶこと、質問にソースの名前を入れること、Google ドライブのソースの同期</li>
+      <li><a href="https://support.google.com/gemininotebook/answer/16179559?hl=ja" rel="noopener" target="_blank">Gemini Notebook でチャットを使用する（NotebookLM ヘルプ）</a>：引用で答えの正確さを確かめること、引用の箇所への移動、答えをメモに保存したときの形、答えがソースのデータだけを使うこと</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/as-is-to-be-flow-status-labels">現状と改善案の業務フローを実施済みと混同せずに共有するには</a></li>
+      <li><a href="/column/ai-quote-check">AIの要約・引用を原文に当てる｜言い回しが強くなるずれの見つけ方</a></li>
+      <li><a href="/column/gemini-response-no-sources">Geminiの「ソース」が出ない回答を仕事でどう確かめる？</a></li>
+      <li><a href="/column/copilot-pages-edit-without-copilot-license">Copilot ページの［ページで編集］は追加の契約なしで使える？</a></li>
+      <li><a href="/column/notebooklm-quiz-check-procedure-manual">NotebookLMの［クイズ］で手順書の理解を確かめるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

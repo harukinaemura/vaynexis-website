@@ -7,403 +7,403 @@
   <updated>2026-11-18T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
   <entry>
-    <title>返品依頼書には何を書く？納品番号・対象品・返送数量と、元の納品日の欄</title>
-    <link href="https://vaynexis.jp/column/return-request-form-original-delivery-date-fields"/>
-    <id>https://vaynexis.jp/column/return-request-form-original-delivery-date-fields</id>
+    <title>宿泊者名簿は何を記録する？本人確認と旅券の写し、保存の管理</title>
+    <link href="https://vaynexis.jp/column/ryokan-guest-register-id-check-passport-copy"/>
+    <id>https://vaynexis.jp/column/ryokan-guest-register-id-check-passport-copy</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>納品された品物を送り返すときに取引先へ出す「返品依頼書」に、どんな欄を設けるかを整理します。国税庁のインボイス制度の Q&amp;A にある適格返還請求書の記載事項と、公正取引委員会が示す取適法の返品の禁止を手がかりに、元の納品日や返品の理由の欄がなぜ要るのかを確かめます。</summary>
+    <summary>旅館やホテルのフロントの事務で、宿泊者名簿に何を書き、本人確認をどう行い、外国人の宿泊者の旅券の写しをどう残すかを迷ったときの整理です。旅館業法と施行規則、厚生労働省の「旅館業における衛生等管理要領」（令和8年1月20日の改正）に沿って、記載の事項、確認の方法、保存と備え付けの場所、社内での回し方をまとめます。</summary>
   </entry>
   <entry>
-    <title>交通費申請書には何を書く？利用日・区間・片道往復と、帳簿に写す項目</title>
-    <link href="https://vaynexis.jp/column/transport-expense-claim-form-fields-fare-under-30000"/>
-    <id>https://vaynexis.jp/column/transport-expense-claim-form-fields-fare-under-30000</id>
+    <title>再下請負通知書は誰から集める？下請階層と変更情報の整理</title>
+    <link href="https://vaynexis.jp/column/resubcontract-notice-collection-and-changes"/>
+    <id>https://vaynexis.jp/column/resubcontract-notice-collection-and-changes</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>取引先回りや銀行への移動で使った電車代・バス代を精算する「交通費申請書」に、どんな欄を設けるかを整理します。国税庁のインボイス制度の Q&amp;A にある、3万円未満の公共交通機関の特例の判定単位と、帳簿のみの保存のときに帳簿へ書く事項を手がかりに、欄の意味を確かめます。</summary>
+    <summary>施工体制台帳を作る現場で、二次・三次の下請の情報が元請の事務に届かない、契約が変わったのに古い内容のまま、という困りごとに向けた整理です。建設業法と施行規則、国土交通省の作成例に沿って、再下請負通知書を誰が誰に出すのか、何を書いて何を添えるのか、変わったときの出し直しを社内でどう回すかをまとめます。</summary>
   </entry>
   <entry>
-    <title>出張申請書には何を書く？目的・行き先・日程と概算費用の欄</title>
-    <link href="https://vaynexis.jp/column/business-trip-request-form-fields"/>
-    <id>https://vaynexis.jp/column/business-trip-request-form-fields</id>
+    <title>施工体制台帳は何を集める？請負契約書の写し・再下請負通知書と施工体系図の対応</title>
+    <link href="https://vaynexis.jp/column/construction-sekou-taicho-subcontract-documents"/>
+    <id>https://vaynexis.jp/column/construction-sekou-taicho-subcontract-documents</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>出張に出る前に会社の承認をもらう「出張申請書」に、どんな欄を設けるかを整理します。国税庁の所得税基本通達9-3が旅費の範囲を見るときに挙げる、旅行の目的・目的地・行路・期間・宿泊の要否・職務内容などの観点と欄を対応させ、概算費用を旅費の規程に照らす意味、帰着後の精算の書類との分け方まで確かめます。</summary>
+    <summary>元請の工事事務で施工体制台帳をまとめるとき、下請の各社から集める請負契約書の写しや再下請負通知書、技術者の資格の写しを、施工体系図に載せた会社とどう突き合わせるかを、国土交通省の作成例のページと「施工体制台帳等のチェックリスト」に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>注文請書には何を書く？注文書と照らす欄と、印紙税で確かめること</title>
-    <link href="https://vaynexis.jp/column/order-acceptance-form-fields-stamp-duty"/>
-    <id>https://vaynexis.jp/column/order-acceptance-form-fields-stamp-duty</id>
+    <title>問い合わせの CC と社内のフォロワーを、Zendesk でどう使い分けるか</title>
+    <link href="https://vaynexis.jp/column/zendesk-cc-vs-followers-internal-staff"/>
+    <id>https://vaynexis.jp/column/zendesk-cc-vs-followers-internal-staff</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>取引先から注文書が届き、受けた側として注文請書を返すときに、どの欄を設け、注文書のどこと照らし合わせるかを整理します。あわせて、注文請書が印紙税の「請負に関する契約書」に当たるかを国税庁の説明で確かめる見方と、金額欄で消費税額等を分けて書く意味、取適法の発注内容の明示との関係もまとめます。</summary>
+    <summary>Zendesk のチケットに上司やほかの部署の人も入れておきたいとき、CC に入れるか、フォロワーにするかで、お客様から見えるものと届く通知が変わります。二つの違い、追加する画面の場所、メールから返信するときの「返信」と「全員に返信」の注意を、Zendesk ヘルプの説明に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>料金後納承認請求書の書き方は？差出開始予定年月日と1か月の差出予定通（個）数の欄</title>
-    <link href="https://vaynexis.jp/column/japanpost-deferred-payment-approval-request-fields"/>
-    <id>https://vaynexis.jp/column/japanpost-deferred-payment-approval-request-fields</id>
+    <title>問い合わせの通知を誰に送ったか、Zendesk のチケットイベントで調べるには</title>
+    <link href="https://vaynexis.jp/column/zendesk-ticket-events-notification-trace"/>
+    <id>https://vaynexis.jp/column/zendesk-ticket-events-notification-trace</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>郵便の料金を月ごとにまとめて払う料金後納を新しく申し込むときの「料金後納承認請求書」を、日本郵便の記載例の8つの欄に沿って読み解きます。差出開始予定年月日、1か月の差出予定回数・通（個）数と概算額、支払方法と承認書の受け取り方、法人印や本人等確認書類まで、提出前にそろえる情報をまとめます。</summary>
+    <summary>「その件のメール、届いていません」と言われたとき、Zendesk のチケットでどの通知がいつ、どのトリガで送られたかを確かめる手順を、Zendesk ヘルプの「チケットイベント」と「標準のチケットトリガ」の説明に沿って整理します。通知の記録で分かることと分からないことの線引きもまとめました。</summary>
   </entry>
   <entry>
-    <title>e内容証明の再度証明はどこから請求する？謄本をなくしたとき</title>
-    <link href="https://vaynexis.jp/column/japanpost-e-content-certified-copy-reissue"/>
-    <id>https://vaynexis.jp/column/japanpost-e-content-certified-copy-reissue</id>
+    <title>お客様が返品を取り下げたら、Shopify で交換品の注文もどう取り消すか</title>
+    <link href="https://vaynexis.jp/column/shopify-return-withdrawn-exchange-remove"/>
+    <id>https://vaynexis.jp/column/shopify-return-withdrawn-exchange-remove</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>e内容証明で差し出した文書の謄本が見当たらない、または取引先に渡すためにもう1通ほしいときの「再度証明」の請求先を、日本郵便の操作マニュアル（ご利用の手引き）と案内ページに沿って整理します。Web の会員専用メニューから請求する順番、書留引受番号の役目、会員情報が消えた後の窓口での請求、5年という期限まで確かめます。</summary>
+    <summary>交換を伴う返品を受け付けた後で、お客様から「やはり返品をやめたい」と連絡が来たとき、Shopify では返品をキャンセルするだけでは交換品が注文に残ります。返品をキャンセルできる条件、注文の編集で未発送の交換品を削除する手順、合計金額と在庫の確かめ方を、Shopify ヘルプセンターの説明に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>料金受取人払承認請求書の前に、返信用封筒の印刷見本は必要？</title>
-    <link href="https://vaynexis.jp/column/japanpost-business-reply-approval-print-sample"/>
-    <id>https://vaynexis.jp/column/japanpost-business-reply-approval-print-sample</id>
+    <title>返品された商品を在庫へ戻すとき、Shopify で補充先のロケーションをどう指定するか</title>
+    <link href="https://vaynexis.jp/column/shopify-return-restock-location-select"/>
+    <id>https://vaynexis.jp/column/shopify-return-restock-location-select</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>アンケートや申込みの返信用封筒を料金受取人払にしたいとき、料金受取人払承認請求書と一緒に出す印刷見本の作り方を、日本郵便の案内ページと様式（Word 版）の備考に沿って整理します。見本に入れない承認番号、表示の枠や色、請求書の10の欄と概算額の考え方まで、印刷会社へ頼む前の確認点をまとめます。</summary>
+    <summary>Shopify の管理画面で返品を処理するとき、戻ってきた商品をどのロケーションの在庫に戻すかは［補充先］で選びます。受け取りと検品が済み、戻す先が決まった後に、画面のどこで何を選ぶか、補充した後に取り消せなくなる操作は何かを、Shopify ヘルプセンターの説明に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>レターパックの「ご依頼主様保管用シール」ははがして出す？お問い合わせ番号の残し方</title>
-    <link href="https://vaynexis.jp/column/japanpost-letterpack-sender-seal-tracking-number"/>
-    <id>https://vaynexis.jp/column/japanpost-letterpack-sender-seal-tracking-number</id>
+    <title>弥生会計で事業所データのバックアップを取るには？</title>
+    <link href="https://vaynexis.jp/column/yayoi-accounting-company-data-backup"/>
+    <id>https://vaynexis.jp/column/yayoi-accounting-company-data-backup</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>レターパックをポストへ入れる直前、「ご依頼主様保管用シール」をはがしてよいか迷ったときの答えと、はがしたシールのお問い合わせ番号を、宛先と組にして社内に残す方法を整理します。追跡できる期間や番号の入力の形、まとめて出す日の CSV の使い方まで、日本郵便の公式ページに沿ってまとめます。</summary>
+    <summary>パソコンにインストールして使う弥生会計（デスクトップ版）で、事業所データのバックアップファイルを作る手順を、弥生の公式サポートの説明に沿って整理します。対象になる年度、保存場所の選び方、同じ名前のファイルを上書きしないための注意、社内で誰がいつ取るかの決め方までまとめました。</summary>
   </entry>
   <entry>
-    <title>Microsoft Formsの分岐の追加で不要な質問を飛ばすには</title>
-    <link href="https://vaynexis.jp/column/microsoft-forms-add-branching-skip-questions"/>
-    <id>https://vaynexis.jp/column/microsoft-forms-add-branching-skip-questions</id>
+    <title>共有ドライブへフォルダを移す前に変わる閲覧権限を確かめるには</title>
+    <link href="https://vaynexis.jp/column/shared-drive-move-folder-access-changes"/>
+    <id>https://vaynexis.jp/column/shared-drive-move-folder-access-changes</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>社内アンケートや申し込みのフォームで、答えによって関係のない質問を飛ばしたいときに使う、Microsoft Forms の［分岐の追加］の手順です。Google フォームのセクションの分岐とは別の道具の話として、回答ごとの分岐先の選び方、前の質問へは戻せない制約、セクションとの組み合わせ、プレビューでの確かめ方を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>担当者のマイドライブにある取引先別のフォルダを、部署の共有ドライブへ移そうとしたら、それまで見られていた人が見られなくなった。そうならないよう、Google ドライブの公式ヘルプに沿って、移すと変わるアクセス権、移せる人と移せないもの、移せなかったアイテムの扱い、社内での段取りをまとめます。</summary>
   </entry>
   <entry>
-    <title>クラシックOutlookの作業時間で勤務日の開始時刻を直すには</title>
-    <link href="https://vaynexis.jp/column/outlook-classic-work-time-start-hour"/>
-    <id>https://vaynexis.jp/column/outlook-classic-work-time-start-hour</id>
+    <title>社用Androidで連絡先やカメラを使えるアプリを点検するには</title>
+    <link href="https://vaynexis.jp/column/android-app-permissions-contacts-camera-check"/>
+    <id>https://vaynexis.jp/column/android-app-permissions-contacts-camera-check</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>始業が10時に変わったのに、朝9時からの会議の依頼が届き続ける。クラシック Outlook の［オプション］の［予定表］にある［作業時間］で、勤務日の開始時刻と終了時刻、勤務する曜日を直す手順です。曜日ごとに時刻が違う人の扱いや、新しい Outlook の「作業時間と場所」との関係も、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>営業や現場で使う社用の Android スマートフォンに、いつの間にか連絡先やカメラを使えるアプリが増えていないかを点検する手順です。Google の公式ヘルプに沿って、権限の種類ごとにアプリを見る画面、選べる設定の意味、使っていないアプリの扱い、会社が端末を管理している場合の確かめ先をまとめます。</summary>
   </entry>
   <entry>
-    <title>新しいOutlookの休日で日本の祝日を予定表に追加するには</title>
-    <link href="https://vaynexis.jp/column/outlook-new-add-japan-holidays-calendar"/>
-    <id>https://vaynexis.jp/column/outlook-new-add-japan-holidays-calendar</id>
+    <title>ファイル履歴から、今の文書を上書きせずに前の版を取り出すには</title>
+    <link href="https://vaynexis.jp/column/windows-file-history-restore-to-other-location"/>
+    <id>https://vaynexis.jp/column/windows-file-history-restore-to-other-location</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>新しい Outlook for Windows の予定表に、日本の祝日を［休日］から追加する手順です。Microsoft が既知の問題として公表している「2026 年後半から 2027 年の祝日が表示されない」件にも触れ、追加した後に内閣府の祝日の一覧と照らし合わせる見方と、要らなくなった休日カレンダーの外し方を、公式の情報に沿って整理します。</summary>
+    <summary>「昨日の見積書に上書きしてしまった」と社員から頼まれたとき、Windows のファイル履歴で前の版を戻せることがあります。ただし、そのまま［復元］を選ぶと今の版が置き換わり、取り消せません。前の版を別の場所に取り出して中身を比べ、どちらを残すかを決めるまでの手順を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>クラシックOutlookの「添付ファイルとして転送」でメールを渡すには</title>
-    <link href="https://vaynexis.jp/column/outlook-classic-forward-email-as-attachment"/>
-    <id>https://vaynexis.jp/column/outlook-classic-forward-email-as-attachment</id>
+    <title>月替わりに資金繰り表の予定を実際の入出金に置き換えるとき、何と突き合わせるか</title>
+    <link href="https://vaynexis.jp/column/cash-flow-table-month-change-reconcile"/>
+    <id>https://vaynexis.jp/column/cash-flow-table-month-change-reconcile</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>取引先とのやり取りを、本文に引用した転送ではなく、受け取ったメールそのままの形で上司や後任に渡したいときに使う、クラシック Outlook の［添付ファイルとして転送］の手順です。複数のメールを1通にまとめる方法、書きかけのメールに後から足す方法、送る前に見ることを、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>月が替わったら、資金繰り表の前の月の欄を、予定の数字から実際に動いたお金の数字に置き換えます。そのときに前月繰越を月次試算表の現金預金と合わせること、売上と入金を同じ数字として扱わないことなどを、日本政策金融公庫の記入例と J-Net21 の解説に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>新しいOutlookの受信拒否リストから取引先を外すには</title>
-    <link href="https://vaynexis.jp/column/outlook-new-unblock-sender-junk-safe-list"/>
-    <id>https://vaynexis.jp/column/outlook-new-unblock-sender-junk-safe-list</id>
+    <title>機密情報を扱う担当者が増えたら、守秘義務の誓約書が出ているかをどう確かめるか</title>
+    <link href="https://vaynexis.jp/column/confidentiality-pledge-new-handlers-check"/>
+    <id>https://vaynexis.jp/column/confidentiality-pledge-new-handlers-check</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>取引先から「メールを送った」と言われたのに受信トレイに無い。前に誤って受信拒否にしたアドレスやドメインが原因かもしれないときに、新しい Outlook for Windows の［迷惑メール］の設定で受信拒否リストから外す手順と、外した後に差出人セーフ リストへ加える方法を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>異動や兼務で機密性の高い情報を扱う人が増えたとき、守秘義務の誓約書（秘密保持誓約書）を出してもらうべき人と、実際に出してもらった書面を照らし合わせる手順を、IPA の「中小企業の情報セキュリティ対策ガイドライン第4.0版」と付録の規程サンプルに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>新しいOutlookの通知で新着メールのポップアップを止めるには</title>
-    <link href="https://vaynexis.jp/column/outlook-new-mail-notification-popup-off"/>
-    <id>https://vaynexis.jp/column/outlook-new-mail-notification-popup-off</id>
+    <title>月末の現金出納帳で、前月繰越と入金・出金の合計をどう検算するか</title>
+    <link href="https://vaynexis.jp/column/cash-book-month-end-carryover-check"/>
+    <id>https://vaynexis.jp/column/cash-book-month-end-carryover-check</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>会議で画面を映している最中や、窓口で来客の対応をしている間に、新着メールの差出人と件名が画面の隅に出てしまう。新しい Outlook for Windows の［通知］で、メールの通知だけを切る手順と、予定表の通知との分け方、止めた後に戻すときの確認先を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>月末に現金出納帳を締めるとき、前月繰越・入金の計・出金の計・当月残高の4つの数字が合っているかを確かめる検算のやり方を、中小企業基盤整備機構の J-Net21「帳簿記帳の基本」に沿って整理します。数字が合わなかったときにどこから探すか、社内で誰が確かめるかもまとめました。</summary>
   </entry>
   <entry>
-    <title>Outlookで誤って振り分けるルールの条件を直すには</title>
-    <link href="https://vaynexis.jp/column/outlook-new-rules-fix-wrong-folder-conditions"/>
-    <id>https://vaynexis.jp/column/outlook-new-rules-fix-wrong-folder-conditions</id>
+    <title>顧客名簿に新しい項目が増えたら、個人データの取扱状況の一覧とのずれをどう確かめるか</title>
+    <link href="https://vaynexis.jp/column/customer-list-new-fields-data-inventory-check"/>
+    <id>https://vaynexis.jp/column/customer-list-new-fields-data-inventory-check</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>取引先からの請求書が別のフォルダーに入ってしまうなど、Outlook のルールが思わぬメールまで振り分けるときに、作成済みのルールを開いて条件を直す手順です。新しい Outlook for Windows を対象に、ルールの順序、処理の中止、従来の Outlook から移ったルールの扱いまで、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>申込書や表計算ソフトの顧客名簿に、いつの間にか新しい列が増えていることがあります。個人情報保護委員会のガイドライン（通則編）が、取扱状況を確認する手段として明確にしておく例に挙げる「個人データの項目」などの一覧と、名簿の現物の列を照らし、ずれを責任者へ確かめる手順を整理します。</summary>
   </entry>
   <entry>
-    <title>Gmailのプレーン テキスト モードで太字が使えないときは</title>
-    <link href="https://vaynexis.jp/column/gmail-plain-text-mode-bold-unavailable"/>
-    <id>https://vaynexis.jp/column/gmail-plain-text-mode-bold-unavailable</id>
+    <title>発注書の控えだけで足りる？取適法の7条記録に、取引のあとの事実を書き足す</title>
+    <link href="https://vaynexis.jp/column/toriteki-article7-records-after-order"/>
+    <id>https://vaynexis.jp/column/toriteki-article7-records-after-order</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>Gmail でメールを書いていて、太字にしたい語が普通の文字のまま変わらない、署名の上に［書式なし］と出る、というときは、作成画面の［プレーン テキスト モード］がオンになっていないかを確かめます。パソコンのブラウザ版での切り替えの場所と、書式設定オプション・ショートカット・既定の書式の関係を、Google の公式ヘルプに沿って整理します。</summary>
+    <summary>取適法（中小受託取引適正化法）で委託事業者が作って保存する「7条記録」について、発注時に相手へ渡した書面（4条明示）の控えだけでは足りない理由と、受領・検査・支払など発注のあとに書き足す事項を、公正取引委員会・中小企業庁のテキストに沿って整理します。発注・検収・経理の担当の間で、誰がいつ何を書き足すかの回し方もまとめました。</summary>
   </entry>
   <entry>
-    <title>Gmailのカテゴリでプロモーションのタブを非表示にするには</title>
-    <link href="https://vaynexis.jp/column/gmail-category-tabs-hide-promotions"/>
-    <id>https://vaynexis.jp/column/gmail-category-tabs-hide-promotions</id>
+    <title>Wordで空白や改行の違いを編集記号（書式設定マーク）で確かめるには</title>
+    <link href="https://vaynexis.jp/column/word-formatting-marks-spaces-tabs-breaks"/>
+    <id>https://vaynexis.jp/column/word-formatting-marks-spaces-tabs-breaks</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>Gmail の受信トレイの上に並ぶタブのうち、［プロモーション］を使っていないので消したい、というときの手順です。パソコンのブラウザ版で、受信トレイの種類［デフォルト］の［カスタマイズ］から、表示するカテゴリを選び直す方法と、外した後に案内メールを見失わないための確かめ方を、Google の公式ヘルプに沿って整理します。</summary>
+    <summary>引き継いだ手順書や社内の案内文で、字下げがそろわない、行の間隔が場所によって違う、といった崩れに出会うことがあります。見た目では同じ空白でも、スペース・タブ・段落の区切り・段落の中の改行は別のものです。Word の書式設定マーク（編集記号）を出して中身を確かめる手順を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Gmailのスターで黄色以外の色やマークを使うには</title>
-    <link href="https://vaynexis.jp/column/gmail-star-colors-icons-in-use"/>
-    <id>https://vaynexis.jp/column/gmail-star-colors-icons-in-use</id>
+    <title>WordでExcelの宛先一覧から同じ案内状をまとめて作るには</title>
+    <link href="https://vaynexis.jp/column/word-mail-merge-excel-list-letters"/>
+    <id>https://vaynexis.jp/column/word-mail-merge-excel-list-letters</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>Gmail のスターが黄色の1種類だけでは、返信待ちも今日中の対応も同じ印になってしまいます。パソコンのブラウザ版で、設定の［スター］から別の色のスターやマークを［使用中］に加える手順と、付け方・探し方のこつを、Google の公式ヘルプに沿って整理します。色ごとの意味を社内でそろえる例も添えます。</summary>
+    <summary>休業日のお知らせや価格改定の案内など、同じ文面の案内状を取引先ごとに作るとき、Word の差し込み印刷を使うと、Excel の宛先一覧から1社に1通ずつまとめて作れます。Microsoft の公式ヘルプに沿って、Excel の一覧の整え方、Word とのつなぎ方、宛名の差し込み、印刷前のプレビューと保存までを整理します。</summary>
   </entry>
   <entry>
-    <title>Gmailの重要マークで黄色い印を表示しないには</title>
-    <link href="https://vaynexis.jp/column/gmail-hide-importance-markers"/>
-    <id>https://vaynexis.jp/column/gmail-hide-importance-markers</id>
+    <title>Excelの名簿の漢字に保存されたふりがなを別列へ出すには</title>
+    <link href="https://vaynexis.jp/column/excel-phonetic-name-reading-column"/>
+    <id>https://vaynexis.jp/column/excel-phonetic-name-reading-column</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>Gmail のメール一覧で、件名の近くに付く黄色い重要マークが気になる、意味が分からず迷う、というときに、パソコンのブラウザ版で［重要マーク］を［マークを表示しない］にする手順です。印を消す設定と、重要かどうかの判断のしかたを変える設定が別であることも、Google の公式ヘルプに沿って整理します。</summary>
+    <summary>社員や取引先の名簿で、漢字の氏名の横に読みの列を作りたいときに使えるのが PHONETIC 関数です。Microsoft の公式ヘルプに沿って、関数の書き方、読みが出ないセルの見分け方、入力したときの読みがそのまま残る点と、社内での確かめ方を整理します。</summary>
   </entry>
   <entry>
-    <title>Gmailのフィルタで決まった差出人のメールにラベルを付けるには</title>
-    <link href="https://vaynexis.jp/column/gmail-filter-auto-label-by-sender"/>
-    <id>https://vaynexis.jp/column/gmail-filter-auto-label-by-sender</id>
+    <title>Excelのグラフに実際の数値をラベルで表示するには</title>
+    <link href="https://vaynexis.jp/column/excel-chart-data-labels-show-values"/>
+    <id>https://vaynexis.jp/column/excel-chart-data-labels-show-values</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>顧問の事務所や仕入先など、決まった相手から届くメールに毎回手でラベルを付けているなら、Gmail のフィルタに任せられます。パソコンのブラウザ版で、差出人の条件を検索で試してから［フィルタを作成］する手順と、ラベル付けだけにとどめる注意を、Google の公式ヘルプに沿って整理します。</summary>
+    <summary>月次の報告のグラフを見た人から「この月はいくらだったのか」と聞かれることがあります。棒や点の横に数値を出すデータ ラベルの付け方、全体に付けるか1つの点だけに付けるかの選び方、表示する中身と位置、手で書き換えたときの注意を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Gmailで左側に出ないラベルを［表示］に戻すには</title>
-    <link href="https://vaynexis.jp/column/gmail-show-hidden-labels-left-menu"/>
-    <id>https://vaynexis.jp/column/gmail-show-hidden-labels-left-menu</id>
+    <title>Excelのグラフで金額と件数を左右別の目盛で示すには</title>
+    <link href="https://vaynexis.jp/column/excel-chart-secondary-axis-amount-count"/>
+    <id>https://vaynexis.jp/column/excel-chart-secondary-axis-amount-count</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>取引先や案件ごとに作った Gmail のラベルが、画面の左側の一覧に見当たらないときの確かめ方です。左側のメニューが閉じているだけなのか、ラベルが［表示しない］になっているのかを分け、パソコンのブラウザ版で［ラベル］の設定から表示に戻す手順を、Google の公式ヘルプに沿って整理します。</summary>
+    <summary>月ごとの売上金額と受注件数を1つのグラフにすると、件数の棒が底に張り付いて読めないことがあります。Microsoft の公式ヘルプに沿って、件数を右側の第 2 縦軸に移す手順と、左右どちらの目盛が何の単位かを見る人に伝える設定、会議の資料に貼る前の見直し方を整理します。</summary>
   </entry>
   <entry>
-    <title>SharePointのチェックインで、編集を終えた資料をほかの人が使える状態に戻すには</title>
-    <link href="https://vaynexis.jp/column/sharepoint-check-in-edited-file-for-team"/>
-    <id>https://vaynexis.jp/column/sharepoint-check-in-edited-file-for-team</id>
+    <title>Excelの処理時間の記録を指定した区間別の件数にまとめるには</title>
+    <link href="https://vaynexis.jp/column/excel-frequency-handling-time-ranges"/>
+    <id>https://vaynexis.jp/column/excel-frequency-handling-time-ranges</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>SharePoint のドキュメント ライブラリでチェックアウトして直した資料を、チェックインして同僚が見られる・編集できる状態に戻す手順です。保存やアップロードとの順番、チェックインのコメント、変更を残さないときの「チェックアウトの破棄」、戻し忘れた資料の見つけ方を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>問い合わせや申請の処理にかかった時間を記録していると、「10分以内が何件、30分以内が何件」のように区間ごとの件数で見たくなります。FREQUENCY 関数で区間別の件数を出す手順を、区間の決め方、結果のセルの数、版による入れ方の違い、数えられない行の扱いとあわせて、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>OneDriveの「空き領域を増やす」を選ぶと、クラウドの原本も消える？</title>
-    <link href="https://vaynexis.jp/column/onedrive-free-up-space-cloud-original-kept"/>
-    <id>https://vaynexis.jp/column/onedrive-free-up-space-cloud-original-kept</id>
+    <title>Excelの明細を残したまま重複しない区分名一覧を出すには</title>
+    <link href="https://vaynexis.jp/column/excel-unique-category-list-keep-details"/>
+    <id>https://vaynexis.jp/column/excel-unique-category-list-keep-details</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>パソコンの容量が足りないときに OneDrive の［空き領域を増やす］を選んでも、クラウドの OneDrive にあるファイルは消えません。パソコンの中の写しだけを外す操作と、すべての端末から消える削除との違い、操作の後に気をつけること、クラウドの容量は減らない点を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。</summary>
+    <summary>経費や受注の明細に「交通費」「消耗品費」のような区分が何度も出てくるとき、明細には手を付けずに、区分名を1回ずつ並べた一覧を別の場所に出したい、という場面があります。Microsoft の公式ヘルプに沿って、UNIQUE 関数の書き方、引数の選び方、置き場所の決まりと使える版を整理します。</summary>
   </entry>
   <entry>
-    <title>OneDriveの「このデバイス上で常に保持する」で、電波の無い場所でも資料を開けるようにするには</title>
-    <link href="https://vaynexis.jp/column/onedrive-always-keep-on-device-before-site-visit"/>
-    <id>https://vaynexis.jp/column/onedrive-always-keep-on-device-before-site-visit</id>
+    <title>Excelで注文番号と枝番を区切り記号で別列に分けるには</title>
+    <link href="https://vaynexis.jp/column/excel-power-query-split-order-branch-number"/>
+    <id>https://vaynexis.jp/column/excel-power-query-split-order-branch-number</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>現場や移動中など、インターネットにつながらない場所で OneDrive の資料を開く必要があるとき、出発前に［このデバイス上で常に保持する］を設定しておく手順です。雲のマークのファイルが開けない理由、フォルダーごと選ぶときの注意、ストレージ センサーとの関係を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。</summary>
+    <summary>受注の一覧で「A1023-01」のように注文番号と枝番が1つのセルに入っていると、注文ごとの件数や合計を出しにくくなります。Power Query の［区切り記号で列を分割］で2つの列に分ける手順と、区切り記号が2つ以上ある番号の扱いを、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>OneDriveの同期の一時停止は、いつ自動で再開する？</title>
-    <link href="https://vaynexis.jp/column/onedrive-pause-sync-auto-resume-timing"/>
-    <id>https://vaynexis.jp/column/onedrive-pause-sync-auto-resume-timing</id>
+    <title>Excelで月が横に並ぶ表を月と金額の縦長データにするには</title>
+    <link href="https://vaynexis.jp/column/excel-power-query-unpivot-month-columns"/>
+    <id>https://vaynexis.jp/column/excel-power-query-unpivot-month-columns</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>OneDrive の同期の一時停止は、選んだ時間がたつと自動で再開します。2時間・8時間・24時間のどれを選ぶか、パソコンの状態によって自動で止まる場合、［OneDrive の終了］やリンクの解除との違い、時間の前に手で再開する方法を、Microsoft の公式ヘルプ（Windows のパソコン）に沿って整理します。</summary>
+    <summary>営業所や部門ごとの売上を、4月・5月・6月と月を横に並べて管理している表は、そのままではグラフや集計に使いにくいことがあります。Power Query の［ピボット解除］で「月」と「金額」の2列に組み替える手順と、来月の列が増えたときに困らない選び方を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>OneDriveの［フォルダーの選択］で、このPCにだけ同期しないフォルダーを決めるには</title>
-    <link href="https://vaynexis.jp/column/onedrive-choose-folders-unsync-this-pc"/>
-    <id>https://vaynexis.jp/column/onedrive-choose-folders-unsync-this-pc</id>
+    <title>Excelで明細を追加してもピボットテーブルの数字が変わらないときは</title>
+    <link href="https://vaynexis.jp/column/excel-pivottable-refresh-added-rows"/>
+    <id>https://vaynexis.jp/column/excel-pivottable-refresh-added-rows</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>共用のパソコンや容量の小さいノートパソコンで、OneDrive の一部のフォルダーだけを同期から外したいときの［フォルダーの選択］の手順です。外したフォルダーがクラウドに残る理由、エクスプローラーで削除したときとの違い、外せないフォルダー、外した後に出るエラーを、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>売上や経費の明細に行を足したのに、ピボットテーブルの合計が前のままになることがあります。Microsoft の公式ヘルプに沿って、［更新］の操作、追加した行が元の範囲から外れていないかの確かめ方、開いたときの更新と自動更新の扱いを、月次の集計を回す担当者の目線で整理します。</summary>
   </entry>
   <entry>
-    <title>OneDriveのバージョン履歴で、上書きする前の内容に戻すには</title>
-    <link href="https://vaynexis.jp/column/onedrive-version-history-restore-before-overwrite"/>
-    <id>https://vaynexis.jp/column/onedrive-version-history-restore-before-overwrite</id>
+    <title>人材開発支援助成金の支給申請で、受講した記録と受講料を払った証拠をどう添える？</title>
+    <link href="https://vaynexis.jp/column/training-subsidy-attendance-fee-proof"/>
+    <id>https://vaynexis.jp/column/training-subsidy-attendance-fee-proof</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>OneDrive に置いた資料を古い内容で上書きしてしまったとき、OneDrive の Web サイトやエクスプローラーの［バージョン履歴］から、上書き前の版へ1ファイルずつ戻す手順です。戻すと何が起きるか、版が見当たらないときに考えること、職場のアカウントでの注意を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>社員の外部研修（OFF-JT）が終わったあと、人材開発支援助成金（人材育成支援コース）の支給申請に添える「受講した記録」と「受講料を払った証拠」を、厚生労働省のパンフレットと様式に沿って整理します。出勤簿、OFF-JT実施状況報告書、請求書と領収書を、社内の誰から集めて何と照らすかをまとめました。</summary>
   </entry>
   <entry>
-    <title>OneDriveのごみ箱から、誤って消した資料を元の場所へ戻すには</title>
-    <link href="https://vaynexis.jp/column/onedrive-recycle-bin-restore-deleted-files"/>
-    <id>https://vaynexis.jp/column/onedrive-recycle-bin-restore-deleted-files</id>
+    <title>キャリアアップ助成金（正社員化コース）の支給申請へ、転換前後の雇用・賃金の資料をどうそろえるか</title>
+    <link href="https://vaynexis.jp/column/career-up-subsidy-conversion-claim-documents"/>
+    <id>https://vaynexis.jp/column/career-up-subsidy-conversion-claim-documents</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>OneDrive の資料を誤って消したときに、Web サイトのごみ箱から元に戻す手順です。個人用と職場・学校のアカウントで戻せる日数が違うこと、パソコンで消した場合に見るもう一つのごみ箱、ごみ箱に見当たらないときに考える理由を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>有期雇用の従業員を正社員に転換し、キャリアアップ助成金（正社員化コース）の第1期の支給申請を出すと決まった後の準備です。厚生労働省の支給申請チェックリストと申請様式に沿って、転換前後の就業規則・雇用契約書・賃金台帳の対応、正社員化コース内訳と対象労働者詳細の欄、本人への確認の進め方を整理します。受給できるかどうかや賃上げの要件の判断は扱いません。</summary>
   </entry>
   <entry>
-    <title>OneDriveでデスクトップのバックアップを停止したら、ファイルはどこに残る？</title>
-    <link href="https://vaynexis.jp/column/onedrive-stop-desktop-backup-where-files-remain"/>
-    <id>https://vaynexis.jp/column/onedrive-stop-desktop-backup-where-files-remain</id>
+    <title>支店の雇用保険の手続を本社でまとめるとき、事業所非該当承認申請に何を添えるか</title>
+    <link href="https://vaynexis.jp/column/employment-insurance-branch-non-office-approval"/>
+    <id>https://vaynexis.jp/column/employment-insurance-branch-non-office-approval</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>Windows のパソコンで OneDrive のデスクトップのバックアップを止めると、ファイルを OneDrive にだけ残すか、パソコンにだけ残すかを選ぶことになります。どちらを選ぶと何がどこに残るのか、止める前に確かめること、見当たらないときの探し方を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>小さな支店や営業所の雇用保険の手続を本社でまとめて行うため、「雇用保険事業所非該当承認申請書」を出すと決まった後の準備です。一緒に出す「事業所非該当承認申請調査書」の欄に合わせて、本社の事務の体制や賃金の計算・支払の資料をどうそろえるかを、厚生労働省の手引きと宮城労働局・東京のハローワークの案内に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Wordのテキスト ボックスの「リンクの作成」で長い案内文を次の枠へ続けるには</title>
-    <link href="https://vaynexis.jp/column/word-text-box-create-link-flow"/>
-    <id>https://vaynexis.jp/column/word-text-box-create-link-flow</id>
+    <title>支店の労働保険を継続事業の一括にすると決まったら、労働保険番号と申請書をどうそろえるか</title>
+    <link href="https://vaynexis.jp/column/labor-insurance-branch-bulk-application-numbers"/>
+    <id>https://vaynexis.jp/column/labor-insurance-branch-bulk-application-numbers</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>社内向けの案内やお知らせを、ページの決まった場所に置いた文字枠へ入れたら、文章が収まりきらずに切れてしまった。そんなとき、Word のテキスト ボックスどうしを［リンクの作成］でつなぎ、あふれた文章を次の枠へ自動で続ける手順と、つなぐ前の準備、枠の線の消し方、動かす・消すときの注意を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>本社でまとめて労働保険料を申告・納付するため、支店や営業所を「継続事業の一括」にすると社内で決まった後の準備です。番号の控えの作り方、保険関係成立届と継続事業一括認可・追加・取消申請書（様式第5号）の順、すでに番号があった支店の精算、一括した後も支店の窓口に残る手続を、厚生労働省と労働局の案内に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Wordの「ブックマーク」で何度も見返す文中の場所へすぐ移動するには</title>
-    <link href="https://vaynexis.jp/column/word-bookmark-jump-to-clause"/>
-    <id>https://vaynexis.jp/column/word-bookmark-jump-to-clause</id>
+    <title>古物台帳は商品をどう特定する？特徴と受入・払出区分の記録</title>
+    <link href="https://vaynexis.jp/column/secondhand-dealer-ledger-item-features"/>
+    <id>https://vaynexis.jp/column/secondhand-dealer-ledger-item-features</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>長い契約書のひな形や社内規程で、毎回確かめる段落を探してスクロールし直していませんか。Word のブックマークで文中の場所に名前を付け、［ジャンプ］から移動する手順、名前の決まり、見えないブックマークの表示、書き換えたときの消え方を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>中古品を買い取って売る会社で、古物台帳（古物営業法の帳簿等）に一品ごとの特徴と、受入れ・払出しの区別をどう書くかを、警視庁が載せている帳簿の様式の備考と、古物営業法・同施行規則の条文に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Wordの「スタイルの変更」で同じ見出しの字体をまとめて直すには</title>
-    <link href="https://vaynexis.jp/column/word-modify-heading-style-font"/>
-    <id>https://vaynexis.jp/column/word-modify-heading-style-font</id>
+    <title>退職者の資格確認書が戻らないとき、健康保険 資格確認書回収不能届をどう添えるか</title>
+    <link href="https://vaynexis.jp/column/retiree-health-certificate-uncollectable-notice"/>
+    <id>https://vaynexis.jp/column/retiree-health-certificate-uncollectable-notice</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>手順書や社内規程の見出しが、ある所は明朝、ある所はゴシックと混ざってしまったとき、Word の見出しスタイルを変えて同じ種類の見出しを一度に直す手順です。見本の見出しに合わせる方法と［スタイルの変更］で数値を決める方法、今の文書だけに留めるか以降の文書にも広げるかの選び方を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>退職した従業員や家族の資格確認書が会社に戻らないまま、被保険者資格喪失届を出さなければならないときの手順です。協会けんぽに加入している会社が、「健康保険 資格確認書回収不能届」に何を書き、どの届に添えて、電子申請ではどう出すかを、日本年金機構と協会けんぽの案内に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Wordの表が余白からはみ出すときページ幅に収めるには</title>
-    <link href="https://vaynexis.jp/column/word-table-fit-page-width"/>
-    <id>https://vaynexis.jp/column/word-table-fit-page-width</id>
+    <title>労災の休業（補償）等給付を請求するとき、会社は休業の期間と賃金の資料をどう準備するか</title>
+    <link href="https://vaynexis.jp/column/workers-comp-leave-claim-wage-documents"/>
+    <id>https://vaynexis.jp/column/workers-comp-leave-claim-wage-documents</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>Excel から貼った表や、列を足した表が Word の右の余白からはみ出して、印刷すると端が切れそうなときに、ページを横向きにせず、縦のページの幅の中に表を収める直し方を、Microsoft の公式ヘルプに沿って整理します。自動調整、列の幅、表のプロパティの3つの直し方を分けて書きます。</summary>
+    <summary>仕事中や通勤中のけがで休んでいる従業員から、休業（補償）等給付の請求書に会社の証明を頼まれたときの準備です。請求書の期間の欄、平均賃金算定内訳（別紙１）に使う賃金の資料、事業主の証明欄、本人と医師に頼む欄を、厚生労働省のパンフレットの記入例に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Wordの文書中の表記を一件ずつ検索・置換するには？</title>
-    <link href="https://vaynexis.jp/column/word-find-replace-review-each-match"/>
-    <id>https://vaynexis.jp/column/word-find-replace-review-each-match</id>
+    <title>育児休業申出書を受け取った会社は、何を確かめ、どの通知書を返すか</title>
+    <link href="https://vaynexis.jp/column/childcare-leave-request-form-handling-notice"/>
+    <id>https://vaynexis.jp/column/childcare-leave-request-form-handling-notice</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>手順書や社内規程で「申込書」と「申込み書」、旧社名と新社名のように表記がまじっているとき、Word の置換で一つずつ確かめながら直す手順を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。［すべて置換］を急いで押して、直してはいけない所まで変わるのを防ぎます。</summary>
+    <summary>従業員から育児休業申出書を受け取った総務の担当者が、受け取った日の残し方、申出書の欄の確かめ方、証明の書類を求める場面、返す休業取扱通知書のどの欄が義務の部分かを、育児・介護休業法施行規則と厚生労働省の社内様式例に沿って整理します。休業できるかどうかの判断や規程づくりは扱いません。</summary>
   </entry>
   <entry>
-    <title>Wordの申請書で記入欄だけ入力できるようにするには？</title>
-    <link href="https://vaynexis.jp/column/word-form-fillable-fields-restrict-editing"/>
-    <id>https://vaynexis.jp/column/word-form-fillable-fields-restrict-editing</id>
+    <title>傷病手当金の申請を頼まれた会社は、事業主記入用のために何を確かめるか</title>
+    <link href="https://vaynexis.jp/column/sick-pay-claim-employer-section-check"/>
+    <id>https://vaynexis.jp/column/sick-pay-claim-employer-section-check</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>社内の申請書や届出の Word ファイルを配ると、記入する人が見出しや注意書きまで書き換えてしまい、様式が崩れて戻ってくることがあります。記入欄だけに入力でき、ほかの部分は変えられないようにする方法を、Microsoft の公式ヘルプ（Windows 版）に沿って2通り整理します。</summary>
+    <summary>従業員から健康保険傷病手当金支給申請書の証明を頼まれたとき、会社が書く「事業主記入用」のページに向けて、出勤した日・休んだ日に払った賃金・証明の日付をどう確かめるかを、協会けんぽの申請書と記入例に沿って整理します。添付しない書類や、時効の数え方も確かめます。</summary>
   </entry>
   <entry>
-    <title>Wordの音声読み上げで読む速さを変えるには</title>
-    <link href="https://vaynexis.jp/column/word-read-aloud-speed-change"/>
-    <id>https://vaynexis.jp/column/word-read-aloud-speed-change</id>
+    <title>年次有給休暇管理簿には何を記録し、何年保存するか</title>
+    <link href="https://vaynexis.jp/column/annual-leave-register-items-retention"/>
+    <id>https://vaynexis.jp/column/annual-leave-register-items-retention</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>Word の［音声読み上げ］で、作った文書を耳で聞いて読み合わせをするときに、読む速さが速すぎて誤字を聞き逃す、遅すぎて時間がかかる、という場合の速さの変え方を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。キーボードでの操作、Web 版などでの設定の場所、使えないときの確かめ方も添えます。</summary>
+    <summary>従業員ごとの年次有給休暇管理簿に書く「時季・日数・基準日」と、保存の年数・数え始めを、労働基準法施行規則と厚生労働省の解説に沿って整理します。休暇の申請を承認した後、誰がいつ管理簿に書き、取得日が変わったらどう直すかまで、総務の担当者の目線で確かめます。</summary>
   </entry>
   <entry>
-    <title>Wordのルビで社名や人名にふりがなを付けるには</title>
-    <link href="https://vaynexis.jp/column/word-ruby-furigana-guest-company-names"/>
-    <id>https://vaynexis.jp/column/word-ruby-furigana-guest-company-names</id>
+    <title>賃金台帳の時間外・休日・深夜の時間を、勤怠の確定値と照合するには</title>
+    <link href="https://vaynexis.jp/column/wage-ledger-overtime-attendance-reconcile"/>
+    <id>https://vaynexis.jp/column/wage-ledger-overtime-attendance-reconcile</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>案内状の差出人の社名や、式次第に載せる来賓の名前など、読み間違えられたくない言葉に Word でふりがな（ルビ）を付けたいときの手順と、付ける前に確かめることを、Microsoft の公式ヘルプに沿って整理します。読みの確かめ方と、ルビの書式の注意も添えます。</summary>
+    <summary>給与ソフトの賃金台帳に載った時間外・休日・深夜の労働時間数が、労務担当が締めて確定した勤怠の値と合っているかを、毎月確かめる手順です。厚生労働省の労働時間の適正な把握のためのガイドラインと労働基準法施行規則に沿って、照らす時点、並べ方、差が出たときの記録を整理します。</summary>
   </entry>
   <entry>
-    <title>Wordの文字カウントで選択した文章だけの文字数を見るには</title>
-    <link href="https://vaynexis.jp/column/word-count-selected-text-status-bar"/>
-    <id>https://vaynexis.jp/column/word-count-selected-text-status-bar</id>
+    <title>賃金台帳を整えるとき、法定の記載事項はどこで確かめるか</title>
+    <link href="https://vaynexis.jp/column/wage-ledger-required-items-check"/>
+    <id>https://vaynexis.jp/column/wage-ledger-required-items-check</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>申請書の「400字以内」の欄や、案内文の一段落だけの字数を確かめたいときに、Word で選んだ部分だけの数を見る方法と、文字数・段落数・行数まで見る［文字カウント］の開き方を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。</summary>
+    <summary>給与ソフトから出した賃金台帳に、法令の事項がそろっているかを確かめるときの見どころです。施行規則第54条の事項、書かなくてよい欄、様式第20号との関係、事業場ごとの調製と保存の数え始めを、厚生労働省と労働局の資料に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Wordのダーク モードで黒くなった用紙を白く表示するには</title>
-    <link href="https://vaynexis.jp/column/word-dark-mode-white-page-background"/>
-    <id>https://vaynexis.jp/column/word-dark-mode-white-page-background</id>
+    <title>商業登記の電子証明書を廃止すると決めたら届出書と窓口をどう確認する？</title>
+    <link href="https://vaynexis.jp/column/registration-certificate-discontinuation-notice"/>
+    <id>https://vaynexis.jp/column/registration-certificate-discontinuation-notice</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>Word を開いたら、メニューだけでなく用紙まで黒くなり、白い紙のつもりで作った書類の見え方がつかみにくいときに、ダーク モードのままページの背景だけを明るく戻す方法を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。印刷や相手の画面に影響するかも確かめます。</summary>
+    <summary>会社で使ってきた商業登記の電子証明書を、証明期間の途中でやめると決めた総務・経理の担当者向けに、「電子証明書使用廃止届」を出す前に確かめること、書面とオンラインの出し方、出す先の管轄登記所、急ぐときの使用休止を、法務省と登記・供託オンライン申請システムの案内に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>PowerPointのSmartArtの「階層構造」で担当者の関係を図にするには</title>
-    <link href="https://vaynexis.jp/column/powerpoint-smartart-hierarchy-staff-chart"/>
-    <id>https://vaynexis.jp/column/powerpoint-smartart-hierarchy-staff-chart</id>
+    <title>e-Govの手続で使える電子証明書は取得前にどう確かめる？</title>
+    <link href="https://vaynexis.jp/column/e-gov-procedure-certificate-check-before-order"/>
+    <id>https://vaynexis.jp/column/e-gov-procedure-certificate-check-before-order</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>社内で決まった担当者の上下関係や窓口の分担を、PowerPoint の SmartArt で1枚の図にする手順です。［SmartArt グラフィックの選択］の［階層構造］からレイアウトを選び、テキスト ウィンドウでレベルを上げ下げして入力し、図形の追加や点線で兼務を表すまでを、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。</summary>
+    <summary>e-Govで社会保険などの手続を電子申請しようとする会社の担当者向けに、認証局に電子証明書を申し込む前に、その手続で電子署名が要るか、どの電子証明書が使えるかを、e-Gov電子申請のFAQと電子証明書の案内に沿って確かめる順番を整理します。商業登記の電子証明書の申請の手順は扱いません。</summary>
   </entry>
   <entry>
-    <title>PowerPointのグリッド線で図形が細かく動かせないときは</title>
-    <link href="https://vaynexis.jp/column/powerpoint-snap-to-grid-off-fine-move"/>
-    <id>https://vaynexis.jp/column/powerpoint-snap-to-grid-off-fine-move</id>
+    <title>提出済み給与支払報告書の追加・訂正・取消はどう出す？</title>
+    <link href="https://vaynexis.jp/column/salary-payment-report-addition-correction-cancel"/>
+    <id>https://vaynexis.jp/column/salary-payment-report-addition-correction-cancel</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>PowerPoint で図形や矢印をドラッグすると、決まった間隔でカクッと飛んでしまい、ほんの少しだけずらしたい位置に置けないときの原因と直し方を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。グリッド線の「表示」と「位置合わせ」は別の設定なので、分けて確かめます。</summary>
+    <summary>1月に市区町村へ出した給与支払報告書に、出し漏れの従業員や金額の誤りが見つかったときに、給与の担当者が「追加」「訂正」「取消」をどう出し直すかを、常総市の案内と、地方税共同機構（eLTAX）の訂正パターン表に沿って整理します。様式や受け付けの細部は市区町村ごとに確かめます。</summary>
   </entry>
   <entry>
-    <title>PowerPointのスペル チェックで赤い波線を表示しないには</title>
-    <link href="https://vaynexis.jp/column/powerpoint-spell-check-red-underline-off"/>
-    <id>https://vaynexis.jp/column/powerpoint-spell-check-red-underline-off</id>
+    <title>給与支払報告書の提出先はどこ？総括表と個人別明細書をそろえる手順</title>
+    <link href="https://vaynexis.jp/column/salary-payment-report-destination-summary-sheet"/>
+    <id>https://vaynexis.jp/column/salary-payment-report-destination-summary-sheet</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>PowerPoint で資料を作っていると、品番や英字の社名、略語の下に赤い波線が並び、画面を共有して見せるときに気になる、という場面があります。Windows 版 PowerPoint で入力時のスペル チェックを止める場所と、止めたあとに誤字を確かめる方法を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>年明けに市区町村へ出す給与支払報告書について、給与の担当者が、従業員ごとの提出先の決め方、提出期限、市区町村ごとに総括表と個人別明細書をそろえる手順、自治体ごとに違う点の確かめ方を、国税庁の法定調書の手引、総務省の様式の記載要領、和歌山市の案内を例に整理します。</summary>
   </entry>
   <entry>
-    <title>PowerPointの「発表者ツールを使用する」をオフにするには</title>
-    <link href="https://vaynexis.jp/column/powerpoint-presenter-view-turn-off-same-screen"/>
-    <id>https://vaynexis.jp/column/powerpoint-presenter-view-turn-off-same-screen</id>
+    <title>海外の提出先から居住者証明書を求められた法人はどう請求する？</title>
+    <link href="https://vaynexis.jp/column/certificate-of-residence-tax-office-request"/>
+    <id>https://vaynexis.jp/column/certificate-of-residence-tax-office-request</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>プロジェクターや大きな画面につないで PowerPoint のスライド ショーを始めたら、手元の画面だけノートやタイマーの入った発表者ビューになり、同じ画面を見せたいのに困る、というときの［発表者ツールを使用する］のオフの手順を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。画面が逆に出ただけのときの直し方も分けて書きます。</summary>
+    <summary>海外の取引先から「日本の居住者証明書を出してほしい」と頼まれた会社の経理の担当者向けに、税務署への交付請求で出す物、様式の選び方、郵送と来署、代理人の委任状、証明できない事項を、国税庁のタックスアンサーと記載要領に沿って整理します。租税条約が使えるかどうかの判断は扱いません。</summary>
   </entry>
   <entry>
-    <title>PowerPointの「キオスクで閲覧する」で案内を繰り返すには</title>
-    <link href="https://vaynexis.jp/column/powerpoint-kiosk-loop-reception-display"/>
-    <id>https://vaynexis.jp/column/powerpoint-kiosk-loop-reception-display</id>
+    <title>勘定科目内訳明細書の「登録番号（法人番号）」欄はどの版と公表サイトで確かめる？</title>
+    <link href="https://vaynexis.jp/column/account-breakdown-statement-registration-number-check"/>
+    <id>https://vaynexis.jp/column/account-breakdown-statement-registration-number-check</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>受付や展示会の画面で、PowerPoint の案内スライドを人の手を使わずに繰り返し流したいときの、［キオスクで閲覧する (全画面表示)］の設定と、各スライドを自動で進める時間の付け方を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。止め方と、流す前の確かめ方も添えます。</summary>
+    <summary>決算の後、勘定科目内訳明細書を作る経理の担当者向けに、事業年度の終了日で様式の版を選ぶこと、令和6年3月1日以後終了事業年度分で加わった「登録番号（法人番号）」欄の書き方と省略できる欄、番号を国税庁の法人番号公表サイトとインボイスの公表サイトで確かめる手順を、国税庁の案内に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>PowerPointのアニメーション ウィンドウで表示順を変えるには</title>
-    <link href="https://vaynexis.jp/column/powerpoint-animation-pane-reorder-effects"/>
-    <id>https://vaynexis.jp/column/powerpoint-animation-pane-reorder-effects</id>
+    <title>支店分の法定調書を本店でまとめる承認申請はいつ出す？</title>
+    <link href="https://vaynexis.jp/column/statutory-reports-head-office-bulk-approval"/>
+    <id>https://vaynexis.jp/column/statutory-reports-head-office-bulk-approval</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>PowerPoint のスライドで、文字や図が説明の順に出てこないときに、［アニメーション ウィンドウ］で動きの順番を確かめ、並べ替える方法を、Microsoft の公式ヘルプに沿って整理します。Windows 版・Web 版・Mac 版でヘルプの書き方が違うので、版ごとに分けて書きます。</summary>
+    <summary>支店や工場ごとに別の税務署へ法定調書を出している会社が、本店でまとめて出す「本店等一括提出」に切り替えるときの承認申請書について、出す人・出す先・期限・みなし承認、申請書の欄の書き方、承認後の合計表と付表の書き方を、国税庁の案内に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Teamsの「ノイズ抑制」で会議中の周りの雑音を抑えるには</title>
-    <link href="https://vaynexis.jp/column/teams-noise-suppression-meeting-background-sounds"/>
-    <id>https://vaynexis.jp/column/teams-noise-suppression-meeting-background-sounds</id>
+    <title>法定調書を光ディスクで出す会社は媒体と添付物をどうそろえる？</title>
+    <link href="https://vaynexis.jp/column/statutory-reports-optical-disc-submission-set"/>
+    <id>https://vaynexis.jp/column/statutory-reports-optical-disc-submission-set</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>事務所や自宅から Microsoft Teams の会議に入ると、書類をめくる音やドアの音がほかの参加者に聞こえて気になる、というときの［ノイズ抑制］の確かめ方とオンにする手順を、Microsoft の公式ヘルプ（デスクトップ版）に沿って整理します。会議の途中で切り替える場所も添えます。</summary>
+    <summary>給与所得の源泉徴収票などの法定調書を、CDやDVDに書き込んで税務署へ出すと決めた会社の担当者向けに、提出一式の4点、正本と副本、媒体とファイル名の決まり、レーベル面に書く事項、支払調書等合計表付表の書き方を、国税庁の案内に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Teamsのぼかしで会議前に背景を確認するには</title>
-    <link href="https://vaynexis.jp/column/teams-background-blur-before-joining-meeting"/>
-    <id>https://vaynexis.jp/column/teams-background-blur-before-joining-meeting</id>
+    <title>仕入明細書への相手方の確認が、どの版への確認かを確かめるには</title>
+    <link href="https://vaynexis.jp/column/purchase-statement-confirmation-version-record"/>
+    <id>https://vaynexis.jp/column/purchase-statement-confirmation-version-record</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>自宅や事務所の棚が映り込むのが気になるとき、Microsoft Teams の会議に入る前の画面で背景をぼかし、映り方を確かめてから参加する手順を、Microsoft の公式ヘルプ（デスクトップ版）に沿って整理します。ぼかしでは隠しきれない場合があることと、会議中に変えるときの［プレビュー］も添えます。</summary>
+    <summary>自社で仕入明細書を作って仕入先に送り、確認を受けている会社の経理・購買の担当者向けに、国税庁のインボイスQ&amp;A（問86・問88）が示す相手方の確認の方法と、明細書を直して送り直したときに、確認の通知がどの版に対するものかを後から追える記録の残し方を整理します。</summary>
   </entry>
   <entry>
-    <title>Teamsの編集で送信したチャットの誤字を直すには</title>
-    <link href="https://vaynexis.jp/column/teams-edit-sent-chat-message-typo"/>
-    <id>https://vaynexis.jp/column/teams-edit-sent-chat-message-typo</id>
+    <title>保険料の控除証明が紙と電子で届いたら何を対応させるか</title>
+    <link href="https://vaynexis.jp/column/insurance-deduction-certificates-paper-data-matching"/>
+    <id>https://vaynexis.jp/column/insurance-deduction-certificates-paper-data-matching</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>Microsoft Teams のチャットで送ったメッセージに誤字や数字の打ち間違いを見つけたときに、送信済みのメッセージを［編集］で直す手順と、編集できないときに確かめることを、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <summary>年末調整で、従業員から保険料の控除証明書が紙とデータで混ざって届いたときに、給与の担当者が何を受け取り、何と何を対応させて確かめるかを、国税庁の控除証明書等の電子的交付の案内と年末調整の電子化のFAQに沿って整理します。控除額の計算は扱いません。</summary>
   </entry>
   <entry>
-    <title>Teamsの状態の期間で応答不可を指定時刻に戻すには</title>
-    <link href="https://vaynexis.jp/column/teams-status-duration-do-not-disturb-reset-time"/>
-    <id>https://vaynexis.jp/column/teams-status-duration-do-not-disturb-reset-time</id>
+    <title>住宅ローン控除の調書方式では会社が何の書類をどの経路で受け取る？</title>
+    <link href="https://vaynexis.jp/column/housing-loan-deduction-report-method-forms"/>
+    <id>https://vaynexis.jp/column/housing-loan-deduction-report-method-forms</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>見積もりや締めの作業に集中するあいだだけ Microsoft Teams の状態を「応答不可」にして、決めた時刻に自動で戻したいときの［期間］の設定を、Microsoft の公式ヘルプの項目名どおりに整理します。戻ったあとの状態がどう決まるか、早めに戻す方法も添えます。</summary>
+    <summary>年末調整で住宅ローン控除を受ける従業員から「年末残高等証明書が銀行から届かない」と言われたときに、会社の給与の担当者が確かめることを、国税庁のタックスアンサー（コード1230）と年末調整の電子化のFAQに沿って整理します。証明書方式と調書方式の違い、会社が受け取る書類、データと書面の経路を扱います。</summary>
   </entry>
   <entry>
-    <title>Teamsのライブ キャプションで会議の字幕を表示するには</title>
-    <link href="https://vaynexis.jp/column/teams-live-captions-meeting-spoken-language"/>
-    <id>https://vaynexis.jp/column/teams-live-captions-meeting-spoken-language</id>
+    <title>年末調整で受け取った申告書は会社でいつまでどのように保存する？</title>
+    <link href="https://vaynexis.jp/column/year-end-adjustment-forms-retention-period"/>
+    <id>https://vaynexis.jp/column/year-end-adjustment-forms-retention-period</id>
     <published>2026-11-18T00:00:00+09:00</published>
     <updated>2026-11-18T00:00:00+09:00</updated>
-    <summary>Microsoft Teams の会議で、話している内容を字幕で追いたいときの、ライブ キャプションのオン・オフ、文字の大きさや位置の変え方、字幕が崩れるときの「会議の話し言葉」の直し方を、Microsoft の公式ヘルプに沿って整理します。字幕は会議の後に残らないので、記録が要るときの考え方も添えます。</summary>
+    <summary>年末調整が終わったあと、従業員から集めた扶養控除等（異動）申告書や保険料控除申告書を、会社がいつまで、どの形で手元に置くかを、国税庁のタックスアンサーと年末調整の電子化のFAQに沿って整理します。数え始めの日、10年になる申告書、データで受け取った分の扱い、社内の保管台帳の項目まで扱います。</summary>
   </entry>
 </feed>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>問い合わせの通知を誰に送ったか、Zendesk のチケットイベントで調べるには｜Vaynexis</title>
+  <meta name="description" content="「その件のメール、届いていません」と言われたとき、Zendesk のチケットでどの通知がいつ、どのトリガで送られたかを確かめる手順を、Zendesk ヘルプの「チケットイベント」と「標準のチケットトリガ」の説明に沿って整理します。通知の記録で分かることと分からないことの線引きもまとめました。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="問い合わせの通知を誰に送ったか、Zendesk のチケットイベントで調べるには｜Vaynexis">
+  <meta property="og:description" content="「その件のメール、届いていません」と言われたとき、Zendesk のチケットでどの通知がいつ、どのトリガで送られたかを確かめる手順を、Zendesk ヘルプの「チケットイベント」と「標準のチケットトリガ」の説明に沿って整理します。通知の記録で分かることと分からないことの線引きもまとめました。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/zendesk-ticket-events-notification-trace">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/zendesk-ticket-events-notification-trace">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"問い合わせの通知を誰に送ったか、Zendesk のチケットイベントで調べるには","description":"「その件のメール、届いていません」と言われたとき、Zendesk のチケットでどの通知がいつ、どのトリガで送られたかを確かめる手順を、Zendesk ヘルプの「チケットイベント」と「標準のチケットトリガ」の説明に沿って整理します。通知の記録で分かることと分からないことの線引きもまとめました。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/zendesk-ticket-events-notification-trace"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"ほかの業務ソフトの設定","item":"https://vaynexis.jp/column/topics/tools-other"},{"@type":"ListItem","position":4,"name":"問い合わせの通知を誰に送ったか、Zendesk のチケットイ","item":"https://vaynexis.jp/column/zendesk-ticket-events-notification-trace"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/tools-other">ほかの業務ソフトの設定</a></li><li aria-current="page">問い合わせの通知を誰に送ったか、Zendesk のチケットイ</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">問い合わせの通知を誰に送ったか、Zendesk のチケットイベントで調べるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Zendesk のチケットイベントは、更新元や通知元が人であるかトリガなどのビジネスルールであるかに関係なく、チケットのすべての更新と通知を表示します。 通知の横の ID をクリックすると、その通知のために送信されたメールを表示できます。 「誰に送ったか」は、イベントに出たトリガの名前と、そのトリガの［通知方法］の設定を合わせて読み解きます。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>お客様から「その件のメールは届いていない」と言われたとき、Zendesk で本当に送ったのか、誰あてだったのかを確かめたい。チケットイベントとトリガの設定から、通知の送り先をたどる手順です。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">チケットイベントを開く</a></li>
+      <li><a href="#s2">イベントのどこを読むか</a></li>
+      <li><a href="#s3">トリガの名前から、送り先をたどる</a></li>
+      <li><a href="#s4">通知が出ていないときに疑うこと</a></li>
+      <li><a href="#s5">記録で分かること、分からないこと</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．チケットイベントを開く</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>イベントはデフォルトでは非表示です。 表示するには、チケットを開き、会話ヘッダーのイベントアイコンをクリックして、チケットの会話からイベントに表示を切り替えます。見終わったら「イベント」をクリックし、「会話」を選択して戻ります。</p>
+    <p>各チケットの更新イベントは、個別に表示されます。フィールド値が変更された場合は、新しい値とともに、前回の値が打消し線付きで表示されます。 「届いていない」と言われた時刻の前後の更新を探し、その更新に通知が付いているかを見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．イベントのどこを読むか</h2>
+    <p>チケットイベントのコミュニケーションの欄では、チケット更新のバックグラウンドで発生したトリガ、自動化、ルーティング、およびメールのやりとりを確認できます。 通知を調べるときに見る項目は次のとおりです。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">見る項目</th><th scope="col">ヘルプの説明（要約）</th></tr></thead><tbody><tr><td data-label="見る項目">メール通知</td><td data-label="ヘルプの説明（要約）">通知の横の ID から、送信されたメールを表示できる</td></tr><tr><td data-label="見る項目">トリガ</td><td data-label="ヘルプの説明（要約）">担当者を通知するトリガなど、チケットに影響を与えたトリガ</td></tr><tr><td data-label="見る項目">ターゲットに送信されたメッセージ</td><td data-label="ヘルプの説明（要約）">Jira などのクラウドベースのサードパーティターゲットに送信されたメッセージ</td></tr><tr><td data-label="見る項目">CC</td><td data-label="ヘルプの説明（要約）">チケットに CC されたユーザー</td></tr></tbody></table></div>
+    <p></p>
+    <p>Enterprise では、トリガのタイトルをクリックして、起動したトリガの特定のバージョンを表示できます。 あとでトリガの設定を変えていても、その時点の設定を確かめられるということです。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．トリガの名前から、送り先をたどる</h2>
+    <p>イベントにトリガの名前が出ていたら、そのトリガが誰に送る設定かを確かめます。トリガは、管理センターのサイドバーで「オブジェクトとルール」をクリックし、「ビジネスルール」&gt;「トリガ」を選択し、「チケット」タブで確認できます。</p>
+    <p>たとえば標準のトリガ「リクエスタとCCへの通知 - コメント更新」は、エージェントまたはエンドユーザーによるコメントがチケットに追加されたときに、リクエスタと CC にメールで通知するものです。 その場合、送り先はその時点のリクエスタと CC にリストされたメンバーです。イベントの［CC］の欄で、その更新の時点で誰が CC に入っていたかもあわせて見ます。</p>
+    <p>標準のトリガには、担当者への通知やグループへの通知もあります。 社内の担当者から「通知が来ていない」と言われたときは、こちらのトリガが起動しているかを見ます。</p>
+    <p>たとえば標準の「担当者への通知 - 割り当て」は、チケットの担当者が別のユーザーに変更されたときに、担当者あてにメールを送るものです。ただし、この変更を行ったユーザーが担当者自身のときは条件を満たさず、エージェントが「自分に割り当てる」リンクをクリックした場合は通知されないと説明されています。 担当者が自分で引き受けたチケットについて「割り当ての通知が来ていない」と言われても、標準の設定どおりの動きです。 解決済みのチケットにお客様が新しくコメントして再度オープンになった場合は、「担当者への通知 - チケット再オープン」で担当のエージェントに通知される仕組みです。標準のトリガを複製して条件を変えている会社もあるので、自社のトリガの条件を一度一覧にしておくと、こうした問い合わせに早く答えられます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．通知が出ていないときに疑うこと</h2>
+    <p>目当ての更新にメール通知が付いていなければ、まずトリガの条件を見ます。標準のトリガの説明では、チケットにプライベートコメントが追加されると、［ユーザーにメールを送信+（リクエスタとCC）］アクションが非表示になり、メールメッセージは送信されないとされています。 担当者が社内メモのつもりで書いた更新なら、お客様にメールが行かないのは設定どおりの動きです。</p>
+    <p>また、すべてのトリガを非アクティブにしないよう注意されており、すべてのトリガが非アクティブにされている場合、チケットアクティビティに関するメール通知は送信されません。 ヘルプには、Zendesk エージェントワークスペースで SMS を送信するトリガがチケットから起動された場合、そのテキストメッセージも起動したトリガもチケットのイベントログに表示されないとも書かれています。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．記録で分かること、分からないこと</h2>
+    <p>イベントで分かるのは、Zendesk が通知を送ったことと、その内容・きっかけ・送り先の設定です。相手が受け取って読んだか、内容を理解したかは、イベントからは分かりません。お客様への返事では「何月何日何時に、このアドレスあてに送っています」と事実だけを伝え、迷惑メールのフォルダの確認などをお願いします。読んだかどうかを確かめたい用件なら、別に返事をもらう形にします。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">調べた日</th><th scope="col">チケット</th><th scope="col">見たイベント</th><th scope="col">分かったこと（架空の例）</th></tr></thead><tbody><tr><td data-label="調べた日">5月8日</td><td data-label="チケット">架空 #2041</td><td data-label="見たイベント">5月7日 14:02 の更新</td><td data-label="分かったこと（架空の例）">標準のトリガでリクエスタあてに送信・CC なし</td></tr><tr><td data-label="調べた日">5月8日</td><td data-label="チケット">架空 #2041</td><td data-label="見たイベント">5月7日 16:30 の更新</td><td data-label="分かったこと（架空の例）">社内メモのため、お客様への通知なし</td></tr></tbody></table></div>
+    <p>調べた結果をこのように残しておくと、同じ問い合わせが来たときに、別の担当者でも同じ順で確かめられます。問い合わせの対応の手順を手順書にまとめるときは、<a href="/ai-manual-guide">AIで業務マニュアル・手順書を作る方法</a>も参考になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">「届いていない」と言われた時刻の前後の更新を探したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">その更新にメール通知が付いているかを見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">通知の ID から、送られたメールの内容を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">起動したトリガの名前と、その［通知方法］の設定を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">更新の時点の CC の欄を見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">社内メモの更新ではないかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">通知の記録を、相手が読んだ証拠として扱っていないか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.zendesk.com/hc/ja/articles/4408829602970-%E3%83%81%E3%82%B1%E3%83%83%E3%83%88%E6%9B%B4%E6%96%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AE%E3%83%81%E3%82%B1%E3%83%83%E3%83%88%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AE%E8%A1%A8%E7%A4%BA" rel="noopener" target="_blank">チケット更新に関するすべてのチケットイベントの表示（Zendesk ヘルプ）</a>：イベントの表示方法、表示される情報、通知の ID、トリガのバージョン、SMS が表示されないこと</li>
+      <li><a href="https://support.zendesk.com/hc/ja/articles/4408828984346-%E6%A8%99%E6%BA%96%E3%81%AE%E3%83%81%E3%82%B1%E3%83%83%E3%83%88%E3%83%88%E3%83%AA%E3%82%AC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" rel="noopener" target="_blank">標準のチケットトリガについて（Zendesk ヘルプ）</a>：トリガの場所、標準のトリガの通知先、プライベートコメントのときの動き、すべて非アクティブにしない注意</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/inquiry-forwarded-owner-unassigned">問い合わせを部署へ回した後、担当者未定をどう見つけるか</a></li>
+      <li><a href="/column/internal-faq">社内FAQの作り方｜問い合わせを集め、答えを決めて更新する手順</a></li>
+      <li><a href="/column/ai-email-reply">メール返信の下書きをAIで作る。先に人が骨子を決め、送る前に宛先・事実・約束・個人情報・文体の5つを確かめる</a></li>
+      <li><a href="/column/zendesk-cc-vs-followers-internal-staff">問い合わせの CC と社内のフォロワーを、Zendesk でどう使い分けるか</a></li>
+      <li><a href="/column/shopify-return-withdrawn-exchange-remove">お客様が返品を取り下げたら、Shopify で交換品の注文もどう取り消すか</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

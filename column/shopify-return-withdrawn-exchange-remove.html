@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お客様が返品を取り下げたら、Shopify で交換品の注文もどう取り消すか｜Vaynexis</title>
+  <meta name="description" content="交換を伴う返品を受け付けた後で、お客様から「やはり返品をやめたい」と連絡が来たとき、Shopify では返品をキャンセルするだけでは交換品が注文に残ります。返品をキャンセルできる条件、注文の編集で未発送の交換品を削除する手順、合計金額と在庫の確かめ方を、Shopify ヘルプセンターの説明に沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="お客様が返品を取り下げたら、Shopify で交換品の注文もどう取り消すか｜Vaynexis">
+  <meta property="og:description" content="交換を伴う返品を受け付けた後で、お客様から「やはり返品をやめたい」と連絡が来たとき、Shopify では返品をキャンセルするだけでは交換品が注文に残ります。返品をキャンセルできる条件、注文の編集で未発送の交換品を削除する手順、合計金額と在庫の確かめ方を、Shopify ヘルプセンターの説明に沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/shopify-return-withdrawn-exchange-remove">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/shopify-return-withdrawn-exchange-remove">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"お客様が返品を取り下げたら、Shopify で交換品の注文もどう取り消すか","description":"交換を伴う返品を受け付けた後で、お客様から「やはり返品をやめたい」と連絡が来たとき、Shopify では返品をキャンセルするだけでは交換品が注文に残ります。返品をキャンセルできる条件、注文の編集で未発送の交換品を削除する手順、合計金額と在庫の確かめ方を、Shopify ヘルプセンターの説明に沿って整理します。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/shopify-return-withdrawn-exchange-remove"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"ほかの業務ソフトの設定","item":"https://vaynexis.jp/column/topics/tools-other"},{"@type":"ListItem","position":4,"name":"お客様が返品を取り下げたら、Shopify で交換品の注文も","item":"https://vaynexis.jp/column/shopify-return-withdrawn-exchange-remove"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/tools-other">ほかの業務ソフトの設定</a></li><li aria-current="page">お客様が返品を取り下げたら、Shopify で交換品の注文も</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">お客様が返品を取り下げたら、Shopify で交換品の注文もどう取り消すか</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Shopify のヘルプでは、お客様が返品リクエストを撤回した場合は返品をキャンセルでき、交換アイテムが含まれる返品をキャンセルするには、返品をキャンセルしてから、注文を編集して未発送の交換アイテムを削除する必要があるとされています。 作業は「返品のキャンセル」と「注文の編集」の2つに分かれます。どちらか一方だけで終わらせると、返品は消えたのに交換品が発送待ちのまま、ということが起こります。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>交換を約束した返品を、お客様が取り下げてきた。Shopify で返品だけを消すと、交換品が発送待ちのまま残ってしまう。返品のキャンセルと注文の編集を、どの順で何を確かめながら進めるかをまとめました。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">例は説明のための架空の例です。確認表や記録項目は当社の整理です。公式機関が示す様式ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">まず、返品をキャンセルできる状態かを見る</a></li>
+      <li><a href="#s2">返品をキャンセルする手順</a></li>
+      <li><a href="#s3">注文を編集して、未発送の交換品を削除する</a></li>
+      <li><a href="#s4">在庫を補充するかの選択</a></li>
+      <li><a href="#s5">合計金額と返金の確かめ</a></li>
+      <li><a href="#s6">受け付けから完了までの記録（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．まず、返品をキャンセルできる状態かを見る</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>返品をキャンセルできるのは、次の状況のみとされています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">条件</th><th scope="col">確かめる場所（架空の例）</th></tr></thead><tbody><tr><td data-label="条件">返品が返金されていない</td><td data-label="確かめる場所（架空の例）">注文の返金の表示</td></tr><tr><td data-label="条件">返品が補充されていない</td><td data-label="確かめる場所（架空の例）">倉庫への問い合わせと注文の表示</td></tr><tr><td data-label="条件">返品がオープンな状態で、返品済みとしてマークされていない</td><td data-label="確かめる場所（架空の例）">注文の返品のカード</td></tr><tr><td data-label="条件">返品に返品用ラベルがない</td><td data-label="確かめる場所（架空の例）">返品の配送情報</td></tr><tr><td data-label="条件">返品のフルフィルメントがキャンセルされていない</td><td data-label="確かめる場所（架空の例）">注文の表示</td></tr></tbody></table></div>
+    <p>取り下げの連絡を受けた担当者は、すぐに倉庫と経理へ「この注文の返品は止めて」と伝えます。倉庫で補充されたり、経理で返金されたりすると、上の条件から外れてキャンセルできなくなるためです。</p>
+    <p>返品をキャンセルすると、作成した返品が削除されます。これは、アイテムが配送される前に注文処理を停止する注文のキャンセルとは異なると説明されています。 取り下げたのは返品だけで、元の注文はお客様の手元で生きている、という区別を、担当者の間でそろえておきます。 注文のキャンセルのページでは、注文のキャンセルとは処理中の注文を停止することで、注文をキャンセルすると注文処理が停止されると説明されています。 元の商品はすでにお客様に届いているので、ここで使うのは注文のキャンセルではなく、返品のキャンセルです。「返品をキャンセル」と注文のキャンセルは名前が似ているため、新しく入った担当者には、手順書に二つの違いを書いて渡しておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．返品をキャンセルする手順</h2>
+    <p>管理画面から［注文管理］に移動し、キャンセルする返品の注文をクリックし、進行中の返品のカードから［返品をキャンセル］をクリックして、もう一度［返品をキャンセル］をクリックして確認します。 返品をキャンセルした後に再オープンすることはできませんが、新しく返品を作成することはできます。 お客様の気が変わって再び返品したいと言われたときは、新しい返品として作り直すことになります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．注文を編集して、未発送の交換品を削除する</h2>
+    <p>返品をキャンセルしても、交換品は注文に残っています。ヘルプの手順では、注文からアイテムを削除するには、管理画面の［注文管理］で編集する注文をクリックし、［編集］をクリックして、削除する商品にカーソルを合わせて［×］をクリックします。 任意で［編集の理由］セクションにメモを入力でき、このメモはお客様には表示されません。 「お客様が返品を取り下げたため交換品を削除」と書いておくと、後で注文を見た人にも経緯が伝わります。</p>
+    <p>注文の編集で扱えるのは未発送のアイテムです。発送済みのアイテムを削除したり、その数量を調整したりすることはできません。 交換品がすでに出荷されていた場合は、この手順では消せません。取り下げの連絡が来たら、交換品の発送の状況をまず倉庫に確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．在庫を補充するかの選択</h2>
+    <p>注文からアイテムを削除するとき、削除する商品を補充しない場合は［在庫を補充する］の選択を解除します。削除した商品は、元のロケーションに自動的に補充されます。 一方で、返品と交換の作成のページには、交換アイテムの在庫は、返品を処理するまで確保されないと書かれています。</p>
+    <p>処理前に取り下げられた返品の交換品を削除するとき、［在庫を補充する］を残すと在庫の数がどうなるかは、ヘルプのページからは読み取れませんでした。そこで、削除の前に交換品の商品の在庫数を控え、削除の後にもう一度見て、増え方が実際の棚の数と合っているかを確かめます。合わなければ、在庫の担当者に数を直してもらいます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．合計金額と返金の確かめ</h2>
+    <p>注文を編集すると、変更が反映されて注文の合計金額が更新され、お客様への返金が必要か、追加の支払いが必要かが表示されます。 注文合計が減少して返金が必要な場合、注文を編集してお客様に通知を送信しても返金は完了せず、注文を更新した後に返金する必要があるとされています。 交換品の差額をお客様から受け取っていたかどうかで、返金が要るかは変わるので、編集の後の注文の表示を経理と一緒に見ます。 ヘルプは、注文の特定の項目を編集しても注文のディスカウントは自動的に更新されないため、注文を調整する際は注文合計を注意深く確認するよう注意しています。 交換品に割引をかけていた注文では、合計の数字が想定どおりかを、とくに念入りに見ます。</p>
+    <p>すべて済んだら、お客様には、返品の取り下げを受け付けたことと、交換品は送らないことを、問い合わせを受けた担当者から伝えます。返金が発生する場合は、その時期もあわせて伝えると、重ねての問い合わせを減らせます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．受け付けから完了までの記録（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">時刻</th><th scope="col">したこと</th><th scope="col">担当</th></tr></thead><tbody><tr><td data-label="時刻">10:05</td><td data-label="したこと">お客様から返品の取り下げのメールを受信</td><td data-label="担当">問い合わせの担当</td></tr><tr><td data-label="時刻">10:10</td><td data-label="したこと">倉庫と経理に返品の処理を止めるよう連絡</td><td data-label="担当">問い合わせの担当</td></tr><tr><td data-label="時刻">10:20</td><td data-label="したこと">返品をキャンセル</td><td data-label="担当">受注の担当</td></tr><tr><td data-label="時刻">10:25</td><td data-label="したこと">注文を編集し未発送の交換品を削除・編集の理由を記入</td><td data-label="担当">受注の担当</td></tr><tr><td data-label="時刻">10:40</td><td data-label="したこと">在庫数と注文の合計を確認</td><td data-label="担当">在庫の担当・経理</td></tr></tbody></table></div>
+    <p>連絡、キャンセル、編集が別々の人の手に分かれる作業なので、誰がどこまで済ませたかを一つの記録に残します。部署をまたぐ受け渡しの流れを見直すときは、<a href="/business-improvement">事務の業務改善</a>の進め方も参考になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">返品が返金・補充されておらず、返品用ラベルもないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">倉庫と経理に、返品の処理を止めるよう伝えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">返品をキャンセルし、注文のキャンセルと取り違えていないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">交換品が未発送かを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">注文を編集して交換品を削除し、［編集の理由］を書いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［在庫を補充する］の選択と、削除の前後の在庫数を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">注文の合計と返金の要否を確かめたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://help.shopify.com/ja/manual/fulfillment/managing-orders/returns/processing-returns" rel="noopener" target="_blank">返品の処理と管理（Shopify ヘルプセンター）</a>：返品のキャンセルの条件と手順、交換アイテムを含む返品のキャンセル、注文のキャンセルとの違い、再オープン不可</li>
+      <li><a href="https://help.shopify.com/ja/manual/fulfillment/managing-orders/canceling-orders" rel="noopener" target="_blank">注文のキャンセル（Shopify ヘルプセンター）</a>：注文のキャンセルの意味</li>
+      <li><a href="https://help.shopify.com/ja/manual/fulfillment/managing-orders/editing-orders/products" rel="noopener" target="_blank">注文内の商品を編集する（Shopify ヘルプセンター）</a>：アイテムの削除の手順、［在庫を補充する］、［編集の理由］、返金の扱い</li>
+      <li><a href="https://help.shopify.com/ja/manual/fulfillment/managing-orders/editing-orders/considerations" rel="noopener" target="_blank">注文を編集する際の考慮事項（Shopify ヘルプセンター）</a>：発送済みのアイテムは削除できないこと、合計金額の更新</li>
+      <li><a href="https://help.shopify.com/ja/manual/fulfillment/managing-orders/returns/creating-returns" rel="noopener" target="_blank">返品と交換を作成する（Shopify ヘルプセンター）</a>：交換アイテムの在庫が確保される時</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/shopify-deferred-refund-execution">返品処理だけ済ませて後回しにした返金はどこから実行するか</a></li>
+      <li><a href="/column/shopify-order-shipping-address-change">Shopifyの配送先変更｜注文の特定から住所の保存・確認まで</a></li>
+      <li><a href="/column/ai-reply-discount-return-approval">問い合わせ返信のAIに値引きや返品を約束させない、案内と承認の分け方</a></li>
+      <li><a href="/column/zendesk-ticket-events-notification-trace">問い合わせの通知を誰に送ったか、Zendesk のチケットイベントで調べるには</a></li>
+      <li><a href="/column/shopify-return-restock-location-select">返品された商品を在庫へ戻すとき、Shopify で補充先のロケーションをどう指定するか</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
