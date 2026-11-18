@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordの文字カウントで選択した文章だけの文字数を見るには｜Vaynexis</title>
+  <meta name="description" content="申請書の「400字以内」の欄や、案内文の一段落だけの字数を確かめたいときに、Word で選んだ部分だけの数を見る方法と、文字数・段落数・行数まで見る［文字カウント］の開き方を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Wordの文字カウントで選択した文章だけの文字数を見るには｜Vaynexis">
+  <meta property="og:description" content="申請書の「400字以内」の欄や、案内文の一段落だけの字数を確かめたいときに、Word で選んだ部分だけの数を見る方法と、文字数・段落数・行数まで見る［文字カウント］の開き方を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/word-count-selected-text-status-bar">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/word-count-selected-text-status-bar">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wordの文字カウントで選択した文章だけの文字数を見るには","description":"申請書の「400字以内」の欄や、案内文の一段落だけの字数を確かめたいときに、Word で選んだ部分だけの数を見る方法と、文字数・段落数・行数まで見る［文字カウント］の開き方を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/word-count-selected-text-status-bar"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Wordの設定","item":"https://vaynexis.jp/column/topics/word"},{"@type":"ListItem","position":4,"name":"Wordの文字カウントで選択した文章だけの文字数を見るには","item":"https://vaynexis.jp/column/word-count-selected-text-status-bar"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/word">Wordの設定</a></li><li aria-current="page">Wordの文字カウントで選択した文章だけの文字数を見るには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Wordの文字カウントで選択した文章だけの文字数を見るには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>数えたい文章を選ぶと、Word のステータス バーに、選んだ部分と文書全体の数が並んで表示されます。 文字数・段落数・行数まで見たいときは、ステータス バーの文字カウントをクリックします。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>申請書の「400字以内」の欄など、文書の一部だけの字数を確かめたいときに、Word で選んだ部分の数をステータス バーで読む方法を確かめます。文字数・段落数・行数を開く文字カウント、Mac 版と Web 用 Word での入口の違い、文書全体の数を本文に入れるフィールドも分けて扱います。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">欄ごとの字数の表と確認表は、架空の申請書を想定して当社がまとめたもので、Microsoft のヘルプが示す手順そのものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">「全体の数」を見て安心してしまう</a></li>
+      <li><a href="#s2">選んだ部分だけを数える手順</a></li>
+      <li><a href="#s3">詳しい数と、テキスト ボックス・脚注の扱い</a></li>
+      <li><a href="#s4">数える前にそろえておくこと</a></li>
+      <li><a href="#s5">Mac 版と Web 用 Word では入口が違う</a></li>
+      <li><a href="#s6">文書全体の数を本文の中に表示しておく方法</a></li>
+      <li><a href="#s7">欄ごとに字数を残しておく（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．「全体の数」を見て安心してしまう</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、Windows のパソコンで使う Word（Microsoft 365 などのデスクトップ版）です。ヘルプの適用先は、Word for Microsoft 365、Word 2024、Word 2021 と、それぞれの Mac 版です。 Mac 版とブラウザーで開く Web 版は数え方の入口が違うので、後の節で分けます。</p>
+    <p>補助金の申請書や応募書類では、「事業の概要（400字以内）」のように、欄ごとに字数が決まっていることがあります。一つの文書に複数の欄を書いていると、画面の下に出ているのは文書全体の数なので、欄ごとの字数は分かりません。欄の文章だけを選んで数える、という一手間で、提出前の書き直しを減らせます。</p>
+    <p>ヘルプでは、Word は入力しながら文書の単語数を数え、ページ数・段落数・行数・文字数も数えている、と説明されています。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．選んだ部分だけを数える手順</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">操作</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="操作">数えたい欄の文章を、ドラッグして選ぶ</td></tr><tr><td data-label="順番">2</td><td data-label="操作">画面の下のステータス バーを見る（選んだ部分と、文書全体の数が並ぶ）</td></tr><tr><td data-label="順番">3</td><td data-label="操作">文字数・段落数・行数を見たいときは、ステータス バーの文字カウントをクリックする</td></tr></tbody></table></div>
+    <p></p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．詳しい数と、テキスト ボックス・脚注の扱い</h2>
+    <p>同じ Microsoft のヘルプに「文字カウント」というページがあり、Microsoft 365 の Word（Windows のデスクトップ版）のタブに、もう少し詳しい書き方があります。「文字カウント」のページの適用先は、Word for Microsoft 365、Word for Microsoft 365 for Mac、Word for the web です。</p>
+    <ul>
+      <li>表示の場所：Word は、ウィンドウの左下隅にあるステータス バーに数を自動で表示します。</li>
+      <li>一部だけを数える：数えたい部分を選ぶと、ステータス バーに選んだ部分の合計が出ます。</li>
+      <li>詳しい画面：ページ、段落、文字数などの詳細を見たいときや、テキスト ボックスや脚注を合計に含めたいときは、［レビュー］タブで［Wordカウント］を選ぶ、と書かれています。</li>
+    </ul>
+    <p>ヘルプの表記は、タブによってそろっていません。同じページの Mac のタブでは、［校閲］の［文字カウント］に移動して数を確かめる書き方です。 社内の手順書に書くときは、自分の Word のリボンにどちらの名前で出ているかを確かめてから書きます。</p>
+    <p>申請書の様式によっては、欄がテキスト ボックスで作られていたり、注記が脚注になっていたりすることがあります。テキスト ボックスや脚注を合計に含めるかどうかは詳しい画面で決める、というのがヘルプの書き方なので、様式の作りが分からないときは、選んで数えた数と詳しい画面の数を見比べてから書き留めます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．数える前にそろえておくこと</h2>
+    <ul>
+      <li>見出しや「（400字以内）」などの注記まで選ばない：欄の本文だけを選びます。</li>
+      <li>選び直したら数も変わる：数を書き留めるのは、文章を直し終えてからにします。</li>
+      <li>提出先の数え方を確かめる：句読点や空白を字数に入れるかどうかは、提出先の決まりによります。Word の数と提出先の数え方が合っているかは、募集要項で確かめます。</li>
+    </ul>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．Mac 版と Web 用 Word では入口が違う</h2>
+    <p>同じヘルプでも、Mac のタブと Web のタブでは書かれている操作が変わります。Windows 版の手順をそのまま伝えると迷う人が出るので、分けて押さえます。</p>
+    <ul>
+      <li>Mac 版：ステータス バーの単語数をクリックすると［Word カウント］ボックスが開き、文字数、行、段落などを見られます。 テキストを選んでいないときは、文書のすべてのテキストと文字が数えられ、統計としてボックスに出ます。 一部だけを数えたいときは、その文章を選んでから［ツール］メニューの［文字カウント］をクリックします。</li>
+      <li>Web 用 Word：デスクトップの Word と同じように、入力しながら単語を数えています。 画面の下に数が出ていないときは、［編集］ビューになっているかを確かめます。 ［編集］ビューにするには、［ドキュメントの編集］をクリックし、続けて Web の Word で［編集］をクリックします。 画面の下の文字カウントは、クリックするたびに表示と非表示が切り替わります。</li>
+    </ul>
+    <p>たとえば、共有フォルダーの申請書の下書きを、総務の人は Windows の Word、営業の人は出先でブラウザーから開いて直す、という場面を考えます（架空の例）。ブラウザーで開いた人が閲覧の画面のままだと、下に数が出ないまま「字数は見当たらない」となりがちです。誰がどの画面で数えるのかを先に決め、Web で開く人には［編集］ビューに切り替えてから数えるよう一言添えておくと、確認の行き違いが減ります。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．文書全体の数を本文の中に表示しておく方法</h2>
+    <p>欄ごとの字数とは別に、文書全体の数を本文の中に書いておきたいときは、フィールドを使う方法が別のヘルプに載っています。Word では、文書に文字数を挿入し、必要に応じてその情報を何度でも更新できます。 手順は、数を表示したい位置を選び、［クイック パーツ］からフィールドの挿入を開いて、［フィールドの名前］の一覧で［NumWords］を選び、［OK］を選ぶ流れです。 文章を直したあとは、フィールドを追加した位置を右クリックして［フィールド更新］を選びます。 印刷のたびに新しい数にしたいなら、［ファイル］→［オプション］→［表示］の［印刷オプション］で［印刷前にフィールドを更新する］を選びます。 このページの適用先は、Word for Microsoft 365、Word 2024、Word 2021、Word 2019、Word 2016 です。 ここで入るのは文書全体の数で、選んだ欄だけの数ではありません。欄ごとの字数は、ここまでの節のとおり選んで数えます。</p>
+  </div></section>
+
+  <section class="sec" id="s7" aria-labelledby="s7-title"><div class="wrap">
+    <h2 class="h2" id="s7-title">7．欄ごとに字数を残しておく（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">欄</th><th scope="col">決まった字数</th><th scope="col">選んで数えた結果</th><th scope="col">直したこと</th></tr></thead><tbody><tr><td data-label="欄">事業の概要</td><td data-label="決まった字数">400字以内</td><td data-label="選んで数えた結果">412字</td><td data-label="直したこと">前置きの一文を削った</td></tr><tr><td data-label="欄">取り組みの内容</td><td data-label="決まった字数">800字以内</td><td data-label="選んで数えた結果">765字</td><td data-label="直したこと">そのまま</td></tr><tr><td data-label="欄">期待する変化</td><td data-label="決まった字数">300字以内</td><td data-label="選んで数えた結果">298字</td><td data-label="直したこと">そのまま</td></tr></tbody></table></div>
+    <p>表の「選んで数えた結果」には、ステータス バーに出た数をそのまま書きます。提出先の数え方に合わせて数え直したときは、その数え方も横に書いておくと、あとで別の人が見直すときに迷いません。</p>
+    <p>字数を数えて直す作業は、締め切り前にまとめてやると時間がかかります。書類作りの流れの中で、どこで数えるかを決めておくと楽になります。申請書のように字数の決まった書類が多いなら、どの書類のどの欄をいつ数えるかを、<a href="/office-inventory">事務の道具と作業の棚卸し</a>の要領で一覧にしておく方法もあります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">8．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">数えたい欄の本文だけを選んだか（見出しや注記を含めていないか）</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ステータス バーの、選んだ部分の数を読んだか（文書全体の数と取り違えていないか）</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">文字数・段落数・行数が要るときは、文字カウントをクリックしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">テキスト ボックスや脚注のある様式では、詳しい画面で合計に含めるかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">提出先の数え方（句読点や空白の扱い）を募集要項で確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">直し終えたあとに数え直したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">Mac 版の人には［ツール］メニューの［文字カウント］を、Web で開く人には［編集］ビューを案内したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">本文に入れた数のフィールドは、直したあとに［フィールド更新］をしたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">9．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/word/training/show-word-count" rel="noopener" target="_blank">単語数を表示する（Microsoft サポート）</a>：適用先、Windows のタブ：ステータス バーでの確認、選択した部分と文書全体の表示、文字カウントのクリック、macO</li>
+      <li><a href="https://support.microsoft.com/ja-jp/office/017e8d0b-03f8-4438-b4ca-d771af50339f" rel="noopener" target="_blank">文字カウント（Microsoft サポート）</a>：適用先、Microsoft 365 のタブ：左下隅のステータス バー・詳細とテキスト ボックスや脚注を合計に含める画面・</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/use-fields-to-insert-word-count-in-your-document" rel="noopener" target="_blank">フィールドを使用して文書に文字カウントを挿入する（Microsoft サポート）</a>：適用先、文字数の挿入と更新、［NumWords］、［フィールド更新］、［印刷前にフィールドを更新する］</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/google-docs-word-count-range">Googleドキュメントで案内文の文字数と数える範囲を確認するには</a></li>
+      <li><a href="/column/word-update-fields-before-print">Wordの「印刷前にフィールドを更新」で古い表示を直す設定と確認</a></li>
+      <li><a href="/column/word-paste-formatting-options">Wordへ文章を貼ると字体が変わるときの書式の選び方と確認手順</a></li>
+      <li><a href="/column/word-ruby-furigana-guest-company-names">Wordのルビで社名や人名にふりがなを付けるには</a></li>
+      <li><a href="/column/word-dark-mode-white-page-background">Wordのダーク モードで黒くなった用紙を白く表示するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copilot Chatの「クラウド ファイルの添付」で試す資料を指定するには｜Vaynexis</title>
+  <meta name="description" content="職場のアカウントの Microsoft Copilot Chat で AI の使い方を試すとき、どの資料をもとに答えさせるかを自分で決めておくと、答えの確かめ方がはっきりします。［クラウド ファイルの添付］や「/」で OneDrive などのファイルを指定する手順、ライセンスの有無で変わる範囲、試す資料の選び方を、公式ヘルプと当社の見方に分けて整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Copilot Chatの「クラウド ファイルの添付」で試す資料を指定するには｜Vaynexis">
+  <meta property="og:description" content="職場のアカウントの Microsoft Copilot Chat で AI の使い方を試すとき、どの資料をもとに答えさせるかを自分で決めておくと、答えの確かめ方がはっきりします。［クラウド ファイルの添付］や「/」で OneDrive などのファイルを指定する手順、ライセンスの有無で変わる範囲、試す資料の選び方を、公式ヘルプと当社の見方に分けて整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/copilot-chat-attach-cloud-files-trial">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/copilot-chat-attach-cloud-files-trial">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Copilot Chatの「クラウド ファイルの添付」で試す資料を指定するには","description":"職場のアカウントの Microsoft Copilot Chat で AI の使い方を試すとき、どの資料をもとに答えさせるかを自分で決めておくと、答えの確かめ方がはっきりします。［クラウド ファイルの添付］や「/」で OneDrive などのファイルを指定する手順、ライセンスの有無で変わる範囲、試す資料の選び方を、公式ヘルプと当社の見方に分けて整理します。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/copilot-chat-attach-cloud-files-trial"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"AI導入・相談先・補助金","item":"https://vaynexis.jp/column/topics/ai-adoption"},{"@type":"ListItem","position":4,"name":"Copilot Chatの「クラウド ファイルの添付」で試す","item":"https://vaynexis.jp/column/copilot-chat-attach-cloud-files-trial"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/ai-adoption">AI導入・相談先・補助金</a></li><li aria-current="page">Copilot Chatの「クラウド ファイルの添付」で試す</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Copilot Chatの「クラウド ファイルの添付」で試す資料を指定するには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>OneDrive などのクラウドにあるファイルを Copilot Chat の依頼文に添えるには、［クラウド ファイルの添付］を選びます。ファイルだけでなく、フォルダー全体を添付することもできます。 入力欄に「/」と打ってファイル名を入れ、出てきた候補から選ぶ方法もあります。 AI の使い方を社内で試す段階では、Copilot に資料を探させるのではなく、試す資料をこちらで1〜2点に絞って渡すと、答えのどこが資料に基づくのかを確かめやすくなります。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>Copilot Chat を社内で試してみたものの、答えがどの資料をもとにしているのか分からず、良し悪しを判断しにくい。試す資料を自分で選んで添付する方法と、ライセンスの有無で変わる範囲、渡す前に見るファイルの形と権限を確かめます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">試す資料の選び方の表や依頼文の例は、中小企業の試行を想定して当社が作った架空のもので、Microsoft の案内そのものとは分けてお読みください。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">誰が、どの画面で使うか</a></li>
+      <li><a href="#s2">資料を渡す3つの方法</a></li>
+      <li><a href="#s3">渡す前に、ファイルの形と権限を見る</a></li>
+      <li><a href="#s4">試す資料をどう選ぶか（当社の見方）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．誰が、どの画面で使うか</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、職場または学校のアカウントでサインインして使う Microsoft Copilot Chat です。職場または学校のアカウントでは、Copilot Chat は Web だけでなく、チャット、メール、ファイルなど組織のデータを使います。 Copilot の新しいホームは展開中のため、表示がヘルプの説明と違う場合がある、と注記されています。</p>
+    <p>参照できる範囲は、Microsoft Copilot のライセンスの有無で変わります。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">使っている人</th><th scope="col">ヘルプの説明（要約）</th></tr></thead><tbody><tr><td data-label="使っている人">Microsoft Copilot のライセンスがある人</td><td data-label="ヘルプの説明（要約）">Work IQ がオンのとき、ファイルへのリンクのほか、人、予定表の会議、メールなども参照できる</td></tr><tr><td data-label="使っている人">ライセンスがない人（Copilot Chat の利用者）</td><td data-label="ヘルプの説明（要約）">参照できるのはファイルだけ</td></tr></tbody></table></div>
+    <p></p>
+    <p>ライセンスがない人でも、IT 管理者が許可していれば、Copilot は Web で公開されている情報を参照できます。 自分の画面で何が使えるかは、ライセンスと会社の設定によって違うため、画面に出ない項目は社内の管理者に確かめます。社内資料の参照そのものを止める切り替え（Work IQ）は、ここでは扱いません。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．資料を渡す3つの方法</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">方法</th><th scope="col">操作</th><th scope="col">向いている場面（架空の例）</th></tr></thead><tbody><tr><td data-label="方法">クラウド ファイルの添付</td><td data-label="操作">［OneDrive］のアイコンの［クラウド ファイルの添付］を選ぶ</td><td data-label="向いている場面（架空の例）">試す資料をまとめたフォルダーごと渡す</td></tr><tr><td data-label="方法">「/」で指定</td><td data-label="操作">「/」と打ってファイル名を入力し、候補から選ぶ</td><td data-label="向いている場面（架空の例）">名前の分かっている1つのファイルを渡す</td></tr><tr><td data-label="方法">手元のファイルのアップロード</td><td data-label="操作">作成ボックスのプラスのアイコンから画像やファイルをアップロードする</td><td data-label="向いている場面（架空の例）">まだクラウドに置いていない資料を渡す</td></tr></tbody></table></div>
+    <p></p>
+    <p>ヘルプには、「/」を打つ以外に、コピー アンド ペーストやドラッグ アンド ドロップでファイルを参照できるとも書かれています。 手元のファイルをアップロードした場合は、選んだファイルのコピーが OneDrive に保存されます。 社外秘の資料を試しに上げると、自分の OneDrive に写しが残ることになるので、後で消すかどうかも決めておきます。</p>
+    <p>候補に出てくるファイルは、OneDrive for Business で最近アップロードしたり、開いたり、変更したり、共有したりしたものなどの動きをもとに選ばれます。ヘルプでは、こうした操作の数分後に使えるようになる、と説明されています。 保存したばかりのファイルが候補に出ないときは、少し待ってから探し直します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．渡す前に、ファイルの形と権限を見る</h2>
+    <p>職場および学校の Copilot（ライセンスあり）で使えるファイル形式は、ヘルプに一覧があります。文書は .docx、.doc、.pdf、.txt など、表計算は .xlsx、.xls、.csv などです。 形式が合わないときは、Word の .doc を .docx として保存し直すなど、使える形式に変えるよう勧めています。</p>
+    <p>ファイルへのアクセス許可がない場合や、アクセスが制限されている場合は、Copilot がアップロードを止めることがあります。 渡せないからといって、ファイルの共有の設定を広げて回避するのは避けます。試すために権限を変えるかどうかは、資料の持ち主と相談して決めることです。</p>
+    <p>長い文書や大きな PDF、数式の多い表は、小さく分けて別々に渡すことも勧められています。 SharePoint のサイトを選んだ場合は、サイトの中で参照できるのは最大 10 個のファイルまたはページです。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．試す資料をどう選ぶか（当社の見方）</h2>
+    <p>業務の棚卸しを終えた中小企業が、AI を試す場面を考えます。ライセンスがあり、特定のファイルを指定しない場合、Copilot は応答に最適なデータ ソースを自分で選びます。 便利な反面、試した結果を見比べるときに「どの資料を見て答えたのか」が分かりにくくなります。試す段階では、資料を明示して渡すほうが、答えを確かめる手間が少なくて済みます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">試すこと（架空の例）</th><th scope="col">渡す資料</th><th scope="col">答えを確かめる人</th></tr></thead><tbody><tr><td data-label="試すこと（架空の例）">受注の手順書の抜けを洗い出す</td><td data-label="渡す資料">受注の手順書（Word）1点</td><td data-label="答えを確かめる人">受注の担当者</td></tr><tr><td data-label="試すこと（架空の例）">よくある問い合わせへの答え方の案を作る</td><td data-label="渡す資料">過去の問い合わせの一覧（Excel）と回答の決まり（Word）</td><td data-label="答えを確かめる人">窓口の担当者</td></tr><tr><td data-label="試すこと（架空の例）">棚卸しの聞き取りメモを表にまとめる</td><td data-label="渡す資料">聞き取りメモのフォルダー</td><td data-label="答えを確かめる人">聞き取りをした人</td></tr></tbody></table></div>
+    <p>依頼文も、資料と同じくらい大切です。ヘルプでは、必要なものを明確、簡潔、具体的に示すよう勧めています。 また、よい依頼文にはふつう、目標、対象、詳細、データの要素が含まれる、と表で示されています。 添付した資料は、このうちの「データ」にあたります。たとえば「添付した受注の手順書を読み、新しく入った人がつまずきそうな所を、手順の番号つきで挙げてください。手順書に書かれていないことは推測せず、分からないと書いてください」のように、目標と答え方の条件を添えます。</p>
+    <p>渡した資料の名前と、依頼した文、確かめた人を短く記録しておくと、次に同じことを試すときに条件をそろえられます。資料をそろえて小さく試し、続けるかどうかを決めていく進め方は、<a href="/ai">AI 導入の相談</a>のページでも紹介しています。</p>
+    <p>ヘルプには、Copilot で問題が起きる場合があるため、生成された内容を確かめることが大切だと書かれています。 資料に書かれていないことを答えていないか、資料の古い版を見ていないかを、担当者が原本と照らして確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">自分のアカウントにライセンスがあるか、参照できるのがファイルだけかを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">試す資料を1〜2点（または1つのフォルダー）に絞ったか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［クラウド ファイルの添付］か「/」で、資料を明示して渡したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">手元のファイルを上げた場合、OneDrive に残る写しの扱いを決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ファイル形式が使えるものかを見たか（.doc は .docx に保存し直すなど）</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">渡せない資料の共有の設定を、自分の判断で広げていないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">渡した資料・依頼した文・確かめた人を記録したか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat" rel="noopener" target="_blank">Microsoft Copilot Chatを探索する（Microsoft サポート）</a>：職場のアカウントで使うデータ、ホームの展開中の注記、資料を指定しない場合のデータ ソース、依頼文の書き方、生成内容の確認</li>
+      <li><a href="https://support.microsoft.com/ja-jp/microsoft-365-copilot/refer-to-specific-files-and-more-in-microsoft-365-copilot" rel="noopener" target="_blank">Microsoft Copilot で特定のファイルなどを参照する（Microsoft サポート）</a>：クラウド ファイルの添付、「/」での指定、ライセンスの有無で変わる範囲、Web の参照、コピーとドラッグ、アップロードの</li>
+      <li><a href="https://support.microsoft.com/ja-jp/microsoft-365-copilot/file-formats-supported-by-microsoft-365-copilot" rel="noopener" target="_blank">Microsoft Copilot でサポートされているファイル形式（Microsoft サポート）</a>：職場・学校の形式の一覧、形式の変換、アクセス許可、大きなファイルの分割</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/copilot-chat-work-iq-off">Copilot ChatのWork IQで社内資料の参照を止めるには</a></li>
+      <li><a href="/column/m365-copilot-premium-license-label">M365 Copilot (プレミアム)の確認場所と表示の読み方</a></li>
+      <li><a href="/column/copilot-web-search-bing-dpa">CopilotのWeb検索でBingへ送るデータとDPAの範囲</a></li>
+      <li><a href="/column/copilot-pages-open-in-word-report-draft">Copilot ページの「Word を開く」で報告書の案を Word へ渡すには</a></li>
+      <li><a href="/column/cybersecurity-management-guideline-consultant-scope">サイバーセキュリティ経営ガイドラインで相談先の担当範囲を聞くには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

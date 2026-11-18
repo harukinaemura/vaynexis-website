@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新しいOutlookの通知で新着メールのポップアップを止めるには｜Vaynexis</title>
+  <meta name="description" content="会議で画面を映している最中や、窓口で来客の対応をしている間に、新着メールの差出人と件名が画面の隅に出てしまう。新しい Outlook for Windows の［通知］で、メールの通知だけを切る手順と、予定表の通知との分け方、止めた後に戻すときの確認先を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="新しいOutlookの通知で新着メールのポップアップを止めるには｜Vaynexis">
+  <meta property="og:description" content="会議で画面を映している最中や、窓口で来客の対応をしている間に、新着メールの差出人と件名が画面の隅に出てしまう。新しい Outlook for Windows の［通知］で、メールの通知だけを切る手順と、予定表の通知との分け方、止めた後に戻すときの確認先を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/outlook-new-mail-notification-popup-off">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/outlook-new-mail-notification-popup-off">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"新しいOutlookの通知で新着メールのポップアップを止めるには","description":"会議で画面を映している最中や、窓口で来客の対応をしている間に、新着メールの差出人と件名が画面の隅に出てしまう。新しい Outlook for Windows の［通知］で、メールの通知だけを切る手順と、予定表の通知との分け方、止めた後に戻すときの確認先を、Microsoft の公式ヘルプに沿って整理します。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/outlook-new-mail-notification-popup-off"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Outlookの設定","item":"https://vaynexis.jp/column/topics/outlook"},{"@type":"ListItem","position":4,"name":"新しいOutlookの通知で新着メールのポップアップを止める","item":"https://vaynexis.jp/column/outlook-new-mail-notification-popup-off"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/outlook">Outlookの設定</a></li><li aria-current="page">新しいOutlookの通知で新着メールのポップアップを止める</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">新しいOutlookの通知で新着メールのポップアップを止めるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>新しい Outlook では、［表示］で［表示の設定］を選び、［全般］、［通知］の順に開いて、［自分について通知する］の［メール］の切り替えをオフにします。 同じ場所に［Calendar］と［ドキュメント］の切り替えも並んでいるので、メールだけを止めて、会議の通知は残すこともできます。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>画面を映して説明している最中に、届いたメールの差出人と件名が右下に出てしまう。新しい Outlook でメールの通知だけを切り、予定表の通知は残す設定と、戻したのに出ないときの確認先を見ていきます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">場面ごとの決め方の表は架空の例で、受信トレイを見る時刻の決め方や確認表も当社の整理であり、Microsoft の手順として示されたものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">画面の隅に出ているのは何か</a></li>
+      <li><a href="#s2">メールの通知だけを切る手順</a></li>
+      <li><a href="#s3">メールと予定表を分けて考える</a></li>
+      <li><a href="#s4">Outlook の中で止めるか、Windows の側で止めるか</a></li>
+      <li><a href="#s5">あとで通知を戻したのに出ないとき</a></li>
+      <li><a href="#s6">場面ごとの決め方（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．画面の隅に出ているのは何か</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、Windows のパソコンで使う新しい Outlook for Windows です。クラシック Outlook は［ファイル］の［オプション］、［メール］から設定する別の手順で、ここでは扱いません。</p>
+    <p>Microsoft のヘルプでは、新しいメールや会議出席依頼、タスクの依頼を受け取ったときにデスクトップに表示されるものを「デスクトップ通知」と呼び、既定では有効だと説明しています。 メールの場合は、送信者の名前、件名、メッセージの最初の 2 行が表示されます。</p>
+    <p>本文の書き出しまで出るので、画面を共有している場面では、社外秘の連絡や個人の名前が参加者の目に入るおそれがあります。なお、暗号化またはデジタル署名されたメッセージの内容は、デスクトップ通知には表示されないと書かれています。 普段のメールはそうではないので、通知そのものを止めるかどうかを、使う場面で決めます。</p>
+    <p>一覧に並ぶメールの本文の書き出しを隠したいのであれば、それは通知ではなく、メッセージ一覧の表示の設定です。公開済みの別の記事で扱っているため、ここでは画面の隅に出るポップアップに絞ります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．メールの通知だけを切る手順</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">操作</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="操作">新しい Outlook を開く</td></tr><tr><td data-label="順番">2</td><td data-label="操作">［表示］で［表示の設定］を選ぶ</td></tr><tr><td data-label="順番">3</td><td data-label="操作">［全般］、［通知］の順に選ぶ</td></tr><tr><td data-label="順番">4</td><td data-label="操作">［自分について通知する］で、［メール］の切り替えをオフにする</td></tr></tbody></table></div>
+    <p></p>
+    <p>ヘルプの新しい Outlook のタブには、この手順が機能していない場合は、まだ新しい Outlook for Windows を使っていない可能性がある、という注意があります。 メニューに［表示の設定］が見当たらないときは、使っている Outlook がクラシック Outlook でないかを先に確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．メールと予定表を分けて考える</h2>
+    <p>［自分について通知する］には、［メール］、［Calendar］、［ドキュメント］の3つの切り替えがあります。 来客の対応や電話の取り次ぎで席を離れがちな人は、メールの通知を切っても、会議の開始を知らせる予定表の通知まで切ると、次の打ち合わせに遅れかねません。困っているのが新着メールのポップアップだけなら、［メール］だけをオフにして、［Calendar］は残す、という分け方が無理のない選び方です。</p>
+    <p>反対に、音だけが気になる場合は、通知を止めずに音を変える方法もあります。新しい Outlook では通知のカスタム サウンドを設定できるようになったと書かれていて、［メール］の［New Email and Reactions］の［Play Sound］から音を選びます。 静かな事務所で着信音が響くのが気になる、という悩みなら、通知を切る前にこちらを試す手もあります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．Outlook の中で止めるか、Windows の側で止めるか</h2>
+    <p>通知は、Outlook の設定と Windows の設定の両方を通って表示されます。ヘルプは、Outlook で通知を有効にしているのに新しいメッセージの通知が出ない場合は、Windows の設定で Outlook の通知も有効になっているかを確かめるよう案内しています。 Windows の側では、［システム&gt;通知］の［アプリやその他の送信者からの通知］で［Outlook］を選んで確かめます。</p>
+    <p>Windows の側で Outlook の通知を切ると、メールだけでなく、Outlook から出る通知がまとめて止まると考えておくのが安全です。メールのポップアップだけを止めたいなら、まず Outlook の中の［メール］の切り替えを使い、Windows の側は触らない、という順番にしておくと、予定表の通知まで消える思わぬ事態を避けられます。Windows の通知の設定そのものは、公開済みの Windows の記事で扱っています。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．あとで通知を戻したのに出ないとき</h2>
+    <p>会議が終わって［メール］の切り替えをオンに戻したのに、通知が出ない場合もあります。新しい Outlook の通知のトラブルのヘルプでは、システムの設定が通知の配信を妨げることがあるとして、いくつかの確認先を挙げています。</p>
+    <p>1つは Teams の状態で、応答不可に設定されていないことを確かめます。 Windows の［応答不可］がオフになっているかも確かめます。 ノート パソコンでは、バッテリー節約モードのときに通知が一時的に無効になることがあると書かれています。 会社のパソコンなら、システム管理者が通知をオフにしている場合もあるため、切り替えが選べないときは社内の担当者に聞きます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．場面ごとの決め方（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">場面（架空の例）</th><th scope="col">困ること</th><th scope="col">決めた設定</th></tr></thead><tbody><tr><td data-label="場面（架空の例）">経理が月末に画面を映して説明する</td><td data-label="困ること">取引先からのメールの件名と書き出しが映る</td><td data-label="決めた設定">［メール］だけオフ、［Calendar］は残す</td></tr><tr><td data-label="場面（架空の例）">受付の机で来客と画面を見る</td><td data-label="困ること">社員あての連絡が表示される</td><td data-label="決めた設定">［メール］をオフにし、受信トレイは決めた時刻に開く</td></tr><tr><td data-label="場面（架空の例）">静かな事務所で一人で作業する</td><td data-label="困ること">着信の音が気になる</td><td data-label="決めた設定">通知は残し、［Play Sound］で音を変える</td></tr></tbody></table></div>
+    <p>メールの通知を切ると、急ぎのメールに気づくのが遅れます。切るなら「10時と14時に受信トレイを見る」のように見る時刻を決め、急ぎの連絡は電話かチャットでもらう、と周りに伝えておきます。こうした小さな設定の違いは、担当者ごとにばらばらになりやすいものです。パソコンの設定や事務の道具の使い方をそろえるときは、<a href="/office-inventory">事務の道具と作業の棚卸し</a>の考え方も使えます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">使っているのが新しい Outlook（［表示］に［表示の設定］がある）か確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［全般］→［通知］→［自分について通知する］で、［メール］だけをオフにしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">会議の通知が要る場合、［Calendar］をオンのまま残したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">音だけが気になる場合は、通知を止めずに［Play Sound］で音を変えることを考えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">Windows の側の Outlook の通知は、必要がなければ触らないでおいたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">戻したのに出ないとき、Teams の状態、Windows の応答不可、バッテリー節約モードを見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">通知を切った後の、受信トレイを見る時刻を決めて周りに伝えたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/outlook/getstarted/turn-new-message-alert-pop-up-on-or-off-in-outlook" rel="noopener" target="_blank">Outlook で新着メッセージ通知ポップアップのオンとオフを切り替える（Microsoft サポート）</a>：デスクトップ通知の説明と表示内容、Windows の通知設定（タブの前の共通部分）、新しい Outlook のタブの通知</li>
+      <li><a href="https://support.microsoft.com/ja-jp/outlook/getstarted/outlook-notifications-aren-t-working" rel="noopener" target="_blank">Outlook の通知が機能しない（Microsoft サポート）</a>：新しい Outlook for Windows で通知が出ないときの Teams の状態、Windows の応答不可、バ</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/windows-disable-app-banners">Windowsの通知で特定アプリのバナーだけ止める手順と確認点</a></li>
+      <li><a href="/column/outlook-new-hide-message-preview">新しいOutlookの「メッセージ プレビュー」で本文を隠すには</a></li>
+      <li><a href="/column/outlook-visit-reminder-timing">Outlookで重要な訪問予定の通知時刻を変える手順と確認点</a></li>
+      <li><a href="/column/outlook-new-unblock-sender-junk-safe-list">新しいOutlookの受信拒否リストから取引先を外すには</a></li>
+      <li><a href="/column/outlook-new-rules-fix-wrong-folder-conditions">Outlookで誤って振り分けるルールの条件を直すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

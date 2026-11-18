@@ -4,406 +4,406 @@
   <link href="https://vaynexis.jp/column/feed.xml" rel="self"/>
   <link href="https://vaynexis.jp/column"/>
   <id>https://vaynexis.jp/column</id>
-  <updated>2026-11-17T00:00:00+09:00</updated>
+  <updated>2026-11-18T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
   <entry>
-    <title>電子契約やPDFの契約書に収入印紙は要る？不要とされる理由と紙の正本の扱い</title>
-    <link href="https://vaynexis.jp/column/revenue-stamp-electronic-contract-pdf"/>
-    <id>https://vaynexis.jp/column/revenue-stamp-electronic-contract-pdf</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>電子契約や、PDF にした契約書をメールでやり取りするとき、収入印紙を貼らない扱いはどの考え方に基づくのか。印紙税法基本通達の「作成」の意味、福岡国税局の文書回答事例、国税庁の解説の原文に沿って整理し、紙の正本を別に渡すと扱いが変わる点と、社内で決めておくことを確かめます。</summary>
+    <title>返品依頼書には何を書く？納品番号・対象品・返送数量と、元の納品日の欄</title>
+    <link href="https://vaynexis.jp/column/return-request-form-original-delivery-date-fields"/>
+    <id>https://vaynexis.jp/column/return-request-form-original-delivery-date-fields</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>納品された品物を送り返すときに取引先へ出す「返品依頼書」に、どんな欄を設けるかを整理します。国税庁のインボイス制度の Q&amp;A にある適格返還請求書の記載事項と、公正取引委員会が示す取適法の返品の禁止を手がかりに、元の納品日や返品の理由の欄がなぜ要るのかを確かめます。</summary>
   </entry>
   <entry>
-    <title>特定親族特別控除の年末調整、令和8年分は会社が何を確かめる？</title>
-    <link href="https://vaynexis.jp/column/specific-relative-special-deduction-year-end-2026"/>
-    <id>https://vaynexis.jp/column/specific-relative-special-deduction-year-end-2026</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>19歳以上23歳未満の子などに収入がある従業員から特定親族特別控除申告書を受け取ったとき、令和8年分の年末調整で会社が確かめる年齢と所得の範囲、12月1日に施行される改正の扱い、扶養控除との振り分け、源泉徴収簿と源泉徴収票への写し方を、国税庁の案内に沿って整理します。</summary>
+    <title>交通費申請書には何を書く？利用日・区間・片道往復と、帳簿に写す項目</title>
+    <link href="https://vaynexis.jp/column/transport-expense-claim-form-fields-fare-under-30000"/>
+    <id>https://vaynexis.jp/column/transport-expense-claim-form-fields-fare-under-30000</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>取引先回りや銀行への移動で使った電車代・バス代を精算する「交通費申請書」に、どんな欄を設けるかを整理します。国税庁のインボイス制度の Q&amp;A にある、3万円未満の公共交通機関の特例の判定単位と、帳簿のみの保存のときに帳簿へ書く事項を手がかりに、欄の意味を確かめます。</summary>
   </entry>
   <entry>
-    <title>転記作業とは？減らす前に、どこからどこへ写しているかを一覧にする</title>
-    <link href="https://vaynexis.jp/column/manual-data-transfer-work-inventory"/>
-    <id>https://vaynexis.jp/column/manual-data-transfer-work-inventory</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>紙の注文書や別のシステムの画面にある内容を、会計ソフトや Excel へ写し直す転記作業。自動化の道具を探す前に、転記元・転記先・写す項目・件数を一覧にし、なくせるもの・入口をまとめられるもの・道具に任せられるもの・人が残すものに分ける手順を、国税庁・中小企業庁・総務省の公式資料に沿って整理します。</summary>
+    <title>出張申請書には何を書く？目的・行き先・日程と概算費用の欄</title>
+    <link href="https://vaynexis.jp/column/business-trip-request-form-fields"/>
+    <id>https://vaynexis.jp/column/business-trip-request-form-fields</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>出張に出る前に会社の承認をもらう「出張申請書」に、どんな欄を設けるかを整理します。国税庁の所得税基本通達9-3が旅費の範囲を見るときに挙げる、旅行の目的・目的地・行路・期間・宿泊の要否・職務内容などの観点と欄を対応させ、概算費用を旅費の規程に照らす意味、帰着後の精算の書類との分け方まで確かめます。</summary>
   </entry>
   <entry>
-    <title>Edgeの「拡張機能の管理」で勝手にオフになった機能を見るには</title>
-    <link href="https://vaynexis.jp/column/edge-extensions-turned-off"/>
-    <id>https://vaynexis.jp/column/edge-extensions-turned-off</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>入れたはずの拡張機能が、Microsoft Edge でいつの間にかオフになっていたときの見方です。Edge が拡張機能を自動でオフにする理由、［拡張機能の管理］で確かめる道順、オンに戻す前に考えることを、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>注文請書には何を書く？注文書と照らす欄と、印紙税で確かめること</title>
+    <link href="https://vaynexis.jp/column/order-acceptance-form-fields-stamp-duty"/>
+    <id>https://vaynexis.jp/column/order-acceptance-form-fields-stamp-duty</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>取引先から注文書が届き、受けた側として注文請書を返すときに、どの欄を設け、注文書のどこと照らし合わせるかを整理します。あわせて、注文請書が印紙税の「請負に関する契約書」に当たるかを国税庁の説明で確かめる見方と、金額欄で消費税額等を分けて書く意味、取適法の発注内容の明示との関係もまとめます。</summary>
   </entry>
   <entry>
-    <title>Googleフォームの「解答にフィードバックを追加」はどこ？</title>
-    <link href="https://vaynexis.jp/column/google-forms-answer-feedback"/>
-    <id>https://vaynexis.jp/column/google-forms-answer-feedback</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Google フォームで社内の確認テストを作るとき、間違えた人に「なぜ違うのか」を書き添える［解答にフィードバックを追加］の場所と使い方です。前もって質問ごとに書いておく解説と、回答が届いた後に一人ずつ添えるフィードバックの違い、回答する人に見せる項目の設定を、Google の公式ヘルプに沿って整理します。</summary>
+    <title>料金後納承認請求書の書き方は？差出開始予定年月日と1か月の差出予定通（個）数の欄</title>
+    <link href="https://vaynexis.jp/column/japanpost-deferred-payment-approval-request-fields"/>
+    <id>https://vaynexis.jp/column/japanpost-deferred-payment-approval-request-fields</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>郵便の料金を月ごとにまとめて払う料金後納を新しく申し込むときの「料金後納承認請求書」を、日本郵便の記載例の8つの欄に沿って読み解きます。差出開始予定年月日、1か月の差出予定回数・通（個）数と概算額、支払方法と承認書の受け取り方、法人印や本人等確認書類まで、提出前にそろえる情報をまとめます。</summary>
   </entry>
   <entry>
-    <title>Googleフォームの「ヘッダー」で先頭の画像を変えるには</title>
-    <link href="https://vaynexis.jp/column/google-forms-header-image"/>
-    <id>https://vaynexis.jp/column/google-forms-header-image</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>説明会や見学会の申込みフォームの先頭の画像を、今回の催しに合うものへ入れ替えたいときに、Google フォームの［テーマをカスタマイズ］から［ヘッダー］の画像を替える手順です。画像を取ってくる場所ごとの操作、見せたい所が切れるときの位置の変え方、画像を選ぶときに社内で確かめることを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>e内容証明の再度証明はどこから請求する？謄本をなくしたとき</title>
+    <link href="https://vaynexis.jp/column/japanpost-e-content-certified-copy-reissue"/>
+    <id>https://vaynexis.jp/column/japanpost-e-content-certified-copy-reissue</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>e内容証明で差し出した文書の謄本が見当たらない、または取引先に渡すためにもう1通ほしいときの「再度証明」の請求先を、日本郵便の操作マニュアル（ご利用の手引き）と案内ページに沿って整理します。Web の会員専用メニューから請求する順番、書留引受番号の役目、会員情報が消えた後の窓口での請求、5年という期限まで確かめます。</summary>
   </entry>
   <entry>
-    <title>Googleフォームの「説明」で質問に注意書きを添えるには</title>
-    <link href="https://vaynexis.jp/column/google-forms-question-description"/>
-    <id>https://vaynexis.jp/column/google-forms-question-description</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>申込みフォームで「電話番号はハイフンなしで」「領収書の宛名は会社名で」のような一言を、その質問の［説明］欄に書いておく手順です。フォーム全体にかかる「タイトルと説明」と質問ごとの注意書きの分け方、説明に太字やリンクを付ける方法、書いた説明の直し方を、Google の公式ヘルプに沿って整理します。</summary>
+    <title>料金受取人払承認請求書の前に、返信用封筒の印刷見本は必要？</title>
+    <link href="https://vaynexis.jp/column/japanpost-business-reply-approval-print-sample"/>
+    <id>https://vaynexis.jp/column/japanpost-business-reply-approval-print-sample</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>アンケートや申込みの返信用封筒を料金受取人払にしたいとき、料金受取人払承認請求書と一緒に出す印刷見本の作り方を、日本郵便の案内ページと様式（Word 版）の備考に沿って整理します。見本に入れない承認番号、表示の枠や色、請求書の10の欄と概算額の考え方まで、印刷会社へ頼む前の確認点をまとめます。</summary>
   </entry>
   <entry>
-    <title>Edgeの「新しい InPrivate ウィンドウ」はどこで開く？</title>
-    <link href="https://vaynexis.jp/column/edge-inprivate-window-open"/>
-    <id>https://vaynexis.jp/column/edge-inprivate-window-open</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>共用のパソコンで閲覧の跡を残さずに調べものをしたいとき、Windows 版 Microsoft Edge で InPrivate ウィンドウを開く場所と、すべて閉じたときに消える物・残る物、職場や回線の側からは見えることを、Microsoft の日本語の公式ページに沿って整理します。</summary>
+    <title>レターパックの「ご依頼主様保管用シール」ははがして出す？お問い合わせ番号の残し方</title>
+    <link href="https://vaynexis.jp/column/japanpost-letterpack-sender-seal-tracking-number"/>
+    <id>https://vaynexis.jp/column/japanpost-letterpack-sender-seal-tracking-number</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>レターパックをポストへ入れる直前、「ご依頼主様保管用シール」をはがしてよいか迷ったときの答えと、はがしたシールのお問い合わせ番号を、宛先と組にして社内に残す方法を整理します。追跡できる期間や番号の入力の形、まとめて出す日の CSV の使い方まで、日本郵便の公式ページに沿ってまとめます。</summary>
   </entry>
   <entry>
-    <title>Googleカレンダーの「勤務場所」で在宅の日を示すには</title>
-    <link href="https://vaynexis.jp/column/google-calendar-working-location"/>
-    <id>https://vaynexis.jp/column/google-calendar-working-location</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>在宅勤務と出社が混ざる職場で、曜日ごとに「どこで働くか」を Google カレンダーに出しておき、会議の場所や時間を合わせやすくする手順です。［設定］の［業務時間と勤務場所］で曜日ごとに決める方法、特定の日や時間帯だけ変える方法、使えるための条件（対象のエディション、管理者の有効化、業務時間のオン）と、誰に見えるかを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Microsoft Formsの分岐の追加で不要な質問を飛ばすには</title>
+    <link href="https://vaynexis.jp/column/microsoft-forms-add-branching-skip-questions"/>
+    <id>https://vaynexis.jp/column/microsoft-forms-add-branching-skip-questions</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>社内アンケートや申し込みのフォームで、答えによって関係のない質問を飛ばしたいときに使う、Microsoft Forms の［分岐の追加］の手順です。Google フォームのセクションの分岐とは別の道具の話として、回答ごとの分岐先の選び方、前の質問へは戻せない制約、セクションとの組み合わせ、プレビューでの確かめ方を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Googleスライドの「リンク」で文字からサイトへ飛ぶには</title>
-    <link href="https://vaynexis.jp/column/google-slides-insert-link"/>
-    <id>https://vaynexis.jp/column/google-slides-insert-link</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Google スライドの提案資料や説明資料で、「お申込みはこちら」などの文字に会社のサイトやフォームの URL を付け、押すと開けるようにする手順です。［挿入］の［リンク］から付ける流れ、メールアドレスへのリンク、付けた後の変更・削除の仕方、グラフやスライドの「リンク」との違いを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>クラシックOutlookの作業時間で勤務日の開始時刻を直すには</title>
+    <link href="https://vaynexis.jp/column/outlook-classic-work-time-start-hour"/>
+    <id>https://vaynexis.jp/column/outlook-classic-work-time-start-hour</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>始業が10時に変わったのに、朝9時からの会議の依頼が届き続ける。クラシック Outlook の［オプション］の［予定表］にある［作業時間］で、勤務日の開始時刻と終了時刻、勤務する曜日を直す手順です。曜日ごとに時刻が違う人の扱いや、新しい Outlook の「作業時間と場所」との関係も、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Googleドライブの「コピーを作成」でフォルダも複製できる？</title>
-    <link href="https://vaynexis.jp/column/google-drive-make-copy-folder"/>
-    <id>https://vaynexis.jp/column/google-drive-make-copy-folder</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Google ドライブで、去年の案件フォルダを丸ごと複製して今年のひな形にしたいと考えたときに、［コピーを作成］で何ができて何ができないかを確かめる手引きです。ファイルを一つずつコピーする手順とキーボードでの複製、フォルダはコピーできない点、代わりに新しいフォルダへ移すまでの段取りとショートカットとの違いを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>新しいOutlookの休日で日本の祝日を予定表に追加するには</title>
+    <link href="https://vaynexis.jp/column/outlook-new-add-japan-holidays-calendar"/>
+    <id>https://vaynexis.jp/column/outlook-new-add-japan-holidays-calendar</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>新しい Outlook for Windows の予定表に、日本の祝日を［休日］から追加する手順です。Microsoft が既知の問題として公表している「2026 年後半から 2027 年の祝日が表示されない」件にも触れ、追加した後に内閣府の祝日の一覧と照らし合わせる見方と、要らなくなった休日カレンダーの外し方を、公式の情報に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Edgeの「キャッシュされた画像とファイル」だけ消すには</title>
-    <link href="https://vaynexis.jp/column/edge-clear-cached-images-files"/>
-    <id>https://vaynexis.jp/column/edge-clear-cached-images-files</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>社内のサイトや取引先のページが古い表示のまま変わらないとき、Microsoft Edge の閲覧データのうち「キャッシュされた画像とファイル」だけを選んで消す手順です。Cookie やパスワードまで一緒に消してサインインし直しになるのを避けるため、選ぶ項目・時間の範囲・同期の注意を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>クラシックOutlookの「添付ファイルとして転送」でメールを渡すには</title>
+    <link href="https://vaynexis.jp/column/outlook-classic-forward-email-as-attachment"/>
+    <id>https://vaynexis.jp/column/outlook-classic-forward-email-as-attachment</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>取引先とのやり取りを、本文に引用した転送ではなく、受け取ったメールそのままの形で上司や後任に渡したいときに使う、クラシック Outlook の［添付ファイルとして転送］の手順です。複数のメールを1通にまとめる方法、書きかけのメールに後から足す方法、送る前に見ることを、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Edgeの「Internet Explorer モード」で古い社内画面を開くには</title>
-    <link href="https://vaynexis.jp/column/edge-internet-explorer-mode"/>
-    <id>https://vaynexis.jp/column/edge-internet-explorer-mode</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Internet Explorer 向けに作られた古い社内の画面が Microsoft Edge で正しく動かないとき、Edge の Internet Explorer モード（IE モード）で開く手順です。会社が管理していない PC で Edge 141 以上を使う場合と、会社が管理している PC の場合とで手順が分かれる点、30日の期限、戻り方を、Microsoft の日本語の公式ページに沿っ</summary>
+    <title>新しいOutlookの受信拒否リストから取引先を外すには</title>
+    <link href="https://vaynexis.jp/column/outlook-new-unblock-sender-junk-safe-list"/>
+    <id>https://vaynexis.jp/column/outlook-new-unblock-sender-junk-safe-list</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>取引先から「メールを送った」と言われたのに受信トレイに無い。前に誤って受信拒否にしたアドレスやドメインが原因かもしれないときに、新しい Outlook for Windows の［迷惑メール］の設定で受信拒否リストから外す手順と、外した後に差出人セーフ リストへ加える方法を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Edgeの「通知」で閉じた後も出るサイト通知を止めるには</title>
-    <link href="https://vaynexis.jp/column/edge-site-notifications-block"/>
-    <id>https://vaynexis.jp/column/edge-site-notifications-block</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Microsoft Edge を閉じているのに、以前に許可したサイトの通知が画面の隅に出続けるときの止め方です。通知を出しているサイトを特定し、そのサイトの［通知］を［ブロック］に変える2つの道順と、必要になったときに戻す方法を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>新しいOutlookの通知で新着メールのポップアップを止めるには</title>
+    <link href="https://vaynexis.jp/column/outlook-new-mail-notification-popup-off"/>
+    <id>https://vaynexis.jp/column/outlook-new-mail-notification-popup-off</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>会議で画面を映している最中や、窓口で来客の対応をしている間に、新着メールの差出人と件名が画面の隅に出てしまう。新しい Outlook for Windows の［通知］で、メールの通知だけを切る手順と、予定表の通知との分け方、止めた後に戻すときの確認先を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Edgeの「アドレス バーと検索」で検索先を変えるには</title>
-    <link href="https://vaynexis.jp/column/edge-address-bar-search-engine"/>
-    <id>https://vaynexis.jp/column/edge-address-bar-search-engine</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Microsoft Edge のアドレス バーに言葉を入れて検索すると、いつも同じ検索エンジンの結果が出ます。これをほかの検索エンジンに変えるには、［アドレス バーと検索］の［アドレス バーで使用する検索エンジン］を選び直します。一覧に目当ての検索エンジンが出ないときの足し方も含めて、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>Outlookで誤って振り分けるルールの条件を直すには</title>
+    <link href="https://vaynexis.jp/column/outlook-new-rules-fix-wrong-folder-conditions"/>
+    <id>https://vaynexis.jp/column/outlook-new-rules-fix-wrong-folder-conditions</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>取引先からの請求書が別のフォルダーに入ってしまうなど、Outlook のルールが思わぬメールまで振り分けるときに、作成済みのルールを開いて条件を直す手順です。新しい Outlook for Windows を対象に、ルールの順序、処理の中止、従来の Outlook から移ったルールの扱いまで、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Edgeの「お気に入りバー」で消えたリンク一覧を戻すには</title>
-    <link href="https://vaynexis.jp/column/edge-favorites-bar-show"/>
-    <id>https://vaynexis.jp/column/edge-favorites-bar-show</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Microsoft Edge のアドレス バーの下のお気に入りバーが、新しいタブでだけ見える、またはまったく出なくなったときの戻し方です。［外観］の［ツール バー］にある［お気に入り］の3つの選択肢、戻したバーの並べ替えとまとめて開く操作、ほかのブラウザーから取り込んだお気に入りの置き場所、Ctrl+Shift+B での切り替えを、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>Gmailのプレーン テキスト モードで太字が使えないときは</title>
+    <link href="https://vaynexis.jp/column/gmail-plain-text-mode-bold-unavailable"/>
+    <id>https://vaynexis.jp/column/gmail-plain-text-mode-bold-unavailable</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>Gmail でメールを書いていて、太字にしたい語が普通の文字のまま変わらない、署名の上に［書式なし］と出る、というときは、作成画面の［プレーン テキスト モード］がオンになっていないかを確かめます。パソコンのブラウザ版での切り替えの場所と、書式設定オプション・ショートカット・既定の書式の関係を、Google の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Acrobatの「新しい Acrobat を無効にする」で以前の画面に戻すには</title>
-    <link href="https://vaynexis.jp/column/acrobat-disable-new-acrobat"/>
-    <id>https://vaynexis.jp/column/acrobat-disable-new-acrobat</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>更新の後で Acrobat の画面ががらりと変わり、社内の手順書どおりに操作できなくなった。そんなときに以前の画面へ戻す［新しい Acrobat を無効にする］の場所を、Adobe の日本語ヘルプ（Acrobat デスクトップ版）でまとめます。Windows での手順と再起動、Mac の場合、新しい画面に戻す方法、項目が見当たらないときの版の確かめ方、見た目だけを変えたいときの表示テーマとの違いを</summary>
+    <title>Gmailのカテゴリでプロモーションのタブを非表示にするには</title>
+    <link href="https://vaynexis.jp/column/gmail-category-tabs-hide-promotions"/>
+    <id>https://vaynexis.jp/column/gmail-category-tabs-hide-promotions</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>Gmail の受信トレイの上に並ぶタブのうち、［プロモーション］を使っていないので消したい、というときの手順です。パソコンのブラウザ版で、受信トレイの種類［デフォルト］の［カスタマイズ］から、表示するカテゴリを選び直す方法と、外した後に案内メールを見失わないための確かめ方を、Google の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>スプレッドシートの「合計」を右下で確かめるには</title>
-    <link href="https://vaynexis.jp/column/google-sheets-sum-bottom-right"/>
-    <id>https://vaynexis.jp/column/google-sheets-sum-bottom-right</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Google スプレッドシートで、請求額や経費の一部だけを足した数字をすぐ知りたいときに、セルを選ぶだけで画面の右下に出る「合計」を使う手順です。式をセルに書かずに確かめる方法、平均などへの切り替え方、合計が出ないときに見るところ、表に残すときの SUM 関数との使い分けを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Gmailのスターで黄色以外の色やマークを使うには</title>
+    <link href="https://vaynexis.jp/column/gmail-star-colors-icons-in-use"/>
+    <id>https://vaynexis.jp/column/gmail-star-colors-icons-in-use</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>Gmail のスターが黄色の1種類だけでは、返信待ちも今日中の対応も同じ印になってしまいます。パソコンのブラウザ版で、設定の［スター］から別の色のスターやマークを［使用中］に加える手順と、付け方・探し方のこつを、Google の公式ヘルプに沿って整理します。色ごとの意味を社内でそろえる例も添えます。</summary>
   </entry>
   <entry>
-    <title>スプレッドシートの「100%」で小さくなった表示を戻すには</title>
-    <link href="https://vaynexis.jp/column/google-sheets-zoom-100-percent"/>
-    <id>https://vaynexis.jp/column/google-sheets-zoom-100-percent</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Google スプレッドシートの表が急に小さく、または大きく表示されて読みにくくなったときに、ツールバーの［100%］の欄から倍率を選び直す手順です。ツールバーが見えないときの戻し方、Chrome 全体の拡大・縮小との見分け方、ほかの人の画面に影響するかを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Gmailの重要マークで黄色い印を表示しないには</title>
+    <link href="https://vaynexis.jp/column/gmail-hide-importance-markers"/>
+    <id>https://vaynexis.jp/column/gmail-hide-importance-markers</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>Gmail のメール一覧で、件名の近くに付く黄色い重要マークが気になる、意味が分からず迷う、というときに、パソコンのブラウザ版で［重要マーク］を［マークを表示しない］にする手順です。印を消す設定と、重要かどうかの判断のしかたを変える設定が別であることも、Google の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>スプレッドシートの「交互の背景色」はどこで設定する？</title>
-    <link href="https://vaynexis.jp/column/google-sheets-alternating-colors"/>
-    <id>https://vaynexis.jp/column/google-sheets-alternating-colors</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>行の多い顧客台帳や発送の一覧で、隣の行を読み違えないように行ごとの背景色を交互に変えたいときに、Google スプレッドシートの「交互の背景色」がどこにあるかをまとめました。ツールバーの塗りつぶしの色から選ぶ場所、表をテーブルにしているときの設定の場所、値で色を変える条件付き書式との違い、フィルタで色を使うときの注意を、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Gmailのフィルタで決まった差出人のメールにラベルを付けるには</title>
+    <link href="https://vaynexis.jp/column/gmail-filter-auto-label-by-sender"/>
+    <id>https://vaynexis.jp/column/gmail-filter-auto-label-by-sender</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>顧問の事務所や仕入先など、決まった相手から届くメールに毎回手でラベルを付けているなら、Gmail のフィルタに任せられます。パソコンのブラウザ版で、差出人の条件を検索で試してから［フィルタを作成］する手順と、ラベル付けだけにとどめる注意を、Google の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Googleスライドの「ダウンロード」でPDFにするには</title>
-    <link href="https://vaynexis.jp/column/google-slides-download-pdf"/>
-    <id>https://vaynexis.jp/column/google-slides-download-pdf</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Google スライドで作った提案資料や説明資料を、相手に PDF で渡したいときの手順です。［ファイル］の［ダウンロード］から PDF の形式を選んで保存する流れ、印刷の操作との違い、ダウンロードできないときに見る所を、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Gmailで左側に出ないラベルを［表示］に戻すには</title>
+    <link href="https://vaynexis.jp/column/gmail-show-hidden-labels-left-menu"/>
+    <id>https://vaynexis.jp/column/gmail-show-hidden-labels-left-menu</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>取引先や案件ごとに作った Gmail のラベルが、画面の左側の一覧に見当たらないときの確かめ方です。左側のメニューが閉じているだけなのか、ラベルが［表示しない］になっているのかを分け、パソコンのブラウザ版で［ラベル］の設定から表示に戻す手順を、Google の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Googleドライブの「キーボード ショートカット」はどこ？</title>
-    <link href="https://vaynexis.jp/column/google-drive-keyboard-shortcuts"/>
-    <id>https://vaynexis.jp/column/google-drive-keyboard-shortcuts</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Google ドライブで、ファイルの名前の変更や共有をマウスで何度もたどるのが手間なときに、キーボード ショートカットの一覧を開いて使えるキーを探す方法です。一覧を開くキー、一覧の中での探し方、事務でよく使う操作のキー、ファイルへの「ショートカット」との違いを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>SharePointのチェックインで、編集を終えた資料をほかの人が使える状態に戻すには</title>
+    <link href="https://vaynexis.jp/column/sharepoint-check-in-edited-file-for-team"/>
+    <id>https://vaynexis.jp/column/sharepoint-check-in-edited-file-for-team</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>SharePoint のドキュメント ライブラリでチェックアウトして直した資料を、チェックインして同僚が見られる・編集できる状態に戻す手順です。保存やアップロードとの順番、チェックインのコメント、変更を残さないときの「チェックアウトの破棄」、戻し忘れた資料の見つけ方を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Googleドライブの「アプリで開く」で開くアプリをその場で選ぶには</title>
-    <link href="https://vaynexis.jp/column/google-drive-open-with-app"/>
-    <id>https://vaynexis.jp/column/google-drive-open-with-app</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>取引先から届いた Office ファイルや PDF を Google ドライブでダブルクリックしたら、思っていたのと違う画面で開いた、というときに、右クリックの［アプリで開く］からそのファイルを開くアプリを選ぶ手順です。ダブルクリックで開く先との違い、パソコンのアプリで開くときに要るもの、既定のアプリの設定とは別の操作であることを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>OneDriveの「空き領域を増やす」を選ぶと、クラウドの原本も消える？</title>
+    <link href="https://vaynexis.jp/column/onedrive-free-up-space-cloud-original-kept"/>
+    <id>https://vaynexis.jp/column/onedrive-free-up-space-cloud-original-kept</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>パソコンの容量が足りないときに OneDrive の［空き領域を増やす］を選んでも、クラウドの OneDrive にあるファイルは消えません。パソコンの中の写しだけを外す操作と、すべての端末から消える削除との違い、操作の後に気をつけること、クラウドの容量は減らない点を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Edgeの「同期」で履歴だけ別のPCへ渡さないには</title>
-    <link href="https://vaynexis.jp/column/edge-sync-history-off"/>
-    <id>https://vaynexis.jp/column/edge-sync-history-off</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>同じ Microsoft アカウントで、事務所のパソコンと持ち出し用のノートパソコンの両方の Edge にサインインしていると、閲覧の履歴もほかのパソコンに渡ります。お気に入りやパスワードの同期は続けたまま、履歴の同期だけを止めるときの手順と注意を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>OneDriveの「このデバイス上で常に保持する」で、電波の無い場所でも資料を開けるようにするには</title>
+    <link href="https://vaynexis.jp/column/onedrive-always-keep-on-device-before-site-visit"/>
+    <id>https://vaynexis.jp/column/onedrive-always-keep-on-device-before-site-visit</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>現場や移動中など、インターネットにつながらない場所で OneDrive の資料を開く必要があるとき、出発前に［このデバイス上で常に保持する］を設定しておく手順です。雲のマークのファイルが開けない理由、フォルダーごと選ぶときの注意、ストレージ センサーとの関係を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Edgeの「スタートアップ ブースト」で閉じても動くのはなぜ？</title>
-    <link href="https://vaynexis.jp/column/edge-startup-boost"/>
-    <id>https://vaynexis.jp/column/edge-startup-boost</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Microsoft Edge のウィンドウを全部閉じたのに、Edge の処理がパソコンの中で動き続けているように見えるときの理由と、スタートアップ ブーストの切り替え方です。何のための機能か、どこでオンとオフを変えるか、会社のパソコンで変えられないときの考え方を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>OneDriveの同期の一時停止は、いつ自動で再開する？</title>
+    <link href="https://vaynexis.jp/column/onedrive-pause-sync-auto-resume-timing"/>
+    <id>https://vaynexis.jp/column/onedrive-pause-sync-auto-resume-timing</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>OneDrive の同期の一時停止は、選んだ時間がたつと自動で再開します。2時間・8時間・24時間のどれを選ぶか、パソコンの状態によって自動で止まる場合、［OneDrive の終了］やリンクの解除との違い、時間の前に手で再開する方法を、Microsoft の公式ヘルプ（Windows のパソコン）に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Windowsの「他のデバイスからのダウンロードを許可」を止めるには</title>
-    <link href="https://vaynexis.jp/column/windows-delivery-optimization-other-devices-off"/>
-    <id>https://vaynexis.jp/column/windows-delivery-optimization-other-devices-off</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Windows の更新データを、ほかのパソコンとやり取りする「配信の最適化」を止めたいときの手順です。Windows 11 での項目名（Windows 10 の「他の PC からのダウンロードを許可する」との違い）、止めても更新は止まらないこと、帯域幅を絞る別の選び方、会社のパソコンで変えられない場合を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>OneDriveの［フォルダーの選択］で、このPCにだけ同期しないフォルダーを決めるには</title>
+    <link href="https://vaynexis.jp/column/onedrive-choose-folders-unsync-this-pc"/>
+    <id>https://vaynexis.jp/column/onedrive-choose-folders-unsync-this-pc</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>共用のパソコンや容量の小さいノートパソコンで、OneDrive の一部のフォルダーだけを同期から外したいときの［フォルダーの選択］の手順です。外したフォルダーがクラウドに残る理由、エクスプローラーで削除したときとの違い、外せないフォルダー、外した後に出るエラーを、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Windows Updateの「アクティブ時間」を勤務に合わせるには</title>
-    <link href="https://vaynexis.jp/column/windows-update-active-hours"/>
-    <id>https://vaynexis.jp/column/windows-update-active-hours</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>更新のための再起動が仕事中に重ならないよう、Windows 11 の［アクティブ時間］を事務所の勤務時間に合わせる手順です。［自動］と［手動］の違い、既定の時間帯、再起動のスケジュールや更新の一時停止との使い分けを、Microsoft の日本語の公式ページに沿って整理します。</summary>
+    <title>OneDriveのバージョン履歴で、上書きする前の内容に戻すには</title>
+    <link href="https://vaynexis.jp/column/onedrive-version-history-restore-before-overwrite"/>
+    <id>https://vaynexis.jp/column/onedrive-version-history-restore-before-overwrite</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>OneDrive に置いた資料を古い内容で上書きしてしまったとき、OneDrive の Web サイトやエクスプローラーの［バージョン履歴］から、上書き前の版へ1ファイルずつ戻す手順です。戻すと何が起きるか、版が見当たらないときに考えること、職場のアカウントでの注意を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Windowsの「検索」でタスクバーの検索ボックスを隠すには</title>
-    <link href="https://vaynexis.jp/column/windows-11-hide-taskbar-search-box"/>
-    <id>https://vaynexis.jp/column/windows-11-hide-taskbar-search-box</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Windows 11 のタスク バーにある横長の検索ボックスが場所を取って、開いているアプリのアイコンが並びきらないときの変え方です。タスク バーの設定の［タスク バー項目］にあるドロップダウンの4つの選択肢（検索ボックス・検索アイコンとラベル・検索アイコンのみ・非表示）の違いと、検索ボックスを使わずに検索を始める入口を、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>OneDriveのごみ箱から、誤って消した資料を元の場所へ戻すには</title>
+    <link href="https://vaynexis.jp/column/onedrive-recycle-bin-restore-deleted-files"/>
+    <id>https://vaynexis.jp/column/onedrive-recycle-bin-restore-deleted-files</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>OneDrive の資料を誤って消したときに、Web サイトのごみ箱から元に戻す手順です。個人用と職場・学校のアカウントで戻せる日数が違うこと、パソコンで消した場合に見るもう一つのごみ箱、ごみ箱に見当たらないときに考える理由を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Windowsの「タスク バーの配置」でスタートを左へ戻すには</title>
-    <link href="https://vaynexis.jp/column/windows-11-taskbar-alignment-left"/>
-    <id>https://vaynexis.jp/column/windows-11-taskbar-alignment-left</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Windows 11 でスタート ボタンやアプリのアイコンがタスク バーの中央に並び、前のように左端から使いたいときの戻し方です。タスク バーの設定の開き方、［タスク バーの動作］の中の［タスク バーの配置］の選び方、Windows 11 で変えられることと変えられないこと、左に寄せた後のアイコンの並べ直しを、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>OneDriveでデスクトップのバックアップを停止したら、ファイルはどこに残る？</title>
+    <link href="https://vaynexis.jp/column/onedrive-stop-desktop-backup-where-files-remain"/>
+    <id>https://vaynexis.jp/column/onedrive-stop-desktop-backup-where-files-remain</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>Windows のパソコンで OneDrive のデスクトップのバックアップを止めると、ファイルを OneDrive にだけ残すか、パソコンにだけ残すかを選ぶことになります。どちらを選ぶと何がどこに残るのか、止める前に確かめること、見当たらないときの探し方を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Microsoft IMEの「システム辞書」はどこで切り替える？</title>
-    <link href="https://vaynexis.jp/column/microsoft-ime-system-dictionary"/>
-    <id>https://vaynexis.jp/column/microsoft-ime-system-dictionary</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Microsoft IME の設定には「辞書」と名の付く項目がいくつもあり、システム辞書のオン・オフを探しているうちに、ユーザー辞書や予測入力の画面に迷い込みがちです。Windows 11 で Microsoft IME 設定を開き、［ラーニングと辞書］のシステム辞書にたどり着くまでの道順と、似た項目との違いを、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>Wordのテキスト ボックスの「リンクの作成」で長い案内文を次の枠へ続けるには</title>
+    <link href="https://vaynexis.jp/column/word-text-box-create-link-flow"/>
+    <id>https://vaynexis.jp/column/word-text-box-create-link-flow</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>社内向けの案内やお知らせを、ページの決まった場所に置いた文字枠へ入れたら、文章が収まりきらずに切れてしまった。そんなとき、Word のテキスト ボックスどうしを［リンクの作成］でつなぎ、あふれた文章を次の枠へ自動で続ける手順と、つなぐ前の準備、枠の線の消し方、動かす・消すときの注意を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Windowsの通知の「サウンドの再生」だけを止めるには</title>
-    <link href="https://vaynexis.jp/column/windows-notification-sound-only-off"/>
-    <id>https://vaynexis.jp/column/windows-notification-sound-only-off</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Windows 11 で、チャットやメールのアプリの通知が来るたびに鳴る音だけを止めたいときの手順です。通知のバナーや通知センターの一覧は残したまま、アプリごとの［サウンドの再生］だけを切る道順と、バナーや通知そのものを止める設定との違いを、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>Wordの「ブックマーク」で何度も見返す文中の場所へすぐ移動するには</title>
+    <link href="https://vaynexis.jp/column/word-bookmark-jump-to-clause"/>
+    <id>https://vaynexis.jp/column/word-bookmark-jump-to-clause</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>長い契約書のひな形や社内規程で、毎回確かめる段落を探してスクロールし直していませんか。Word のブックマークで文中の場所に名前を付け、［ジャンプ］から移動する手順、名前の決まり、見えないブックマークの表示、書き換えたときの消え方を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>エクスプローラーの「ナビゲーション ウィンドウ」が消えたときは</title>
-    <link href="https://vaynexis.jp/column/windows-file-explorer-navigation-pane"/>
-    <id>https://vaynexis.jp/column/windows-file-explorer-navigation-pane</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>エクスプローラーを開いたら、左側にあったフォルダーやドライブの一覧が見当たらない。そんなときに、Windows 11 のエクスプローラーで［ナビゲーション ウィンドウ］をもう一度表示する手順と、戻った後にどこに何があるかを、Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>Wordの「スタイルの変更」で同じ見出しの字体をまとめて直すには</title>
+    <link href="https://vaynexis.jp/column/word-modify-heading-style-font"/>
+    <id>https://vaynexis.jp/column/word-modify-heading-style-font</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>手順書や社内規程の見出しが、ある所は明朝、ある所はゴシックと混ざってしまったとき、Word の見出しスタイルを変えて同じ種類の見出しを一度に直す手順です。見本の見出しに合わせる方法と［スタイルの変更］で数値を決める方法、今の文書だけに留めるか以降の文書にも広げるかの選び方を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Googleフォームの「必須」で未入力の送信を防ぐには</title>
-    <link href="https://vaynexis.jp/column/google-forms-required-question"/>
-    <id>https://vaynexis.jp/column/google-forms-required-question</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>申込みや受付の Google フォームで、連絡先や希望日のような欠かせない項目が空欄のまま届くのを防ぐために、質問ごとに［必須］をオンにする手順です。必須の質問に答えていないと回答する人の画面で何が起きるか、必須にする質問の選び方、ファイルのアップロードや入力のルールと組み合わせるときの注意を、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Wordの表が余白からはみ出すときページ幅に収めるには</title>
+    <link href="https://vaynexis.jp/column/word-table-fit-page-width"/>
+    <id>https://vaynexis.jp/column/word-table-fit-page-width</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>Excel から貼った表や、列を足した表が Word の右の余白からはみ出して、印刷すると端が切れそうなときに、ページを横向きにせず、縦のページの幅の中に表を収める直し方を、Microsoft の公式ヘルプに沿って整理します。自動調整、列の幅、表のプロパティの3つの直し方を分けて書きます。</summary>
   </entry>
   <entry>
-    <title>Chromeの「ショートカットを作成...」で仕事のサイトを開くには</title>
-    <link href="https://vaynexis.jp/column/chrome-create-shortcut-work-site"/>
-    <id>https://vaynexis.jp/column/chrome-create-shortcut-work-site</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>勤怠や受発注のシステムなど、毎朝同じサイトを開くなら、パソコン版 Chrome の［キャスト、保存、共有］にある［ショートカットを作成...］でショートカットを作っておくと、Chrome を開いてから探す手間が減ります。作る手順と名前の付け方、同じメニューにある［ページをアプリとしてインストール］との違いを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Wordの文書中の表記を一件ずつ検索・置換するには？</title>
+    <link href="https://vaynexis.jp/column/word-find-replace-review-each-match"/>
+    <id>https://vaynexis.jp/column/word-find-replace-review-each-match</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>手順書や社内規程で「申込書」と「申込み書」、旧社名と新社名のように表記がまじっているとき、Word の置換で一つずつ確かめながら直す手順を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。［すべて置換］を急いで押して、直してはいけない所まで変わるのを防ぎます。</summary>
   </entry>
   <entry>
-    <title>Chromeの「リーディング モード」で本文だけ読みやすくするには</title>
-    <link href="https://vaynexis.jp/column/chrome-reading-mode-text-only"/>
-    <id>https://vaynexis.jp/column/chrome-reading-mode-text-only</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>広告や囲みの多いページで、制度の案内や手順の説明を落ち着いて読みたいときに使える Chrome のリーディング モードの使い方です。右クリック・メニュー・アドレスバー・キーボードからの開き方、文字の大きさや行の高さ・色のテーマの変え方、読み上げ、うまく開かないページの見分け方を、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Wordの申請書で記入欄だけ入力できるようにするには？</title>
+    <link href="https://vaynexis.jp/column/word-form-fillable-fields-restrict-editing"/>
+    <id>https://vaynexis.jp/column/word-form-fillable-fields-restrict-editing</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>社内の申請書や届出の Word ファイルを配ると、記入する人が見出しや注意書きまで書き換えてしまい、様式が崩れて戻ってくることがあります。記入欄だけに入力でき、ほかの部分は変えられないようにする方法を、Microsoft の公式ヘルプ（Windows 版）に沿って2通り整理します。</summary>
   </entry>
   <entry>
-    <title>Chromeの「タスク マネージャ」で重いタブを見つけるには</title>
-    <link href="https://vaynexis.jp/column/chrome-task-manager-heavy-tab"/>
-    <id>https://vaynexis.jp/column/chrome-task-manager-heavy-tab</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Chrome が急に重くなったとき、どのタブや拡張機能がメモリを多く使っているかを、Chrome のタスク マネージャで確かめる手順です。メニューと Shift+Esc での開き方、メモリ使用量で並べ替える見方、終了する前に保存していない作業を確かめる順番、見覚えのない拡張機能の扱いを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Wordの音声読み上げで読む速さを変えるには</title>
+    <link href="https://vaynexis.jp/column/word-read-aloud-speed-change"/>
+    <id>https://vaynexis.jp/column/word-read-aloud-speed-change</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>Word の［音声読み上げ］で、作った文書を耳で聞いて読み合わせをするときに、読む速さが速すぎて誤字を聞き逃す、遅すぎて時間がかかる、という場合の速さの変え方を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。キーボードでの操作、Web 版などでの設定の場所、使えないときの確かめ方も添えます。</summary>
   </entry>
   <entry>
-    <title>Chromeの「タブをグループに追加」で資料を案件別に分けるには</title>
-    <link href="https://vaynexis.jp/column/chrome-tab-groups-by-project"/>
-    <id>https://vaynexis.jp/column/chrome-tab-groups-by-project</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>見積もりの資料、取引先の会社のページ、社内のシステム。いくつもの案件のタブが一列に並んで探せないときに、パソコン版 Chrome の［タブをグループに追加］で案件ごとにまとめる手順と、閉じる・削除・解除の違いを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Wordのルビで社名や人名にふりがなを付けるには</title>
+    <link href="https://vaynexis.jp/column/word-ruby-furigana-guest-company-names"/>
+    <id>https://vaynexis.jp/column/word-ruby-furigana-guest-company-names</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>案内状の差出人の社名や、式次第に載せる来賓の名前など、読み間違えられたくない言葉に Word でふりがな（ルビ）を付けたいときの手順と、付ける前に確かめることを、Microsoft の公式ヘルプに沿って整理します。読みの確かめ方と、ルビの書式の注意も添えます。</summary>
   </entry>
   <entry>
-    <title>Googleフォームの「URL を短縮」が出ないときは</title>
-    <link href="https://vaynexis.jp/column/google-forms-shorten-url"/>
-    <id>https://vaynexis.jp/column/google-forms-shorten-url</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Google フォームで回答者に送るリンクをコピーしようとしても［URL を短縮］が見当たらないとき、先に確かめることを整理します。公式ヘルプでは、短縮版のリンクをコピーできるのはフォームの公開後です。公開の状態の見分け方、リンクを取る3つの道、公開しても回答者が開けないときの見直しを、Google の公式ヘルプに沿って説明します。</summary>
+    <title>Wordの文字カウントで選択した文章だけの文字数を見るには</title>
+    <link href="https://vaynexis.jp/column/word-count-selected-text-status-bar"/>
+    <id>https://vaynexis.jp/column/word-count-selected-text-status-bar</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>申請書の「400字以内」の欄や、案内文の一段落だけの字数を確かめたいときに、Word で選んだ部分だけの数を見る方法と、文字数・段落数・行数まで見る［文字カウント］の開き方を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Chromeの「音声」でサイトから勝手に音が出るのを止めるには</title>
-    <link href="https://vaynexis.jp/column/chrome-site-sound-mute"/>
-    <id>https://vaynexis.jp/column/chrome-site-sound-mute</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>事務所で調べものをしていたら、開いたページの動画がいきなり音を出した。そんなときに、パソコン版 Chrome で鳴っている音をその場で止める方法と、特定のサイトだけ、またはすべてのサイトの既定で［音声］を変える手順を、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Wordのダーク モードで黒くなった用紙を白く表示するには</title>
+    <link href="https://vaynexis.jp/column/word-dark-mode-white-page-background"/>
+    <id>https://vaynexis.jp/column/word-dark-mode-white-page-background</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>Word を開いたら、メニューだけでなく用紙まで黒くなり、白い紙のつもりで作った書類の見え方がつかみにくいときに、ダーク モードのままページの背景だけを明るく戻す方法を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。印刷や相手の画面に影響するかも確かめます。</summary>
   </entry>
   <entry>
-    <title>Chromeの「マイク」で会議に使う入力機器を変えるには</title>
-    <link href="https://vaynexis.jp/column/chrome-microphone-select-device"/>
-    <id>https://vaynexis.jp/column/chrome-microphone-select-device</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>ヘッドセットをつないだのに、相手には内蔵マイクの声が届いている。そんなときに、パソコン版 Chrome の［サイトの設定］の［マイク］で既定のマイクを選ぶ手順と、Windows 11 の［サウンド］の［入力］で録音に使う機器を確かめる手順を、Google と Microsoft の公式ヘルプに沿って整理します。</summary>
+    <title>PowerPointのSmartArtの「階層構造」で担当者の関係を図にするには</title>
+    <link href="https://vaynexis.jp/column/powerpoint-smartart-hierarchy-staff-chart"/>
+    <id>https://vaynexis.jp/column/powerpoint-smartart-hierarchy-staff-chart</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>社内で決まった担当者の上下関係や窓口の分担を、PowerPoint の SmartArt で1枚の図にする手順です。［SmartArt グラフィックの選択］の［階層構造］からレイアウトを選び、テキスト ウィンドウでレベルを上げ下げして入力し、図形の追加や点線で兼務を表すまでを、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。</summary>
   </entry>
   <entry>
-    <title>Chromeの「カメラ」で一度拒否した会議サイトを許可するには</title>
-    <link href="https://vaynexis.jp/column/chrome-camera-allow-blocked-site"/>
-    <id>https://vaynexis.jp/column/chrome-camera-allow-blocked-site</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Web 会議に入ったのに自分の映像が出ないとき、以前そのサイトでカメラを［許可しない］にしていないかを、パソコン版 Chrome の［サイトの設定］で確かめて許可に戻す手順です。設定の一覧から直す道と、会議のページを開いたまま直す道、許可しても映らないときの見直しを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>PowerPointのグリッド線で図形が細かく動かせないときは</title>
+    <link href="https://vaynexis.jp/column/powerpoint-snap-to-grid-off-fine-move"/>
+    <id>https://vaynexis.jp/column/powerpoint-snap-to-grid-off-fine-move</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>PowerPoint で図形や矢印をドラッグすると、決まった間隔でカクッと飛んでしまい、ほんの少しだけずらしたい位置に置けないときの原因と直し方を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。グリッド線の「表示」と「位置合わせ」は別の設定なので、分けて確かめます。</summary>
   </entry>
   <entry>
-    <title>スプレッドシートの「値のみ貼り付け」で数式を外すには</title>
-    <link href="https://vaynexis.jp/column/google-sheets-paste-values-only"/>
-    <id>https://vaynexis.jp/column/google-sheets-paste-values-only</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>集計表の計算結果を、月ごとの控えや報告用のシートへ写すとき、数式ごと貼り付けると元の表を直したときに数字が動いてしまいます。Google スプレッドシートの［特殊貼り付け］から［値のみ貼り付け］を選び、計算の結果だけを写す手順と、キーボードでの操作、使える範囲の注意を、Google の公式ヘルプに沿って整理します。</summary>
+    <title>PowerPointのスペル チェックで赤い波線を表示しないには</title>
+    <link href="https://vaynexis.jp/column/powerpoint-spell-check-red-underline-off"/>
+    <id>https://vaynexis.jp/column/powerpoint-spell-check-red-underline-off</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>PowerPoint で資料を作っていると、品番や英字の社名、略語の下に赤い波線が並び、画面を共有して見せるときに気になる、という場面があります。Windows 版 PowerPoint で入力時のスペル チェックを止める場所と、止めたあとに誤字を確かめる方法を、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>スプレッドシートの「名前付き範囲」はどこで変更する？</title>
-    <link href="https://vaynexis.jp/column/google-sheets-named-range-edit"/>
-    <id>https://vaynexis.jp/column/google-sheets-named-range-edit</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Google スプレッドシートで、売上表の行を増やしたのに、名前を付けた範囲が古いままで集計に入らない。そんなときに、［データ］の［名前付き範囲］から範囲の参照先を直す手順です。すばやく開く道、名前を変えるときの決まり、消すと式が動かなくなる注意を、Google の公式ヘルプに沿って整理します。</summary>
+    <title>PowerPointの「発表者ツールを使用する」をオフにするには</title>
+    <link href="https://vaynexis.jp/column/powerpoint-presenter-view-turn-off-same-screen"/>
+    <id>https://vaynexis.jp/column/powerpoint-presenter-view-turn-off-same-screen</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>プロジェクターや大きな画面につないで PowerPoint のスライド ショーを始めたら、手元の画面だけノートやタイマーの入った発表者ビューになり、同じ画面を見せたいのに困る、というときの［発表者ツールを使用する］のオフの手順を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。画面が逆に出ただけのときの直し方も分けて書きます。</summary>
   </entry>
   <entry>
-    <title>Googleフォームの「プレビュー」で送る前に変更内容を確かめるには</title>
-    <link href="https://vaynexis.jp/column/google-forms-preview-before-sending"/>
-    <id>https://vaynexis.jp/column/google-forms-preview-before-sending</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>申込みやアンケートの Google フォームを送る前に、作った本人が「プレビュー」を開いて変更内容を確かめる手順です。プレビューで見ておくこと、プレビューで開けても回答者が開けるとは限らない理由（公開とアクセスの範囲）、社内の人に見てもらうときの注意を、Google の公式ヘルプに沿って整理します。</summary>
+    <title>PowerPointの「キオスクで閲覧する」で案内を繰り返すには</title>
+    <link href="https://vaynexis.jp/column/powerpoint-kiosk-loop-reception-display"/>
+    <id>https://vaynexis.jp/column/powerpoint-kiosk-loop-reception-display</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>受付や展示会の画面で、PowerPoint の案内スライドを人の手を使わずに繰り返し流したいときの、［キオスクで閲覧する (全画面表示)］の設定と、各スライドを自動で進める時間の付け方を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。止め方と、流す前の確かめ方も添えます。</summary>
   </entry>
   <entry>
-    <title>Googleフォームの「個別」で一人分の回答だけを見るには</title>
-    <link href="https://vaynexis.jp/column/google-forms-individual-response"/>
-    <id>https://vaynexis.jp/column/google-forms-individual-response</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>申込みや問い合わせの Google フォームで、集計ではなく、ある一人が送った回答の中身だけを順に見たいときに、［回答］の［個別］を使う手順です。前後の回答への移り方、一覧から選ぶ方法、誰の回答かを見分けるための設定、スプレッドシートとの使い分けを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>PowerPointのアニメーション ウィンドウで表示順を変えるには</title>
+    <link href="https://vaynexis.jp/column/powerpoint-animation-pane-reorder-effects"/>
+    <id>https://vaynexis.jp/column/powerpoint-animation-pane-reorder-effects</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>PowerPoint のスライドで、文字や図が説明の順に出てこないときに、［アニメーション ウィンドウ］で動きの順番を確かめ、並べ替える方法を、Microsoft の公式ヘルプに沿って整理します。Windows 版・Web 版・Mac 版でヘルプの書き方が違うので、版ごとに分けて書きます。</summary>
   </entry>
   <entry>
-    <title>Googleフォームの「プルダウン」で回答を1つだけ選んでもらうには</title>
-    <link href="https://vaynexis.jp/column/google-forms-dropdown-choices"/>
-    <id>https://vaynexis.jp/column/google-forms-dropdown-choices</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>申込みやアンケートの Google フォームで、都道府県や担当窓口のように選択肢が多く、回答を1つだけ選んでもらう質問を、質問の形式「プルダウン」にする手順です。ラジオボタン・チェックボックスとの違い、選択肢のシャッフル、画像や［その他］の扱いの差を、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Teamsの「ノイズ抑制」で会議中の周りの雑音を抑えるには</title>
+    <link href="https://vaynexis.jp/column/teams-noise-suppression-meeting-background-sounds"/>
+    <id>https://vaynexis.jp/column/teams-noise-suppression-meeting-background-sounds</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>事務所や自宅から Microsoft Teams の会議に入ると、書類をめくる音やドアの音がほかの参加者に聞こえて気になる、というときの［ノイズ抑制］の確かめ方とオンにする手順を、Microsoft の公式ヘルプ（デスクトップ版）に沿って整理します。会議の途中で切り替える場所も添えます。</summary>
   </entry>
   <entry>
-    <title>Windows 11の「拡張」で二画面に別の資料を出すには</title>
-    <link href="https://vaynexis.jp/column/windows-11-extend-dual-display"/>
-    <id>https://vaynexis.jp/column/windows-11-extend-dual-display</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>ノートパソコンに外付けのモニターをつないだのに、両方の画面に同じものが映っていて、片方に資料、片方に入力の画面を出せないときの切り替え方です。Windows キー＋P で選べる4つの表示のしかた（PC 画面のみ・複製・拡張・セカンド スクリーンのみ）の違い、モニターが出てこないときや拡張にしても映らないときの確かめ方、ノートパソコンを外すときの動きを、Microsoft の公式ヘルプに沿って整理し</summary>
+    <title>Teamsのぼかしで会議前に背景を確認するには</title>
+    <link href="https://vaynexis.jp/column/teams-background-blur-before-joining-meeting"/>
+    <id>https://vaynexis.jp/column/teams-background-blur-before-joining-meeting</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>自宅や事務所の棚が映り込むのが気になるとき、Microsoft Teams の会議に入る前の画面で背景をぼかし、映り方を確かめてから参加する手順を、Microsoft の公式ヘルプ（デスクトップ版）に沿って整理します。ぼかしでは隠しきれない場合があることと、会議中に変えるときの［プレビュー］も添えます。</summary>
   </entry>
   <entry>
-    <title>Chromeの「ブックマーク バーを表示」で消えた一覧を戻すには</title>
-    <link href="https://vaynexis.jp/column/chrome-show-bookmarks-bar"/>
-    <id>https://vaynexis.jp/column/chrome-show-bookmarks-bar</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Chrome のアドレス バーの下から業務のリンクの列が消えたとき、その他アイコンの［ブックマークとリスト］から［ブックマーク バーを表示］を選んで戻す手順です。Ctrl+Shift+B での切り替え、バーが戻るまでブックマークを開く3つの道、戻した後の並べ直しと削除の注意までを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Teamsの編集で送信したチャットの誤字を直すには</title>
+    <link href="https://vaynexis.jp/column/teams-edit-sent-chat-message-typo"/>
+    <id>https://vaynexis.jp/column/teams-edit-sent-chat-message-typo</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>Microsoft Teams のチャットで送ったメッセージに誤字や数字の打ち間違いを見つけたときに、送信済みのメッセージを［編集］で直す手順と、編集できないときに確かめることを、Microsoft の公式ヘルプに沿って整理します。</summary>
   </entry>
   <entry>
-    <title>スプレッドシートの「セルを結合」で見出しを一つにするには</title>
-    <link href="https://vaynexis.jp/column/google-sheets-merge-cells-header"/>
-    <id>https://vaynexis.jp/column/google-sheets-merge-cells-header</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>月別の集計表や業務の一覧で、「4月分」「担当者の記入欄」のように複数の列にまたがる見出しを一つの枠にまとめたいときに、Google スプレッドシートの「セルを結合」を使う手順です。結合する前に範囲の中の値を確かめる理由、明細の行は結合しない決め方、結合したセルがフィルタの妨げになる点、見出しを残す「固定」との違いを、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Teamsの状態の期間で応答不可を指定時刻に戻すには</title>
+    <link href="https://vaynexis.jp/column/teams-status-duration-do-not-disturb-reset-time"/>
+    <id>https://vaynexis.jp/column/teams-status-duration-do-not-disturb-reset-time</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>見積もりや締めの作業に集中するあいだだけ Microsoft Teams の状態を「応答不可」にして、決めた時刻に自動で戻したいときの［期間］の設定を、Microsoft の公式ヘルプの項目名どおりに整理します。戻ったあとの状態がどう決まるか、早めに戻す方法も添えます。</summary>
   </entry>
   <entry>
-    <title>Googleドキュメントの「余白」で左右の空きを狭めるには</title>
-    <link href="https://vaynexis.jp/column/google-docs-page-margins-narrow"/>
-    <id>https://vaynexis.jp/column/google-docs-page-margins-narrow</id>
-    <published>2026-11-17T00:00:00+09:00</published>
-    <updated>2026-11-17T00:00:00+09:00</updated>
-    <summary>Google ドキュメントで作った案内文や手順書を印刷すると、左右の空きが広くて表が窮屈になる、一行に入る文字が少ない。そんなときに［ファイル］の［ページ設定］から余白を変える手順です。ページ分けなしの形式では変えられない点、一部のセクションだけ変える方法、幅の広い表を横向きのページに置く方法も、Google の公式ヘルプに沿って整理します。</summary>
+    <title>Teamsのライブ キャプションで会議の字幕を表示するには</title>
+    <link href="https://vaynexis.jp/column/teams-live-captions-meeting-spoken-language"/>
+    <id>https://vaynexis.jp/column/teams-live-captions-meeting-spoken-language</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-18T00:00:00+09:00</updated>
+    <summary>Microsoft Teams の会議で、話している内容を字幕で追いたいときの、ライブ キャプションのオン・オフ、文字の大きさや位置の変え方、字幕が崩れるときの「会議の話し言葉」の直し方を、Microsoft の公式ヘルプに沿って整理します。字幕は会議の後に残らないので、記録が要るときの考え方も添えます。</summary>
   </entry>
 </feed>

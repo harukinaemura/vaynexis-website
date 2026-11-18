@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordの文書中の表記を一件ずつ検索・置換するには？｜Vaynexis</title>
+  <meta name="description" content="手順書や社内規程で「申込書」と「申込み書」、旧社名と新社名のように表記がまじっているとき、Word の置換で一つずつ確かめながら直す手順を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。［すべて置換］を急いで押して、直してはいけない所まで変わるのを防ぎます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Wordの文書中の表記を一件ずつ検索・置換するには？｜Vaynexis">
+  <meta property="og:description" content="手順書や社内規程で「申込書」と「申込み書」、旧社名と新社名のように表記がまじっているとき、Word の置換で一つずつ確かめながら直す手順を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。［すべて置換］を急いで押して、直してはいけない所まで変わるのを防ぎます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/word-find-replace-review-each-match">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/word-find-replace-review-each-match">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wordの文書中の表記を一件ずつ検索・置換するには？","description":"手順書や社内規程で「申込書」と「申込み書」、旧社名と新社名のように表記がまじっているとき、Word の置換で一つずつ確かめながら直す手順を、Microsoft の公式ヘルプ（Windows 版）に沿って整理します。［すべて置換］を急いで押して、直してはいけない所まで変わるのを防ぎます。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/word-find-replace-review-each-match"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Wordの設定","item":"https://vaynexis.jp/column/topics/word"},{"@type":"ListItem","position":4,"name":"Wordの文書中の表記を一件ずつ検索・置換するには？","item":"https://vaynexis.jp/column/word-find-replace-review-each-match"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/word">Wordの設定</a></li><li aria-current="page">Wordの文書中の表記を一件ずつ検索・置換するには？</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Wordの文書中の表記を一件ずつ検索・置換するには？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>［ホーム］タブの［編集］から置換を開き、［検索する文字列］に直したい語句、［置換後の文字列］に新しい語句を入れます。 一件ずつ確かめるときは［すべて置換］を使わず、次の候補へ進みながら、直してよい所でだけ［置換］を選びます。 置き換えを間違えた所は、Ctrl+Z で元に戻せます。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>社名や用語を新しい表記にそろえたいのに、［すべて置換］を押すと、残すべき古い名前や引用まで変わってしまいそうで手が止まる。一件ずつ前後を読んで直す置換の進め方と、似た語句を巻き込まない検索オプション、間違えたときの戻し方を確かめます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">直す前に決めておく表や確認表、探す範囲の絞り方といった進め方は、架空の文書を想定して当社が整理したもので、Microsoft のヘルプにある手順ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">まとめて置き換えると困る表記</a></li>
+      <li><a href="#s2">一件ずつ置き換える手順</a></li>
+      <li><a href="#s3">英字の大文字・小文字を区別したいとき</a></li>
+      <li><a href="#s4">似た語句を巻き込まないための検索オプション</a></li>
+      <li><a href="#s5">太字や蛍光ペンの付いた所だけを探す</a></li>
+      <li><a href="#s6">Web 版の Word で直すとき</a></li>
+      <li><a href="#s7">置き換えを間違えたときに戻す</a></li>
+      <li><a href="#s8">直す前に決めておく表（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．まとめて置き換えると困る表記</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、Windows のパソコンで使う Word（Microsoft 365・Word 2024 など）です。ヘルプの適用先には、Word for Microsoft 365、Word 2024、Word 2021、Word 2019、Word 2016 が並んでいます。 ブラウザーで開く Web 版の違いは、後の節で分けて書きます。</p>
+    <p>社名が変わったので「旧社名」を「新社名」にそろえたい、という場面でも、文書の中には「旧社名から変更しました」のように、古い名前のまま残すべき文が混じっていることがあります。引用した契約書の名前、過去の日付の記録、他社の名前の一部に同じ文字が入っている場合も同じです。どの表記にそろえるかを先に決めてから、一件ずつ見て直すと、直しすぎを防げます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．一件ずつ置き換える手順</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">操作</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="操作">［ホーム］タブの［編集］から置換を開く</td></tr><tr><td data-label="順番">2</td><td data-label="操作">［検索する文字列］に、直したい語句を入れる</td></tr><tr><td data-label="順番">3</td><td data-label="操作">［置換後の文字列］に、新しい語句を入れる</td></tr><tr><td data-label="順番">4</td><td data-label="操作">次の候補へ進み、文書の中で前後の文を読む</td></tr><tr><td data-label="順番">5</td><td data-label="操作">直してよい所なら［置換］、残す所なら置換せずに次の候補へ進む</td></tr></tbody></table></div>
+    <p></p>
+    <p>ヘルプでは、すべて変える場合は［すべて置換］、そうでない場合は更新したい語句が見つかるまで次へ進み、見つかったら［置換］を選ぶ、と2つの使い方が並べて書かれています。</p>
+    <p>この Windows のタブは、ほかのオプションを「テキストを置換する」のページに任せています。 そのページ「テキストの置換」では、更新したい箇所に着くまで［次を検索］を選ぶ、と書かれています。 同じページは［すべて置換］を、一件ごとに止まらずにすべての箇所を更新する操作として説明しています。 ヘルプの Mac のタブには、［すべて置換］ではなく［置換］を選ぶよう勧めるヒントがあり、置換する前に各項目を確認できるから、と理由が添えられています。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．英字の大文字・小文字を区別したいとき</h2>
+    <p>英字の略称など、大文字か小文字かで意味が変わる語句は、置換の画面の［More］から［Match case］を選ぶと区別して探せます。 このメニューには、ほかにもいくつかの探し方があります。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．似た語句を巻き込まないための検索オプション</h2>
+    <p>「テキストの置換」のヘルプには、探し方を絞るオプションが並んでいます。表記をそろえる作業で関わりそうなものを挙げます。</p>
+    <ul>
+      <li>探す範囲：文書全体にするか、カーソルの位置から上か下かを指定します。 後半の新しい章だけを直したいときは、直し始める所にカーソルを置いてから探すと、前半の章に触れずに済みます。</li>
+      <li>大文字と小文字の一致：特定の大文字と小文字に一致する単語だけを探して置換します。 前の節の［Match case］と同じ働きと読めますが、画面の名前は手元で確かめます。</li>
+      <li>単語全体のみを検索する：部分一致を避けるための設定です。 ヘルプの例は英単語で、ある単語を置き換えても、別の単語の一部までは変わらないようにする使い方です。</li>
+      <li>句読点文字を無視する：ハイフネーションの違いを無視します。</li>
+      <li>空白文字を無視する：文字と文字の間の間隔を無視します。 社名の途中に空白がある所とない所が混じる文書で候補になりますが、全角の空白に効くかは試しの文書で確かめます。</li>
+      <li>ワイルドカードを使用する：部分一致を取得する設定です。 当てはまる範囲が広がるので、一件ずつ直す作業では、まず使わずに始めるほうが直しすぎを防ぎやすくなります。</li>
+    </ul>
+    <p>英語だけを対象に、発音の似た単語や、動詞のすべての時制を探して置き換える設定もあります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．太字や蛍光ペンの付いた所だけを探す</h2>
+    <p>「蛍光ペンを付けた所が直すべき所」という決め方をしている場合、ヘルプの Mac のタブには、［検索と置換］ダイアログ ボックスの下の矢印を開き、［書式］メニューから書式を選んで探す方法が書かれています。 Windows 版で同じ画面かは、手元で確かめます。</p>
+    <p>「テキストの置換」のヘルプにも、［書式］ボタンで、フォントの種類や色、段落の書式設定（左・右・中央）、強調表示された単語などを探して置換できる、と書かれています。 書式を指定して探したあとは、［書式設定なし］で書式の選択をオフにします。 蛍光ペンの所を直し終えたら、ここで書式の条件を外してから次の語句に移ります。</p>
+    <p>タブやセクション区切りの入れ方をそろえたいときは、［特別］ボタンで、Em ダッシュ、タブ、セクション区切りなどの要素を探して置き換えられます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．Web 版の Word で直すとき</h2>
+    <p>ブラウザーで開く Web 版の Word でも、基本的なテキストを見つけて置き換えることができます。 大文字と小文字の区別や、単語全体の検索も使えます。 ほかのオプションを使うには、デスクトップ版の Word で文書を開くよう案内されています。 書式で探す方法などが Web 版で見当たらないときは、デスクトップ版で開き直します。</p>
+  </div></section>
+
+  <section class="sec" id="s7" aria-labelledby="s7-title"><div class="wrap">
+    <h2 class="h2" id="s7-title">7．置き換えを間違えたときに戻す</h2>
+    <p>一件ずつ進めていても、残すはずの所で［置換］を選んでしまうことはあります。Windows 版では、Ctrl+Z を押すか、クイック アクセス ツール バーの［元に戻す］を選ぶと操作を元に戻せます。 複数の手順を戻すときは、Ctrl+Z を繰り返し押します。 ［元に戻す］の横の矢印を選ぶと、戻す操作を一覧から選んで、まとめて戻すこともできます。 戻しすぎたときは、Ctrl+Y か F4 でやり直せます。</p>
+    <p>既定では、最近行った 100 回の取り消し可能な操作が保存され、その範囲なら保存した後でも元に戻して、もう一度保存できます。 ただし、［ファイル］タブでのコマンドの選択やファイルの保存など、元に戻せない操作もあり、そのときは［元に戻す］が［元に戻せません］に変わります。 それでも戻せない変更は、以前のバージョンのファイルを復元できることがあります。 長い規程を直し始める前に、元のファイルを別の名前で残しておくと、直した後に見比べる相手にもなります。</p>
+  </div></section>
+
+  <section class="sec" id="s8" aria-labelledby="s8-title"><div class="wrap">
+    <h2 class="h2" id="s8-title">8．直す前に決めておく表（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">今の表記</th><th scope="col">そろえる表記</th><th scope="col">残す場合</th></tr></thead><tbody><tr><td data-label="今の表記">申込み書</td><td data-label="そろえる表記">申込書</td><td data-label="残す場合">様式の正式名に「申込み書」とある所</td></tr><tr><td data-label="今の表記">旧社名</td><td data-label="そろえる表記">新社名</td><td data-label="残す場合">社名変更のお知らせ、過去の契約の名前</td></tr><tr><td data-label="今の表記">お客様／お客さま</td><td data-label="そろえる表記">お客様</td><td data-label="残す場合">引用した他社の文章</td></tr></tbody></table></div>
+    <p>表記をそろえる作業は、手順書が増えるほど手間がかかります。手順書の用語を最初からそろえて作るやり方は、<a href="/ai-manual-guide">AIで業務マニュアル・手順書を作る方法</a>でも整理しています。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">9．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">そろえる表記と、残す場合を先に決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［検索する文字列］と［置換後の文字列］を入れ間違えていないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［すべて置換］ではなく、一件ずつ前後の文を読んで［置換］を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">直す範囲に合わせて、探す範囲を文書全体・カーソルの上・下から選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">英字の略称は［Match case］で大文字・小文字を区別したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">英単語の一部まで変わらないよう、［単語全体のみを検索する］を考えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">書式で探したあと、［書式設定なし］で書式の選択を外したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">間違えた置換は Ctrl+Z で戻せること、戻せない操作もあることを知っているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">直し終えたら、もう一度［検索する文字列］で探して取り残しを見たか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">10．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/word/training/find-and-replace-text-in-word" rel="noopener" target="_blank">Wordでテキストを検索して置換する（Microsoft サポート）</a>：適用先、Windows のタブ：置換の開き方、検索する文字列、置換後の文字列、すべて置換と置換、Match case、「</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/replace-text" rel="noopener" target="_blank">テキストの置換（Microsoft サポート）</a>：［次を検索］、［すべて置換］の働き、検索の範囲、大文字と小文字の一致、単語全体のみを検索する、句読点文字・空白文字を無視</li>
+      <li><a href="https://support.microsoft.com/ja-jp/office/foundations-experiences/undo-redo-or-repeat-an-action" rel="noopener" target="_blank">操作を元に戻す、取り消した操作をもう一度行う、操作を繰り返す（Microsoft サポート）</a>：既定の 100 回と保存後の取り消し、Windows のタブ：Ctrl+Z と［元に戻す］、繰り返し押す、矢印の一覧、C</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/word-accept-reject-tracked-changes-one-by-one">Wordで戻った修正履歴を一件ずつ確定する手順と確認の分け方</a></li>
+      <li><a href="/column/word-compare-document-versions">変更履歴がないWord文書の二つの版を比べるには？</a></li>
+      <li><a href="/column/name-variants-excel">エクセルで会社名・住所の表記ゆれを統一する。関数でそろえる部分と、AIに候補を出させる部分</a></li>
+      <li><a href="/column/word-table-fit-page-width">Wordの表が余白からはみ出すときページ幅に収めるには</a></li>
+      <li><a href="/column/word-text-box-create-link-flow">Wordのテキスト ボックスの「リンクの作成」で長い案内文を次の枠へ続けるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

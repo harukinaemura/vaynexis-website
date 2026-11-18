@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneDriveのバージョン履歴で、上書きする前の内容に戻すには｜Vaynexis</title>
+  <meta name="description" content="OneDrive に置いた資料を古い内容で上書きしてしまったとき、OneDrive の Web サイトやエクスプローラーの［バージョン履歴］から、上書き前の版へ1ファイルずつ戻す手順です。戻すと何が起きるか、版が見当たらないときに考えること、職場のアカウントでの注意を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="OneDriveのバージョン履歴で、上書きする前の内容に戻すには｜Vaynexis">
+  <meta property="og:description" content="OneDrive に置いた資料を古い内容で上書きしてしまったとき、OneDrive の Web サイトやエクスプローラーの［バージョン履歴］から、上書き前の版へ1ファイルずつ戻す手順です。戻すと何が起きるか、版が見当たらないときに考えること、職場のアカウントでの注意を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/onedrive-version-history-restore-before-overwrite">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/onedrive-version-history-restore-before-overwrite">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"OneDriveのバージョン履歴で、上書きする前の内容に戻すには","description":"OneDrive に置いた資料を古い内容で上書きしてしまったとき、OneDrive の Web サイトやエクスプローラーの［バージョン履歴］から、上書き前の版へ1ファイルずつ戻す手順です。戻すと何が起きるか、版が見当たらないときに考えること、職場のアカウントでの注意を、Microsoft の公式ヘルプに沿って整理します。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/onedrive-version-history-restore-before-overwrite"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Microsoft 365・Google Workspaceの管理","item":"https://vaynexis.jp/column/topics/m365-workspace"},{"@type":"ListItem","position":4,"name":"OneDriveのバージョン履歴で、上書きする前の内容に戻す","item":"https://vaynexis.jp/column/onedrive-version-history-restore-before-overwrite"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/m365-workspace">Microsoft 365・Google Workspaceの管理</a></li><li aria-current="page">OneDriveのバージョン履歴で、上書きする前の内容に戻す</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">OneDriveのバージョン履歴で、上書きする前の内容に戻すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>上書き前の内容に戻したいファイルを右クリックして［バージョン履歴］を選び、戻したい版の横の省略記号（...）から［復元］を選びます。 この操作は OneDrive の Web サイトでも、同期アプリを入れたパソコンのエクスプローラーでもでき、一度に戻せるのは1ファイルだけです。 戻した版が現在の版になり、それまでの現在の版は一覧の以前の版として残ります。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>保存した後で、取引先に渡す資料が先月の内容に置き換わっていると気づいた。OneDrive の［バージョン履歴］で戻す版の選び方と、戻した後に前の内容がどこに残るか、欲しい版が並ばない理由を確かめます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">単価表の場面と記入例は架空の設定で、確認表は Microsoft のヘルプをもとに当社が組んだ点検の順番です。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">消えたのではなく、中身が書き換わったとき</a></li>
+      <li><a href="#s2">OneDrive の Web サイトから戻す</a></li>
+      <li><a href="#s3">パソコンのエクスプローラーから戻す</a></li>
+      <li><a href="#s4">戻す前に中身を確かめたいとき</a></li>
+      <li><a href="#s5">欲しい版が見当たらないときに考えること</a></li>
+      <li><a href="#s6">架空の例：単価表の PDF を古い版で上書きした</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．消えたのではなく、中身が書き換わったとき</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、OneDrive の Web サイト（onedrive.com）と、Windows のパソコンに入れた OneDrive 同期アプリのエクスプローラーです。個人用の Microsoft アカウントと、職場または学校のアカウントの両方を扱います。</p>
+    <p>ファイルそのものが無くなったならごみ箱を探しますが、ファイルはあるのに中身が古い、あるいは別の資料の内容になってしまった、という場合はごみ箱には出てきません。こちらで使うのがバージョン履歴です。ヘルプでは、バージョン履歴を使うと、OneDrive または SharePoint に保存されている古いバージョンのファイルを確認および復元できると説明されています。</p>
+    <p>Word や Excel だけの機能ではない点も覚えておくと役立ちます。バージョン履歴は、Microsoft 365 ファイル、PDF、CAD ファイル、写真、ビデオなど、すべてのファイルの種類で機能します。 取引先に渡す PDF の価格表を、古い PDF で上書きしてしまった、という場面でも使えます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．OneDrive の Web サイトから戻す</h2>
+    <p>ブラウザーで戻す場合の順番です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">操作（OneDrive の Web サイト）</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="操作（OneDrive の Web サイト）">個人用の Microsoft アカウント、または職場や学校のアカウントで onedrive.com にサインインする</td></tr><tr><td data-label="順番">2</td><td data-label="操作（OneDrive の Web サイト）">戻すファイルを1つ選び、右クリックして［バージョン履歴］を選ぶ</td></tr><tr><td data-label="順番">3</td><td data-label="操作（OneDrive の Web サイト）">［バージョン履歴］ウィンドウで、戻したい版の横の省略記号（...）を選び、［復元］を選ぶ</td></tr></tbody></table></div>
+    <p></p>
+    <p>複数のファイルをまとめて選んでも、版は戻せません。一度に復元できるファイルは1つだけと書かれています。 見積書と添付の明細など、いくつかのファイルを同じ日に上書きしてしまったときは、1つずつ順に戻します。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．パソコンのエクスプローラーから戻す</h2>
+    <p>パソコンに OneDrive 同期アプリが入っていれば、ブラウザーを開かなくても戻せます。エクスプローラーで戻したいファイルを右クリックし、［バージョン履歴］を選びます。 続けて、目的の版の横にある省略記号（...）を選び、［復元］を選びます。</p>
+    <p>Web サイトでもエクスプローラーでも、戻した版が現在の版になり、それまでの現在の版は一覧の以前の版に移ります。 つまり、戻す版を選び間違えても、直前の内容が消えるわけではありません。もう一度［バージョン履歴］を開けば、戻す前の版を選び直せます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．戻す前に中身を確かめたいとき</h2>
+    <p>上書き前の版が複数あると、どれに戻すか迷います。職場や学校の OneDrive にも当てはまる SharePoint のバージョン管理のヘルプでは、現在のバージョンを上書きすることなく、以前のバージョンを表示できると説明されています。 また、バージョン履歴では、アイテムやファイルが変更されたタイミングと変更者を確認できます。 共有している資料なら、「誰が、いつ保存した版か」を手がかりに、上書きの前の版を見分けます。</p>
+    <p>一覧には番号の付いた版が並びます。新しいバージョンを作成するたびに、バージョン番号は自動的に加算されます。 中身を書き換えていないのに版が増えていることもあります。ブラウザーや OneDrive 同期クライアントでファイルの名前を変えると、新しいバージョンが作成されるためです。 名前を整えただけの版と、中身を書き換えた版が並んでいる場合は、日時を見て、上書きした時刻より前の版を開いて確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．欲しい版が見当たらないときに考えること</h2>
+    <p>［バージョン履歴］を開いても、思っていた版が並んでいないことがあります。考えられる理由を、ヘルプの記載から並べます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">考えられること</th><th scope="col">ヘルプの記載</th></tr></thead><tbody><tr><td data-label="考えられること">保存のたびに版ができるわけではない</td><td data-label="ヘルプの記載">Office ドキュメントの編集と保存では、すべての編集と保存で新しいバージョンが作成されるわけではない（自動保存が有効な場合に一般的）</td></tr><tr><td data-label="考えられること">日数がたっている</td><td data-label="ヘルプの記載">OneDrive のヘルプの注に「ファイルのバージョン履歴は 30 日間保持されます」とある</td></tr><tr><td data-label="考えられること">職場の設定</td><td data-label="ヘルプの記載">職場または学校のアカウントでは、管理者がドキュメントのバージョン管理をオフにしている可能性がある</td></tr><tr><td data-label="考えられること">版の数の上限</td><td data-label="ヘルプの記載">版の数に制限があるかどうかは組織によって異なり、制限に達すると最初のバージョンから削除される</td></tr></tbody></table></div>
+    <p></p>
+    <p>一つ目の「保存のたびに版ができるわけではない」は、見落としやすい点です。ヘルプでは、編集内容を頻繁に保存する場合は、個々の編集ではなく、新しいバージョンごとに特定の時点がキャプチャされると説明されています。 自動保存のまま長く作業していると、「10時の状態」「11時の状態」のように細かく残っているとは限りません。大きく書き換える前の内容を確実に残したいときは、別名でコピーを作ってから作業する、という社内の決まりを足しておくと安心です。</p>
+    <p>日数と版の数は、ヘルプのページごとに別の書き方になっています。OneDrive のページの注は日数（30 日間）で、SharePoint のページには、Microsoft 365 では新しいライブラリやリストを作るとバージョン管理が既定で有効になり、ドキュメントの最後の 500 バージョンが自動的に保存されると書かれています。 どちらが自分の OneDrive に当てはまるかは、アカウントの種類と管理者の設定で変わります。上書きに気づいたら日を置かずに戻す、会社のアカウントで古い版が見当たらなければ社内の管理者に確かめる、という順で進めます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．架空の例：単価表の PDF を古い版で上書きした</h2>
+    <p>営業事務の担当者が、取引先に渡す単価表の PDF を、先月の PDF で上書きしてしまった場面です（架空の例）。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめたこと</th><th scope="col">架空の記入例</th></tr></thead><tbody><tr><td data-label="確かめたこと">上書きに気づいた日</td><td data-label="架空の記入例">上書きした翌日</td></tr><tr><td data-label="確かめたこと">開いた場所</td><td data-label="架空の記入例">エクスプローラーの OneDrive フォルダーで、単価表の PDF を右クリック</td></tr><tr><td data-label="確かめたこと">戻した版</td><td data-label="架空の記入例">上書きの直前に、担当者本人が保存した版</td></tr><tr><td data-label="確かめたこと">戻した後の確認</td><td data-label="架空の記入例">PDF を開き、今月の単価が載っていることと、ページ数を見た</td></tr></tbody></table></div>
+    <p>戻した後は、同じことが起きないように、上書きしやすい場面（同じ名前のファイルを別の場所から持ってくるときなど）を手順書に書いておくと、ほかの担当者にも伝わります。社内の手順書のまとめ方は、<a href="/ai-manual-guide">業務マニュアルの作り方</a>で紹介しています。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">7．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">困っているのが「消えた」ではなく「中身が書き換わった」ことか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">戻すファイルを1つだけ選んで［バージョン履歴］を開いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">版の日時と保存した人を見て、上書きの直前の版を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［復元］の後、ファイルを開いて中身を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">複数のファイルを上書きした場合、1つずつ戻したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">欲しい版が無い場合、会社のアカウントなら管理者に確かめたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive" rel="noopener" target="_blank">OneDrive に保存されているファイルの以前のバージョンを復元する（Microsoft サポート）</a>：バージョン履歴の説明、対象のファイルの種類、30 日間の注、職場の管理者の設定、Web サイトとエクスプローラーの手順、</li>
+      <li><a href="https://support.microsoft.com/ja-jp/sharepoint/lists/documents-and-library/how-versioning-works-in-lists-and-libraries" rel="noopener" target="_blank">リストとライブラリでのバージョン管理のしくみ（Microsoft サポート）</a>：以前の版の表示、変更のタイミングと変更者、版の番号、名前の変更で版が増えること、版が作られない保存、500 バージョン、</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/excel-overwrite-restore-previous-version">Excelを誤って上書きしたとき、以前の版を確認して戻す手順</a></li>
+      <li><a href="/column/word-compare-document-versions">変更履歴がないWord文書の二つの版を比べるには？</a></li>
+      <li><a href="/column/google-drive-update-shared-pdf-version">Googleドライブの配布PDFを同じファイルの新版にする手順</a></li>
+      <li><a href="/column/onedrive-choose-folders-unsync-this-pc">OneDriveの［フォルダーの選択］で、このPCにだけ同期しないフォルダーを決めるには</a></li>
+      <li><a href="/column/onedrive-recycle-bin-restore-deleted-files">OneDriveのごみ箱から、誤って消した資料を元の場所へ戻すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

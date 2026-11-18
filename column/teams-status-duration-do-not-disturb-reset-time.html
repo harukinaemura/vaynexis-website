@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teamsの状態の期間で応答不可を指定時刻に戻すには｜Vaynexis</title>
+  <meta name="description" content="見積もりや締めの作業に集中するあいだだけ Microsoft Teams の状態を「応答不可」にして、決めた時刻に自動で戻したいときの［期間］の設定を、Microsoft の公式ヘルプの項目名どおりに整理します。戻ったあとの状態がどう決まるか、早めに戻す方法も添えます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Teamsの状態の期間で応答不可を指定時刻に戻すには｜Vaynexis">
+  <meta property="og:description" content="見積もりや締めの作業に集中するあいだだけ Microsoft Teams の状態を「応答不可」にして、決めた時刻に自動で戻したいときの［期間］の設定を、Microsoft の公式ヘルプの項目名どおりに整理します。戻ったあとの状態がどう決まるか、早めに戻す方法も添えます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/teams-status-duration-do-not-disturb-reset-time">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/teams-status-duration-do-not-disturb-reset-time">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Teamsの状態の期間で応答不可を指定時刻に戻すには","description":"見積もりや締めの作業に集中するあいだだけ Microsoft Teams の状態を「応答不可」にして、決めた時刻に自動で戻したいときの［期間］の設定を、Microsoft の公式ヘルプの項目名どおりに整理します。戻ったあとの状態がどう決まるか、早めに戻す方法も添えます。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/teams-status-duration-do-not-disturb-reset-time"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Microsoft 365・Google Workspaceの管理","item":"https://vaynexis.jp/column/topics/m365-workspace"},{"@type":"ListItem","position":4,"name":"Teamsの状態の期間で応答不可を指定時刻に戻すには","item":"https://vaynexis.jp/column/teams-status-duration-do-not-disturb-reset-time"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/m365-workspace">Microsoft 365・Google Workspaceの管理</a></li><li aria-current="page">Teamsの状態の期間で応答不可を指定時刻に戻すには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Teamsの状態の期間で応答不可を指定時刻に戻すには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>プロフィール画像から現在の状態、［期間］の順に選び、［ステータス］で応答不可を、［次の期間の経過後にステータスをリセット］で戻すまでの時間を選んで［完了］を押します。 時刻で決めたいときは［カスタム］で日付と時刻を入れます。期間が終わると、Teams はアクティビティ、カレンダー、コンピューターの状態に基づいて状態を自動でリセットします。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>月末の締めの作業のあいだだけ応答不可にしたつもりが、午後になっても戻し忘れて、声をかけてよいか周りを迷わせてしまった。状態に期間を付けて決めた時刻に自動で戻す手順と、戻ったあとの表示の決まり方を確かめます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">社内で決めておくことの表は架空の記入例で、取り込み中や一時退席中の使い分けも当社の提案であり、Microsoft のヘルプにある使い分けではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">応答不可の戻し忘れを防ぐ</a></li>
+      <li><a href="#s2">応答不可にするか、取り込み中にするか</a></li>
+      <li><a href="#s3">期間を付ける手順（ヘルプの項目名どおり）</a></li>
+      <li><a href="#s4">戻ったあとは「連絡可能」に固定されない</a></li>
+      <li><a href="#s5">検索ボックスのコマンドで切り替える</a></li>
+      <li><a href="#s6">予定より早く戻すとき</a></li>
+      <li><a href="#s7">画面共有のときの応答不可も確かめておく</a></li>
+      <li><a href="#s8">スマートフォンやブラウザーで使っているとき</a></li>
+      <li><a href="#s9">周りからどう見えているか</a></li>
+      <li><a href="#s10">社内で決めておくこと（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．応答不可の戻し忘れを防ぐ</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、職場・学校用の Teams のパソコン版（デスクトップ）です。</p>
+    <p>応答不可は、ヘルプでは、画面に集中したいときや通知を受け取りたくないときに使う状態と説明されています。 手で戻すのを忘れると、午後になっても応答不可のままで、ほかの人が声をかけてよいか迷います。集中する時間が決まっているなら、最初から戻る時刻を付けておきます。</p>
+    <p>ヘルプでは、期間の設定は、たとえば1時間の集中作業に応答不可を設定する場合のように、決めた時間の終わりに Teams が自動で状態をリセットするためのもの、と説明されています。 期間は［使用可能］以外のすべての状態に付けられます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．応答不可にするか、取り込み中にするか</h2>
+    <p>集中したいときの状態は、応答不可だけではありません。ヘルプでは、取り込み中は、何かに集中したいが通知は受け取りたい場合に使う状態とされています。 応答不可は通知を受け取りたくない場合の状態なので、上司やお客様からの連絡を見逃したくない作業なら、取り込み中に期間を付けるほうが合う場面もあります。</p>
+    <p>ただし、ヘルプには、取り込み中のような空きのある状態では、期間を設定していても、退席中のような空きの少ない状態は上書きされない、という注意があります。 また、パソコンをロックしたり、アイドルやスリープになったりすると、Teams は状態を［利用可能］から［退席中］に自動で切り替える、と書かれています。 期間を付けたのに表示が退席中になっている、というときは、この優先の順番によるものと考えられます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．期間を付ける手順（ヘルプの項目名どおり）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">操作</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="操作">プロフィール画像を選び、現在の状態、［期間］の順に選ぶ</td></tr><tr><td data-label="順番">2</td><td data-label="操作">［ステータス］で、これから表示する状態（応答不可）を選ぶ</td></tr><tr><td data-label="順番">3</td><td data-label="操作">［次の期間の経過後にステータスをリセット］で、その状態を続ける時間を選ぶ</td></tr><tr><td data-label="順番">4</td><td data-label="操作">合う時間がなければ［カスタム］を選び、日付と時刻を入れる（ヘルプではこの欄を［次の時間にリセット］と書いている）</td></tr><tr><td data-label="順番">5</td><td data-label="操作">［完了］を選ぶ</td></tr></tbody></table></div>
+    <p></p>
+    <p>「12時まで」「17時まで」のように終わりの時刻で決めたいときは、手順4の［カスタム］を使います。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．戻ったあとは「連絡可能」に固定されない</h2>
+    <p>期間が終わったあとの状態は、アクティビティ、カレンダー、コンピューターの状態から決まります。 ヘルプでは、応答不可に設定されていなければ、会議中や通話中に状態が［会議中］や［通話中 (取り込み中)］へ自動で変わることも説明されています。 期間の終わりに会議が入っていれば、連絡可能ではなく会議中の表示に戻ると考えておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．検索ボックスのコマンドで切り替える</h2>
+    <p>状態は、Teams の［検索］ボックスにコマンドを入れて変えることもできます。応答不可は「/dnd」、使用可能は「/available」、取り込み中は「/busy」と、ヘルプに一覧があります。 期間を付けずにすぐ切り替えたいときの近道として使えますが、戻す時刻を付けたいときは、上の［期間］の手順を使います。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．予定より早く戻すとき</h2>
+    <p>作業が早く終わったら、新しい状態を選ぶか、プロフィール画像から現在の状態を選び、［状態のリセット］を選びます。</p>
+  </div></section>
+
+  <section class="sec" id="s7" aria-labelledby="s7-title"><div class="wrap">
+    <h2 class="h2" id="s7-title">7．画面共有のときの応答不可も確かめておく</h2>
+    <p>発表のために画面を共有すると、自動で応答不可になる設定があり、既定ではオンです。 共有中も通知を受けたい場合は、［設定など］から［設定］、［プライバシー］と進み、このチェック ボックスをオフにします。</p>
+  </div></section>
+
+  <section class="sec" id="s8" aria-labelledby="s8-title"><div class="wrap">
+    <h2 class="h2" id="s8-title">8．スマートフォンやブラウザーで使っているとき</h2>
+    <p>ヘルプのモバイルのタブでも、プロファイル写真、現在の状態、［期間］の順に選び、同じように時間を決める手順が書かれています。 モバイルのタブでは、［カスタム］の場所が［状態のリセット時間］の下と書かれていて、パソコンのタブと言い方が違います。</p>
+    <p>ブラウザーで Teams を使っている場合は、ほかのタブやアプリで作業しているあいだに状態が退席中に切り替わらないようにする設定があります。 Teams for Web の［設定］から［通知とアクティビティ］、［プレゼンス］へ進み、［Teams on the web 以外でアクティブな場合、現在の状態を保持する］のトグルをオンにします。 オンにするとブラウザーにアクセス許可の確認が出て、［許可］を選ぶと状態が正確に保たれる、とされています。</p>
+  </div></section>
+
+  <section class="sec" id="s9" aria-labelledby="s9-title"><div class="wrap">
+    <h2 class="h2" id="s9-title">9．周りからどう見えているか</h2>
+    <p>状態は、プロフィールの小さな点で、応答可能かどうかが周りの人に示されます。 応答可能な人には、プロフィール画像の横に緑色の丸とチェックマークが表示されます。 一方、席を外すときに使う一時退席中は、自動で設定されることはないとヘルプにあります。 昼休みや来客の対応で席を離れるときは、応答不可ではなく一時退席中を手で選び、戻ったら［状態のリセット］で戻す、と決めておくと、周りの人が声をかける時を判断しやすくなります。</p>
+  </div></section>
+
+  <section class="sec" id="s10" aria-labelledby="s10-title"><div class="wrap">
+    <h2 class="h2" id="s10-title">10．社内で決めておくこと（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">決めること</th><th scope="col">架空の記入例</th></tr></thead><tbody><tr><td data-label="決めること">応答不可にしてよい場面</td><td data-label="架空の記入例">見積もりの作成、月末の締めの作業</td></tr><tr><td data-label="決めること">戻す時刻の付け方</td><td data-label="架空の記入例">［カスタム］で終わる時刻を入れる</td></tr><tr><td data-label="決めること">急ぎの連絡の手段</td><td data-label="架空の記入例">電話</td></tr><tr><td data-label="決めること">通知を受けたい集中作業</td><td data-label="架空の記入例">応答不可ではなく取り込み中に期間を付ける</td></tr></tbody></table></div>
+    <p>状態の使い方は、人によって決まりがばらばらになりがちです。社内でそろえるときは、<a href="/business-improvement">業務改善の進め方</a>と同じく、困っている場面から順に決めていく方法があります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">11．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">プロフィール画像から現在の状態、［期間］へ進んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［ステータス］で応答不可を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［次の期間の経過後にステータスをリセット］で時間を選んだか（時刻で決めたいときは［カスタム］）</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［完了］を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">早く戻すときは［状態のリセット］を使えると知っているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">通知を受けたい作業なら、応答不可ではなく取り込み中を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ブラウザーで使う人は、現在の状態を保持する設定を確かめたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">12．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/teams/notifications-settings/change-your-status-in-microsoft-teams" rel="noopener" target="_blank">Microsoft Teams で状態を変更する（Microsoft サポート）</a>：状態の期間の手順と項目名、期間終了後の自動リセット、状態のリセット、会議中の自動変更、画面共有中の応答不可、取り込み中の</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/outlook-classic-stop-automatic-replies">クラシックOutlookの「自動応答」を止める手順と期間設定の確認</a></li>
+      <li><a href="/column/teams-turn-off-read-receipts">Teamsの「開封確認メッセージ」をオフにする手順と確認点</a></li>
+      <li><a href="/column/gmail-desktop-notifications-important-only">Gmailの「デスクトップ通知」を重要メールだけにするには</a></li>
+      <li><a href="/column/teams-edit-sent-chat-message-typo">Teamsの編集で送信したチャットの誤字を直すには</a></li>
+      <li><a href="/column/teams-live-captions-meeting-spoken-language">Teamsのライブ キャプションで会議の字幕を表示するには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

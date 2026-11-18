@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordの表が余白からはみ出すときページ幅に収めるには｜Vaynexis</title>
+  <meta name="description" content="Excel から貼った表や、列を足した表が Word の右の余白からはみ出して、印刷すると端が切れそうなときに、ページを横向きにせず、縦のページの幅の中に表を収める直し方を、Microsoft の公式ヘルプに沿って整理します。自動調整、列の幅、表のプロパティの3つの直し方を分けて書きます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Wordの表が余白からはみ出すときページ幅に収めるには｜Vaynexis">
+  <meta property="og:description" content="Excel から貼った表や、列を足した表が Word の右の余白からはみ出して、印刷すると端が切れそうなときに、ページを横向きにせず、縦のページの幅の中に表を収める直し方を、Microsoft の公式ヘルプに沿って整理します。自動調整、列の幅、表のプロパティの3つの直し方を分けて書きます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/word-table-fit-page-width">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/word-table-fit-page-width">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wordの表が余白からはみ出すときページ幅に収めるには","description":"Excel から貼った表や、列を足した表が Word の右の余白からはみ出して、印刷すると端が切れそうなときに、ページを横向きにせず、縦のページの幅の中に表を収める直し方を、Microsoft の公式ヘルプに沿って整理します。自動調整、列の幅、表のプロパティの3つの直し方を分けて書きます。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/word-table-fit-page-width"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Wordの設定","item":"https://vaynexis.jp/column/topics/word"},{"@type":"ListItem","position":4,"name":"Wordの表が余白からはみ出すときページ幅に収めるには","item":"https://vaynexis.jp/column/word-table-fit-page-width"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/word">Wordの設定</a></li><li aria-current="page">Wordの表が余白からはみ出すときページ幅に収めるには</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Wordの表が余白からはみ出すときページ幅に収めるには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>表を選び、［テーブル レイアウト］タブの［セル サイズ］グループで［自動調整］を選び、表の幅を自動で調整する［自動調整ウィンドウ］を選びます。 列ごとに幅を決めたいときは、列のセルを選んで［テーブル列の幅］に値を入れるか、列の境界をドラッグします。 幅を数字で決めたいときは、表を右クリックして［表のプロパティ］を開き、［表］タブの［幅の優先］で表全体の幅を決めます。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>列を足していくうちに Word の表が右の余白へはみ出し、印刷すると端の列が切れそうになる。用紙を横向きにする前に、自動調整・列の幅・表のプロパティの幅の優先で縦のページに収める手順と、表が右へずれる原因の見つけ方を確かめます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">発注手順書の場面と決めておくことの表は架空の事務所を想定した当社の整理で、確認表も Microsoft のヘルプが示す手順そのものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">横向きにする前に、幅を見直す</a></li>
+      <li><a href="#s2">自動調整でページの幅に合わせる</a></li>
+      <li><a href="#s3">列ごとに幅を決める</a></li>
+      <li><a href="#s4">決めた幅が勝手に変わるとき</a></li>
+      <li><a href="#s5">表の角をつかんで全体を縮める</a></li>
+      <li><a href="#s6">表のプロパティで幅をページの割合で決める</a></li>
+      <li><a href="#s7">幅は合っているのに右へずれるとき</a></li>
+      <li><a href="#s8">表を直しても収まらないとき</a></li>
+      <li><a href="#s9">手順書の表で決めておくこと（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．横向きにする前に、幅を見直す</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、Windows のパソコンで使う Word（Microsoft 365・Word 2024 など）です。ヘルプ「表、列、行のサイズを変更する」の適用先には、Word for Microsoft 365、Word 2024、Word 2021、Word 2019、Word 2016 が並び、同じ版の Outlook も入っています。</p>
+    <p>列の多い表がはみ出すと、ページを横向きにしたくなります。けれども、手順書や報告書の途中で1ページだけ横向きになると、読む人が紙を回すことになります。まずは、表の幅をページの中に収められないかを試し、それでも読めないほど詰まるときに横向きを考える、という順番にします。</p>
+    <p>ヘルプでは、Word で表のサイズや列と行の寸法を手で、または自動で調整できると説明されています。 複数の列や行のサイズをまとめて変えることや、セルとセルの間のスペースを変えることもできる、とあります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．自動調整でページの幅に合わせる</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">操作</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="操作">表を選ぶ</td></tr><tr><td data-label="順番">2</td><td data-label="操作">［テーブル レイアウト］タブの［セル サイズ］グループで［自動調整］を選ぶ</td></tr><tr><td data-label="順番">3</td><td data-label="操作">表の幅を自動で調整する［自動調整ウィンドウ］を選ぶ</td></tr></tbody></table></div>
+    <p></p>
+    <p>同じ［自動調整］には、列の幅を中身に合わせる［オートフィット コンテンツ］もあります。 中身の長い列があると、こちらは表が広がることもあるので、はみ出しを直したいときは表の幅を合わせるほうから試します。</p>
+    <p>幅を詰めたあとで、行が縦に伸びて見えることがあります。ヘルプの注によれば、行の高さは、手で変えるまでは内容のサイズに合わせて自動的に調整されます。 前に行の高さを手で決めた表では、高さが内容に合わせて変わらなくなるので、詰めた列の文字がすべて見えているかを確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．列ごとに幅を決める</h2>
+    <p>自動調整のあと、備考の列だけが狭すぎる、番号の列が広すぎる、ということもあります。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">やり方</th><th scope="col">操作</th></tr></thead><tbody><tr><td data-label="やり方">値で決める</td><td data-label="操作">列のセルを選び、［テーブル レイアウト］タブの［セル サイズ］グループの［テーブル列の幅］に値を入れる</td></tr><tr><td data-label="やり方">マウスで決める</td><td data-label="操作">列の境界の右側にカーソルを置き、目的の幅になるまで境界をドラッグする</td></tr><tr><td data-label="やり方">幅をそろえる</td><td data-label="操作">そろえたい列を選び、［セル サイズ］グループの［列の配布］を選ぶ</td></tr></tbody></table></div>
+    <p></p>
+    <p>ルーラーを使うときは、表のセルを選んでからルーラーのマーカーをドラッグします。 ルーラーのマーカーをドラッグするときに Alt キーを押すと、列の正確な寸法がルーラーに表示されます。</p>
+    <p>［列の配布］で幅をそろえたい列が離れているときは、Ctrl キーを押しながら選ぶと、隣り合わない複数の部分を選べます。 選び方もヘルプに示されていて、列は列の上のグリッド線または枠線を、表全体は表の上にポインターを置くと出てくるテーブル移動ハンドルをクリックします。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．決めた幅が勝手に変わるとき</h2>
+    <p>文字を入れるたびに列の幅が変わってしまう場合は、自動調整を止めます。表を選び、［自動調整］から［固定列幅］を選びます。</p>
+    <p>セルの中の余白が広すぎて表が詰まって見えるときは、［テーブル レイアウト］タブの［配置］グループの［セルの余白］で、上下左右の余白の値を変えられます。 この設定は作業中の表にだけ効き、新しく作る表は元の既定のままです。</p>
+    <p>ヘルプの説明では、セルの余白は表のセルの内側、セルの間隔はセルとセルの間のことです。 同じダイアログ ボックスの［既定のセルの間隔］で［セルの間隔を指定する］のチェック ボックスをオンにすると、間隔の値を入れられます。 表を詰めたいのにセルの間に隙間が残るときは、このチェックが入っていないかを見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．表の角をつかんで全体を縮める</h2>
+    <p>数字を気にせず、見た目で表全体を小さくしたいときは、表にカーソルを置きます。表の下の隅にテーブルのサイズ変更ハンドルが出たら、表が適切なサイズになるまで表の枠線をドラッグします。 縮めたあとは、番号や金額の列で数字が途中で折り返されていないかを見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．表のプロパティで幅をページの割合で決める</h2>
+    <p>［自動調整ウィンドウ］に任せず、幅を数字で決める方法もあります。Word では、表を右クリックして［表のプロパティ］を選ぶと、表のオプションを設定・変更できます。 このヘルプの適用先には、Word for Microsoft 365、Word 2021、Word 2019、Word 2016 などが並んでいます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">操作</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="操作">表を右クリックして［表のプロパティ］を選ぶ</td></tr><tr><td data-label="順番">2</td><td data-label="操作">［表］タブの［サイズ］で［幅の優先］を選び、サイズを決める</td></tr><tr><td data-label="順番">3</td><td data-label="操作">［単位］のボックスで、インチで測るか、ページのパーセンテージで測るかを選ぶ</td></tr></tbody></table></div>
+    <p></p>
+    <p>［表］タブで決めた値は、表全体に効きます。 パーセンテージの基準が余白の内側の幅か用紙全体の幅かはヘルプに書かれていないため、値を入れたら印刷プレビューで右の端を確かめます。</p>
+    <p>列ごとに決めたいときは、列の中をクリックしてから［表のプロパティ］を開き、［列］タブの［サイズ］で［幅の優先］を選んで列の幅を決めます。［測定単位］では、インチかパーセンテージかを選べます。 ［前の列］［次の列］を押すと、ダイアログ ボックスを閉じずに隣の列へ移れます。 行・列・セルにだけ設定したいときは、ダイアログ ボックスで変える前に、その行・列・セルの中をクリックしておく、というのがヘルプの注です。</p>
+    <p>［表］タブの［オプション］からは、上下のセルの余白、セルの間隔、セル内容の自動サイズ変更などの設定も開けます。</p>
+  </div></section>
+
+  <section class="sec" id="s7" aria-labelledby="s7-title"><div class="wrap">
+    <h2 class="h2" id="s7-title">7．幅は合っているのに右へずれるとき</h2>
+    <p>表の幅を詰めても右の余白にかかるときは、表の位置の設定を見ます。［表のプロパティ］の［表］タブの［配置］では、表をページの左・中央・右のどれにそろえるかを選べます。 ［左］を選んだときは、［左からインデント］のボックスでインデントの距離を決められます。 ほかの文書から持ってきた表で、この距離が大きいまま残っていると、その分だけ表全体が右へ寄ります。</p>
+    <p>同じ［表］タブの［文字列の折り返し］では、近くの文章を表の周りで折り返すなら［する］、折り返さないなら［なし］を選びます。 表の横に本文が回り込んで表の置き場所が落ち着かないときは、ここが［する］になっていないかも見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s8" aria-labelledby="s8-title"><div class="wrap">
+    <h2 class="h2" id="s8-title">8．表を直しても収まらないとき</h2>
+    <p>列を詰めると文字が読めなくなるほど列の多い表は、用紙の余白のほうを見直す手もあります。ヘルプでは、Word では各ページに 1 インチの余白が自動的に設定される、と説明されています。 手元の文書の余白が何 mm になっているかは、変える前に余白の設定で見ておきます。 余白は、［レイアウト］から開く余白の設定で、定義済みの設定を選ぶか、［ユーザー設定の余白］を選んで独自の余白を決めます。 余白は本文の行の長さにも関わるので、社内で書式を決めている手順書なら、先にその決まりを確かめます。横向きのページを使うのは、ここまで試しても読めないときにします。</p>
+  </div></section>
+
+  <section class="sec" id="s9" aria-labelledby="s9-title"><div class="wrap">
+    <h2 class="h2" id="s9-title">9．手順書の表で決めておくこと（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">決めること</th><th scope="col">架空の記入例</th></tr></thead><tbody><tr><td data-label="決めること">表の幅</td><td data-label="架空の記入例">［自動調整ウィンドウ］でページの幅に合わせる</td></tr><tr><td data-label="決めること">列の幅</td><td data-label="架空の記入例">番号の列は狭く、備考の列は広く［テーブル列の幅］で決める</td></tr><tr><td data-label="決めること">幅を固める</td><td data-label="架空の記入例">仕上がったら［固定列幅］にする</td></tr><tr><td data-label="決めること">位置</td><td data-label="架空の記入例">［表のプロパティ］の［左からインデント］を確かめる</td></tr><tr><td data-label="決めること">横向きにする条件</td><td data-label="架空の記入例">文字を小さくしても読めないときだけ</td></tr></tbody></table></div>
+    <p>架空の例として、従業員10人ほどの事務所で、Excel の取引先一覧を Word の発注手順書に貼ったところ、8列の表が右の余白に1列ぶんはみ出した場面を考えます。まず［自動調整ウィンドウ］で表の幅を合わせ、住所の列が狭くなりすぎたら［テーブル列の幅］で広げて、番号の列を詰めます。最後に［固定列幅］にして、次に誰かが文字を足しても幅が動かないようにしておきます。それでも右に寄って見えるなら、［表のプロパティ］の［左からインデント］を見ます。</p>
+    <p>手順書の表の作り方がそろっていると、直す人が替わっても見た目が崩れにくくなります。表の決め方を手順書の書式の決まりに書き込むときは、<a href="/ai-manual-guide">AIで業務マニュアル・手順書を作る方法</a>も参考になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">10．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">横向きにする前に、表の幅をページに合わせられないかを試したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［自動調整］→［自動調整ウィンドウ］で表の幅を合わせたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">狭すぎる・広すぎる列を［テーブル列の幅］で直したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">幅が勝手に変わるなら［固定列幅］にしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［セルの間隔を指定する］が思いがけずオンになっていないかを見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">幅を割合で決めたときは、印刷プレビューで右の端を確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">右へずれるときは［表のプロパティ］の［配置］と［左からインデント］を見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">余白を変える前に、社内の書式の決まりを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">印刷プレビューで、右の端が切れていないかを見たか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">11．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/word/resize-a-table-column-or-row" rel="noopener" target="_blank">表、列、行のサイズを変更する（Microsoft サポート）</a>：適用先、自動調整（ウィンドウ・コンテンツ）、行の高さの注、テーブル列の幅、境界のドラッグ、ルーラーと Alt キー、列の</li>
+      <li><a href="https://support.microsoft.com/ja-jp/office/security-privacy/set-or-change-table-properties" rel="noopener" target="_blank">表プロパティを設定または変更する（Microsoft サポート）</a>：適用先、右クリックで表のプロパティ、注（行・列・セルの中をクリック）、表タブ（幅の優先・単位・配置・左からインデント・文</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/training/change-margins" rel="noopener" target="_blank">余白を変更する（Microsoft サポート）</a>：1 インチの既定の余白、定義済みの余白とユーザー設定の余白</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-manual-guide">AIで業務マニュアルを作る方法</a></li>
+      <li><a href="/column/word-landscape-selected-table-pages">Wordで横長の表があるページだけ横向きにする手順と確認点</a></li>
+      <li><a href="/column/word-table-row-height-long-remarks">Wordの表で長い備考が切れるとき、行の高さを直す手順と確認</a></li>
+      <li><a href="/column/word-margin-units-centimeters">Wordの余白の単位がインチになったときcmへ戻すには</a></li>
+      <li><a href="/column/word-modify-heading-style-font">Wordの「スタイルの変更」で同じ見出しの字体をまとめて直すには</a></li>
+      <li><a href="/column/word-find-replace-review-each-match">Wordの文書中の表記を一件ずつ検索・置換するには？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

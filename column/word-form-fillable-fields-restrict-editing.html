@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordの申請書で記入欄だけ入力できるようにするには？｜Vaynexis</title>
+  <meta name="description" content="社内の申請書や届出の Word ファイルを配ると、記入する人が見出しや注意書きまで書き換えてしまい、様式が崩れて戻ってくることがあります。記入欄だけに入力でき、ほかの部分は変えられないようにする方法を、Microsoft の公式ヘルプ（Windows 版）に沿って2通り整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Wordの申請書で記入欄だけ入力できるようにするには？｜Vaynexis">
+  <meta property="og:description" content="社内の申請書や届出の Word ファイルを配ると、記入する人が見出しや注意書きまで書き換えてしまい、様式が崩れて戻ってくることがあります。記入欄だけに入力でき、ほかの部分は変えられないようにする方法を、Microsoft の公式ヘルプ（Windows 版）に沿って2通り整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/word-form-fillable-fields-restrict-editing">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/word-form-fillable-fields-restrict-editing">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wordの申請書で記入欄だけ入力できるようにするには？","description":"社内の申請書や届出の Word ファイルを配ると、記入する人が見出しや注意書きまで書き換えてしまい、様式が崩れて戻ってくることがあります。記入欄だけに入力でき、ほかの部分は変えられないようにする方法を、Microsoft の公式ヘルプ（Windows 版）に沿って2通り整理します。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/word-form-fillable-fields-restrict-editing"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Wordの設定","item":"https://vaynexis.jp/column/topics/word"},{"@type":"ListItem","position":4,"name":"Wordの申請書で記入欄だけ入力できるようにするには？","item":"https://vaynexis.jp/column/word-form-fillable-fields-restrict-editing"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/word">Wordの設定</a></li><li aria-current="page">Wordの申請書で記入欄だけ入力できるようにするには？</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Wordの申請書で記入欄だけ入力できるようにするには？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>1つ目は、記入欄に［開発者］タブの［コントロール］から入力用のコンテンツ コントロールを置き、［編集の制限］で保護を始める方法です。 2つ目は、［レビュー］タブの［編集の制限］で文書を［変更なし (読み取り専用)］にし、記入欄だけを例外として［すべてのユーザー］に編集を許す方法です。 どちらも、最後に保護を始めて、はじめて効き目が出ます。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>申請書の Word ファイルを配ったら、見出しや注意書きまで書き換えられて戻ってきた。記入欄にコンテンツ コントロールを置いて保護するやり方と、読み取り専用にして欄だけを開けるやり方の手順、承認欄やパスワードの扱い、保護の外し方を確かめます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">配る前の確かめの例は架空の申請書を前提にしたもので、2つのやり方の比べ方と確認表は当社の整理であり、Microsoft が示す手順ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">様式が崩れて戻ってくる</a></li>
+      <li><a href="#s2">2つのやり方の比べ方</a></li>
+      <li><a href="#s3">A. コンテンツ コントロールを置いて保護する</a></li>
+      <li><a href="#s4">B. 読み取り専用にして記入欄だけ開ける</a></li>
+      <li><a href="#s5">様式を直すときは保護を止める</a></li>
+      <li><a href="#s6">Mac 版や Web 版で開く人がいるとき</a></li>
+      <li><a href="#s7">配る前の確かめ（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．様式が崩れて戻ってくる</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、Windows のパソコンで使う Word（Microsoft 365・Word 2024 など）です。ヘルプによると、入力できるフォームを作る操作は Web 版の Word ではできず、デスクトップ版で作ります。</p>
+    <p>記入欄だけを開けるヘルプの適用先には、Word for Microsoft 365、Word 2024、Word 2021、Word 2019、Word 2016 が並んでいます。 フォームを作るヘルプの適用先には、これに加えて Mac 向けの Word も載っています。 社内に Word 2019 や Word 2016 のパソコンが残っていても、どちらのページも対象に入れています。</p>
+    <p>休暇の申請書や備品の購入申請書を Word で配ると、注意書きの文が消えていたり、欄の幅が変わっていたりして、集めた後に見比べにくくなります。記入する人が悪いわけではなく、どこを書いてよいかが画面で分からないことも一因です。書ける所を決めて、それ以外を守る設定にしておくと、受け取る側の手直しが減ります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．2つのやり方の比べ方</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">やり方</th><th scope="col">向いている申請書</th><th scope="col">使うタブ</th></tr></thead><tbody><tr><td data-label="やり方">A. コンテンツ コントロール＋編集の制限</td><td data-label="向いている申請書">日付・選択肢・チェック ボックスなど、決まった形で書いてほしい欄が多い</td><td data-label="使うタブ">［開発者］</td></tr><tr><td data-label="やり方">B. 読み取り専用＋記入欄だけ例外</td><td data-label="向いている申請書">自由に文を書く欄が中心で、今の様式をそのまま使いたい</td><td data-label="使うタブ">［レビュー］</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．A. コンテンツ コントロールを置いて保護する</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">操作</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="操作">リボンに［開発者］タブが出ているかを確かめる</td></tr><tr><td data-label="順番">2</td><td data-label="操作">記入欄をクリックし、［開発者］タブの［コントロール］から置きたいコントロールを選ぶ</td></tr><tr><td data-label="順番">3</td><td data-label="操作">必要なら、コントロールを選んで［プロパティ］で設定を変える（日付の表示の形など）</td></tr><tr><td data-label="順番">4</td><td data-label="操作">［編集の制限］を選び、制限を選んでから［はい、保護を開始します］を選ぶ</td></tr></tbody></table></div>
+    <p></p>
+    <p>［開発者］タブは、最初からリボンに出ているわけではありません。ヘルプによると、既定では表示されず、リボンに追加して使います。 Windows 版では、［ファイル］タブで［オプション&gt;リボンのカスタマイズ］に進み、［リボンのユーザー設定］の［メイン タブ］の下にある［開発］のチェック ボックスをオンにします。 一度表示すれば、チェック ボックスをオフにするか Office を再インストールしない限り、タブは出たままです。</p>
+    <p>ヘルプには、チェック ボックス、テキスト ボックス、日付ピッカー、ドロップダウン リストなどのコントロールを置けると書かれています。 ［コントロール］の中のアイコンにマウス ポインターを合わせると、どの種類のコントロールかが表示されます。 ドロップダウン リストは、用意した選択肢からだけ選んでもらう欄です。 部署名や申請の種類など、書き方がばらつく欄に向いています。</p>
+    <p>選択肢を作るには、置いたコントロールを選んで［プロパティ］を選び、［ドロップダウン リストのプロパティ］の［追加］をクリックして、［表示名］ボックスに選択肢を1つずつ入力します。 選択肢に無い答えも書いてほしい欄なら、似た部品のコンボ ボックスを使います。コンボ ボックスでは、用意した選択肢から選ぶほかに、自分で入力することもできます。</p>
+    <p>文字を書いてもらう欄にも2種類あります。リッチ テキスト コンテンツ コントロールでは、記入する人が太字や斜体などの書式を付けたり、複数の段落を入力したりできます。 こうした書式を付けさせたくない欄には、プレーン テキスト コンテンツ コントロールを使います。 氏名や所属のように書式のいらない欄はプレーン テキストに、申請の理由を何段落かで書いてもらう欄はリッチ テキストに、と分けておくと、集めた後の見た目がそろいます。置き間違えたコントロールは、右クリックして［コンテンツ コントロールの削除］を選ぶと外せます。</p>
+    <p>印刷して手書きで使う人がいても困りません。コンテンツ コントロールで作ったフォームは印刷でき、コントロールの周りの枠は印刷されません。</p>
+    <p>文書の一部だけを保護したいときの方法も、ヘルプの「高度なヒント」にあります。文書をセクションに分け、必要なセクションだけを保護します。 そのためには、［編集の制限］パネルで［セクションの選択］を選びます。 記入欄の並ぶ部分を保護し、末尾の自由に書いてよい備考の部分は保護しない、といった分け方ができます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．B. 読み取り専用にして記入欄だけ開ける</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">操作</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="操作">［レビュー］タブの［保護］グループで［編集の制限］を選ぶ</td></tr><tr><td data-label="順番">2</td><td data-label="操作">［ユーザーに許可する編集の種類を指定する］をオンにし、一覧で［変更なし (読み取り専用)］を選ぶ</td></tr><tr><td data-label="順番">3</td><td data-label="操作">記入欄を選ぶ（離れた欄は Ctrl キーを押しながら選ぶ）</td></tr><tr><td data-label="順番">4</td><td data-label="操作">［例外処理］で、［グループ］の［すべてのユーザー］をオンにする</td></tr><tr><td data-label="順番">5</td><td data-label="操作">［はい、保護の適用を開始する］を選ぶ</td></tr></tbody></table></div>
+    <p></p>
+    <p>保護をかけた文書では、変えてはいけない所を直そうとすると、ステータス バーに「選択範囲がロックされているため、この変更はできません。」と出ます。 記入する人には、［編集の制限］の作業ウィンドウに、変更できる所へ移動するボタンが出ます。 作業ウィンドウを閉じてしまったときは、［レビュー］タブの［保護］グループで［編集の制限］を選び直し、［次のリージョンを検索して編集できる］を選ぶと、書ける所へ移れます。</p>
+    <p>承認欄のように、決まった人にだけ書いてほしい欄もあります。［例外処理］で［すべてのユーザー］の代わりに［その他のユーザー］を選んでユーザー名を入力すると、選んだ箇所を特定の個人だけが編集できます。 名前を並べるときは、セミコロンで区切ります。 ヘルプは、パスワードではなくユーザー認証で保護するなら、ユーザー名に必ずメール アドレスを入力するよう注意しています。</p>
+    <p>開けた記入欄の中で、文字の色や大きさまで変えられたくない場合は、書式の制限という別の設定があります。別のヘルプでは、［スタイルの管理］を選んで［制限］タブを開き、［書式設定を許可されたスタイルに制限］を選ぶ方法が案内されています。 これを選ぶと、記入する人はテキストの書式を直接設定することも、制限されたスタイルを使うこともできません。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．様式を直すときは保護を止める</h2>
+    <p>様式を作り直すときは、［レビュー］タブの［編集の制限］で、作業ウィンドウの［保護の停止］を選びます。 保護にパスワードを付けた場合、ヘルプには、パスワードを忘れると Microsoft では回復できないと書かれています。 パスワードを付けるなら、様式の担当者と保管の場所を決めてからにします。</p>
+    <p>保護を始めるときのパスワードは、［新しいパスワードの入力 (省略可)］の欄に入れ、確認のためにもう一度入れます。 ヘルプは、パスワードを 8 文字以上にするよう求め、理想は 14 文字以上のパス フレーズとしています。 紙に書き留めるときは、守る文書から離れた安全な場所に保管するよう勧めています。 ［ユーザー認証］を選ぶと文書が暗号化され、認証済みの所有者だけが保護を外せます。 ただし暗号化すると、ほかの人が同時に文書を操作できなくなります。 みんなで同じファイルに書き込む使い方なら、この点を先に考えておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．Mac 版や Web 版で開く人がいるとき</h2>
+    <p>Mac 版で［開発者］タブを出すには、［Word］メニューの［環境設定］から［リボンとツール バー］に進み、［開発者］をオンにして［保存］を選びます。 フォームのヘルプの Mac のタブでは、保護は［Developer&gt;Protect Form］で行い、保護を外して編集を続けるときは［フォームの保護］をもう一度選ぶと書かれています。 Web 用 Word では入力できるフォームを作れませんが、デスクトップ版で作って保存した文書を Web の Word で開き直すと、行った変更が表示されます。</p>
+  </div></section>
+
+  <section class="sec" id="s7" aria-labelledby="s7-title"><div class="wrap">
+    <h2 class="h2" id="s7-title">7．配る前の確かめ（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">確かめること</th><th scope="col">架空の確認例</th></tr></thead><tbody><tr><td data-label="確かめること">書ける所</td><td data-label="架空の確認例">申請日・氏名・内容・理由の4つの欄だけ</td></tr><tr><td data-label="確かめること">書けない所</td><td data-label="架空の確認例">見出し、注意書き、承認欄</td></tr><tr><td data-label="確かめること">試し書き</td><td data-label="架空の確認例">保護したあと、別の人に一度書いてもらう</td></tr><tr><td data-label="確かめること">様式の担当</td><td data-label="架空の確認例">総務の担当者が保護の停止と直しを行う</td></tr></tbody></table></div>
+    <p>ヘルプの Mac のタブにも、配る前に任意で行う確かめとして、保護したフォームを開き直し、記入する人と同じように入力してみる手順が載っています。 様式の作り直しは、どの書類から手を付けるかで手間が変わります。社内の書類と手作業を並べて、直す順番を決めるときは、<a href="/business-improvement">業務改善の進め方</a>も参考になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">8．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">A と B のどちらのやり方が申請書に合うかを決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［開発者］タブが無いときは、［リボンのユーザー設定］で［開発］をオンにしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">A：記入欄にコンテンツ コントロールを置き、［はい、保護を開始します］まで進んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">A：書式のいらない欄には、プレーン テキスト コンテンツ コントロールを使ったか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">B：［変更なし (読み取り専用)］にし、記入欄を［すべてのユーザー］の例外にして保護を始めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">B：承認欄など決まった人だけが書く欄は、［その他のユーザー］で分けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">保護したあと、見出しや注意書きを書き換えられないことを試したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">パスワードを付けるなら、担当者と保管の場所を決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">Mac 版や Web 用 Word で開く人に、操作の名前の違いを伝えたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">9．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/word/create-a-form-in-word-that-users-can-complete-or-print" rel="noopener" target="_blank">ユーザーが入力または印刷できるフォームをWordに作成する（Microsoft サポート）</a>：適用先、Windows のタブ：開発者タブ、コンテンツ コントロール、アイコンの表示、リッチ テキストとプレーン テキス</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/allow-changes-to-parts-of-a-protected-word-document" rel="noopener" target="_blank">保護されたWord ドキュメントの一部に対する変更を許可する（Microsoft サポート）</a>：適用先、読み取り専用と例外処理、その他のユーザーとメール アドレス、保護の適用の開始、パスワードの欄と長さと保管、ユーザ</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/show-the-developer-tab-in-word" rel="noopener" target="_blank">Wordの [開発者] タブを表示する（Microsoft サポート）</a>：Windows のタブ：既定では表示されない、リボンのカスタマイズと［開発］チェック ボックス、表示が続く条件／macO</li>
+      <li><a href="https://support.microsoft.com/ja-jp/word/restrict-or-permit-formatting-changes" rel="noopener" target="_blank">書式の変更を制限または許可する（Microsoft サポート）</a>：［スタイルの管理］の［制限］タブ、書式設定を許可されたスタイルに制限</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/word-protected-view-source-warning">Wordが保護ビューで編集できないときの取得元と警告の確認</a></li>
+      <li><a href="/column/word-lock-track-changes-password">Wordの変更履歴をロックし、回覧中の記録停止を防ぐには</a></li>
+      <li><a href="/column/word-autotext-register-notice-text">Wordで繰り返し使う注意書きを定型句に登録・管理する手順</a></li>
+      <li><a href="/column/word-dark-mode-white-page-background">Wordのダーク モードで黒くなった用紙を白く表示するには</a></li>
+      <li><a href="/column/word-read-aloud-speed-change">Wordの音声読み上げで読む速さを変えるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

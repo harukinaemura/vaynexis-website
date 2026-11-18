@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerPointのスペル チェックで赤い波線を表示しないには｜Vaynexis</title>
+  <meta name="description" content="PowerPoint で資料を作っていると、品番や英字の社名、略語の下に赤い波線が並び、画面を共有して見せるときに気になる、という場面があります。Windows 版 PowerPoint で入力時のスペル チェックを止める場所と、止めたあとに誤字を確かめる方法を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="PowerPointのスペル チェックで赤い波線を表示しないには｜Vaynexis">
+  <meta property="og:description" content="PowerPoint で資料を作っていると、品番や英字の社名、略語の下に赤い波線が並び、画面を共有して見せるときに気になる、という場面があります。Windows 版 PowerPoint で入力時のスペル チェックを止める場所と、止めたあとに誤字を確かめる方法を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/powerpoint-spell-check-red-underline-off">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/powerpoint-spell-check-red-underline-off">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"PowerPointのスペル チェックで赤い波線を表示しないには","description":"PowerPoint で資料を作っていると、品番や英字の社名、略語の下に赤い波線が並び、画面を共有して見せるときに気になる、という場面があります。Windows 版 PowerPoint で入力時のスペル チェックを止める場所と、止めたあとに誤字を確かめる方法を、Microsoft の公式ヘルプに沿って整理します。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/powerpoint-spell-check-red-underline-off"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"PowerPointの設定","item":"https://vaynexis.jp/column/topics/powerpoint"},{"@type":"ListItem","position":4,"name":"PowerPointのスペル チェックで赤い波線を表示しない","item":"https://vaynexis.jp/column/powerpoint-spell-check-red-underline-off"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/powerpoint">PowerPointの設定</a></li><li aria-current="page">PowerPointのスペル チェックで赤い波線を表示しない</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">PowerPointのスペル チェックで赤い波線を表示しないには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>赤い波線を出さないようにするには、［ファイル］メニューの［オプション］から［校正］を開き、［入力時にスペル チェックを行う］のチェック ボックスをオフにします。 自動のチェックを止めても、F7 キーを押せばスペル チェックをその場で始められます。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>品番や英字の社名に赤い波線が並び、画面を共有して見せるときに気になる。Windows 版 PowerPoint で入力時のスペル チェックを止める場所と、止めたあとに F7 キーや再チェックで誤字を確かめる方法、Web 版で語ごとに外す方法を見ます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">社内で使い方をそろえる表は、製品紹介の資料を作る場面を想定した架空の例で、Microsoft のヘルプが勧める運用ではなく当社の整理です。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">赤い波線が出る理由</a></li>
+      <li><a href="#s2">波線を止める手順</a></li>
+      <li><a href="#s3">止めたあとは、送る前に F7 キー</a></li>
+      <li><a href="#s4">一語だけ直すときと、無視した語をもう一度見るとき</a></li>
+      <li><a href="#s5">Web 版はファイルごと・語ごとに外せる</a></li>
+      <li><a href="#s6">Mac 版は［環境設定］から</a></li>
+      <li><a href="#s7">社内で使い方をそろえる（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．赤い波線が出る理由</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、Windows のパソコンで使う PowerPoint（Microsoft 365 などのデスクトップ版）です。Mac 版は設定の場所が違うので、後ろの節で分けて書きます。</p>
+    <p>ヘルプによると、Office ではスペル ミスの可能性がある箇所に赤色の波線が付きます。 ほとんどの Office のプログラムは、入力したときに自動でチェックをしています。 型番、英字の略称、取引先の社名のように辞書に無い言葉が多い資料では、正しく書いていても波線が並ぶことがあります。</p>
+    <p>波線の色にも意味があります。同じヘルプでは、スペル ミスの可能性がある箇所は赤色、文章校正のエラーの可能性がある箇所は青色の波線で示される、と書かれています。 Windows 版のヘルプでは、入力中の自動の文章校正は Outlook・Word・PowerPoint でだけ使える、とされています。 赤だけでなく青の波線も気になるなら、次の節の［自動文章校正］も見ます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．波線を止める手順</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">操作</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="操作">［ファイル］メニューの［オプション］を選ぶ</td></tr><tr><td data-label="順番">2</td><td data-label="操作">［校正］を選ぶ</td></tr><tr><td data-label="順番">3</td><td data-label="操作">［入力時にスペル チェックを行う］のチェック ボックスをオフにする</td></tr></tbody></table></div>
+    <p></p>
+    <p>同じ画面には［自動文章校正］のチェック ボックスもあり、自動の文章校正を行うプログラムでは、こちらもオンとオフを切り替えられます。 文章校正そのものを行わないなら、［自動文章校正］と［文章校正とスペル チェックを一緒に行う］の両方をオフにします。 ただし、一部の Office のプログラムにはこれらのオプションがない、と注意書きがあります。 手元の［校正］の画面にどの項目が並んでいるかを見てから外します。</p>
+    <p>ヘルプは、この手順を「エラーの可能性を波線でマークしない場合」の操作として、PowerPoint を含むプログラムに共通の形で案内しています。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．止めたあとは、送る前に F7 キー</h2>
+    <p>波線が出なくなると、本当の打ち間違いにも気づきにくくなります。資料を送る前や、印刷する前に、F7 キーでまとめてチェックする手順を入れておきます。</p>
+    <p>あとで自動のチェックに戻したいときは、同じ場所で［入力時にスペル チェックを行う］をオンにします。波線が急に出なくなった、という場合も、ヘルプは自動チェックがオフになっている可能性を挙げています。 共用のパソコンでは、誰かが止めたままになっていないかを確かめます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．一語だけ直すときと、無視した語をもう一度見るとき</h2>
+    <p>波線を出したまま、その場で直す使い方もあります。ヘルプでは、下線の付いた単語や語句を右クリックし、出てきた選択肢から直し方を選ぶ、と案内されています。</p>
+    <p>チェックの途中で「無視」を選んだ語が多いと、本当の誤りまで見逃したままになることがあります。Windows 版のヘルプによると、Word・Outlook・PowerPoint では、以前に無視するように選んだ単語をあらためてチェックさせることができます。 ［ファイル］メニューの［オプション］から［校正］を選び、［ドキュメントの再チェック］を選びます。 リセットについての警告が出たら［はい］を選び、資料に戻ってからもう一度スペル チェックを流します。 他の人から引き継いだ資料を社外に出す前に、一度この再チェックをしておくと安心です。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．Web 版はファイルごと・語ごとに外せる</h2>
+    <p>ブラウザーで開く PowerPoint for the web には、別のやり方があります。ヘルプでは、正しいつづりでもブランド名や略語は辞書で認識されないことがある、と断ったうえで、ファイルが職場や学校の OneDrive、または Microsoft 365 の SharePoint に保存されている場合の操作を案内しています。 ファイル全体のマーカーを隠すなら、［レビュー］タブの［ABC 校正］のドロップダウンで［校正エラーを非表示にする］を選びます。このコマンドは、マーカーのオンとオフを切り替えるものです。</p>
+    <p>品番の入った文字枠だけを外したいなら、その単語や文字枠を右クリックして［校正言語の設定］を選び、［スペル チェックと文章校正を行わない］を選んで［OK］を押します。 資料全体の波線は残したまま、決まった語だけを対象から外せるので、誤字に気づく手がかりを失わずに済みます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．Mac 版は［環境設定］から</h2>
+    <p>Mac 版のヘルプでは、PowerPoint はスペル チェックはできるが文章校正はできない、と書かれています。 自動のスペル チェックは、PowerPoint メニューの［環境設定］から［校正］を開き、入力時の［スペル チェック］をオンまたはオフにします。 まとめてチェックするときに見つかった箇所は、［スペル チェック］ウィンドウに表示されます。 Windows と Mac で同じ資料を直す職場では、設定の場所が違うことを手順書に書いておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s7" aria-labelledby="s7-title"><div class="wrap">
+    <h2 class="h2" id="s7-title">7．社内で使い方をそろえる（架空の例）</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">そろえること</th><th scope="col">架空の記入例</th></tr></thead><tbody><tr><td data-label="そろえること">波線を止めてよい場面</td><td data-label="架空の記入例">品番や英字の略称が多い製品紹介の資料を作るとき</td></tr><tr><td data-label="そろえること">送る前のチェック</td><td data-label="架空の記入例">F7 キーでスペル チェックを流し、社名と金額は目でも見る</td></tr><tr><td data-label="そろえること">共用のパソコン</td><td data-label="架空の記入例">作業が終わったら設定を元に戻すかを決めておく</td></tr></tbody></table></div>
+    <p>送る前の確かめ方が担当者ごとに違うと、同じ資料でも見落としの出方が変わります。どこで誰が確かめるかを決めて送る前の見落としを減らすなら、<a href="/business-improvement">業務改善の進め方</a>が参考になります。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">8．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">［ファイル］→［オプション］→［校正］を開いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［入力時にスペル チェックを行う］をオフにしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">青い波線も消したいなら、［自動文章校正］も外したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">送る前や印刷の前に、F7 キーでスペル チェックを流したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">無視した語が多い資料は、［ドキュメントの再チェック］をしてから流したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">社名や金額は、スペル チェックとは別に目で確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">共用のパソコンなら、設定を元に戻すかを決めたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">9．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/office/check-spelling-and-grammar-in-office" rel="noopener" target="_blank">Office でスペル チェックと文章校正を行う（Microsoft サポート）</a>：Windows のタブ：赤色・青色の波線、自動チェック、ファイル→オプション→校正、入力時にスペル チェックを行う、自動</li>
+      <li><a href="https://support.microsoft.com/ja-jp/powerpoint/check-spelling-and-grammar-in-powerpoint-for-the-web" rel="noopener" target="_blank">Web 用 PowerPoint でスペル チェックと文章校正を行う（Microsoft サポート）</a>：保存場所の条件、ブランド名や略語、校正エラーを非表示にする、校正言語の設定とスペル チェックと文章校正を行わない</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/business-improvement">業務効率化・業務改善は何から始める？</a></li>
+      <li><a href="/column/word-proofing-language-english-selected-text">Wordの日本語文書で英文だけ校正言語を英語にするには？</a></li>
+      <li><a href="/column/powerpoint-replace-specific-font">PowerPointのフォントの置換で特定の字体だけを替える手順</a></li>
+      <li><a href="/column/powerpoint-embed-fonts-share-check">PowerPointを別のPCで開く前に、フォントを埋め込むには？</a></li>
+      <li><a href="/column/powerpoint-snap-to-grid-off-fine-move">PowerPointのグリッド線で図形が細かく動かせないときは</a></li>
+      <li><a href="/column/powerpoint-presenter-view-turn-off-same-screen">PowerPointの「発表者ツールを使用する」をオフにするには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

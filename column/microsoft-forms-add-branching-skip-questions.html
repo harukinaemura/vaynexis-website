@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Formsの分岐の追加で不要な質問を飛ばすには｜Vaynexis</title>
+  <meta name="description" content="社内アンケートや申し込みのフォームで、答えによって関係のない質問を飛ばしたいときに使う、Microsoft Forms の［分岐の追加］の手順です。Google フォームのセクションの分岐とは別の道具の話として、回答ごとの分岐先の選び方、前の質問へは戻せない制約、セクションとの組み合わせ、プレビューでの確かめ方を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Microsoft Formsの分岐の追加で不要な質問を飛ばすには｜Vaynexis">
+  <meta property="og:description" content="社内アンケートや申し込みのフォームで、答えによって関係のない質問を飛ばしたいときに使う、Microsoft Forms の［分岐の追加］の手順です。Google フォームのセクションの分岐とは別の道具の話として、回答ごとの分岐先の選び方、前の質問へは戻せない制約、セクションとの組み合わせ、プレビューでの確かめ方を、Microsoft の公式ヘルプに沿って整理します。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/microsoft-forms-add-branching-skip-questions">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/microsoft-forms-add-branching-skip-questions">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Microsoft Formsの分岐の追加で不要な質問を飛ばすには","description":"社内アンケートや申し込みのフォームで、答えによって関係のない質問を飛ばしたいときに使う、Microsoft Forms の［分岐の追加］の手順です。Google フォームのセクションの分岐とは別の道具の話として、回答ごとの分岐先の選び方、前の質問へは戻せない制約、セクションとの組み合わせ、プレビューでの確かめ方を、Microsoft の公式ヘルプに沿って整理します。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/microsoft-forms-add-branching-skip-questions"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Microsoft 365・Google Workspaceの管理","item":"https://vaynexis.jp/column/topics/m365-workspace"},{"@type":"ListItem","position":4,"name":"Microsoft Formsの分岐の追加で不要な質問を飛ば","item":"https://vaynexis.jp/column/microsoft-forms-add-branching-skip-questions"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/m365-workspace">Microsoft 365・Google Workspaceの管理</a></li><li aria-current="page">Microsoft Formsの分岐の追加で不要な質問を飛ば</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">Microsoft Formsの分岐の追加で不要な質問を飛ばすには</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Microsoft Forms では、分岐を始めたい質問で［その他のオプション］ボタンから［分岐の追加］を選び、質問に対する考えられる回答ごとに分岐先の質問を選びます。 分岐できるのは今の質問より後の質問かフォームの終わりだけで、前の質問には分岐できません。 設定したら、デザイン ウィンドウの上の［プレビュー］で、分岐がどう働くかを確かめます。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>社内アンケートで「いいえ」と答えた人にまで関係のない質問が続き、空欄だらけの回答が集まってしまう。Microsoft Forms で回答ごとに進む先を決める操作と、前の質問へは戻せない制約、プレビューでの確かめ方を見ていきます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">分岐の流れ図にある聞き取りの質問は架空の例です。流れを紙に書いてから設定する進め方や確認表は当社がすすめる目安で、Microsoft の手順として書かれたものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">Google フォームとは別の道具の話</a></li>
+      <li><a href="#s2">分岐は、質問を全部作り終えてから入れる</a></li>
+      <li><a href="#s3">分岐の追加の手順</a></li>
+      <li><a href="#s4">前の質問へは戻せない</a></li>
+      <li><a href="#s5">長いフォームは、セクションに分けてから分岐する</a></li>
+      <li><a href="#s6">プレビューで、すべての道をたどる</a></li>
+      <li><a href="#s7">分岐の流れ図（架空の例）</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．Google フォームとは別の道具の話</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は Microsoft Forms です。ヘルプでもアンケート、クイズ、投票を作る道具として紹介されている Microsoft の道具で、Google の道具である Google フォームとは、画面も操作の名前も違います。Google フォームで回答によって質問を分ける方法（セクションを使った分岐）は、公開済みの別の記事で扱っています。会社で使っているのがどちらの道具か、フォームの編集画面の上の表示やアドレスで先に確かめてから読み進めてください。</p>
+    <p>Microsoft のヘルプでは、分岐するアンケートやテストでは、質問は回答者に関係がある場合にのみ表示され、該当しない場合は別の質問のまとまりに送られたり、すっかりスキップされたりする、と説明しています。 たとえば社内の研修の申し込みで「車で来るか」を聞き、「いいえ」の人には駐車場の質問を出さない、といった使い方です。答える側は自分に関係のある質問だけを読めばよくなり、集める側も空欄だらけの回答を見なくて済みます。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．分岐は、質問を全部作り終えてから入れる</h2>
+    <p>ヘルプは、分岐を始める前に、テストまたはフォームの質問をすべて作成しておくことを勧めています。 分岐は「この回答なら、どの質問へ進むか」を質問ごとに決めるものなので、途中で質問を足したり順番を入れ替えたりすると、決めた行き先がずれやすくなります。紙に質問の流れを書き出して、どの答えのときにどこへ進むかを決めてから、画面で設定すると手戻りが減ります。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．分岐の追加の手順</h2>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">順番</th><th scope="col">操作</th></tr></thead><tbody><tr><td data-label="順番">1</td><td data-label="操作">分岐するフォームを開く</td></tr><tr><td data-label="順番">2</td><td data-label="操作">分岐を始める質問を選び、［その他のオプション］ボタンから［分岐の追加］を選ぶ</td></tr><tr><td data-label="順番">3</td><td data-label="操作">［分岐オプション］ページで、質問の横の［ドロップダウン リスト］を選ぶ</td></tr><tr><td data-label="順番">4</td><td data-label="操作">回答ごとに分岐先の質問を選ぶ（最後にする場合はフォームの［末尾］）</td></tr><tr><td data-label="順番">5</td><td data-label="操作">ほかの質問にも分岐が要るなら、手順を繰り返す</td></tr></tbody></table></div>
+    <p></p>
+    <p>手順3と4は、分岐ロジックのヘルプでは、［分岐オプション］ページで分岐する質問の横にある［ドロップダウン リスト］を選び、分岐先の質問を選ぶ、と書かれています。 ある答えの人にはそこでフォームを終えてもらいたい場合は、分岐先としてフォームの［末尾］を選びます。 必要な数の質問に分岐を作るには、同じ手順を繰り返します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．前の質問へは戻せない</h2>
+    <p>いちばん気をつけたいのが、分岐の向きです。ヘルプでは、7 つの質問があるフォームで質問 4 に分岐を付けるなら、行き先にできるのは質問 5、6、7 かフォームの終わりだけだ、と例を挙げています。</p>
+    <p>さらに、前の質問へ分岐させようとすると、回答の途中の流れが途切れ、後ろの質問を飛ばして［送信］ボタンのあるフォームの最後へ直接移ってしまう、とも書かれています。 「答え直してもらうために前の質問へ戻す」という作り方はできないので、確かめたいことは後ろの質問として置き直します。答えの組み合わせで聞く内容が大きく変わる場合は、無理に1つのフォームにまとめず、フォームを分けることも考えます。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．長いフォームは、セクションに分けてから分岐する</h2>
+    <p>質問が多いフォームでは、質問を複数のページまたはセクションに整理できます。 セクションを足すには、［＋新規追加］を選び、フォームの一番下までスクロールして［新しい質問の追加］を選び、［セクション］を選びます。 フォームにセクションを追加した場合は、セクションに分岐を追加することもできます。</p>
+    <p>セクションの分岐は、セクションの右上の［その他のオプション］ボタンの［詳細設定］から選ぶメニューの1つとして案内されています。 なお、フォームにセクションを含めると、質問のシャッフル機能は無効になります。 質問の順番を回答者ごとに入れ替えたいフォームでは、セクションを使うかどうかを先に決めておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s6" aria-labelledby="s6-title"><div class="wrap">
+    <h2 class="h2" id="s6-title">6．プレビューで、すべての道をたどる</h2>
+    <p>設定が終わったら、デザイン ウィンドウの上にある［プレビュー］を選び、コンピューターやモバイル デバイスで分岐がどう働くかを確かめます。 確かめるときは、「はい」と答えた場合、「いいえ」と答えた場合のように、分岐の数だけ道をたどります。1つの道だけを試して公開すると、もう一方の道で質問がまるごと飛ばされていた、という見落としが起きやすいからです。</p>
+    <p>作り直したいときは、［分岐オプション］ページの［その他のオプション］（…）アイコンを選び、［リセット］を選ぶと、分岐をまとめて消せます。 一部だけ直したいときにリセットすると、すべての分岐を決め直すことになるので、紙の流れ図と見比べながら使います。</p>
+  </div></section>
+
+  <section class="sec" id="s7" aria-labelledby="s7-title"><div class="wrap">
+    <h2 class="h2" id="s7-title">7．分岐の流れ図（架空の例）</h2>
+    <p>社内の事務作業を洗い出す聞き取りのフォームを作る場面です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">質問（架空の例）</th><th scope="col">回答</th><th scope="col">分岐先</th></tr></thead><tbody><tr><td data-label="質問（架空の例）">質問1：毎月決まって行う事務作業がありますか</td><td data-label="回答">はい</td><td data-label="分岐先">質問2（作業の名前）</td></tr><tr><td data-label="質問（架空の例）">質問1：毎月決まって行う事務作業がありますか</td><td data-label="回答">いいえ</td><td data-label="分岐先">質問4（困っていること）</td></tr><tr><td data-label="質問（架空の例）">質問2：作業の名前</td><td data-label="回答">（記述）</td><td data-label="分岐先">質問3（かかる時間）</td></tr><tr><td data-label="質問（架空の例）">質問3：1回にかかる時間</td><td data-label="回答">（選択）</td><td data-label="分岐先">質問4</td></tr><tr><td data-label="質問（架空の例）">質問4：困っていること</td><td data-label="回答">（記述）</td><td data-label="分岐先">フォームの［末尾］</td></tr></tbody></table></div>
+    <p>聞き取りのフォームに分岐を入れておくと、毎月の作業が無い人は質問2と3を飛ばして早く答え終えられます。事務の作業を洗い出して、どこから手を付けるかを考えるときは、<a href="/office-inventory">事務の道具と作業の棚卸し</a>の考え方も使えます。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">8．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">使っているのが Microsoft Forms（Google フォームではない）か確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">分岐を入れる前に、質問をすべて作り、流れを紙に書いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［その他のオプション］→［分岐の追加］で、回答ごとの分岐先を選んだか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">分岐先が今の質問より後ろか、フォームの［末尾］になっているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">長いフォームならセクションに分け、シャッフルが使えなくなることを承知したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［プレビュー］で、分岐の数だけ道をたどって確かめたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">9．自社の事務の手順まで形にしたいとき</h2>
+    <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
+    <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://support.microsoft.com/ja-jp/forms/add-sections-to-your-survey-or-questionnaire" rel="noopener" target="_blank">アンケートや質問表にセクションを追加します。（Microsoft サポート）</a>：セクションの追加の手順、シャッフル機能の無効化、セクションの分岐</li>
+      <li><a href="https://support.microsoft.com/ja-jp/forms/use-branching-logic-in-your-form" rel="noopener" target="_blank">フォームに分岐ロジックを使う（Microsoft サポート）</a>：分岐の働き、［分岐オプション］ページのドロップダウン リスト、セクションへの分岐、プレビュー</li>
+      <li><a href="https://support.microsoft.com/ja-jp/forms/branch-your-form-or-quiz-using-microsoft-forms" rel="noopener" target="_blank">Microsoft Forms を使用してフォームまたはテストを分岐する（Microsoft サポート）</a>：分岐の追加の手順、質問を先に作る勧め、前の質問へ分岐できない制約と例、フォームの末尾、リセット</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/office-inventory">業務棚卸しチェックシート（エクセル・CSV）とAI業務改善のやり方</a></li>
+      <li><a href="/column/google-forms-section-branching">Googleフォームで回答により質問を分けるセクション分岐の設定手順</a></li>
+      <li><a href="/column/task-inventory-gaps">業務棚卸しで抜けやすい項目</a></li>
+      <li><a href="/column/survey-completed-responses-count">アンケートの回答数に途中回答が混じるとき完了分を確かめる手順</a></li>
+      <li><a href="/column/outlook-new-rules-fix-wrong-folder-conditions">Outlookで誤って振り分けるルールの条件を直すには</a></li>
+      <li><a href="/column/outlook-classic-work-time-start-hour">クラシックOutlookの作業時間で勤務日の開始時刻を直すには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
