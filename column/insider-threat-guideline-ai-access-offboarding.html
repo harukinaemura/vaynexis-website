@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>組織における内部不正防止ガイドラインで退職時のAI権限を点検するには？｜Vaynexis</title>
+  <meta name="description" content="社員が退職したあとも、会社で契約した生成AIのアカウントや、メール・共有フォルダとつないだAIの連携が、本人の名前のまま残っていることがあります。IPAの「組織における内部不正防止ガイドライン」（第5版・2022年4月改訂）は、退職者増加のリスクに備える人的管理の対策を追記した版です。退職の前後で点検する項目とページを確かめ、AIのサービスの権限に当てはめます。">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="組織における内部不正防止ガイドラインで退職時のAI権限を点検するには？｜Vaynexis">
+  <meta property="og:description" content="社員が退職したあとも、会社で契約した生成AIのアカウントや、メール・共有フォルダとつないだAIの連携が、本人の名前のまま残っていることがあります。IPAの「組織における内部不正防止ガイドライン」（第5版・2022年4月改訂）は、退職者増加のリスクに備える人的管理の対策を追記した版です。退職の前後で点検する項目とページを確かめ、AIのサービスの権限に当てはめます。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/insider-threat-guideline-ai-access-offboarding">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/insider-threat-guideline-ai-access-offboarding">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"組織における内部不正防止ガイドラインで退職時のAI権限を点検するには？","description":"社員が退職したあとも、会社で契約した生成AIのアカウントや、メール・共有フォルダとつないだAIの連携が、本人の名前のまま残っていることがあります。IPAの「組織における内部不正防止ガイドライン」（第5版・2022年4月改訂）は、退職者増加のリスクに備える人的管理の対策を追記した版です。退職の前後で点検する項目とページを確かめ、AIのサービスの権限に当てはめます。","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/insider-threat-guideline-ai-access-offboarding"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"AI導入・相談先・補助金","item":"https://vaynexis.jp/column/topics/ai-adoption"},{"@type":"ListItem","position":4,"name":"組織における内部不正防止ガイドラインで退職時のAI権限を点検","item":"https://vaynexis.jp/column/insider-threat-guideline-ai-access-offboarding"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/ai-adoption">AI導入・相談先・補助金</a></li><li aria-current="page">組織における内部不正防止ガイドラインで退職時のAI権限を点検</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">組織における内部不正防止ガイドラインで退職時のAI権限を点検するには？</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>退職時の権限は「削除したか」だけでなく「削除されたことを確認したか」まで点検します。第5版は、雇用終了時に情報システムの利用者IDや権限を削除し、削除されたことを確認するよう求めています。 ガイドラインに生成AIのサービスを名指しした項目はありませんが、会社が業務で使わせているAIのアカウントや連携も、この「情報システム」の点検に入れます。点検は人事の手続きとつなぎ、毎月の打ち合わせで人の入れ替わりと一緒に見ます。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>社員が退職したあとも、会社で契約した生成AIのアカウントや、メールとつないだAIの連携が本人の名前のまま残っていることがあります。IPAの「組織における内部不正防止ガイドライン」第5版の利用者IDと雇用終了の項目のページを確かめ、退職の前後で見る順番に当てはめます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">AIのサービスへの当てはめと点検の順番は当社の読み方で、IPAがAIのサービスについて示したものではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">第5版が退職者について書いていること</a></li>
+      <li><a href="#s2">点検の根拠になる項目とページ</a></li>
+      <li><a href="#s3">AIのサービスに当てはめると</a></li>
+      <li><a href="#s4">退職の前後で見る順番</a></li>
+      <li><a href="#s5">毎月の打ち合わせで人の入れ替わりと一緒に見る</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">人の入れ替わりとアカウントの点検をつなげたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．第5版が退職者について書いていること</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、従業員の入退社の手続きと、社内で使うクラウドサービスのアカウント管理の両方を受け持つ会社の事務担当者です。特定の製品の設定手順ではなく、点検の項目と順番に絞ります。</p>
+    <p>IPAのページでは、2013年に作成したガイドラインを、2022年4月に改訂版第5版として公開したと書かれています。 第5版の改訂の骨子には、雇用の流動化による退職者増加がもたらすリスクを低減する人的管理の対策の追記が入っています。 ページの最終更新日は2026年11月10日ですが、更新の中身はPDFのIPAロゴの更新などで、本文の版は第5版のままです。</p>
+    <p>改訂は生成AIが広く使われる前のものです。PDFを「生成AI」で探しても見当たらず、AIはモニタリングの技術として出てくる程度です。AIのサービスの扱いは、ガイドラインの一般的な項目を当てはめて考えることになります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．点検の根拠になる項目とページ</h2>
+    <p>第5版の33項目のうち、退職時のアカウントに関係する主な項目です。ページはPDFの下に印刷された番号です。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">項目</th><th scope="col">ページ</th><th scope="col">退職時に関係する所</th></tr></thead><tbody><tr><td data-label="項目">（５）情報システムにおける利用者のアクセス管理</td><td data-label="ページ">40〜41</td><td data-label="退職時に関係する所">不要になった利用者IDとアクセス権はただちに削除。人事手続きと連携</td></tr><tr><td data-label="項目">（７）情報システムにおける利用者の識別と認証</td><td data-label="ページ">44</td><td data-label="退職時に関係する所">共有IDや共有のパスワードを使わない</td></tr><tr><td data-label="項目">（２３）雇用終了の際の人事手続き</td><td data-label="ページ">79〜80</td><td data-label="退職時に関係する所">面談で在職中にアクセスした秘密情報を確認</td></tr><tr><td data-label="項目">（２４）雇用終了及び契約終了による情報資産等の返却</td><td data-label="ページ">81〜82</td><td data-label="退職時に関係する所">権限の削除と、削除されたことの確認</td></tr><tr><td data-label="項目">付録Ⅰ 内部不正事例集（事例14・27）</td><td data-label="ページ">98・100</td><td data-label="退職時に関係する所">元従業員のアカウントや共有アカウントのパスワードが残っていた例</td></tr></tbody></table></div>
+    <p></p>
+    <p>40ページでは、異動又は退職により不要となった利用者ID及びアクセス権は、ただちに削除しなければならないとされています。 削除されていないと、役職員や元役職員に不正に利用されて重要情報にアクセスされる恐れがあると説明されています。 44ページでは、共有ID及び共有のパスワード等を使用せず、個々の利用者IDで認証するよう求めています。</p>
+    <p>事例集にも、元従業員のアカウントが削除されていなかった例（事例14）があります。 退職後に共有アカウントのパスワードが変更されていなかった例（事例27）も載っています。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．AIのサービスに当てはめると</h2>
+    <p>架空の例として、従業員15人の会社で、次の三つのAIの使い方があったとします。</p>
+    <ul>
+      <li>会社で契約した生成AIのサービスに、社員ごとのアカウントがある</li>
+      <li>有料の生成AIのアカウントを一つだけ契約し、数人でパスワードを共有している</li>
+      <li>AIのツールに、退職する社員のメールや共有フォルダを読ませる連携を設定している</li>
+    </ul>
+    <p>一つ目は（５）と（２４）の「利用者ID・権限の削除」に当たります。二つ目は、（７）が避けるよう求めている共有IDの使い方そのもので、退職者が出たらパスワードを変えるだけでなく、個人ごとのアカウントに分けられないかを考える場面です。三つ目は見落とされやすく、連携の設定が退職者のアカウントに結びついていると、アカウントを止めたときに業務の自動の処理まで止まることもあります。連携を誰の名前で設定しているかを、普段から一覧にしておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．退職の前後で見る順番</h2>
+    <ol>
+      <li>退職が決まったら、本人が使っているAIのアカウント・連携・保存した会話の場所を一覧にする</li>
+      <li>面談で、在職中にアクセスした秘密情報を確認する（（２３）・79ページ）</li>
+      <li>雇用終了の前の一定期間から、PC等をシステム管理部門等の管理下に置くことを考える（（２４）・81ページ）</li>
+      <li>雇用終了の直後に、利用者IDと権限を削除し、削除されたことを確かめる（（２４）・81ページ）</li>
+      <li>記録が消える場合は、削除の代わりにロックしてログを残す（（５）の注38・40ページ）</li>
+      <li>共有アカウントがあれば、パスワードを変える（事例27）</li>
+    </ol>
+    <p></p>
+    <p>81ページでは、元役職員の利用者IDや権限が削除されたことを確認する必要があり、テレワークを行うために付与した権限も含むとされています。 削除は雇用終了直後に速やかに実施することが肝要とも書かれています。 40ページの注38には、利用者IDを消去したときにアクセス記録が消える場合は、IDをロックしてログを保全することが必要とあります。</p>
+  </div></section>
+
+  <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
+    <h2 class="h2" id="s5-title">5．毎月の打ち合わせで人の入れ替わりと一緒に見る</h2>
+    <p>41ページでは、削除の手続きに漏れがないよう、人事異動に関連する人事手続き等と連携した運用とするよう書かれています。 同じページで、人事異動の時期に一斉に見直す等を行うことが望まれるとされています。 外部の委託先が使うアカウントについても、異動や退職で削除漏れが出ないよう、体制の変更を報告してもらう例が注39に挙がっています。</p>
+    <p>AIの使い方を外部と定期的に相談している会社なら、その打ち合わせの議題に「今月の入社・退職・異動」と「AIのアカウントと連携の一覧」を並べておくと、人事の手続きとアカウントの点検が一つの場で見られます。月額で相談を続ける形は、<a href="/ai-komon">AI顧問の月額の支援</a>のページで説明しています。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">6．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">AIのアカウント・連携・保存した会話の場所を、社員ごとに一覧にしているか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">共有のアカウントやパスワードで使っているAIのサービスがないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">退職予定者との面談で、在職中にアクセスした秘密情報を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">雇用終了の直後に、利用者IDと権限を削除し、削除されたことを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">ログを残す必要があるアカウントは、削除ではなくロックにしたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">連携の設定が退職者のアカウントに結びついていないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">人事の手続きと、アカウントの点検をつないでいるか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">7．人の入れ替わりとアカウントの点検をつなげたいとき</h2>
+    <p>入社・退職・異動の手続きと、AIのアカウントや連携の一覧を同じ場で見られるように、点検の項目と順番を整える作業は、当社でも一緒に進められます。誰の名前で何を設定しているかを書き出すところから始められます。</p>
+    <p>点検の段取りを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。退職者との契約や懲戒などの法的な判断は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.ipa.go.jp/security/guide/insider.html" rel="noopener" target="_blank">組織における内部不正防止ガイドライン（IPA）</a>：第5版の公開（2022年4月）、改訂の骨子（退職者増加のリスク低減）、更新履歴（2026年11月10日）</li>
+      <li><a href="https://www.ipa.go.jp/security/guide/hjuojm00000055l0-att/ps6vr7000000jvcb.pdf" rel="noopener" target="_blank">組織における内部不正防止ガイドライン 日本語版 第5版（IPA・PDF）</a>：（５）40〜41ページ・注38・注39、（７）44ページ、（２３）79ページ、（２４）81ページ、付録Ⅰ 事例14・27</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai-komon">滋賀のAI顧問サービス｜中小企業のAI業務改善を、月額で続ける</a></li>
+      <li><a href="/column/email-auto-forward-private-check-records">業務メールの私用宛て自動転送を点検し、許可と確認結果を残すには</a></li>
+      <li><a href="/column/ai-email-draft-permissions">AIでメールを下書きするときの接続権限・送信承認・記憶の確認</a></li>
+      <li><a href="/column/workspace-two-step-verification-setup">会社アカウントの二段階認証を設定する前後の確認点と進め方</a></li>
+      <li><a href="/column/manual-fullwidth-halfwidth-official-writing-guide">公用文作成の考え方で手順書の全角・半角をそろえるには</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>

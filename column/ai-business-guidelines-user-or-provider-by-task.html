@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja" class="renewal-a renewal-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI事業者ガイドラインの利用者・提供者・開発者の境目は？定義と注8・注33の読み方｜Vaynexis</title>
+  <meta name="description" content="外部のAIを自社の受発注の画面に組み込んで取引先に使ってもらう、自社の資料で追加の学習をかける、といった使い方を始めると、自社はAI事業者ガイドラインの「AI利用者」のままなのか、「AI提供者」「AI開発者」の項目も読むべきなのかで迷います。総務省・経済産業省の「AI事業者ガイドライン（第1.2版）」の定義の原文と、開発と提供の境目を書いた注8、ファインチューニングや再学習の場面を書いた注33、対">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="AI事業者ガイドラインの利用者・提供者・開発者の境目は？定義と注8・注33の読み方｜Vaynexis">
+  <meta property="og:description" content="外部のAIを自社の受発注の画面に組み込んで取引先に使ってもらう、自社の資料で追加の学習をかける、といった使い方を始めると、自社はAI事業者ガイドラインの「AI利用者」のままなのか、「AI提供者」「AI開発者」の項目も読むべきなのかで迷います。総務省・経済産業省の「AI事業者ガイドライン（第1.2版）」の定義の原文と、開発と提供の境目を書いた注8、ファインチューニングや再学習の場面を書いた注33、対">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vaynexis.jp/column/ai-business-guidelines-user-or-provider-by-task">
+  <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
+  <meta property="og:site_name" content="合同会社Vaynexis">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://vaynexis.jp/column/ai-business-guidelines-user-or-provider-by-task">
+  <link rel="alternate" type="application/atom+xml" title="コラムの更新情報" href="/column/feed.xml">
+  <meta name="google-site-verification" content="qsCM8c9Q5c7nBQynciELz4DCThFIVm1AhXlLxVYcnRs">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YKV90SZNQV"></script>
+  <script defer src="/assets/ga.js"></script>
+  <link rel="icon" href="/assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" data-font-stylesheet href="https://fonts.googleapis.com/css2?family=Michroma&family=IBM+Plex+Mono:wght@400;500;600&display=optional">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/renewal-brown.css">
+  <link rel="stylesheet" href="/assets/renewal-guides.css">
+  <link rel="stylesheet" href="/assets/inner-navigation.css">
+  <link rel="stylesheet" href="/assets/column.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AI事業者ガイドラインの利用者・提供者・開発者の境目は？定義と注8・注33の読み方","description":"外部のAIを自社の受発注の画面に組み込んで取引先に使ってもらう、自社の資料で追加の学習をかける、といった使い方を始めると、自社はAI事業者ガイドラインの「AI利用者」のままなのか、「AI提供者」「AI開発者」の項目も読むべきなのかで迷います。総務省・経済産業省の「AI事業者ガイドライン（第1.2版）」の定義の原文と、開発と提供の境目を書いた注8、ファインチューニングや再学習の場面を書いた注33、対","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/ai-business-guidelines-user-or-provider-by-task"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"AI導入・相談先・補助金","item":"https://vaynexis.jp/column/topics/ai-adoption"},{"@type":"ListItem","position":4,"name":"AI事業者ガイドラインの利用者・提供者・開発者の境目は？定義","item":"https://vaynexis.jp/column/ai-business-guidelines-user-or-provider-by-task"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<nav class="nav nav--directory" id="nav" aria-label="サイト内">
+  <div class="wrap nav__in">
+    <a class="mark" href="/" aria-label="合同会社Vaynexis トップへ"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></a>
+    <div class="nav__links" id="menu">
+      <a href="/">トップ</a>
+      <a href="/ai">AIコンサルティング</a>
+      <a href="/price">料金</a>
+      <a href="/record">自社の実績</a>
+      <a href="/business">事業内容</a>
+      <a href="/company">会社概要</a>
+      <a href="/contact">お問い合わせ</a>
+      <a class="btn btn--fill btn--sm" href="/contact#form">無料相談を申し込む</a>
+    </div>
+    <details class="page-menu" id="page-menu">
+      <summary id="page-menu-toggle" aria-controls="page-menu-panel">ページ一覧</summary>
+      <div class="page-menu-panel" id="page-menu-panel">
+        <div class="page-menu-top"><b>ページ一覧</b><span class="menu-location">SHIGA / JAPAN</span><button class="page-menu-close" type="button" hidden>閉じる</button></div>
+        <nav class="home-section-links" aria-label="トップページ内"><a href="/#support">AI支援内容</a><a href="/#process">始め方</a><a href="/#company">私たちについて</a><a href="/#page-directory">目的別の一覧へ</a></nav>
+        <nav class="directory-groups" aria-label="すべてのページと外部メディア"><div class="directory-group"><h3>サービス・相談</h3><ul><li><a href="/ai">AIコンサルティング</a></li><li><a href="/ai#offer">業務の棚卸し</a></li><li><a href="/ai#make">作る仕事の詳細</a></li><li><a href="/ai#faq">質問をすべて見る</a></li><li><a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a></li></ul></div>
+<div class="directory-group"><h3>料金・契約</h3><ul><li><a href="/price">料金</a></li><li><a href="/price#refund">半額保証の条件</a></li><li><a href="/price#contract-check">契約前の確認と算定方法</a></li><li><a href="/rates">換算時間の基準表</a></li><li><a href="/terms">契約の主な条項</a></li></ul></div>
+<div class="directory-group"><h3>見本・検査記録</h3><ul><li><a href="/works">実物の見本</a></li><li><a href="/record">自社の実績</a></li><li><a href="/sample-report">棚卸しレポートの見本</a></li><li><a href="/sample-audit">検査記録と月次レポート</a></li><li><a href="/record#latest">最新の更新記録と数え方</a></li><li><a href="/case-empty-folders">実際に2か月気づかなかったときの記録</a></li></ul></div>
+<div class="directory-group"><h3>自分で進める・活用ガイド</h3><ul><li><a href="/office-inventory">まず自社で整理したい方へ：業務棚卸しのやり方・チェックシート・2つの記入例</a></li><li><a href="/ai-data-entry-demo">転記・集計の実演：重複・件数・金額の照合</a></li><li><a href="/ai-document-demo">議事録・資料作成の実演：決定・提案・出典の確認</a></li><li><a href="/ai-consulting-guide">AIコンサルティングのおすすめ相談先は？目的別の選び方と比較</a></li><li><a href="/business-improvement">業務改善は何から始める？おすすめの進め方と事務の7例</a></li><li><a href="/ai-manual-guide">AIで業務マニュアル・手順書を作るには</a></li><li><a href="/column">コラム：事務とAIの進め方の記事一覧</a></li></ul></div>
+<div class="directory-group"><h3>会社・運営情報</h3><ul><li><a href="/company">会社概要</a></li><li><a href="/business">事業内容</a></li><li><a href="/privacy">プライバシーポリシー</a></li><li><a href="/tokushoho">特定商取引法に基づく表記</a></li></ul></div>
+<div class="directory-group"><h3>外部メディア</h3><ul><li><a href="https://note.com/clever_gerbil797">note（AI事務代行の記録）</a></li><li><a href="https://x.com/91gpMf4XQn73yd4">X（@91gpMf4XQn73yd4）</a></li><li><a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg">YouTube（ハルのAI攻略ノート）</a></li><li><a href="https://www.instagram.com/haru.ai.note/">Instagram（ハルのAI攻略ノート）</a></li></ul></div></nav>
+      </div>
+    </details>
+  </div>
+</nav>
+<main id="main">
+<article lang="ja" aria-labelledby="col-title">
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/ai-adoption">AI導入・相談先・補助金</a></li><li aria-current="page">AI事業者ガイドラインの利用者・提供者・開発者の境目は？定義</li></ol></div></nav>
+  <header class="sec"><div class="wrap">
+    <h1 class="h1" id="col-title">AI事業者ガイドラインの利用者・提供者・開発者の境目は？定義と注8・注33の読み方</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>区分は会社に一つ付けるものではなく、業務ごとに確かめるものです。ガイドラインでは、主体は事業者（又は各者内の部門）を想定し、活用方法によっては同一の事業者が複数を兼ねる場合もあるとされています。 業務ごとに「学習させているか」「組み込んで外に出しているか」「使っているだけか」を問い、当てはまる部（第3部〜第5部）と、隣の部を読みます。区分は読む所を決めるための目安で、法的な立場の判定ではありません。</p></div>
+    <p class="col-meta">公開：2026年11月18日／情報の確認日：2026年11月17日（出典はこの記事の最後）</p>
+    <p>外部のAIを自社の受発注の画面に組み込んで取引先に使ってもらったり、自社の資料で追加の学習をかけたりすると、AI利用者のままなのか、提供者や開発者の項目も読むのかで迷います。総務省・経済産業省の「AI事業者ガイドライン（第1.2版）」の定義の原文と注8・注33、業務外利用者の説明で、境目の読み方を確かめます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月17日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">定義を三つの問いに直した表と、境目に当たる使い方を並べた架空の会社の表は当社の整理で、ガイドラインが示した判定の方法ではありません。</p>
+  </div></header>
+
+  <nav aria-label="この記事の内容"><div class="wrap">
+    <ol>
+      <li><a href="#s1">版と、区分の考え方</a></li>
+      <li><a href="#s2">定義を三つの問いにする</a></li>
+      <li><a href="#s3">架空の会社で業務ごとに当てはめる</a></li>
+      <li><a href="#s4">利用者の業務で手元に置くもの</a></li>
+      <li><a href="#check">確認表</a></li>
+      <li><a href="#consult">AIを使っている業務の一覧を作りたいとき</a></li>
+    </ol>
+  </div></nav>
+
+  <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
+    <h2 class="h2" id="s1-title">1．版と、区分の考え方</h2>
+    <p>確認日：2026年11月17日。</p>
+    <p>対象は、生成AIなどを業務で使っている会社で、社内ルールや相談の準備のために、自社がガイドラインのどの区分の項目を読めばよいかを確かめる事務担当者です。用途を社外へ広げてよいかの承認の手順ではなく、区分の確かめ方に絞ります。</p>
+    <p>今の版は、令和8年3月31日の第1.2版です。 経済産業省の「AI事業者ガイドライン」のページは、第1.1版以前の旧版を載せるページになっています。 第1.1版の本文を手元に保存している場合は、版を読み替えます。版が上がると部やページの番号が動くことがあるため、社内の一覧には版とページを一緒に書いておきます。</p>
+    <p>ガイドラインは、事業者がAIの社会実装とガバナンスを実践するための非拘束的なソフトローとして、2024年4月に策定されたものです。 対象は、様々な事業活動においてAIの開発・提供・利用を担う全ての者です。 一方、事業活動以外でAIを利用する者などは「業務外利用者」として、対象に含まないとされています。 自社のホームページでAIの応答を見るお客様は、この業務外利用者の側にいることがあります。</p>
+  </div></section>
+
+  <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
+    <h2 class="h2" id="s2-title">2．定義を三つの問いにする</h2>
+    <p>5ページの定義を、業務に当てはめやすい問いに直したのが次の表です。表は当社の整理で、ガイドラインの様式ではありません。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">問い</th><th scope="col">「はい」なら確かめる区分</th><th scope="col">主に読む所</th></tr></thead><tbody><tr><td data-label="問い">その業務で、AIモデルの学習やファインチューニングを自社で行っているか</td><td data-label="「はい」なら確かめる区分">AI開発者</td><td data-label="主に読む所">第3部（29ページ〜）</td></tr><tr><td data-label="問い">AIを自社の製品・サービス・既存のシステムに組み込み、ほかの事業者やお客様に出しているか</td><td data-label="「はい」なら確かめる区分">AI提供者</td><td data-label="主に読む所">第4部（37ページ〜）</td></tr><tr><td data-label="問い">外部のAIサービスを、自社の業務の中で使っているか</td><td data-label="「はい」なら確かめる区分">AI利用者</td><td data-label="主に読む所">第5部（40ページ〜）</td></tr></tbody></table></div>
+    <p></p>
+    <p>元の定義では、AI開発者は「AIシステムを開発する事業者（AIを研究開発する事業者を含む）」です。 AI提供者は、AIシステムをアプリケーション、製品、既存のシステム、ビジネスプロセス等に組み込んだサービスとして、AI利用者や、場合によっては業務外利用者に提供する事業者です。 AI利用者は、事業活動においてAIシステム又はAIサービスを利用する事業者です。</p>
+    <p>境目で迷うのは、開発と提供の間です。5ページの注8では、一般的に、AI開発者はAPI仕様策定やインフラ整備を担い、AI提供者はUI/UX設計や既存業務システムとの統合等を担うと説明されています。 また17ページの注33には、AI提供者・AI利用者でもファインチューニング、再学習を行う場合は、AI開発者と同様に安全性の担保に努めることが重要と書かれています。 一つ目の問いに「はい」が付く業務は、利用者のつもりでも第3部を開いておきます。</p>
+  </div></section>
+
+  <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
+    <h2 class="h2" id="s3-title">3．架空の会社で業務ごとに当てはめる</h2>
+    <p>架空の例として、従業員20人の会社で、区分の境目に当たる使い方を並べてみます。社内の文書の下書きのように利用者に当たることがはっきりしている使い方と、3つの区分の大まかな目安は関連記事で扱っているので、ここでは定義の文言と注で迷いやすい行だけを取り上げます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">業務</th><th scope="col">AIの使い方</th><th scope="col">境目で読む所</th></tr></thead><tbody><tr><td data-label="業務">取引先向けの在庫の問い合わせ</td><td data-label="AIの使い方">外部のAIのAPIを自社の受発注の画面に組み込み、取引先の担当者に使ってもらう</td><td data-label="境目で読む所">提供者の定義の「AI利用者に提供する」と、注8の「UI/UX設計や既存業務システムとの統合等」</td></tr><tr><td data-label="業務">同じ窓口を一般のお客様にも開く</td><td data-label="AIの使い方">上の画面を、自社のホームページから誰でも使えるようにする</td><td data-label="境目で読む所">提供者の定義の「場合によっては業務外利用者に提供する」と、業務外利用者の扱い</td></tr><tr><td data-label="業務">提案書の作成</td><td data-label="AIの使い方">外部のAIサービスに、自社の過去の提案書で追加の学習（ファインチューニング）をかける</td><td data-label="境目で読む所">注33（提供者・利用者でもファインチューニング、再学習を行う場合）と第3部</td></tr></tbody></table></div>
+    <p>一つ目の行は、AIのモデルを自社で作っていなくても、外部のAIを自社の仕組みに組み込んで取引先に使ってもらっているので、二つ目の問いに「はい」が付きます。前の節の注8の分け方に沿えば、画面や既存の仕組みへの組み込みは提供者の側の役割に当たります。注8はさらに、AIシステムの構築の全てをAI開発者が担うと整理されているわけではないとしています。 取引先に出しているのが自社なら、利用者の項目に加えて第4部も開いておきます。二つ目の行は、使う相手が事業活動としてAIを使っているのでなければ業務外利用者にあたることがあるため、業務外利用者への対応を書いた箇所も合わせて読みます。三つ目の行は、外部のサービスを使っていても自社の資料で追加の学習をさせているので、注33に書かれた場面に当たります。</p>
+    <p>同じ会社でも、業務によって読む所が変わることが分かります。業務を新しく足したり、社内だけの使い方をお客様に見せる使い方に変えたりしたときは、その業務の行だけ問いを付け直します。</p>
+  </div></section>
+
+  <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
+    <h2 class="h2" id="s4-title">4．利用者の業務で手元に置くもの</h2>
+    <p>AI利用者の項目（40ページ）では、AI提供者が定めた利用上の留意点を遵守して、AI提供者が設計において想定した範囲内で利用することが挙げられています。 機密情報等を不適切に入力することがないよう注意を払うことも、同じ部に書かれています。 利用者の行には、使っているサービスの名前と、そのサービスの利用上の注意の置き場所を一緒に書いておきます。</p>
+    <p>自分の部だけ読めばよいわけでもありません。7ページでは、隣接する主体と関係する事項が多く存在するため、当該主体以外に関する事項も理解することが重要とされています。 具体的な取組が決まっていない事業者には、別添の記載例を中心に確かめることが勧められています。</p>
+    <p>区分を付けても、法令上の義務や責任がそれで決まるわけではありません。契約や個人情報の扱いで判断が要るときは、弁護士などの専門家に確かめます。業務の一覧をもとに、どの業務からAIの使い方を整えるかを考える段取りは、<a href="/ai">中小企業のAI業務改善・AIコンサル</a>のページで扱っています。</p>
+  </div></section>
+
+  <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
+    <h2 class="h2" id="check-title">5．確認表</h2>
+    <p>公開・共有の前に、この表で確かめます。</p>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">読んでいる版が第1.2版（令和8年3月31日）か</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">AIを使っている業務を一つずつ並べたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">業務ごとに三つの問い（学習させているか・組み込んで外に出しているか・使っているか）を付けたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">学習やファインチューニングをしている業務で、第3部と注33を開いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">お客様がAIと直接やり取りする業務で、第4部と業務外利用者の扱いを確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">利用者の業務に、サービスの利用上の注意の置き場所を書いたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">業務を足したり使い方を変えたりしたときに、その行を付け直す決まりにしたか</td></tr></tbody></table></div>
+  </div></section>
+
+  <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
+    <h2 class="h2" id="consult-title">6．AIを使っている業務の一覧を作りたいとき</h2>
+    <p>AIを使っている業務を並べ、業務ごとに読む部と、使っているサービスの利用上の注意の置き場所を書き込む一覧は、当社でも一緒に作れます。業務を足したときに付け直す決まりまで含めて整えられます。</p>
+    <p>一覧の作り方を相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。ガイドライン上の区分の判定や、法的な立場・責任の判断は行いません。</p>
+  </div></section>
+
+  <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
+    <h2 class="h3">出典（確認日：2026年11月17日）</h2>
+    <ul class="col-src">
+      <li><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf" rel="noopener" target="_blank">AI事業者ガイドライン（第1.2版）本編（総務省・経済産業省・PDF）</a>：表紙（版・日付）、3〜7ページ（策定・対象・定義・注8・構成）、17ページ注33、37・40ページ（第4部・第5部）</li>
+      <li><a href="https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/20240419_report.html" rel="noopener" target="_blank">AI事業者ガイドライン（経済産業省）</a>：旧版（第1.1版以前）を載せるページであること</li>
+    </ul>
+    <h2 class="h3">関連する記事・ページ</h2>
+    <ul class="col-rel">
+      <li><a href="/ai">AIコンサルティング：できること64項目</a></li>
+      <li><a href="/column/ai-promotion-act-sme">AI法（AI推進法）で中小企業に義務はある？｜社内でAIを使う会社が読む3つの資料</a></li>
+      <li><a href="/column/website-ai-chatbot-check">ホームページにAIチャットボットを置く前に｜答える範囲・表示・入力内容の確認</a></li>
+      <li><a href="/column/generative-ai-policy">生成AIの社内ルールの作り方。最初に決める6項目と、参考にできる公的な資料</a></li>
+      <li><a href="/column/insider-threat-guideline-ai-access-offboarding">組織における内部不正防止ガイドラインで退職時のAI権限を点検するには？</a></li>
+    </ul>
+    <p class="col-hub">このページの確かめ方は、<a href="/column/editorial-policy">情報の確かめ方と更新の方針</a>にまとめています。</p>
+  </div></section>
+</article>
+</main>
+<section class="band" id="contact-band" aria-labelledby="h-band">
+  <div class="wrap band__in">
+    <div>
+      <p class="hud">Contact</p>
+      <h2 class="h2" id="h-band">まず、初回無料相談でお話ししませんか。</h2>
+      <p>初回無料相談（1社1回）。オンライン、または滋賀県内は訪問。時間は90分ほどを目安にしています。事前に伺った1業務を、その場で実演します。<a href="/contact#demo">デモの準備について</a>。法律相談は受けません。</p>
+      <p class="band__meta"><a class="latin" href="mailto:vaynexis177@gmail.com">vaynexis177@gmail.com</a><span class="sep">·</span><a class="mono" href="tel:+819010790692">090-1079-0692</a><span class="sep">·</span>平日 10:00–18:00</p>
+    </div>
+    <div class="band__act"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a><a class="btn btn--ghost" href="/price">料金を見る</a></div>
+  </div>
+</section>
+<div class="mcta"><a class="btn btn--fill" href="/contact#form">無料相談を申し込む</a></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <span class="mark"><img class="mark__logo" src="/assets/vaynexis-logo.svg" width="184" height="42" alt="VAYNEXIS"><small>合同会社</small></span>
+        <p class="foot__addr">〒529-1214　滋賀県愛知郡愛荘町宮後130番地<br>TEL 090-1079-0692（平日 10:00–18:00）／ vaynexis177@gmail.com</p>
+      </div>
+      <nav class="foot__links" aria-label="フッター">
+        <a href="/">トップ</a>
+        <a href="/ai">AIコンサルティング</a>
+        <a href="/price">料金</a>
+        <a href="/record">自社の実績</a>
+        <a href="/business">事業内容</a>
+        <a href="/company">会社概要</a>
+        <a href="/contact">滋賀の中小企業向けAI相談・お問い合わせ</a>
+        <a href="/privacy">プライバシーポリシー</a>
+        <a href="/tokushoho">特定商取引法に基づく表記</a>
+        <a href="https://note.com/clever_gerbil797" rel="noopener" target="_blank">note（AI事務代行の記録）</a>
+        <a href="/terms">契約の主な条項</a>
+        <a href="/rates">換算時間の基準表</a>
+        <a href="/column">コラム</a>
+        <a href="https://x.com/91gpMf4XQn73yd4" rel="noopener" target="_blank">X（@91gpMf4XQn73yd4）</a>
+        <a href="https://www.youtube.com/channel/UCei6kXgbcX4tWnGw9_yEYJg" rel="noopener" target="_blank">YouTube（ハルのAI攻略ノート）</a>
+        <a href="https://www.instagram.com/haru.ai.note/" rel="noopener" target="_blank">Instagram（ハルのAI攻略ノート）</a>
+      </nav>
+    </div>
+    <p class="foot__copy">&copy; 2026 Vaynexis LLC. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/inner-navigation.js" defer></script>
+</body>
+</html>
