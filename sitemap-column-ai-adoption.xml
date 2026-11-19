@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://vaynexis.jp/column/task-listing</loc><lastmod>2026-11-04</lastmod></url>
   <url><loc>https://vaynexis.jp/column/generative-ai-policy</loc><lastmod>2026-11-11</lastmod></url>
-  <url><loc>https://vaynexis.jp/column/shiga-ai-consultation</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/shiga-ai-consultation</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://vaynexis.jp/column/editorial-policy</loc><lastmod>2026-11-04</lastmod></url>
   <url><loc>https://vaynexis.jp/column/fukui-dx-support</loc><lastmod>2026-11-04</lastmod></url>
   <url><loc>https://vaynexis.jp/column/gifu-dx-support</loc><lastmod>2026-11-04</lastmod></url>
@@ -16,7 +16,7 @@
   <url><loc>https://vaynexis.jp/column/dx-vs-efficiency</loc><lastmod>2026-11-09</lastmod></url>
   <url><loc>https://vaynexis.jp/column/dx-ai-support-prefecture-guide</loc><lastmod>2026-11-04</lastmod></url>
   <url><loc>https://vaynexis.jp/column/ai-case-study-reading</loc><lastmod>2026-11-04</lastmod></url>
-  <url><loc>https://vaynexis.jp/column/business-improvement-subsidy-shiga</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/business-improvement-subsidy-shiga</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://vaynexis.jp/column/task-inventory-gaps</loc><lastmod>2026-11-04</lastmod></url>
   <url><loc>https://vaynexis.jp/column/ai-prototype-demo-evaluation</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://vaynexis.jp/column/ai-outsourcing-data-handover</loc><lastmod>2026-11-16</lastmod></url>
@@ -110,4 +110,5 @@
   <url><loc>https://vaynexis.jp/column/notebooklm-quiz-check-procedure-manual</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://vaynexis.jp/column/notebooklm-uncheck-draft-memo-sources</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://vaynexis.jp/column/copilot-pages-edit-without-copilot-license</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://vaynexis.jp/column/shiga-ai-business-efficiency-public-cases</loc><lastmod>2026-11-18</lastmod></url>
 </urlset>
