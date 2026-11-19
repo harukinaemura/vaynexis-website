@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Excelで社内・外部データを結合する前のプライバシー設定確認｜Vaynexis</title>
-  <meta name="description" content="社内の表と外部の公開データを組み合わせる前に、どの設定を見ればよいかを整理します。取込元ごとの分類を確認する操作と、結合時にその分類に従う設定を区別し、確認する順序、機密性の判断を担当者へ戻す場面、引き継ぎに残す内容を説明します。">
+  <title>Excelのプライバシーレベルとは？Power Queryの設定場所と無視するときの注意｜Vaynexis</title>
+  <meta name="description" content="Excel の Power Query のプライバシーレベルは、データソースを「なし・プライベート・組織・パブリック」に分ける設定です。4つの意味、［データ ソース設定］で変える手順、無視する設定の注意、警告と Formula.Firewall のエラーを確かめます。">
   <meta name="theme-color" content="#f4f6fa">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Excelで社内・外部データを結合する前のプライバシー設定確認｜Vaynexis">
-  <meta property="og:description" content="社内の表と外部の公開データを組み合わせる前に、どの設定を見ればよいかを整理します。取込元ごとの分類を確認する操作と、結合時にその分類に従う設定を区別し、確認する順序、機密性の判断を担当者へ戻す場面、引き継ぎに残す内容を説明します。">
+  <meta property="og:title" content="Excelのプライバシーレベルとは？Power Queryの設定場所と無視するときの注意｜Vaynexis">
+  <meta property="og:description" content="Excel の Power Query のプライバシーレベルは、データソースを「なし・プライベート・組織・パブリック」に分ける設定です。4つの意味、［データ ソース設定］で変える手順、無視する設定の注意、警告と Formula.Firewall のエラーを確かめます。">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://vaynexis.jp/column/excel-power-query-privacy-levels">
   <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="/assets/renewal-guides.css">
   <link rel="stylesheet" href="/assets/inner-navigation.css">
   <link rel="stylesheet" href="/assets/column.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで社内・外部データを結合する前のプライバシー設定確認","description":"社内の表と外部の公開データを組み合わせる前に、どの設定を見ればよいかを整理します。取込元ごとの分類を確認する操作と、結合時にその分類に従う設定を区別し、確認する順序、機密性の判断を担当者へ戻す場面、引き継ぎに残す内容を説明します。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-power-query-privacy-levels"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの設定","item":"https://vaynexis.jp/column/topics/excel"},{"@type":"ListItem","position":4,"name":"Excelで社内・外部データを結合する前のプライバシー設定確","item":"https://vaynexis.jp/column/excel-power-query-privacy-levels"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelのプライバシーレベルとは？Power Queryの設定場所と無視するときの注意","description":"Excel の Power Query のプライバシーレベルは、データソースを「なし・プライベート・組織・パブリック」に分ける設定です。4つの意味、［データ ソース設定］で変える手順、無視する設定の注意、警告と Formula.Firewall のエラーを確かめます。","datePublished":"2026-11-04","dateModified":"2026-11-19","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-power-query-privacy-levels"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの設定","item":"https://vaynexis.jp/column/topics/excel"},{"@type":"ListItem","position":4,"name":"Excelのプライバシーレベルとは？","item":"https://vaynexis.jp/column/excel-power-query-privacy-levels"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
@@ -65,72 +65,73 @@
 </nav>
 <main id="main">
 <article lang="ja" aria-labelledby="col-title">
-  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/excel">Excelの設定</a></li><li aria-current="page">Excelで社内・外部データを結合する前のプライバシー設定確</li></ol></div></nav>
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/excel">Excelの設定</a></li><li aria-current="page">Excelのプライバシーレベルとは？</li></ol></div></nav>
   <header class="sec"><div class="wrap">
-    <h1 class="h1" id="col-title">Excelで社内・外部データを結合する前のプライバシー設定確認</h1>
-    <div class="col-key"><p class="col-key__label">要点</p><p>Power Queryで社内・外部データを結合する前は、データソースのプライバシーレベルと、結合時にその分類を適用するオプションを分けて確かめます。取込元に含まれる情報と閲覧を認める範囲を整理し、判断が付かないものは管理担当者へ確認してから進める流れにします。</p></div>
-    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
-    <p>この記事は、社内の表と外部の公開データをExcelで結合したい小さな会社の事務担当者が、取込元ごとの分類と結合時の設定を確かめる流れをまとめたものです。</p>
-    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
-    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+    <h1 class="h1" id="col-title">Excelのプライバシーレベルとは？Power Queryの設定場所と無視するときの注意</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>プライバシーレベルは、データソースごとに、ほかのデータソースからどれだけ分離するかを決める分類です。Excel では［データ］→［データの取得］→［データ ソース設定］で対象を選び、［アクセス許可の編集］の［プライバシー レベル］で「なし・プライベート・組織・パブリック」から選びます。機密性の高いデータを含むソースは［プライベート］にするよう案内されています。結合のときにこの分類に従うか無視するかは、別の画面の［クエリ オプション］で決めます。</p></div>
+    <p class="col-meta">公開：2026年11月4日／更新：2026年11月19日／情報の確認日：2026年11月18日（出典はこの記事の最後）</p>
+    <p>社内の表と外部の公開データを Power Query でつなごうとして、プライバシーレベルの警告やエラーが出ることがあります。プライバシーレベルとは何か、どこで変えるか、無視する設定を選んでよいのはどんなときかを、Microsoft のサポートと Learn の資料で確かめます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月18日に確かめました。機能や画面は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">照合の例は説明のための架空の例です。表の整理と確認表は当社のもので、Microsoft が示しているものではありません。</p>
   </div></header>
 
   <nav aria-label="この記事の内容"><div class="wrap">
     <ol>
-      <li><a href="#s1">結合の前に、情報を見せてよい範囲を整理する</a></li>
-      <li><a href="#s2">データソースごとの分類を開いて確かめる</a></li>
-      <li><a href="#s3">結合時に分類へ従う設定も見る</a></li>
-      <li><a href="#s4">架空の照合例では、分類の前に項目を洗い出す</a></li>
-      <li><a href="#s5">警告や停止があれば、対象と設定へ戻る</a></li>
+      <li><a href="#s1">プライバシーレベルとは：データソースを4つに分ける設定</a></li>
+      <li><a href="#s2">設定する場所：［データ ソース設定］→［アクセス許可の編集］</a></li>
+      <li><a href="#s3">結合のときに従うか無視するか：［クエリ オプション］</a></li>
+      <li><a href="#s4">プライバシーレベルの警告と Formula.Firewall のエラー</a></li>
+      <li><a href="#s5">分類を決める前に、取込元の項目を洗い出す</a></li>
       <li><a href="#check">確認表</a></li>
       <li><a href="#consult">自社の事務の手順まで形にしたいとき</a></li>
     </ol>
   </div></nav>
 
   <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
-    <h2 class="h2" id="s1-title">1．結合の前に、情報を見せてよい範囲を整理する</h2>
-    <p>確認日：2026年11月4日。</p>
-    <p>公式ヘルプは、プライバシーレベルの誤設定によって機密データが信頼できる環境の外へ漏れる可能性を示しています。取込元を確認する目的は、表を表示できるようにすることだけではなく、含まれる情報をどこまで扱ってよいかを確かめることです。</p>
-    <p>機密性の高いデータを含むデータソースは［プライベート］に分類するのが公式の案内です。［組織］は表示を信頼できるユーザーグループに制限する分類で、［パブリック］は誰もがデータを見られる分類です。</p>
-    <p>ここでは、既存の接続があるデスクトップ版のブックについて、設定を確認する操作を扱います。Mac版のExcelでは、現在プライバシーレベルがサポートされていないため、同じ操作を前提にしません。</p>
+    <h2 class="h2" id="s1-title">1．プライバシーレベルとは：データソースを4つに分ける設定</h2>
+    <p>確認日：2026年11月18日</p>
+    <p>Microsoft Learn の説明では、プライバシー レベルは、1 つのデータ ソースを他のデータ ソースから分離する度合いを決める分離レベルです。制限の厳しい分離レベルではデータ ソース間の情報交換がブロックされますが、機能とパフォーマンスが低下する可能性があります。Microsoft サポートでは、プライバシー レベルを誤って設定すると、機密データが信頼できる環境の外部に漏洩する可能性があるとされています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">プライバシー レベル</th><th scope="col">意味（Microsoft の説明の要約）</th><th scope="col">資料にある例</th></tr></thead><tbody><tr><td data-label="プライバシー レベル">なし</td><td data-label="意味（Microsoft の説明の要約）">プライバシー設定がない。テストとパフォーマンス上の理由から、制御された開発環境で使うもの</td><td data-label="資料にある例">（開発環境のデータ ソース）</td></tr><tr><td data-label="プライバシー レベル">プライベート</td><td data-label="意味（Microsoft の説明の要約）">機密情報を含み、表示は承認されたユーザーに制限される。他のデータ ソースから完全に分離</td><td data-label="資料にある例">従業員レビューを含むブック など</td></tr><tr><td data-label="プライバシー レベル">組織</td><td data-label="意味（Microsoft の説明の要約）">表示を信頼できるユーザー グループに制限。パブリックのデータ ソースからは分離</td><td data-label="資料にある例">イントラネットの SharePoint サイト上の Word 文書</td></tr><tr><td data-label="プライバシー レベル">パブリック</td><td data-label="意味（Microsoft の説明の要約）">すべてのユーザーがデータを見られる。ファイル、インターネット データ ソース、ブック データだけがパブリックにできる</td><td data-label="資料にある例">Wikipedia のページのデータ</td></tr></tbody></table></div>
+    <p>どちらの資料でも、機密性の高いデータを含むデータ ソースは［プライベート］に設定するよう案内されています。社員名簿や取引先の連絡先のような表を、公開データと同じ扱いにしないための設定だと考えると分かりやすくなります。なお、Microsoft Learn の注では、現在、Excel on the Mac ではプライバシー レベルはサポートされていないとされています。</p>
   </div></section>
 
   <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
-    <h2 class="h2" id="s2-title">2．データソースごとの分類を開いて確かめる</h2>
-    <p>まず、作業対象のブックと取込元の場所を照合します。似た名前のファイルを取り違えないよう、担当者へ渡された一覧と、これから確認する対象を対応させておくとよいです。</p>
-    <p>Excelの［データ］から［データの取得］、［データ ソース設定］へ進みます。一覧で対象のデータソースを選び、［アクセス許可の編集］を開きます。［プライバシー レベル］の選択欄で、現在の分類を確認して変更できます。</p>
-    <p>この段階で、表示された分類と、情報を見せてよい範囲についての社内判断を突き合わせます。社内に置いた表、外から取り込んだ表という呼び方だけで判断を済ませず、管理担当者が確認できるよう、含まれる項目と用途も控えます。</p>
-    <p>変更する場合は［OK］を選び、［閉じる］で画面を閉じます。確認の仕上げとして、同じデータソースの［アクセス許可の編集］を開き直し、選択したプライバシーレベルを見ます。</p>
-    <p>取込元が複数ある場合は、確認を終えた対象と、判断を待っている対象を分けて記録します。変更した内容を記憶だけに頼らず、元の分類と変更後の分類、判断した担当者を残す形にすると、引き継ぎ先も経緯をたどれます。</p>
+    <h2 class="h2" id="s2-title">2．設定する場所：［データ ソース設定］→［アクセス許可の編集］</h2>
+    <p>Microsoft サポートの手順では、Excel で［データ］→［データの取得］→［データ ソース設定］を選ぶと［データ ソース設定］ダイアログ ボックスが開きます。Power Query エディターからは［ファイル］→［オプションと設定］→［データ ソース設定］です。</p>
+    <ol>
+      <li>［データ ソース設定］で対象のデータ ソースを選び、［アクセス許可の編集］を選択します。</li>
+      <li>［プライバシー レベル］のドロップダウン リストから、なし・プライベート・組織・パブリックのいずれかを選びます。</li>
+      <li>［OK］を選択します。</li>
+    </ol>
+    <p>変えたあとは、同じデータ ソースの［アクセス許可の編集］を開き直し、選んだレベルになっているかを見ます。取込元が複数ある場合は、確認を終えたものと判断を待っているものを分けて控えます。元のレベル、変えたあとのレベル、判断した人を残しておくと、引き継いだ人が経緯をたどれます。どのレベルにするかは表の中身で決まるので、事務の担当者だけで決めかねる表は、情報の管理を担当する人に確かめてから変えます。</p>
   </div></section>
 
   <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
-    <h2 class="h2" id="s3-title">3．結合時に分類へ従う設定も見る</h2>
-    <p>続いて、［データ］から［データの取得］、［クエリ オプション］を開きます。［クエリ オプション］には、［グローバル］の［プライバシー］と、［現在のブック］の［プライバシー］があります。</p>
-    <p>［グローバル］には、常に各ソースの設定に従う選択肢や、各ファイルの設定に従う選択肢があります。確認したいブックだけを見る前に、全体でどの扱いになっているかを把握する流れです。管理担当者が全体の設定を決めている場合は、その方針と影響する範囲を確認してから変更を検討します。</p>
-    <p>［現在のブック］では、各ソースのプライバシーレベル設定に従ってデータを結合する選択肢を確認します。プライバシーレベルを無視する設定は、承認されていない人への機密データの開示につながる可能性があります。</p>
-    <p>ここでの作業記録には、確認した範囲も添えます。分類を確かめたとだけ書くより、取込元の分類を見たのか、結合時の扱いを見たのかを区別した方が、未確認の箇所を追いやすくなります。会社全体の運用に関わる変更は、事務担当者だけで進めず管理担当者と相談する流れです。</p>
+    <h2 class="h2" id="s3-title">3．結合のときに従うか無視するか：［クエリ オプション］</h2>
+    <p>データ ソースの分類とは別に、結合のときにその分類を使うかどうかを決める設定があります。Excel では［データ］→［データの取得］→［クエリ オプション］を開き、左側の［グローバル］または［現在のブック］の［プライバシー］で選びます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">画面</th><th scope="col">選択肢</th><th scope="col">資料にある注意</th></tr></thead><tbody><tr><td data-label="画面">グローバル</td><td data-label="選択肢">常に各ソースのプライバシー レベル設定に従ってデータを結合する／各ファイルのプライバシー レベル設定に従ってデータを結合する／常にプライバシー レベルを無視する</td><td data-label="資料にある注意">従う設定はパフォーマンスと機能が低下する可能性がある。無視する設定はマージしたデータのプライバシーを確保できない</td></tr><tr><td data-label="画面">現在のブック</td><td data-label="選択肢">各ソースのプライバシー レベル設定に従ってデータを結合する／プライバシー レベルを無視する</td><td data-label="資料にある注意">同上</td></tr></tbody></table></div>
+    <p>プライバシー レベルを無視するオプションは「高速結合」とも呼ばれます。Microsoft サポートは、［プライバシー レベルを無視して、パフォーマンスを向上する］を選んで高速結合を有効にすると、承認されていないユーザーに機密データが開示される可能性があるとし、データ ソースに機密データが含まれていないことが確証できる場合を除き、高速結合を有効にしないよう注意しています。既定では有効になっていません。エラーを消すためだけに「無視する」を選ぶのではなく、先に各ソースの分類を見直す順にします。</p>
   </div></section>
 
   <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
-    <h2 class="h2" id="s4-title">4．架空の照合例では、分類の前に項目を洗い出す</h2>
-    <p>ここからは当社の整理です。</p>
-    <p>社内で管理する配送先の表に、外部の公開地域一覧を結び付ける場面を考えます。結果を作る担当者が、分類を決める担当者へ渡す確認材料の例です。</p>
-    <div class="tbl"><table class="stack"><thead><tr><th scope="col">取込元</th><th scope="col">含まれる項目の例</th><th scope="col">分類を判断する前の確認</th></tr></thead><tbody><tr><td data-label="取込元">社内の配送先表</td><td data-label="含まれる項目の例">担当者名、届け先、地域名</td><td data-label="分類を判断する前の確認">各項目を見せてよい範囲を管理担当者へ確認する</td></tr><tr><td data-label="取込元">外部の公開地域一覧</td><td data-label="含まれる項目の例">地域名、地域の区分</td><td data-label="分類を判断する前の確認">参照する一覧の公開範囲と内容を確認する</td></tr><tr><td data-label="取込元">照合して作る表</td><td data-label="含まれる項目の例">配送先と地域の区分</td><td data-label="分類を判断する前の確認">誰へ渡す予定の表かを先に控える</td></tr></tbody></table></div>
-    <p>公開されている一覧を使う場面でも、社内の表に含まれる項目の扱いは別に確認します。判断に必要な情報がそろっていなければ、設定変更を保留し、不明な項目と確認先を記録する進め方です。担当者名を含まない見本を用意し、結び付ける項目の対応を先に確かめておくと、操作の問題と情報の扱いの判断を切り分けられます。</p>
+    <h2 class="h2" id="s4-title">4．プライバシーレベルの警告と Formula.Firewall のエラー</h2>
+    <p>Microsoft Learn によると、複数のソースのデータを結合するときに、いずれかのソースのプライバシー レベルが設定されていない場合や、プライバシー レベルが異なる場合は、Power Query でデータのプライバシー情報が必要であるという警告が表示されます。ボタンから［プライバシー レベル］ダイアログを開き、まだレベルのないソースに設定します。</p>
+    <p>レベルが異なるソースどうしは、結合が止まることがあります。Learn には、ブックのデータを［プライベート］、SQL Server のデータを［組織］に設定してマージすると、プライベートの方が組織より制限が厳しいため、Power Query はデータ ソース間の情報交換をブロックするという例が載っています。</p>
+    <p>そのときに出るのが、「Formula.Firewall: Query 'Query1' (step 'Source') is accessing data sources that have privacy levels which cannot be used together. Please rebuild this data combination.」のようなエラーです。Learn の「データ プライバシー ファイアウォールの舞台裏」では、このエラーは Power Query のデータ プライバシー ファイアウォールの結果で、ファイアウォールの目的は、Power Query がソース間で意図せずにデータを漏えいするのを防ぐことだと説明されています。参照しているクエリの組み方が原因で出る「references other queries or steps」の形のエラーもあります。どちらも、分類と組み方を見直すための知らせとして扱います。</p>
   </div></section>
 
   <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
-    <h2 class="h2" id="s5-title">5．警告や停止があれば、対象と設定へ戻る</h2>
-    <p>Power Query の公式資料によると、未設定の取込元がある場合や分類が異なる場合、Power Queryはデータのプライバシー情報を求める警告を表示します。制限の厳しい分離レベルは情報交換をブロックする一方で、機能や処理性能に影響する可能性があります。</p>
-    <p>警告を見たら、画面の文言と、そのとき扱っていた取込元を控えます。結合を通すための変更を重ねる前に、未設定の対象があるか、社内で確認した内容と表示が合うかを見直す順序にします。判断が付かないまま分類をそろえず、管理担当者が元の状態を確かめられるよう、変更した箇所も併記するとよいです。</p>
-    <p>設定の確認を終えた後は、作成された表の列、照合した項目、想定外の行の増減を元の表と見比べます。結合できたことと、業務で使う結果が合っていることは分けて確認し、引き継ぎには設定の確認状況と結果の照合状況を残します。</p>
+    <h2 class="h2" id="s5-title">5．分類を決める前に、取込元の項目を洗い出す</h2>
+    <p>社内で管理する配送先の表に、外部の公開地域一覧を結び付ける架空の場面で、分類を決める前に洗い出す項目を並べます。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">取込元</th><th scope="col">含まれる項目の例</th><th scope="col">分類を決める前に確かめること</th></tr></thead><tbody><tr><td data-label="取込元">社内の配送先表</td><td data-label="含まれる項目の例">担当者名、届け先、地域名</td><td data-label="分類を決める前に確かめること">各項目を見せてよい範囲を管理担当者へ確かめる</td></tr><tr><td data-label="取込元">外部の公開地域一覧</td><td data-label="含まれる項目の例">地域名、地域の区分</td><td data-label="分類を決める前に確かめること">一覧の公開の範囲と内容</td></tr><tr><td data-label="取込元">照合して作る表</td><td data-label="含まれる項目の例">配送先と地域の区分</td><td data-label="分類を決める前に確かめること">誰へ渡す予定の表か</td></tr></tbody></table></div>
+    <p>公開されている一覧を使う場合でも、社内の表に含まれる項目の扱いは別に考えます。判断に必要な情報がそろわなければ、設定は変えずに、分からない項目と確認先を記録しておきます。担当者名を含まない見本で結び付ける列の対応を先に確かめておくと、操作の問題と情報の扱いの判断を切り分けられます。</p>
+    <p>結合できたら、作られた表の列、照合した項目、想定外の行の増減を元の表と見比べます。結合できたことと、業務で使う結果が合っていることは別に確かめ、引き継ぎには設定の確認の状況と結果の照合の状況を残します。</p>
   </div></section>
 
   <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
     <h2 class="h2" id="check-title">6．確認表</h2>
     <p>公開・共有の前に、この表で確かめます。</p>
-    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">結合する取込元と、その中に含まれる項目を洗い出したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">情報を見せてよい範囲を管理担当者へ確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">各取込元の分類を開き、社内の判断と照合したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">分類と、結合時の扱いを決める設定を分けて確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">変更後に設定を開き直し、確認した範囲と内容を控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">警告の内容と未解決の確認先を引き継ぎに残したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">作成された表を元の表と照合したか</td></tr></tbody></table></div>
+    <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">結合する取込元と、その中に含まれる項目を洗い出したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">機密性の高いデータを含むソースを［プライベート］にしたか（決めかねるものは管理担当者に確かめたか）</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［データ ソース設定］→［アクセス許可の編集］で、各ソースのレベルを開き直して確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［クエリ オプション］の［グローバル］と［現在のブック］の［プライバシー］を分けて見たか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">［プライバシー レベルを無視する］（高速結合）を、機密データが無いと確証できないまま選んでいないか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">警告や Formula.Firewall のエラーの文言と、そのとき扱っていた取込元を控えたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">作られた表を元の表と照らし、行の増減と列を確かめたか</td></tr></tbody></table></div>
   </div></section>
 
   <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
@@ -140,10 +141,11 @@
   </div></section>
 
   <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
-    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <h2 class="h3">出典（確認日：2026年11月18日）</h2>
     <ul class="col-src">
-      <li><a href="https://support.microsoft.com/ja-jp/excel/set-privacy-levels-power-query" rel="noopener" target="_blank">プライバシー レベルを設定する (Power Query)｜Microsoft Support</a>：誤設定のリスク、分類の意味、データソース設定とクエリオプションの操作、結合時に従う設定。</li>
-      <li><a href="https://learn.microsoft.com/ja-jp/power-query/privacy-levels" rel="noopener" target="_blank">Power Queryのプライバシー レベル｜Microsoft Learn</a>：分類と適用オプションの区別、機密情報の分類、設定の保存と再確認、適用範囲、警告と処理への影響、Mac版ではプライバシーレ</li>
+      <li><a href="https://support.microsoft.com/ja-jp/excel/set-privacy-levels-power-query" rel="noopener" target="_blank">プライバシー レベルを設定する (Power Query)｜Microsoft サポート</a>：誤った設定による漏洩の可能性、機密データはプライベート、［データ ソース設定］と［アクセス許可の編集］の手順、4つのレベルの意味と例、［クエリ オプション］のグローバルと現在のブック、高速結合の注意と既定</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/power-query/privacy-levels" rel="noopener" target="_blank">プライバシーのレベル｜Microsoft Learn（Power Query）</a>：分離レベルとしての定義、高速結合という呼び方、プライベートと組織の結合がブロックされる例、プライバシー レベルの警告とダイアログ、Excel on the Mac は未対応</li>
+      <li><a href="https://learn.microsoft.com/ja-jp/power-query/data-privacy-firewall" rel="noopener" target="_blank">データ プライバシー ファイアウォールの舞台裏｜Microsoft Learn（Power Query）</a>：Formula.Firewall のエラーの例文と、ファイアウォールの目的</li>
     </ul>
     <h2 class="h3">関連する記事・ページ</h2>
     <ul class="col-rel">

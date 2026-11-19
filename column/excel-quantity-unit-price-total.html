@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Excelで数量と単価の明細から総額を出す手順と確認のしかた｜Vaynexis</title>
-  <meta name="description" content="数量と単価の明細から総額を求めるために、入力する式と範囲の選び方を整理します。短い表で計算の流れを示し、範囲のずれや数値以外の入力を見直す方法、計算後の照合、担当者が替わるときに残すメモまで、事務で使う際の確認点をまとめます。">
+  <title>Excelで数量×単価を計算する｜行ごとの掛け算の式とSUMPRODUCTで総額を出す方法｜Vaynexis</title>
+  <meta name="description" content="Excelで数量×単価を出すには、金額の列に「=B2*C2」のような掛け算の式を入れて合計するか、SUMPRODUCT 関数で総額を一度に出します。2つの使い分け、#VALUE! エラー、文字が混じったときの扱いを Microsoft サポートで確かめます。">
   <meta name="theme-color" content="#f4f6fa">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Excelで数量と単価の明細から総額を出す手順と確認のしかた｜Vaynexis">
-  <meta property="og:description" content="数量と単価の明細から総額を求めるために、入力する式と範囲の選び方を整理します。短い表で計算の流れを示し、範囲のずれや数値以外の入力を見直す方法、計算後の照合、担当者が替わるときに残すメモまで、事務で使う際の確認点をまとめます。">
+  <meta property="og:title" content="Excelで数量×単価を計算する｜行ごとの掛け算の式とSUMPRODUCTで総額を出す方法｜Vaynexis">
+  <meta property="og:description" content="Excelで数量×単価を出すには、金額の列に「=B2*C2」のような掛け算の式を入れて合計するか、SUMPRODUCT 関数で総額を一度に出します。2つの使い分け、#VALUE! エラー、文字が混じったときの扱いを Microsoft サポートで確かめます。">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://vaynexis.jp/column/excel-quantity-unit-price-total">
   <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="/assets/renewal-guides.css">
   <link rel="stylesheet" href="/assets/inner-navigation.css">
   <link rel="stylesheet" href="/assets/column.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで数量と単価の明細から総額を出す手順と確認のしかた","description":"数量と単価の明細から総額を求めるために、入力する式と範囲の選び方を整理します。短い表で計算の流れを示し、範囲のずれや数値以外の入力を見直す方法、計算後の照合、担当者が替わるときに残すメモまで、事務で使う際の確認点をまとめます。","datePublished":"2026-11-03","dateModified":"2026-11-03","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-quantity-unit-price-total"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの設定","item":"https://vaynexis.jp/column/topics/excel"},{"@type":"ListItem","position":4,"name":"Excelで数量と単価の明細から総額を出す手順と確認のしかた","item":"https://vaynexis.jp/column/excel-quantity-unit-price-total"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelで数量×単価を計算する｜行ごとの掛け算の式とSUMPRODUCTで総額を出す方法","description":"Excelで数量×単価を出すには、金額の列に「=B2*C2」のような掛け算の式を入れて合計するか、SUMPRODUCT 関数で総額を一度に出します。2つの使い分け、#VALUE! エラー、文字が混じったときの扱いを Microsoft サポートで確かめます。","datePublished":"2026-11-03","dateModified":"2026-11-19","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-quantity-unit-price-total"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの設定","item":"https://vaynexis.jp/column/topics/excel"},{"@type":"ListItem","position":4,"name":"Excelで数量×単価を計算する","item":"https://vaynexis.jp/column/excel-quantity-unit-price-total"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
@@ -65,12 +65,12 @@
 </nav>
 <main id="main">
 <article lang="ja" aria-labelledby="col-title">
-  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/excel">Excelの設定</a></li><li aria-current="page">Excelで数量と単価の明細から総額を出す手順と確認のしかた</li></ol></div></nav>
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/excel">Excelの設定</a></li><li aria-current="page">Excelで数量×単価を計算する</li></ol></div></nav>
   <header class="sec"><div class="wrap">
-    <h1 class="h1" id="col-title">Excelで数量と単価の明細から総額を出す手順と確認のしかた</h1>
-    <div class="col-key"><p class="col-key__label">要点</p><p>Excelでは、SUMPRODUCT関数で同じ行の数量と単価を掛け、その結果を合計して総額を求められます。計算前には品目の対応と入力範囲をそろえ、計算後には元の明細との照合まで行う、という順で進めるとよいです。</p></div>
-    <p class="col-meta">公開：2026年11月3日／情報の確認日：2026年11月3日（出典はこの記事の最後）</p>
-    <p>この記事は、Excelで数量と単価の明細から総額を出したい小さな会社の事務担当者が、SUMPRODUCT関数の入力と範囲の確認、計算後の照合を整理するためのものです。</p>
+    <h1 class="h1" id="col-title">Excelで数量×単価を計算する｜行ごとの掛け算の式とSUMPRODUCTで総額を出す方法</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Excelで数量×単価を出すには、* （アスタリスク）の算術演算子で掛けます。明細の行ごとに金額を見たいなら、金額の列に「=B2*C2」（数量のセル×単価のセル）と入れて下の行へコピーし、その列を合計します。金額の列を作らずに総額だけ出すなら、「=SUMPRODUCT(B2:B10,C2:C10)」のように数量と単価の範囲を指定します。SUMPRODUCT では範囲の行数・列数が同じでないと #VALUE! になり、数値以外の値は0として扱われます。</p></div>
+    <p class="col-meta">公開：2026年11月3日／更新：2026年11月19日／情報の確認日：2026年11月19日（出典はこの記事の最後）</p>
+    <p>見積書や発注書の明細で、数量×単価の金額と総額をExcelで出す方法です。行ごとに掛け算の式を入れる方法と SUMPRODUCT 関数で一度に出す方法の違い、式の書き方、範囲のずれや文字の混じりで起きるエラーの直し方を、Microsoft サポートで確かめます。</p>
     <p>公式ページ・公式ヘルプなどの一次資料を2026年11月3日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
     <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
   </div></header>
@@ -78,6 +78,7 @@
   <nav aria-label="この記事の内容"><div class="wrap">
     <ol>
       <li><a href="#s1">計算前に、数量と単価の対応をそろえる</a></li>
+      <li><a href="#s1b">行ごとに「数量×単価」を出す掛け算の式</a></li>
       <li><a href="#s2">総額を表示する場所に式を入力する</a></li>
       <li><a href="#s3">小さな明細で計算の流れを見る</a></li>
       <li><a href="#s4">範囲のずれと、数値以外の入力を見直す</a></li>
@@ -89,14 +90,23 @@
 
   <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
     <h2 class="h2" id="s1-title">1．計算前に、数量と単価の対応をそろえる</h2>
+    <p>確認日：2026年11月19日</p>
     <p>最初に見るのは、数量と単価が同じ品目を指しているかです。明細を集めた段階で、品目名と数量だけが先に入り、単価が別の資料に残っていることも考えられます。計算に入る前に、元の資料と品目の対応を確認しておきます。</p>
     <p>数量の単位と、単価が何に対する価格かも合わせます。箱の数量に個当たりの価格を対応させるなど、意味の異なる値をそのまま組み合わせないためです。単位が分からない欄は、推測して埋めず、入力元に確認する対象として分けます。</p>
     <p>次に、合計したい明細の始まりと終わりを決めます。途中に小計や参考用の金額があれば、明細との区別が付くように整理するとよいです。計算に使う資料の版や、対象に含める範囲も先に決めておくと、結果を照合する際の基準になります。</p>
     <p>元の明細と照合できる状態を残しておくことも大切です。値を補った箇所や、対象から外した明細があれば、その理由を短く記録します。総額が合っているかを調べる際に、入力の判断までさかのぼれるようにするためです。</p>
   </div></section>
 
+  <section class="sec" id="s1b" aria-labelledby="s1b-title"><div class="wrap">
+    <h2 class="h2" id="s1b-title">2．行ごとに「数量×単価」を出す掛け算の式</h2>
+    <p>Microsoft サポートの「Excel で数値の乗算と除算を行う」では、セル内の数値を掛けるには *（アスタリスク）の算術演算子を使い、たとえばセルに「=5*10」と入れると「50」が表示されると説明されています。明細では、数量が B列、単価が C列なら、金額の列に「=B2*C2」と入れ、その数式を列の下のセルまでドラッグします。</p>
+    <p>同じ単価や掛け率を全部の行に掛けるときは、参照を固定します。ヘルプの例では「=A2*$B$2」と入れ、Bの前と2の前に$記号を付けると、数式を別のセルにコピーしてもB2が常に参照されます。$記号を付けずに下へドラッグすると参照がずれ、値の無いセルを掛けてしまうと注意されています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">方法</th><th scope="col">式の例</th><th scope="col">向く場面</th></tr></thead><tbody><tr><td data-label="方法">行ごとに掛けて合計</td><td data-label="式の例">D2に =B2*C2 → 下へコピー → =SUM(D2:D10)</td><td data-label="向く場面">見積書や納品書のように、行ごとの金額も見せたい明細</td></tr><tr><td data-label="方法">SUMPRODUCT で総額</td><td data-label="式の例">=SUMPRODUCT(B2:B10,C2:C10)</td><td data-label="向く場面">金額の列を作らず、総額だけを出したい集計</td></tr></tbody></table></div>
+    <p>SUMPRODUCT のヘルプでは、引数となる配列は行数と列数が等しい必要があり、等しくない場合は #VALUE! が返されるとされています（例：=SUMPRODUCT(C2:C10,D2:D5) は範囲の大きさが違うためエラー）。また、数値以外の配列のエントリはゼロとして扱われるので、単価の欄に「未定」などの文字が入っていると、エラーにならずにその行が0円で合計されます。最適な動作のために、=SUMPRODUCT(A:A,B:B) のような列全体の参照は使わないよう案内されています。</p>
+  </div></section>
+
   <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
-    <h2 class="h2" id="s2-title">2．総額を表示する場所に式を入力する</h2>
+    <h2 class="h2" id="s2-title">3．総額を表示する場所に式を入力する</h2>
     <p>確認日：2026-11-03。以下は公式ヘルプで読めた数式の入力方法です。</p>
     <p>数量をC2:C5、対応する単価をD2:D5に置く場合、総額を表示するセルに 「=SUMPRODUCT(C2:C5,D2:D5)」 と入力し、Enterキーを押します。</p>
     <p>ここからは当社の手順の整理です。総額を表示する場所は、明細を入力する場所と分けておきます。式を入力する前に、数量の欄と単価の欄の位置、明細の最終行を見直します。手元の表と公式の例で列の位置が異なるときは、自分の表の配置に合わせて参照先を選ぶ流れです。</p>
@@ -104,7 +114,7 @@
   </div></section>
 
   <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
-    <h2 class="h2" id="s3-title">3．小さな明細で計算の流れを見る</h2>
+    <h2 class="h2" id="s3-title">4．小さな明細で計算の流れを見る</h2>
     <p>表の品目名と入力値は説明用に設定したものです。金額は円として扱い、計算の流れだけを示します。</p>
     <div class="tbl"><table class="stack"><thead><tr><th scope="col">行</th><th scope="col">品目</th><th scope="col">数量（C列）</th><th scope="col">単価・円（D列）</th></tr></thead><tbody><tr><td data-label="行">2</td><td data-label="品目">封筒</td><td data-label="数量（C列）">2</td><td data-label="単価・円（D列）">100</td></tr><tr><td data-label="行">3</td><td data-label="品目">付箋</td><td data-label="数量（C列）">3</td><td data-label="単価・円（D列）">200</td></tr><tr><td data-label="行">4</td><td data-label="品目">ファイル</td><td data-label="数量（C列）">1</td><td data-label="単価・円（D列）">400</td></tr><tr><td data-label="行">5</td><td data-label="品目">ラベル</td><td data-label="数量（C列）">2</td><td data-label="単価・円（D列）">150</td></tr></tbody></table></div>
     <p>この架空の表に、対応するセルの積を合計する計算方法を当てはめると、総額は1,500円になります。</p>
@@ -112,7 +122,7 @@
   </div></section>
 
   <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
-    <h2 class="h2" id="s4-title">4．範囲のずれと、数値以外の入力を見直す</h2>
+    <h2 class="h2" id="s4-title">5．範囲のずれと、数値以外の入力を見直す</h2>
     <p>確認日：2026-11-03。計算が合わないときは、参照範囲と入力の種類を別々に見ます。</p>
     <p>SUMPRODUCT関数では、引数に指定する範囲の行数と列数をそろえる必要があります。数量側と単価側の始まり・終わりを見比べ、同じ明細を指しているかを確認するとよいです。</p>
     <p>また、コンマで範囲を渡す形のSUMPRODUCT関数は、数値以外の要素をゼロのように扱います。金額が表示されていても、その表示だけを入力確認の代わりにせず、数量や単価に文字が混ざっていないかも見直します。</p>
@@ -120,7 +130,7 @@
   </div></section>
 
   <section class="sec" id="s5" aria-labelledby="s5-title"><div class="wrap">
-    <h2 class="h2" id="s5-title">5．引き継ぎには、対象範囲と照合の方法を残す</h2>
+    <h2 class="h2" id="s5-title">6．引き継ぎには、対象範囲と照合の方法を残す</h2>
     <p>担当者が替わるときは、式だけでなく、その表で何を合計するかを短く残しておくとよいです。どの資料を基に入力し、どの明細を対象にしたかが分かる形にします。</p>
     <p>例えば、「入力元の資料名」「明細を追加する場所」「総額を確認する場所」「入力が未確定のときの確認先」をメモします。架空のメモの例は次のとおりです。</p>
     <pre class="prompt">入力元：担当者が確認した明細
@@ -132,19 +142,19 @@
   </div></section>
 
   <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
-    <h2 class="h2" id="check-title">6．確認表</h2>
+    <h2 class="h2" id="check-title">7．確認表</h2>
     <p>公開・共有の前に、この表で確かめます。</p>
     <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">数量と単価が同じ品目に対応しているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数量の単位と、単価が対象とする単位を確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">集計する明細の始まりと終わりを確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数量側と単価側で対象の明細がそろっているか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">数値の欄に文字や未確定の入力が残っていないか確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">元の資料と照合し、総額だけで判断せず入力値も確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">対象範囲と更新時の確認方法を引き継ぎ用に記録したか</td></tr></tbody></table></div>
   </div></section>
 
   <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
-    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
+    <h2 class="h2" id="consult-title">8．自社の事務の手順まで形にしたいとき</h2>
     <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
     <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
   </div></section>
 
   <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
-    <h2 class="h3">出典（確認日：2026年11月3日）</h2>
+    <h2 class="h3">出典（確認日：2026年11月19日）</h2>
     <ul class="col-src">
       <li><a href="https://support.microsoft.com/ja-jp/excel/functions/sumproduct-function" rel="noopener" target="_blank">SUMPRODUCT 関数</a>：積の合計、入力する式、数値以外の扱い。例の入力値は当社が設定した架空の値であり、資料の転載ではない。</li>
       <li><a href="https://support.microsoft.com/ja-jp/excel/how-to-correct-a-value-error-in-the-sumproduct-function" rel="noopener" target="_blank">SUMPRODUCT 関数の #VALUE! エラーを修正する方法</a>：範囲の大きさをそろえること。本文に機能名を記す箇所は、この確認日時点の記載に基づく。</li>

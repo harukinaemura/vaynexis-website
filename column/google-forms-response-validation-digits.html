@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Googleフォームで入力の桁数や形式を制限する設定と確認｜Vaynexis</title>
-  <meta name="description" content="Googleフォームの入力をそろえるために、回答の検証を設定する手順を整理します。文字数の上限・下限と、固定桁の数字を受け付ける正規表現の使い分け、必須の設定、修正を促す案内の考え方、公開前に確かめる入力の見本と引き継ぎで残す内容をまとめます。">
+  <title>Googleフォームの入力制限と文字数制限｜回答の検証で数字・桁数・文字数をそろえる設定｜Vaynexis</title>
+  <meta name="description" content="Googleフォームで入力を制限するには、質問のその他メニューから［回答の検証］を開き、数値・テキスト・長さ・正規表現のルールを選びます。文字数の上限と下限、10桁の数字などの桁数、メールアドレスの形式、チェックボックスの選択数の制限、エラーの文の出し方を、Google のヘルプで確かめます。">
   <meta name="theme-color" content="#f4f6fa">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Googleフォームで入力の桁数や形式を制限する設定と確認｜Vaynexis">
-  <meta property="og:description" content="Googleフォームの入力をそろえるために、回答の検証を設定する手順を整理します。文字数の上限・下限と、固定桁の数字を受け付ける正規表現の使い分け、必須の設定、修正を促す案内の考え方、公開前に確かめる入力の見本と引き継ぎで残す内容をまとめます。">
+  <meta property="og:title" content="Googleフォームの入力制限と文字数制限｜回答の検証で数字・桁数・文字数をそろえる設定｜Vaynexis">
+  <meta property="og:description" content="Googleフォームで入力を制限するには、質問のその他メニューから［回答の検証］を開き、数値・テキスト・長さ・正規表現のルールを選びます。文字数の上限と下限、10桁の数字などの桁数、メールアドレスの形式、チェックボックスの選択数の制限、エラーの文の出し方を、Google のヘルプで確かめます。">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://vaynexis.jp/column/google-forms-response-validation-digits">
   <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="/assets/renewal-guides.css">
   <link rel="stylesheet" href="/assets/inner-navigation.css">
   <link rel="stylesheet" href="/assets/column.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Googleフォームで入力の桁数や形式を制限する設定と確認","description":"Googleフォームの入力をそろえるために、回答の検証を設定する手順を整理します。文字数の上限・下限と、固定桁の数字を受け付ける正規表現の使い分け、必須の設定、修正を促す案内の考え方、公開前に確かめる入力の見本と引き継ぎで残す内容をまとめます。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-forms-response-validation-digits"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Googleフォームの設定","item":"https://vaynexis.jp/column/topics/google-forms"},{"@type":"ListItem","position":4,"name":"Googleフォームで入力の桁数や形式を制限する設定と確認","item":"https://vaynexis.jp/column/google-forms-response-validation-digits"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Googleフォームの入力制限と文字数制限｜回答の検証で数字・桁数・文字数をそろえる設定","description":"Googleフォームで入力を制限するには、質問のその他メニューから［回答の検証］を開き、数値・テキスト・長さ・正規表現のルールを選びます。文字数の上限と下限、10桁の数字などの桁数、メールアドレスの形式、チェックボックスの選択数の制限、エラーの文の出し方を、Google のヘルプで確かめます。","datePublished":"2026-11-04","dateModified":"2026-11-19","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/google-forms-response-validation-digits"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Googleフォームの設定","item":"https://vaynexis.jp/column/topics/google-forms"},{"@type":"ListItem","position":4,"name":"Googleフォームの入力制限と文字数制限","item":"https://vaynexis.jp/column/google-forms-response-validation-digits"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
@@ -65,19 +65,20 @@
 </nav>
 <main id="main">
 <article lang="ja" aria-labelledby="col-title">
-  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/google-forms">Googleフォームの設定</a></li><li aria-current="page">Googleフォームで入力の桁数や形式を制限する設定と確認</li></ol></div></nav>
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/google-forms">Googleフォームの設定</a></li><li aria-current="page">Googleフォームの入力制限と文字数制限</li></ol></div></nav>
   <header class="sec"><div class="wrap">
-    <h1 class="h1" id="col-title">Googleフォームで入力の桁数や形式を制限する設定と確認</h1>
-    <div class="col-key"><p class="col-key__label">要点</p><p>Googleフォームでは、回答の検証で入力のルールを設定できます。桁数や文字の並びをそろえるときは、パターンに合う回答だけを受け付ける正規表現を使います。文字数の上限・下限と、入力の形式を分けて考えることが設定の出発点です。</p></div>
-    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
-    <p>この記事は、Googleフォームの入力欄の桁数や形式をそろえたい小さな会社の事務担当者が、回答の検証（長さ・正規表現）の設定と、公開前の確かめ方を整理するためのものです。</p>
-    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
-    <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
+    <h1 class="h1" id="col-title">Googleフォームの入力制限と文字数制限｜回答の検証で数字・桁数・文字数をそろえる設定</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Googleフォームの入力制限は、質問のその他アイコンから［回答の検証］をクリックして設定します。文字数を制限するなら［長さ］で［最大文字数］か［最小文字数］を指定し、10桁の番号のように桁数と形式をそろえるなら［正規表現］の［一致する］に「[0-9]{10}」のようなパターンを入れます。数値の範囲は［数値］、メールアドレスの形式は［テキスト］で決められます。使えるルールは質問の種類によって違い、ルールに合わない回答には［カスタム エラー テキスト］の文を表示できます。</p></div>
+    <p class="col-meta">公開：2026年11月4日／更新：2026年11月19日／情報の確認日：2026年11月19日（出典はこの記事の最後）</p>
+    <p>Googleフォームで、電話番号や受付番号の桁数、自由記述の文字数をそろえたいときの設定です。［回答の検証］で選べるルールの種類と、桁数をそろえる正規表現の例、送る前に通す入力と直してもらう入力の確かめ方を、Google のヘルプで確かめます。</p>
+    <p>公式ページ・公式ヘルプなどの一次資料を2026年11月19日に確かめました。機能や画面は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
+    <p class="notice">設定例の表の用途と確認の段取りは当社の整理で、Google が示しているものではありません。</p>
   </div></header>
 
   <nav aria-label="この記事の内容"><div class="wrap">
     <ol>
-      <li><a href="#s1">質問を選び、回答の検証を開く</a></li>
+      <li><a href="#s1">入力制限は［回答の検証］で設定する</a></li>
+      <li><a href="#s1b">回答の検証で選べるルールの種類（質問の形式ごと）</a></li>
       <li><a href="#s2">文字数を区切るか、文字の並びをそろえるか</a></li>
       <li><a href="#s3">固定桁の番号を受け付ける設定例</a></li>
       <li><a href="#s4">公開前に、通す入力と直してもらう入力を確かめる</a></li>
@@ -87,15 +88,22 @@
   </div></nav>
 
   <section class="sec" id="s1" aria-labelledby="s1-title"><div class="wrap">
-    <h2 class="h2" id="s1-title">1．質問を選び、回答の検証を開く</h2>
-    <p>確認日：2026年11月4日</p>
+    <h2 class="h2" id="s1-title">1．入力制限は［回答の検証］で設定する</h2>
+    <p>確認日：2026年11月19日</p>
     <p>質問のタイトルの右側で、質問の形式を選択します。短い回答欄には［記述式］を使えます。質問のその他メニューから［回答の検証］をクリックし、使用するルールの種類を選びます。選べるルールは質問の種類によって異なるため、設定項目が見当たらないときは質問の形式を確認します。</p>
     <p>設定を始める前には、受け付けたい入力を言葉にしておくとよいです。「短く書いてほしい」と「決まった形にそろえたい」では、確認する観点が変わります。担当者の間で目的を共有してから設定すると、引き継ぎのときにも選んだ理由を説明しやすくなります。</p>
     <p>ルールに合わない回答には、修正を促すメッセージを表示できます。案内文は「入力が違います」だけで終えず、直す場所と受け付ける書き方が分かる内容にする考え方です。専門用語をそのまま回答者に伝えるより、質問の説明と同じ言葉にそろえると読み取りやすくなります。</p>
   </div></section>
 
+  <section class="sec" id="s1b" aria-labelledby="s1b-title"><div class="wrap">
+    <h2 class="h2" id="s1b-title">2．回答の検証で選べるルールの種類（質問の形式ごと）</h2>
+    <p>Google のヘルプ「フォームのルールを設定する方法」では、利用できるルールのオプションは質問の種類によって異なるとされ、次のように整理されています。</p>
+    <div class="tbl"><table class="stack"><thead><tr><th scope="col">質問の形式</th><th scope="col">ルール</th><th scope="col">ヘルプにある例</th></tr></thead><tbody><tr><td data-label="質問の形式">記述式</td><td data-label="ルール">数値</td><td data-label="ヘルプにある例">50 以上の数値、21～42 の数字</td></tr><tr><td data-label="質問の形式">記述式</td><td data-label="ルール">テキスト</td><td data-label="ヘルプにある例">特定の単語を含む、メール形式（text@example.com）</td></tr><tr><td data-label="質問の形式">記述式・段落</td><td data-label="ルール">長さ（最大文字数・最小文字数）</td><td data-label="ヘルプにある例">500 文字以下、200 文字以上</td></tr><tr><td data-label="質問の形式">記述式・段落</td><td data-label="ルール">正規表現（次の要素を含む・次を含まない・一致する・一致しない）</td><td data-label="ヘルプにある例">10 桁の電話番号＝[0-9]{10} に一致</td></tr><tr><td data-label="質問の形式">チェックボックス</td><td data-label="ルール">選択する最低個数・最多個数・個数</td><td data-label="ヘルプにある例">―</td></tr></tbody></table></div>
+    <p>ルールを設定するときは、右側の［カスタム エラー テキスト］欄にエラー メッセージを入れておけます（省略可）。回答者の回答がルールに沿っていない場合、このメッセージが表示されます。「半角数字10桁で入力してください」のように、何を直せばよいかが分かる文にしておくと、問い合わせが減ります。</p>
+  </div></section>
+
   <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
-    <h2 class="h2" id="s2-title">2．文字数を区切るか、文字の並びをそろえるか</h2>
+    <h2 class="h2" id="s2-title">3．文字数を区切るか、文字の並びをそろえるか</h2>
     <p>文字数の上限・下限には［長さ］を選び、［最大文字数］または［最小文字数］と文字数を指定します。</p>
     <p>値の大小を扱いたいのか、番号として書式をそろえたいのかを、設定前に分けて考えます。「数字だから」という理由だけで選ばず、その欄を何に使うのかに立ち返るとよいです。</p>
     <p>決まったパターンにそろえるには［正規表現］を選び、［一致する］などの条件とパターンを設定します。</p>
@@ -103,7 +111,7 @@
   </div></section>
 
   <section class="sec" id="s3" aria-labelledby="s3-title"><div class="wrap">
-    <h2 class="h2" id="s3-title">3．固定桁の番号を受け付ける設定例</h2>
+    <h2 class="h2" id="s3-title">4．固定桁の番号を受け付ける設定例</h2>
     <p>固定桁の番号欄を考える際の、設定例を示します。</p>
     <div class="tbl"><table class="stack"><thead><tr><th scope="col">入力欄の用途</th><th scope="col">設定の見本</th></tr></thead><tbody><tr><td data-label="入力欄の用途">桁数をそろえる受付番号</td><td data-label="設定の見本">10桁の数字を受け付ける設定例は、［正規表現］の［一致する］に `[0-9]{10}` を指定する方法です。</td></tr></tbody></table></div>
     <p>表の用途は説明のために置いたものです。受け付ける番号の取り決めと照らし合わせ、実際に必要な書式へ合わせることが前提になります。式だけをコピーして運用を始めず、入力する人が手元の資料のどこを見ればよいかまで説明を整えるとよいです。</p>
@@ -111,7 +119,7 @@
   </div></section>
 
   <section class="sec" id="s4" aria-labelledby="s4-title"><div class="wrap">
-    <h2 class="h2" id="s4-title">4．公開前に、通す入力と直してもらう入力を確かめる</h2>
+    <h2 class="h2" id="s4-title">5．公開前に、通す入力と直してもらう入力を確かめる</h2>
     <p>設定後は、受け付けたい入力と、修正してもらいたい入力を並べて確かめます。正しい見本だけを見るのではなく、書き間違いや転記の際に起きそうな違いも確認対象に含める考え方です。入力の長さを変えたもの、別の種類の文字が混じったもの、空白を加えたものなどを用意し、意図した運用に合うかを見ます。</p>
     <p>ここで大切なのは、設定の名称を覚えることより、どの入力を受け付けたいかが担当者の間で一致していることです。実際に使われる書き方を整理し、受け付けるものと修正を求めるものを分けます。判断が分かれる書き方は、その場で設定を変える前に、受付の取り決めを確認するとよいです。</p>
     <p>案内の読みやすさも確かめる対象です。入力を直す場面で、どこが違うのか、どう書き直せばよいのかが分かる文になっているかを見ます。質問の説明と修正の案内で言葉が違うと、回答者は別の条件を求められているように感じるかもしれません。受付担当者が普段使う表現を基に、同じ言葉へそろえておきます。</p>
@@ -119,19 +127,19 @@
   </div></section>
 
   <section class="sec" id="check" aria-labelledby="check-title"><div class="wrap">
-    <h2 class="h2" id="check-title">5．確認表</h2>
+    <h2 class="h2" id="check-title">6．確認表</h2>
     <p>公開・共有の前に、この表で確かめます。</p>
     <div class="tbl col-check"><table class="stack"><thead><tr><th scope="col">確認</th><th scope="col">確かめること</th></tr></thead><tbody><tr><td data-label="確認">□</td><td data-label="確かめること">入力欄ごとに、何をそろえるための制限かを整理したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">入力を求める必要性と、受け付ける書き方を分けて決めたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">質問の説明と修正の案内を同じ言葉にそろえたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">受け付けたい入力と修正してもらう入力の両方で確かめたか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">判断が分かれる書き方を受付担当者と確認したか</td></tr><tr><td data-label="確認">□</td><td data-label="確かめること">引き継ぎ用に、設定の目的と確認結果を残したか</td></tr></tbody></table></div>
   </div></section>
 
   <section class="sec" id="consult" aria-labelledby="consult-title"><div class="wrap">
-    <h2 class="h2" id="consult-title">6．自社の事務の手順まで形にしたいとき</h2>
+    <h2 class="h2" id="consult-title">7．自社の事務の手順まで形にしたいとき</h2>
     <p>ここまでの確認を、自社の事務の手順書や、AIの結果を確かめる検査まで形にしたい場合は、当社のように、手順と検査の設計まで行う相談先が選択肢になります。オンラインは全国から対応しています。</p>
     <p>自社の事務のどこから確認を入れるかを相談したい場合は、<a href="/contact#soudan">初回無料相談</a>をご利用ください。法律・税務・労務の判断や、効果の約束は行いません。</p>
   </div></section>
 
   <section class="sec col-foot" aria-label="出典と関連する記事"><div class="wrap">
-    <h2 class="h3">出典（確認日：2026年11月4日）</h2>
+    <h2 class="h3">出典（確認日：2026年11月19日）</h2>
     <ul class="col-src">
       <li><a href="https://support.google.com/docs/answer/7322334?hl=ja" rel="noopener" target="_blank">フォームの質問の形式を選択する - Google ドキュメント エディタ ヘルプ</a>：質問形式の選択、記述式の用途、必須の設定</li>
       <li><a href="https://support.google.com/docs/answer/3378864?hl=ja" rel="noopener" target="_blank">フォームのルールを設定する方法 - Google ドキュメント エディタ ヘルプ</a>：回答の検証の設定、質問形式による違い、文字数の上限・下限、正規表現、入力例、エラー時の案内</li>
