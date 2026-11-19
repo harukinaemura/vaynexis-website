@@ -80,8 +80,7 @@
       <dl class="table">
         <div><dt>会社</dt><dd>設備工事会社A社（架空）。滋賀県彦根市。空調・給排水の設備工事。事務1名</dd></div>
         <div><dt>対象業務</dt><dd>請求書の作成。月30件前後</dd></div>
-        <div><dt>1件あたりの時間</dt><dd>10分（請求用の合意基準・換算）。着手前に合意し、期間中は動かしません</dd></div>
-        <div><dt>時給</dt><dd>3,500円（給与台帳から。架空）</dd></div>
+        <div><dt>1件あたりの時間</dt><dd>10分（月次レポートの記録用の合意基準・換算）。着手前に合意し、期間中は動かしません</dd></div>
         <div><dt>期間</dt><dd>2026年10月1日〜31日</dd></div>
         <div><dt>記録した人</dt><dd>検査の欄は合同会社Vaynexisの検査担当。最終確認の欄はA社の事務担当</dd></div>
       </dl>
@@ -97,7 +96,7 @@
             <div style="--c:var(--ice)"><b>合格　28件</b><span>5項目の検査を通った下書き。<b>節約時間に数えるのは、この28件だけです</b></span></div>
             <div style="--c:var(--warn)"><b>差し戻し　3件</b><span>検査が誤りを見つけた回。直して送りますが、<b>合格には数えません</b></span></div>
           </div>
-          <figcaption>AIが作った下書きは31件です。<b>そのうち請求の根拠になるのは、検査を通った28件だけ。</b>差し戻した3件は直して送りますが、数には入れません。「AIが何件処理したか」ではなく「人が何件確かめたか」で数えます。</figcaption>
+          <figcaption>AIが作った下書きは31件です。<b>そのうち記録の根拠になるのは、検査を通った28件だけ。</b>差し戻した3件は直して送りますが、数には入れません。「AIが何件処理したか」ではなく「人が何件確かめたか」で数えます。</figcaption>
         </figure>
       </div>
     </div>
@@ -133,7 +132,7 @@
     <p>検査を通った28件は、送付前に事務担当が1件ずつ開き、宛名と合計を見てから送付します。これが「人が最終確認した件数」です。差し戻した3件は事務担当が直し、当社が再検査して送付しました。人が直したので最終確認には入れず、差し戻しに数えます。</p>
 
     <h3 class="h3 sub">作る仕事の検査記録（業務マニュアル「請求書作成の手順」20頁）</h3>
-    <p>同じ月に納めた成果物です。作る係と確かめる係を分け、確かめる係が実際の画面で手順を追いました。換算時間は着手前に合意した40時間です。</p>
+    <p>同じ月に納めた成果物です。作る係と確かめる係を分け、確かめる係が実際の画面で手順を追いました。換算時間は、着手前のお見積もりで合意した40時間です。</p>
     <div class="tbl">
       <table class="stack">
         <thead><tr><th>検査項目</th><th>見つけたこと</th><th>直し方</th></tr></thead>
@@ -154,7 +153,7 @@
       <div><p class="hud">Processing Log</p><h2 class="h2" id="h-a2">処理ログの形式</h2></div>
       <span class="sec__idx">02 / 03</span>
     </div>
-    <p class="sec__sum">処理ログは対象1件につき1行です。業務IDごとに検査と最終確認の結果を書き足し、修正・再実行も同じ対象の履歴に残します。<b>請求対象の件数は、対象・品質・削減成立の合意条件を満たす検査合格の業務IDを重複なく数えます。AIの要約からは数えません。</b></p>
+    <p class="sec__sum">処理ログは対象1件につき1行です。業務IDごとに検査と最終確認の結果を書き足し、修正・再実行も同じ対象の履歴に残します。<b>月次レポートで数える件数は、対象・品質・削減成立の合意条件を満たす検査合格の業務IDを重複なく数えます。AIの要約からは数えません。</b></p>
     <div class="tbl">
       <table class="stack">
         <thead><tr><th>列</th><th>内容</th><th>誰が書くか</th></tr></thead>
@@ -203,8 +202,8 @@
       <div><dt>作成</dt><dd>合同会社Vaynexis。2026年11月2日</dd></div>
     </dl>
 
-    <p class="fine">打合せ前の記録をAIで整理する場合も、人が元資料と照合して共有します。<a href="/ai#meeting-records">共有までの流れ</a>と、<a href="/price#agreed-time">標準時間・合意節約時間の決め方</a>をご覧ください。この架空例の10分を他の業務の平均時間として使うものではありません。</p>
-    <p class="fine">この見本の算定も、合意した対象・品質・削減成立の条件を確認した処理だけを数える想定です。AIを使っただけの処理や、削減がなくなった処理、疑義のある部分を自動的に請求へ入れません。時間基準は毎回測り直さず、<a href="/price#contract-check">契約直前の別紙・1枚の確認書</a>で特定した基準と、実際の処理・品質・例外の記録を分けて扱います。</p>
+    <p class="fine">打合せ前の記録をAIで整理する場合も、人が元資料と照合して共有します。<a href="/ai#meeting-records">共有までの流れ</a>と、<a href="/price#agreed-time">月次レポートでお見せする時間の数え方</a>をご覧ください。この架空例の10分を他の業務の平均時間として使うものではありません。</p>
+    <p class="fine">この見本の記録も、合意した対象・品質・削減成立の条件を確認した処理だけを数える想定です。AIを使っただけの処理や、削減がなくなった処理、疑義のある部分を自動的に節約時間へ入れません。時間基準は毎回測り直さず、<a href="/price#contract-check">契約直前の別紙・1枚の確認書</a>で特定した基準と、実際の処理・品質・例外の記録を分けて扱います。</p>
     <h3 class="h3 sub">載せる数</h3>
     <p class="fine">この表の数値はすべて架空です。「実測項目の例」は実際の運用でログから数える項目、「換算例」は合意基準で計算する項目を示し、当社やお客様の実測結果ではありません。</p>
     <div class="tbl">
@@ -218,55 +217,47 @@
           <tr><td data-label="項目">人が最終確認した件数</td><td class="nw mono" data-label="値">28件</td><td data-label="記録区分（数値は架空）">実測項目の例</td><td data-label="出どころ">処理ログの確認者・確認日時の欄</td></tr>
           <tr><td class="nw" data-label="項目">節約時間</td><td class="mono" data-label="値">280分（4.7時間）</td><td class="nw" data-label="記録区分（数値は架空）">換算例</td><td data-label="出どころ">合意した10分 × 合格28件。時間は分を60で割り、小数第2位を四捨五入</td></tr>
           <tr><td data-label="項目">受け入れられた成果物</td><td class="nw mono" data-label="値">1本</td><td data-label="記録区分（数値は架空）">実測項目の例</td><td data-label="出どころ">業務マニュアル「請求書作成の手順」20頁。10月28日受け入れ</td></tr>
-          <tr><td data-label="項目">成果物の換算時間</td><td class="nw mono" data-label="値">40時間</td><td class="nw" data-label="記録区分（数値は架空）">換算例</td><td data-label="出どころ">着手前に合意した値</td></tr>
+          <tr><td data-label="項目">成果物の換算時間</td><td class="nw mono" data-label="値">40時間</td><td class="nw" data-label="記録区分（数値は架空）">換算例</td><td data-label="出どころ">着手前のお見積もりで合意した値</td></tr>
         </tbody>
       </table>
     </div>
 
-    <h3 class="h3 sub" id="time-money">時間と金額の見取り図（請求書の作成・10月分・架空）</h3>
-    <p>この業務で、誰の時間がどれだけかかったかと、お金の流れを並べます。請求に使う節約時間は、上の表のとおり<b>合意した10分 × 合格28件＝280分</b>です。合意した10分は、人手で行う場合の11分（<a href="/sample-report#s4">棚卸しレポートの見本 第4節</a>）から、AIを使った後も貴社に残る準備と最終確認の分（1件あたり約1分）を差し引いて、着手前に決めた値です。当社の検査の確認の時間は差し引いていません。人がかけた時間は改善の参考として別に記録するもので、請求の数え方には入れません。</p>
+    <h3 class="h3 sub" id="time-money">時間の見取り図（請求書の作成・10月分・架空）</h3>
+    <p>この業務で、誰の時間がどれだけかかったかを並べます。月次レポートで数える節約時間は、上の表のとおり<b>合意した10分 × 合格28件＝280分</b>です。合意した10分は、人手で行う場合の11分（<a href="/sample-report#s4">棚卸しレポートの見本 第4節</a>）から、AIを使った後も貴社に残る準備と最終確認の分（1件あたり約1分）を差し引いて、着手前に決めた値です。当社の検査の確認の時間は差し引いていません。人がかけた時間は改善の参考として別に記録するもので、節約時間の数え方には入れません。</p>
     <figure class="hbar" aria-labelledby="fig-time-cap">
       <figcaption><p class="hbar__cap" id="fig-time-cap">時間（分・架空）</p></figcaption>
       <div class="hbar__group">
         <div class="hbar__row"><span class="hbar__label">人手だけで作った場合（人手の11分 × 31件・換算）</span><span class="hbar__bar"><span class="hbar__track" aria-hidden="true"><span class="hbar__seg" style="--w:97.43;--c:var(--hb-4)"></span></span><span class="hbar__val">341分</span></span></div>
         <div class="hbar__row"><span class="hbar__label">AIを使ったこの月に、人がかけた時間（参考記録）</span><span class="hbar__bar"><span class="hbar__track" aria-hidden="true"><span class="hbar__seg" style="--w:11.43;--c:var(--hb-2)"></span><span class="hbar__seg" style="--w:8.57;--c:var(--hb-1)"></span></span><span class="hbar__val">70分</span></span></div>
-        <div class="hbar__row"><span class="hbar__label">請求に使う節約時間（合意した10分 × 合格28件）</span><span class="hbar__bar"><span class="hbar__track" aria-hidden="true"><span class="hbar__seg" style="--w:80.00;--c:var(--hb-3)"></span></span><span class="hbar__val">280分</span></span></div>
+        <div class="hbar__row"><span class="hbar__label">月次レポートで数える節約時間（合意した10分 × 合格28件）</span><span class="hbar__bar"><span class="hbar__track" aria-hidden="true"><span class="hbar__seg" style="--w:80.00;--c:var(--hb-3)"></span></span><span class="hbar__val">280分</span></span></div>
       </div>
-      <ul class="hbar__legend"><li style="--c:var(--hb-4)">人手だけの場合（換算）</li><li style="--c:var(--hb-2)">貴社の時間（参考記録）</li><li style="--c:var(--hb-1)">当社の検査の確認（報酬に含む当社の作業）</li><li style="--c:var(--hb-3)">請求に使う節約時間</li></ul>
+      <ul class="hbar__legend"><li style="--c:var(--hb-4)">人手だけの場合（換算）</li><li style="--c:var(--hb-2)">貴社の時間（参考記録）</li><li style="--c:var(--hb-1)">当社の検査の確認（当社の作業）</li><li style="--c:var(--hb-3)">月次レポートで数える節約時間</li></ul>
     </figure>
     <div class="tbl"><table class="stack stack4">
       <thead><tr><th>人がかけた時間（参考記録）</th><th>分</th><th>誰の時間</th><th>中身</th></tr></thead>
       <tbody>
           <tr><td data-label="人がかけた時間（参考記録）">準備</td><td class="mono" data-label="分">10分</td><td data-label="誰の時間">貴社（事務担当）</td><td data-label="中身">工事台帳と見積書をそろえ、手順書どおりにAIへ渡す</td></tr>
-          <tr><td data-label="人がかけた時間（参考記録）">検査の確認</td><td class="mono" data-label="分">30分</td><td data-label="誰の時間">当社（検査担当）</td><td data-label="中身">5項目の検査の結果を確かめ、差し戻しを決め、直した3件を再検査する。報酬に含む当社の作業です</td></tr>
+          <tr><td data-label="人がかけた時間（参考記録）">検査の確認</td><td class="mono" data-label="分">30分</td><td data-label="誰の時間">当社（検査担当）</td><td data-label="中身">5項目の検査の結果を確かめ、差し戻しを決め、直した3件を再検査する。当社の作業です</td></tr>
           <tr><td data-label="人がかけた時間（参考記録）">最終確認</td><td class="mono" data-label="分">15分</td><td data-label="誰の時間">貴社（事務担当）</td><td data-label="中身">合格28件を送付前に1件ずつ開き、宛名と合計を見る</td></tr>
           <tr><td data-label="人がかけた時間（参考記録）">差し戻しの直し</td><td class="mono" data-label="分">15分</td><td data-label="誰の時間">貴社（事務担当）</td><td data-label="中身">差し戻した3件を、工事台帳を見て直す</td></tr>
       </tbody>
     </table></div>
-    <p class="fine">請求は、合意して固定した基準（10分）と検査合格の件数で数え、実測の削減時間では確定しません。上の参考記録を差し引いて節約時間を数え直すこともしません。当社の検査の確認30分は当社の作業で、報酬に含まれます。貴社に残る時間は、準備・最終確認・差し戻しの直しの40分です。</p>
-    <figure class="hbar" aria-labelledby="fig-money-cap">
-      <figcaption><p class="hbar__cap" id="fig-money-cap">お金の流れ（10月・この1業務だけ・税別・架空）</p><p class="hbar__sub">契約の最初の3か月で、最低額がかからない月の例です。</p></figcaption>
-      <div class="hbar__group"><p class="hbar__head"><span>請求書の作成（合格28件）</span><span class="is-plus">差し引き 約7,200円</span></p>
-        <div class="hbar__row"><span class="hbar__label">節約時間を金額に換えた額（4.7時間 × 3,500円）</span><span class="hbar__bar"><span class="hbar__track" aria-hidden="true"><span class="hbar__seg" style="--w:94.00;--c:var(--hb-1)"></span></span><span class="hbar__val">16,450円</span></span></div>
-        <div class="hbar__row"><span class="hbar__label">貴社が払う額（当社の報酬＋AI利用料）</span><span class="hbar__bar"><span class="hbar__track" aria-hidden="true"><span class="hbar__seg" style="--w:47.00;--c:var(--hb-2)"></span><span class="hbar__seg" style="--w:5.71;--c:var(--hb-3)"></span></span><span class="hbar__val">9,225円</span></span></div>
-      </div>
-      <ul class="hbar__legend"><li style="--c:var(--hb-1)">節約時間を金額に換えた額</li><li style="--c:var(--hb-2)">当社の報酬 8,225円（50%）</li><li style="--c:var(--hb-3)">AI利用料（仮・この業務の分）1,000円</li></ul>
-    </figure>
-    <p class="fine">「金額に換えた額」は現金ではありません。現金が動くのは、残業を減らすか、空いた時間を別の仕事に回したときです。AI利用料は、AIのプランを月4,000円（仮）とし、この業務の分を1,000円と置いた仮の額です。4か月目からはプランの最低額（ライトは月50,000円）がかかるため、1業務だけでは差し引きはマイナスになります。5業務まで広げた見込み（月12〜15時間）でも最低額に届かないことは、<a href="/sample-report#s7">棚卸しレポートの見本 第7節</a>に書いています。</p>
+    <p class="fine">月次レポートの節約時間は、合意して固定した基準（10分）と検査合格の件数で数え、実測の削減時間では確定しません。上の参考記録を差し引いて節約時間を数え直すこともしません。当社の検査の確認30分は当社の作業です。貴社に残る時間は、準備・最終確認・差し戻しの直しの40分です。</p>
+    <p class="fine">減った時間で現金が動くのは、残業を減らすか、空いた時間を別の仕事に回したときです。5業務まで広げた見込み（月12〜15時間）と、減った時間を何に変えるかは、<a href="/sample-report#s7">棚卸しレポートの見本 第7節</a>に書いています。</p>
 
     <div class="two" style="margin-top:28px">
       <div>
-        <h3 class="h3">請求根拠と改善用の参考記録</h3>
-        <p>AIが月ごとに推定し直した削減時間や人件費の削減額で、請求額を確定しません。この例の「10分」は請求用に合意して固定した基準で、毎月動くのは検査合格の実測件数です。従来作業・AI利用後の準備や確認・修正の時間は、導入時の基準合意や改善の参考として別に記録します。数件の測定を業界平均とは扱いません。</p>
+        <h3 class="h3">記録の根拠と改善用の参考記録</h3>
+        <p>節約時間の記録は、AIが月ごとに推定し直した削減時間や人件費の削減額では確定しません。この例の「10分」は月次レポートの記録用に合意して固定した基準で、毎月動くのは検査合格の実測件数です。従来作業・AI利用後の準備や確認・修正の時間は、導入時の基準合意や改善の参考として別に記録します。数件の測定を業界平均とは扱いません。</p>
         <h3 class="h3">来月の着手予定</h3>
         <p>見積書の作成。11月の第1週に1件あたりの時間の見積もりを内訳つきでお出しし、合意してから着手します。検査項目は請求書の5つを土台に、単価表との突合を加えます。</p>
       </div>
       <div>
-        <h3 class="h3">請求書作成分の算定基本額（税別）</h3>
-        <div class="formula" role="img" aria-label="4.7時間 かける 3,500円 かける 50パーセント イコール 8,225円">
-          <span>4.7時間</span><span class="op">×</span><span>3,500円</span><span class="op">×</span><span>50%</span><span class="op">＝</span><span>8,225円</span>
+        <h3 class="h3">月次レポートの節約時間と月額</h3>
+        <div class="formula" role="img" aria-label="合意した10分 かける 合格28件 イコール 280分">
+          <span>10分</span><span class="op">×</span><span>28件</span><span class="op">＝</span><span>280分</span>
         </div>
-        <p class="fine">8,225円は、請求書作成分だけの算定基本額（税別・最低額・上限適用前）です。受け入れられた成果物の分は「換算時間 × 時給 × 50%」で計算して合算します。契約3か月目までは最低額なし、4か月目からはプランの最低額を適用し、いずれも合計に上限がかかります。上限が最低額を下回る場合は上限が優先です。実際の請求額は消費税も反映して決まります。<a href="/price#floor">最低額・上限と税の扱い</a>をご確認ください。</p>
+        <p class="fine">合意した10分 × 合格28件で数え、280分（4.7時間）です。月額はコースの定額で、この記録で変わりません。コースの中で作るもの（この月の業務マニュアルなど）は、1件ごとに着手の前にお見積もりをお出しし、コースの料金に含めるか、別にご請求するかを、そのつどご確認いただいてから着手します。コースの範囲と月額は、<a href="/price#list">3つのコース</a>をご覧ください。</p>
       </div>
     </div>
   </div>
