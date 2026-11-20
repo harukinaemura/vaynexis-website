@@ -4,8 +4,88 @@
   <link href="https://vaynexis.jp/column/feed.xml" rel="self"/>
   <link href="https://vaynexis.jp/column"/>
   <id>https://vaynexis.jp/column</id>
-  <updated>2026-11-19T00:00:00+09:00</updated>
+  <updated>2026-11-20T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
+  <entry>
+    <title>Wordでコメントと変更履歴を印刷しない方法｜履歴を残したまま紙に出さない設定</title>
+    <link href="https://vaynexis.jp/column/word-print-without-track-changes-markup"/>
+    <id>https://vaynexis.jp/column/word-print-without-track-changes-markup</id>
+    <published>2026-11-10T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>Wordでコメントや変更履歴を印刷しない方法は2つあります。印刷設定で［変更履歴とコメントの印刷］をオフにする方法と、表示を［変更履歴/コメントなし］にして印刷する方法です。文書に残る扱い、消したいときの［承諾］［元に戻す］、印刷前の確認を Microsoft サポートで確かめます。</summary>
+  </entry>
+  <entry>
+    <title>Windows 11でPDFのデフォルトアプリ（既定のビューアー）を変更する手順</title>
+    <link href="https://vaynexis.jp/column/windows-11-default-app-for-pdf"/>
+    <id>https://vaynexis.jp/column/windows-11-default-app-for-pdf</id>
+    <published>2026-11-10T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>Windows 11でPDFを開くデフォルトのアプリ（ビューアー）を変更する手順です。［設定］の［既定のアプリ］で.pdfを選ぶ方法、アプリ側から確かめる方法、ブラウザーの既定を変えるときのボタン、会社管理の端末で変えられないときの伝え方を Microsoft の資料で確かめます。</summary>
+  </entry>
+  <entry>
+    <title>毒物劇物の譲受書とは？記載事項・押印または署名・保存5年を条文で確かめる</title>
+    <link href="https://vaynexis.jp/column/poisonous-deleterious-substances-transfer-records"/>
+    <id>https://vaynexis.jp/column/poisonous-deleterious-substances-transfer-records</id>
+    <published>2026-11-09T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>毒物劇物の譲受書とは何か、記載する事項（名称・数量・年月日・譲受人の氏名・職業・住所）、押印または署名（令和7年10月29日施行）、電子で受ける条件、販売・授与の日から5年の保存を、法令と香川県の参考様式で確かめます。</summary>
+  </entry>
+  <entry>
+    <title>オンライン登記申請の受付番号はどこで見る？処理状況と審査状況の確認</title>
+    <link href="https://vaynexis.jp/column/online-registration-status-check"/>
+    <id>https://vaynexis.jp/column/online-registration-status-check</id>
+    <published>2026-11-06T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>オンラインで登記を申請したあとの受付番号の確認方法です。かんたん登記・供託申請の［受付情報］アイコン、申請番号・処理状況確認番号との違い、受付時間外の扱い、処理状況の表示が消える92日の目安、到達・受付・審査・補正の見分け方を法務省の案内で確かめます。</summary>
+  </entry>
+  <entry>
+    <title>寄附金受領証明書はいつ届く？認定NPOの発行・記載事項と確定申告で使う場面</title>
+    <link href="https://vaynexis.jp/column/npo-donation-receipt-certificate"/>
+    <id>https://vaynexis.jp/column/npo-donation-receipt-certificate</id>
+    <published>2026-11-05T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>認定NPO法人の寄附金受領証明書がいつ届くかについて、確認した内閣府・国税庁の資料には発行や送付の期限は書かれていません。確定申告で必要になる場面、領収書の記載事項、発行する法人が入金・申告・認定通知を照合する流れを整理します。</summary>
+  </entry>
+  <entry>
+    <title>Googleドライブの共有フォルダの一部だけアクセス権を絞る設定｜［アクセスを制限］</title>
+    <link href="https://vaynexis.jp/column/google-drive-limit-subfolder-access"/>
+    <id>https://vaynexis.jp/column/google-drive-limit-subfolder-access</id>
+    <published>2026-11-05T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>Googleドライブの共有フォルダのうち一部の資料だけアクセス権を絞る方法です。サブフォルダの［アクセスを制限します］の設定、制限を管理できる人、権限のない相手への見え方、［アクセス権を持つユーザー］と［全般的なアクセス］で権限を確かめる流れをGoogleのヘルプで確認します。</summary>
+  </entry>
+  <entry>
+    <title>Googleドライブでダウンロードを禁止・不可にする設定｜閲覧者のコピー・印刷も制限</title>
+    <link href="https://vaynexis.jp/column/google-drive-restrict-download-copy"/>
+    <id>https://vaynexis.jp/column/google-drive-restrict-download-copy</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>Googleドライブで閲覧者のダウンロード・コピー・印刷を禁止する設定の手順です。共有メニューの設定アイコンからチェックボックスをオフにする方法、ヘルプによって項目名とフォルダの書き方が違う点、制限できないファイルと限界を、Googleのヘルプで確かめます。</summary>
+  </entry>
+  <entry>
+    <title>Pixelのアプリ利用状況の確認方法｜利用時間と通信量はどこで見る？（社用スマホ）</title>
+    <link href="https://vaynexis.jp/column/pixel-app-data-usage-check"/>
+    <id>https://vaynexis.jp/column/pixel-app-data-usage-check</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>Google Pixelでアプリの利用状況を見る方法です。アプリの利用時間は［Digital Wellbeing］、モバイルデータの通信量は［アプリのデータ使用量］で確認します。社用スマホで通信量が増えたとき、期間と単位をそろえて記録し、請求側の量と照合する流れも整理します。</summary>
+  </entry>
+  <entry>
+    <title>Excelの一時ビュー（シートビュー）とは？共有表で他の人の表示を変えずに絞り込む手順</title>
+    <link href="https://vaynexis.jp/column/excel-sheet-view-filter-without-affecting-others"/>
+    <id>https://vaynexis.jp/column/excel-sheet-view-filter-without-affecting-others</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>Excelの［一時ビュー］は、［表示］→［シートビュー］→［新規］で作ったシートビューに自動で付く名前です。共有表で他の人の並べ替えやフィルターの影響を受けずに絞り込む作り方、名前の保存、元の表示への戻り方、使える保存場所の条件を Microsoft サポートで確かめます。</summary>
+  </entry>
+  <entry>
+    <title>ミルシートとは？チャージ番号の見方と、納入した鋼材との対応づけ</title>
+    <link href="https://vaynexis.jp/column/mill-sheet-charge-number-matching"/>
+    <id>https://vaynexis.jp/column/mill-sheet-charge-number-matching</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>ミルシート（鋼材検査証明書）とは何か、チャージ番号という欄名と鉄鋼EDIセンターの標準の項目名（溶解番号など）の関係、現品の表示・納入記録・証明書をどう対応づけて原本まで戻れるようにするかを、標準の資料で確かめます。</summary>
+  </entry>
   <entry>
     <title>自動車検査証記録事項をなくしたらPDFをどこで取得する？</title>
     <link href="https://vaynexis.jp/column/vehicle-inspection-record-pdf-reissue"/>
@@ -325,85 +405,5 @@
     <published>2026-11-04T00:00:00+09:00</published>
     <updated>2026-11-19T00:00:00+09:00</updated>
     <summary>退職・転職で国民健康保険に入るときの健康保険資格喪失証明書はどこで発行するのか。会社（事業主）に市区町村の様式で証明してもらう方法と、協会けんぽの加入者が年金事務所に確認請求書を出す方法、会社が書く欄の記入例、喪失日は退職の翌日、国保の届出の14日、家族分・代理の扱いを公式の様式で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>Excelのプライバシーレベルとは？Power Queryの設定場所と無視するときの注意</title>
-    <link href="https://vaynexis.jp/column/excel-power-query-privacy-levels"/>
-    <id>https://vaynexis.jp/column/excel-power-query-privacy-levels</id>
-    <published>2026-11-04T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>Excel の Power Query のプライバシーレベルは、データソースを「なし・プライベート・組織・パブリック」に分ける設定です。4つの意味、［データ ソース設定］で変える手順、無視する設定の注意、警告と Formula.Firewall のエラーを確かめます。</summary>
-  </entry>
-  <entry>
-    <title>退職後の源泉徴収票はいつ・どこでもらう？給与分と退職金分の交付期限と提出先</title>
-    <link href="https://vaynexis.jp/column/retirement-income-withholding-slip-submission"/>
-    <id>https://vaynexis.jp/column/retirement-income-withholding-slip-submission</id>
-    <published>2026-11-04T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>退職後の源泉徴収票は、勤めていた会社が給与分を退職の日以後1か月以内、退職金分を退職後1か月以内に渡す決まりです。もらっていないときの「源泉徴収票不交付の届出」、令和8年分から全員に広がった退職所得の源泉徴収票の税務署への提出、マイナンバーの記載、死亡退職の例外を国税庁の案内で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>Googleフォームの共同編集のやり方｜編集者の追加・リンクでの共有・権限と回答シート</title>
-    <link href="https://vaynexis.jp/column/google-forms-add-editor-handover"/>
-    <id>https://vaynexis.jp/column/google-forms-add-editor-handover</id>
-    <published>2026-11-04T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>Googleフォームの共同編集は、共有アイコンからユーザー名を入れて「編集者」を選び［送信］します。リンクを知っている人に編集を任せる［一般的なアクセス］、アクセスを外す日を決める有効期限、回答用スプレッドシートの権限が同期されない点、オーナー権限の譲渡、回答者用のリンクとの違いを、Google のヘルプで確かめます。</summary>
-  </entry>
-  <entry>
-    <title>Googleフォームの回答期限の設定と延長｜終了日時・回答数の上限で受付を止める</title>
-    <link href="https://vaynexis.jp/column/google-forms-closing-date-time"/>
-    <id>https://vaynexis.jp/column/google-forms-closing-date-time</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>Googleフォームの回答期限は、公開済みのフォームの公開アイコンから［終了日または回答数の上限を設定］を選び、日時か回答数で決めます。期限を延長・削除する［回答の受付］の［管理］、締切後に表示するメッセージ、今すぐ止める操作と公開の停止の違い、回答者のアクセスの有効期限との違いを、Google のヘルプで確かめます。</summary>
-  </entry>
-  <entry>
-    <title>Wordの貼り付けオプションの違い｜元の書式を保持・書式を結合・テキストのみ保持の使い分け</title>
-    <link href="https://vaynexis.jp/column/word-paste-formatting-options"/>
-    <id>https://vaynexis.jp/column/word-paste-formatting-options</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>Wordの貼り付けオプションの［元の書式を保持］はコピー元の書式を残し、［書式を結合］は太字などの強調だけを残して貼り付け先に合わせ、［テキストのみ保持］は画像や表などを取り除いて文字だけにします。3つの違い、既定の貼り付け方の変え方、ボタンが出ないときを Microsoft サポートで確かめます。</summary>
-  </entry>
-  <entry>
-    <title>協会けんぽの資格確認書を紛失したら｜再交付の申請書・提出先・届くまでの日数</title>
-    <link href="https://vaynexis.jp/column/kyokai-kenpo-certificate-reissue-lost"/>
-    <id>https://vaynexis.jp/column/kyokai-kenpo-certificate-reissue-lost</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>協会けんぽの資格確認書を紛失したときは、「健康保険資格確認書交付申請書」を事業主を通して加入中の協会けんぽ支部へ出します。提出期限は「すみやかに」、会社に勤める人は不備が無ければ1週間程度で勤務先に届きます。申請できる場面、き損との違い、マイナンバーを書く場合の添付、代理人の書類、見つかったときの返却を確かめます。</summary>
-  </entry>
-  <entry>
-    <title>身上異動届の書き方｜書く項目と記入例・届け出の決まりと会社が続けてする手続</title>
-    <link href="https://vaynexis.jp/column/personal-change-notice-fields"/>
-    <id>https://vaynexis.jp/column/personal-change-notice-fields</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>身上異動届（身上変更届）は、住所・氏名・家族・連絡先などが変わったときに社員が会社へ出す社内の届出です。厚生労働省のモデル就業規則にある「記載事項に変更を生じたときは速やかに書面で届け出る」という決まりの例、書く項目と記入例、変更日と適用日の分け方、届出を受けた会社が年金機構へ住所変更届を出す場合を確かめます。</summary>
-  </entry>
-  <entry>
-    <title>通勤手当関係通勤経路確認書の書き方｜経路図・承認欄・届出理由の記入例</title>
-    <link href="https://vaynexis.jp/column/commute-route-confirmation-form"/>
-    <id>https://vaynexis.jp/column/commute-route-confirmation-form</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>通勤手当関係の通勤経路確認書（通勤届）の書き方を記入例で確かめます。人事院の通勤届の欄（届出の理由と理由が生じた日・順路ごとの通勤方法・区間・距離・所要時間・乗車券等の額・往復の違い）を手がかりに、経路図と承認欄の付け方、提出日と適用開始日の分け方、通勤距離が非課税限度額に関わる点を整理します。</summary>
-  </entry>
-  <entry>
-    <title>材料確認とは（土木工事）｜材料確認書の出し方と品質証明資料・JISマーク品の扱い</title>
-    <link href="https://vaynexis.jp/column/material-confirmation-attachments"/>
-    <id>https://vaynexis.jp/column/material-confirmation-attachments</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>土木工事の「材料確認」は、受注者が材料確認書を監督職員に出し、一部の材料かサンプルと品質証明資料等をもとに、要求された品質・規格に合っているかを確かめる手続です。材料確認書（様式－10）の書き方、規格・型式ごとの提出、JISマーク表示品の省略、使用前の見本・品質証明資料を、近畿地方整備局のマニュアルで確かめます。</summary>
-  </entry>
-  <entry>
-    <title>会社の転居届（郵便）の出し方｜「転居届提出者氏名」とは・本人確認・転送期間1年</title>
-    <link href="https://vaynexis.jp/column/office-move-postal-forwarding"/>
-    <id>https://vaynexis.jp/column/office-move-postal-forwarding</id>
-    <published>2026-11-03T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>会社・団体の郵便の転居届は、e転居・郵送・窓口のどれでも出せます。「転居届提出者氏名」欄には会社名ではなく実際に提出する人の氏名と住所を書き、その人の本人確認資料を用意します。登録までの3～7営業日、届出日から1年間の転送期間、受付の確かめ方を、日本郵便の案内で確かめます。</summary>
   </entry>
 </feed>
