@@ -31,12 +31,36 @@
     <summary>毒物劇物の譲受書とは何か、記載する事項（名称・数量・年月日・譲受人の氏名・職業・住所）、押印または署名（令和7年10月29日施行）、電子で受ける条件、販売・授与の日から5年の保存を、法令と香川県の参考様式で確かめます。</summary>
   </entry>
   <entry>
+    <title>雇用保険適用事業所情報提供請求書の書き方｜加入者一覧を大阪労働局の様式で請求</title>
+    <link href="https://vaynexis.jp/column/osaka-employment-insurance-current-roster-request"/>
+    <id>https://vaynexis.jp/column/osaka-employment-insurance-current-roster-request</id>
+    <published>2026-11-09T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>雇用保険適用事業所情報提供請求書の書き方です。大阪労働局の様式で、請求者と事業所の欄、依頼する情報（適用事業所台帳ヘッダー１〜３）、照会方法と出力方法、閲覧か写しの交付、委任欄、提出する人ごとの身分確認書類と郵送の同封物を確かめます。</summary>
+  </entry>
+  <entry>
     <title>オンライン登記申請の受付番号はどこで見る？処理状況と審査状況の確認</title>
     <link href="https://vaynexis.jp/column/online-registration-status-check"/>
     <id>https://vaynexis.jp/column/online-registration-status-check</id>
     <published>2026-11-06T00:00:00+09:00</published>
     <updated>2026-11-20T00:00:00+09:00</updated>
     <summary>オンラインで登記を申請したあとの受付番号の確認方法です。かんたん登記・供託申請の［受付情報］アイコン、申請番号・処理状況確認番号との違い、受付時間外の扱い、処理状況の表示が消える92日の目安、到達・受付・審査・補正の見分け方を法務省の案内で確かめます。</summary>
+  </entry>
+  <entry>
+    <title>医療機器販売業の管理帳簿と保管｜記載事項・6年保存・営業所の外の保管場所</title>
+    <link href="https://vaynexis.jp/column/medical-device-sales-office-ledger"/>
+    <id>https://vaynexis.jp/column/medical-device-sales-office-ledger</id>
+    <published>2026-11-05T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>医療機器の販売業の管理帳簿に書く事項（管理者の研修・品質確保・苦情や回収の処理・教育訓練など）と、最終の記載の日から6年間の保存、大型の機器などで営業所の外に保管場所を定めるときの扱いを、施行規則と厚生労働省の通知で確かめます。中古品の通知と指示の記録も整理します。</summary>
+  </entry>
+  <entry>
+    <title>不採用通知の書き方｜書く欄と、応募書類の返却・連絡の期限（ハローワークの留意事項）</title>
+    <link href="https://vaynexis.jp/column/rejection-notice-letter-fields"/>
+    <id>https://vaynexis.jp/column/rejection-notice-letter-fields</id>
+    <published>2026-11-05T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>不採用通知の書き方です。選考対象・宛名・確定した結果・返却する書類を欄に分ける文例に加え、ハローワークの留意事項にある選考結果の連絡期限、不採用の理由の伝え方、応募書類を選考後速やかに返却することと返却できない場合の説明を確かめます。</summary>
   </entry>
   <entry>
     <title>寄附金受領証明書はいつ届く？認定NPOの発行・記載事項と確定申告で使う場面</title>
@@ -55,12 +79,52 @@
     <summary>Googleドライブの共有フォルダのうち一部の資料だけアクセス権を絞る方法です。サブフォルダの［アクセスを制限します］の設定、制限を管理できる人、権限のない相手への見え方、［アクセス権を持つユーザー］と［全般的なアクセス］で権限を確かめる流れをGoogleのヘルプで確認します。</summary>
   </entry>
   <entry>
+    <title>Googleドライブの共有に有効期限を付ける設定｜1年以内・使えるアカウントと期限後の確認</title>
+    <link href="https://vaynexis.jp/column/drive-share-expiration-date"/>
+    <id>https://vaynexis.jp/column/drive-share-expiration-date</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>Googleドライブで共有の有効期限を設定する手順です。共有相手の横の下矢印から［有効期限を追加］を選び、1年以内の日付を保存します。仕事用・学校用アカウントで使えること、フォルダでは閲覧者のロールだけに設定できること、期限後に残る権限の確かめ方をGoogleのヘルプで確認します。</summary>
+  </entry>
+  <entry>
+    <title>Googleフォームで回答によって条件分岐させる方法｜セクションの移動先の設定と注意</title>
+    <link href="https://vaynexis.jp/column/google-forms-section-branching"/>
+    <id>https://vaynexis.jp/column/google-forms-section-branching</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>Googleフォームで回答によって質問を分ける（条件分岐させる）方法です。セクションを足し、ラジオボタンかプルダウンの質問で［回答に応じてセクションに移動］を選んで移動先を決める手順、チェックボックスでは使えない点、セクションの上限、送信までの確かめ方をGoogleのヘルプで確認します。</summary>
+  </entry>
+  <entry>
+    <title>Gmailの送信予約（予約送信）のやり方と変更・キャンセル｜［予定］で確かめる手順</title>
+    <link href="https://vaynexis.jp/column/gmail-scheduled-send-change-cancel"/>
+    <id>https://vaynexis.jp/column/gmail-scheduled-send-change-cancel</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>Gmailでメールを送信予約（予約送信）するやり方と、予約したメールの確認・変更・キャンセルの手順です。［送信日時を設定］の場所、予約は最大100件、送信が数分遅れることやタイムゾーンの注意、キャンセルすると下書きになる点をGmailのヘルプで確かめます。</summary>
+  </entry>
+  <entry>
+    <title>紹介状と一緒に渡す予約票とは？病院への紹介予約の流れと渡し方（公的病院の例）</title>
+    <link href="https://vaynexis.jp/column/referral-letter-appointment-slip-handover"/>
+    <id>https://vaynexis.jp/column/referral-letter-appointment-slip-handover</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>紹介状と一緒に患者さんへ渡す予約票とは何か、滋賀県立総合病院の案内で確かめます。紹介元が診察・検査申込書をFAXで送り、病院が予約票を概ね15分以内にFAXで返信し、紹介状と予約票を患者さんに渡す流れ、紹介受付時間、当日の受付先、渡し忘れを防ぐ記録の残し方を整理します。</summary>
+  </entry>
+  <entry>
     <title>Googleドライブでダウンロードを禁止・不可にする設定｜閲覧者のコピー・印刷も制限</title>
     <link href="https://vaynexis.jp/column/google-drive-restrict-download-copy"/>
     <id>https://vaynexis.jp/column/google-drive-restrict-download-copy</id>
     <published>2026-11-04T00:00:00+09:00</published>
     <updated>2026-11-20T00:00:00+09:00</updated>
     <summary>Googleドライブで閲覧者のダウンロード・コピー・印刷を禁止する設定の手順です。共有メニューの設定アイコンからチェックボックスをオフにする方法、ヘルプによって項目名とフォルダの書き方が違う点、制限できないファイルと限界を、Googleのヘルプで確かめます。</summary>
+  </entry>
+  <entry>
+    <title>個人情報の漏えい報告はどこへ・いつまでに？個人情報保護委員会と委任先の確認</title>
+    <link href="https://vaynexis.jp/column/data-breach-report-destination-check"/>
+    <id>https://vaynexis.jp/column/data-breach-report-destination-check</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-20T00:00:00+09:00</updated>
+    <summary>個人情報の漏えい等を個人情報保護委員会へ報告するときの期限（速報は発覚日から3〜5日以内・確報は30日以内・不正な目的のおそれは60日以内）、報告が必要な4つの場合、権限が委任された分野の報告先の探し方を、委員会の公式ページで確かめます。</summary>
   </entry>
   <entry>
     <title>Pixelのアプリ利用状況の確認方法｜利用時間と通信量はどこで見る？（社用スマホ）</title>
@@ -341,69 +405,5 @@
     <published>2026-11-05T00:00:00+09:00</published>
     <updated>2026-11-19T00:00:00+09:00</updated>
     <summary>会社の事務所を移転したときの雇用保険・労働保険の住所変更は、「労働保険名称、所在地等変更届」と「雇用保険事業主事業所各種変更届」を、変更のあった日の翌日から10日以内に出します。一元適用事業・二元適用事業ごとの提出先と順番、控えの受け取り、求人票は自動で変わらない点を、労働局の案内で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>全省庁統一資格の変更届｜住所変更・代表者変更・商号変更で出すものと書き方</title>
-    <link href="https://vaynexis.jp/column/unified-qualification-change-notice"/>
-    <id>https://vaynexis.jp/column/unified-qualification-change-notice</id>
-    <published>2026-11-05T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>全省庁統一資格の住所変更・代表者変更・商号変更は、変更届に資格審査結果通知書の写しと登記事項証明書の写しを添えて出します。変更できる5項目、変更年月日の書き方、代表者変更の別紙3、個人の代表者変更の扱い、郵送とインターネットの違い、受付票と通知書を、調達ポータルの記入要項で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>新しい保険証はいつ届く？入社後に届くまでの受診と健康保険被保険者資格証明書</title>
-    <link href="https://vaynexis.jp/column/health-insurance-qualification-certificate-new-hire"/>
-    <id>https://vaynexis.jp/column/health-insurance-qualification-certificate-new-hire</id>
-    <published>2026-11-05T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>入社後、新しい保険証はいつ届くのか。協会けんぽの「資格情報のお知らせ」は届出からおおよそ2〜3週間で勤め先へ、資格確認書は必要な人だけに発行されます。届くまでに受診するときの方法、年金事務所で交付される健康保険被保険者資格証明書（有効20日）の申請書の書き方と委任状を、公式の案内で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>Chromeを開きっぱなしにするとどうなる？更新が保留になる理由と再起動の手順</title>
-    <link href="https://vaynexis.jp/column/chrome-update-open-browser"/>
-    <id>https://vaynexis.jp/column/chrome-update-open-browser</id>
-    <published>2026-11-04T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>Google Chrome（クローム）を開きっぱなしにすると、更新は次に開き直すまで保留になります。［Google Chrome について］の［再起動］で適用する手順、再起動で戻るタブ、開いたままのタブを抑えるメモリセーバーを Chrome ヘルプで確かめます。</summary>
-  </entry>
-  <entry>
-    <title>社会保険の住所変更（会社の移転・社名変更）｜所在地変更届の提出先・5日以内・添付書類</title>
-    <link href="https://vaynexis.jp/column/social-insurance-office-name-address-change"/>
-    <id>https://vaynexis.jp/column/social-insurance-office-name-address-change</id>
-    <published>2026-11-04T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>会社の移転・社名変更の社会保険の住所変更は、「適用事業所名称/所在地変更（訂正）届」を5日以内に出します。管轄内・管轄外の提出先、90日以内の登記簿謄本のコピー、他県への移転で変わる保険料率と資格確認書を確かめます。</summary>
-  </entry>
-  <entry>
-    <title>Googleフォームの入力制限と文字数制限｜回答の検証で数字・桁数・文字数をそろえる設定</title>
-    <link href="https://vaynexis.jp/column/google-forms-response-validation-digits"/>
-    <id>https://vaynexis.jp/column/google-forms-response-validation-digits</id>
-    <published>2026-11-04T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>Googleフォームで入力を制限するには、質問のその他メニューから［回答の検証］を開き、数値・テキスト・長さ・正規表現のルールを選びます。文字数の上限と下限、10桁の数字などの桁数、メールアドレスの形式、チェックボックスの選択数の制限、エラーの文の出し方を、Google のヘルプで確かめます。</summary>
-  </entry>
-  <entry>
-    <title>電子マニフェストの流れと受渡確認票｜紙のマニフェスト伝票との違い・登録期限</title>
-    <link href="https://vaynexis.jp/column/waste-handover-slip-e-manifest-check"/>
-    <id>https://vaynexis.jp/column/waste-handover-slip-e-manifest-check</id>
-    <published>2026-11-04T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>電子マニフェストは、排出事業者・収集運搬業者・処分業者の3者が情報処理センター（JWNET）を介してマニフェスト情報をやり取りする仕組みです。登録と報告の流れと3日以内の期限、紙のマニフェスト伝票（A・B2・D・E票）との違い、加入と利用料金、受渡確認票の記載事項と登録内容の照合を、JWNET の案内で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>雇用保険の資格取得届が遅れたとき｜遅延理由書と添付書類・提出先・期限</title>
-    <link href="https://vaynexis.jp/column/employment-insurance-late-acquisition-notice"/>
-    <id>https://vaynexis.jp/column/employment-insurance-late-acquisition-notice</id>
-    <published>2026-11-04T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>雇用保険被保険者資格取得届の期限は被保険者となった月の翌月10日まで、提出先は管轄のハローワークです。期限を過ぎたときに添付する賃金台帳・労働者名簿・出勤簿、6か月以上遅れたときの遅延理由書の欄と書き方、郵送で出すときの注意、遡って加入できる期間、喪失届が遅れたときの影響を、労働局とハローワークの案内で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>健康保険資格喪失証明書はどこで発行？会社と年金事務所の2つの取り方と記入例</title>
-    <link href="https://vaynexis.jp/column/health-insurance-loss-certificate-request"/>
-    <id>https://vaynexis.jp/column/health-insurance-loss-certificate-request</id>
-    <published>2026-11-04T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>退職・転職で国民健康保険に入るときの健康保険資格喪失証明書はどこで発行するのか。会社（事業主）に市区町村の様式で証明してもらう方法と、協会けんぽの加入者が年金事務所に確認請求書を出す方法、会社が書く欄の記入例、喪失日は退職の翌日、国保の届出の14日、家族分・代理の扱いを公式の様式で確かめます。</summary>
   </entry>
 </feed>
