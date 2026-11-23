@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Excelのピボット集計をグラフにして月ごとの推移を見る手順｜Vaynexis</title>
-  <meta name="description" content="集計済みの表から月ごとの推移を見たいときに、グラフを作る操作と表示内容の確認を整理します。日付のまとめ方、古い順への並べ替え、軸と凡例の役割、元の表を直した後の更新までを扱い、事務担当者が引き継ぐ際に残す項目も示します。">
+  <title>Excelのピボットグラフで月別推移を表示する方法｜年をまたぐ集計にも対応｜Vaynexis</title>
+  <meta name="description" content="Excelで既存のピボットテーブルから月別推移のグラフを作る手順を解説します。年をまたぐ日付のグループ化、折れ線グラフの表示、元データ更新後の確認を作例で紹介します。">
   <meta name="theme-color" content="#f4f6fa">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Excelのピボット集計をグラフにして月ごとの推移を見る手順｜Vaynexis">
-  <meta property="og:description" content="集計済みの表から月ごとの推移を見たいときに、グラフを作る操作と表示内容の確認を整理します。日付のまとめ方、古い順への並べ替え、軸と凡例の役割、元の表を直した後の更新までを扱い、事務担当者が引き継ぐ際に残す項目も示します。">
+  <meta property="og:title" content="Excelのピボットグラフで月別推移を表示する方法｜年をまたぐ集計にも対応｜Vaynexis">
+  <meta property="og:description" content="Excelで既存のピボットテーブルから月別推移のグラフを作る手順を解説します。年をまたぐ日付のグループ化、折れ線グラフの表示、元データ更新後の確認を作例で紹介します。">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://vaynexis.jp/column/excel-pivotchart-monthly-trend">
   <meta property="og:image" content="https://vaynexis.jp/assets/og-image.png">
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="/assets/renewal-guides.css">
   <link rel="stylesheet" href="/assets/inner-navigation.css">
   <link rel="stylesheet" href="/assets/column.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelのピボット集計をグラフにして月ごとの推移を見る手順","description":"集計済みの表から月ごとの推移を見たいときに、グラフを作る操作と表示内容の確認を整理します。日付のまとめ方、古い順への並べ替え、軸と凡例の役割、元の表を直した後の更新までを扱い、事務担当者が引き継ぐ際に残す項目も示します。","datePublished":"2026-11-04","dateModified":"2026-11-04","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-pivotchart-monthly-trend"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの設定","item":"https://vaynexis.jp/column/topics/excel"},{"@type":"ListItem","position":4,"name":"Excelのピボット集計をグラフにして月ごとの推移を見る手順","item":"https://vaynexis.jp/column/excel-pivotchart-monthly-trend"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Excelのピボットグラフで月別推移を表示する方法｜年をまたぐ集計にも対応","description":"Excelで既存のピボットテーブルから月別推移のグラフを作る手順を解説します。年をまたぐ日付のグループ化、折れ線グラフの表示、元データ更新後の確認を作例で紹介します。","datePublished":"2026-11-04","dateModified":"2026-11-23","inLanguage":"ja","author":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/company"},"publisher":{"@type":"Organization","name":"合同会社Vaynexis","url":"https://vaynexis.jp/"},"image":"https://vaynexis.jp/assets/og-image.png","mainEntityOfPage":"https://vaynexis.jp/column/excel-pivotchart-monthly-trend"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"トップ","item":"https://vaynexis.jp/"},{"@type":"ListItem","position":2,"name":"コラム","item":"https://vaynexis.jp/column"},{"@type":"ListItem","position":3,"name":"Excelの設定","item":"https://vaynexis.jp/column/topics/excel"},{"@type":"ListItem","position":4,"name":"Excelのピボットグラフで月別推移を表示する方法｜年をまたぐ集計にも対応","item":"https://vaynexis.jp/column/excel-pivotchart-monthly-trend"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">本文へ</a>
@@ -65,11 +65,11 @@
 </nav>
 <main id="main">
 <article lang="ja" aria-labelledby="col-title">
-  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/excel">Excelの設定</a></li><li aria-current="page">Excelのピボット集計をグラフにして月ごとの推移を見る手順</li></ol></div></nav>
+  <nav class="crumbs" aria-label="パンくずリスト"><div class="wrap"><ol><li><a href="/">トップ</a></li><li><a href="/column">コラム</a></li><li><a href="/column/topics/excel">Excelの設定</a></li><li aria-current="page">Excelのピボットグラフで月別推移を表示する方法｜年をまたぐ集計にも対応</li></ol></div></nav>
   <header class="sec"><div class="wrap">
-    <h1 class="h1" id="col-title">Excelのピボット集計をグラフにして月ごとの推移を見る手順</h1>
-    <div class="col-key"><p class="col-key__label">要点</p><p>集計済みのピボットテーブルからピボットグラフを作ると、表のレイアウトやデータの変更をグラフにも反映できます。時間の並びと集計対象をそろえ、表の数値と図の対応を確かめてから共有するとよいです。</p></div>
-    <p class="col-meta">公開：2026年11月4日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
+    <h1 class="h1" id="col-title">Excelのピボットグラフで月別推移を表示する方法｜年をまたぐ集計にも対応</h1>
+    <div class="col-key"><p class="col-key__label">要点</p><p>Windows版のExcelでは、ピボットテーブルのセルを選び、<strong>［挿入］→［ピボットグラフ］</strong>で折れ線グラフを作れます。複数年のデータは、日付を<strong>［年］と［月］の両方</strong>でグループ化し、横軸で年と月を確認します。</p></div>
+    <p class="col-meta">公開：2026年11月4日／更新：2026年11月23日／情報の確認日：2026年11月4日（出典はこの記事の最後）</p>
     <p>この記事は、集計済みのピボットテーブルから月ごとの推移をグラフで見たい小さな会社の事務担当者が、作成・並べ替え・更新後の照合を確かめる流れをまとめたものです。</p>
     <p>公式ページ・公式ヘルプなどの一次資料を2026年11月4日に確かめました。機能や制度は変わることがあるので、使う前に各ページで最新の状態を確認してください。法律・税務・労務の判断や、効果を約束するものではありません。</p>
     <p class="notice">例は説明のための架空の例です。確認表や作例は、当社の考えをまとめたもので、公式の機関が示しているものではありません。</p>
@@ -78,7 +78,7 @@
   <nav aria-label="この記事の内容"><div class="wrap">
     <ol>
       <li><a href="#s1">既存の集計表からグラフを挿入する</a></li>
-      <li><a href="#s2">日付の粒度と並びをそろえる</a></li>
+      <li><a href="#s2">横軸を月別にそろえ、年をまたぐ場合は年も表示する</a></li>
       <li><a href="#s3">軸と凡例の役割を決めて推移を表示する</a></li>
       <li><a href="#s4">受付件数の例で表示の目的を整理する</a></li>
       <li><a href="#s5">表示が合わないときは配置と更新を確認する</a></li>
@@ -96,9 +96,11 @@
   </div></section>
 
   <section class="sec" id="s2" aria-labelledby="s2-title"><div class="wrap">
-    <h2 class="h2" id="s2-title">2．日付の粒度と並びをそろえる</h2>
+    <h2 class="h2" id="s2-title">2．横軸を月別にそろえ、年をまたぐ場合は年も表示する</h2>
     <h3 class="h3">日ごとの一覧を月単位にまとめる</h3>
-    <p>ピボットテーブルでは、日付や時刻の項目を月や四半期でグループ化できます。対象の日付を右クリックして［グループ化］を開きます。［基準］で期間を選びます。［OK］で確定します。月ごとの推移を見る目的に合わせて、表示する期間の細かさをそろえます。</p>
+    <p>ピボットテーブルの日付を右クリックし、［グループ化］を開きます。［基準］で単年の月別推移なら［月］、複数年の月別推移なら［年］と［月］を選び、［OK］で確定します。複数年では、グラフの横軸で年と月の両方を読めるか確認します。</p>
+    <p><strong>作例（仮の件数）</strong> 元データに2025年1月100件、2026年1月180件、2026年2月220件があるとします。月だけでまとめると1月が280件になります。年と月でまとめれば、2025年1月の100件と2026年1月の180件を横軸の別々の月として表示できます。</p>
+    <p>操作の詳細は、<a href="https://support.microsoft.com/ja-jp/excel/get-started/group-or-ungroup-data-in-a-pivottable" rel="noopener" target="_blank">Microsoft公式のグループ化手順</a>（2026年11月23日確認）と、<a href="/column/excel-pivot-group-dates-year-month">Excelの日別明細を年と月で集計する手順</a>で確認できます。</p>
     <h3 class="h3">数量の大小より時間の順を確かめる</h3>
     <p>日付の項目は、古い順にも並べ替えられます。並びを直した後は、先頭と末尾の期間を見比べます。年が変わる境目も確認し、月の名前だけでは対象期間を読み違えないかを見直すとよいです。</p>
   </div></section>
