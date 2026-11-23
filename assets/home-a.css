@@ -42,7 +42,8 @@ html.home-a .hero-visual figcaption{position:absolute;bottom:30px;left:25px;righ
 html.home-a .hero-mark{position:absolute;right:36px;top:32px;display:flex;align-items:center;gap:15px;color:#fff9}
 html.home-a .hero-mark>span{font-size:56px;line-height:1;font-weight:100;font-family:Georgia,serif}
 html.home-a .hero-mark i{font-size:8px;font-style:normal;letter-spacing:.14em;line-height:1.6}
-html.home-a .accounting-evidence {
+html.home-a .accounting-evidence,
+html.home-a .work-time-evidence {
   display: grid;
   align-content: center;
   gap: 20px;
@@ -51,7 +52,8 @@ html.home-a .accounting-evidence {
   background: var(--paper);
   color: var(--ink);
 }
-html.home-a .accounting-evidence h3 {
+html.home-a .accounting-evidence h3,
+html.home-a .work-time-evidence h3 {
   margin-top: 9px;
   font-size: clamp(19px, 2.15cqw, 34px);
   line-height: 1.4;
@@ -104,6 +106,7 @@ html.home-a .evidence-caption {
   color: var(--muted);
 }
 html.home-a .accounting-evidence a,
+html.home-a .work-time-evidence a,
 html.home-a .work-evidence-grid a {
   width: fit-content;
   color: var(--teal);
@@ -145,6 +148,65 @@ html.home-a .work-evidence-intro p {
 html.home-a .work-evidence-intro .work-evidence-lead {
   color: var(--ink);
   font-weight: 700;
+}
+html.home-a .work-time-evidence {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  align-items: start;
+  column-gap: clamp(24px, 4cqw, 56px);
+  margin-top: 24px;
+}
+html.home-a .work-time-evidence figcaption > p:not(.label) {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+html.home-a .work-time-evidence figcaption a {
+  display: inline-block;
+  margin-top: 12px;
+}
+html.home-a .work-time-evidence .evidence-bar-label strong {
+  white-space: nowrap;
+}
+html.home-a .time-evidence-bar {
+  display: flex;
+  height: 8px;
+  margin-top: 8px;
+  background: var(--line);
+}
+html.home-a .time-evidence-bar::before {
+  content: "";
+  background: var(--teal);
+}
+/* Four-hour scale: the estimate starts at 120 minutes and the recorded time is 12 minutes. */
+html.home-a .time-evidence-bar.is-estimate::before {
+  width: 50%;
+}
+html.home-a .time-evidence-bar.is-estimate::after {
+  content: "";
+  flex: 1;
+  background: repeating-linear-gradient(135deg, var(--teal) 0 2px, var(--line) 2px 5px);
+}
+html.home-a .time-evidence-bar.is-recorded::before {
+  width: 5%;
+}
+html.home-a .time-evidence-axis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: -6px;
+  color: var(--muted);
+  font-size: 11px;
+}
+html.home-a .time-evidence-axis span:nth-child(2) {
+  text-align: center;
+}
+html.home-a .time-evidence-axis span:last-child {
+  text-align: right;
+}
+html.home-a .time-evidence-note {
+  grid-column: 1 / -1;
+  max-width: none;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
 }
 html.home-a .work-evidence-grid {
   display: grid;
@@ -306,6 +368,7 @@ html.home-a .hero-foot>a span{margin-left:6px}
 html.home-a .section{padding:62px 7%}
 html.home-a .section.work-evidence{padding-top:36px}
 html.home-a .work-evidence-feature{grid-template-columns:1fr}
+html.home-a .work-time-evidence{grid-template-columns:1fr}
 html.home-a .section-heading{grid-template-columns:1fr;gap:20px;margin-bottom:30px}
 html.home-a .label{font-size:8px}
 html.home-a .section h2{font-size:27px;line-height:1.65}
