@@ -4,8 +4,48 @@
   <link href="https://vaynexis.jp/column/feed.xml" rel="self"/>
   <link href="https://vaynexis.jp/column"/>
   <id>https://vaynexis.jp/column</id>
-  <updated>2026-11-20T00:00:00+09:00</updated>
+  <updated>2026-11-25T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
+  <entry>
+    <title>住民票記載事項証明書とは？住民票の写しとの違い・どこで取るか・必要なもの</title>
+    <link href="https://vaynexis.jp/column/resident-certificate-company-form"/>
+    <id>https://vaynexis.jp/column/resident-certificate-company-form</id>
+    <published>2026-11-16T00:00:00+09:00</published>
+    <updated>2026-11-25T00:00:00+09:00</updated>
+    <summary>住民票記載事項証明書とは、住民票に記載された項目のうち一部の内容を証明する書類です。住民票の写しとの違い、住民登録地での請求、窓口で必要なもの、手数料、会社や学校が指定した用紙への証明と書き方を、各市の案内と厚生労働省の資料で確かめます。</summary>
+  </entry>
+  <entry>
+    <title>産業医・衛生管理者の選任報告（選任届）の添付書類と報告事項｜電子申請・14日以内</title>
+    <link href="https://vaynexis.jp/column/health-officer-appointment-report-documents"/>
+    <id>https://vaynexis.jp/column/health-officer-appointment-report-documents</id>
+    <published>2026-11-10T00:00:00+09:00</published>
+    <updated>2026-11-25T00:00:00+09:00</updated>
+    <summary>産業医・衛生管理者の選任報告（選任届）の添付書類と報告事項です。産業医は医師免許の写しと産業医の資格を証する書面、衛生管理者は免許の写し又は資格を証する書面を添えます。選任は14日以内、報告は遅滞なく電子申請で。安全管理者・総括安全衛生管理者と共通の様式も確かめます。</summary>
+  </entry>
+  <entry>
+    <title>雇用保険被保険者転勤届の書き方と添付書類｜期限・受け取る書類・社会保険の手続き</title>
+    <link href="https://vaynexis.jp/column/employment-insurance-transfer-notice"/>
+    <id>https://vaynexis.jp/column/employment-insurance-transfer-notice</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-25T00:00:00+09:00</updated>
+    <summary>雇用保険被保険者転勤届は、同じ事業主の別の事業所へ転勤した日の翌日から10日以内に、転勤後の事業所を管轄するハローワークへ出します。各欄の書き方、持参する資格喪失届、届出のあとに渡される書類、健康保険・厚生年金の資格喪失と一括適用を、厚生労働省と日本年金機構の資料で確かめます。</summary>
+  </entry>
+  <entry>
+    <title>雇用保険の資格喪失確認通知書は誰に渡す？会社用・本人用・離職票の見分け方</title>
+    <link href="https://vaynexis.jp/column/employment-loss-confirmation-recipient"/>
+    <id>https://vaynexis.jp/column/employment-loss-confirmation-recipient</id>
+    <published>2026-11-16T00:00:00+09:00</published>
+    <updated>2026-11-23T00:00:00+09:00</updated>
+    <summary>雇用保険被保険者資格喪失確認通知書の事業主通知用は会社で保管し、被保険者通知用は本人に渡します。離職票の交付有無とマイナポータルへの直接交付に分け、書類の配付先を早見表で確認できます。</summary>
+  </entry>
+  <entry>
+    <title>Excelのピボットグラフで月別推移を表示する方法｜年をまたぐ集計にも対応</title>
+    <link href="https://vaynexis.jp/column/excel-pivotchart-monthly-trend"/>
+    <id>https://vaynexis.jp/column/excel-pivotchart-monthly-trend</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-23T00:00:00+09:00</updated>
+    <summary>Excelで既存のピボットテーブルから月別推移のグラフを作る手順を解説します。年をまたぐ日付のグループ化、折れ線グラフの表示、元データ更新後の確認を作例で紹介します。</summary>
+  </entry>
   <entry>
     <title>Wordでコメントと変更履歴を印刷しない方法｜履歴を残したまま紙に出さない設定</title>
     <link href="https://vaynexis.jp/column/word-print-without-track-changes-markup"/>
@@ -365,45 +405,5 @@
     <published>2026-11-05T00:00:00+09:00</published>
     <updated>2026-11-19T00:00:00+09:00</updated>
     <summary>酒類販売管理者選任（解任）届出書（別紙様式第11の9）の欄ごとの書き方を国税庁の記入例で示し、添付する酒類販売管理研修の受講証の写し、選任・解任で書かない欄、2週間以内の期限と提出先の税務署、e-Tax、選任できる人の条件、3年ごとの再受講を、国税庁の案内と法令で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>簡易書留の出し方｜郵便局の窓口の流れ・料金・補償と特定記録との違い</title>
-    <link href="https://vaynexis.jp/column/registered-mail-slip-receipt-prep"/>
-    <id>https://vaynexis.jp/column/registered-mail-slip-receipt-prep</id>
-    <published>2026-11-05T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>簡易書留は、ポストではなく郵便局の窓口で「書留・特定記録郵便物等差出票」と一緒に出します。基本料金に加算される350円、補償は原則5万円までの実損額、引受けと配達の記録、当日中の再配達と休日の配達、特定記録との違い、受領証の保管を、日本郵便の案内で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>e-Govの申請者情報と連絡先情報の違い｜登録・変更する画面と担当者の入れ方</title>
-    <link href="https://vaynexis.jp/column/e-gov-applicant-contact-info-update"/>
-    <id>https://vaynexis.jp/column/e-gov-applicant-contact-info-update</id>
-    <published>2026-11-05T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>e-Gov電子申請の申請者情報は申請者（個人・法人）についての情報、連絡先情報は問い合わせに応じる人の情報で、企業の担当者が申請する場合は代表者に代わって申請届出事務を行う担当者の連絡先を入れます。2つをまとめた「基本情報」の登録・変更の画面、GビズIDでの初期設定、担当交代のときの照合を確かめます。</summary>
-  </entry>
-  <entry>
-    <title>書留・特定記録郵便物等差出票の書き方と記入例｜簡易書留・特定記録で違う欄</title>
-    <link href="https://vaynexis.jp/column/registered-mail-slip-fields"/>
-    <id>https://vaynexis.jp/column/registered-mail-slip-fields</id>
-    <published>2026-11-05T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>郵便局に備え付けの「書留・特定記録郵便物等差出票」は太枠の中だけを書きます。ご依頼主・お届け先のお名前・摘要の書き方と記入例、特定記録ではお届け先のお名前が要らない点、一般書留・簡易書留・特定記録の加算料金と賠償の違い、受領証の保管を、日本郵便の様式と案内で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>復職願の書き方｜書く項目と記入例・添える診断書と会社が復職を決めるまで</title>
-    <link href="https://vaynexis.jp/column/return-to-work-request-form-fields"/>
-    <id>https://vaynexis.jp/column/return-to-work-request-form-fields</id>
-    <published>2026-11-05T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>復職願は、休職中の社員が職場に戻りたいと会社に伝える書面です。公開されている様式の例にある項目（病名・休職開始日・休職期間・復職希望日）と記入例、厚生労働省の職場復帰支援の手引きにある「職場復帰の意思表示と主治医の診断書の提出」から復職の決定までの5つのステップ、診断書の読み方、受付と保管の注意を確かめます。</summary>
-  </entry>
-  <entry>
-    <title>雇用保険・労働保険の住所変更｜事務所移転の変更届2つの提出先・期限（10日以内）・順番</title>
-    <link href="https://vaynexis.jp/column/labor-insurance-office-relocation"/>
-    <id>https://vaynexis.jp/column/labor-insurance-office-relocation</id>
-    <published>2026-11-05T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>会社の事務所を移転したときの雇用保険・労働保険の住所変更は、「労働保険名称、所在地等変更届」と「雇用保険事業主事業所各種変更届」を、変更のあった日の翌日から10日以内に出します。一元適用事業・二元適用事業ごとの提出先と順番、控えの受け取り、求人票は自動で変わらない点を、労働局の案内で確かめます。</summary>
   </entry>
 </feed>
