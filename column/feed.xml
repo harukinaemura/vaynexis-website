@@ -4,8 +4,32 @@
   <link href="https://vaynexis.jp/column/feed.xml" rel="self"/>
   <link href="https://vaynexis.jp/column"/>
   <id>https://vaynexis.jp/column</id>
-  <updated>2026-11-25T00:00:00+09:00</updated>
+  <updated>2026-11-26T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
+  <entry>
+    <title>育児休業給付金支給決定通知書が届かない・会社から来ないときは？確認方法と振込の目安</title>
+    <link href="https://vaynexis.jp/column/childcare-benefit-decision-notice-missing"/>
+    <id>https://vaynexis.jp/column/childcare-benefit-decision-notice-missing</id>
+    <published>2026-11-16T00:00:00+09:00</published>
+    <updated>2026-11-26T00:00:00+09:00</updated>
+    <summary>育児休業給付金支給決定通知書が届かない・会社から来ないときの確認方法です。会社を経由した申請では通知書は会社を経由して本人へ渡ります。まず会社の担当者に申請と受領を確かめ、申請済みで未着なら管轄のハローワークへ来所して照会します。電話照会・振込日の質問の扱い、振込の目安、e-Govの公文書も確かめます。</summary>
+  </entry>
+  <entry>
+    <title>事件係属証明書とは？発行してもらう裁判所・申請書・手数料150円と受け取り方</title>
+    <link href="https://vaynexis.jp/column/case-pendency-certificate-request-court"/>
+    <id>https://vaynexis.jp/column/case-pendency-certificate-request-court</id>
+    <published>2026-11-16T00:00:00+09:00</published>
+    <updated>2026-11-26T00:00:00+09:00</updated>
+    <summary>事件係属証明書とは、当事者間の事件が裁判所に係属していることの証明です。発行は事件記録のある裁判所に申請し、手数料は1件150円。申請書の欄（事件番号・当事者・法人の代表者）、収入印紙と電子納付（ペイジー）の違い、郵送の返送用封筒、いつもらえるかの確かめ方をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>介護休暇・介護休業の診断書は必要？要介護状態の証明書類と介護休業給付金の必要書類</title>
+    <link href="https://vaynexis.jp/column/family-care-leave-benefit-documents"/>
+    <id>https://vaynexis.jp/column/family-care-leave-benefit-documents</id>
+    <published>2026-11-04T00:00:00+09:00</published>
+    <updated>2026-11-26T00:00:00+09:00</updated>
+    <summary>介護休暇・介護休業で会社に診断書を出す必要があるかを、育児・介護休業法施行規則と厚生労働省の資料で確かめます。会社が提出を求めることができる続柄・要介護状態の証明書類の例、介護休暇の事後提出、要介護状態の判断基準、介護休業給付金支給申請書と添付書類・期限・提出先をまとめます。</summary>
+  </entry>
   <entry>
     <title>ホームページ制作・システム開発の相談先｜「作らない選択肢」も含めて考える株式会社オブライトのご紹介</title>
     <link href="https://vaynexis.jp/column/partner-oflight-web-system-development"/>
@@ -381,29 +405,5 @@
     <published>2026-11-06T00:00:00+09:00</published>
     <updated>2026-11-19T00:00:00+09:00</updated>
     <summary>東京消防庁管内で自衛消防訓練の後に作る「自衛消防訓練実施結果記録書」（第２号様式の６）の欄ごとの書き方を架空の記入例で示し、様式の入手先（Word・PDF）、消防署への提出は不要で訓練日から3年間保存すること、訓練前の消防署への通知、問合せ先の消防署の探し方を、東京消防庁と条例施行規則で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>e-Govで「指定可能な文字以外が指定されています」と出たら｜使えない文字と直し方</title>
-    <link href="https://vaynexis.jp/column/e-gov-invalid-character-error"/>
-    <id>https://vaynexis.jp/column/e-gov-invalid-character-error</id>
-    <published>2026-11-05T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>e-Gov電子申請で「指定可能な文字以外が指定されています」と出たときは、基本情報や申請書に使えない文字が入っていないかを確かめます。入力できる文字の範囲（JIS第一〜第四水準・補助漢字）、手続によって使えない文字、サロゲートペア、添付ファイル名の制限と、氏名・社名の表記の直し方を、e-Gov のヘルプで確かめます。</summary>
-  </entry>
-  <entry>
-    <title>障害者解雇届の書き方と記入例｜様式18の欄・提出先・期限と注意書き</title>
-    <link href="https://vaynexis.jp/column/disabled-worker-dismissal-notice"/>
-    <id>https://vaynexis.jp/column/disabled-worker-dismissal-notice</id>
-    <published>2026-11-05T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>障害者解雇届は、障害者である労働者を解雇するとき、速やかに勤務先事業所を管轄するハローワークへ出す届出です。様式18の欄（事業所・事業の種類・労働者数・障害者数・対象者・職種・障害の種類と程度・解雇理由と年月日）の書き方を労働局の記入例で示し、注意書き、除外、電子申請、社内の準備を確かめます。</summary>
-  </entry>
-  <entry>
-    <title>家電リサイクル券の追跡のしかた｜控えのお問合せ管理票番号で引取りを確かめる</title>
-    <link href="https://vaynexis.jp/column/home-appliance-recycling-ticket-check"/>
-    <id>https://vaynexis.jp/column/home-appliance-recycling-ticket-check</id>
-    <published>2026-11-05T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>家電リサイクル券は、控えのお問合せ管理票番号（ハイフンを除く半角13桁）を家電リサイクル券センターの「メーカー引取確認」に入れて追跡します。表示される項目、閲覧できる期間（原則3年）、小売業者の記入と照合を確かめます。</summary>
   </entry>
 </feed>
