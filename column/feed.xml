@@ -4,8 +4,32 @@
   <link href="https://vaynexis.jp/column/feed.xml" rel="self"/>
   <link href="https://vaynexis.jp/column"/>
   <id>https://vaynexis.jp/column</id>
-  <updated>2026-11-26T00:00:00+09:00</updated>
+  <updated>2026-11-27T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
+  <entry>
+    <title>Outlookで来年の祝日を予定表に追加するには？2027年の祝日が出ないときの対処</title>
+    <link href="https://vaynexis.jp/column/outlook-new-add-japan-holidays-calendar"/>
+    <id>https://vaynexis.jp/column/outlook-new-add-japan-holidays-calendar</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-27T00:00:00+09:00</updated>
+    <summary>Outlook の予定表に来年（2027年）の祝日を追加する方法を、Microsoft サポートと内閣府のページで確かめます。新しい Outlook・Web・クラシック Outlook の手順、2027年の祝日が出ない既知の問題と回避策、内閣府の2027年の祝日の表、重複と削除をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>Googleスライドをノート付きで印刷するには？コメント・PDF・スマホの場合も確認</title>
+    <link href="https://vaynexis.jp/column/google-slides-print-speaker-notes"/>
+    <id>https://vaynexis.jp/column/google-slides-print-speaker-notes</id>
+    <published>2026-11-16T00:00:00+09:00</published>
+    <updated>2026-11-27T00:00:00+09:00</updated>
+    <summary>Googleスライドのノート（スピーカー ノート・メモ）を印刷する方法を、Google の公式ヘルプで確かめます。［ファイル］→［印刷設定とプレビュー］→［1 枚のスライド（ノート付き）］の手順、PDF に保存するとき、コメントは印刷できるのか、スマホ・タブレットのアプリから印刷するとき、配る前の確認をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>登記されていないことの証明書はオンラインで請求できる？手数料・必要なもの・受け取り方</title>
+    <link href="https://vaynexis.jp/column/non-registration-certificate-online"/>
+    <id>https://vaynexis.jp/column/non-registration-certificate-online</id>
+    <published>2026-11-15T00:00:00+09:00</published>
+    <updated>2026-11-27T00:00:00+09:00</updated>
+    <summary>登記されていないことの証明書をオンラインで請求する方法を、法務省と登記・供託オンライン申請システムの案内で確かめます。取り扱う登記所、申請用総合ソフトとかんたん登記・供託申請、手数料（オンライン交付240円・郵送交付300円）、誰が請求できるか、電子証明書と委任状、電子納付、受け取り方と日数をまとめます。</summary>
+  </entry>
   <entry>
     <title>DXを何から考えるか迷ったときの相談先｜経営と現場をつなぐ「知の設計パートナー」合同会社タッチコアのご紹介</title>
     <link href="https://vaynexis.jp/column/partner-touchcore-dx-consulting"/>
@@ -381,29 +405,5 @@
     <published>2026-11-08T00:00:00+09:00</published>
     <updated>2026-11-19T00:00:00+09:00</updated>
     <summary>国際郵便の書留・保険付郵便物・国際エアパケット・小包・EMSが届かないときは、調査請求書（EMSは国際スピード郵便物調査用紙）に記入して、差し出した郵便局の窓口へ出します。電話では受け付けません。種類ごとの請求期間（6か月以内など）、受領証や本人確認書類、記入する郵便物番号・差出日・宛先を日本郵便の案内で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>労働保険料等納付証明書はどこでもらえる？未納なし証明の申請先・日数・手数料</title>
-    <link href="https://vaynexis.jp/column/labor-insurance-payment-certificate-purpose-scope"/>
-    <id>https://vaynexis.jp/column/labor-insurance-payment-certificate-purpose-scope</id>
-    <published>2026-11-08T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>労働保険料等納付証明書（未納なし証明）はどこでもらえるのか。労働局の労働保険徴収室への申請が基本で、監督署で受け付けるかは局ごとに違います。交付までの日数・手数料、申請書の欄（基準日・労働保険番号・使用目的・提出先）、納付直後の領収書の添付、特定技能用の様式を、各労働局と厚生労働省の案内で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>自衛消防訓練通知書の書き方（東京消防庁）｜記入例・提出方法と事前に相談すること</title>
-    <link href="https://vaynexis.jp/column/tokyo-fire-drill-prior-notification-fields"/>
-    <id>https://vaynexis.jp/column/tokyo-fire-drill-prior-notification-fields</id>
-    <published>2026-11-08T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>東京消防庁の「自衛消防訓練通知書（自衛消防訓練の通報）」は、防火管理者等が自衛消防訓練の実施を管轄の消防署へあらかじめ連絡する様式です。書く項目と記入例、令和6年4月からの新様式、電子申請・窓口・郵送・FAXの出し方、資器材の借用や立会いを希望するときの相談を確かめます。</summary>
-  </entry>
-  <entry>
-    <title>給食の作業工程表と作業動線図の書き方｜学校給食衛生管理基準と文部科学省の記入例</title>
-    <link href="https://vaynexis.jp/column/meal-work-schedule-flow-diagram"/>
-    <id>https://vaynexis.jp/column/meal-work-schedule-flow-diagram</id>
-    <published>2026-11-06T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>給食の作業工程表は献立ごとの手順・時間・担当者、作業動線図は食品の動線を示し、学校給食衛生管理基準で作成して作業前に確かめます。明確にする項目、交差と時間差、文部科学省の記入例、アレルギー対応食の書き方を確かめます。</summary>
   </entry>
 </feed>
