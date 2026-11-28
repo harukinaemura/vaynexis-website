@@ -4,8 +4,32 @@
   <link href="https://vaynexis.jp/column/feed.xml" rel="self"/>
   <link href="https://vaynexis.jp/column"/>
   <id>https://vaynexis.jp/column</id>
-  <updated>2026-11-27T00:00:00+09:00</updated>
+  <updated>2026-11-28T00:00:00+09:00</updated>
   <author><name>合同会社Vaynexis</name></author>
+  <entry>
+    <title>PowerPoint（パワポ）のスペルチェックをオフにして赤い波線を消すには？Mac も</title>
+    <link href="https://vaynexis.jp/column/powerpoint-spell-check-red-underline-off"/>
+    <id>https://vaynexis.jp/column/powerpoint-spell-check-red-underline-off</id>
+    <published>2026-11-18T00:00:00+09:00</published>
+    <updated>2026-11-28T00:00:00+09:00</updated>
+    <summary>PowerPoint（パワポ）のスペルチェックをオフにして赤い波線を消す方法を、Microsoft サポートで確かめます。Windows の［校正］、Mac の［環境設定］→［校正］、Web 版の［校正エラーを非表示にする］、品番や社名だけ校正しない［校正言語の設定］、オフにした後の確かめ方をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>社会保険料の納入告知書（納付書）が届かない？いつ届くか・再発行・口座振替の場合</title>
+    <link href="https://vaynexis.jp/column/social-insurance-payment-slip-not-received"/>
+    <id>https://vaynexis.jp/column/social-insurance-payment-slip-not-received</id>
+    <published>2026-11-15T00:00:00+09:00</published>
+    <updated>2026-11-28T00:00:00+09:00</updated>
+    <summary>社会保険料の納入告知書（納付書）が届かないときに確かめることを、日本年金機構の案内で整理します。毎月20日頃の発送日と納付期限、管轄の年金事務所での再発行、口座振替の事業所に届く通知書、電子送付にした場合、届く前に保険料額を知る方法、納め方、督促と延滞金をまとめます。</summary>
+  </entry>
+  <entry>
+    <title>Googleカレンダーで主催者を変更するには？オーナー変更の条件・承諾・スマホの場合</title>
+    <link href="https://vaynexis.jp/column/google-calendar-change-event-organizer"/>
+    <id>https://vaynexis.jp/column/google-calendar-change-event-organizer</id>
+    <published>2026-11-12T00:00:00+09:00</published>
+    <updated>2026-11-28T00:00:00+09:00</updated>
+    <summary>Googleカレンダーで予定の主催者（オーナー）を変更する方法を、Google の公式ヘルプで確かめます。パソコンの［主催者を変更］の手順、変更できる人と 200 人の上限、60 日以内の承諾、Meet の録画への影響、スマホのアプリとの違い、退職する人の予定を管理者が譲渡する方法をまとめます。</summary>
+  </entry>
   <entry>
     <title>Outlookで来年の祝日を予定表に追加するには？2027年の祝日が出ないときの対処</title>
     <link href="https://vaynexis.jp/column/outlook-new-add-japan-holidays-calendar"/>
@@ -381,29 +405,5 @@
     <published>2026-11-09T00:00:00+09:00</published>
     <updated>2026-11-19T00:00:00+09:00</updated>
     <summary>定期健康診断の結果は会社が受け取り、受診した本人へ遅滞なく通知します。常時50人以上の事業場が所轄の労働基準監督署長へ出す「定期健康診断結果報告書」の報告事項と電子申請、健康診断個人票の5年保存、再検査の結果の扱い、本人へ渡す前の照合を、労働安全衛生規則と厚生労働省の資料で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>社会保険料納入証明書の取り方｜年金事務所への申請書の書き方と納入確認書との違い</title>
-    <link href="https://vaynexis.jp/column/social-insurance-premium-payment-certificate"/>
-    <id>https://vaynexis.jp/column/social-insurance-premium-payment-certificate</id>
-    <published>2026-11-09T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>健康保険料・厚生年金保険料の納入証明書は、事業主が管轄の年金事務所に申請し、郵送なら受付後3営業日程度で発行されます。直近2年以内（最大24カ月分）の数え方、申請書の出力区分（一括用・明細）と証明範囲区分の書き方、2年より前の期間に使う納入確認書との違い、受け取りの委任を、日本年金機構の記入例で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>請求書の控えの保存義務と保存期間｜発行したインボイスの写しは7年・電子保存の方法</title>
-    <link href="https://vaynexis.jp/column/issued-invoice-copy-retention"/>
-    <id>https://vaynexis.jp/column/issued-invoice-copy-retention</id>
-    <published>2026-11-08T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>発行した請求書（インボイス）の控えは、適格請求書発行事業者に保存義務があり、交付した課税期間の末日の翌日から2月を経過した日から7年間保存します。写しに当たるもの、法人税の保存期間、紙で渡した控えをデータで残す要件、電子で渡したインボイスの保存方法を国税庁の資料で確かめます。</summary>
-  </entry>
-  <entry>
-    <title>国際郵便の調査請求書の書き方｜EMS・書留・小包が届かないときの請求期間と必要なもの</title>
-    <link href="https://vaynexis.jp/column/international-mail-inquiry-form-fields"/>
-    <id>https://vaynexis.jp/column/international-mail-inquiry-form-fields</id>
-    <published>2026-11-08T00:00:00+09:00</published>
-    <updated>2026-11-19T00:00:00+09:00</updated>
-    <summary>国際郵便の書留・保険付郵便物・国際エアパケット・小包・EMSが届かないときは、調査請求書（EMSは国際スピード郵便物調査用紙）に記入して、差し出した郵便局の窓口へ出します。電話では受け付けません。種類ごとの請求期間（6か月以内など）、受領証や本人確認書類、記入する郵便物番号・差出日・宛先を日本郵便の案内で確かめます。</summary>
   </entry>
 </feed>
